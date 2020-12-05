@@ -1092,3 +1092,43 @@
 	emote_see = list("narrows her eyes","sniffs the air")
 	say_maybe_target = list("An enemy!?","What was that?","Is that...?","Hmm?")
 	say_got_target = list("You won't get away!","I've had it!","I'll vanquish you!","AWOOOOO!")
+
+/mob/living/simple_mob/animal/passive/gaslamp/snow //Frostlamnp
+	name = "Frostlit Lamp"
+	desc = "Some sort of floaty alien with a surprisingly warm glow. This creature is looks like an evolutionary offshute of the Gaslamp family."
+	tt_desc = "Semaeostomeae virginus"
+	icon = 'icons/mob/cryogaia32x64.dmi'
+	icon_state = "gaslamp"
+	icon_living = "gaslamp"
+	icon_dead = "gaslamp-dead"
+
+	faction = "virgo3b"
+	maxHealth = 100
+	health = 100
+	movement_cooldown = 12
+
+	say_list_type = /datum/say_list/gaslamp
+	ai_holder_type = /datum/ai_holder/simple_mob/gaslamp
+
+//	speed = 2 Virgo coders making my life hell. This conflicts with their new system
+
+	melee_damage_lower = 30 // Because fuck anyone who hurts this sweet, innocent creature.
+	melee_damage_upper = 30
+	attacktext = list("thrashed")
+	friendly = "caressed"
+
+	response_help   = "brushes"	// If clicked on help intent
+	response_disarm = "pushes" // If clicked on disarm intent
+	response_harm   = "swats"	// If clicked on harm intent
+
+	minbodytemp = 0
+	maxbodytemp = 350
+
+	min_oxy = 1	//Needs Oxy to survive on cryogaia
+	max_oxy = 0 // Hopefully no Max oxy
+	min_tox = 0
+	max_tox = 0
+	min_co2 = 0
+	max_co2 = 0
+	min_n2 = 0
+	max_n2 = 0

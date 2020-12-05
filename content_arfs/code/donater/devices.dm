@@ -8,7 +8,7 @@
 	long_range = TRUE
 	hide_signal = FALSE
 	can_hide_signal = TRUE
-
+/* needs a rework, commented so the game compiles
 /obj/item/weapon/commcard/owen
 	name = "\improper Owen GPS cartridge"
 	ui_templates = list(list("name" = "Integrated GPS", "template" = "arfs_gps_access.tmpl"))
@@ -149,7 +149,7 @@
 				cooldown = 0
 	else
 		to_chat(user, "<span class='warning'>Your resizer is still recharging.</span>")
-
+*/
 /datum/nifsoft/sizechange/andy
 	name = "Extreme Mass Alteration"
 	desc = "A system that allows one to change their size, through drastic mass rearrangement. Causes significant wear when installed."

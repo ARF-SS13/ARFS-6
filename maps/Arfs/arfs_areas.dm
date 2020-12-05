@@ -128,6 +128,18 @@
 	name = "Game Room"
 	icon_state = "amaint"
 
+/area/maintenance/blueserg
+	name = "Blue Sergal"
+	icon_state = "amaint"
+
+/area/maintenance/blueserg/dorms
+	name = "Blue Sergal"
+	icon_state = "amaint"
+
+/area/maintenance/blueserg/misc
+	name = "Blue Sergal"
+	icon_state = "amaint"
+
 //Underbelly Maintenance
 
 /area/maintenance/guts

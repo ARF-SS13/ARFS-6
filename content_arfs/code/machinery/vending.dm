@@ -447,7 +447,7 @@
 	/obj/item/clothing/shoes/brown=5,/obj/item/clothing/shoes/blue=5,
 	/obj/item/clothing/shoes/green=5,/obj/item/clothing/shoes/yellow=5,
 	/obj/item/clothing/shoes/purple=5,/obj/item/clothing/shoes/red=5,
-	/obj/item/clothing/shoes/white=5,/obj/item/clothing/shoes/leather=5,
+	/obj/item/clothing/shoes/white=5,//obj/item/clothing/shoes/leather=5,
 	/obj/item/clothing/shoes/rainbow=5,/obj/item/clothing/shoes/flats=5,
 	/obj/item/clothing/shoes/flats/white=5,/obj/item/clothing/shoes/flats/white/color=5,
 	/obj/item/clothing/shoes/flats/red=5,/obj/item/clothing/shoes/flats/purple=5,
