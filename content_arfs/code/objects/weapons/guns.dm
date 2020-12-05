@@ -590,7 +590,7 @@
 		slot_r_hand_str = 'content_arfs/icons/mob/inhands/righthand_guns_arfs.dmi',
 		)
 	w_class = ITEMSIZE_SMALL
-	fire_sound = 'sound/weapons/deagle.ogg'
+	fire_sound = 'sound/weapons/Gunshot_deagle.ogg'
 
 	caliber = ".454"
 	ammo_type = /obj/item/ammo_casing/a454

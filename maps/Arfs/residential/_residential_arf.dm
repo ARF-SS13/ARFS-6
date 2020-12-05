@@ -67,7 +67,7 @@
 	icon_state = "lasergen"
 	density = 0
 	anchored = 1
-	use_power = 0 //is powered directly from cables
+	use_power = 1
 	active_power_usage = 25 KILOWATTS  //Low Power
 	idle_power_usage = 250
 	target_temp = T0C

@@ -144,7 +144,7 @@ var/global/list/pokemon_pods = list()//List of pods that ghosts can spawn at
 				Additionally, you may set your OOC Notes and Flavortext with the <b>\"Set OOC Notes\"</b> and <b>\"Set Flavortext\"</b> verbs.)</span>")
 
 	visible_message("<span class='notice'>[src] dings and hisses before its doors slowly open and \the [P.name] steps out!</span>")
-	playsound(src, 'sound/machines/microwave/microwave-end.ogg', 100)
+	playsound(src, 'sound/machines/kitchen/microwave/microwave-end.ogg', 100)
 
 	P.forceMove(T)
 
