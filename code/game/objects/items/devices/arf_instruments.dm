@@ -103,3 +103,9 @@
 	instrumentId = "bikehorn"
 	instrumentExt = "ogg"
 
+/obj/item/device/instrument/violin/gold
+	name = "golden violin"
+	desc = "A wooden musical instrument with four strings and a bow. \"The devil went down to space, he was looking for an assistant to grief.\""
+	icon = 'icons/obj/musician_yw.dmi'
+	icon_state = "golden_violin"
+	attack_verb = list("smashed")
