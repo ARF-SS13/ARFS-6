@@ -1,9 +1,3 @@
-/datum/sprite_accessory/tail/taur/fatdrake
-	name = "Fat Drake (Taur dual-color)"
-	icon = 'content_arfs/icons/mob/vore/taurs_arfs.dmi'
-	icon_state = "fatdrake_s"
-	extra_overlay = "fatdrake_markings"
-
 /datum/sprite_accessory/tail/taur/fatdrake/andy
 	name = "Fat Drake (Taur dual-color) - Special"
 	ckeys_allowed = list("dameonowen")
