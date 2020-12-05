@@ -222,11 +222,11 @@ var/global/list/datum/dna/gene/dna_genes[0]
 
 	//ARFS EDIT
 	var/taurtype = /datum/sprite_accessory/tail/taur/fatdrake/andy
-	if(istype(character.tail_style, taurtypetwo))
+	if(istype(character.tail_style, taurtype))
 		character.verbs += /mob/living/carbon/human/proc/special_select_tail
 
 	var/taurtypetwo = /datum/sprite_accessory/tail/taur/drake/andy
-	if(istype(character.tail_style, taurtypethree))
+	if(istype(character.tail_style, taurtypetwo))
 		character.verbs += /mob/living/carbon/human/proc/special_select_tail
 	// END ARFS EDIT
 
