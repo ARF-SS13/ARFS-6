@@ -81,7 +81,7 @@
 	if(alpha <= EFFECTIVE_INVIS)
 		return src.loc.examine(user) // Returns messages as if they examined wherever the mob was
 	var/datum/gender/T = gender_datums[get_visible_gender()]
-	var/list/msg = list("<span class='info'>*---------*","This is [bicon(src)] <EM>[src.name]</EM>, a <span class ='red'>Pokemon</span>")
+	var/list/msg = list("<span class='info'>*---------*","This is [bicon(src)] <EM>[src.name]</EM>, a <span class ='red'>Pokemon</span></span>")
 	if(flavor_text)
 		msg += "[print_flavor_text()]"
 	else
