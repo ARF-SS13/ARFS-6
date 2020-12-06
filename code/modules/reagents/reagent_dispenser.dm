@@ -428,7 +428,7 @@
 /obj/structure/reagent_dispensers/acid/Initialize()
 	. = ..()
 	reagents.add_reagent("sacid", 1000)
-	
+
 //Cooking oil refill tank
 /obj/structure/reagent_dispensers/cookingoil
 	name = "cooking oil tank"
@@ -437,9 +437,11 @@
 	icon_state = "oiltank"
 	amount_per_transfer_from_this = 120
 
-/obj/structure/reagent_dispensers/cookingoil/New()
-		..()
+// START ARFS EDIT - Fix bad initialization, should not add reagents in New
+/obj/structure/reagent_dispensers/cookingoil/Initialize()
+		. = ..()
 		reagents.add_reagent("cornoil",5000)
+// END ARFS EDIT
 
 /obj/structure/reagent_dispensers/cookingoil/bullet_act(var/obj/item/projectile/Proj)
 	if(Proj.get_structure_damage())
