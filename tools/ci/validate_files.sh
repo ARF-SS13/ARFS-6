@@ -15,12 +15,12 @@ if [ $retVal -ne 0 ]; then
 fi
 
 #Checking for 'tag' set to something on maps
-(! grep -Pn '( |\t|;|{)tag( ?)=' maps/**/*.dmm)
-retVal=$?
-if [ $retVal -ne 0 ]; then
-  echo -e "${RED}A map has 'tag' set on an atom. It may cause problems and should be removed.${NC}"
-  FAILED=1
-fi
+#(! grep -Pn '( |\t|;|{)tag( ?)=' maps/**/*.dmm)
+#retVal=$?
+#if [ $retVal -ne 0 ]; then
+#  echo -e "${RED}A map has 'tag' set on an atom. It may cause problems and should be removed.${NC}"
+#  FAILED=1
+#fi
 
 #Checking for broken HTML tags (didn't close the quote for class)
 (! grep -En "<\s*span\s+class\s*=\s*('[^'>]+|[^'>]+')\s*>" **/*.dm)
