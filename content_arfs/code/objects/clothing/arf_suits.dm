@@ -12,3 +12,15 @@
 
 	initial_modules = list(
 		)
+
+/obj/item/clothing/suit/stripper/stripper_pink/arf
+	icon = 'content_arfs/icons/obj/clothing/suit_obj.dmi'
+
+/obj/item/clothing/suit/stripper/stripper_green/arf
+	icon = 'content_arfs/icons/obj/clothing/suit_obj.dmi'
+
+/obj/item/clothing/suit/browncoat/arf
+	icon = 'content_arfs/icons/obj/clothing/suit_obj.dmi'
+
+/obj/item/clothing/suit/neocoat/arf
+	icon = 'content_arfs/icons/obj/clothing/suit_obj.dmi'
