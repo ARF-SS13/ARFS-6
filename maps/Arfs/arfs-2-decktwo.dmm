@@ -22592,7 +22592,7 @@
 	req_access = list(24)
 	},
 /obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/plating,
 /area/engineering/drone_fabrication)
 "aOP" = (
 /obj/machinery/alarm{
@@ -22621,7 +22621,7 @@
 	req_access = list(24)
 	},
 /obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/plating,
 /area/engineering/drone_fabrication)
 "aOS" = (
 /obj/structure/sign/botany,
@@ -38838,8 +38838,7 @@
 /area/medical/medbay)
 "bqA" = (
 /obj/machinery/light/small{
-	dir = 1;
-	icon_state = "bulb1"
+	dir = 1
 	},
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
@@ -41521,9 +41520,7 @@
 /turf/simulated/floor/plating,
 /area/storage/tech)
 "bwG" = (
-/obj/machinery/computer/general_air_control{
-	dir = 8
-	},
+/obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/dark,
 /area/engineering/engine_monitoring)
 "bwH" = (
@@ -44782,9 +44779,9 @@
 /turf/simulated/floor/plating,
 /area/engineering/drone_fabrication)
 "bEG" = (
-/obj/machinery/atmospherics/binary/pump/high_power,
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/black/border,
+/obj/machinery/atmospherics/binary/pump/high_power/on,
 /turf/simulated/floor/tiled/dark,
 /area/engineering/atmos)
 "bEN" = (
@@ -46578,6 +46575,12 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/atmos)
+"bUC" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/engineering/atmos)
 "bWK" = (
 /obj/machinery/power/thermoregulator,
 /obj/effect/floor_decal/industrial/outline,
@@ -46868,6 +46871,12 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/engine_gas)
+"cAI" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/engineering/atmos)
 "cCN" = (
 /obj/structure/bed/chair/comfy/purp{
 	dir = 1;
@@ -46912,11 +46921,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/engineering/break_room)
 "cHk" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 10
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/atmos)
@@ -47048,7 +47057,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/engineering/atmos)
 "dbZ" = (
-/obj/machinery/computer/general_air_control,
+/obj/machinery/computer/atmos_alert,
 /turf/simulated/floor/tiled/dark,
 /area/engineering/atmos)
 "deE" = (
@@ -47208,11 +47217,6 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/chief)
 "duf" = (
@@ -47318,9 +47322,9 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/atmos)
 "dNl" = (
-/obj/machinery/atmospherics/binary/pump/high_power,
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/white/border,
+/obj/machinery/atmospherics/binary/pump/high_power/on,
 /turf/simulated/floor/tiled/dark,
 /area/engineering/atmos)
 "dNB" = (
@@ -47473,6 +47477,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/light,
 /turf/simulated/floor/tiled/dark,
 /area/engineering/engine_smes)
 "eic" = (
@@ -48020,6 +48025,9 @@
 "fsL" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
+	},
+/obj/machinery/light{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/engine_gas)
@@ -48629,7 +48637,6 @@
 /area/engineering/engine_room)
 "gVN" = (
 /obj/machinery/door/firedoor/glass,
-/obj/structure/disposalpipe/segment,
 /obj/machinery/door/airlock/engineering{
 	heat_proof = 1;
 	name = "Engine Room";
@@ -49173,6 +49180,12 @@
 /obj/machinery/computer/shuttle_control/residential_shuttle,
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/residential)
+"ial" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/dark,
+/area/engineering/atmos)
 "iaH" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/green{
 	dir = 4;
@@ -49372,6 +49385,19 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/dark,
 /area/engineering/break_room)
+"ixL" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/engineering/atmos)
+"iAa" = (
+/obj/machinery/atmospherics/pipe/simple/visible/cyan,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/engineering/atmos)
 "iCO" = (
 /obj/machinery/door/airlock/glass{
 	name = "Residential Dock"
@@ -51204,7 +51230,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/space,
+/turf/simulated/floor/plating,
 /area/maintenance/research)
 "mGV" = (
 /obj/effect/shuttle_landmark/premade/engineering/station,
@@ -51267,6 +51293,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
+"mLz" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/engineering/atmos)
 "mNw" = (
 /obj/machinery/camera/network/engineering{
 	c_tag = "ENG - Atmospherics 5";
@@ -51783,6 +51815,12 @@
 /area/engineering/engine_monitoring)
 "ogz" = (
 /obj/machinery/light,
+/turf/simulated/floor/tiled/dark,
+/area/engineering/atmos)
+"ohv" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/atmos)
 "oib" = (
@@ -52310,9 +52348,9 @@
 /turf/simulated/floor/tiled/dark,
 /area/engineering/engine_gas)
 "pfT" = (
-/obj/machinery/atmospherics/binary/pump/high_power,
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/orange/border,
+/obj/machinery/atmospherics/binary/pump/high_power/on,
 /turf/simulated/floor/tiled/dark,
 /area/engineering/atmos)
 "pgg" = (
@@ -52335,6 +52373,15 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/fore)
+"pjm" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/dark,
+/area/engineering/atmos)
 "plY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -53531,6 +53578,12 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/atmos)
+"rOq" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/engineering/atmos)
 "rOB" = (
 /obj/machinery/computer/shuttle_control/residential_shuttle,
 /turf/simulated/floor/tiled/dark,
@@ -54333,6 +54386,12 @@
 	volume = 100000
 	},
 /turf/simulated/floor/tiled/techmaint,
+/area/engineering/atmos)
+"tJK" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
 /area/engineering/atmos)
 "tKs" = (
 /obj/structure/cable/green{
@@ -56055,6 +56114,12 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/dark,
 /area/engineering/engine_monitoring)
+"xLW" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/dark,
+/area/engineering/atmos)
 "xNs" = (
 /turf/simulated/wall,
 /area/engineering/foyer)
@@ -56132,6 +56197,13 @@
 /obj/random/junk,
 /turf/simulated/floor/plating,
 /area/maintenance/central)
+"xXG" = (
+/obj/machinery/atmospherics/pipe/simple/visible/cyan,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/engineering/atmos)
 "xXS" = (
 /turf/simulated/floor/tiled/white,
 /area/engineering/engine_airlock)
@@ -92907,8 +92979,8 @@ dsd
 bDn
 bDn
 qeP
-bDn
-bDn
+pjm
+xLW
 bgU
 bBD
 bzN
@@ -93164,8 +93236,8 @@ duf
 bwK
 bDn
 qeP
-bDn
-bDn
+bUC
+ixL
 bDn
 bxT
 bDn
@@ -93421,8 +93493,8 @@ dKG
 meB
 bwe
 mnQ
-bDn
-bDn
+bUC
+ixL
 bDn
 bxT
 bDn
@@ -93678,8 +93750,8 @@ dNB
 mnQ
 bDn
 wDX
-bDn
-bDn
+bUC
+ixL
 bDn
 bxT
 bDn
@@ -93935,8 +94007,8 @@ dZJ
 msz
 bDn
 bDn
-bDn
-bDn
+bUC
+ixL
 bDn
 bxW
 bDn
@@ -94192,8 +94264,8 @@ etm
 mCa
 fdx
 fdx
-fdx
-fdx
+iAa
+xXG
 fdx
 vWn
 bzN
@@ -94449,9 +94521,9 @@ eGD
 mJe
 bDn
 bDn
-bDn
-bDn
-bDn
+bUC
+ial
+xLW
 bDn
 rSb
 mHO
@@ -94706,10 +94778,10 @@ eOI
 bDn
 bDn
 bDn
-bDn
-bDn
-bDn
-bDn
+tJK
+ohv
+cAI
+xLW
 egy
 bIj
 bEd
@@ -94963,10 +95035,10 @@ faH
 bDn
 bDn
 bDn
-bDn
-bDn
-bDn
-bDn
+rOq
+rOq
+mLz
+mLz
 egy
 bvy
 bMy
