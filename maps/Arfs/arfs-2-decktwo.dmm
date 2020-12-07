@@ -27601,9 +27601,6 @@
 /obj/item/weapon/stock_parts/matter_bin,
 /obj/item/weapon/stock_parts/capacitor,
 /obj/item/weapon/stock_parts/capacitor,
-/obj/machinery/light/small{
-	dir = 1
-	},
 /turf/simulated/floor/plating,
 /area/storage/tech)
 "aWW" = (
@@ -27924,6 +27921,9 @@
 /area/maintenance/medbay)
 "aXM" = (
 /obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/light/small{
 	dir = 1
 	},
 /turf/simulated/floor/plating,
@@ -41290,6 +41290,9 @@
 /obj/item/device/healthanalyzer,
 /obj/item/device/analyzer,
 /obj/item/device/analyzer,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/storage/tech)
 "bwh" = (
@@ -46713,6 +46716,10 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/atmos)
+"cjD" = (
+/obj/machinery/light,
+/turf/simulated/floor/plating,
+/area/storage/tech)
 "clu" = (
 /obj/effect/floor_decal/carpet{
 	dir = 4
@@ -50001,6 +50008,7 @@
 /area/crew_quarters/heads/chief)
 "jUk" = (
 /obj/effect/floor_decal/industrial/warning,
+/obj/machinery/light/small,
 /turf/simulated/floor/plating,
 /area/engineering/drone_fabrication)
 "jWf" = (
@@ -51375,11 +51383,11 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/door/airlock/glass_atmos{
-	name = "Atmospherics";
-	req_access = list(24)
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/airlock/glass_engineeringatmos{
+	name = "Engineering";
+	req_one_access = list(11,24)
+	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/atmos/storage)
 "mXG" = (
@@ -51397,6 +51405,12 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/break_room)
+"naW" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/storage/tech)
 "nbV" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/light,
@@ -54427,15 +54441,15 @@
 /turf/simulated/floor/tiled/dark,
 /area/engineering/atmos)
 "tXC" = (
-/obj/machinery/door/airlock/glass_atmos{
-	name = "Atmospherics";
-	req_access = list(24)
-	},
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/glass_engineeringatmos{
+	name = "Engineering";
+	req_one_access = list(11,24)
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/atmos/storage)
@@ -85449,7 +85463,7 @@ byO
 aXC
 aXn
 aXn
-aXn
+naW
 aXC
 byO
 bvT
@@ -86736,7 +86750,7 @@ bQo
 bQo
 bQo
 bQo
-bQo
+cjD
 wwK
 oAS
 bxf
@@ -91871,11 +91885,11 @@ bwE
 aZB
 bwa
 bvW
-bvW
+aZB
+aZB
 bvW
 bwa
 aZB
-bvW
 bvy
 uHy
 krI
