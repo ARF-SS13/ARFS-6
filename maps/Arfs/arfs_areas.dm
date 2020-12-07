@@ -25,6 +25,8 @@
 
 /area/ai/foyer
 	name = "\improper AI Core Access"
+/area/ai/outside
+	name = "/improper AI Core Outside"
 
 // CREWQUARTERS/DORM
 
@@ -126,18 +128,6 @@
 	name = "\improper Virology Maintenance"
 /area/maintenance/game_room
 	name = "Game Room"
-	icon_state = "amaint"
-
-/area/maintenance/blueserg
-	name = "Blue Sergal"
-	icon_state = "amaint"
-
-/area/maintenance/blueserg/dorms
-	name = "Blue Sergal"
-	icon_state = "amaint"
-
-/area/maintenance/blueserg/misc
-	name = "Blue Sergal"
 	icon_state = "amaint"
 
 //Underbelly Maintenance
