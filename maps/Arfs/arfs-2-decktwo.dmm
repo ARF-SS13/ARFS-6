@@ -45689,6 +45689,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/dark,
 /area/engineering/atmos)
 "ced" = (
@@ -47467,6 +47468,7 @@
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
 "gtz" = (
+/obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/dark,
 /area/engineering/atmos/storage)
 "gtZ" = (
@@ -48783,6 +48785,13 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/kitchen)
+"jBb" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/turf/simulated/floor/tiled/dark,
+/area/engineering/atmos)
 "jBx" = (
 /obj/structure/cable/yellow{
 	d2 = 2;
@@ -48975,6 +48984,9 @@
 	pixel_x = 5;
 	pixel_y = -32
 	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/atmos/storage)
 "jWM" = (
@@ -49078,6 +49090,9 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/machinery/camera/network/engineering{
+	c_tag = "ENG - Atmospherics 5"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/atmos)
@@ -49312,6 +49327,15 @@
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
+"kIB" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/tiled/dark,
+/area/engineering/atmos)
 "kJC" = (
 /turf/simulated/floor/carpet/oracarpet,
 /area/crew_quarters/heads/chief)
@@ -51727,6 +51751,17 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/atmos)
+"qrD" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/engineering/atmos/storage)
 "qrK" = (
 /obj/machinery/atmospherics/trinary/atmos_filter{
 	dir = 1;
@@ -53290,8 +53325,10 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/atmos/storage)
 "tTj" = (
@@ -53629,9 +53666,6 @@
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 4;
 	tag = "icon-intact (EAST)"
-	},
-/obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Atmospherics 5"
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -54219,6 +54253,13 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering)
+"wed" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/turf/simulated/floor/tiled/dark,
+/area/engineering/atmos)
 "wfZ" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/border_only,
@@ -55082,8 +55123,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/atmos/storage)
@@ -88698,7 +88739,7 @@ qnX
 otD
 qnX
 qnX
-qnX
+qrD
 tXC
 bxD
 ttK
@@ -89722,7 +89763,7 @@ bEF
 iJs
 bvy
 ccj
-tem
+wed
 bDn
 bDn
 bxT
@@ -89978,8 +90019,8 @@ bxM
 bvP
 jMq
 bvy
-ccj
-tem
+kIB
+jBb
 bDn
 bDn
 bxT
