@@ -680,7 +680,7 @@
 
 	for(var/mob in living_mob_list)
 		var/mob/M = mob
-		if(M.z != z) //Skip
+		if(M == null || M.z != z) //Skip
 			continue
 		if(get_turf(M) in seenturfs)
 			assess_and_assign(mob, targets, secondarytargets)
