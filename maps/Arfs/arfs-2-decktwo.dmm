@@ -19681,10 +19681,6 @@
 	pixel_x = 20;
 	tag = "icon-sink_alt (WEST)"
 	},
-/obj/machinery/alarm{
-	dir = 8;
-	pixel_x = 24
-	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/kitchen)
 "aJc" = (
@@ -19849,15 +19845,14 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/fore)
 "aJu" = (
-/obj/effect/floor_decal/corner/grey{
-	dir = 6;
-	tag = "icon-corner_white (SOUTHEAST)"
-	},
-/obj/effect/floor_decal/corner/blue{
-	dir = 6
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4
+	dir = 8;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/fore)
@@ -20419,6 +20414,10 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/fore)
 "aKA" = (
@@ -20656,6 +20655,10 @@
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/fore)
@@ -27337,6 +27340,9 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/bar)
@@ -41141,24 +41147,17 @@
 	c_tag = "CIV - Fore Starboard Hall Aft";
 	dir = 4
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
-	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/fore)
 "bvG" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+/obj/effect/floor_decal/corner/blue,
+/obj/structure/table/marble,
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -22
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/primary/fore)
+/area/crew_quarters/kitchen)
 "bvH" = (
 /obj/effect/landmark{
 	name = "carpspawn"
@@ -41311,21 +41310,12 @@
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/kitchen)
 "bwi" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/cable/green{
+/obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/effect/floor_decal/corner/grey{
-	dir = 9;
-	tag = "icon-corner_white (NORTHWEST)"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
-	},
+/obj/structure/disposalpipe/junction/yjunction,
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/fore)
 "bwj" = (
@@ -41334,7 +41324,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/structure/disposalpipe/junction/yjunction,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/fore)
 "bwk" = (
@@ -44734,6 +44724,9 @@
 /obj/item/device/camera{
 	pixel_x = 3;
 	pixel_y = -4
+	},
+/obj/machinery/camera/autoname{
+	dir = 4
 	},
 /turf/simulated/floor/carpet/oracarpet,
 /area/hallway/primary/aft)
@@ -49746,7 +49739,7 @@
 	dir = 1;
 	input_level = 100000;
 	name = "Main SMES";
-	output_level = 100000
+	output_level = 200000
 	},
 /obj/structure/cable{
 	d2 = 8;
@@ -49914,7 +49907,7 @@
 	dir = 1;
 	input_level = 100000;
 	name = "Backup SMES";
-	output_level = 100000
+	output_level = 200000
 	},
 /obj/structure/cable{
 	d2 = 8;
@@ -50173,6 +50166,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/engineering/gravity)
 "kga" = (
+/obj/machinery/portable_atmospherics/canister/phoron,
 /obj/machinery/light{
 	dir = 1
 	},
@@ -50249,6 +50243,9 @@
 "kst" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 6
+	},
+/obj/machinery/light{
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
@@ -52078,6 +52075,7 @@
 	output_tag = "cooling_out";
 	sensors = list("engine_sensor" = "Engine Core")
 	},
+/obj/machinery/light,
 /turf/simulated/floor/tiled/dark,
 /area/engineering/engine_monitoring)
 "oHO" = (
@@ -54040,6 +54038,19 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cafeteria)
+"sIl" = (
+/obj/effect/floor_decal/corner/grey{
+	dir = 6;
+	tag = "icon-corner_white (SOUTHEAST)"
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 6
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/hallway/primary/fore)
 "sKe" = (
 /obj/machinery/door/airlock/engineering,
 /obj/machinery/door/firedoor/glass,
@@ -54139,13 +54150,10 @@
 /turf/simulated/shuttle/floor,
 /area/shuttle/constructionsite)
 "tax" = (
-/obj/machinery/atmospherics/valve{
-	dir = 1;
-	name = "Emergancy CoolingValve"
-	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
+/obj/machinery/atmospherics/valve/digital,
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
 "taF" = (
@@ -54164,7 +54172,7 @@
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/residential)
 "tdN" = (
-/obj/machinery/atmospherics/pipe/simple/visible/black{
+/obj/machinery/atmospherics/unary/heat_exchanger{
 	dir = 4
 	},
 /obj/machinery/light{
@@ -55578,6 +55586,9 @@
 /obj/effect/floor_decal/corner/yellow/diagonal,
 /obj/effect/floor_decal/industrial/danger{
 	dir = 5
+	},
+/obj/machinery/light{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/engine_monitoring)
@@ -88774,7 +88785,7 @@ asC
 ath
 atH
 aua
-aus
+aye
 auT
 avq
 aus
@@ -88791,7 +88802,7 @@ aus
 aBv
 aus
 aus
-aus
+aye
 auT
 aDH
 aDI
@@ -89161,7 +89172,7 @@ ikd
 lEo
 mez
 bEy
-xQl
+kga
 uiH
 xUs
 xUs
@@ -91217,7 +91228,7 @@ rNx
 rNx
 bvy
 bEy
-kga
+xUs
 nkF
 pye
 eic
@@ -91375,7 +91386,7 @@ aHn
 aHO
 ayN
 bvF
-bwi
+ayN
 ayN
 aKz
 aLa
@@ -91631,11 +91642,11 @@ aOx
 bvl
 bvn
 bvC
-bvG
+bwj
 bwj
 aJt
-aJt
-aJt
+aJu
+bwi
 aJt
 aJY
 aLR
@@ -91889,10 +91900,10 @@ aHo
 aFN
 aIk
 aIQ
-aJu
 aJZ
 aJZ
 aJZ
+sIl
 aJZ
 aLS
 aMF
@@ -93530,7 +93541,7 @@ bvy
 bvy
 bvy
 bEy
-nZh
+tdN
 nZh
 cpx
 qwu
@@ -94301,7 +94312,7 @@ bDn
 egy
 bvy
 bEy
-tdN
+ovM
 ovM
 qjQ
 qwu
@@ -94969,7 +94980,7 @@ aNi
 aFw
 aFX
 hOy
-aJJ
+bvG
 aHX
 aIr
 aNn
