@@ -16,3 +16,20 @@
 
 /area/virtual_reality/yacht
 	name = "VR Yacht"
+
+
+//Hallways//
+
+//Deck 3 Hallways
+/area/hallway/primary/deckthree/fore
+	name = "\improper Deck 3 - Fore Primary Hallway"
+	icon_state = "hallF"
+
+/area/hallway/primary/deckthree/aft
+	name = "\improper Deck 3 - Aft Primary Hallway"
+	icon_state = "hallA"
+
+
+/area/hallway/primary/deckthree/central
+	name = "\improper Deck 3 - Central Primary Hallway"
+	icon_state = "hallC1"
