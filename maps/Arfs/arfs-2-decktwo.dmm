@@ -42146,6 +42146,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/central_two)
 "byg" = (
@@ -42365,8 +42366,8 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
+/obj/structure/disposalpipe/junction{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/central_two)
@@ -42760,7 +42761,8 @@
 /area/engineering/atmos)
 "bzx" = (
 /obj/machinery/door/window/northright{
-	dir = 8
+	dir = 8;
+	req_access = list(11)
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
