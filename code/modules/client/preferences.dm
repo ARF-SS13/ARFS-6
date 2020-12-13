@@ -400,13 +400,15 @@ datum/preferences
 	if(S)
 		dat += "<b>Select a character slot to load</b><hr>"
 		var/name
+		var/nickname
 		for(var/i=1, i<= config.character_slots, i++)
 			S.cd = "/character[i]"
 			S["real_name"] >> name
+			S["nickname"] >> nickname
 			if(!name)	name = "Character[i]"
 			if(i==default_slot)
 				name = "<b>[name]</b>"
-			dat += "<a href='?src=\ref[src];changeslot=[i]'>[name]</a><br>"
+			dat += "<a href='?src=\ref[src];changeslot=[i]'>[name][nickname ? " ([nickname])" : ""]</a><br>" // Scuffed way to add a space before adding the nickname in parenthesis.
 
 	dat += "<hr>"
 	dat += "</center></tt>"
