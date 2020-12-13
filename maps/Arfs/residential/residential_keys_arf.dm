@@ -331,8 +331,8 @@
 	path = /obj/item/weapon/card/id/residential/mansion
 	display_name = "Mansion keys"
 	description = "residential"
-	ckeywhitelist = list("andyman105", "dameonowen", "secondattemps", "thingpony", "hagawaga")
-	character_name = list("Dameon Owen", "Amber Owen", "Jake Owen", "Lilith Owen", "Iris Miller", "Brian Owen", "Percy Owen", "Ruby Flare", "Zephyr Sharpe", "Peter Sharpe", "Eve", "Ashlyn", "Agalon", "Lana Xavier")
+	ckeywhitelist = list("andyman105", "dameonowen", "secondattemps", "thingpony", "hagawaga","brimcon")
+	character_name = list("Dameon Owen", "Amber Owen", "Jake Owen", "Lilith Owen", "Iris Miller", "Brian Owen", "Percy Owen", "Ruby Flare", "Zephyr Sharpe", "Peter Sharpe", "Eve", "Ashlyn", "Agalon", "Lana Xavier", "Scryden Sako")
 
 /datum/gear/fluff/res_key_wallet
 	path = /obj/item/weapon/storage/wallet/residential
