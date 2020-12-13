@@ -9,7 +9,8 @@
 	return 1
 
 var/list/shell_module_types = list(
-	"Standard", "Service", "Clerical", "Service-Hound"
+	"Standard", "Engineering", "Pupdozer", "Service", "Service-Hound", "Clerical",
+	"Surgeon", "Medihound", "Janitor", "Janihound", "Research", "Sci-borg", "Security", "K9"
 )
 
 var/list/eventdestinations = list() // List of scatter landmarks for VOREStation event portals

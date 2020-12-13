@@ -58,7 +58,7 @@
 		NETWORK_INTERROGATION
 	)
 
-	allowed_spawns = list("Cryogenic Storage")
+	allowed_spawns = list("Arrivals Shuttle","Gateway","Cryogenic Storage","Cyborg Storage","NCS Serenity Residential")
 
 /datum/map/arfs/perform_map_generation()
 	new /datum/random_map/automata/cave_system(null, 1, 1, Z_LEVEL_MINING_ARFS, world.maxx, world.maxy) // Create the mining Z-level.
