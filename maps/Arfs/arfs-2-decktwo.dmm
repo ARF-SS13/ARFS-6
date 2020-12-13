@@ -19884,7 +19884,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/bar)
 "aLi" = (
-/obj/machinery/door/airlock/highsecurity,
+/obj/machinery/door/airlock/highsecurity{
+	name = "Secure Tech Storage";
+	req_access = list(19, 23);
+	req_one_access = newlist()
+	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/storage/tech)
