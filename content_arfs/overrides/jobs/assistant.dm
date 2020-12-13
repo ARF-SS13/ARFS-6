@@ -40,4 +40,5 @@
 		"Fashion Model",
 		"Live Performer",
 		"Slacker",
-		"Nanotrasen Peace Officer")
+		"Nanotrasen Peace Officer,
+		"Prisoner")
