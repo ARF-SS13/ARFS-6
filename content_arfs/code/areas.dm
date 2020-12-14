@@ -16,3 +16,38 @@
 
 /area/virtual_reality/yacht
 	name = "VR Yacht"
+
+
+//Hallways//
+
+//Deck 3 Hallways
+/area/hallway/primary/deckthree/fore
+	name = "\improper Deck 3 - Fore Primary Hallway"
+	icon_state = "hallF"
+
+/area/hallway/primary/deckthree/aft
+	name = "\improper Deck 3 - Aft Primary Hallway"
+	icon_state = "hallA"
+
+
+/area/hallway/primary/deckthree/central
+	name = "\improper Deck 3 - Central Primary Hallway"
+	icon_state = "hallC1"
+
+//OUTSIDE//
+//In space, but on top of the plating which covers lower z levels.
+//Allows gravity to exist when you're standing on top of the plating outside
+/area/exterior
+	name = "Ship Exterior"
+	requires_power = 1
+	always_unpowered = 1
+	dynamic_lighting = 0
+	ambience = AMBIENCE_SPACE
+	has_gravity = TRUE
+
+/area/exterior/deckone
+	name = "Ship Exterior - Deck One"
+/area/exterior/decktwo
+	name = "Ship Exterior - Deck Two"
+/area/exterior/deckthree
+	name = "Ship Exterior - Deck Three"
