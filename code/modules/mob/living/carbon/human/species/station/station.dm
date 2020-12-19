@@ -228,7 +228,7 @@
 
 	move_trail = /obj/effect/decal/cleanable/blood/tracks/paw
 
-	heat_discomfort_level = 292
+	heat_discomfort_level = 295 //Prevents heat discomfort spam at 20c
 	heat_discomfort_strings = list(
 		"Your fur prickles in the heat.",
 		"You feel uncomfortably warm.",
