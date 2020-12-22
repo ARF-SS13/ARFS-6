@@ -79,7 +79,7 @@
 
 /datum/trait/blindness/handle_environment_special(var/mob/living/carbon/human/H)
 	H.sdisabilities |= BLIND 		//no matter what you do, the blindess still comes for you
-
+/*
 /datum/trait/schizophrenia
 	name = "Episodic hallucinations."
 	desc = "You have a condition which causes you to spontaneously have hallucinations! Luckily for you, in the modern space age, our doctors have solutions for you, just make sure you don't forget to take your pills."
@@ -133,7 +133,7 @@
 			if(!episode["meds_at_beginning"] && med_vol)
 				episode["next_episode_end"] = world.time + (episode["next_episode_end"] - world.time)/8
 			H.hallucination = min(hallucination_max,H.hallucination + hallucination_increase)
-
+/
 /datum/trait/schizophrenia/proc/get_med_volume(var/mob/living/carbon/human/H)
 	var/total_vol = 0
 	for(var/datum/reagent/reagent in H.bloodstr.reagent_list)
@@ -143,6 +143,7 @@
 		if(istype(reagent,/datum/reagent/tercozolam))
 			total_vol += reagent.volume
 	return total_vol
+*/
 /datum/trait/agoraphobia
 	name = "Agoraphobia"
 	desc = "You very much dislike being in crowded places. When in the company of more than two other people, you start to panic and experience adverse effects."
