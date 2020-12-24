@@ -170,6 +170,10 @@
 	name = "S7 residential key"
 	access = list(8207)
 
+/obj/item/weapon/card/id/residential/s8
+	name = "S8 residential key"
+	access = list(8208)
+
 
 //FLUFF SPAWNS
 
@@ -193,6 +197,13 @@
 	description = "residential"
 	ckeywhitelist = list("truedark")
 	character_name = list("Vakshhas")
+
+/datum/gear/fluff/res_key_s8
+	path = /obj/item/weapon/card/id/residential/s8
+	display_name = "S8 keys"
+	description = "residential"
+	ckeywhitelist = list("cebutris", "technicalmagi", "fludd12", "thingpony")
+	character_name = list("Kaibus Wordsmith", "Nia Wordsmith", "Naomi Reids", "Tye Riggle")
 
 // MEDIUM KEYS
 
