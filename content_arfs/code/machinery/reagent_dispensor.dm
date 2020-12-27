@@ -1,7 +1,7 @@
 
 /obj/machinery/chemical_dispenser/kitchen
 	name = "kitchen dispenser"
-	desc = "Helping Chef's be lazy in cooking!."
+	desc = "Helping chefs be lazy."
 	icon_state = "coffee_dispenser"
 	ui_title = "Kitchen Dispenser"
 	accept_drinking = 1
