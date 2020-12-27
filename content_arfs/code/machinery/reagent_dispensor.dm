@@ -18,29 +18,6 @@
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/enzyme, /obj/item/weapon/reagent_containers/chem_disp_cartridge/water)
 
 
-
-//chem dispensor carts
-/*
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/arfs
-
-	batter	spawn_reagent = "batter"
-	beerbatter	spawn_reagent = "beerbatter"
-	mayo	spawn_reagent = "mayo"
-	yeast	spawn_reagent = "yeast"
-	flour	spawn_reagent = "flour"
-	soysauce	spawn_reagent = "soysauce"
-	peanutbutter	spawn_reagent = "peanutbutter"
-	blackpepper	spawn_reagent = "blackpepper"
-	spacespice	spawn_reagent = "spacespice"
-	salt	spawn_reagent = "salt"
-	soymilk	 spawn_reagent = "soymilk"
-	egg	 spawn_reagent = "egg"
-
-/obj/machinery/chemical_dispenser/kitchen
-	dispense_reagents = list(
-		"milk", "sugar", "batter", "beerbatter")
-*/
-
 /obj/item/weapon/reagent_containers/chem_disp_cartridge/batter
 	spawn_reagent = "batter"
 
