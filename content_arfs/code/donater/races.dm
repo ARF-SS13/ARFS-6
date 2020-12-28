@@ -10,6 +10,8 @@
 	icobase_tail = 1
 	color_mult = 1
 //	color_blend = 0
+	darksight = 9
+	slowdown = -0.2
 
 	blurb = "Spce eevee? Space eevee!"
 	secondary_langs = list(LANGUAGE_CANILUNZT)
