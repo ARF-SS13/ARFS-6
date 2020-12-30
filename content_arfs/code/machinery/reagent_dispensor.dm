@@ -13,7 +13,7 @@
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/mayo, /obj/item/weapon/reagent_containers/chem_disp_cartridge/yeast,
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/flour, /obj/item/weapon/reagent_containers/chem_disp_cartridge/soysauce,
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/peanutbutter, /obj/item/weapon/reagent_containers/chem_disp_cartridge/blackpepper,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/salt, /obj/item/weapon/reagent_containers/chem_disp_cartridge/spacespice,
+			/obj/item/weapon/reagent_containers/chem_disp_cartridge/sodiumchloride, /obj/item/weapon/reagent_containers/chem_disp_cartridge/spacespice,
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/soymilk, /obj/item/weapon/reagent_containers/chem_disp_cartridge/egg,
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/enzyme, /obj/item/weapon/reagent_containers/chem_disp_cartridge/water)
 
@@ -45,8 +45,8 @@
 /obj/item/weapon/reagent_containers/chem_disp_cartridge/spacespice
 	spawn_reagent = "spacespice"
 
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/salt
-	spawn_reagent = "salt"
+/obj/item/weapon/reagent_containers/chem_disp_cartridge/sodiumchloride
+	spawn_reagent = "sodiumchloride"
 
 /obj/item/weapon/reagent_containers/chem_disp_cartridge/soymilk
 	spawn_reagent = "soymilk"
