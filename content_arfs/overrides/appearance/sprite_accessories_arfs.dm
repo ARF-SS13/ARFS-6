@@ -12,6 +12,10 @@
 	name = "Drake (Taur) - Special"
 	ckeys_allowed = list("dameonowen")
 
+/datum/sprite_accessory/tail/dragon/andy
+	name = "dragon, colorable - Special"
+	ckeys_allowed = list("dameonowen")
+
 /mob/living/carbon/human/proc/special_select_tail()
 	set name = "Select Taur"
 	set category = "Abilities"
@@ -20,8 +24,9 @@
 		return
 
 	last_special = world.time + 10
-	var/list/pretty_tail_styles = list("Normal" = /datum/sprite_accessory/tail/taur/drake/andy,
-									   "Fat" = /datum/sprite_accessory/tail/taur/fatdrake/andy)
+	var/list/pretty_tail_styles = list("Normal" = /datum/sprite_accessory/tail/dragon/andy,
+									   "Normal Taur" = /datum/sprite_accessory/tail/taur/drake/andy,
+									   "Fat Taur" = /datum/sprite_accessory/tail/taur/fatdrake/andy)
 
 	var/new_tail_style = input(src, "Pick a taur!", "Character Preference", tail_style ? tail_style.name : null) as null|anything in pretty_tail_styles
 	if(!new_tail_style)
