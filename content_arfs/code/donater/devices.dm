@@ -232,8 +232,8 @@
 	set category = "Object"
 	set src in view(1)
 
-	var/size_select = input("Put the desired size (25-300%)", "Set Size", size_set_to * 100) as num
-	if(size_select > 300 || size_select < 25)
+	var/size_select = input("Put the desired size (25-400%)", "Set Size", size_set_to * 100) as num
+	if(size_select > 400 || size_select < 25)
 		to_chat(usr, "<span class='notice'>Invalid size.</span>")
 		return
 	size_set_to = (size_select/100)
@@ -272,3 +272,6 @@
 
 /obj/item/projectile/beam/andysizelaser/extremegrow
 	set_size = 3.0 //300% of current size
+
+/obj/item/projectile/beam/andysizelaser/massivegrow
+	set_size = 4.0 //300% of current size
