@@ -228,6 +228,10 @@ var/global/list/datum/dna/gene/dna_genes[0]
 	var/taurtypetwo = /datum/sprite_accessory/tail/taur/drake/andy
 	if(istype(character.tail_style, taurtypetwo))
 		character.verbs += /mob/living/carbon/human/proc/special_select_tail
+
+	var/taurtypethree = /datum/sprite_accessory/tail/dragon/andy
+	if(istype(character.tail_style, taurtypethree))
+		character.verbs += /mob/living/carbon/human/proc/special_select_tail
 	// END ARFS EDIT
 
 	// +1 to account for the none-of-the-above possibility

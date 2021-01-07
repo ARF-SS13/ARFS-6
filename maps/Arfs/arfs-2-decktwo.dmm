@@ -24211,6 +24211,9 @@
 /obj/effect/floor_decal/grass_edge{
 	dir = 4
 	},
+/obj/machinery/computer/cryopod/robot{
+	pixel_y = -32
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/cryo)
 "aTm" = (
@@ -30645,20 +30648,21 @@
 /area/medical/medbay_primary_storage)
 "bfL" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/firstaid/toxin{
-	pixel_x = 5;
-	pixel_y = 5
-	},
-/obj/item/weapon/storage/firstaid/toxin{
-	pixel_x = 5;
-	pixel_y = 5
-	},
-/obj/item/weapon/storage/firstaid/toxin{
-	pixel_x = 5;
-	pixel_y = 5
-	},
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 9
+	},
+/obj/item/weapon/storage/firstaid/toxin{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/weapon/storage/firstaid/toxin{
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/item/weapon/storage/firstaid/toxin,
+/obj/item/weapon/storage/firstaid/toxin{
+	pixel_x = -2;
+	pixel_y = -2
 	},
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 10
@@ -32280,6 +32284,10 @@
 	input_attempt = 1;
 	inputting = 2;
 	name = "Port Solar Array SMES"
+	},
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/engineering)
@@ -34041,28 +34049,20 @@
 /obj/structure/table/woodentable,
 /obj/item/weapon/newspaper,
 /obj/item/weapon/backup_implanter{
-	pixel_y = -1
+	pixel_y = -4
+	},
+/obj/item/weapon/backup_implanter,
+/obj/item/weapon/backup_implanter{
+	pixel_y = 4
 	},
 /obj/item/weapon/backup_implanter{
-	pixel_y = -1
+	pixel_y = 8
 	},
-/obj/item/weapon/backup_implanter{
-	pixel_y = -1
-	},
-/obj/item/weapon/backup_implanter{
-	pixel_y = -1
-	},
-/obj/item/weapon/backup_implanter{
-	pixel_y = -1
-	},
-/obj/item/weapon/backup_implanter{
-	pixel_y = -1
-	},
-/obj/item/weapon/storage/firstaid,
 /obj/machinery/camera/network/medbay{
 	c_tag = "MED - EMT";
 	dir = 1
 	},
+/obj/item/weapon/storage/firstaid/regular,
 /turf/simulated/floor/wood,
 /area/medical/reception)
 "bnl" = (
@@ -35214,19 +35214,14 @@
 "bpM" = (
 /obj/structure/table/marble,
 /obj/item/weapon/backup_implanter{
-	pixel_y = 5
-	},
-/obj/item/weapon/backup_implanter{
-	pixel_y = 5
-	},
-/obj/item/weapon/backup_implanter{
 	pixel_y = -4
 	},
+/obj/item/weapon/backup_implanter,
 /obj/item/weapon/backup_implanter{
-	pixel_y = -1
+	pixel_y = 4
 	},
 /obj/item/weapon/backup_implanter{
-	pixel_y = 10
+	pixel_y = 8
 	},
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 10
@@ -37254,16 +37249,17 @@
 "buK" = (
 /obj/structure/table/standard,
 /obj/item/weapon/storage/firstaid/o2{
-	pixel_x = 5;
-	pixel_y = 5
+	pixel_x = 4;
+	pixel_y = 4
 	},
 /obj/item/weapon/storage/firstaid/o2{
-	pixel_x = 5;
-	pixel_y = 5
+	pixel_x = 2;
+	pixel_y = 2
 	},
+/obj/item/weapon/storage/firstaid/o2,
 /obj/item/weapon/storage/firstaid/o2{
-	pixel_x = 5;
-	pixel_y = 5
+	pixel_x = -2;
+	pixel_y = -2
 	},
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 10
@@ -37276,16 +37272,17 @@
 "buM" = (
 /obj/structure/table/standard,
 /obj/item/weapon/storage/firstaid/fire{
-	pixel_x = 5;
-	pixel_y = 5
+	pixel_x = 4;
+	pixel_y = 4
 	},
 /obj/item/weapon/storage/firstaid/fire{
-	pixel_x = 5;
-	pixel_y = 5
+	pixel_x = 2;
+	pixel_y = 2
 	},
+/obj/item/weapon/storage/firstaid/fire,
 /obj/item/weapon/storage/firstaid/fire{
-	pixel_x = 5;
-	pixel_y = 5
+	pixel_x = -2;
+	pixel_y = -2
 	},
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 10
@@ -37298,10 +37295,6 @@
 /area/medical/medbay_primary_storage)
 "buN" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/firstaid,
-/obj/item/weapon/storage/firstaid,
-/obj/item/weapon/storage/firstaid,
-/obj/item/weapon/storage/firstaid,
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 10
 	},
@@ -37310,14 +37303,36 @@
 	pixel_y = -24
 	},
 /obj/structure/cable/green,
+/obj/item/weapon/storage/firstaid/regular{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/weapon/storage/firstaid/regular{
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/item/weapon/storage/firstaid/regular,
+/obj/item/weapon/storage/firstaid/regular{
+	pixel_x = -2;
+	pixel_y = -2
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
 "buO" = (
 /obj/structure/table/standard,
+/obj/item/weapon/storage/firstaid/adv{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/weapon/storage/firstaid/adv{
+	pixel_x = 2;
+	pixel_y = 2
+	},
 /obj/item/weapon/storage/firstaid/adv,
-/obj/item/weapon/storage/firstaid/adv,
-/obj/item/weapon/storage/firstaid/adv,
-/obj/item/weapon/storage/firstaid/adv,
+/obj/item/weapon/storage/firstaid/adv{
+	pixel_x = -2;
+	pixel_y = -2
+	},
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 10
 	},
@@ -43655,6 +43670,11 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/foyer)
+"exy" = (
+/obj/structure/closet/secure_closet/atmos_personal,
+/obj/item/weapon/pipe_dispenser,
+/turf/simulated/floor/tiled/dark,
+/area/engineering/atmos)
 "exE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -44612,6 +44632,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cafeteria)
+"fQq" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
+	dir = 10
+	},
+/turf/space,
+/area/space)
 "fQF" = (
 /obj/structure/grille,
 /obj/structure/window/phoronreinforced,
@@ -45041,6 +45067,7 @@
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 8
 	},
+/obj/structure/closet/wardrobe/engineering_yellow,
 /turf/simulated/floor/tiled/dark,
 /area/engineering)
 "gto" = (
@@ -45830,11 +45857,10 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/cryo)
 "hEa" = (
-/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
-	dir = 10;
-	tag = "icon-intact (SOUTHWEST)"
-	},
 /obj/structure/lattice,
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
+	dir = 4
+	},
 /turf/space,
 /area/space)
 "hFd" = (
@@ -47084,10 +47110,13 @@
 /area/space)
 "jCK" = (
 /obj/structure/table/marble,
-/obj/item/weapon/storage/firstaid,
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 10
 	},
+/obj/item/weapon/storage/firstaid/regular{
+	pixel_y = 5
+	},
+/obj/item/weapon/storage/firstaid/regular,
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "jEq" = (
@@ -47213,6 +47242,8 @@
 	name = "Station Intercom (General)";
 	pixel_x = -21
 	},
+/obj/structure/closet/secure_closet/atmos_personal,
+/obj/item/weapon/pipe_dispenser,
 /turf/simulated/floor/tiled/dark,
 /area/engineering/atmos)
 "jLJ" = (
@@ -48962,8 +48993,7 @@
 /area/engineering/atmos)
 "mEc" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
-	dir = 10;
-	tag = "icon-intact (SOUTHWEST)"
+	dir = 9
 	},
 /turf/space,
 /area/space)
@@ -49184,10 +49214,10 @@
 /turf/simulated/floor/tiled/dark,
 /area/engineering/aft_hallway)
 "mRY" = (
+/obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 6
 	},
-/obj/structure/lattice,
 /turf/space,
 /area/space)
 "mTb" = (
@@ -49966,6 +49996,12 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/dark,
 /area/security/security_cell_hallway)
+"oqK" = (
+/obj/machinery/computer/cryopod/robot{
+	pixel_x = 32
+	},
+/turf/simulated/floor/plating,
+/area/engineering/drone_fabrication)
 "oqV" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -50379,9 +50415,9 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/security_cell_hallway)
 "oPj" = (
+/obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
-	dir = 9;
-	tag = "icon-intact (NORTHWEST)"
+	dir = 10
 	},
 /turf/space,
 /area/space)
@@ -50522,13 +50558,6 @@
 /obj/structure/closet/firecloset,
 /turf/simulated/floor/tiled/dark,
 /area/engineering/atmos/storage)
-"pai" = (
-/obj/structure/lattice,
-/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
-	dir = 4
-	},
-/turf/space,
-/area/space)
 "pao" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
@@ -50544,14 +50573,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/brig)
-"paD" = (
-/obj/structure/lattice,
-/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
-	dir = 9;
-	tag = "icon-intact (NORTHWEST)"
-	},
-/turf/space,
-/area/space)
 "pbj" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -53384,11 +53405,10 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "tny" = (
-/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
-	dir = 5;
-	tag = "icon-intact (NORTHWEST)"
-	},
 /obj/structure/lattice,
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
+	dir = 5
+	},
 /turf/space,
 /area/space)
 "tqj" = (
@@ -54459,7 +54479,7 @@
 	dir = 5
 	},
 /obj/structure/table/reinforced,
-/obj/item/weapon/storage/firstaid,
+/obj/item/weapon/storage/firstaid/regular,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
 "uRc" = (
@@ -55110,12 +55130,13 @@
 /area/engineering/engine_room)
 "vZH" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/firstaid/clotting{
-	pixel_x = -3;
-	pixel_y = -1
-	},
 /obj/item/weapon/storage/firstaid/bonemed{
-	pixel_x = 8
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/weapon/storage/firstaid/clotting{
+	pixel_x = -2;
+	pixel_y = -2
 	},
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 10
@@ -55907,15 +55928,6 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden,
 /turf/simulated/floor/tiled/dark,
 /area/engineering/engine_eva)
-"xyT" = (
-/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
-	dir = 4
-	},
-/turf/space,
-/area/space)
 "xzv" = (
 /obj/random/junk,
 /obj/effect/floor_decal/rust,
@@ -90594,7 +90606,7 @@ jTd
 jPA
 gnz
 pmY
-bDn
+exy
 jLm
 bYo
 uoc
@@ -92113,7 +92125,7 @@ buZ
 bwE
 aZB
 bwa
-bvW
+oqK
 aZB
 aZB
 bvW
@@ -96256,17 +96268,17 @@ bnS
 bnS
 aaa
 aov
-mnx
-mnx
+hEa
+hEa
 aov
-mnx
-mnx
-mnx
-mnx
-mnx
-mnx
-mnx
-mnx
+oPj
+mEc
+oPj
+mEc
+oPj
+mEc
+oPj
+mEc
 aov
 aov
 aov
@@ -96513,17 +96525,17 @@ bnS
 bnS
 aaa
 aov
-muF
-mnx
-aaa
-mnx
-muF
-mnx
-muF
-mnx
-muF
-mnx
-muF
+fQq
+mEc
+aov
+bDU
+bDU
+bDU
+bDU
+bDU
+bDU
+bDU
+bDU
 aov
 aaa
 aaa
@@ -96770,17 +96782,17 @@ bnS
 bnS
 aaa
 bDU
-muF
-mnx
+bDU
+bDU
+bDU
 aaa
-mnx
-muF
-mnx
-muF
-mnx
-muF
-mnx
-muF
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aov
 aaa
 aaa
@@ -97026,18 +97038,18 @@ aaa
 aaa
 aov
 aaa
-bDU
-muF
-mnx
+aov
 aaa
-mnx
-muF
-mnx
-muF
-mnx
-muF
-mnx
-muF
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aov
 aaa
 aaa
@@ -97283,18 +97295,18 @@ aov
 aov
 aov
 aov
-bDU
-mnx
-mnx
 aov
-mnx
-mnx
-mnx
-mnx
-mnx
-mnx
-mnx
-mnx
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aov
 aov
 aov
@@ -97540,18 +97552,18 @@ aaa
 aaa
 aov
 aaa
-bDU
-muF
-mnx
 aaa
-mnx
-muF
-mnx
-muF
-mnx
-muF
-mnx
-muF
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aov
 aaa
 aaa
@@ -97797,18 +97809,18 @@ aaa
 aaa
 aov
 aaa
-bDU
-muF
-pai
 aaa
-mnx
-muF
-mnx
-muF
-mnx
-muF
-mnx
-muF
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aov
 aaa
 aaa
@@ -98054,18 +98066,18 @@ bDU
 bDU
 bDU
 aaa
-bDU
-muF
-pai
 aaa
-mnx
-muF
-mnx
-muF
-mnx
-muF
-mnx
-muF
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aov
 aaa
 aaa
@@ -98311,18 +98323,18 @@ aaa
 aaa
 aaa
 aaa
-bDU
-pai
-pai
-aov
-pai
-pai
-pai
-pai
-pai
-pai
-pai
-pai
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aov
 aov
 aov
@@ -98569,17 +98581,17 @@ aaa
 aaa
 aaa
 aaa
-mEc
-paD
 aaa
-pai
-muF
-pai
-muF
-pai
-muF
-pai
-muF
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aov
 aaa
 aaa
@@ -98824,19 +98836,19 @@ aaa
 aaa
 aaa
 aaa
-bDU
-bDU
-bDU
-bDU
 aaa
-mnx
-muF
-mnx
-muF
-mnx
-xyT
-mnx
-muF
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aov
 aaa
 aaa
@@ -99086,14 +99098,14 @@ aaa
 aaa
 aaa
 aaa
-hEa
-oPj
-hEa
-oPj
-hEa
-oPj
-hEa
-oPj
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aov
 aaa
 aaa
@@ -99342,17 +99354,17 @@ aaa
 aaa
 aaa
 aaa
-bDU
-bDU
-bDU
-bDU
-bDU
-bDU
-bDU
-bDU
-bDU
-bDU
-bDU
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aov
 aov
 aov
