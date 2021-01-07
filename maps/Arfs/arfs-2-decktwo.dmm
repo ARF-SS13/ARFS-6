@@ -43049,13 +43049,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
-"dfu" = (
-/obj/machinery/navbeacon/patrol{
-	location = "HALL_CENTRAL_EVAC_1";
-	next_patrol = "HALL_CENTRAL_EVAC_2"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/hallway/primary/central_two)
 "dfZ" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -44695,6 +44688,21 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/security_cell_hallway)
+"fOh" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
+/obj/machinery/navbeacon/patrol{
+	location = "HALL_AFT_MEDBAY_1";
+	next_patrol = "HALL_MEDBAY"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/hallway/primary/aft)
 "fOi" = (
 /obj/machinery/smartfridge/secure/medbay{
 	req_one_access = list()
@@ -44917,12 +44925,12 @@
 	dir = 4
 	},
 /obj/machinery/embedded_controller/radio/airlock/access_controller{
-	id_tag = "virology_airlock_control";
+	id_tag = "viro_airlock_control";
 	name = "Virology Airlock Controller";
 	pixel_x = 32;
 	pixel_y = -25;
-	tag_exterior_door = "virology_airlock_exterior";
-	tag_interior_door = "virology_airlock_interior"
+	tag_exterior_door = "viro_airlock_exterior";
+	tag_interior_door = "viro_airlock_interior"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
@@ -52526,21 +52534,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
-"rLi" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/disposalpipe/segment,
-/obj/machinery/navbeacon/patrol{
-	location = "HALL_AFT_MEDBAY_1";
-	next_patrol = "HALL_MEDBAY"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/hallway/primary/aft)
 "rLN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -53164,6 +53157,21 @@
 /obj/structure/shuttle/window,
 /turf/simulated/floor/plating,
 /area/shuttle/residential)
+"sCm" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
+/obj/machinery/navbeacon/patrol{
+	location = "HALL_AFT_MEDBAY_2";
+	next_patrol = "HALL_AFT"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/hallway/primary/aft)
 "sCJ" = (
 /obj/machinery/computer/operating,
 /obj/effect/floor_decal/corner/pink{
@@ -53196,6 +53204,13 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating,
 /area/maintenance/security_port)
+"sFe" = (
+/obj/machinery/navbeacon/patrol{
+	location = "HALL_CENTRAL_EVAC_1";
+	next_patrol = "HALL_CENTRAL_EVAC_2"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/hallway/primary/central_two)
 "sFi" = (
 /obj/structure/cable/yellow{
 	d1 = 4;
@@ -53958,21 +53973,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/atmos)
-"tXa" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/disposalpipe/segment,
-/obj/machinery/navbeacon/patrol{
-	location = "HALL_AFT_MEDBAY_2";
-	next_patrol = "HALL_AFT"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/hallway/primary/aft)
 "tXz" = (
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner/blue{
@@ -88900,9 +88900,9 @@ aWj
 aWj
 bjD
 bku
-rLi
+fOh
 blq
-tXa
+sCm
 aWj
 aWj
 aWj
@@ -95551,7 +95551,7 @@ aOr
 aOr
 aOr
 aOr
-dfu
+sFe
 aVr
 aVS
 aOD
