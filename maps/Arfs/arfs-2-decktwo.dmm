@@ -2440,15 +2440,17 @@
 	name = "\improper Foreward Command Hallwayy"
 	})
 "aeU" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
+/obj/structure/disposalpipe/segment,
 /obj/machinery/navbeacon/patrol{
-	location = "HALL_FORE";
-	next_patrol = "HALL_CENTRAL_PORT"
+	location = "HALL_FORE_2";
+	next_patrol = "HALL_FORE_3"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/fore{
@@ -7826,6 +7828,10 @@
 	dir = 2;
 	icon_state = "pipe-j2"
 	},
+/obj/machinery/navbeacon/patrol{
+	location = "HALL_FORE_1";
+	next_patrol = "HALL_FORE_2"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/fore)
 "aoi" = (
@@ -8006,6 +8012,10 @@
 /obj/structure/disposalpipe/segment{
 	dir = 2;
 	icon_state = "pipe-c"
+	},
+/obj/machinery/navbeacon/patrol{
+	location = "HALL_FORE_SB_2";
+	next_patrol = "HALL_FORE_1"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/starboard)
@@ -10069,6 +10079,10 @@
 	dir = 8
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/navbeacon/patrol{
+	location = "HALL_FORE_SB_1";
+	next_patrol = "HALL_FORE_SB_2"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/starboard)
 "asJ" = (
@@ -11721,6 +11735,10 @@
 	dir = 6
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/navbeacon/patrol{
+	location = "HALL_BATHROOM";
+	next_patrol = "HALL_FORE_SB_1"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/locker)
 "awk" = (
@@ -15851,6 +15869,10 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
+/obj/machinery/navbeacon/patrol{
+	location = "HALL_CARGO";
+	next_patrol = "HALL_CENTRAL_FORE"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/fore)
 "aDn" = (
@@ -19833,6 +19855,10 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/navbeacon/patrol{
+	location = "HALL_HYDRO";
+	next_patrol = "HALL_BATHROOM"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/fore)
 "aLy" = (
@@ -20671,6 +20697,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
+/obj/machinery/navbeacon/patrol{
+	location = "HALL_CENTRAL_PORT_1";
+	next_patrol = "HALL_CENTRAL_PORT_2"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/central_four)
 "aMS" = (
@@ -20742,6 +20772,10 @@
 /obj/structure/disposalpipe/junction/yjunction{
 	dir = 1;
 	tag = "icon-pipe-y (NORTH)"
+	},
+/obj/machinery/navbeacon/patrol{
+	location = "HALL_CENTRAL_FORE";
+	next_patrol = "HALL_CENTRAL_PORT_1"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/central_one)
@@ -21826,6 +21860,10 @@
 "aPl" = (
 /obj/structure/disposalpipe/junction{
 	dir = 1
+	},
+/obj/machinery/navbeacon/patrol{
+	location = "HALL_CENTRAL_SB";
+	next_patrol = "HALL_HYDRO"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/central_two)
@@ -23183,12 +23221,20 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/cryo)
 "aRz" = (
-/obj/machinery/navbeacon/patrol{
-	location = "HALL_CENTRAL_SB";
-	next_patrol = "HALL_FORE"
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
-/turf/simulated/wall,
-/area/hallway/primary/central_two)
+/obj/structure/disposalpipe/segment,
+/obj/machinery/navbeacon/patrol{
+	location = "HALL_FORE_3";
+	next_patrol = "HALL_CARGO"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/hallway/primary/fore)
 "aRA" = (
 /obj/effect/landmark{
 	name = "JoinLateGateway"
@@ -24070,6 +24116,10 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/navbeacon/patrol{
+	location = "HALL_CENTRAL_1";
+	next_patrol = "HALL_AFT_MEDBAY_1"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/central_three)
 "aSX" = (
@@ -25016,6 +25066,10 @@
 	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/navbeacon/patrol{
+	location = "HALL_CENTRAL_PORT_2";
+	next_patrol = "HALL_CENTRAL_1"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/central_four)
 "aUv" = (
@@ -25366,6 +25420,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
+/obj/machinery/navbeacon/patrol{
+	location = "HALL_CENTRAL_2";
+	next_patrol = "HALL_CENTRAL_EVAC_1"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/central_three)
 "aVc" = (
@@ -28389,6 +28447,10 @@
 /obj/structure/disposalpipe/junction{
 	dir = 1
 	},
+/obj/machinery/navbeacon/patrol{
+	location = "HALL_AFT_CROSS_2";
+	next_patrol = "HALL_CENTRAL_2"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/aft)
 "baQ" = (
@@ -28553,6 +28615,10 @@
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/machinery/navbeacon/patrol{
+	location = "HALL_STARBOARD_CROSS";
+	next_patrol = "HALL_AFT_CROSS_2"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/central_two{
@@ -28773,6 +28839,10 @@
 /obj/structure/disposalpipe/junction{
 	dir = 1;
 	icon_state = "pipe-j2"
+	},
+/obj/machinery/navbeacon/patrol{
+	location = "HALL_AFT_CROSS_1";
+	next_patrol = "HALL_PORT_CROSS"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/aft)
@@ -32396,8 +32466,7 @@
 	frequency = 1379;
 	master_tag = "viro_airlock_control";
 	name = "Virology Access Button";
-	pixel_x = 27;
-	pixel_y = 2;
+	pixel_x = 24;
 	req_access = list(39)
 	},
 /turf/simulated/floor/tiled/white,
@@ -34780,6 +34849,10 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
+	},
+/obj/machinery/navbeacon/patrol{
+	location = "HALL_MEDBAY";
+	next_patrol = "HALL_AFT_MEDBAY_2"
 	},
 /turf/simulated/floor/wood,
 /area/medical/reception)
@@ -37357,20 +37430,12 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/aft)
 "buR" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
 /obj/machinery/navbeacon/patrol{
-	location = "HALL_AFT";
+	location = "HALL_CENTRAL_EVAC_2";
 	next_patrol = "HALL_CENTRAL_SB"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/dark,
-/area/hallway/primary/aft)
+/area/hallway/primary/central_two)
 "buS" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 6
@@ -38396,6 +38461,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/navbeacon/patrol{
+	location = "HALL_AFT";
+	next_patrol = "HALL_AFT_CROSS_1"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/aft)
 "bxQ" = (
@@ -42980,6 +43049,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
+"dfu" = (
+/obj/machinery/navbeacon/patrol{
+	location = "HALL_CENTRAL_EVAC_1";
+	next_patrol = "HALL_CENTRAL_EVAC_2"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/hallway/primary/central_two)
 "dfZ" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -43218,6 +43294,10 @@
 	icon_state = "pipe-j2"
 	},
 /obj/machinery/light,
+/obj/machinery/navbeacon/patrol{
+	location = "HALL_PORT_CROSS";
+	next_patrol = "HALL_STARBOARD_CROSS"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/central_four{
 	name = "\improper Aft Primary Hallway - Port"
@@ -44835,6 +44915,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
+	},
+/obj/machinery/embedded_controller/radio/airlock/access_controller{
+	id_tag = "virology_airlock_control";
+	name = "Virology Airlock Controller";
+	pixel_x = 32;
+	pixel_y = -25;
+	tag_exterior_door = "virology_airlock_exterior";
+	tag_interior_door = "virology_airlock_interior"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
@@ -49134,8 +49222,7 @@
 	frequency = 1379;
 	master_tag = "viro_airlock_control";
 	name = "Virology Access Button";
-	pixel_x = 26;
-	pixel_y = 1;
+	pixel_x = 24;
 	req_access = list(39)
 	},
 /turf/simulated/floor/tiled/white,
@@ -52439,6 +52526,21 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
+"rLi" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
+/obj/machinery/navbeacon/patrol{
+	location = "HALL_AFT_MEDBAY_1";
+	next_patrol = "HALL_MEDBAY"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/hallway/primary/aft)
 "rLN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -52893,6 +52995,23 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery2)
+"srB" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 10
+	},
+/obj/machinery/camera/network/medbay{
+	c_tag = "MED - EMT";
+	dir = 1
+	},
+/obj/machinery/button/remote/airlock{
+	desc = "A remote control switch for the medbay foyer.";
+	id = "MedbayFoyer";
+	name = "Medbay Doors Control";
+	pixel_x = 6;
+	pixel_y = -24
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/medbay)
 "ssa" = (
 /obj/machinery/light{
 	dir = 8
@@ -53839,6 +53958,21 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/atmos)
+"tXa" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
+/obj/machinery/navbeacon/patrol{
+	location = "HALL_AFT_MEDBAY_2";
+	next_patrol = "HALL_AFT"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/hallway/primary/aft)
 "tXz" = (
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner/blue{
@@ -86964,7 +87098,7 @@ xhZ
 bch
 bam
 aPK
-ble
+srB
 blh
 tdQ
 rbD
@@ -87367,7 +87501,7 @@ adJ
 adX
 aeh
 aeA
-aeU
+aeV
 aeA
 agJ
 arq
@@ -88652,7 +88786,7 @@ adO
 aea
 aem
 aeD
-aeX
+aeU
 aeX
 afv
 afI
@@ -88674,7 +88808,7 @@ amy
 anb
 anH
 aoh
-aoR
+aRz
 aoR
 aoR
 aqr
@@ -88766,9 +88900,9 @@ aWj
 aWj
 bjD
 bku
-aWj
+rLi
 blq
-aWj
+tXa
 aWj
 aWj
 aWj
@@ -88780,7 +88914,7 @@ aWj
 aYa
 aWj
 buq
-buR
+aWj
 aWj
 bsO
 aWj
@@ -91299,7 +91433,7 @@ aQE
 aOD
 aOD
 aOD
-aRz
+aOD
 aOD
 aOD
 aTq
@@ -95408,7 +95542,7 @@ wBW
 aNp
 aKP
 aOw
-aOr
+buR
 aOr
 aOr
 aQi
@@ -95417,7 +95551,7 @@ aOr
 aOr
 aOr
 aOr
-aOr
+dfu
 aVr
 aVS
 aOD
