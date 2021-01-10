@@ -565,6 +565,10 @@
 /obj/structure/bed/chair/office/light{
 	dir = 4
 	},
+/obj/machinery/computer/security/telescreen/entertainment{
+	icon_state = "frame";
+	pixel_y = 31
+	},
 /turf/simulated/floor/tiled/dark,
 /area/residential/mroom6)
 "abK" = (
@@ -731,15 +735,21 @@
 /turf/simulated/floor/carpet/bcarpet,
 /area/residential/mroom5)
 "acg" = (
-/obj/structure/trash_pile,
-/turf/simulated/floor/tiled/dark,
-/area/residential/mroom6)
+/obj/machinery/appliance/cooker/grill,
+/obj/effect/floor_decal/corner/black/diagonal{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/white/diagonal,
+/obj/machinery/chemical_dispenser/kitchen/full{
+	pixel_y = 27
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/residential/room12)
 "ach" = (
 /obj/machinery/light,
 /turf/simulated/floor/tiled/dark,
 /area/residential/mroom6)
 "aci" = (
-/obj/item/weapon/bedsheet/blue,
 /obj/structure/bed/double,
 /obj/item/weapon/bedsheet/bluedouble,
 /turf/simulated/floor/tiled/dark,
@@ -3226,11 +3236,6 @@
 /turf/space,
 /area/space)
 "ahS" = (
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 24
-	},
 /obj/structure/cable{
 	d2 = 2;
 	icon_state = "0-2"
@@ -4038,15 +4043,11 @@
 	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/residential/mroom5)
-"ajT" = (
-/obj/effect/alien/weeds,
-/turf/simulated/flesh,
-/area/residential/mroom8)
 "ajU" = (
 /obj/effect/alien/weeds,
 /obj/item/weapon/aiModule/purge,
 /obj/item/weapon/aiModule/freeform,
-/turf/simulated/flesh,
+/turf/simulated/floor/flesh,
 /area/residential/mroom8)
 "ajV" = (
 /obj/structure/toilet{
@@ -4483,14 +4484,13 @@
 /turf/simulated/floor/carpet/blue,
 /area/residential/mansion_bed_3)
 "akP" = (
-/obj/effect/alien/weeds/node,
 /obj/effect/alien/weeds,
-/turf/simulated/flesh,
+/turf/simulated/floor/flesh,
 /area/residential/mroom8)
 "akQ" = (
 /obj/effect/alien/weeds,
 /obj/effect/alien/weeds,
-/turf/simulated/flesh,
+/turf/simulated/floor/flesh,
 /area/residential/mroom8)
 "akR" = (
 /obj/machinery/media/jukebox,
@@ -5027,6 +5027,9 @@
 /obj/structure/fireplace{
 	pixel_y = -15
 	},
+/obj/structure/fireplace{
+	dir = 4
+	},
 /turf/simulated/wall,
 /area/residential/mroom1)
 "amc" = (
@@ -5534,7 +5537,7 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/wood,
 /area/residential/room12)
 "ank" = (
 /obj/structure/window/reinforced{
@@ -8159,11 +8162,6 @@
 /turf/simulated/wall,
 /area/residential/mroom6)
 "ath" = (
-/obj/machinery/power/apc{
-	dir = 8;
-	name = "west bump";
-	pixel_x = -28
-	},
 /obj/structure/cable{
 	d2 = 2;
 	icon_state = "0-2"
@@ -8534,6 +8532,13 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
+/obj/item/weapon/towel/random,
+/obj/item/weapon/towel/random,
+/obj/item/weapon/towel/random,
+/obj/item/weapon/towel/random,
+/obj/item/weapon/towel/random,
+/obj/item/clothing/under/bathrobe,
+/obj/item/clothing/under/bathrobe,
 /turf/simulated/floor/tiled/white,
 /area/residential/mroom1bed1)
 "auc" = (
@@ -8600,21 +8605,77 @@
 /turf/simulated/floor/lino,
 /area/residential/room7)
 "aul" = (
-/turf/simulated/floor/plating,
+/obj/machinery/appliance/cooker/oven,
+/obj/effect/floor_decal/corner/black/diagonal{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/white/diagonal,
+/turf/simulated/floor/tiled/kafel_full/white,
 /area/residential/room12)
 "aum" = (
-/obj/machinery/alarm{
-	frequency = 1441;
-	pixel_y = 22
+/obj/structure/table/marble,
+/obj/effect/floor_decal/corner/black/diagonal{
+	dir = 4
 	},
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/corner/white/diagonal,
+/obj/machinery/chemical_dispenser/bar_coffee/full{
+	pixel_y = 32
+	},
+/obj/item/weapon/material/knife{
+	pixel_x = 10
+	},
+/obj/item/weapon/material/knife{
+	pixel_x = 10
+	},
+/obj/item/weapon/material/knife{
+	pixel_x = 10
+	},
+/obj/item/weapon/material/knife{
+	pixel_x = 10
+	},
+/obj/item/weapon/material/knife{
+	pixel_x = 10
+	},
+/obj/item/weapon/material/kitchen/utensil/fork,
+/obj/item/weapon/material/kitchen/utensil/fork,
+/obj/item/weapon/material/kitchen/utensil/fork,
+/obj/item/weapon/material/kitchen/utensil/fork,
+/obj/item/weapon/material/kitchen/utensil/fork,
+/obj/item/weapon/material/kitchen/utensil/fork,
+/obj/item/weapon/material/kitchen/utensil/spoon{
+	pixel_x = -8
+	},
+/obj/item/weapon/material/kitchen/utensil/spoon{
+	pixel_x = -8
+	},
+/obj/item/weapon/material/kitchen/utensil/spoon{
+	pixel_x = -8
+	},
+/obj/item/weapon/material/kitchen/utensil/spoon{
+	pixel_x = -8
+	},
+/obj/item/weapon/material/kitchen/utensil/spoon{
+	pixel_x = -8
+	},
+/obj/item/weapon/material/kitchen/utensil/spoon{
+	pixel_x = -8
+	},
+/obj/item/weapon/material/kitchen/utensil/spoon{
+	pixel_x = -8
+	},
+/obj/item/weapon/material/kitchen/utensil/spoon{
+	pixel_x = -8
+	},
+/obj/item/weapon/material/kitchen/utensil/spoon{
+	pixel_x = -8
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
 /area/residential/room12)
 "aun" = (
-/obj/machinery/light_switch{
-	dir = 4;
-	pixel_x = -28
+/obj/machinery/light{
+	dir = 8
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/wood,
 /area/residential/room12)
 "auo" = (
 /obj/effect/floor_decal/corner/paleblue{
@@ -8662,7 +8723,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/wood,
 /area/residential/room12)
 "auu" = (
 /obj/structure/table/marble,
@@ -8699,21 +8760,36 @@
 /turf/simulated/floor/tiled/white,
 /area/residential/mansion)
 "auz" = (
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/carpet/blue{
+	dir = 8
+	},
+/obj/effect/floor_decal/carpet/blue{
+	dir = 1
+	},
+/obj/effect/floor_decal/carpet/blue{
+	dir = 9
+	},
+/turf/simulated/floor/carpet/turcarpet,
 /area/residential/room14)
 "auA" = (
-/obj/machinery/alarm{
-	frequency = 1441;
-	pixel_y = 22
+/obj/effect/floor_decal/spline/plain{
+	pixel_y = 15
 	},
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/spline/plain{
+	dir = 8;
+	pixel_x = 14
+	},
+/obj/structure/table/marble,
+/obj/item/weapon/soap/deluxe,
+/turf/simulated/floor/tiled/kafel_full/white,
 /area/residential/room14)
 "auB" = (
 /obj/machinery/light_switch{
 	dir = 4;
 	pixel_x = -28
 	},
-/turf/simulated/floor/plating,
+/obj/structure/coatrack,
+/turf/simulated/floor/wood,
 /area/residential/room14)
 "auC" = (
 /obj/structure/table/marble,
@@ -8768,7 +8844,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/wood,
 /area/residential/room14)
 "auI" = (
 /obj/machinery/light/spot,
@@ -9541,6 +9617,9 @@
 	pixel_x = 24
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/item/weapon/towel/random,
+/obj/item/weapon/towel/random,
+/obj/item/weapon/bikehorn/rubberducky,
 /turf/simulated/floor/tiled/kafel_full/gray,
 /area/residential/mroom6)
 "awv" = (
@@ -10575,7 +10654,7 @@
 	name = "RS12";
 	req_access = list(8012)
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/wood,
 /area/residential/corridors)
 "ayN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -12584,7 +12663,6 @@
 /turf/simulated/floor/tiled/white,
 /area/residential/room5)
 "aDl" = (
-/obj/machinery/light/small,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
@@ -13476,14 +13554,18 @@
 /turf/simulated/floor/tiled/kafel_full/gray,
 /area/residential/mroom4)
 "aFb" = (
-/obj/structure/bed/chair/sofa/brown/corner{
-	dir = 1
-	},
-/obj/machinery/light{
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
 	},
-/turf/simulated/floor/carpet/purcarpet,
-/area/residential/corridors)
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/door/airlock/diamond{
+	name = "Melanie's Bedroom"
+	},
+/turf/simulated/floor/tiled/white,
+/area/residential/mroom5)
 "aFc" = (
 /turf/simulated/floor/carpet/bcarpet,
 /area/residential/mansion_ballroom)
@@ -13569,8 +13651,8 @@
 /turf/simulated/floor/lino,
 /area/residential/room7)
 "aFo" = (
-/obj/structure/bed/chair/sofa/brown,
-/turf/simulated/floor/carpet/purcarpet,
+/obj/structure/coatrack,
+/turf/simulated/floor/wood,
 /area/residential/corridors)
 "aFp" = (
 /obj/structure/table/alien,
@@ -14002,10 +14084,8 @@
 /turf/simulated/floor/carpet/sblucarpet,
 /area/residential/mroom5)
 "aGp" = (
-/obj/structure/bed/chair/sofa/brown{
-	dir = 4
-	},
-/turf/simulated/floor/carpet/purcarpet,
+/obj/machinery/light/small,
+/turf/simulated/floor/wood,
 /area/residential/corridors)
 "aGq" = (
 /obj/effect/floor_decal/corner/lightorange/border{
@@ -14207,7 +14287,7 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/wood,
 /area/residential/room14)
 "aGM" = (
 /obj/structure/bed/chair/comfy/black{
@@ -14787,7 +14867,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/wood,
 /area/residential/corridors)
 "aIg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -15281,7 +15361,10 @@
 /area/residential/corridors)
 "aJk" = (
 /obj/structure/bed/chair/sofa/brown/corner{
-	dir = 4
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 8
 	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/residential/corridors)
@@ -15342,9 +15425,7 @@
 /turf/simulated/floor/tiled/white,
 /area/residential/mroom4)
 "aJq" = (
-/obj/structure/bed/chair/sofa/brown{
-	dir = 1
-	},
+/obj/structure/bed/chair/sofa/brown,
 /turf/simulated/floor/carpet/purcarpet,
 /area/residential/corridors)
 "aJr" = (
@@ -15613,8 +15694,8 @@
 /turf/simulated/floor/tiled/white,
 /area/residential/mansion_ballroom)
 "aKa" = (
-/obj/machinery/light{
-	dir = 8
+/obj/structure/bed/chair/sofa/brown{
+	dir = 4
 	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/residential/corridors)
@@ -16508,11 +16589,13 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mansion_club)
 "aMg" = (
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/sandstone{
-	name = "Bedroom"
+/obj/machinery/light{
+	dir = 8
 	},
-/turf/simulated/floor/wood,
+/obj/structure/bed/chair/sofa/brown{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/purcarpet,
 /area/residential/corridors)
 "aMh" = (
 /obj/structure/closet/cabinet,
@@ -16557,8 +16640,10 @@
 /turf/simulated/floor/wood,
 /area/residential/corridors)
 "aMm" = (
-/obj/structure/closet/wardrobe,
-/turf/simulated/floor/carpet/bcarpet,
+/obj/structure/bed/chair/sofa/brown/corner{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/purcarpet,
 /area/residential/corridors)
 "aMn" = (
 /obj/structure/window/titanium{
@@ -16676,7 +16761,19 @@
 /turf/simulated/floor/wood,
 /area/residential/mroom8)
 "aMA" = (
-/turf/simulated/floor/carpet/bcarpet,
+/obj/structure/closet/wardrobe,
+/obj/item/clothing/under/pants/camo,
+/obj/item/clothing/under/pants/mustangjeans,
+/obj/item/clothing/under/pants/mustangjeans/ripped,
+/obj/item/clothing/under/pants/black,
+/obj/item/clothing/under/pants/youngfolksjeans,
+/obj/item/clothing/under/pants/tan,
+/obj/item/clothing/under/rank/internalaffairs,
+/obj/item/weapon/sextoy/dildo/canine,
+/obj/item/weapon/sextoy/dildo/analbeads,
+/obj/item/weapon/storage/backpack/messenger/engi,
+/obj/item/weapon/storage/belt/utility/full,
+/turf/simulated/floor/carpet/tealcarpet,
 /area/residential/corridors)
 "aMB" = (
 /obj/machinery/door/firedoor/glass,
@@ -16721,8 +16818,10 @@
 /turf/simulated/floor/carpet/turcarpet,
 /area/residential/mroom3)
 "aMG" = (
-/obj/structure/undies_wardrobe,
-/turf/simulated/floor/carpet/bcarpet,
+/obj/structure/bed/chair/sofa/brown{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/purcarpet,
 /area/residential/corridors)
 "aMH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -16858,19 +16957,10 @@
 /turf/simulated/floor/water/arf_hotspring,
 /area/residential/mroom5)
 "aMX" = (
-/obj/structure/closet/wardrobe,
-/obj/item/clothing/under/pants/camo,
-/obj/item/clothing/under/pants/mustangjeans,
-/obj/item/clothing/under/pants/mustangjeans/ripped,
-/obj/item/clothing/under/pants/black,
-/obj/item/clothing/under/pants/youngfolksjeans,
-/obj/item/clothing/under/pants/tan,
-/obj/item/clothing/under/rank/internalaffairs,
-/obj/item/weapon/sextoy/dildo/canine,
-/obj/item/weapon/sextoy/dildo/analbeads,
-/obj/item/weapon/storage/backpack/messenger/engi,
-/obj/item/weapon/storage/belt/utility/full,
-/turf/simulated/floor/carpet/tealcarpet,
+/obj/machinery/door/airlock/sandstone{
+	name = "Bedroom"
+	},
+/turf/simulated/floor/carpet/bcarpet,
 /area/residential/corridors)
 "aMY" = (
 /obj/structure/undies_wardrobe,
@@ -17075,8 +17165,11 @@
 /turf/simulated/floor/lino,
 /area/residential/mroom2)
 "aNw" = (
-/obj/structure/undies_wardrobe,
-/turf/simulated/floor/carpet/tealcarpet,
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/sandstone{
+	name = "Bedroom"
+	},
+/turf/simulated/floor/wood,
 /area/residential/corridors)
 "aNx" = (
 /obj/structure/table/alien,
@@ -17413,7 +17506,7 @@
 /turf/simulated/floor/wood,
 /area/residential/room6)
 "aOi" = (
-/obj/structure/table/woodentable,
+/obj/structure/closet/wardrobe,
 /turf/simulated/floor/carpet/bcarpet,
 /area/residential/corridors)
 "aOj" = (
@@ -17547,8 +17640,7 @@
 /turf/simulated/floor/carpet/sblucarpet,
 /area/residential/mroom1)
 "aOw" = (
-/obj/structure/table/woodentable,
-/turf/simulated/floor/carpet/tealcarpet,
+/turf/simulated/floor/carpet/bcarpet,
 /area/residential/corridors)
 "aOx" = (
 /obj/structure/handrail{
@@ -17963,8 +18055,8 @@
 /turf/simulated/floor/tiled,
 /area/residential/mroom7)
 "aPl" = (
-/obj/machinery/light,
-/turf/simulated/floor/carpet/bcarpet,
+/obj/structure/table/woodentable,
+/turf/simulated/floor/carpet/tealcarpet,
 /area/residential/corridors)
 "aPm" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -18036,8 +18128,8 @@
 /turf/simulated/floor/tiled,
 /area/residential/mroom7)
 "aPu" = (
-/obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/piratedouble,
+/obj/structure/undies_wardrobe,
+/obj/item/clothing/suit/storage/toggle/hoodie/black,
 /turf/simulated/floor/carpet/bcarpet,
 /area/residential/corridors)
 "aPv" = (
@@ -18095,8 +18187,7 @@
 /turf/simulated/floor/carpet/tealcarpet,
 /area/residential/corridors)
 "aPC" = (
-/obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/rainbowdouble,
+/obj/structure/undies_wardrobe,
 /turf/simulated/floor/carpet/tealcarpet,
 /area/residential/corridors)
 "aPD" = (
@@ -18132,6 +18223,7 @@
 	dir = 8;
 	pixel_x = 22
 	},
+/obj/item/weapon/storage/box/glasses/meta,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/residential/mroom6)
 "aPH" = (
@@ -18580,6 +18672,83 @@
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
+	},
+/obj/item/weapon/material/kitchen/utensil/fork/plastic{
+	pixel_x = -8;
+	pixel_y = 3
+	},
+/obj/item/weapon/material/kitchen/utensil/fork/plastic{
+	pixel_x = -8;
+	pixel_y = 3
+	},
+/obj/item/weapon/material/kitchen/utensil/fork/plastic{
+	pixel_x = -8;
+	pixel_y = 3
+	},
+/obj/item/weapon/material/kitchen/utensil/fork/plastic{
+	pixel_x = -8;
+	pixel_y = 3
+	},
+/obj/item/weapon/material/kitchen/utensil/fork/plastic{
+	pixel_x = -8;
+	pixel_y = 3
+	},
+/obj/item/weapon/material/kitchen/utensil/fork/plastic{
+	pixel_x = -8;
+	pixel_y = 3
+	},
+/obj/item/weapon/material/kitchen/utensil/fork/plastic{
+	pixel_x = -8;
+	pixel_y = 3
+	},
+/obj/item/weapon/material/kitchen/utensil/fork/plastic{
+	pixel_x = -8;
+	pixel_y = 3
+	},
+/obj/item/weapon/material/kitchen/utensil/spoon/plastic{
+	pixel_y = 3
+	},
+/obj/item/weapon/material/kitchen/utensil/spoon/plastic{
+	pixel_y = 3
+	},
+/obj/item/weapon/material/kitchen/utensil/spoon/plastic{
+	pixel_y = 3
+	},
+/obj/item/weapon/material/kitchen/utensil/spoon/plastic{
+	pixel_y = 3
+	},
+/obj/item/weapon/material/kitchen/utensil/spoon/plastic{
+	pixel_y = 3
+	},
+/obj/item/weapon/material/kitchen/utensil/spoon/plastic{
+	pixel_y = 3
+	},
+/obj/item/weapon/material/kitchen/utensil/spoon/plastic{
+	pixel_y = 3
+	},
+/obj/item/weapon/material/kitchen/utensil/spoon/plastic{
+	pixel_y = 3
+	},
+/obj/item/weapon/material/kitchen/utensil/spoon/plastic{
+	pixel_y = 3
+	},
+/obj/item/weapon/material/kitchen/utensil/spoon/plastic{
+	pixel_y = 3
+	},
+/obj/item/weapon/material/kitchen/utensil/spoon/plastic{
+	pixel_y = 3
+	},
+/obj/item/weapon/material/kitchen/utensil/spoon/plastic{
+	pixel_y = 3
+	},
+/obj/item/weapon/material/kitchen/utensil/spoon/plastic{
+	pixel_y = 3
+	},
+/obj/item/weapon/material/kitchen/utensil/spoon/plastic{
+	pixel_y = 3
+	},
+/obj/item/weapon/material/kitchen/utensil/spoon/plastic{
+	pixel_y = 3
 	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/residential/mroom6)
@@ -20629,7 +20798,7 @@
 	name = "Apartment Exit";
 	pixel_y = -26
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/wood,
 /area/residential/room12)
 "aUG" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
@@ -20798,7 +20967,7 @@
 	name = "Apartment Exit";
 	pixel_y = -26
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/wood,
 /area/residential/room14)
 "aUX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -23380,6 +23549,7 @@
 	dir = 4
 	},
 /obj/effect/catwalk_plated/white,
+/obj/effect/catwalk_plated/white,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/residential/room10)
 "baq" = (
@@ -23498,7 +23668,7 @@
 "baH" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/diamond{
-	name = "Bedroom"
+	name = "Dawn's Bedroom"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
@@ -23548,9 +23718,6 @@
 /obj/structure/railing/grey,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/residential/mroom9)
-"baM" = (
-/turf/space,
-/area/residential/room10)
 "baN" = (
 /obj/structure/table/woodentable,
 /obj/machinery/chemical_dispenser/bar_soft/full{
@@ -23608,6 +23775,7 @@
 /obj/item/clothing/accessory/collar/silver,
 /obj/item/weapon/handcuffs/fuzzy,
 /obj/item/clothing/glasses/sunglasses/blindfold,
+/obj/item/weapon/gun/energy/crossbow/ninja,
 /turf/simulated/floor/carpet/sblucarpet,
 /area/residential/room10)
 "baU" = (
@@ -24194,6 +24362,9 @@
 /obj/machinery/vending/boozeomat,
 /turf/simulated/floor/tiled/white,
 /area/residential/mroom5)
+"bdH" = (
+/turf/simulated/floor/tiled/white,
+/area/residential/room14)
 "beO" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/paper_bin,
@@ -24208,6 +24379,13 @@
 	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/residential/mroom2bed2)
+"bgz" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/freezer{
+	color = "#0000FF"
+	},
+/turf/simulated/floor/wood,
+/area/residential/room12)
 "bgZ" = (
 /obj/machinery/door/airlock/voidcraft/vertical,
 /turf/simulated/shuttle/floor/glass,
@@ -24253,6 +24431,14 @@
 	},
 /turf/simulated/floor/tiled/red,
 /area/residential/mroom9)
+"bkE" = (
+/obj/effect/floor_decal/carpet/blue{
+	dir = 4
+	},
+/obj/structure/table/woodentable,
+/obj/item/device/flashlight/lamp,
+/turf/simulated/floor/carpet/turcarpet,
+/area/residential/room14)
 "blc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -24294,6 +24480,14 @@
 	},
 /turf/simulated/floor/tiled/kafel_full/beige,
 /area/residential/lobby)
+"bqb" = (
+/obj/effect/floor_decal/corner/black/diagonal{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/white/diagonal,
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/residential/room12)
 "bqN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -24364,6 +24558,10 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom9)
+"bxg" = (
+/obj/structure/undies_wardrobe,
+/turf/simulated/floor/carpet/blucarpet,
+/area/residential/room12)
 "byk" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -24411,6 +24609,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/mroom1)
+"bEx" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/residential/room14)
 "bFL" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -24478,6 +24682,10 @@
 /obj/machinery/light,
 /turf/simulated/floor/grass,
 /area/residential/mansion)
+"bPi" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/wood,
+/area/residential/room12)
 "bPs" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -24583,6 +24791,22 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/lobby)
+"bZx" = (
+/obj/effect/floor_decal/carpet/blue{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/residential/room14)
+"cba" = (
+/obj/effect/floor_decal/carpet/blue{
+	dir = 8
+	},
+/obj/effect/floor_decal/carpet/blue,
+/obj/effect/floor_decal/carpet/blue{
+	dir = 10
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/residential/room14)
 "cdQ" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -24599,6 +24823,10 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/grass,
 /area/residential/mansion)
+"ceA" = (
+/obj/effect/floor_decal/carpet/blue,
+/turf/simulated/floor/carpet/turcarpet,
+/area/residential/room14)
 "cip" = (
 /obj/structure/table/reinforced,
 /obj/random/soap,
@@ -24648,6 +24876,12 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/dark,
 /area/residential/room9)
+"csj" = (
+/obj/structure/bed/chair/wood/wings{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/residential/room14)
 "ctl" = (
 /obj/machinery/door/airlock{
 	id_tag = "rm1_main";
@@ -24703,6 +24937,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/red,
 /area/residential/mroom9)
+"cwZ" = (
+/obj/structure/flora/pottedplant/orientaltree,
+/turf/simulated/floor/wood,
+/area/residential/room14)
 "czc" = (
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
@@ -24775,6 +25013,12 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/residential/mroom9)
+"cJl" = (
+/obj/structure/bed/chair/wood/wings{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/residential/room12)
 "cKM" = (
 /obj/effect/mist,
 /turf/simulated/floor/water/arf_hotspring,
@@ -24826,6 +25070,15 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mansion)
+"cVr" = (
+/obj/effect/floor_decal/corner/black/diagonal{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/white/diagonal,
+/obj/effect/floor_decal/spline/plain,
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/residential/room12)
 "cZt" = (
 /obj/structure/window/reinforced/survival_pod{
 	dir = 10
@@ -24924,6 +25177,18 @@
 /obj/item/clothing/ears/earring/stud/silver,
 /turf/simulated/floor/grass,
 /area/residential/mansion)
+"dli" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+	pixel_x = 6;
+	pixel_y = 5
+	},
+/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+	pixel_x = -1;
+	pixel_y = 5
+	},
+/turf/simulated/floor/wood,
+/area/residential/room12)
 "dms" = (
 /obj/machinery/disposal{
 	pixel_x = 5
@@ -24976,6 +25241,11 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white,
 /area/residential/mroom1)
+"dvc" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/freezer,
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/residential/room12)
 "dxL" = (
 /obj/structure/table/darkglass,
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -25089,6 +25359,12 @@
 	},
 /turf/simulated/wall,
 /area/residential/room9)
+"dPW" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/turf/simulated/floor/holofloor/carpet,
+/area/residential/room12)
 "dQo" = (
 /obj/structure/table/marble,
 /obj/structure/closet/walllocker{
@@ -25170,6 +25446,32 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/residential/mroom9)
+"elG" = (
+/obj/structure/railing/grey{
+	dir = 4
+	},
+/obj/structure/railing/grey{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner_kafel/blue,
+/obj/effect/floor_decal/corner_kafel/purple{
+	dir = 1
+	},
+/turf/simulated/floor/water/arf_hotspring,
+/area/residential/room12)
+"eox" = (
+/obj/effect/floor_decal/spline/plain{
+	pixel_y = 15
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 8;
+	pixel_x = 14
+	},
+/obj/structure/toilet{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/residential/room14)
 "eoy" = (
 /obj/structure/closet/walllocker{
 	pixel_x = 23;
@@ -25292,6 +25594,11 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/mroom9)
+"eBY" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/diamond,
+/turf/simulated/floor/wood,
+/area/residential/room14)
 "eDP" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -25378,6 +25685,24 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/room9)
+"eSU" = (
+/obj/effect/catwalk_plated/white,
+/obj/machinery/shower{
+	dir = 4
+	},
+/obj/structure/curtain/open/shower,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/machinery/door/window/survival_pod{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner_kafel/blue,
+/obj/effect/floor_decal/corner_kafel/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/residential/room12)
 "eYK" = (
 /obj/structure/table/fancyblack,
 /obj/item/device/flashlight/lamp/green,
@@ -25430,6 +25755,11 @@
 	},
 /turf/simulated/floor/tiled/red,
 /area/residential/mroom9)
+"fho" = (
+/obj/structure/bed/double/padded,
+/obj/item/weapon/bedsheet/piratedouble,
+/turf/simulated/floor/carpet/bcarpet,
+/area/residential/corridors)
 "fob" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/disposalpipe/segment{
@@ -25459,6 +25789,21 @@
 	},
 /turf/simulated/shuttle/floor/white,
 /area/residential/ship_bay)
+"fst" = (
+/obj/effect/floor_decal/spline/plain{
+	pixel_y = 15
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 8;
+	pixel_x = 14
+	},
+/obj/effect/catwalk_plated/white,
+/obj/machinery/shower{
+	pixel_y = 17
+	},
+/obj/structure/curtain/open/shower/security,
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/residential/room14)
 "fsV" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -25514,6 +25859,22 @@
 	},
 /turf/simulated/floor/tiled/red,
 /area/residential/mroom9)
+"fLS" = (
+/obj/structure/table/marble,
+/obj/item/weapon/towel/random,
+/obj/item/weapon/towel/random,
+/obj/item/weapon/towel/random,
+/obj/item/weapon/towel/random,
+/obj/structure/closet/walllocker{
+	pixel_x = -1;
+	pixel_y = 29
+	},
+/obj/effect/floor_decal/corner_kafel/blue,
+/obj/effect/floor_decal/corner_kafel/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/residential/room12)
 "fNK" = (
 /obj/effect/floor_decal/corner_kafel/white{
 	dir = 5
@@ -25575,6 +25936,19 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/carpet/sblucarpet,
 /area/residential/mroom1)
+"gat" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/residential/room14)
+"gfe" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/wood,
+/area/residential/room12)
 "gfg" = (
 /obj/structure/table/marble,
 /obj/machinery/recharger/wallcharger{
@@ -25732,6 +26106,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/room9)
+"gSN" = (
+/obj/structure/table/woodentable,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/item/weapon/haircomb,
+/turf/simulated/floor/carpet/blucarpet,
+/area/residential/room12)
 "gTI" = (
 /obj/effect/floor_decal/corner_kafel/green{
 	dir = 5
@@ -25739,6 +26121,9 @@
 /obj/machinery/portable_atmospherics/hydroponics,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mansion)
+"gUp" = (
+/turf/simulated/floor/carpet/bcarpet,
+/area/residential/room14)
 "gWG" = (
 /obj/machinery/light{
 	dir = 8
@@ -25769,6 +26154,22 @@
 	},
 /turf/simulated/floor/grass,
 /area/residential/mansion)
+"hbl" = (
+/obj/effect/floor_decal/corner/white/diagonal,
+/obj/effect/floor_decal/corner/black/diagonal{
+	dir = 4
+	},
+/obj/structure/closet/secure_closet/freezer/kitchen,
+/obj/item/weapon/storage/box/produce/carrot,
+/obj/item/weapon/storage/box/produce/carrot,
+/obj/item/weapon/storage/box/produce/carrot,
+/obj/item/weapon/storage/box/produce/carrot,
+/obj/item/weapon/storage/box/produce/mushrooms,
+/obj/item/weapon/storage/box/produce/mushrooms,
+/obj/item/weapon/reagent_containers/food/snacks/sliceable/carrotcake,
+/obj/item/weapon/reagent_containers/food/snacks/sliceable/carrotcake,
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/residential/room12)
 "hbt" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -25866,6 +26267,10 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mansion)
+"hpy" = (
+/obj/structure/table/woodentable,
+/turf/simulated/floor/tiled/white,
+/area/residential/room14)
 "hql" = (
 /obj/machinery/light{
 	dir = 4
@@ -25937,6 +26342,10 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mansion)
+"hDe" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/wood,
+/area/residential/room14)
 "hDB" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -25944,6 +26353,17 @@
 	},
 /turf/simulated/wall,
 /area/residential/lobby)
+"hFj" = (
+/obj/structure/table/woodentable,
+/obj/item/toy/plushie/carp/dragon{
+	name = "Bubbles"
+	},
+/turf/simulated/floor/carpet/blucarpet,
+/area/residential/room12)
+"hFK" = (
+/obj/structure/flora/pottedplant/smalltree,
+/turf/simulated/floor/holofloor/carpet,
+/area/residential/room12)
 "hGt" = (
 /obj/machinery/vending/blue_lotus{
 	dir = 1
@@ -26116,6 +26536,12 @@
 /obj/effect/floor_decal/corner_kafel/blue/full,
 /turf/simulated/floor/tiled/kafel_full/gray,
 /area/residential/mroom5)
+"iip" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/residential/room14)
 "inq" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/light{
@@ -26123,6 +26549,13 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/room9)
+"iob" = (
+/obj/structure/bed/nest,
+/obj/effect/alien/weeds{
+	luminosity = 5
+	},
+/turf/simulated/floor/wood,
+/area/residential/mansion)
 "iov" = (
 /obj/effect/floor_decal/corner_kafel/green{
 	dir = 10
@@ -26185,6 +26618,14 @@
 	},
 /turf/simulated/floor/grass,
 /area/residential/mansion)
+"iyx" = (
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = 25;
+	pixel_y = -1
+	},
+/turf/simulated/floor/carpet/blucarpet,
+/area/residential/room12)
 "iEv" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -26241,6 +26682,10 @@
 	},
 /turf/simulated/floor/grass,
 /area/residential/mansion)
+"iME" = (
+/obj/machinery/appliance/cooker/oven,
+/turf/simulated/floor/tiled/white,
+/area/residential/room14)
 "iOx" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -26282,6 +26727,15 @@
 /obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/kafel_full/beige,
 /area/residential/lobby)
+"jcm" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/simulated/floor/holofloor/carpet,
+/area/residential/room12)
 "jeJ" = (
 /obj/structure/bed/chair/office/dark,
 /obj/structure/disposalpipe/segment,
@@ -26301,10 +26755,41 @@
 	},
 /turf/simulated/floor/tiled/red,
 /area/residential/mroom9)
+"jif" = (
+/obj/structure/bed/chair/wood/wings{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/residential/room14)
+"jlG" = (
+/obj/structure/toilet{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner_kafel/blue,
+/obj/effect/floor_decal/corner_kafel/purple{
+	dir = 1
+	},
+/obj/effect/floor_decal/carpet/blue{
+	dir = 10;
+	pixel_x = 4
+	},
+/obj/effect/floor_decal/carpet/blue{
+	dir = 9;
+	pixel_x = 4
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/residential/room12)
 "jof" = (
 /obj/structure/table/darkglass,
 /turf/simulated/floor/tiled/monotile,
 /area/residential/mroom9)
+"jsw" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/obj/machinery/appliance/cooker/grill,
+/turf/simulated/floor/tiled/white,
+/area/residential/room14)
 "jzr" = (
 /obj/machinery/portable_atmospherics/hydroponics,
 /turf/simulated/floor/tiled/kafel_full,
@@ -26403,6 +26888,9 @@
 	},
 /turf/simulated/floor/tiled/red,
 /area/residential/mroom9)
+"jIQ" = (
+/turf/simulated/floor/carpet/blucarpet,
+/area/residential/room12)
 "jOV" = (
 /obj/machinery/optable,
 /turf/simulated/floor/tiled/red,
@@ -26522,6 +27010,26 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/lobby)
+"kht" = (
+/obj/structure/closet/cabinet,
+/obj/item/clothing/under/rank/nursesuit,
+/obj/item/clothing/head/nursehat,
+/obj/item/clothing/suit/armor/vest/fluff,
+/obj/item/weapon/gun/projectile/revolver/lemat,
+/obj/item/clothing/accessory/permit/gun/fluff{
+	desc = "A card indicating that the owner is allowed to carry a firearm/sidearm. It is issued by CentCom, so it is valid until it expires. This one belongs to Willow Snow."
+	},
+/obj/item/clothing/accessory/poncho/roles/cloak/medical,
+/obj/item/clothing/accessory/poncho/roles/cloak/hop/fluff/pip,
+/obj/item/clothing/accessory/poncho/roles/cloak/custom,
+/obj/item/clothing/suit/armor/vest/fluff,
+/obj/item/clothing/under/cyberpunkharness,
+/obj/item/clothing/head/welding,
+/obj/item/weapon/storage/backpack/dufflebag/emt,
+/obj/item/weapon/storage/backpack/messenger/med,
+/obj/item/weapon/cane/concealed,
+/turf/simulated/floor/carpet/blucarpet,
+/area/residential/room12)
 "khJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -26534,6 +27042,19 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
+"kmn" = (
+/obj/effect/floor_decal/spline/plain{
+	pixel_y = 15
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 8;
+	pixel_x = 14
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/residential/room14)
 "kmu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -26576,6 +27097,41 @@
 	temperature = 322
 	},
 /area/residential/lobby)
+"ktI" = (
+/obj/structure/bed/chair/sofa/black/right{
+	dir = 1
+	},
+/turf/simulated/floor/holofloor/carpet,
+/area/residential/room12)
+"kwL" = (
+/obj/effect/floor_decal/carpet/blue{
+	dir = 4
+	},
+/obj/effect/floor_decal/carpet/blue,
+/obj/effect/floor_decal/carpet/blue{
+	dir = 6
+	},
+/obj/structure/closet/cabinet,
+/obj/item/clothing/under/pants/classicjeans,
+/obj/item/clothing/under/pants/blackjeans,
+/obj/item/clothing/under/pants/youngfolksjeans,
+/obj/item/clothing/suit/storage/toggle/denim_jacket,
+/obj/item/clothing/suit/storage/toggle/leather_jacket,
+/obj/item/clothing/suit/storage/toggle/cardigan,
+/obj/item/clothing/suit/storage/toggle/hoodie/black,
+/obj/item/clothing/under/swimsuit/fluff/zara_uniform,
+/obj/item/clothing/under/dress/polka,
+/obj/item/clothing/under/dress/qipao,
+/obj/item/clothing/under/dress/revealingdress,
+/obj/item/clothing/under/dress/sari,
+/obj/item/clothing/under/dress/littleblackdress,
+/obj/item/clothing/under/fluff/sakura_hokkaido_kimono,
+/obj/item/clothing/under/cheongsam/purple,
+/obj/item/clothing/under/cheongsam/pink,
+/obj/item/weapon/storage/backpack/satchel/ranger,
+/obj/item/weapon/storage/wallet/womens,
+/turf/simulated/floor/carpet/turcarpet,
+/area/residential/room14)
 "kyv" = (
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner_kafel/blue{
@@ -26598,6 +27154,18 @@
 	},
 /turf/simulated/floor/carpet/sblucarpet,
 /area/residential/mansion)
+"kCT" = (
+/obj/structure/table/marble,
+/obj/effect/floor_decal/corner/black/diagonal{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/white/diagonal,
+/obj/item/weapon/reagent_containers/glass/beaker/large,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/residential/room12)
 "kDP" = (
 /obj/structure/bed/chair/sofa/black/left{
 	dir = 8
@@ -26673,6 +27241,11 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/residential/mroom9)
+"kUW" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/material/knife,
+/turf/simulated/floor/tiled/white,
+/area/residential/room14)
 "kVf" = (
 /obj/structure/toilet{
 	pixel_y = 18
@@ -26761,6 +27334,13 @@
 /obj/structure/dancepole,
 /turf/simulated/floor/tiled/monotile,
 /area/residential/mroom9)
+"ldF" = (
+/obj/structure/bed/chair/sofa/black{
+	dir = 1
+	},
+/obj/machinery/light,
+/turf/simulated/floor/holofloor/carpet,
+/area/residential/room12)
 "lgM" = (
 /obj/machinery/light{
 	dir = 8
@@ -26959,6 +27539,10 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
+/obj/item/stack/material/log{
+	amount = 50;
+	max_amount = 50
+	},
 /turf/simulated/floor/wood,
 /area/residential/mroom1)
 "maE" = (
@@ -26979,6 +27563,16 @@
 	},
 /turf/simulated/floor/carpet/oracarpet,
 /area/residential/room9)
+"mdy" = (
+/obj/item/weapon/soap/deluxe,
+/obj/structure/table/marble,
+/obj/item/weapon/soap/deluxe,
+/obj/effect/floor_decal/corner_kafel/blue,
+/obj/effect/floor_decal/corner_kafel/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/residential/room12)
 "mdF" = (
 /obj/structure/table/darkglass,
 /obj/item/modular_computer/laptop/preset/custom_loadout/elite,
@@ -27091,6 +27685,10 @@
 	},
 /turf/simulated/floor/carpet/oracarpet,
 /area/residential/room9)
+"mxo" = (
+/obj/machinery/media/jukebox,
+/turf/simulated/floor/wood,
+/area/residential/room14)
 "myI" = (
 /obj/effect/floor_decal/corner_kafel/green{
 	dir = 9
@@ -27147,6 +27745,11 @@
 	},
 /turf/simulated/floor/tiled/kafel_full/purple,
 /area/residential/lobby)
+"mBO" = (
+/obj/structure/bed/double/huge,
+/obj/item/weapon/bedsheet/hosdouble/huge,
+/turf/simulated/floor/carpet/tealcarpet,
+/area/residential/corridors)
 "mCZ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -27172,6 +27775,10 @@
 	dir = 1
 	},
 /turf/simulated/floor/grass,
+/area/residential/mansion)
+"mNO" = (
+/obj/effect/alien/weeds,
+/turf/simulated/floor/wood,
 /area/residential/mansion)
 "mQI" = (
 /obj/effect/floor_decal/spline/fancy/wood,
@@ -27369,6 +27976,12 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/wall,
 /area/residential/lobby)
+"nxk" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/residential/room14)
 "nBG" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -27425,6 +28038,11 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/mroom9)
+"nHW" = (
+/obj/structure/table/woodentable,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/carpet/purcarpet,
+/area/residential/room14)
 "nLT" = (
 /obj/machinery/button/remote/airlock{
 	dir = 4;
@@ -27456,6 +28074,15 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor/tiled/white,
 /area/residential/mroom9)
+"nTB" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/residential/room14)
 "nUA" = (
 /obj/effect/floor_decal/corner_kafel/blue{
 	dir = 10
@@ -27491,6 +28118,11 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/mroom9)
+"nXL" = (
+/obj/structure/table/woodentable,
+/obj/machinery/light,
+/turf/simulated/floor/carpet/bcarpet,
+/area/residential/corridors)
 "nYG" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -27663,6 +28295,11 @@
 	},
 /turf/simulated/floor/carpet/blue,
 /area/residential/room9)
+"oxT" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/freezer,
+/turf/simulated/floor/wood,
+/area/residential/room14)
 "oyA" = (
 /obj/effect/floor_decal/corner/white/diagonal,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -27671,6 +28308,11 @@
 /obj/item/weapon/stool/padded,
 /turf/simulated/floor/tiled/white,
 /area/residential/room7)
+"ozJ" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/reagent_containers/glass/beaker/large,
+/turf/simulated/floor/tiled/white,
+/area/residential/room14)
 "oCq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -27763,6 +28405,9 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/lobby)
+"oNR" = (
+/turf/simulated/floor/wood,
+/area/residential/room12)
 "oOX" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -27776,6 +28421,22 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/room9)
+"oSQ" = (
+/obj/structure/railing/grey{
+	dir = 8
+	},
+/obj/structure/railing/grey{
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner_kafel/blue,
+/obj/effect/floor_decal/corner_kafel/purple{
+	dir = 1
+	},
+/turf/simulated/floor/water/arf_hotspring,
+/area/residential/room12)
 "oVv" = (
 /obj/effect/floor_decal/corner_kafel/white{
 	dir = 6
@@ -27888,6 +28549,16 @@
 	},
 /turf/simulated/floor/tiled/red,
 /area/residential/mroom9)
+"ppG" = (
+/obj/machinery/computer/security/wooden_tv{
+	desc = "A retro television.";
+	name = "Ancient Television"
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/turf/simulated/floor/holofloor/carpet,
+/area/residential/room12)
 "psD" = (
 /obj/structure/cable{
 	d1 = 2;
@@ -28045,6 +28716,10 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/residential/mroom9)
+"pPF" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/carpet/purcarpet,
+/area/residential/room14)
 "pQz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -28067,6 +28742,10 @@
 	},
 /turf/simulated/floor/lino,
 /area/residential/mroom2)
+"pRp" = (
+/obj/structure/table/woodentable,
+/turf/simulated/floor/carpet/bcarpet,
+/area/residential/corridors)
 "pRX" = (
 /obj/effect/floor_decal/corner_kafel/white/full{
 	dir = 1
@@ -28095,6 +28774,24 @@
 /obj/item/clothing/under/bathrobe,
 /turf/simulated/floor/tiled/kafel_full/blue,
 /area/residential/mroom2)
+"pVL" = (
+/obj/effect/floor_decal/carpet/blue{
+	dir = 4
+	},
+/obj/effect/floor_decal/carpet/blue{
+	dir = 1
+	},
+/obj/effect/floor_decal/carpet/blue{
+	dir = 5
+	},
+/obj/structure/bed/double,
+/obj/item/weapon/bedsheet/purpledouble,
+/turf/simulated/floor/carpet/turcarpet,
+/area/residential/room14)
+"pVV" = (
+/obj/machinery/gear_painter,
+/turf/simulated/floor/carpet/blucarpet,
+/area/residential/room12)
 "pZb" = (
 /obj/structure/closet,
 /obj/item/device/radio/headset/pilot/alt,
@@ -28511,6 +29208,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/mroom9)
+"rfJ" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/residential/room14)
 "rgP" = (
 /obj/machinery/shower{
 	dir = 4
@@ -28630,6 +29333,10 @@
 /obj/item/clothing/head/pin/flower/pink,
 /turf/simulated/floor/carpet/purcarpet,
 /area/residential/mroom2bed2)
+"rJf" = (
+/obj/machinery/light,
+/turf/simulated/floor/wood,
+/area/residential/room14)
 "rKL" = (
 /obj/item/device/radio/intercom{
 	dir = 4;
@@ -28664,6 +29371,21 @@
 /obj/machinery/portable_atmospherics/hydroponics,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mansion)
+"rMN" = (
+/obj/structure/bed/chair/sofa/brown/right,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/carpet/purcarpet,
+/area/residential/room14)
+"rMR" = (
+/obj/machinery/washing_machine{
+	pixel_y = 20
+	},
+/obj/effect/floor_decal/corner_kafel/blue,
+/obj/effect/floor_decal/corner_kafel/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/residential/room12)
 "rNx" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -28700,12 +29422,37 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/carpet/oracarpet,
 /area/residential/room9)
+"sfz" = (
+/obj/effect/floor_decal/spline/plain{
+	pixel_y = 15
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 8;
+	pixel_x = 14
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/residential/room14)
 "siN" = (
 /obj/machinery/vending/snack{
 	dir = 1
 	},
 /turf/simulated/floor/wood,
 /area/residential/lobby)
+"slg" = (
+/obj/effect/floor_decal/spline/plain{
+	pixel_y = 15
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 8;
+	pixel_x = 14
+	},
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11;
+	pixel_y = -6
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/residential/room14)
 "smD" = (
 /obj/effect/mist,
 /obj/structure/table/bench/wooden,
@@ -28917,6 +29664,15 @@
 	},
 /turf/simulated/floor/water/arf_hotspring,
 /area/residential/lobby)
+"sQN" = (
+/obj/effect/floor_decal/corner/black/diagonal{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/white/diagonal,
+/obj/structure/bed/chair/wood/wings,
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/residential/room12)
 "sSd" = (
 /obj/effect/floor_decal/corner_kafel/red{
 	dir = 10
@@ -28952,6 +29708,9 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/room9)
+"sWg" = (
+/turf/simulated/floor/carpet/purcarpet,
+/area/residential/room14)
 "sZj" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/structure/table/woodentable,
@@ -28971,6 +29730,9 @@
 /mob/living/simple_mob/animal/passive/cow,
 /turf/simulated/floor/grass,
 /area/residential/mansion)
+"tcv" = (
+/turf/simulated/floor/wood,
+/area/residential/room14)
 "tep" = (
 /obj/structure/bed/chair/sofa/right{
 	dir = 8
@@ -29138,6 +29900,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/mansion)
+"tMQ" = (
+/obj/structure/bed/chair/sofa/black/left{
+	dir = 1
+	},
+/turf/simulated/floor/holofloor/carpet,
+/area/residential/room12)
 "tMV" = (
 /obj/effect/floor_decal/corner_kafel/green{
 	dir = 6
@@ -29155,6 +29923,11 @@
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/shuttle/wall/voidcraft/blue,
 /area/residential/ship_bay)
+"tSF" = (
+/obj/effect/alien/weeds,
+/obj/effect/alien/weeds,
+/turf/simulated/floor/wood,
+/area/residential/mansion)
 "tVm" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -29257,6 +30030,25 @@
 	},
 /turf/simulated/floor/carpet,
 /area/residential/room6)
+"unB" = (
+/obj/machinery/light,
+/turf/simulated/floor/carpet/blucarpet,
+/area/residential/room12)
+"uqu" = (
+/obj/structure/mirror{
+	dir = 4;
+	pixel_x = 28
+	},
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
+	},
+/obj/effect/floor_decal/corner_kafel/blue,
+/obj/effect/floor_decal/corner_kafel/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/residential/room12)
 "urv" = (
 /obj/structure/table/darkglass,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -29264,6 +30056,17 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/mroom9)
+"uxu" = (
+/obj/structure/table/woodentable,
+/obj/structure/flora/pottedplant/small{
+	pixel_x = -16;
+	pixel_y = 11
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/residential/room12)
 "uxR" = (
 /obj/item/weapon/bedsheet/piratedouble,
 /obj/structure/bed/double/padded,
@@ -29298,6 +30101,9 @@
 	},
 /turf/simulated/floor/tiled/kafel_full/purple,
 /area/residential/lobby)
+"uEo" = (
+/turf/simulated/floor/holofloor/carpet,
+/area/residential/room12)
 "uEU" = (
 /obj/structure/bed/chair/shuttle{
 	dir = 4;
@@ -29364,6 +30170,16 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/red,
 /area/residential/mroom9)
+"uRL" = (
+/obj/effect/floor_decal/corner/white/diagonal,
+/obj/effect/floor_decal/corner/black/diagonal{
+	dir = 4
+	},
+/obj/structure/closet/secure_closet/freezer/fridge,
+/obj/item/weapon/storage/box/produce/meat,
+/obj/item/weapon/storage/box/produce/meat,
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/residential/room12)
 "uTn" = (
 /obj/effect/floor_decal/corner_kafel/white{
 	dir = 1
@@ -29445,6 +30261,18 @@
 	},
 /turf/simulated/floor/carpet/gaycarpet,
 /area/residential/mroom9)
+"vfb" = (
+/obj/structure/closet/secure_closet/freezer/fridge,
+/obj/item/weapon/reagent_containers/food/condiment/flour,
+/obj/item/weapon/reagent_containers/food/condiment/flour,
+/obj/item/weapon/reagent_containers/food/condiment/flour,
+/obj/item/weapon/reagent_containers/food/condiment/flour,
+/obj/item/weapon/reagent_containers/food/condiment/flour,
+/obj/item/weapon/reagent_containers/food/condiment/flour,
+/obj/item/weapon/storage/box/produce/meat,
+/obj/item/weapon/storage/box/produce/meat,
+/turf/simulated/floor/tiled/white,
+/area/residential/room14)
 "vgK" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/disposalpipe/segment{
@@ -29452,6 +30280,14 @@
 	},
 /turf/simulated/wall,
 /area/residential/room9)
+"vhm" = (
+/obj/machinery/light,
+/obj/effect/floor_decal/corner_kafel/blue,
+/obj/effect/floor_decal/corner_kafel/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/residential/room12)
 "vjQ" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -29469,6 +30305,10 @@
 /obj/structure/railing/grey,
 /turf/simulated/floor/water/arf_hotspring,
 /area/residential/lobby)
+"vpN" = (
+/obj/structure/coatrack,
+/turf/simulated/floor/holofloor/carpet,
+/area/residential/room12)
 "vpX" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -29607,6 +30447,13 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/lobby)
+"vMD" = (
+/obj/structure/table/fancyblack,
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/residential/room14)
 "vNl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -29667,6 +30514,14 @@
 /obj/item/clothing/under/pants/baggy/black,
 /turf/simulated/floor/carpet/blue,
 /area/residential/room9)
+"vVU" = (
+/obj/machinery/microwave/advanced,
+/obj/structure/table/woodentable,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/residential/room14)
 "vWP" = (
 /obj/structure/closet/cabinet,
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -29735,6 +30590,11 @@
 	},
 /turf/simulated/floor/tiled/kafel_full/purple,
 /area/residential/lobby)
+"wsY" = (
+/obj/effect/alien/weeds,
+/obj/structure/dogbed,
+/turf/simulated/floor/wood,
+/area/residential/mansion)
 "wtB" = (
 /turf/simulated/floor/carpet/gaycarpet,
 /area/residential/mroom9)
@@ -29764,6 +30624,10 @@
 	},
 /turf/simulated/shuttle/floor/glass,
 /area/residential/ship_bay)
+"wAI" = (
+/obj/structure/table/woodentable,
+/turf/simulated/floor/carpet/purcarpet,
+/area/residential/room14)
 "wBq" = (
 /obj/structure/window/reinforced/survival_pod{
 	dir = 4
@@ -29821,6 +30685,13 @@
 	},
 /turf/simulated/shuttle/floor/glass,
 /area/residential/ship_bay)
+"wDr" = (
+/obj/effect/floor_decal/corner_kafel/blue,
+/obj/effect/floor_decal/corner_kafel/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/residential/room12)
 "wEC" = (
 /obj/effect/floor_decal/corner_kafel/green{
 	dir = 10
@@ -30046,6 +30917,11 @@
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/wood,
 /area/residential/room6)
+"xpi" = (
+/turf/simulated/wall{
+	can_open = 1
+	},
+/area/residential/mansion)
 "xpM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
@@ -30098,6 +30974,11 @@
 /obj/machinery/door/firedoor/glass/hidden,
 /turf/simulated/floor/carpet/sblucarpet,
 /area/residential/mansion)
+"xxy" = (
+/obj/structure/bed/double,
+/obj/item/weapon/bedsheet/browndouble,
+/turf/simulated/floor/carpet/blucarpet,
+/area/residential/room12)
 "xzy" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -30156,6 +31037,12 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/kafel_full/gray,
 /area/residential/mroom5)
+"xEf" = (
+/obj/effect/floor_decal/carpet/blue{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/residential/room14)
 "xEr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
@@ -30177,6 +31064,15 @@
 	},
 /turf/simulated/floor/grass,
 /area/residential/mansion)
+"xJp" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/turf/simulated/floor/wood,
+/area/residential/room12)
 "xKl" = (
 /obj/effect/floor_decal/corner_kafel/blue/diagonal,
 /obj/effect/floor_decal/corner_kafel/white{
@@ -30190,6 +31086,17 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor/tiled/red,
 /area/residential/mroom9)
+"xOn" = (
+/obj/structure/table/marble,
+/obj/effect/floor_decal/corner/black/diagonal{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/white/diagonal,
+/obj/machinery/chemical_dispenser/bar_soft/full{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/residential/room12)
 "xQn" = (
 /obj/effect/catwalk_plated/white,
 /obj/structure/curtain/open/shower{
@@ -30202,6 +31109,10 @@
 	},
 /turf/simulated/floor/water/arf_hotspring,
 /area/residential/room9)
+"xRK" = (
+/obj/structure/bed/chair/sofa/brown/left,
+/turf/simulated/floor/carpet/purcarpet,
+/area/residential/room14)
 "xWw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -30243,6 +31154,13 @@
 /obj/structure/curtain/black,
 /turf/simulated/floor/wood,
 /area/residential/lobby)
+"ydW" = (
+/obj/effect/floor_decal/corner/black/diagonal{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/white/diagonal,
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/residential/room12)
 "yfK" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
@@ -48245,7 +49163,7 @@ aaa
 aaa
 aaa
 aeP
-aeR
+abC
 aDT
 aeP
 aaa
@@ -52114,14 +53032,14 @@ aaa
 aaa
 aaa
 aaa
-baM
 aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
+auj
+auj
+auj
+auj
 auj
 aUF
 auj
@@ -52371,8 +53289,8 @@ aaa
 aaa
 auj
 auj
-auj
-auj
+hbl
+uRL
 auj
 auj
 anj
@@ -52623,30 +53541,30 @@ aaa
 aaa
 auj
 aul
-aul
-aul
-aul
+ydW
+ydW
+bqb
 aun
 aut
-aul
-aul
-aul
-aul
+oNR
+dPW
+uEo
+vpN
 auj
 aaa
 aaa
 aaa
 aux
 auz
-auz
-auz
-auz
+bZx
+cba
+aux
 auB
 auH
-auz
-auz
-auz
-auz
+tcv
+tcv
+tcv
+cwZ
 aux
 aaa
 aaa
@@ -52874,31 +53792,31 @@ atV
 aaa
 aaa
 auj
-aul
-aul
-aul
-aul
-aul
-aul
-aul
-aul
-aul
-aul
+acg
+ydW
+ydW
+cVr
+gfe
+xJp
+bPi
+jcm
+uEo
+tMQ
 auj
 aaa
 aaa
 aaa
 aux
-auz
-auz
-auz
-auz
-auz
-auz
-auz
-auz
-auz
-auz
+xEf
+gUp
+ceA
+eBY
+tcv
+gat
+sWg
+sWg
+sWg
+rJf
 aux
 aaa
 aaa
@@ -53126,31 +54044,31 @@ atV
 aaa
 aaa
 auj
-aul
-aul
-aul
-aul
-aul
-aul
-aul
-aul
-aul
-aul
+kCT
+ydW
+ydW
+bqb
+oNR
+oNR
+oNR
+ppG
+uEo
+ldF
 auj
 aaa
 aaa
 aaa
 aux
-auz
-auz
-auz
-auz
-auz
-auz
-auz
-auz
-auz
-auz
+pVL
+bkE
+kwL
+aux
+nxk
+nTB
+rMN
+nHW
+pPF
+iip
 aux
 aaa
 aaa
@@ -53378,31 +54296,31 @@ atV
 aaa
 aaa
 auj
-aul
-aul
-aul
-aul
-aul
-aul
-aul
-aul
-aul
-aul
+xOn
+ydW
+ydW
+sQN
+dli
+cJl
+oNR
+dPW
+uEo
+ktI
 auj
 aaa
 aaa
 aaa
 aux
-auz
-auz
-auz
-auz
-auz
-auz
-auz
-auz
-auz
-auz
+aux
+aux
+aux
+aux
+hDe
+bEx
+xRK
+wAI
+sWg
+tcv
 aux
 aaa
 aaa
@@ -53631,30 +54549,30 @@ aaa
 aaa
 auj
 aum
-aul
-aul
-aul
-aul
-aul
-aul
-aul
-aul
-aul
+ydW
+ydW
+sQN
+uxu
+cJl
+oNR
+dPW
+uEo
+hFK
 auj
 aaa
 aaa
 aaa
 aux
 auA
-auz
-auz
-auz
-auz
-auz
-auz
-auz
-auz
-auz
+kmn
+sfz
+oxT
+tcv
+sWg
+sWg
+sWg
+sWg
+rJf
 aux
 aaa
 aaa
@@ -53882,31 +54800,31 @@ aaa
 aaa
 aaa
 auj
-aul
-aul
-aul
-aul
-aul
-aul
-aul
-aul
-aul
-aul
+auj
+auj
+bgz
+auj
+auj
+auj
+auj
+dvc
+auj
+auj
 auj
 aaa
 aaa
 aaa
 aux
-auz
-auz
-auz
-auz
-auz
-auz
-auz
-auz
-auz
-auz
+fst
+slg
+eox
+aux
+mxo
+tcv
+tcv
+jif
+jif
+tcv
 aux
 aaa
 aaa
@@ -54134,16 +55052,16 @@ aaa
 aaa
 aaa
 auj
+hFj
+jIQ
+jIQ
+jIQ
+pVV
 auj
-auj
-auj
-auj
-auj
-auj
-auj
-auj
-auj
-auj
+fLS
+wDr
+wDr
+eSU
 auj
 aaa
 aaa
@@ -54153,11 +55071,11 @@ aux
 aux
 aux
 aux
-aux
-aux
-aux
-aux
-aux
+jsw
+rfJ
+rfJ
+vMD
+vMD
 aux
 aux
 aaa
@@ -54385,6 +55303,18 @@ atV
 aaa
 aaa
 aaa
+auj
+gSN
+jIQ
+jIQ
+jIQ
+unB
+auj
+rMR
+wDr
+wDr
+mdy
+auj
 aaa
 aaa
 aaa
@@ -54392,25 +55322,13 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+aux
+iME
+bdH
+bdH
+csj
+csj
+aux
 aaa
 aaa
 aaa
@@ -54637,6 +55555,18 @@ atV
 aaa
 aaa
 aaa
+auj
+kht
+jIQ
+jIQ
+jIQ
+jIQ
+auj
+oSQ
+wDr
+wDr
+vhm
+auj
 aaa
 aaa
 aaa
@@ -54644,25 +55574,13 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+aux
+vVU
+bdH
+bdH
+bdH
+bdH
+aux
 aaa
 aaa
 aaa
@@ -54889,6 +55807,18 @@ aaa
 aaa
 aaa
 aaa
+auj
+bxg
+jIQ
+jIQ
+iyx
+xxy
+auj
+elG
+wDr
+uqu
+jlG
+auj
 aaa
 aaa
 aaa
@@ -54896,25 +55826,13 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+aux
+vfb
+bdH
+kUW
+ozJ
+hpy
+aux
 aaa
 aaa
 aaa
@@ -57659,7 +58577,7 @@ aVA
 asU
 asU
 asU
-aVA
+aFb
 asU
 asU
 asU
@@ -58688,7 +59606,7 @@ atg
 aty
 aBd
 aRZ
-acg
+abE
 atg
 aaa
 aaa
@@ -58940,7 +59858,7 @@ atg
 arS
 arN
 ayA
-acg
+abE
 atg
 aaa
 aaa
@@ -59444,7 +60362,7 @@ atg
 aXY
 abE
 abE
-acg
+abE
 atg
 aaa
 aaa
@@ -64625,7 +65543,7 @@ aaa
 aaa
 aaa
 aeP
-aeR
+ahO
 aPH
 aeR
 aeR
@@ -67982,9 +68900,9 @@ axk
 aiD
 aiM
 axk
-ajT
-ajT
-ajT
+akP
+akP
+akP
 axk
 bbr
 axk
@@ -68021,18 +68939,18 @@ aaa
 aeP
 aVr
 aCX
+aFo
 aeP
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+aJk
+aKa
+aMg
+aMm
+aeP
+aOi
+aPu
+pRp
+pRp
+aeP
 aaa
 aaa
 aaa
@@ -68234,7 +69152,7 @@ axk
 aAJ
 aJJ
 axk
-ajT
+akP
 akP
 akQ
 aNo
@@ -68273,18 +69191,18 @@ aaa
 aeP
 awj
 aDl
+aGp
 aeP
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+aJq
+ajQ
+ajQ
+aMG
+aeP
+aOw
+aOw
+aOw
+nXL
+aeP
 aaa
 aaa
 aaa
@@ -68487,8 +69405,8 @@ aFj
 bbg
 axk
 ajU
-ajT
-ajT
+akP
+akP
 axk
 aNo
 axk
@@ -68525,18 +69443,18 @@ aaa
 aeP
 awG
 ale
+aFo
 aeP
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+ajQ
+ajQ
+ajQ
+ajQ
+aMX
+aOw
+aOw
+aOw
+aOw
+aeP
 aaa
 aaa
 aaa
@@ -68779,15 +69697,15 @@ awU
 aDn
 aeP
 aeP
+ajQ
+ajQ
+ajQ
+ajQ
 aeP
-aeP
-aeP
-aeP
-aeP
-aeP
-aeP
-aeP
-aeP
+aOw
+aOw
+aOw
+fho
 aeP
 aaa
 aaa
@@ -69030,16 +69948,16 @@ ale
 ayf
 aDA
 aEM
-aFb
-aGp
-aJk
-aKa
+ajQ
+ajQ
+ajQ
+ajQ
 ajQ
 aeP
-aMm
-aMA
-aMA
-aMA
+aeP
+aeP
+aeP
+aeP
 aeP
 aaa
 aaa
@@ -69282,15 +70200,15 @@ ale
 ayH
 ale
 ale
-aFo
-ajQ
-aJq
 ajQ
 ajQ
-aMg
+ajQ
+ajQ
+ajQ
+aeP
 aMA
-aMA
-aMA
+aPC
+aPl
 aPl
 aeP
 aaa
@@ -69534,16 +70452,16 @@ arV
 aAh
 aDH
 ale
-aFo
-ajQ
-aJq
 ajQ
 ajQ
-aeP
-aMG
-aOi
-aOi
-aPu
+ajQ
+ajQ
+ajQ
+aNw
+aNu
+aNu
+aNu
+aNu
 aeP
 aaa
 aaa
@@ -69792,10 +70710,10 @@ ajQ
 ajQ
 ajQ
 aeP
-aeP
-aeP
-aeP
-aeP
+aNu
+aNu
+aNu
+aNu
 aeP
 aaa
 aaa
@@ -70044,7 +70962,7 @@ ajQ
 ajQ
 ajQ
 aeP
-aMX
+aNu
 aNu
 aNu
 aNu
@@ -70295,10 +71213,10 @@ aGJ
 aEa
 aKK
 ajQ
-aMg
+aeP
 aNu
 aNu
-aNu
+mBO
 aPB
 aeP
 aaa
@@ -70548,10 +71466,10 @@ ale
 aKP
 ajQ
 aeP
-aNw
-aOw
-aOw
-aPC
+aNu
+aNu
+aNu
+aNu
 aeP
 aaa
 aaa
@@ -84024,10 +84942,10 @@ ane
 amH
 amH
 amH
+xpi
 amH
 amH
 amH
-aaa
 aaa
 aaa
 aaa
@@ -84274,12 +85192,12 @@ anb
 dgG
 anX
 amH
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+mNO
+mNO
+mNO
+mNO
+mNO
+amH
 aaa
 aaa
 aaa
@@ -84526,12 +85444,12 @@ anb
 dgG
 ane
 amH
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+tSF
+mNO
+mNO
+tSF
+tSF
+amH
 aaa
 aaa
 aaa
@@ -84778,12 +85696,12 @@ anb
 dgG
 ane
 amH
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+mNO
+mNO
+iob
+mNO
+mNO
+amH
 aaa
 aaa
 aaa
@@ -85030,12 +85948,12 @@ anb
 dgG
 ane
 amH
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+mNO
+mNO
+tSF
+mNO
+mNO
+amH
 aaa
 aaa
 aaa
@@ -85282,12 +86200,12 @@ nEN
 kCf
 ane
 amH
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+wsY
+mNO
+mNO
+mNO
+mNO
+amH
 aaa
 aaa
 aaa
@@ -85534,12 +86452,12 @@ anb
 anb
 anX
 amH
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+amH
+amH
+amH
+amH
+amH
+amH
 aaa
 aaa
 aaa

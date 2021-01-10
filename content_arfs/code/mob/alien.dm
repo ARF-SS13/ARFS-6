@@ -32,6 +32,7 @@
 	icon_state = "maid"
 	icon_living = "maid"
 	icon_dead = "maid_dead"
+	vore_icons = "maid"
 	icon_gib = "syndicate_gib"
 	icon_rest = "maid_sleep"
 	has_hands = TRUE
@@ -42,6 +43,7 @@
 	response_help = "pokes"
 	response_disarm = "shoves"
 	response_harm = "hits"
+	pass_flags = PASSTABLE
 
 	maxHealth = 100
 	health = 100
@@ -69,6 +71,7 @@
 	verbs += /mob/living/proc/smell
 	verbs += /mob/living/proc/shred_limb
 	verbs += /mob/living/simple_mob/proc/leap
+	verbs += /mob/living/proc/eat_trash
 
 	can_enter_vent_with += /obj/item/device/radio
 

@@ -328,12 +328,26 @@
 	ckeywhitelist = list("rouwren")
 	character_name = list("Rin Deimos")
 
+/datum/gear/fluff/res_key_rs12
+	path = /obj/item/weapon/card/id/residential/rs12
+	display_name = "RS12 keys"
+	description = "residential"
+	ckeywhitelist = list("thingpony","brimcon","truedark")
+	character_name = list("Willow Snow", "Scryden Sako", "Sheyss Brauror")
+
 /datum/gear/fluff/res_key_rs13
 	path = /obj/item/weapon/card/id/residential/rs13
 	display_name = "RS13 keys"
 	description = "residential"
 	ckeywhitelist = list("secondattemps")
 	character_name = list("Alexandria Marlow")
+
+/datum/gear/fluff/res_key_rs14
+	path = /obj/item/weapon/card/id/residential/rs14
+	display_name = "RS14 keys"
+	description = "residential"
+	ckeywhitelist = list("thingpony", "disguiser")
+	character_name = list("Phoenix Sedna", "Rak Woodrow")
 
 
 //Mansion
