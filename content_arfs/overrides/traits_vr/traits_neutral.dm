@@ -125,3 +125,22 @@
 	..(S,H)
 	H.add_spell(new/spell/shapeshift)
 */
+
+/datum/trait/small_size
+	name = "Small Size"
+	desc = "Makes your mob size small, enabling you to be picked up easier!"
+	cost = 0
+	var_changes = list("mob_size" = MOB_SMALL)
+
+
+/mob/living/carbon/human/proc/mob_size()
+    set name = "Toggle Mob Size"
+    set desc = "Toggle to allow being picked up.."
+    set category = "Abilities"
+    mob_size = MOB_SMALL
+
+/datum/trait/small_size/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	H.verbs |= /mob/living/carbon/human/proc/mob_size
+
+	var/mob/living/carbon/human/C = src
+	C.mob_size = !C.mob_size
