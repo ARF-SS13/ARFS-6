@@ -28,6 +28,7 @@
 		/obj/item/weapon/card/id/residential/rm10,
 		/obj/item/weapon/card/id/residential/mansion,
 		/obj/item/weapon/card/id/residential/rm11,
+		/obj/item/weapon/card/id/residential/rm12
 		)
 
 /obj/item/weapon/card/id/residential
@@ -135,6 +136,9 @@
 /obj/item/weapon/card/id/residential/rm11
 	name = "RM11 residential key"
 	access = list(8111)
+/obj/item/weapon/card/id/residential/rm12
+	name = "RM12 residential Key"
+	access = list(8112)
 
 /obj/item/weapon/card/id/residential/mansion
 	name = "Mansion residential key"
@@ -270,6 +274,13 @@
 	ckeywhitelist = list("thingpony", "cebutris", "liujr", "truedark")
 	character_name = list("Tye Riggle", "Kaibus Wordsmith", "Lywarra Lichtut", "Yalnisho Rhirrie")
 
+/datum/gear/fluff/res_key_rm12
+	path = /obj/item/weapon/card/id/residential/rm12
+	display_name = "RM12 keys"
+	description = "residential"
+	ckeywhitelist = list("mrkaktuspl")
+	character_name = list("Alexandra Bowie")
+
 // SMALL KEYS
 
 /datum/gear/fluff/res_key_rs1
@@ -285,6 +296,13 @@
 	description = "residential"
 	ckeywhitelist = list("killbow")
 	character_name = list("Hoi Blackburn")
+
+/datum/gear/fluff/res_key_rs3
+	path = /obj/item/weapon/card/id/residential/rs3
+	display_name = "RS3 keys"
+	description = "residential"
+	ckeywhitelist = list("kbraid")
+	character_name = list("Eili")
 
 /datum/gear/fluff/res_key_rs5
 	path = /obj/item/weapon/card/id/residential/rs5
@@ -363,5 +381,5 @@
 	path = /obj/item/weapon/storage/wallet/residential
 	display_name = "KEEEEEYS"
 	description = "residential"
-	ckeywhitelist = list("lukevale")
-	character_name = list("Luna")
+	ckeywhitelist = list("thingpony")
+	character_name = list("Iris Miller")

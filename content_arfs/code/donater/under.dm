@@ -16,3 +16,15 @@
 		slot_l_hand_str = null,
 		slot_r_hand_str = null,
 		)
+
+// ******
+// Hagawaga
+// ******
+//Lana Xavier
+/obj/item/clothing/under/fluff/romanarmor
+	name = "Roman Legionary Armor"
+	desc = "Basically looks like what you would expect a segmented plated armor from the early Roman Empire to look like."
+	icon = 'content_arfs/icons/obj/clothing/custom_clothes_yw.dmi'
+	icon_state = "hagawaga_romanarmor"
+	icon_override = "content_arfs/icons/obj/clothing/custom_clothes_yw.dmi"
+	item_state = "hagawaga_romanarmor"
