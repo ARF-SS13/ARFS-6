@@ -45722,10 +45722,9 @@
 /turf/simulated/floor/carpet/oracarpet,
 /area/engineering/break_room)
 "hnP" = (
-/obj/structure/shuttle/engine/propulsion{
-	icon_state = "burst_r"
-	},
-/turf/simulated/floor/airless,
+/obj/structure/shuttle/window,
+/obj/structure/grille,
+/turf/simulated/floor,
 /area/shuttle/constructionsite)
 "hoM" = (
 /obj/machinery/door/firedoor/border_only,
@@ -45838,16 +45837,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/engineering/break_room)
 "huI" = (
-/obj/structure/bed/chair/shuttle{
-	dir = 1;
-	icon_state = "shuttle_chair"
-	},
-/obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
-	id_tag = "engineering_shuttle";
-	pixel_x = 32;
-	tag_door = "engi_shuttle_hatch"
-	},
+/obj/structure/closet/crate,
 /turf/simulated/shuttle/floor,
 /area/shuttle/constructionsite)
 "hwz" = (
@@ -49126,7 +49116,16 @@
 /turf/simulated/floor/plating,
 /area/maintenance/research)
 "mGV" = (
-/obj/effect/shuttle_landmark/premade/engineering/station,
+/obj/structure/bed/chair/shuttle{
+	dir = 1;
+	icon_state = "shuttle_chair"
+	},
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	frequency = 1380;
+	id_tag = "engineering_shuttle";
+	pixel_x = 32;
+	tag_door = "engi_shuttle_hatch"
+	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/constructionsite)
 "mHf" = (
@@ -49820,9 +49819,8 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "nTK" = (
-/obj/structure/shuttle/window,
-/obj/structure/grille,
-/turf/simulated/floor,
+/obj/machinery/computer/shuttle_control/engineering,
+/turf/simulated/shuttle/floor,
 /area/shuttle/constructionsite)
 "nUM" = (
 /obj/structure/bed/chair/office/dark{
@@ -51403,7 +51401,7 @@
 /turf/simulated/floor/carpet/oracarpet,
 /area/engineering/break_room)
 "qmH" = (
-/obj/structure/closet/crate,
+/obj/effect/shuttle_landmark/premade/engineering/station,
 /turf/simulated/shuttle/floor,
 /area/shuttle/constructionsite)
 "qnU" = (
@@ -51561,7 +51559,10 @@
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
 "qyI" = (
-/obj/machinery/computer/shuttle_control/engineering,
+/obj/structure/bed/chair/shuttle{
+	dir = 1;
+	icon_state = "shuttle_chair"
+	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/constructionsite)
 "qzf" = (
@@ -53368,10 +53369,14 @@
 /turf/simulated/floor/tiled/dark,
 /area/engineering)
 "sZb" = (
-/obj/structure/bed/chair/shuttle{
-	dir = 1;
-	icon_state = "shuttle_chair"
+/obj/machinery/door/airlock/external{
+	frequency = 1380;
+	icon_state = "door_locked";
+	id_tag = "engi_shuttle_hatch";
+	locked = 1;
+	name = "Engineering Shuttle Hatch"
 	},
+/obj/item/tape/engineering,
 /turf/simulated/shuttle/floor,
 /area/shuttle/constructionsite)
 "sZK" = (
@@ -55866,15 +55871,10 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
 "xhW" = (
-/obj/machinery/door/airlock/external{
-	frequency = 1380;
-	icon_state = "door_locked";
-	id_tag = "engi_shuttle_hatch";
-	locked = 1;
-	name = "Engineering Shuttle Hatch"
+/obj/structure/shuttle/engine/propulsion{
+	icon_state = "burst_r"
 	},
-/obj/item/tape/engineering,
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/airless,
 /area/shuttle/constructionsite)
 "xhZ" = (
 /obj/effect/floor_decal/corner/paleblue{
@@ -80179,14 +80179,14 @@ aov
 aov
 aov
 aov
+nDS
+nDS
+hnP
+nDS
+nDS
+nDS
+nDS
 aaa
-nDS
-nDS
-nTK
-nDS
-nDS
-nDS
-nDS
 aaa
 aov
 aaa
@@ -80436,14 +80436,14 @@ aaa
 aaa
 aaa
 aov
+nDS
+huI
+kGE
+kGE
+qyI
+nDS
+xhW
 aaa
-nDS
-qmH
-kGE
-kGE
-sZb
-nDS
-hnP
 aaa
 aov
 aaa
@@ -80693,14 +80693,14 @@ aaa
 aaa
 aaa
 aov
-aaa
+hnP
 nTK
 qyI
-sZb
 kGE
-sZb
+qyI
 nDS
 nDS
+aaa
 aaa
 aov
 aaa
@@ -80950,14 +80950,14 @@ aaa
 aaa
 aaa
 aov
-aaa
 nDS
-qmH
-kGE
-mGV
 huI
+kGE
+qmH
+mGV
 nDS
-hnP
+xhW
+aaa
 aaa
 aov
 aaa
@@ -81207,14 +81207,14 @@ aaa
 aaa
 aaa
 aov
+nDS
+nDS
+hnP
+sZb
+nDS
+nDS
+nDS
 aaa
-nDS
-nDS
-nTK
-xhW
-nDS
-nDS
-nDS
 aaa
 aov
 aaa
