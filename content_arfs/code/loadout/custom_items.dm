@@ -43,3 +43,39 @@
 	description = "A customized implant to help the seeing impaired, created by OWEN Industries"
 	ckeywhitelist = list("thingpony")
 	character_name = null
+
+//  H CKEYS
+
+//hagawaga
+//Lana Xavier
+/datum/gear/fluff/hagawaga_romanarmor
+	path = /obj/item/clothing/under/fluff/romanarmor
+	display_name = "Roman Legionary Armor"
+	description = "Basically looks like what you would expect a segmented plated armor from the early Roman Empire to look like."
+	ckeywhitelist = list("hagawaga")
+	character_name = list("Lana Xavier")
+
+
+//  K CKEYS
+//kbraid
+//Eili
+/datum/gear/fluff/kbraidgoggles
+	path = /obj/item/clothing/glasses/fluff/avigoggles_yw
+	display_name = "K'braid Aviation Goggles"
+	description = "You're such a goggle head!"
+	ckeywhitelist = list("kbraid")
+	character_name = list("Eili")	//Character name. this variable is required, or the item doesn't show in loadout. Change to "character_name = null" if not character restricted.
+
+/datum/gear/fluff/jeanscrystelchime
+	path = /obj/item/clothing/accessory/fluff/jeanscrystelchime
+	display_name = "valhollide chimes"
+	description = "a precious gift from a precious friend"
+	ckeywhitelist = list("kbraid")
+	character_name = list("Eili")	//Character name. this variable is required, or the item doesn't show in loadout. Change to "character_name = null" if not character restricted.
+
+/datum/gear/fluff/jeansplushie
+	path = /obj/item/toy/plushie/jeans
+	display_name = "Jeans Plushi"
+	description = "Pupper Pitite"
+	ckeywhitelist = list("dopiotl","kbraid")
+	character_name = list("Jeanne Petite","Eili","Braid")
