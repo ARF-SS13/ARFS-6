@@ -99,6 +99,8 @@ var/global/list/pokemon_pods = list()//List of pods that ghosts can spawn at
 			return
 		if(announce_choice == "Yes")
 			announce_choice = TRUE
+		else
+			announce_choice = FALSE
 	T = get_turf(src)
 	A = T.loc
 	var/mob/living/simple_mob/animal/passive/pokemon/P = new p_choice(T)
