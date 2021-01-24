@@ -46,3 +46,4 @@
 	g_tail2 = new_color_rgb_list[2]
 	b_tail2 = new_color_rgb_list[3]
 	update_tail_showing()
+	regenerate_icons()
