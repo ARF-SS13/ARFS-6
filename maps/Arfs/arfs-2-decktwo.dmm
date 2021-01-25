@@ -15510,6 +15510,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
 "aCI" = (
@@ -18248,6 +18251,7 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 4
 	},
+/obj/item/weapon/reagent_containers/spray/cleaner,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/kitchen)
 "aHY" = (
@@ -27890,6 +27894,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/item/weapon/reagent_containers/spray/cleaner,
 /turf/simulated/floor/tiled/white,
 /area/rnd/lab)
 "aZN" = (
@@ -28695,9 +28700,9 @@
 /obj/effect/floor_decal/corner/pink{
 	dir = 5
 	},
-/obj/machinery/vending/wallmed1{
+/obj/machinery/vending/wallmed2{
 	pixel_x = 1;
-	pixel_y = 33
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery2)
@@ -33254,15 +33259,15 @@
 /obj/structure/filingcabinet/medical{
 	pixel_x = -10
 	},
-/obj/structure/filingcabinet/medical,
-/obj/structure/filingcabinet/medical{
-	pixel_x = 10
-	},
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 9
 	},
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
+	},
+/obj/structure/filingcabinet/chestdrawer{
+	pixel_x = 4;
+	pixel_y = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
@@ -34095,6 +34100,7 @@
 	},
 /obj/structure/mopbucket,
 /obj/item/weapon/mop,
+/obj/item/weapon/reagent_containers/glass/bucket,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
 "bni" = (
@@ -34154,6 +34160,10 @@
 	d1 = 2;
 	d2 = 8;
 	icon_state = "2-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
@@ -34538,6 +34548,7 @@
 	},
 /obj/structure/table/standard,
 /obj/item/weapon/soap,
+/obj/item/weapon/reagent_containers/spray/cleaner,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
 "bof" = (
@@ -34611,14 +34622,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
-	},
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 4;
 	icon_state = "1-4"
+	},
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 1;
+	tag = "icon-pipe-y (NORTH)"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
@@ -34861,6 +34872,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "boU" = (
@@ -35319,6 +35331,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "bpP" = (
@@ -36380,6 +36393,7 @@
 /obj/machinery/alarm{
 	pixel_y = 22
 	},
+/obj/machinery/vending/medical,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
 "bsl" = (
@@ -38324,6 +38338,10 @@
 	},
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
+	},
+/obj/machinery/vending/wallmed2{
+	pixel_x = 1;
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/cryo)
@@ -41736,11 +41754,13 @@
 /turf/simulated/wall/r_wall,
 /area/medical/virology)
 "bQC" = (
-/obj/effect/floor_decal/corner/green{
-	dir = 9
+/obj/structure/table/marble,
+/obj/effect/floor_decal/corner/blue{
+	dir = 4
 	},
-/turf/simulated/floor/tiled/white,
-/area/medical/virologyaccess)
+/obj/machinery/reagentgrinder,
+/turf/simulated/floor/tiled/dark,
+/area/crew_quarters/kitchen)
 "bQF" = (
 /obj/structure/bed/chair/office/light{
 	dir = 4
@@ -41804,7 +41824,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled/white,
-/area/medical/virologyaccess)
+/area/medical/virology)
 "bQZ" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -44462,7 +44482,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled/white,
-/area/medical/virologyaccess)
+/area/medical/virology)
 "fww" = (
 /turf/simulated/floor/tiled/dark,
 /area/engineering/foyer)
@@ -44698,9 +44718,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/aft)
 "fOi" = (
-/obj/machinery/smartfridge/secure/medbay{
-	req_one_access = list()
-	},
+/obj/machinery/smartfridge/chemistry/chemvator/down,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
 "fOM" = (
@@ -52001,6 +52019,16 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/engineering)
+"reH" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 5
+	},
+/obj/machinery/vending/wallmed2{
+	pixel_x = 1;
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/medbay)
 "rfC" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -52865,9 +52893,9 @@
 /obj/effect/floor_decal/corner/pink{
 	dir = 5
 	},
-/obj/machinery/vending/wallmed1{
+/obj/machinery/vending/wallmed2{
 	pixel_x = 1;
-	pixel_y = 33
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery)
@@ -53740,6 +53768,19 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/kitchen)
+"tEe" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 5
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/vending/wallmed2{
+	pixel_x = 1;
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/medbay)
 "tEn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -82194,8 +82235,8 @@ bIY
 bvg
 tEn
 bxt
-bQC
-bQC
+bwX
+bwX
 bQW
 fvp
 bQA
@@ -82207,7 +82248,7 @@ bdZ
 beG
 oKd
 bcA
-bgB
+tEe
 bdY
 bhH
 bhH
@@ -85548,7 +85589,7 @@ uev
 uev
 rrq
 bcf
-bam
+reH
 aPK
 blk
 oJj
@@ -96554,7 +96595,7 @@ wOf
 bvD
 aJL
 aJb
-aJL
+bQC
 aKk
 aKM
 aKM
@@ -97325,7 +97366,7 @@ aHE
 bRD
 bRD
 aJb
-aJL
+bRD
 oHr
 aKO
 uDs
