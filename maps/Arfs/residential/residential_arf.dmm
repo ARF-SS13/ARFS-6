@@ -8668,6 +8668,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/structure/table/woodentable,
 /turf/simulated/floor/wood,
 /area/residential/room12)
 "auo" = (
@@ -21077,11 +21078,6 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/light/small,
-/obj/machinery/button/remote/airlock{
-	id = "rs12_main";
-	name = "Apartment Exit";
-	pixel_y = -26
-	},
 /turf/simulated/floor/wood,
 /area/residential/room12)
 "aUG" = (
@@ -24804,11 +24800,25 @@
 /turf/simulated/floor/carpet/bcarpet,
 /area/residential/mroom2)
 "blK" = (
-/obj/machinery/vending/fooditalian{
-	dir = 8
+/obj/machinery/door/airlock{
+	id_tag = "rs14_main";
+	name = "RS5";
+	req_access = list(8005)
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/wood,
-/area/space)
+/area/residential/corridors)
 "bmY" = (
 /obj/structure/fireplace{
 	dir = 4
@@ -26583,8 +26593,14 @@
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/residential/room12)
 "eWl" = (
-/obj/structure/coatrack,
-/turf/simulated/floor/wood,
+/obj/effect/floor_decal/corner/black/diagonal{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/white/diagonal,
+/obj/machinery/vending/blue_lotus{
+	prices = list()
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
 /area/residential/room12)
 "eYK" = (
 /obj/structure/table/fancyblack,
@@ -26785,11 +26801,13 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mansion)
 "fHN" = (
-/obj/machinery/vending/foodstuffing{
-	dir = 8
+/obj/effect/floor_decal/corner/white/diagonal,
+/obj/effect/floor_decal/corner/black/diagonal{
+	dir = 4
 	},
-/turf/simulated/floor/wood,
-/area/space)
+/obj/machinery/appliance/cooker/fryer,
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/residential/room12)
 "fHV" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/ckey{
@@ -27347,22 +27365,6 @@
 	},
 /turf/simulated/floor/grass,
 /area/residential/mansion)
-"hbl" = (
-/obj/effect/floor_decal/corner/white/diagonal,
-/obj/effect/floor_decal/corner/black/diagonal{
-	dir = 4
-	},
-/obj/structure/closet/secure_closet/freezer/kitchen,
-/obj/item/weapon/storage/box/produce/carrot,
-/obj/item/weapon/storage/box/produce/carrot,
-/obj/item/weapon/storage/box/produce/carrot,
-/obj/item/weapon/storage/box/produce/carrot,
-/obj/item/weapon/storage/box/produce/mushrooms,
-/obj/item/weapon/storage/box/produce/mushrooms,
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/carrotcake,
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/carrotcake,
-/turf/simulated/floor/tiled/kafel_full/white,
-/area/residential/room12)
 "hbt" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -28438,14 +28440,6 @@
 	pixel_x = 5;
 	pixel_y = 5
 	},
-/obj/item/weapon/cell/void{
-	pixel_x = 5;
-	pixel_y = 5
-	},
-/obj/item/weapon/stock_parts/capacitor/omni{
-	pixel_x = -5;
-	pixel_y = 5
-	},
 /obj/item/weapon/rcd_ammo/large{
 	pixel_x = 7;
 	pixel_y = -7
@@ -28469,6 +28463,8 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/item/weapon/cell/void/hybrid,
+/obj/item/weapon/cell/void/hybrid,
 /turf/simulated/floor/reinforced,
 /area/residential/room12)
 "jOA" = (
@@ -28639,6 +28635,13 @@
 /obj/item/clothing/head/beret,
 /obj/item/weapon/storage/backpack/holding,
 /obj/item/weapon/storage/belt/holding,
+/obj/item/weapon/sextoy/dildo/bulletvibe,
+/obj/item/weapon/sextoy/dildo/canine,
+/obj/item/weapon/sextoy/dildo/purpledong,
+/obj/item/weapon/sextoy/dildo/seadragon,
+/obj/item/weapon/sextoy/dildo/equine,
+/obj/item/weapon/sextoy/dildo/analbeads,
+/obj/item/weapon/sextoy/dildo/bigblackdick,
 /turf/simulated/floor/carpet/blucarpet,
 /area/residential/room12)
 "khy" = (
@@ -28673,7 +28676,6 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/item/weapon/towel/random,
 /turf/simulated/floor/wood,
 /area/residential/room13)
 "kmn" = (
@@ -28820,6 +28822,9 @@
 /obj/item/weapon/reagent_containers/glass/beaker/large,
 /obj/machinery/light{
 	dir = 1
+	},
+/obj/machinery/chemical_dispenser/bar_alc/full{
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/residential/room12)
@@ -29947,11 +29952,15 @@
 /turf/simulated/shuttle/floor/glass,
 /area/residential/ship_bay)
 "nmJ" = (
-/obj/machinery/vending/foodfish{
-	dir = 8
+/obj/effect/floor_decal/corner/black/diagonal{
+	dir = 4
 	},
-/turf/simulated/floor/wood,
-/area/space)
+/obj/effect/floor_decal/corner/black/diagonal{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/white/diagonal,
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/residential/room12)
 "nnr" = (
 /obj/effect/floor_decal/carpet/blue{
 	dir = 8
@@ -30845,11 +30854,14 @@
 /turf/simulated/floor/wood,
 /area/residential/corridors)
 "prN" = (
-/obj/machinery/vending/fooddessert{
-	dir = 8
+/obj/effect/floor_decal/corner/black/diagonal{
+	dir = 4
 	},
-/turf/simulated/floor/wood,
-/area/space)
+/obj/effect/floor_decal/corner/white/diagonal,
+/obj/structure/closet/secure_closet/freezer/kitchen,
+/obj/item/weapon/reagent_containers/food/snacks/sliceable/carrotcake,
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/residential/room12)
 "psD" = (
 /obj/structure/cable{
 	d1 = 2;
@@ -31839,11 +31851,13 @@
 /turf/simulated/floor/carpet/purcarpet,
 /area/residential/room13_main_bedroom)
 "roL" = (
-/obj/machinery/vending/foodasian{
-	dir = 8
+/obj/effect/floor_decal/corner/black/diagonal{
+	dir = 4
 	},
-/turf/simulated/floor/wood,
-/area/space)
+/obj/effect/floor_decal/corner/white/diagonal,
+/obj/structure/closet/secure_closet/freezer/fridge,
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/residential/room12)
 "rpP" = (
 /obj/machinery/vending/foodasian,
 /obj/effect/floor_decal/corner_kafel/green{
@@ -32059,11 +32073,14 @@
 /turf/simulated/floor/wood,
 /area/residential/mroom9)
 "rSI" = (
-/obj/machinery/vending/foodveggie{
-	dir = 8
+/obj/effect/floor_decal/corner/black/diagonal{
+	dir = 4
 	},
-/turf/simulated/floor/wood,
-/area/space)
+/obj/effect/floor_decal/corner/white/diagonal,
+/obj/effect/floor_decal/spline/plain,
+/obj/effect/floor_decal/corner/white/diagonal,
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/residential/room12)
 "rWp" = (
 /obj/structure/bed/double/huge,
 /obj/item/weapon/bedsheet/iandouble/huge,
@@ -33085,11 +33102,15 @@
 /turf/simulated/floor/carpet/oracarpet,
 /area/residential/room9)
 "uzF" = (
-/obj/machinery/vending/foodfast{
-	dir = 8
+/obj/machinery/button/remote/airlock{
+	id = "rs12_main";
+	name = "Apartment Exit";
+	pixel_y = -26
 	},
+/obj/machinery/light/small,
+/obj/structure/coatrack,
 /turf/simulated/floor/wood,
-/area/space)
+/area/residential/room12)
 "uAC" = (
 /obj/machinery/light{
 	dir = 4
@@ -33221,9 +33242,6 @@
 /obj/effect/floor_decal/corner/black/diagonal{
 	dir = 4
 	},
-/obj/structure/closet/secure_closet/freezer/fridge,
-/obj/item/weapon/storage/box/produce/meat,
-/obj/item/weapon/storage/box/produce/meat,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/residential/room12)
 "uTn" = (
@@ -33488,12 +33506,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full/gray,
 /area/residential/mroom5)
-"vvf" = (
-/obj/machinery/vending/foodmeat{
-	dir = 8
-	},
-/turf/simulated/floor/wood,
-/area/space)
 "vvp" = (
 /obj/machinery/vending/coffee{
 	dir = 4
@@ -33581,6 +33593,8 @@
 /obj/item/clothing/under/cyberpunkharness,
 /obj/item/weapon/storage/backpack/holding,
 /obj/item/weapon/storage/belt/holding,
+/obj/item/clothing/under/pants/blackjeans,
+/obj/item/clothing/suit/storage/toggle/hoodie/black,
 /turf/simulated/floor/carpet/blucarpet,
 /area/residential/room12)
 "vNl" = (
@@ -34454,6 +34468,14 @@
 /obj/effect/floor_decal/corner/white/diagonal,
 /obj/machinery/chemical_dispenser/bar_soft/full{
 	pixel_y = 32
+	},
+/obj/item/weapon/storage/box/glasses/meta{
+	pixel_x = 5;
+	pixel_y = 6
+	},
+/obj/item/weapon/storage/box/glasses/meta{
+	pixel_x = -6;
+	pixel_y = 6
 	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/residential/room12)
@@ -56228,7 +56250,7 @@ aeP
 aeP
 aeP
 aeP
-aIf
+blK
 aeP
 aeP
 aeP
@@ -56547,15 +56569,15 @@ aaa
 aaa
 aaa
 aaa
-aaa
-auj
-auj
-auj
-auj
+tcv
 eWl
-aUF
+nmJ
+prN
+roL
 auj
-aaa
+aUF
+uzF
+auj
 aaa
 aaa
 aaa
@@ -56800,10 +56822,10 @@ atV
 aaa
 aaa
 auj
-auj
-hbl
+fHN
 uRL
-auj
+uRL
+ydW
 auj
 anj
 auj
@@ -57055,7 +57077,7 @@ auj
 aul
 ydW
 ydW
-bqb
+rSI
 aun
 aut
 oNR
@@ -88975,14 +88997,14 @@ aaa
 aaa
 aaa
 aaa
-rSI
-vvf
-roL
-prN
-uzF
-nmJ
-blK
-fHN
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
