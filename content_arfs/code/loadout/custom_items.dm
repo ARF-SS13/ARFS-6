@@ -37,11 +37,25 @@
     ckeywhitelist = list("andyman105", "dameonowen", "thingpony", "foxyrose")
     character_name = null
 
+/datum/gear/fluff/dameon_7
+	path = /obj/item/weapon/gun/energy/gun/fluff/dominator/andy
+	display_name = "The Dominator"
+	description = "A modified version of the MWPSB Dominator"
+	ckeywhitelist = list("andyman105", "dameonowen")
+	character_name = null
+
 /datum/gear/fluff/thing_1
 	path = /obj/item/weapon/implanter/blindsight
 	display_name = "Blindsight Implant"
 	description = "A customized implant to help the seeing impaired, created by OWEN Industries"
 	ckeywhitelist = list("thingpony")
+	character_name = null
+
+/datum/gear/fluff/gunpermit
+	path = /obj/item/clothing/accessory/permit/gun
+	display_name = "Gun Permit"
+	description = "A permit allowing the wearer to carry a firearm"
+	ckeywhitelist = list("thingpony", "dameonowen")
 	character_name = null
 
 //  H CKEYS
