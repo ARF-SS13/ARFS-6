@@ -275,3 +275,8 @@
 
 /obj/item/projectile/beam/andysizelaser/massivegrow
 	set_size = 4.0 //300% of current size
+
+/obj/item/weapon/gun/energy/gun/fluff/dominator/andy
+	name = "The Dominator"
+	desc = "A heavily modified MWPSB Dominator, with a self-recharging power cell. The weapon can only be fired by the owner and is alert-level locked."
+	cell_type = /obj/item/weapon/cell/device/weapon/recharge/alien
