@@ -215,8 +215,8 @@
 	path = /obj/item/weapon/card/id/residential/rm1
 	display_name = "RM1 keys"
 	description = "residential"
-	ckeywhitelist = list("thingpony", "siorkillbow", "cebutris", "dameonowen")
-	character_name = list("Iris Miller", "Elizabeth Nayala", "Hepsie Mull", "Amber Owen")
+	ckeywhitelist = list("thingpony", "siorkillbow", "cebutris", "dameonowen", "brimcon")
+	character_name = list("Iris Miller", "Elizabeth Nayala", "Hepsie Mull", "Amber Owen", "Scryden Sako")
 
 /datum/gear/fluff/res_key_rm2
 	path = /obj/item/weapon/card/id/residential/rm2
@@ -360,13 +360,19 @@
 	ckeywhitelist = list("secondattemps")
 	character_name = list("Alexandria Marlow")
 
-/datum/gear/fluff/res_key_rs14
-	path = /obj/item/weapon/card/id/residential/rs14
-	display_name = "RS14 keys"
+/datum/gear/fluff/res_key_rs5
+	path = /obj/item/weapon/card/id/residential/rs5
+	display_name = "RS5 keys"
 	description = "residential"
 	ckeywhitelist = list("thingpony", "disguiser")
 	character_name = list("Phoenix Sedna", "Rak Woodrow")
 
+/datum/gear/fluff/res_key_rs14
+	path = /obj/item/weapon/card/id/residential/rs14
+	display_name = "RS14 keys"
+	description = "residential"
+	ckeywhitelist = list("phantomwolfzero","disguiser")
+	character_name = list("Kobalt Frevath", "Rak Woodrow","Tak Flourin")
 
 //Mansion
 
