@@ -55,7 +55,7 @@
 	path = /obj/item/clothing/accessory/permit/gun
 	display_name = "Gun Permit"
 	description = "A permit allowing the wearer to carry a firearm"
-	ckeywhitelist = list("thingpony", "dameonowen")
+	ckeywhitelist = list("thingpony", "dameonowen", "andyman105")
 	character_name = null
 
 //  H CKEYS
