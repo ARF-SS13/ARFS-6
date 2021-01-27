@@ -41,7 +41,7 @@
 	path = /obj/item/weapon/gun/energy/gun/fluff/dominator/andy
 	display_name = "The Dominator"
 	description = "A modified version of the MWPSB Dominator"
-	ckeywhitelist = list("andyman105", "dameonowen")
+	ckeywhitelist = list("andyman105", "dameonowen","thingpony")
 	character_name = null
 
 /datum/gear/fluff/thing_1
@@ -55,7 +55,7 @@
 	path = /obj/item/clothing/accessory/permit/gun
 	display_name = "Gun Permit"
 	description = "A permit allowing the wearer to carry a firearm"
-	ckeywhitelist = list("thingpony", "dameonowen")
+	ckeywhitelist = list("thingpony", "dameonowen", "andyman105")
 	character_name = null
 
 //  H CKEYS
