@@ -41,7 +41,7 @@
 	path = /obj/item/weapon/gun/energy/gun/fluff/dominator/andy
 	display_name = "The Dominator"
 	description = "A modified version of the MWPSB Dominator"
-	ckeywhitelist = list("andyman105", "dameonowen")
+	ckeywhitelist = list("andyman105", "dameonowen","thingpony")
 	character_name = null
 
 /datum/gear/fluff/thing_1
