@@ -2968,7 +2968,7 @@
 	icon_state = "corner_kafel";
 	tag = "icon-corner_kafel (NORTHEAST)"
 	},
-/obj/structure/reagent_dispensers/watertank,
+/mob/living/bot/farmbot,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
 "dM" = (
@@ -2996,6 +2996,7 @@
 	dir = 8;
 	pixel_x = -21
 	},
+/obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
 "dN" = (
@@ -5339,7 +5340,7 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/glass_research{
 	name = "Expedition Prep";
-	req_access = list(65)
+	req_access = list(47)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -5633,7 +5634,7 @@
 	dir = 4
 	},
 /obj/machinery/door/window/brigdoor/eastleft{
-	req_access = list(65)
+	req_access = list(47)
 	},
 /obj/machinery/portable_atmospherics/canister/air,
 /obj/effect/floor_decal/corner_kafel/purple{
@@ -5843,7 +5844,7 @@
 	dir = 4
 	},
 /obj/machinery/door/window/brigdoor/eastright{
-	req_access = list(65)
+	req_access = list(47)
 	},
 /obj/structure/window/reinforced,
 /obj/machinery/portable_atmospherics/canister/air,
@@ -6667,7 +6668,7 @@
 	name = "interior access button";
 	pixel_x = -26;
 	pixel_y = 26;
-	req_one_access = list(13,65)
+	req_access = list(47)
 	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/eva)
@@ -6734,7 +6735,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/airlock/research{
 	name = "General Storage";
-	req_access = list(65)
+	req_access = list(47)
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/dark,
@@ -6889,8 +6890,7 @@
 	master_tag = "research_airlock";
 	name = "exterior access button";
 	pixel_x = 26;
-	pixel_y = 0;
-	req_one_access = list(13,65)
+	req_access = list(47)
 	},
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 8;
@@ -7319,7 +7319,9 @@
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/xenobiology)
 "je" = (
-/obj/structure/closet/secure_closet/scientist,
+/obj/structure/closet/secure_closet/scientist{
+	req_access = list(47)
+	},
 /obj/effect/floor_decal/corner_kafel/purple{
 	dir = 10;
 	icon_state = "corner_kafel";
@@ -8876,7 +8878,9 @@
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/xenobiology)
 "lm" = (
-/obj/structure/closet/secure_closet/scientist,
+/obj/structure/closet/secure_closet/scientist{
+	req_access = list(47)
+	},
 /obj/effect/floor_decal/corner_kafel/purple{
 	dir = 10;
 	icon_state = "corner_kafel";
@@ -9310,6 +9314,10 @@
 	dir = 6;
 	icon_state = "corner_kafel";
 	tag = "icon-corner_kafel (SOUTHEAST)"
+	},
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1"
 	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/xenobiology)
@@ -16690,7 +16698,6 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
 "Of" = (
-/obj/structure/filingcabinet,
 /obj/effect/floor_decal/corner_kafel/green{
 	dir = 10;
 	icon_state = "corner_kafel";
@@ -16711,6 +16718,7 @@
 	icon_state = "corner_kafel";
 	tag = "icon-corner_kafel (NORTHWEST)"
 	},
+/obj/structure/flora/pottedplant/minitree,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
 "Pa" = (
@@ -16794,8 +16802,24 @@
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/hallway)
 "Wt" = (
+/obj/effect/floor_decal/corner_kafel/green{
+	dir = 10;
+	icon_state = "corner_kafel";
+	tag = "icon-corner_kafel (SOUTHWEST)"
+	},
+/obj/effect/floor_decal/corner_kafel/green{
+	dir = 5;
+	icon_state = "corner_kafel";
+	tag = "icon-corner_kafel (NORTHEAST)"
+	},
+/obj/effect/floor_decal/corner_kafel/white{
+	dir = 10;
+	icon_state = "corner_kafel";
+	tag = "icon-corner_kafel (SOUTHWEST)"
+	},
+/obj/structure/filingcabinet,
 /turf/simulated/floor/tiled/white,
-/area/mine/unexplored)
+/area/rnd/xenobiology/xenoflora)
 "WE" = (
 /obj/effect/floor_decal/corner_kafel/purple{
 	dir = 10;
@@ -47553,7 +47577,7 @@ bj
 bj
 bj
 bj
-fZ
+Wt
 gA
 eF
 fn
@@ -49857,7 +49881,7 @@ tR
 ab
 ab
 ab
-Wt
+ab
 ab
 ab
 ab
