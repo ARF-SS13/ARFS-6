@@ -1,3 +1,15 @@
+// C KEYS (hehe. Ckeys)
+
+//CyprusJazzBerry
+
+/datum/gear/fluff/cyprus_1
+	path = /obj/item/weapon/storage/backpack/holding/satchel/alt
+	display_name = "Designer Satchal of Holding"
+	description = "A specially designed satchel of holding."
+	ckeywhitelist = list("cyprusjazzberry")
+	character_name = null
+
+
 //D
 
 //Dameon/Andy
@@ -93,3 +105,4 @@
 	description = "Pupper Pitite"
 	ckeywhitelist = list("dopiotl","kbraid")
 	character_name = list("Jeanne Petite","Eili","Braid")
+
