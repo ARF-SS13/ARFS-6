@@ -102,3 +102,13 @@
 	icon_dead = "deer_dead"
 	icon = 'content_arfs/icons/mob/animal_arfs.dmi'
 */
+
+//CMO's Pet bear
+/mob/living/simple_mob/animal/space/bear
+	name = "Boris"
+	faction = "Neutral"
+	icon = 'content_arfs/icons/mob/animal_arfs.dmi'
+	icon_living = "boris"
+	icon_state = "boris"
+	icon_dead = "boris_dead"
+	icon_gib = "boris_gib"
