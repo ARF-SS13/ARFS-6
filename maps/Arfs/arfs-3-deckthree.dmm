@@ -30,6 +30,9 @@
 /obj/structure/railing{
 	dir = 4
 	},
+/obj/machinery/camera/autoname{
+	dir = 8
+	},
 /turf/simulated/floor/grass,
 /area/crew_quarters/longue_area)
 "ag" = (
@@ -107,12 +110,14 @@
 /turf/simulated/floor/grass,
 /area/crew_quarters/longue_area)
 "aw" = (
-/obj/structure/railing{
-	dir = 8
+/obj/structure/window/reinforced{
+	dir = 1
 	},
-/obj/structure/flora/ausbushes/ywflowers,
-/turf/simulated/floor/grass,
-/area/crew_quarters/longue_area)
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/open,
+/area/medical/medbay)
 "ax" = (
 /turf/simulated/floor/water,
 /area/crew_quarters/longue_area)
@@ -4808,56 +4813,40 @@
 	pixel_x = -22
 	},
 /obj/machinery/camera/autoname{
-	dir = 5
+	dir = 4
 	},
 /turf/simulated/floor/grass,
 /area/crew_quarters/longue_area)
 "jW" = (
 /obj/machinery/camera/autoname{
-	dir = 9
-	},
-/obj/machinery/light{
 	dir = 4
 	},
-/turf/simulated/floor/grass,
-/area/crew_quarters/longue_area)
+/turf/simulated/floor/tiled/dark,
+/area/hallway/primary/deckthree/fore)
 "jX" = (
-/obj/structure/railing{
+/obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/machinery/camera/autoname{
-	dir = 8
-	},
-/turf/simulated/floor/grass,
-/area/crew_quarters/longue_area)
+/turf/simulated/open,
+/area/medical/medbay)
 "jY" = (
 /obj/machinery/camera/autoname{
-	dir = 5
+	dir = 4
 	},
 /turf/simulated/floor/grass,
 /area/crew_quarters/longue_area)
 "jZ" = (
 /obj/machinery/camera/autoname{
-	dir = 10;
-	tag = "icon-camera (SOUTHWEST)"
+	dir = 8
 	},
-/turf/simulated/floor/water/deep,
-/area/crew_quarters/longue_area)
+/turf/simulated/floor/tiled/dark,
+/area/hallway/primary/deckthree/fore)
 "ka" = (
-/obj/structure/table/woodentable{
-	desc = "Its a stage!";
-	name = "stage"
-	},
-/obj/machinery/light/flamp/noshade{
-	pixel_y = 14
-	},
 /obj/machinery/camera/autoname{
-	dir = 6
+	dir = 8
 	},
-/turf/simulated/floor/carpet/turcarpet,
-/area/crew_quarters/sleep{
-	name = "\improper Ball Room"
-	})
+/turf/simulated/floor/grass,
+/area/crew_quarters/longue_area)
 "kb" = (
 /obj/machinery/camera/autoname{
 	dir = 8
@@ -4884,9 +4873,7 @@
 /turf/simulated/floor/wood,
 /area/holodeck_control)
 "ke" = (
-/obj/machinery/camera/autoname{
-	dir = 6
-	},
+/obj/machinery/camera/autoname,
 /turf/simulated/floor/wood,
 /area/hallway/primary/deckthree/central)
 "kf" = (
@@ -4901,12 +4888,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/camera/autoname{
-	dir = 6
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/camera/autoname,
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/deckthree/central)
 "kg" = (
@@ -5185,14 +5170,12 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/deckthree/central)
 "kR" = (
-/obj/structure/sign/deck/third{
-	pixel_x = -29
-	},
+/obj/structure/flora/ausbushes/genericbush,
 /obj/machinery/camera/autoname{
-	dir = 4
+	dir = 8
 	},
-/turf/simulated/floor/tiled/dark,
-/area/hallway/primary/deckthree/fore)
+/turf/simulated/floor/grass,
+/area/crew_quarters/longue_area)
 "kS" = (
 /obj/machinery/door/firedoor,
 /obj/structure/curtain/black,
@@ -6489,11 +6472,14 @@
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/maintenance/security_port)
 "pw" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
 /obj/machinery/camera/autoname{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/primary/deckthree/fore)
+/area/hallway/primary/deckthree/aft)
 "px" = (
 /obj/machinery/light{
 	dir = 1
@@ -7829,8 +7815,7 @@
 /obj/effect/floor_decal/corner/green{
 	dir = 9
 	},
-/obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Southern Hall 6";
+/obj/machinery/camera/autoname{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
@@ -7890,11 +7875,10 @@
 /turf/simulated/floor/plating,
 /area/maintenance/security_starboard)
 "vO" = (
-/obj/machinery/camera/autoname,
-/obj/machinery/light{
+/obj/machinery/camera/autoname{
 	dir = 1
 	},
-/turf/simulated/floor/grass,
+/turf/simulated/floor/water/deep,
 /area/crew_quarters/longue_area)
 "vR" = (
 /obj/structure/table/marble,
@@ -8119,6 +8103,10 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/locker/upper/room1)
+"wV" = (
+/mob/living/simple_mob/animal/space/bear,
+/turf/simulated/floor/carpet/blue,
+/area/crew_quarters/heads/cmo)
 "wW" = (
 /obj/effect/floor_decal/rust,
 /obj/random/trash,
@@ -8466,15 +8454,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plating,
 /area/ai/outside)
-"yn" = (
-/obj/structure/sign/deck/third{
-	pixel_x = -29
-	},
-/obj/machinery/camera/autoname{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/dark,
-/area/hallway/primary/deckthree/aft)
 "yq" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/window/reinforced/full,
@@ -8817,19 +8796,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/security_cell_hallway)
-"zG" = (
-/obj/effect/floor_decal/corner/green{
-	dir = 6
-	},
-/obj/effect/floor_decal/corner/green{
-	dir = 9
-	},
-/obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Southern Hall 5";
-	dir = 4
-	},
-/turf/simulated/floor/tiled/dark,
-/area/crew_quarters/locker/upper)
 "zH" = (
 /obj/effect/floor_decal/chapel{
 	dir = 8;
@@ -8901,10 +8867,7 @@
 /obj/machinery/keycard_auth{
 	pixel_y = -24
 	},
-/mob/living/simple_mob/animal/passive/bird/parrot/pink_cockatoo{
-	desc = "Hey there Delilah..~";
-	name = "Delilah"
-	},
+/obj/structure/dogbed,
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/cmo)
 "zY" = (
@@ -9566,9 +9529,7 @@
 /turf/simulated/floor/plating,
 /area/crew_quarters/dining_hall/upper)
 "CK" = (
-/obj/machinery/camera/autoname{
-	dir = 6
-	},
+/obj/machinery/camera/autoname,
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/deckthree/central)
 "CM" = (
@@ -9972,16 +9933,6 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/kitchen/upper)
-"EV" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/hallway/primary/deckthree/fore)
 "EX" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
@@ -10258,6 +10209,7 @@
 	dir = 8;
 	pixel_x = -24
 	},
+/obj/machinery/camera/autoname,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/locker/upper)
 "Gn" = (
@@ -10531,13 +10483,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/kitchen/upper)
-"Hi" = (
-/obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
-	},
-/turf/simulated/open,
-/area/medical/medbay)
 "Hk" = (
 /obj/random/trash_pile,
 /obj/effect/floor_decal/rust,
@@ -11225,6 +11170,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
+/obj/machinery/camera/autoname,
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/deckthree/fore)
 "KL" = (
@@ -11573,10 +11519,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/security/detectives_office)
-"Mp" = (
-/obj/machinery/camera/autoname,
-/turf/simulated/floor/tiled/dark,
-/area/hallway/primary/deckthree/aft)
 "Mq" = (
 /obj/random/maintenance/security,
 /turf/simulated/floor/plating,
@@ -12810,15 +12752,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/security/detectives_office)
-"Sh" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 4
-	},
-/obj/machinery/camera/autoname{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/dark,
-/area/hallway/primary/deckthree/fore)
 "Sj" = (
 /obj/effect/floor_decal/corner/green{
 	dir = 6
@@ -13295,6 +13228,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
+	},
+/obj/machinery/camera/autoname{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/deckthree/aft)
@@ -13949,12 +13885,6 @@
 /obj/random/trash,
 /turf/simulated/floor/plating,
 /area/maintenance/security_starboard)
-"WY" = (
-/obj/machinery/camera/autoname{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/dark,
-/area/hallway/primary/deckthree/fore)
 "Xb" = (
 /obj/effect/floor_decal/rust,
 /obj/random/trash,
@@ -43865,7 +43795,7 @@ Rt
 yq
 AO
 rh
-AP
+wV
 ND
 Lg
 Dx
@@ -44628,11 +44558,11 @@ Zu
 Zu
 Ab
 Rt
-FW
-Rt
-Rt
-Rt
-Rt
+aw
+jX
+jX
+jX
+jX
 VV
 SO
 ND
@@ -44886,10 +44816,10 @@ Zu
 Ab
 Ab
 Ab
-Hi
-Hi
-Hi
-Hi
+Rt
+Rt
+Rt
+Rt
 Dx
 Dx
 VF
@@ -46403,10 +46333,10 @@ Yl
 Yl
 Yl
 Yl
-Yl
+fV
 jn
 jD
-jF
+fV
 jF
 jF
 jF
@@ -46598,7 +46528,7 @@ Uk
 qJ
 yM
 Ec
-kR
+YV
 Uk
 Uk
 Uk
@@ -46609,8 +46539,8 @@ Uk
 JA
 ow
 Uk
-pw
 Uk
+jW
 Uk
 Uk
 Uk
@@ -46627,7 +46557,7 @@ Uk
 JA
 Uk
 Uk
-pw
+Uk
 ow
 Uk
 Uk
@@ -46639,7 +46569,7 @@ Uk
 Uk
 Uk
 YV
-Sh
+qJ
 yM
 Ec
 Uk
@@ -46652,7 +46582,7 @@ JA
 Uk
 ow
 Uk
-pw
+Uk
 Uk
 Uk
 Uk
@@ -46660,15 +46590,15 @@ JA
 Uk
 qJ
 vJ
-Uk
+Ul
 Ff
 Ul
-Ma
+Ul
 Ij
-ZC
+pw
 Ly
 Ma
-LC
+Ma
 Ma
 Ma
 Ma
@@ -46680,7 +46610,7 @@ Ma
 Ma
 Ma
 BN
-yn
+Zb
 ZC
 Tv
 XQ
@@ -46692,7 +46622,7 @@ Ma
 Ma
 Ma
 jh
-LC
+Ma
 Ma
 Ma
 Ma
@@ -46917,10 +46847,10 @@ Ih
 pZ
 AE
 Qx
-EV
+hT
 Yr
 OS
-KB
+OS
 Ys
 TQ
 uD
@@ -47106,18 +47036,18 @@ Ei
 Uk
 Uk
 Bi
-WY
+Uk
 Uk
 Uk
 Tb
 yM
-Tb
+HU
 Uk
 Uk
 Uk
 Uk
 Uk
-WY
+Uk
 Uk
 Uk
 Uk
@@ -47129,13 +47059,13 @@ Ei
 Uk
 Uk
 Uk
-WY
 Uk
-Tb
+Uk
+HU
 yM
 Tb
 Uk
-WY
+Uk
 Uk
 Uk
 Uk
@@ -47145,9 +47075,9 @@ Uk
 Bi
 Uk
 Uk
+jZ
 Uk
 Uk
-WY
 Uk
 Uk
 Uk
@@ -47158,9 +47088,9 @@ yM
 Tb
 Uk
 Uk
+jZ
 Uk
 Uk
-WY
 Uk
 Uk
 Uk
@@ -47174,10 +47104,10 @@ Uk
 IF
 HU
 vJ
-Uk
+Ul
 jj
 Ul
-Ma
+Ul
 Ij
 Yz
 UD
@@ -47198,9 +47128,9 @@ Ma
 Yz
 Tv
 Yz
-Ma
-Ma
 we
+Ma
+Ma
 Ma
 Ma
 Ma
@@ -47220,14 +47150,14 @@ Yz
 Ma
 Ma
 Ma
-we
+Ma
 Ma
 Ma
 Ma
 Ex
 Ma
-Ma
 we
+Ma
 Ma
 Ma
 Ma
@@ -47431,10 +47361,10 @@ Yl
 Yl
 Yl
 Yl
-Yl
+fV
 Cl
 Ul
-jF
+fV
 jF
 jF
 jF
@@ -47638,7 +47568,7 @@ Gq
 yk
 DH
 Gl
-zG
+XC
 Xc
 TZ
 DH
@@ -48496,7 +48426,7 @@ PH
 jF
 TE
 jF
-Mp
+Ma
 Ma
 Ma
 Ma
@@ -48754,7 +48684,7 @@ jF
 jF
 jF
 Ma
-Ma
+we
 Ma
 Ma
 jF
@@ -49967,7 +49897,7 @@ Oi
 Oi
 Oi
 fu
-ka
+fA
 fB
 fB
 ge
@@ -51026,8 +50956,8 @@ hG
 hG
 hG
 hG
-af
-jX
+hG
+hG
 af
 Nd
 he
@@ -51282,9 +51212,9 @@ hy
 hG
 am
 av
+hG
+hG
 ad
-ag
-ag
 ag
 ag
 he
@@ -51296,7 +51226,7 @@ aA
 ax
 aI
 hD
-aG
+vO
 ai
 Oi
 Oi
@@ -51539,9 +51469,9 @@ hg
 hG
 aB
 hG
+hG
+hG
 ad
-ag
-ag
 ag
 ag
 hm
@@ -51553,7 +51483,7 @@ ax
 ax
 aH
 aG
-jZ
+aG
 ai
 Oi
 Oi
@@ -51797,8 +51727,8 @@ hG
 hG
 hG
 hG
-aw
-ah
+ay
+hG
 ah
 ah
 hn
@@ -52817,7 +52747,7 @@ Oi
 Oi
 Oi
 ai
-hG
+jJ
 hG
 rj
 yY
@@ -53074,7 +53004,7 @@ Oi
 Oi
 Oi
 ai
-vO
+YA
 hG
 ak
 Zc
@@ -54622,8 +54552,8 @@ hG
 hG
 hG
 hG
-hG
-jW
+ka
+Sp
 hG
 hG
 hG
@@ -54631,7 +54561,7 @@ hG
 hG
 hG
 Sp
-av
+kR
 au
 ax
 ax

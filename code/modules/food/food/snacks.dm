@@ -6440,7 +6440,7 @@
 /obj/item/weapon/reagent_containers/food/snacks/gigapuddi/anger
 	desc = "A large crème caramel made with extra hate"
 	icon_state = "angerpuddi"
-	
+
 /obj/item/weapon/reagent_containers/food/snacks/sliceable/buchedenoel
 	name = "\improper Buche de Noel"
 	desc = "Merry Christmas"
@@ -6491,7 +6491,7 @@
 	icon_state = "turkey_drumstick"
 	trash = /obj/item/trash/plate
 	bitesize = 2
-	
+
 /obj/item/weapon/reagent_containers/food/snacks/sliceable/suppermatter
 	name = "suppermatter"
 	desc = "Extremely dense and powerful food."
@@ -6565,7 +6565,7 @@
 /obj/item/weapon/reagent_containers/food/snacks/omurice/face
 	icon = 'icons/obj/food.dmi'
 	icon_state = "omuriceface"
-	
+
 /obj/item/weapon/reagent_containers/food/snacks/cinnamonbun
 	name = "cinnamon bun"
 	desc = "Life needs frosting!"
@@ -6573,7 +6573,9 @@
 	icon_state = "cinnamonbun"
 	trash = null
 
-/obj/item/weapon/reagent_containers/food/snacks/cinnamonbun/New()
-	..()
-	reagents.add_reagent("nutriment", 8)
-	bitesize = 1
+//ARFS EDIT
+/obj/item/weapon/reagent_containers/food/snacks/cinnamonbun/Initialize()
+        . = ..()
+        reagents.add_reagent("nutriment", 8)
+        bitesize = 1
+//END ARFS EDIT

@@ -13,3 +13,15 @@
 	attack(mob/M as mob, mob/user as mob, def_zone)
 		..()
 		src.reagents.add_reagent("coffee", 50)
+
+/obj/item/weapon/storage/backpack/holding/satchel
+    name = "satchel of holding"
+    icon = 'content_arfs/icons/obj/clothing/backpack.dmi'
+    icon_override = 'content_arfs/icons/mob/clothing/custom_clothing_arf.dmi'
+    icon_state = "satchel-holding"
+
+/obj/item/weapon/storage/backpack/holding/satchel/alt
+    name = "satchel of holding"
+    icon = 'content_arfs/icons/obj/clothing/backpack.dmi'
+    icon_override = 'content_arfs/icons/mob/clothing/custom_clothing_arf.dmi'
+    icon_state = "satchel-holding_alt"

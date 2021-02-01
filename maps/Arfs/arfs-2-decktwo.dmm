@@ -14369,6 +14369,7 @@
 	pixel_y = 26;
 	req_access = list(31)
 	},
+/obj/vehicle/train/trolley,
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
 "aAJ" = (
@@ -14663,6 +14664,7 @@
 	dir = 5
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/vehicle/train/trolley,
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
 "aBl" = (
@@ -14941,6 +14943,7 @@
 /obj/machinery/status_display/supply_display{
 	pixel_y = 32
 	},
+/obj/vehicle/train/engine,
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
 "aBH" = (
@@ -17749,9 +17752,8 @@
 	name = "\improper Cargo - CoP's Office"
 	})
 "aHb" = (
-/obj/machinery/computer/supplycomp{
-	dir = 8;
-	tag = "icon-computer (WEST)"
+/obj/machinery/computer/supplycomp/control{
+	dir = 8
 	},
 /turf/simulated/floor/wood,
 /area/quartermaster/qm{
@@ -19513,7 +19515,7 @@
 /obj/machinery/door/airlock/mining{
 	id_tag = "cargodoor";
 	name = "Mining Dock";
-	req_access = list(50)
+	req_access = list(48)
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningdock)
@@ -43861,9 +43863,8 @@
 /turf/simulated/floor/tiled/dark,
 /area/engineering)
 "eEA" = (
-/obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Engine Aft Port";
-	dir = 8
+/obj/machinery/camera/network/engine{
+	c_tag = "ENG - Core Fore Starboard"
 	},
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
@@ -44262,9 +44263,6 @@
 	},
 /obj/structure/window/reinforced{
 	dir = 8
-	},
-/obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Engine Fore Port"
 	},
 /obj/structure/dispenser,
 /turf/simulated/floor/plating,
@@ -45478,9 +45476,12 @@
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
 "gXK" = (
-/obj/machinery/light,
-/turf/simulated/floor/plating,
-/area/engineering/engine_room)
+/obj/machinery/camera/network/engine{
+	c_tag = "ENG - Space Loop";
+	dir = 4
+	},
+/turf/simulated/floor/airless/ceiling,
+/area/space)
 "gYo" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -46627,7 +46628,12 @@
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/industrial/warning{
+	description_antag = "ENG - Engine Core Aft Starboard";
 	dir = 4
+	},
+/obj/machinery/camera/network/engine{
+	c_tag = "ENG - Core Aft Starboard";
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
@@ -47106,10 +47112,9 @@
 /turf/simulated/floor/greengrid/nitrogen,
 /area/engineering/engine_room)
 "jte" = (
-/obj/effect/floor_decal/industrial/warning,
-/obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Engine Aft Port";
-	dir = 1
+/obj/machinery/camera/network/engine{
+	c_tag = "ENG - Core Port";
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
@@ -49199,10 +49204,16 @@
 /turf/simulated/floor/plating,
 /area/maintenance/engineering)
 "mJp" = (
-/obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Engine Fore Port"
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/black{
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/machinery/camera/network/engine{
+	c_tag = "ENG - Core Aft Port";
 	dir = 4
 	},
 /turf/simulated/floor/plating,
@@ -53348,11 +53359,11 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_a)
 "sPm" = (
-/obj/machinery/camera/network/engineering{
+/obj/effect/floor_decal/industrial/warning/cee,
+/obj/machinery/camera/network/engine{
 	c_tag = "ENG - Engine Shard";
 	dir = 1
 	},
-/obj/effect/floor_decal/industrial/warning/cee,
 /turf/simulated/floor/reinforced/nitrogen{
 	nitrogen = 82.1472
 	},
@@ -53580,10 +53591,7 @@
 /turf/space,
 /area/space)
 "tqj" = (
-/obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Engine Aft Port";
-	dir = 1
-	},
+/obj/machinery/light,
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
 "tqR" = (
@@ -54979,8 +54987,8 @@
 	dir = 1;
 	tag = "icon-map (NORTH)"
 	},
-/obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Engine Fore Port"
+/obj/machinery/camera/network/engine{
+	c_tag = "ENG - Core Fore Port"
 	},
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
@@ -55300,10 +55308,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/engineering/engine_eva)
 "vZd" = (
-/obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Engine Aft Starboard";
-	dir = 1
-	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
@@ -89523,7 +89527,7 @@ xUs
 xUs
 oka
 wMj
-gXK
+tqj
 bEy
 bEy
 qjL
@@ -90539,7 +90543,7 @@ bvy
 bvy
 bvy
 bEy
-xUs
+eEA
 mmv
 oSx
 xtf
@@ -91832,7 +91836,7 @@ ygb
 hsn
 rsW
 dCV
-jte
+qQK
 bEy
 xNW
 jhX
@@ -92347,7 +92351,7 @@ qMM
 rwi
 vnY
 lSw
-pHt
+mJp
 pHt
 xHt
 ukv
@@ -92595,7 +92599,7 @@ loF
 loF
 bvy
 bEy
-mJp
+ovM
 aLT
 xUs
 qwu
@@ -94401,8 +94405,8 @@ ehf
 xUs
 xUs
 xUs
-eEA
 xUs
+jte
 wvW
 dEk
 bEy
@@ -95428,7 +95432,7 @@ lAc
 qHV
 sWm
 sWm
-sWm
+gXK
 sWm
 mRY
 tny
