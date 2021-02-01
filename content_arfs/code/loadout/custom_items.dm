@@ -5,8 +5,8 @@
 /datum/gear/fluff/cyprus_1
 	path = /obj/item/weapon/storage/backpack/holding/satchel/alt
 	display_name = "Designer Satchal of Holding"
-	description = "A specially designed satchel of holding."
-	ckeywhitelist = list("cyprusjazzberry")
+	description = "A sleek, black metallic satchel with gold accents. Who said manipulating the fabric of reality couldn't be slick and stylish?."
+	ckeywhitelist = list("cyrusjazzberry")
 	character_name = null
 
 
