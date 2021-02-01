@@ -104,7 +104,7 @@
 */
 
 //CMO's Pet bear
-/mob/living/simple_mob/animal/space/bear
+/mob/living/simple_mob/animal/space/bear/boris
 	name = "Boris"
 	faction = "Neutral"
 	icon = 'content_arfs/icons/mob/animal_arfs.dmi'
