@@ -360,9 +360,9 @@
 	ckeywhitelist = list("secondattemps")
 	character_name = list("Alexandria Marlow")
 
-/datum/gear/fluff/res_key_rs5
-	path = /obj/item/weapon/card/id/residential/rs5
-	display_name = "RS5 keys"
+/datum/gear/fluff/res_key_rs4
+	path = /obj/item/weapon/card/id/residential/rs4
+	display_name = "RS4 keys"
 	description = "residential"
 	ckeywhitelist = list("thingpony", "disguiser")
 	character_name = list("Phoenix Sedna", "Rak Woodrow")
