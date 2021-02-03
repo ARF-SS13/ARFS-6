@@ -29881,6 +29881,7 @@
 	dir = 4
 	},
 /obj/item/clothing/under/medigown,
+/obj/item/weapon/storage/box/freezer,
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery2)
 "bdU" = (
@@ -30566,12 +30567,10 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 10
 	},
-/obj/machinery/power/apc{
-	name = "south bump";
-	pixel_y = -24
-	},
 /obj/structure/cable/green{
-	icon_state = "0-4"
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/exam_room)
@@ -33297,11 +33296,15 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
 "blo" = (
-/obj/structure/window/reinforced{
-	dir = 4
+/obj/structure/table/reinforced,
+/obj/item/weapon/reagent_containers/glass/bottle/biomass,
+/obj/item/weapon/reagent_containers/glass/bottle/biomass,
+/obj/item/weapon/reagent_containers/glass/bottle/biomass,
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 6
 	},
-/turf/simulated/floor/wood,
-/area/medical/reception)
+/turf/simulated/floor/tiled/white,
+/area/medical/genetics_cloning)
 "blp" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -34133,6 +34136,8 @@
 	dir = 1
 	},
 /obj/item/weapon/storage/firstaid/regular,
+/obj/item/roller,
+/obj/item/roller,
 /turf/simulated/floor/wood,
 /area/medical/reception)
 "bnl" = (
@@ -34653,6 +34658,7 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
 	},
+/obj/item/device/defib_kit/loaded,
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "bop" = (
@@ -35309,15 +35315,14 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "bpN" = (
-/obj/structure/table/marble,
-/obj/item/weapon/phone,
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 10
 	},
 /obj/machinery/camera/network/medbay{
-	c_tag = "MED - EMT";
+	c_tag = "MED - Main 2";
 	dir = 1
 	},
+/obj/machinery/smartfridge/chemistry/chemvator/down,
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "bpO" = (
@@ -36373,6 +36378,10 @@
 /obj/item/weapon/disk/nifsoft/medical,
 /obj/item/weapon/disk/nifsoft/medical,
 /obj/item/weapon/disk/nifsoft/medical,
+/obj/machinery/vending/wallmed2{
+	pixel_x = 1;
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
 "bsj" = (
@@ -42127,6 +42136,15 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/table/marble,
+/obj/item/roller{
+	pixel_y = 13
+	},
+/obj/item/roller{
+	pixel_y = 9
+	},
+/obj/item/roller,
+/obj/item/roller,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
 "bSm" = (
@@ -42318,6 +42336,14 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/research)
+"bTq" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 6
+	},
+/obj/structure/table/marble,
+/obj/item/device/healthanalyzer,
+/turf/simulated/floor/tiled/white,
+/area/medical/medbay)
 "bUd" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -43291,6 +43317,21 @@
 /obj/item/weapon/storage/toolbox/emergency,
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/residential)
+"dzO" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8;
+	health = 1e+006
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/medical/exam_room)
 "dAz" = (
 /obj/structure/closet/crate,
 /obj/random/maintenance/clean,
@@ -43490,6 +43531,15 @@
 /obj/effect/floor_decal/industrial/outline,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/atmos)
+"dZZ" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 6
+	},
+/obj/machinery/vending/wallmed2{
+	pixel_x = 30
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/medbay)
 "eae" = (
 /obj/machinery/light{
 	dir = 4
@@ -46748,6 +46798,10 @@
 /obj/effect/floor_decal/corner/yellow/border,
 /turf/simulated/floor/tiled/dark,
 /area/engineering/break_room)
+"iRq" = (
+/obj/machinery/vending/wallmed1,
+/turf/simulated/floor/tiled/white,
+/area/medical/medbay)
 "iTX" = (
 /obj/random/maintenance/medical,
 /obj/structure/cable/green{
@@ -46820,11 +46874,10 @@
 	dir = 1;
 	health = 1e+006
 	},
-/obj/structure/table/marble,
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
 	},
-/obj/item/device/defib_kit/loaded,
+/obj/machinery/vending/medical,
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "jaE" = (
@@ -47749,12 +47802,11 @@
 /obj/effect/floor_decal/corner/pink{
 	dir = 10
 	},
-/obj/structure/closet/crate/freezer,
-/obj/item/weapon/storage/box/freezer,
 /obj/machinery/alarm{
 	dir = 4;
 	pixel_x = -22
 	},
+/obj/machinery/vending/medical,
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery)
 "kvr" = (
@@ -48521,6 +48573,7 @@
 	dir = 4
 	},
 /obj/item/clothing/under/medigown,
+/obj/item/weapon/storage/box/freezer,
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery)
 "lEY" = (
@@ -49474,6 +49527,11 @@
 	},
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
+	},
+/obj/item/weapon/phone,
+/obj/item/device/healthanalyzer{
+	pixel_x = -1;
+	pixel_y = 14
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
@@ -51632,6 +51690,10 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -22
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/exam_room)
 "qEy" = (
@@ -51828,10 +51890,6 @@
 "qPK" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 10
-	},
-/obj/machinery/alarm{
-	dir = 1;
-	pixel_y = -22
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/exam_room)
@@ -53025,12 +53083,11 @@
 /obj/effect/floor_decal/corner/pink{
 	dir = 10
 	},
-/obj/structure/closet/crate/freezer,
-/obj/item/weapon/storage/box/freezer,
 /obj/machinery/alarm{
 	dir = 4;
 	pixel_x = -22
 	},
+/obj/machinery/vending/medical,
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery2)
 "srB" = (
@@ -53944,6 +54001,9 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
+	},
+/obj/machinery/vending/wallmed2{
+	pixel_x = 30
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_emt_bay)
@@ -54938,6 +54998,14 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/chief)
+"vtC" = (
+/obj/structure/window/reinforced{
+	dir = 1;
+	health = 1e+006
+	},
+/obj/machinery/vending/medical,
+/turf/simulated/floor/tiled/white,
+/area/medical/medbay)
 "vvr" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -55943,6 +56011,13 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/machinery/power/apc{
+	name = "south bump";
+	pixel_y = -24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/exam_room)
 "xiv" = (
@@ -56190,10 +56265,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/engineering/engine_eva)
 "xBV" = (
-/obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
-	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
@@ -81500,7 +81571,7 @@ bhH
 bhH
 bhH
 skh
-bhH
+iRq
 bhH
 bhH
 bhH
@@ -81510,7 +81581,7 @@ bhH
 bhH
 bhH
 bpw
-bbj
+dZZ
 bbj
 bra
 bke
@@ -81760,7 +81831,7 @@ jNp
 bhH
 bhH
 bhH
-bkT
+vtC
 bhH
 oZj
 bhH
@@ -84322,7 +84393,7 @@ bbs
 qYD
 puO
 kOe
-bcH
+blo
 kZD
 bbs
 bgB
@@ -87408,7 +87479,7 @@ bdy
 bdy
 bdy
 bfA
-bch
+dzO
 bam
 aPK
 blk
@@ -87922,7 +87993,7 @@ bdA
 bdy
 beQ
 qPK
-bch
+dzO
 bam
 bhH
 blk
@@ -88181,7 +88252,7 @@ bei
 qDh
 bch
 bSi
-bbj
+bTq
 bgV
 blh
 bks
@@ -88442,7 +88513,7 @@ oUN
 biK
 blh
 bkt
-blo
+rbD
 iZe
 xBV
 bnv
