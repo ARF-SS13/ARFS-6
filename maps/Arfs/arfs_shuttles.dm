@@ -276,3 +276,10 @@
 	dock_target_station = "specops_centcom_dock"
 	dock_target_offsite = "specops_dock_airlock"
 */
+
+/obj/effect/shuttle_landmark/premade/exploration
+	name = "Exploration Shuttle"
+	landmark_tag = "excursion"
+	docking_controller = "expshuttle_docker"
+	base_area = /area/space
+	base_turf = /turf/space

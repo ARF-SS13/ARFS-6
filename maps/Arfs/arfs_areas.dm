@@ -225,3 +225,57 @@
 	name= "\improper Upstairs Dining Hall"
 	icon_state = "cafeteria"
 	icon = 'icons/turf/areas.dmi'
+
+//Exploration
+/area/maintenance/station/exploration
+	name = "\improper Exploration Maintenance"
+
+/area/dallus/exploration
+	name = "\improper Excursion Shuttle Dock"
+	icon_state = "yellow"
+	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
+	sound_env = LARGE_ENCLOSED
+	ambience = AMBIENCE_HANGAR
+
+/area/dallus/exploration/equipment
+	name = "\improper Exploration Equipment Storage"
+	sound_env = STANDARD_STATION
+	ambience = AMBIENCE_GENERIC
+
+/area/dallus/exploration/crew
+	name = "\improper Exploration Crew Area"
+	sound_env = STANDARD_STATION
+	ambience = AMBIENCE_GENERIC
+
+/area/tether/exploration/pathfinder_office
+	name = "\improper Pathfinder's Office"
+	sound_env = STANDARD_STATION
+	ambience = AMBIENCE_GENERIC
+
+/area/tether/exploration/hallway
+	name = "\improper Exploration Hallway"
+	sound_env = STANDARD_STATION
+	ambience = AMBIENCE_GENERIC
+
+/area/tether/exploration/staircase
+	name = "\improper Exploration Staircase"
+	sound_env = STANDARD_STATION
+	ambience = AMBIENCE_GENERIC
+
+/area/tether/exploration/showers
+	name = "\improper Exploration Showers"
+	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_GENERIC
+
+/area/shuttle/excursion
+	requires_power = 1
+	icon_state = "shuttle2"
+
+/area/shuttle/excursion/general
+	name = "\improper Excursion Shuttle"
+
+/area/shuttle/excursion/cockpit
+	name = "\improper Excursion Shuttle Cockpit"
+
+/area/shuttle/excursion/cargo
+	name = "\improper Excursion Shuttle Cargo"
