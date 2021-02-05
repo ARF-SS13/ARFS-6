@@ -106,7 +106,8 @@
 //CMO's Pet bear
 /mob/living/simple_mob/animal/space/bear/boris
 	name = "Boris"
-	faction = "Neutral"
+	faction = "neutral"
+	desc = "From space Russia. With love <3"
 	icon = 'content_arfs/icons/mob/animal_arfs.dmi'
 	icon_living = "boris"
 	icon_state = "boris"
