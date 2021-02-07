@@ -113,3 +113,16 @@
 	icon_state = "boris"
 	icon_dead = "boris_dead"
 	icon_gib = "boris_gib"
+
+// Truedarks spider pet
+
+/mob/living/simple_mob/animal/giant_spider/thermic/princess
+	name = "Princess"
+	desc = "Mirage-cloaked and orange, it makes you shudder to look at it. This one has simmering orange eyes and a...crown?"
+	catalogue_data = list(/datum/category_item/catalogue/fauna/giant_spider/thermic_spider)
+	icon = 'content_arfs/icons/mob/animal_arfs.dmi'
+	icon_state = "princess"
+	icon_living = "princess"
+	icon_dead = "princess"
+	faction = "neutral"
+	update_icon = 0
