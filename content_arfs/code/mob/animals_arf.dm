@@ -123,6 +123,6 @@
 	icon = 'content_arfs/icons/mob/animal_arfs.dmi'
 	icon_state = "princess"
 	icon_living = "princess"
-	icon_dead = "princess"
+	icon_dead = "princess_dead"
 	faction = "neutral"
 	update_icon = 0
