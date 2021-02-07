@@ -221,18 +221,22 @@ var/global/list/datum/dna/gene/dna_genes[0]
 		src.blood_color = CS.blood_color
 
 	//ARFS EDIT
-	var/taurtype = /datum/sprite_accessory/tail/taur/fatdrake/andy
+	var/taurtype = /datum/sprite_accessory/tail/taur/spider
+	if(istype(character.tail_style, taurtype))
+		character.verbs += /mob/living/proc/weaveWebBindings
+
+	taurtype = /datum/sprite_accessory/tail/taur/fatdrake/andy
 	if(istype(character.tail_style, taurtype))
 		character.verbs += /mob/living/carbon/human/proc/special_select_tail
 
-	var/taurtypetwo = /datum/sprite_accessory/tail/taur/drake/andy
-	if(istype(character.tail_style, taurtypetwo))
+	taurtype = /datum/sprite_accessory/tail/taur/drake/andy
+	if(istype(character.tail_style, taurtype))
 		character.verbs += /mob/living/carbon/human/proc/special_select_tail
 
-	var/taurtypethree = /datum/sprite_accessory/tail/dragon/andy
-	if(istype(character.tail_style, taurtypethree))
+	taurtype = /datum/sprite_accessory/tail/dragon/andy
+	if(istype(character.tail_style, taurtype))
 		character.verbs += /mob/living/carbon/human/proc/special_select_tail
-	// END ARFS EDIT
+	//END ARFS EDIT
 
 	// +1 to account for the none-of-the-above possibility
 	SetUIValueRange(DNA_UI_EAR_STYLE,	ear_style + 1,     ear_styles_list.len  + 1,  1)
