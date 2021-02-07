@@ -250,6 +250,12 @@
 	path = /obj/item/weapon/card/id/residential/rm6
 	display_name = "RM6 keys"
 	description = "residential"
+	ckeywhitelist = list("yeayea130", "runs-wit-shadows", "broddichris")
+	character_name = list("Othello", "Cu-11-3y", "Keziah Hunter")
+
+/datum/gear/fluff/res_key_rm7
+	path = /obj/item/weapon/card/id/residential/rm7
+	display_name = "RM7 keys"
 	ckeywhitelist = list("disguiser")
 	character_name = list("Rak Woodrow")
 
