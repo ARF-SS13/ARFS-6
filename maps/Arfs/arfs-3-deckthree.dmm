@@ -1168,10 +1168,13 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/highsecurity,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/airlock/highsecurity{
+	req_access = list(17);
+	req_one_access = list(19)
+	},
 /turf/simulated/floor/tiled/dark,
 /area/ai/foyer)
 "cD" = (
@@ -1810,6 +1813,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/highsecurity{
+	name = "Telecommunications";
 	req_access = list(17);
 	req_one_access = list(19)
 	},
@@ -1836,8 +1840,7 @@
 	dir = 9;
 	tag = "icon-carpet_edges (NORTHWEST)"
 	},
-/obj/structure/table/woodentable,
-/obj/item/weapon/storage/box/donkpockets,
+/obj/machinery/message_server,
 /turf/simulated/floor/carpet,
 /area/tcomfoyer)
 "dQ" = (
@@ -2058,6 +2061,7 @@
 	pixel_y = -5
 	},
 /obj/effect/floor_decal/carpet,
+/obj/item/weapon/storage/box/donkpockets,
 /turf/simulated/floor/carpet,
 /area/tcomfoyer)
 "ek" = (
