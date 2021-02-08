@@ -377,8 +377,8 @@
 	path = /obj/item/weapon/card/id/residential/rs14
 	display_name = "RS14 keys"
 	description = "residential"
-	ckeywhitelist = list("phantomwolfzero","disguiser")
-	character_name = list("Kobalt Frevath", "Rak Woodrow","Tak Flourin")
+	ckeywhitelist = list("phantomwolfzero","disguiser", "thingpony")
+	character_name = list("Kobalt Frevath", "Rak Woodrow","Tak Flourin", "Dottie")
 
 //Mansion
 
