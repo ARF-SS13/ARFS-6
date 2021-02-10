@@ -529,6 +529,12 @@
 	icon_state = "leaf_tail"
 	do_colouration = 0
 
+/datum/sprite_accessory/tail/vap
+	name = "Vaporeon Tail"
+	desc = ""
+	icon = 'content_arfs/icons/mob/player/tails_arfs.dmi'
+	icon_state = "vap"
+
 ///datum/sprite_accessory/tail/cyberdragon
 //	name = "cyberdragon tail"
 //	desc = ""

@@ -250,7 +250,7 @@
 	path = /obj/item/weapon/card/id/residential/rm6
 	display_name = "RM6 keys"
 	description = "residential"
-	ckeywhitelist = list("yeayea130", "runs-wit-shadows", "broddichris")
+	ckeywhitelist = list("yeayea130", "runswitshadows", "broddichris")
 	character_name = list("Othello", "Cu-11-3y", "Keziah Hunter")
 
 /datum/gear/fluff/res_key_rm7
@@ -377,8 +377,8 @@
 	path = /obj/item/weapon/card/id/residential/rs14
 	display_name = "RS14 keys"
 	description = "residential"
-	ckeywhitelist = list("phantomwolfzero","disguiser")
-	character_name = list("Kobalt Frevath", "Rak Woodrow","Tak Flourin")
+	ckeywhitelist = list("phantomwolfzero","disguiser", "thingpony")
+	character_name = list("Kobalt Frevath", "Rak Woodrow","Tak Flourin", "Dottie")
 
 //Mansion
 
