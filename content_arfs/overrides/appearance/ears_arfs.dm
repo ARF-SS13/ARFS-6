@@ -271,3 +271,9 @@
 	icon_state = "leaf_ears"
 	do_colouration = 0
 	ckeys_allowed = list("alex123890")
+
+/datum/sprite_accessory/ears/vap
+	name = "Vaporeon"
+	desc = ""
+	icon = 'content_arfs/icons/mob/player/ears_arfs.dmi'
+	icon_state = "vap"
