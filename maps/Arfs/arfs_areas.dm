@@ -225,3 +225,9 @@
 	name= "\improper Upstairs Dining Hall"
 	icon_state = "cafeteria"
 	icon = 'icons/turf/areas.dmi'
+
+//Chapel areas
+/area/crew_quarters/instrument_room
+	name = "\improper Music Room"
+	icon_state = "gutslounge"
+	icon = 'maps/arfs/arfs_areas.dmi'
