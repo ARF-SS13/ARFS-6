@@ -231,3 +231,18 @@
 	name = "\improper Music Room"
 	icon_state = "gutslounge"
 	icon = 'maps/arfs/arfs_areas.dmi'
+
+/area/crew_quarters/wedding_chapel
+	name = "\improper Wedding Chapel"
+	icon_state = "gutslounge"
+	icon = 'maps/arfs/arfs_areas.dmi'
+
+/area/crew_quarters/wedding_chapel_changing_room
+	name = "\improper Wedding Chapel Changing Room"
+	icon_state = "gutslounge"
+	icon = 'maps/arfs/arfs_areas.dmi'
+
+/area/crew_quarters/fishing_area
+	name = "\improper Fishing Area"
+	icon_state = "gutslounge"
+	icon = 'maps/arfs/arfs_areas.dmi'
