@@ -701,3 +701,34 @@
 /obj/machinery/smartfridge/food/accept_check(var/obj/item/O as obj)
 	if(istype(O,/obj/item/weapon/reagent_containers/food) || istype(O,/obj/item/weapon/reagent_containers/food/snacks) || istype(O,/obj/item/weapon/reagent_containers/food/condiment))
 		return 1
+
+/obj/machinery/vending/wallmedarfs
+	name = "ArfMed++"
+	desc = "A wall-mounted version of the NanoMed, containing only vital first aid equipment."
+	description_fluff = "A compacted Bluespace Storage vendor"
+	icon_state = "wallmed"
+	layer = ABOVE_WINDOW_LAYER
+	density = 0 //It is wall-mounted, and thus, not dense. --Superxpdude
+	products = list(/obj/item/weapon/reagent_containers/glass/bottle/antitoxin = 4,
+					/obj/item/weapon/reagent_containers/glass/bottle/inaprovaline = 4,
+					/obj/item/weapon/reagent_containers/glass/bottle/stoxin = 4,
+					/obj/item/weapon/reagent_containers/glass/bottle/toxin = 4,
+					/obj/item/weapon/reagent_containers/syringe/antiviral = 4,
+					/obj/item/weapon/reagent_containers/syringe = 12,
+					/obj/item/device/healthanalyzer = 5,
+					/obj/item/weapon/reagent_containers/glass/beaker = 4,
+					/obj/item/weapon/reagent_containers/dropper = 2,
+					/obj/item/stack/medical/advanced/bruise_pack = 6,
+					/obj/item/stack/medical/advanced/ointment = 6,
+					/obj/item/stack/medical/splint = 4,
+					/obj/item/weapon/storage/pill_bottle/carbon = 2,
+					/obj/item/weapon/reagent_containers/pill/tox = 3,
+					/obj/item/weapon/reagent_containers/pill/stox = 4,
+					/obj/item/weapon/reagent_containers/pill/antitox = 6,
+					/obj/item/weapon/reagent_containers/hypospray/autoinjector/detox = 6,
+					/obj/item/weapon/reagent_containers/hypospray/autoinjector/rad =6,
+					/obj/item/weapon/reagent_containers/syringe/inaprovaline =6,
+					/obj/item/weapon/storage/pill_bottle/dylovene  =6)
+	req_log_access = access_cmo
+	has_logs = 1
+	can_rotate = 0
