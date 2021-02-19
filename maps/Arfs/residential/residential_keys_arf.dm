@@ -93,6 +93,14 @@
 	name = "RS14 residential key"
 	access = list(8014)
 
+/obj/item/weapon/card/id/residential/rs15
+	name = "RS15 residential key"
+	access = list(8015)
+
+/obj/item/weapon/card/id/residential/rs16
+	name = "RS16 residential key"
+	access = list(8016)
+
 /obj/item/weapon/card/id/residential/rm1
 	name = "RM1 residential key"
 	access = list(8101)
@@ -342,8 +350,8 @@
 	path = /obj/item/weapon/card/id/residential/rs10
 	display_name = "RS10 keys"
 	description = "residential"
-	ckeywhitelist = list("brimcon", "thingpony", "theilluminated1")
-	character_name = list("Scryden Sako", "Fleur Vert", "Ni'mira Allura")
+	ckeywhitelist = list("brimcon", "thingpony")
+	character_name = list("Scryden Sako", "Fleur Sako")
 
 /datum/gear/fluff/res_key_rs11
 	path = /obj/item/weapon/card/id/residential/rs11
@@ -380,6 +388,18 @@
 	ckeywhitelist = list("phantomwolfzero","disguiser", "thingpony")
 	character_name = list("Kobalt Frevath", "Rak Woodrow","Tak Flourin", "Dottie")
 
+/datum/gear/flulff/res_key_rs15
+	path = /obj/item/weapon/card/id/residential/rs15
+	display_name = "RS15 keys"
+	description  = "resdiential"
+	ckeywhitelist = list("theilluminated1")
+
+/datum/gear/fluff/res_key_rs16
+	path = /obj/item/weapon/card/id/residential/rs16
+	display_name = "RS16 keys"
+	description  = "residential"
+	ckeywhitelist = list("thingpony", "theilluminated1")
+	character_name = list ("Noel Winters")
 //Mansion
 
 /datum/gear/fluff/res_key_mansion
