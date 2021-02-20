@@ -388,7 +388,7 @@
 	ckeywhitelist = list("phantomwolfzero","disguiser", "thingpony")
 	character_name = list("Kobalt Frevath", "Rak Woodrow","Tak Flourin", "Dottie")
 
-/datum/gear/flulff/res_key_rs15
+/datum/gear/fluff/res_key_rs15
 	path = /obj/item/weapon/card/id/residential/rs15
 	display_name = "RS15 keys"
 	description  = "resdiential"
