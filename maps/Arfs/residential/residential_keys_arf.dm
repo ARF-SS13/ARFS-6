@@ -393,13 +393,14 @@
 	display_name = "RS15 keys"
 	description  = "resdiential"
 	ckeywhitelist = list("theilluminated1")
+	character_name = list("ARES V3 Mk2", "ARES V3 Mk3", "Dorothy Everglade", "Melanie Everglade")
 
 /datum/gear/fluff/res_key_rs16
 	path = /obj/item/weapon/card/id/residential/rs16
 	display_name = "RS16 keys"
 	description  = "residential"
 	ckeywhitelist = list("thingpony", "theilluminated1")
-	character_name = list ("Noel Winters")
+	character_name = list ("Noel Winters", "ARES V3 Mk2", "ARES V3 Mk3")
 //Mansion
 
 /datum/gear/fluff/res_key_mansion
