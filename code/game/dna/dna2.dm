@@ -207,11 +207,7 @@ var/global/list/datum/dna/gene/dna_genes[0]
 	src.species_traits = character.species.traits.Copy()
 
 	//ARFS EDIT
-	var/taurtype = /datum/sprite_accessory/tail/taur/spider
-	if(istype(character.tail_style, taurtype))
-		character.verbs += /mob/living/proc/weaveWebBindings
-
-	taurtype = /datum/sprite_accessory/tail/taur/fatdrake/andy
+	var/taurtype = /datum/sprite_accessory/tail/taur/fatdrake/andy
 	if(istype(character.tail_style, taurtype))
 		character.verbs += /mob/living/carbon/human/proc/special_select_tail
 
