@@ -150,6 +150,7 @@
 			"release_sound" = selected.release_sound,
 			// "messages" // TODO
 			"can_taste" = selected.can_taste,
+			"egg_type" = selected.egg_type,
 			"nutrition_percent" = selected.nutrition_percent,
 			"digest_brute" = selected.digest_brute,
 			"digest_burn" = selected.digest_burn,
@@ -164,6 +165,7 @@
 			if(selected.mode_flags & selected.mode_flag_list[flag_name])
 				data["selected"]["addons"].Add(flag_name)
 
+		data["selected"]["egg_type"] = selected.egg_type
 		data["selected"]["contaminates"] = selected.contaminates
 		data["selected"]["contaminate_flavor"] = null
 		data["selected"]["contaminate_color"] = null
@@ -236,7 +238,7 @@
 		// Host is inside someone else, and is trying to interact with something else inside that person.
 		if("pick_from_inside")
 			return pick_from_inside(usr, params)
-			
+
 		// Host is trying to interact with something in host's belly.
 		if("pick_from_outside")
 			return pick_from_outside(usr, params)
@@ -267,7 +269,7 @@
 			host.vore_selected = NB
 			unsaved_changes = TRUE
 			return TRUE
-		
+
 		if("bellypick")
 			host.vore_selected = locate(params["bellypick"])
 			return TRUE
@@ -403,11 +405,11 @@
 
 	if(!(target in OB))
 		return TRUE // Aren't here anymore, need to update menu
-	
+
 	var/intent = "Examine"
 	if(isliving(target))
 		intent = alert("What do you want to do to them?","Query","Examine","Help Out","Devour")
-	
+
 	else if(istype(target, /obj/item))
 		intent = alert("What do you want to do to that?","Query","Examine","Use Hand")
 
@@ -505,7 +507,7 @@
 					host.vore_selected.transfer_contents(target, choice, 1)
 				return TRUE
 		return
-	
+
 	var/atom/movable/target = locate(params["pick"])
 	if(!(target in host.vore_selected))
 		return TRUE // Not in our X anymore, update UI
@@ -602,7 +604,7 @@
 			if(!toggle_addon)
 				return FALSE
 			host.vore_selected.mode_flags ^= host.vore_selected.mode_flag_list[toggle_addon]
-			host.vore_selected.items_preserved.Cut() //Re-evaltuate all items in belly on 
+			host.vore_selected.items_preserved.Cut() //Re-evaltuate all items in belly on
 			. = TRUE
 		if("b_item_mode")
 			var/list/menu_list = host.vore_selected.item_digest_modes.Copy()
@@ -632,7 +634,14 @@
 			host.vore_selected.contamination_color = new_color
 			host.vore_selected.items_preserved.Cut() //To re-contaminate for new color
 			. = TRUE
-		if("b_desc")		
+		if("b_egg_type")
+			var/list/menu_list = global_vore_egg_types.Copy()
+			var/new_egg_type = input("Choose Egg Type (currently [host.vore_selected.egg_type])") as null|anything in menu_list
+			if(!new_egg_type)
+				return FALSE
+			host.vore_selected.egg_type = new_egg_type
+			. = TRUE
+		if("b_desc")
 			var/new_desc = html_encode(input(usr,"Belly Description ([BELLIES_DESC_MAX] char limit):","New Description",host.vore_selected.desc) as message|null)
 
 			if(new_desc)
@@ -865,6 +874,6 @@
 			qdel(host.vore_selected)
 			host.vore_selected = host.vore_organs[1]
 			. = TRUE
-	
+
 	if(.)
 		unsaved_changes = TRUE
