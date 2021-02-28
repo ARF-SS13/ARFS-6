@@ -1,13 +1,12 @@
 /datum/gear/cagsewhite
 	display_name = "Cards Against The Galaxy: Special Edition (white deck)"
 	path = /obj/item/weapon/deck/cagse
-	description = "The ever-popular Cards Against The Galaxy: Special Edition word game. Warning: may include traces of broken fourth wall and obscenity. This is the white deck."
+	description = "The ever-popular Cards Against The Galaxy: Special Edition word game. Warning: may include traces of broken fourth wall and degeneracy. This is the white deck."
 
 /datum/gear/cagseblack
 	display_name = "Cards Against The Galaxy: Special Edition (black deck)"
 	path = /obj/item/weapon/deck/cagse/black
-	description = "The ever-popular Cards Against The Galaxy: Special Edition word game. Warning: may include traces of broken fourth wall and obscenity. This is the black deck."
-
+	description = "The ever-popular Cards Against The Galaxy: Special Edition word game. Warning: may include traces of broken fourth wall and degeneracy. This is the black deck."
 
 // This is a parody of Cards Against Humanity (https://en.wikipedia.org/wiki/Cards_Against_Humanity)
 // which is licensed under CC BY-NC-SA 2.0, the full text of which can be found at the following URL:
@@ -104,7 +103,7 @@
 	"What's worse than giant spiders? _____. That's what.",
 	"The newest rule for dare dice means that the second lowest roller has to wear nothing but _____.",
 	"I thought the bar was for _____. Turns out it's actually for _____.",
-	"Who stole the captain's spare ID?"
+	"Who stole the captain's spare ID?",
 
 
 	//Official cards below here
@@ -316,7 +315,7 @@
 	"Clown cock",
 	"A mime reporting a rape to security",
 	"The librarian hosting another sex cult in the game room",
-	"Not picking up your trash after missing the bin"
+	"Not picking up your trash after missing the bin",
 	"An empty bread tube",
 	"Eating the whole buffet in one sitting",
 	"Looking at porn at work",
@@ -327,7 +326,7 @@
 	"A girl with a penis",
 	"A cyborg with a knot module",
 	"A security officer who only arrests bald humans",
-	"A shaft miner who is a better at security than mining"
+	"A shaft miner who is a better at security than mining",
 
 	//And everything beyond this are cards from the original CAH that fit well enough with the other cards
 

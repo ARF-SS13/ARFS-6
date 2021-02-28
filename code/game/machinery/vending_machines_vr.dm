@@ -1063,6 +1063,8 @@
 					/obj/item/weapon/deck/holder = 5,
 					/obj/item/weapon/deck/cah = 5,
 					/obj/item/weapon/deck/cah/black = 5,
+					/obj/item/weapon/deck/cagse = 5,
+					/obj/item/weapon/deck/cagse/black = 5,
 					/obj/item/weapon/deck/tarot = 5,
 					/obj/item/weapon/deck/cards = 5,
 					/obj/item/weapon/pack/spaceball = 10,
