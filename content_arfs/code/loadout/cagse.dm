@@ -99,7 +99,14 @@
 	"Due to an operating procedure misunderstanding, security officers have been using _____ to process their prisoners.",
 	"The roboticist keeps building cyborgs to satisfy his _____ fetish, instead of building mechs.",
 	"Dare dice always ends with _____.",
+	"_____ caused the supermatter crystal to go critical.",
+	"ALERT: _____ INCOMING!",
+	"What's worse than giant spiders? _____. That's what.",
 	"The newest rule for dare dice means that the second lowest roller has to wear nothing but _____.",
+	"I thought the bar was for _____. Turns out it's actually for _____.",
+	"Who stole the captain's spare ID?"
+
+
 	//Official cards below here
 	"(Pick 2) Before _____, all we had was_____.",
 	"(Pick 2) That's right I killed _____. How, you ask? _____.",
@@ -108,9 +115,9 @@
 	"What has been making life difficult at the nudist colony?",
 	"What's that sound?",
 	"What's the new fad diet?",
-	"(Pick 2) Listen, son. If you want to get involved with _____, I won�t stop you. Just steer clear of _____.",
+	"(Pick 2) Listen, son. If you want to get involved with _____, I won't stop you. Just steer clear of _____.",
 	"(Pick 2) Having problems with _____? Try _____!",
-	"(Pick 2) After months of practice with _____, I think I�m finally ready for _____.",
+	"(Pick 2) After months of practice with _____, I think I'm finally ready for _____.",
 	"Finally! A service that delivers _____ right to your door."
 
 )
@@ -257,10 +264,9 @@
 	"Steamy bareback sex",
 	"Anal beads",
 	"Being kidnapped after someone slips neurotoxin into your drink",
-	"A woman who surprisingly doesn�t have a penis",
-	"A man who surprisingly doesn�t have a penis",
+	"A woman who surprisingly doesn't have a penis",
+	"A man who surprisingly doesn't have a penis",
 	"Literally xenomorphs",
-	"A blowjob",
 	"Actually using a condom",
 	"Metroids again",
 	"Driving cargo tugs around like race cars",
@@ -287,10 +293,10 @@
 	"A bartender",
 	"An EMT",
 	"A clown",
-	"A person AI",
+	"A personal AI",
 	"The station AI",
-	"Anatomically correct",
-	"Toe beans",
+	"Anatomically correct genitals",
+	"Beans",
 	"Paws",
 	"Slow digestion",
 	"Being nude without a nudity permit",
@@ -298,9 +304,30 @@
 	"Falling into someone's drink",
 	"Being eaten",
 	"Forgetting your backup implant",
-	"Hermhub",
+	"HermHub",
 	"Ridiculous PDA ringtones",
-	"OnlyBeans"
+	"OnlyBeans",
+	"Meteors",
+	"Stuffing half-eaten snacks back into a vending machine",
+	"A 20 Thaler blowjob",
+	"Digitgrade legs with human feet",
+	"A human taur",
+	"Not paying rent for a year",
+	"Clown cock",
+	"A mime reporting a rape to security",
+	"The librarian hosting another sex cult in the game room",
+	"Not picking up your trash after missing the bin"
+	"An empty bread tube",
+	"Eating the whole buffet in one sitting",
+	"Looking at porn at work",
+	"Posting memes on the exonet",
+	"Actually joining a relay chat room",
+	"A bartender without pants",
+	"Another wolf",
+	"A girl with a penis",
+	"A cyborg with a knot module",
+	"A security officer who only arrests bald humans",
+	"A shaft miner who is a better at security than mining"
 
 	//And everything beyond this are cards from the original CAH that fit well enough with the other cards
 
