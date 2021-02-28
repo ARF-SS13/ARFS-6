@@ -91,8 +91,8 @@
 
 //teleporter
 /obj/effect/step_trigger/teleporter/to_underdark
-	icon = 'icons/obj/stairs.dmi'
-	icon_state = "stairs"
+	icon = 'icons/obj/structures/multiz.dmi'
+	icon_state = "stair_l"
 	invisibility = 0
 	layer = 3.2
 
@@ -106,8 +106,8 @@
 			teleport_z = Z.z
 
 /obj/effect/step_trigger/teleporter/from_underdark
-	icon = 'icons/obj/stairs.dmi'
-	icon_state = "stairs"
+	icon = 'icons/obj/structures/multiz.dmi'
+	icon_state = "stair_u"
 	invisibility = 0
 	layer = 3.2
 
