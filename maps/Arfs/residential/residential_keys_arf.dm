@@ -144,9 +144,14 @@
 /obj/item/weapon/card/id/residential/rm11
 	name = "RM11 residential key"
 	access = list(8111)
+
 /obj/item/weapon/card/id/residential/rm12
 	name = "RM12 residential Key"
 	access = list(8112)
+
+/obj/item/weapon/card/id/residential/rm13
+	name = "RM13 residential Key"
+	access = list(8113)
 
 /obj/item/weapon/card/id/residential/mansion
 	name = "Mansion residential key"
@@ -294,6 +299,13 @@
 	description = "residential"
 	ckeywhitelist = list("mrkaktuspl")
 	character_name = list("Alexandra Bowie")
+
+/datum/gear/fluff/res_key_rm13
+	path = /obj/item/weapon/card/id/residential/rm13
+	display_name = "RM13 keys"
+	description = "residential"
+	ckeywhitelist = list("talkingcactus")
+	character_name = list("Nicole Cherry")
 
 // SMALL KEYS
 

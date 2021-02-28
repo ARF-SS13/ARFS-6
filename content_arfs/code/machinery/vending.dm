@@ -732,3 +732,46 @@
 	req_log_access = access_cmo
 	has_logs = 1
 	can_rotate = 0
+
+/obj/machinery/vending/food/autochef
+	name = "AutoChef"
+	desc = "A kitchen appliance which, when supplied with reagent capsules, can fabricate almost any pre-programmed foods the user desires. Can also dispense some kitchenware."
+	icon_state = "hotfood"
+	products = list(/obj/item/weapon/tray = 8,
+					/obj/item/weapon/material/kitchen/utensil/fork = 12,
+					/obj/item/weapon/material/knife/plastic = 12,
+					/obj/item/weapon/material/kitchen/utensil/spoon = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/benedict = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/slice/sushi/filled/filled = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/bagelplain = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/bageleverything = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/donkpocket = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/donut = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/baguette = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/generalschicken = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/lomein = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/macncheese = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/omelette = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/lobstercooked = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/mushroomsoup = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/taco = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/meatsteak = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/cheeseburger = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/grilledcheese = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/hotdog = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/loadedbakedpotato = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/omelette = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/pastatomato = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/tofuburger = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/mushroompizza = 4,
+					/obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/vegetablepizza = 4,
+					/obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/margherita = 4,
+					/obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/meatpizza = 4,
+					/obj/item/weapon/reagent_containers/food/snacks/waffles = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/muffin = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/appletart = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/sliceable/applecake = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/sliceable/bananabread = 12,
+					)
+	contraband = list(/obj/item/weapon/reagent_containers/food/snacks/mysterysoup = 10)
+	vend_delay = 15
