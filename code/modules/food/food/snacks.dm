@@ -6277,8 +6277,8 @@
 	icon_state = "gigapuddi"
 	trash = /obj/item/trash/plate
 
-/obj/item/weapon/reagent_containers/food/snacks/gigapuddi/New()
-	..()
+/obj/item/weapon/reagent_containers/food/snacks/gigapuddi/Initialize()
+	. = ..()
 	reagents.add_reagent("nutriment", 20)
 	bitesize = 2
 
@@ -6301,8 +6301,8 @@
 	w_class = 2
 	trash = /obj/item/trash/tray
 
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/buchedenoel/New()
-	..()
+/obj/item/weapon/reagent_containers/food/snacks/sliceable/buchedenoel/Initialize()
+	. = ..()
 	reagents.add_reagent("nutriment", 20)
 	reagents.add_reagent("sugar", 9)
 	reagents.add_reagent("coco", 5)
@@ -6326,8 +6326,8 @@
 	w_class = 2
 	trash = /obj/item/trash/tray
 
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/turkey/New()
-	..()
+/obj/item/weapon/reagent_containers/food/snacks/sliceable/turkey/Initialize()
+	. = ..()
 	reagents.add_reagent("nutriment", 20)
 	reagents.add_reagent("blackpepper", 1)
 	reagents.add_reagent("sodiumchloride", 1)
@@ -6351,8 +6351,8 @@
 	icon_state = "suppermatter"
 	w_class = 2
 
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/suppermatter/New()
-	..()
+/obj/item/weapon/reagent_containers/food/snacks/sliceable/suppermatter/Initialize()
+	. = ..()
 	reagents.add_reagent("nutriment", 48)
 	bitesize = 12
 	set_light(1.4,2,"#FFFF00")
@@ -6365,8 +6365,8 @@
 	bitesize = 3
 	trash = null
 
-/obj/item/weapon/reagent_containers/food/snacks/suppermattershard/New()
-	..()
+/obj/item/weapon/reagent_containers/food/snacks/suppermattershard/Initialize()
+	. = ..()
 	set_light(1.4,1.4,"#FFFF00")
 
 /obj/item/weapon/reagent_containers/food/snacks/sliceable/excitingsuppermatter
@@ -6378,8 +6378,8 @@
 	icon_state = "excitingsuppermatter"
 	w_class = 2
 
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/excitingsuppermatter/New()
-	..()
+/obj/item/weapon/reagent_containers/food/snacks/sliceable/excitingsuppermatter/Initialize()
+	. = ..()
 	reagents.add_reagent("nutriment", 60)
 	bitesize = 12
 	set_light(1.4,2,"#FF0000")
@@ -6392,8 +6392,8 @@
 	bitesize = 4
 	trash = null
 
-/obj/item/weapon/reagent_containers/food/snacks/excitingsuppermattershard/New()
-	..()
+/obj/item/weapon/reagent_containers/food/snacks/excitingsuppermattershard/Initialize()
+	. = ..()
 	set_light(1.4,1.4,"#FF0000")
 
 /obj/item/weapon/reagent_containers/food/snacks/omurice
@@ -6403,8 +6403,8 @@
 	icon_state = "omurice"
 	trash = /obj/item/trash/plate
 
-/obj/item/weapon/reagent_containers/food/snacks/omurice/New()
-	..()
+/obj/item/weapon/reagent_containers/food/snacks/omurice/Initialize()
+	. = ..()
 	reagents.add_reagent("nutriment", 8)
 	bitesize = 1
 
@@ -6423,7 +6423,7 @@
 	icon_state = "cinnamonbun"
 	trash = null
 
-/obj/item/weapon/reagent_containers/food/snacks/cinnamonbun/New()
-	..()
+/obj/item/weapon/reagent_containers/food/snacks/cinnamonbun/Initialize()
+	. = ..()
 	reagents.add_reagent("nutriment", 8)
 	bitesize = 1
