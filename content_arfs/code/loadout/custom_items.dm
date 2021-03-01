@@ -26,7 +26,7 @@
 	display_name = "Curious Cookie"
 	description = "A very curious cookie. Do not eat"
 	ckeywhitelist = list("andyman105", "dameonowen")
-	character_name = list("Amber Owen")
+	character_name = list("Amber Owen", "Amber")
 
 // /datum/gear/fluff/dameon_3
 //	path = /obj/item/device/communicator/andy
