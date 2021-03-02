@@ -1,7 +1,8 @@
 var/list/playerpowers = list(/datum/power/changeling/arm_blade, /datum/power/changeling/darksight, /datum/power/changeling/extractdnaplayer, /datum/power/changeling/metaextractdna, \
 						     /datum/power/changeling/player_transform, /datum/power/changeling/fleshmend, /datum/power/changeling/panacea, /datum/power/changeling/rapid_regen, \
 						     /datum/power/changeling/endoarmor, /datum/power/changeling/MetaEngorgedGlands, /datum/power/changeling/self_respiration, /datum/power/changeling/space_suit, \
-						     /datum/power/changeling/visible_camouflage, /datum/power/changeling/recursive_enhancement, /datum/power/changeling/metafleshmend)
+						     /datum/power/changeling/visible_camouflage, /datum/power/changeling/recursive_enhancement, /datum/power/changeling/metafleshmend, \
+							 /datum/power/changeling/size_change)
 var/list/datum/power/changeling/playerpowerinstances = list()
 
 
@@ -100,6 +101,29 @@ var/list/datum/power/changeling/playerpowerinstances = list()
 	feedback_add_details("changeling_powers","ED")
 	return 1
 
+/datum/power/changeling/size_change
+	name = "Change Size"
+	desc = "We can grow or shrink at will."
+	ability_icon_state = "ling_recursive_enhancement"
+	genomecost = 100
+	verbpath = /mob/proc/changeling_size_change
+
+/mob/proc/changeling_size_change()
+	set category = "Changeling"
+	set name = "Change Size (10)"
+
+	var/datum/changeling/changeling = changeling_power(10,1,0)
+	if(!changeling)	return
+
+	var/new_size = input("Input the desired size (25-300%)", "Set Size", 300) as num
+	if (!ISINRANGE(new_size,25,300))
+		to_chat(src,"<span class='notice'>You lack the ability to become this size.</span>")
+		return
+	else
+		var/mob/living/carbon/human/H = src
+		H.resize(new_size/100)
+		to_chat(src,"<span class='notice'>You are now [new_size]% the size of a normal individual.</span>")
+		changeling.chem_charges -= 10
 
 /datum/power/changeling/player_transform
 	name = "Custom Transform"
