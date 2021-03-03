@@ -15739,6 +15739,8 @@
 "aFO" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/hand_labeler,
+/obj/item/weapon/reagent_containers/food/drinks/flask/vacuumflask,
+/obj/item/weapon/reagent_containers/food/drinks/flask/barflask,
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
 "aFP" = (
@@ -15773,13 +15775,11 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
 "aFT" = (
-/obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/drinks/flask/barflask,
-/obj/item/weapon/reagent_containers/food/drinks/flask/vacuumflask,
 /obj/item/weapon/storage/secure/safe{
 	pixel_x = 5;
 	pixel_y = 23
 	},
+/obj/structure/closet/gmcloset,
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
 "aFU" = (
@@ -36385,7 +36385,10 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/fore)
 "bwk" = (
-/mob/living/carbon/human/monkey/punpun,
+/mob/living/simple_mob/animal/passive/pokemon/fennekin{
+	desc = "A female Fennekin! The bartender's fluffy and warm pet..";
+	name = "Ember"
+	},
 /turf/simulated/floor/lino,
 /area/crew_quarters/bar)
 "bwl" = (
@@ -37622,7 +37625,7 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
 	},
-/obj/machinery/sleeper{
+/obj/machinery/bodyscanner{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
@@ -94558,7 +94561,7 @@ aFV
 bwq
 aHu
 aHS
-bwq
+bwk
 csg
 bwq
 csg
@@ -94817,7 +94820,7 @@ aHu
 bwq
 aIq
 aIT
-bwk
+bwq
 bwp
 bwq
 aQG
