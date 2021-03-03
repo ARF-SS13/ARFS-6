@@ -121,7 +121,7 @@ var/list/datum/power/changeling/playerpowerinstances = list()
 		return
 	else
 		var/mob/living/carbon/human/H = src
-		H.resize(new_size/100)
+		H.resize(new_size/100, FALSE)
 		to_chat(src,"<span class='notice'>You are now [new_size]% the size of a normal individual.</span>")
 		changeling.chem_charges -= 10
 
