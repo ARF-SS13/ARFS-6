@@ -12219,10 +12219,9 @@
 /area/residential/ship_bay)
 "aCJ" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock{
-	id_tag = "rm10_main";
+/obj/machinery/door/airlock/ckey{
 	name = "RM10";
-	req_access = list(8110)
+	req_one_ckey = list("tk420634")
 	},
 /turf/simulated/floor/tiled/steel,
 /area/residential/corridors)
@@ -21330,11 +21329,6 @@
 /turf/simulated/floor/tiled,
 /area/residential/mroom7)
 "aWD" = (
-/obj/machinery/door/airlock{
-	id_tag = "rm10_main";
-	name = "RM10";
-	req_access = list(8110)
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -21347,6 +21341,10 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/ckey{
+	name = "RM10";
+	req_one_ckey = list("tk420634")
+	},
 /turf/simulated/floor/tiled/steel,
 /area/residential/corridors)
 "aWE" = (
