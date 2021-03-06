@@ -115,13 +115,13 @@ var/list/datum/power/changeling/playerpowerinstances = list()
 	var/datum/changeling/changeling = changeling_power(10,1,0)
 	if(!changeling)	return
 
-	var/new_size = input("Input the desired size (25-300%)", "Set Size", 300) as num
-	if (!ISINRANGE(new_size,25,300))
+	var/new_size = input("Input the desired size", "Set Size", 300) as num
+	if (new_size < 1)
 		to_chat(src,"<span class='notice'>You lack the ability to become this size.</span>")
 		return
 	else
 		var/mob/living/carbon/human/H = src
-		H.resize(new_size/100, FALSE)
+		H.resize(new_size/100, FALSE, FALSE)
 		to_chat(src,"<span class='notice'>You are now [new_size]% the size of a normal individual.</span>")
 		changeling.chem_charges -= 10
 
