@@ -12160,6 +12160,11 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/mob/living/simple_mob/vore/aggressive/dragon{
+	desc = "Oh my! The lizard grew up!";
+	faction = "neutral";
+	name = "Licks-The-Dirt"
+	},
 /turf/simulated/floor/tiled,
 /area/janitor)
 "azl" = (
@@ -40390,28 +40395,12 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "bQW" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/mob/living/simple_mob/arfs/dragon/virgo3b{
-	desc = "Woah! The lizard grew up!";
-	dir = 4;
-	faction = "neutral";
-	name = "Licks-The-Dirt"
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/light{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/janitor)
+/area/quartermaster/warehouse)
 "bQZ" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -40440,12 +40429,14 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "bRb" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/light{
-	dir = 1
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled,
-/area/quartermaster/warehouse)
+/obj/structure/loot_pile/maint/technical,
+/turf/simulated/floor/plating,
+/area/maintenance/medbay)
 "bRc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -43304,6 +43295,13 @@
 /obj/effect/floor_decal/corner/green{
 	dir = 10
 	},
+/turf/simulated/floor/tiled/white,
+/area/medical/virology)
+"fvV" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "fww" = (
@@ -46276,6 +46274,10 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/break_room)
+"juQ" = (
+/obj/structure/bed/chair/office/light,
+/turf/simulated/floor/tiled/white,
+/area/medical/virology)
 "jvs" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -52359,10 +52361,6 @@
 /obj/item/weapon/rig/ce/equipped,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/chief)
-"rHS" = (
-/obj/structure/bed/chair/office/light,
-/turf/simulated/floor/tiled/white,
-/area/medical/virology)
 "rIX" = (
 /obj/machinery/light{
 	dir = 4
@@ -54873,13 +54871,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering)
-"uUG" = (
-/obj/effect/floor_decal/corner/green{
-	dir = 9
-	},
-/obj/machinery/vending/medical,
-/turf/simulated/floor/tiled/white,
-/area/medical/virology)
 "uUW" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -56173,27 +56164,18 @@
 /turf/simulated/wall,
 /area/hallway/primary/central_two)
 "wWG" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
+/obj/effect/floor_decal/corner/green{
+	dir = 9
 	},
-/obj/structure/loot_pile/maint/technical,
-/turf/simulated/floor/plating,
-/area/maintenance/medbay)
+/obj/machinery/vending/medical,
+/turf/simulated/floor/tiled/white,
+/area/medical/virology)
 "wXY" = (
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 10
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/break_room)
-"wZJ" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/tiled/white,
-/area/medical/virology)
 "xam" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/structure/cable/green{
@@ -82620,7 +82602,7 @@ bIY
 bvg
 tEn
 bxt
-uUG
+wWG
 qSc
 bwX
 fvp
@@ -82879,7 +82861,7 @@ tEn
 bwY
 bwY
 bQV
-rHS
+juQ
 bRj
 bQA
 bcJ
@@ -83135,7 +83117,7 @@ bvp
 bwZ
 ciF
 ciF
-wZJ
+fvV
 kED
 bRk
 bQA
@@ -84368,7 +84350,7 @@ ayb
 ayb
 azB
 ayb
-bRb
+bQW
 auI
 bts
 bRM
@@ -84669,7 +84651,7 @@ aLI
 aaa
 aaa
 bcF
-wWG
+bRb
 bcJ
 bcJ
 bQA
@@ -85697,7 +85679,7 @@ aLJ
 sWm
 sWm
 bcF
-wWG
+bRb
 bcJ
 bcJ
 bQA
@@ -87707,7 +87689,7 @@ mNM
 axN
 ayc
 ayF
-bQW
+azm
 azO
 ayc
 bSX
