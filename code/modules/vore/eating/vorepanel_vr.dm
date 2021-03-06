@@ -57,9 +57,9 @@
 	return host
 
 // Note, in order to allow others to look at others vore panels, this state would need
-// to be changed to tgui_always_state, and a custom tgui_status() implemented for true "rights" management.
+// to be modified.
 /datum/vore_look/tgui_state(mob/user)
-	return GLOB.tgui_self_state
+	return GLOB.tgui_vorepanel_state
 
 /datum/vore_look/var/static/list/nom_icons
 /datum/vore_look/proc/cached_nom_icon(atom/target)
@@ -653,7 +653,7 @@
 				. = TRUE
 		if("b_msgs")
 			alert(user,"Setting abusive or deceptive messages will result in a ban. Consider this your warning. Max 150 characters per message, max 10 messages per topic.","Really, don't.")
-			var/help = " Press enter twice to separate messages. '%pred' will be replaced with your name. '%prey' will be replaced with the prey's name. '%belly' will be replaced with your belly's name."
+			var/help = " Press enter twice to separate messages. '%pred' will be replaced with your name. '%prey' will be replaced with the prey's name. '%belly' will be replaced with your belly's name. '%count' will be replaced with the number of anything in your belly. '%countprey' will be replaced with the number of living prey in your belly."
 			switch(params["msgtype"])
 				if("dmp")
 					var/new_message = input(user,"These are sent to prey when they expire. Write them in 2nd person ('you feel X'). Avoid using %prey in this type."+help,"Digest Message (to prey)",host.vore_selected.get_messages("dmp")) as message
