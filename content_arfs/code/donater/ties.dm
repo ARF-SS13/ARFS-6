@@ -54,7 +54,7 @@ var/list/watch_player_sizes_list = list(
 					return
 				else
 					cooldown = 1
-					H.resize(watch_player_sizes_list[size_name], FALSE)
+					H.resize(watch_player_sizes_list[size_name], FALSE, FALSE)
 					user.visible_message("<span class='notice'>[user] begins to change size!</span>", "<span class='notice'>You begin to change size! You are now [size_name].</span>")
 					sleep(cooldown_timer)
 					cooldown = 0
