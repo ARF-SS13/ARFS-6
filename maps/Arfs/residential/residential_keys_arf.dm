@@ -153,6 +153,13 @@
 	name = "RM13 residential Key"
 	access = list(8113)
 
+/obj/item/weapon/card/id/residential/rm42
+	name = "RM42 residential Key"
+	desc = "A special keycard for residentals RM42 Laria Darlos is written on it."
+	icon = 'icons/obj/card_vr.dmi'
+	icon_state = "itg_purple"
+	access = list(8142)
+
 /obj/item/weapon/card/id/residential/mansion
 	name = "Mansion residential key"
 	access = list(8100)
@@ -306,6 +313,13 @@
 	description = "residential"
 	ckeywhitelist = list("talkingcactus")
 	character_name = list("Nicole Cherry")
+
+/datum/gear/fluff/res_key_rm42
+	path = /obj/item/weapon/card/id/residential/rm42
+	display_name = "RM42 keycard (Laria Darlos)"
+	description = "A special keycard for residential Room M42"
+	ckeywhitelist = list("laria", "tinncatt")
+	character_name = list("Laria Darlos", "Cylus Typhon")
 
 // SMALL KEYS
 
