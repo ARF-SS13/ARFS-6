@@ -153,12 +153,25 @@
 	name = "RM13 residential Key"
 	access = list(8113)
 
-/obj/item/weapon/card/id/residential/rm42
-	name = "RM42 residential Key"
+/obj/item/weapon/card/id/residential/rm42/laria
+	name = "Laria's Key"
 	desc = "A special keycard for residentals RM42 Laria Darlos is written on it."
 	icon = 'icons/obj/card_vr.dmi'
 	icon_state = "itg_purple"
 	access = list(8142)
+	registered_name = "Laria Darlos"
+	age = "35"
+	blood_type = "0-"
+	gender = "plural"
+
+/obj/item/weapon/card/id/residential/rm42/cylus
+	name = "Cylus's Key"
+	desc = "A special keycard for residentals RM42 Cylus Typhon is written on it."
+	registered_name = "Cylus Typhon"
+	age = "32"
+	blood_type = "AB+"
+	icon_state = "itg_white"
+	gender = "male"
 
 /obj/item/weapon/card/id/residential/mansion
 	name = "Mansion residential key"
@@ -315,11 +328,18 @@
 	character_name = list("Nicole Cherry")
 
 /datum/gear/fluff/res_key_rm42
-	path = /obj/item/weapon/card/id/residential/rm42
+	path = /obj/item/weapon/card/id/residential/rm42/laria
 	display_name = "RM42 keycard (Laria Darlos)"
 	description = "A special keycard for residential Room M42"
-	ckeywhitelist = list("laria", "tinncatt")
-	character_name = list("Laria Darlos", "Cylus Typhon")
+	ckeywhitelist = list("laria")
+	character_name = list("Laria Darlos")
+
+/datum/gear/fluff/res_key_rm42
+	path = /obj/item/weapon/card/id/residential/rm42/cylus
+	display_name = "RM42 keycard (Cylus Typhon)"
+	description = "A special keycard for residential Room M42"
+	ckeywhitelist = list("tinncatt")
+	character_name = list("Cylus Typhon")
 
 // SMALL KEYS
 
