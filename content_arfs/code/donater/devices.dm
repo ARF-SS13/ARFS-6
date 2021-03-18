@@ -161,13 +161,13 @@
 
 	activate()
 		if((. = ..()))
-			var/new_size = input("Put the desired size (25-300%)", "Set Size", 300) as num
+			var/new_size = input("Put the desired size", "Set Size", 300) as num
 
-			if (!ISINRANGE(new_size,25,300))
+			if (new_size < 1)
 				to_chat(nif.human,"<span class='notice'>The safety features of the NIF Program prevent you from choosing this size.</span>")
 				return
 			else
-				nif.human.resize(new_size/100)
+				nif.human.resize(new_size/100, FALSE, FALSE)
 				to_chat(nif.human,"<span class='notice'>You set the size to [new_size]%</span>")
 
 			nif.human.visible_message("<span class='warning'>Swirling grey mist envelops [nif.human] as they change size!</span>","<span class='notice'>Swirling streams of nanites wrap around you as you change size!</span>")
@@ -232,8 +232,8 @@
 	set category = "Object"
 	set src in view(1)
 
-	var/size_select = input("Put the desired size (25-300%)", "Set Size", size_set_to * 100) as num
-	if(size_select > 300 || size_select < 25)
+	var/size_select = input("Put the desired size", "Set Size", size_set_to * 100) as num
+	if(size_select < 1)
 		to_chat(usr, "<span class='notice'>Invalid size.</span>")
 		return
 	size_set_to = (size_select/100)
@@ -258,7 +258,7 @@
 /obj/item/projectile/beam/andysizelaser/on_hit(var/atom/target)
 	var/mob/living/M = target
 	if(istype(M))
-		M.resize(set_size)
+		M.resize(set_size, FALSE, FALSE)
 		to_chat(M, "<font color='blue'> The beam fires into your body, changing your size!</font>")
 		M.updateicon()
 		return
@@ -272,3 +272,11 @@
 
 /obj/item/projectile/beam/andysizelaser/extremegrow
 	set_size = 3.0 //300% of current size
+
+/obj/item/projectile/beam/andysizelaser/massivegrow
+	set_size = 4.0 //400% of current size
+
+/obj/item/weapon/gun/energy/gun/fluff/dominator/andy
+	name = "The Dominator"
+	desc = "A heavily modified MWPSB Dominator, with a self-recharging power cell. The weapon can only be fired by the owner and is alert-level locked."
+	cell_type = /obj/item/weapon/cell/device/weapon/recharge/alien

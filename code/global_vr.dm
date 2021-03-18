@@ -13,7 +13,9 @@ var/list/shell_module_types = list(
 	"Surgeon", "Medihound", "Janitor", "Janihound", "Research", "Sci-borg", "Security", "K9"
 )
 
+var/list/awayabductors = list() // List of scatter landmarks for Abductors in Gateways
 var/list/eventdestinations = list() // List of scatter landmarks for VOREStation event portals
+var/list/eventabductors = list() // List of scatter landmarks for VOREStation abductor portals
 
 var/global/list/acceptable_fruit_types= list(
 											"ambrosia",

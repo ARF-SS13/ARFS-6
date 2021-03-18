@@ -17,3 +17,10 @@
 			to_chat(L, "<span class='warning'>You feel an overwhelming wave of warmth from entering \the [src]!</span>")
 	AM.water_act(5)
 	..()
+
+
+
+/turf/simulated/floor/ramptop
+	name = "stairs"
+	icon = 'content_arfs/icons/misc/ramp.dmi'
+	icon_state = "ramptop"

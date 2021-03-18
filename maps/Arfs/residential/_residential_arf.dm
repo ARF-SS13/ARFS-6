@@ -198,16 +198,57 @@ var/global/list/latejoin_residential = list()
 	name = "\improper Residential - Room 12"
 	icon_state = "room12"
 
+/area/residential/mroom12
+	name = "\improper Residential - Medium Room 12"
+/area/residential/mroom12_bathroom
+	name = "\improper Residential - Medium Room 12 Bathroom"
+/area/residential/mroom12_office
+	name = "\improper Residential - Medium Room 12 Office"
+/area/residential/mroom12_bedroom
+	name = "\improper Residential - Medium Room 12 Bedroom"
+/area/residential/mroom12_shrine
+	name = "\improper Residential - Medium Room 12 Shrine"
+/area/residential/mroom12_kitchen
+	name = "\improper Residential - Medium Room 12 Kitchen"
+/area/residential/mroom12_longue
+	name = "\improper Residential - Medium Room 12 Longue"
+/area/residential/mroom12_hallway
+	name = "\improper Residential - Medium Room 12 Corridor"
+/area/residential/mroom12_vestibule
+	name = "\improper Residential - Medium Room 12 Vestibule"
+
 /area/residential/room13
 	name = "\improper Residential - Room 13"
 	icon_state = "room13"
+
+/area/residential/room13_bathroom
+	name = "\improper Residential - Room 13 Bathroom"
+
+/area/residential/room13_main_bedroom
+	name = "\improper Residential - Room 13 Main Bedroom"
+
+/area/residential/room13_guest_bedroom
+	name = "\improper Residential - Room 13 Guest Bedroom"
 
 /area/residential/room14
 	name = "\improper Residential - Room 14"
 	icon_state = "room14"
 
+/area/residential/room15
+	name = "\improper Residential - Room 15"
+	icon_state = "room14"
 
-	//MEDIUMS
+/area/residential/room15/bedroom
+	name = "\improper Residential - Room 15 Bedroom"
+
+/area/residential/room15/bathroom
+	name = "\improper Residential - Room 15 Bathroom"
+
+/area/residential/room16
+	name = "\improper Residential - Room 16"
+	icon_state = "room14"
+
+//MEDIUMS
 
 /area/residential/mroom1
 	name = "\improper Residential - Medium Room 1"
@@ -256,8 +297,45 @@ var/global/list/latejoin_residential = list()
 
 /area/residential/mroom10
 	name = "\improper Residential - Medium Room 10"
+
 /area/residential/mroom11
 	name = "\improper Residential - Medium Room 11"
+
+/area/residential/mroom13
+	name = "\improper Residential - Medium Room 13"
+/area/residential/mroom13bed
+	name = "\improper Residential - Medium Room 13 Bedroom"
+/area/residential/mroom13closet
+	name = "\improper Residential - Medium Room 13 Closet"
+/area/residential/mroom13kitchen
+	name = "\improper Residential - Medium Room 13 Kitchen"
+/area/residential/mroom13bath
+	name = "\improper Residential - Medium Room 13 Bathroom"
+
+/area/residential/mroom42
+	name = "\improper Residential - Medium Room 42 Living Room"
+	icon_state = "mediumroom42"
+/area/residential/mroom42kitchen
+	name = "\improper Residential - Medium Room 42 Kitchen"
+	icon_state = "mediumroom42"
+/area/residential/mroom42washroom
+	name = "\improper Residential - Medium Room 42 Wash Room"
+	icon_state = "mediumroom42"
+/area/residential/mroom42_bed_1
+	name = "\improper Residential - Medium Room 42 Bedroom Cylus"
+	icon_state = "mediumroom42"
+/area/residential/mroom42_bed_2
+	name = "\improper Residential - Medium Room 42 Bedroom Laria"
+	icon_state = "mediumroom42"
+/area/residential/mroom42vault
+	name = "\improper Residential - Medium Room 42 L Vault"
+	icon_state = "mediumroom42"
+/area/residential/mroom42pet_room
+	name = "\improper Residential - Medium Room 42 Pet Garden"
+	icon_state = "mediumroom42"
+/area/residential/mroom42_bed_3
+	name = "\improper Residential - Medium Room 42 Guest Room"
+	icon_state = "mediumroom42"
 
 /area/residential/mansion
 	name = "\improper Residential -  Mansion"

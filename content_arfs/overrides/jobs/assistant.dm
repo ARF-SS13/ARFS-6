@@ -41,4 +41,5 @@
 		"Live Performer",
 		"Slacker",
 		"Nanotrasen Peace Officer",
-		"Prisoner")
+		"Prisoner",
+		"Belly Filler")

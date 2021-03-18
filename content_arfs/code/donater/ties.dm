@@ -54,9 +54,24 @@ var/list/watch_player_sizes_list = list(
 					return
 				else
 					cooldown = 1
-					H.resize(watch_player_sizes_list[size_name])
+					H.resize(watch_player_sizes_list[size_name], FALSE, FALSE)
 					user.visible_message("<span class='notice'>[user] begins to change size!</span>", "<span class='notice'>You begin to change size! You are now [size_name].</span>")
 					sleep(cooldown_timer)
 					cooldown = 0
 		else
 			to_chat(user, "<span class='warning'>Your watch is still recharging.</span>")
+
+
+/obj/item/clothing/accessory/fluff/jeanscrystelchime
+	name = "valhollide chime"
+	desc = "a set of white crystal chimes attached to a silver ring. the sound they make when they clink together is otherworldly..."
+	icon = 'content_arfs/icons/obj/clothing/custom_clothes_yw.dmi'
+	icon_state = "jeanscrystelchime"
+	icon_override = 'content_arfs/icons/obj/clothing/custom_clothes_yw.dmi'
+	item_state = "jeanscrystelchime_s"
+	overlay_state = "jeanscrystelchime_s"
+	slot_flags = ACCESSORY_SLOT_DECOR
+	w_class = ITEMSIZE_TINY
+	species_restricted = list(SPECIES_TESHARI)
+	drop_sound = 'sound/items/pickup/ring.ogg'
+	pickup_sound = 'sound/items/pickup/ring.ogg'

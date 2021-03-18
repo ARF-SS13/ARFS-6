@@ -701,3 +701,77 @@
 /obj/machinery/smartfridge/food/accept_check(var/obj/item/O as obj)
 	if(istype(O,/obj/item/weapon/reagent_containers/food) || istype(O,/obj/item/weapon/reagent_containers/food/snacks) || istype(O,/obj/item/weapon/reagent_containers/food/condiment))
 		return 1
+
+/obj/machinery/vending/wallmedarfs
+	name = "ArfMed++"
+	desc = "A wall-mounted version of the NanoMed, containing only vital first aid equipment."
+	description_fluff = "A compacted Bluespace Storage vendor"
+	icon_state = "wallmed"
+	layer = ABOVE_WINDOW_LAYER
+	density = 0 //It is wall-mounted, and thus, not dense. --Superxpdude
+	products = list(/obj/item/weapon/reagent_containers/glass/bottle/antitoxin = 4,
+					/obj/item/weapon/reagent_containers/glass/bottle/inaprovaline = 4,
+					/obj/item/weapon/reagent_containers/glass/bottle/stoxin = 4,
+					/obj/item/weapon/reagent_containers/glass/bottle/toxin = 4,
+					/obj/item/weapon/reagent_containers/syringe/antiviral = 4,
+					/obj/item/weapon/reagent_containers/syringe = 12,
+					/obj/item/device/healthanalyzer = 5,
+					/obj/item/weapon/reagent_containers/glass/beaker = 4,
+					/obj/item/weapon/reagent_containers/dropper = 2,
+					/obj/item/stack/medical/advanced/bruise_pack = 6,
+					/obj/item/stack/medical/advanced/ointment = 6,
+					/obj/item/stack/medical/splint = 4,
+					/obj/item/weapon/storage/pill_bottle/carbon = 2,
+					/obj/item/weapon/reagent_containers/pill/tox = 3,
+					/obj/item/weapon/reagent_containers/pill/stox = 4,
+					/obj/item/weapon/reagent_containers/pill/antitox = 6,
+					/obj/item/weapon/reagent_containers/hypospray/autoinjector/detox = 6,
+					/obj/item/weapon/reagent_containers/hypospray/autoinjector/rad =6,
+					/obj/item/weapon/reagent_containers/syringe/inaprovaline =6,
+					/obj/item/weapon/storage/pill_bottle/dylovene  =6)
+	req_log_access = access_cmo
+	has_logs = 1
+	can_rotate = 0
+
+/obj/machinery/vending/food/autochef
+	name = "AutoChef"
+	desc = "A kitchen appliance which, when supplied with reagent capsules, can fabricate almost any pre-programmed foods the user desires. Can also dispense some kitchenware."
+	icon_state = "hotfood"
+	products = list(/obj/item/weapon/tray = 8,
+					/obj/item/weapon/material/kitchen/utensil/fork = 12,
+					/obj/item/weapon/material/knife/plastic = 12,
+					/obj/item/weapon/material/kitchen/utensil/spoon = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/benedict = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/slice/sushi/filled/filled = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/bagelplain = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/bageleverything = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/donkpocket = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/donut = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/baguette = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/generalschicken = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/lomein = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/macncheese = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/omelette = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/lobstercooked = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/mushroomsoup = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/taco = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/meatsteak = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/cheeseburger = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/grilledcheese = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/hotdog = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/loadedbakedpotato = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/omelette = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/pastatomato = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/tofuburger = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/mushroompizza = 4,
+					/obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/vegetablepizza = 4,
+					/obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/margherita = 4,
+					/obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/meatpizza = 4,
+					/obj/item/weapon/reagent_containers/food/snacks/waffles = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/muffin = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/appletart = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/sliceable/applecake = 12,
+					/obj/item/weapon/reagent_containers/food/snacks/sliceable/bananabread = 12,
+					)
+	contraband = list(/obj/item/weapon/reagent_containers/food/snacks/mysterysoup = 10)
+	vend_delay = 15

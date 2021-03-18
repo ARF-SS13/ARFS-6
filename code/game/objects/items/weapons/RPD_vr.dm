@@ -24,6 +24,7 @@
 	throw_range = 5
 	w_class = ITEMSIZE_NORMAL
 	matter = list(MAT_STEEL = 50000, MAT_GLASS = 25000)
+	origin_tech = list(TECH_ENGINEERING = 4, TECH_MATERIAL = 2)
 	var/datum/effect/effect/system/spark_spread/spark_system
 	var/p_dir = NORTH 			// Next pipe will be built with this dir
 	var/p_flipped = FALSE		// If the next pipe should be built flipped
@@ -31,7 +32,7 @@
 	var/category = ATMOS_CATEGORY
 	var/piping_layer = PIPING_LAYER_DEFAULT
 	var/obj/item/weapon/tool/wrench/tool
-	var/datum/pipe_recipe/recipe	// pipe recipie selected for display/construction
+	var/datum/pipe_recipe/recipe = null	// pipe recipie selected for display/construction //YW edit, added = null
 	var/static/datum/pipe_recipe/first_atmos
 	var/static/datum/pipe_recipe/first_disposal
 	var/mode = BUILD_MODE | DESTROY_MODE | WRENCH_MODE
@@ -56,6 +57,8 @@
 		recipe = first_atmos
 	if(!first_disposal)
 		first_disposal = GLOB.disposal_pipe_recipes[GLOB.disposal_pipe_recipes[1]][1]
+	if(!recipe)
+		recipe = first_atmos
 
 /obj/item/weapon/pipe_dispenser/Destroy()
 	qdel_null(spark_system)

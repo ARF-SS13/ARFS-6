@@ -1,7 +1,8 @@
 var/list/playerpowers = list(/datum/power/changeling/arm_blade, /datum/power/changeling/darksight, /datum/power/changeling/extractdnaplayer, /datum/power/changeling/metaextractdna, \
 						     /datum/power/changeling/player_transform, /datum/power/changeling/fleshmend, /datum/power/changeling/panacea, /datum/power/changeling/rapid_regen, \
-						     /datum/power/changeling/endoarmor, /datum/power/changeling/EngorgedGlands, /datum/power/changeling/self_respiration, /datum/power/changeling/space_suit, \
-						     /datum/power/changeling/visible_camouflage, /datum/power/changeling/recursive_enhancement)
+						     /datum/power/changeling/endoarmor, /datum/power/changeling/MetaEngorgedGlands, /datum/power/changeling/self_respiration, /datum/power/changeling/space_suit, \
+						     /datum/power/changeling/visible_camouflage, /datum/power/changeling/recursive_enhancement, /datum/power/changeling/metafleshmend, \
+							 /datum/power/changeling/size_change)
 var/list/datum/power/changeling/playerpowerinstances = list()
 
 
@@ -100,6 +101,29 @@ var/list/datum/power/changeling/playerpowerinstances = list()
 	feedback_add_details("changeling_powers","ED")
 	return 1
 
+/datum/power/changeling/size_change
+	name = "Change Size"
+	desc = "We can grow or shrink at will."
+	ability_icon_state = "ling_recursive_enhancement"
+	genomecost = 100
+	verbpath = /mob/proc/changeling_size_change
+
+/mob/proc/changeling_size_change()
+	set category = "Changeling"
+	set name = "Change Size (10)"
+
+	var/datum/changeling/changeling = changeling_power(10,1,0)
+	if(!changeling)	return
+
+	var/new_size = input("Input the desired size", "Set Size", 300) as num
+	if (new_size < 1)
+		to_chat(src,"<span class='notice'>You lack the ability to become this size.</span>")
+		return
+	else
+		var/mob/living/carbon/human/H = src
+		H.resize(new_size/100, FALSE, FALSE)
+		to_chat(src,"<span class='notice'>You are now [new_size]% the size of a normal individual.</span>")
+		changeling.chem_charges -= 10
 
 /datum/power/changeling/player_transform
 	name = "Custom Transform"
@@ -244,4 +268,78 @@ var/list/datum/power/changeling/playerpowerinstances = list()
 		src.verbs += /mob/proc/meta_extract_dna_sting
 
 	feedback_add_details("changeling_powers","ED")
+	return 1
+
+/datum/power/changeling/metafleshmend
+	name = "Meta Fleshmend"
+	desc = "Begins a slow regeneration of our form.  Does not effect stuns or chemicals."
+	helptext = "Can be used while unconscious."
+	enhancedtext = "Healing is twice as effective."
+	ability_icon_state = "ling_fleshmend"
+	genomecost = 1000
+	verbpath = /mob/proc/changeling_metafleshmend
+
+//Starts healing you every second. Can be used whilst unconscious.
+/mob/proc/changeling_metafleshmend()
+	set category = "Changeling"
+	set name = "Fleshmend (50)"
+	set desc = "Begins a fast rengeration of our form.  Does not effect stuns or chemicals."
+
+	if(src.mind.changeling.absorbedcount > 0)
+		src.mind.changeling.absorbedcount = 0
+		return 1
+
+	var/datum/changeling/changeling = changeling_power(50,0,100,UNCONSCIOUS)
+	if(!changeling)
+		return 0
+
+	src.mind.changeling.chem_charges -= 50
+
+	var/mob/living/carbon/human/C = src
+	var/heal_amount = 3.5
+	if(src.mind.changeling.recursive_enhancement)
+		heal_amount = heal_amount * 2
+		to_chat(src, "<span class='notice'>We will heal much faster.</span>")
+
+	var/remain_healing = TRUE
+	to_chat(src, "<span class='notice'>We begin to heal ourselves.</span>")
+	src.mind.changeling.absorbedcount = 1
+
+	while(remain_healing)
+		if(src.mind.changeling.absorbedcount != 1)
+			remain_healing = FALSE
+
+		if(C && src.mind.changeling.chem_charges > 0.5)
+			src.mind.changeling.chem_charges -= 0.5
+			C.adjustBruteLoss(-heal_amount)
+			C.adjustOxyLoss(-heal_amount)
+			C.adjustFireLoss(-heal_amount)
+			for(var/obj/item/organ/O in C.internal_organs)
+				O.rejuvenate()
+
+			for(var/obj/item/organ/external/O in C.organs) // Fix limbs
+				O.rejuvenate()
+
+			for(var/obj/item/organ/E in C.bad_external_organs) // Fix bones
+				E.rejuvenate()
+
+			C.restore_blood() // Fix bloodloss
+			sleep(1 SECOND)
+		else
+			remain_healing = FALSE
+
+	to_chat(src, "<span class='notice'>Our regeneration has slowed to normal levels.</span>")
+
+/datum/power/changeling/MetaEngorgedGlands
+	name = "Meta Engorged Chemical Glands"
+	desc = "Our chemical glands swell, permitting us to store more chemicals inside of them."
+	helptext = "Allows us to store an extra 30 units of chemicals, and doubles production rate."
+	genomecost = 500
+	isVerb = 0
+	verbpath = /mob/proc/changeling_metaengorgedglands
+
+//Increases macimum chemical storage
+/mob/proc/changeling_metaengorgedglands()
+	src.mind.changeling.chem_storage += 30
+	src.mind.changeling.chem_recharge_rate *= 4
 	return 1

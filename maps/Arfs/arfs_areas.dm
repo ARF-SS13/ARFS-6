@@ -225,3 +225,50 @@
 	name= "\improper Upstairs Dining Hall"
 	icon_state = "cafeteria"
 	icon = 'icons/turf/areas.dmi'
+
+//Chapel areas
+/area/crew_quarters/instrument_room
+	name = "\improper Music Room"
+	icon_state = "gutslounge"
+	icon = 'maps/arfs/arfs_areas.dmi'
+
+/area/crew_quarters/wedding_chapel
+	name = "\improper Wedding Chapel"
+	icon_state = "gutslounge"
+	icon = 'maps/arfs/arfs_areas.dmi'
+
+/area/crew_quarters/wedding_chapel_changing_room
+	name = "\improper Wedding Chapel Changing Room"
+	icon_state = "gutslounge"
+	icon = 'maps/arfs/arfs_areas.dmi'
+
+/area/crew_quarters/fishing_area
+	name = "\improper Fishing Area"
+	icon_state = "gutslounge"
+	icon = 'maps/arfs/arfs_areas.dmi'
+
+/area/exploration/pathfinder_office
+	name = "\improper Pathfinder Office"
+	icon_state = "exploration"
+	icon = 'maps/arfs/arfs_areas.dmi'
+
+/area/exploration/gear
+	name = "\improper Exploration Gear Room"
+	icon_state = "exploration"
+	icon = 'maps/arfs/arfs_areas.dmi'
+
+/area/exploration/hallway
+	name = "\improper Exploration Hallway"
+	icon_state = "exploration"
+	icon = 'maps/arfs/arfs_areas.dmi'
+
+/area/exploration/hanger
+	name = "\improper Explorationn Hanger"
+	icon_state = "exploration"
+	icon = 'maps/arfs/arfs_areas.dmi'
+
+
+/area/exploration/waiting_room
+	name = "\improper Explorationn Waiting Room"
+	icon_state = "exploration"
+	icon = 'maps/arfs/arfs_areas.dmi'

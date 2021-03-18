@@ -16,3 +16,15 @@
 		"kabu", "to", "aero", "dac", "tyl", "licki", "tung", "cu", "bone", "snor", "lax",
 		"mew", "two", "syl", "veon", "arti", "cuno"
 	)
+
+#define LANGUAGE_PSIONIC "Psionic Communication"
+
+/datum/language/grey
+	name = LANGUAGE_PSIONIC
+	desc = "Grey Psionic communication"
+	speech_verb = "says"
+	whisper_verb = "whispers"
+	colour = "psionic"
+	key = "^"
+	flags = HIVEMIND
+	syllables = list("blah","blah","blah","bleh","meh","neh","nah","wah")

@@ -28,6 +28,7 @@
 		/obj/item/weapon/card/id/residential/rm10,
 		/obj/item/weapon/card/id/residential/mansion,
 		/obj/item/weapon/card/id/residential/rm11,
+		/obj/item/weapon/card/id/residential/rm12
 		)
 
 /obj/item/weapon/card/id/residential
@@ -92,6 +93,14 @@
 	name = "RS14 residential key"
 	access = list(8014)
 
+/obj/item/weapon/card/id/residential/rs15
+	name = "RS15 residential key"
+	access = list(8015)
+
+/obj/item/weapon/card/id/residential/rs16
+	name = "RS16 residential key"
+	access = list(8016)
+
 /obj/item/weapon/card/id/residential/rm1
 	name = "RM1 residential key"
 	access = list(8101)
@@ -136,6 +145,34 @@
 	name = "RM11 residential key"
 	access = list(8111)
 
+/obj/item/weapon/card/id/residential/rm12
+	name = "RM12 residential Key"
+	access = list(8112)
+
+/obj/item/weapon/card/id/residential/rm13
+	name = "RM13 residential Key"
+	access = list(8113)
+
+/obj/item/weapon/card/id/residential/rm42/laria
+	name = "Laria's Key"
+	desc = "A special keycard for residentals RM42 Laria Darlos is written on it."
+	icon = 'icons/obj/card_vr.dmi'
+	icon_state = "itg_purple"
+	access = list(8142)
+	registered_name = "Laria Darlos"
+	age = "35"
+	blood_type = "0-"
+	gender = "plural"
+
+/obj/item/weapon/card/id/residential/rm42/cylus
+	name = "Cylus's Key"
+	desc = "A special keycard for residentals RM42 Cylus Typhon is written on it."
+	registered_name = "Cylus Typhon"
+	age = "32"
+	blood_type = "AB+"
+	icon_state = "itg_white"
+	gender = "male"
+
 /obj/item/weapon/card/id/residential/mansion
 	name = "Mansion residential key"
 	access = list(8100)
@@ -170,6 +207,10 @@
 	name = "S7 residential key"
 	access = list(8207)
 
+/obj/item/weapon/card/id/residential/s8
+	name = "S8 residential key"
+	access = list(8208)
+
 
 //FLUFF SPAWNS
 
@@ -194,14 +235,21 @@
 	ckeywhitelist = list("truedark")
 	character_name = list("Vakshhas")
 
+/datum/gear/fluff/res_key_s8
+	path = /obj/item/weapon/card/id/residential/s8
+	display_name = "S8 keys"
+	description = "residential"
+	ckeywhitelist = list("cebutris", "technicalmagi", "fludd12", "thingpony")
+	character_name = list("Kaibus Wordsmith", "Nia Wordsmith", "Naomi Reids", "Tye Riggle")
+
 // MEDIUM KEYS
 
 /datum/gear/fluff/res_key_rm1
 	path = /obj/item/weapon/card/id/residential/rm1
 	display_name = "RM1 keys"
 	description = "residential"
-	ckeywhitelist = list("thingpony", "siorkillbow", "cebutris", "dameonowen")
-	character_name = list("Iris Miller", "Elizabeth Nayala", "Hepsie Mull", "Amber Owen")
+	ckeywhitelist = list("thingpony", "siorkillbow", "cebutris", "dameonowen", "brimcon")
+	character_name = list("Iris Miller", "Elizabeth Nayala", "Hepsie Mull", "Amber Owen", "Amber", "Scryden Sako")
 
 /datum/gear/fluff/res_key_rm2
 	path = /obj/item/weapon/card/id/residential/rm2
@@ -235,6 +283,12 @@
 	path = /obj/item/weapon/card/id/residential/rm6
 	display_name = "RM6 keys"
 	description = "residential"
+	ckeywhitelist = list("yeayea130", "runswitshadows", "broddichris")
+	character_name = list("Othello", "Cu-11-3y", "Keziah Hunter")
+
+/datum/gear/fluff/res_key_rm7
+	path = /obj/item/weapon/card/id/residential/rm7
+	display_name = "RM7 keys"
 	ckeywhitelist = list("disguiser")
 	character_name = list("Rak Woodrow")
 
@@ -259,6 +313,34 @@
 	ckeywhitelist = list("thingpony", "cebutris", "liujr", "truedark")
 	character_name = list("Tye Riggle", "Kaibus Wordsmith", "Lywarra Lichtut", "Yalnisho Rhirrie")
 
+/datum/gear/fluff/res_key_rm12
+	path = /obj/item/weapon/card/id/residential/rm12
+	display_name = "RM12 keys"
+	description = "residential"
+	ckeywhitelist = list("mrkaktuspl")
+	character_name = list("Alexandra Bowie")
+
+/datum/gear/fluff/res_key_rm13
+	path = /obj/item/weapon/card/id/residential/rm13
+	display_name = "RM13 keys"
+	description = "residential"
+	ckeywhitelist = list("talkingcactus")
+	character_name = list("Nicole Cherry")
+
+/datum/gear/fluff/res_key_rm42
+	path = /obj/item/weapon/card/id/residential/rm42/laria
+	display_name = "RM42 keycard (Laria Darlos)"
+	description = "A special keycard for residential Room M42"
+	ckeywhitelist = list("laria")
+	character_name = list("Laria Darlos")
+
+/datum/gear/fluff/res_key_rm42
+	path = /obj/item/weapon/card/id/residential/rm42/cylus
+	display_name = "RM42 keycard (Cylus Typhon)"
+	description = "A special keycard for residential Room M42"
+	ckeywhitelist = list("tinncatt")
+	character_name = list("Cylus Typhon")
+
 // SMALL KEYS
 
 /datum/gear/fluff/res_key_rs1
@@ -274,6 +356,13 @@
 	description = "residential"
 	ckeywhitelist = list("killbow")
 	character_name = list("Hoi Blackburn")
+
+/datum/gear/fluff/res_key_rs3
+	path = /obj/item/weapon/card/id/residential/rs3
+	display_name = "RS3 keys"
+	description = "residential"
+	ckeywhitelist = list("kbraid")
+	character_name = list("Eili")
 
 /datum/gear/fluff/res_key_rs5
 	path = /obj/item/weapon/card/id/residential/rs5
@@ -307,8 +396,8 @@
 	path = /obj/item/weapon/card/id/residential/rs10
 	display_name = "RS10 keys"
 	description = "residential"
-	ckeywhitelist = list("brimcon", "thingpony", "theilluminated1")
-	character_name = list("Scryden Sako", "Fleur Vert", "Ni'mira Allura")
+	ckeywhitelist = list("brimcon", "thingpony")
+	character_name = list("Scryden Sako", "Fleur Sako")
 
 /datum/gear/fluff/res_key_rs11
 	path = /obj/item/weapon/card/id/residential/rs11
@@ -317,6 +406,13 @@
 	ckeywhitelist = list("rouwren")
 	character_name = list("Rin Deimos")
 
+/datum/gear/fluff/res_key_rs12
+	path = /obj/item/weapon/card/id/residential/rs12
+	display_name = "RS12 keys"
+	description = "residential"
+	ckeywhitelist = list("thingpony","brimcon","truedark")
+	character_name = list("Willow Snow", "Scryden Sako", "Sheyss Brauror")
+
 /datum/gear/fluff/res_key_rs13
 	path = /obj/item/weapon/card/id/residential/rs13
 	display_name = "RS13 keys"
@@ -324,7 +420,33 @@
 	ckeywhitelist = list("secondattemps")
 	character_name = list("Alexandria Marlow")
 
+/datum/gear/fluff/res_key_rs4
+	path = /obj/item/weapon/card/id/residential/rs4
+	display_name = "RS4 keys"
+	description = "residential"
+	ckeywhitelist = list("thingpony", "disguiser")
+	character_name = list("Phoenix Sedna", "Rak Woodrow")
 
+/datum/gear/fluff/res_key_rs14
+	path = /obj/item/weapon/card/id/residential/rs14
+	display_name = "RS14 keys"
+	description = "residential"
+	ckeywhitelist = list("phantomwolfzero","disguiser", "thingpony")
+	character_name = list("Kobalt Frevath", "Rak Woodrow","Tak Flourin", "Dottie")
+
+/datum/gear/fluff/res_key_rs15
+	path = /obj/item/weapon/card/id/residential/rs15
+	display_name = "RS15 keys"
+	description  = "resdiential"
+	ckeywhitelist = list("theilluminated1")
+	character_name = list("ARES V3 Mk2", "ARES V3 Mk3", "Dorothy Everglade", "Melanie Everglade")
+
+/datum/gear/fluff/res_key_rs16
+	path = /obj/item/weapon/card/id/residential/rs16
+	display_name = "RS16 keys"
+	description  = "residential"
+	ckeywhitelist = list("thingpony", "theilluminated1")
+	character_name = list ("Noel Winters", "ARES V3 Mk2", "ARES V3 Mk3")
 //Mansion
 
 /datum/gear/fluff/res_key_mansion
@@ -332,11 +454,11 @@
 	display_name = "Mansion keys"
 	description = "residential"
 	ckeywhitelist = list("andyman105", "dameonowen", "secondattemps", "thingpony", "hagawaga","brimcon")
-	character_name = list("Dameon Owen", "Amber Owen", "Jake Owen", "Lilith Owen", "Iris Miller", "Brian Owen", "Percy Owen", "Ruby Flare", "Zephyr Sharpe", "Peter Sharpe", "Eve", "Ashlyn", "Agalon", "Lana Xavier", "Scryden Sako")
+	character_name = list("Dameon Owen", "Amber Owen", "Amber", "Jake Owen", "Lilith Owen", "Iris Miller", "Brian Owen", "Percy Owen", "Ruby Flare", "Zephyr Sharpe", "Peter Sharpe", "Eve", "Ashlyn", "Agalon", "Lana Xavier", "Scryden Sako")
 
 /datum/gear/fluff/res_key_wallet
 	path = /obj/item/weapon/storage/wallet/residential
 	display_name = "KEEEEEYS"
 	description = "residential"
-	ckeywhitelist = list("lukevale")
-	character_name = list("Luna")
+	ckeywhitelist = list("thingpony")
+	character_name = list("Iris Miller")
