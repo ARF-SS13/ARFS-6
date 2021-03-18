@@ -170,6 +170,8 @@
 	registered_name = "Cylus Typhon"
 	age = "32"
 	blood_type = "AB+"
+	access = list(8142)
+	icon = 'icons/obj/card_vr.dmi'
 	icon_state = "itg_white"
 	gender = "male"
 
@@ -327,14 +329,14 @@
 	ckeywhitelist = list("talkingcactus")
 	character_name = list("Nicole Cherry")
 
-/datum/gear/fluff/res_key_rm42
+/datum/gear/fluff/res_key_rm42/laria
 	path = /obj/item/weapon/card/id/residential/rm42/laria
 	display_name = "RM42 keycard (Laria Darlos)"
 	description = "A special keycard for residential Room M42"
 	ckeywhitelist = list("laria")
 	character_name = list("Laria Darlos")
 
-/datum/gear/fluff/res_key_rm42
+/datum/gear/fluff/res_key_rm42/cylus
 	path = /obj/item/weapon/card/id/residential/rm42/cylus
 	display_name = "RM42 keycard (Cylus Typhon)"
 	description = "A special keycard for residential Room M42"
