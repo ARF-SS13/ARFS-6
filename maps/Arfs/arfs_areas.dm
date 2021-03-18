@@ -246,3 +246,29 @@
 	name = "\improper Fishing Area"
 	icon_state = "gutslounge"
 	icon = 'maps/arfs/arfs_areas.dmi'
+
+/area/exploration/pathfinder_office
+	name = "\improper Pathfinder Office"
+	icon_state = "exploration"
+	icon = 'maps/arfs/arfs_areas.dmi'
+
+/area/exploration/gear
+	name = "\improper Exploration Gear Room"
+	icon_state = "exploration"
+	icon = 'maps/arfs/arfs_areas.dmi'
+
+/area/exploration/hallway
+	name = "\improper Exploration Hallway"
+	icon_state = "exploration"
+	icon = 'maps/arfs/arfs_areas.dmi'
+
+/area/exploration/hanger
+	name = "\improper Explorationn Hanger"
+	icon_state = "exploration"
+	icon = 'maps/arfs/arfs_areas.dmi'
+
+
+/area/exploration/waiting_room
+	name = "\improper Explorationn Waiting Room"
+	icon_state = "exploration"
+	icon = 'maps/arfs/arfs_areas.dmi'
