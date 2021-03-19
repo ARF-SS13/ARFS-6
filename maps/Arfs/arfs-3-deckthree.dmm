@@ -1837,8 +1837,8 @@
 	},
 /obj/machinery/door/airlock/highsecurity{
 	name = "Telecommunications";
-	req_access = list(17);
-	req_one_access = list(19)
+	req_access = list(61);
+	req_one_access = list()
 	},
 /turf/simulated/floor/tiled/dark,
 /area/teleporter)
@@ -2180,16 +2180,17 @@
 	})
 "es" = (
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/highsecurity{
-	name = "Telecommunications";
-	req_access = list(16)
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/highsecurity{
+	name = "Telecommunications";
+	req_access = list(61);
+	req_one_access = list()
 	},
 /turf/simulated/floor/tiled/dark,
 /area/tcomfoyer{
