@@ -255,6 +255,15 @@
 	name = "raichu head, non-colorable."
 	icon = 'content_arfs/icons/mob/player/ears_arfs.dmi'
 	icon_state = "raichuhead"
+
+/datum/sprite_accessory/ears/eevee
+	name = "Eevee"
+	desc = ""
+	icon = 'content_arfs/icons/mob/player/ears_arfs.dmi'
+	icon_state = "eevee_ear"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
 /*
 /datum/sprite_accessory/ears/lopunnybody
 	name = "Lopunny body"

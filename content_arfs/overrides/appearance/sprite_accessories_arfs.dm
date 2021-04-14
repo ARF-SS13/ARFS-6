@@ -124,3 +124,12 @@
 		icon_state = "wolf_ears"
 		color_blend_mode = ICON_MULTIPLY
 		do_colouration = 1
+
+//Facial hair stuff
+/datum/sprite_accessory/facial_hair/eevee_mane
+	color_blend_mode = ICON_MULTIPLY
+	name = "Eevee mane"
+	icon = 'content_arfs/icons/mob/player/human_face_arfs.dmi'
+	icon_state = "facial_eeveemane"
+	gender = NEUTER
+	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST)
