@@ -56,6 +56,12 @@
 	ckeywhitelist = list("andyman105", "dameonowen","thingpony")
 	character_name = null
 
+/datum/gear/fluff/dameon_8
+	path = /obj/item/clothing/mask/smokable/ecig/deluxe
+	display_name = "Deluxe Ecig"
+	ckeywhitelist = list("andyman105", "dameonowen")
+	character_name = null
+
 /datum/gear/fluff/thing_1
 	path = /obj/item/weapon/implanter/blindsight
 	display_name = "Blindsight Implant"
