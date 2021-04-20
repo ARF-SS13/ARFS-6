@@ -250,15 +250,15 @@
 	path = /obj/item/weapon/card/id/residential/rm1
 	display_name = "RM1 keys"
 	description = "residential"
-	ckeywhitelist = list("thingpony", "siorkillbow", "cebutris", "dameonowen", "brimcon", "foxyrose")
-	character_name = list("Iris Miller", "Elizabeth Nayala", "Hepsie Mull", "Amber Owen", "Amber", "Scryden Sako", "Emma Miller", "Aiden Miller", "Scarlet Owen")
+	ckeywhitelist = list("thingpony", "siorkillbow", "cebutris", "dameonowen", "brimcon", "foxyrose", "lukevale", "andyman105")
+	character_name = list("Iris Miller", "Elizabeth Nayala", "Hepsie Mull", "Amber Owen", "Amber", "Scryden Sako", "Emma Miller", "Aiden Miller", "Scarlet Owen", "Luna")
 
 /datum/gear/fluff/res_key_rm2
 	path = /obj/item/weapon/card/id/residential/rm2
 	display_name = "RM2 keys"
 	description = "residential"
-	ckeywhitelist = list("cebutris", "gremlingss", "disguiser", "siorkillbow")
-	character_name = list("Elizabeth Nayala", "Abby Gliese", "Rak Woodrow", "Hoi Blackburn", "Hepsie Mull")
+	ckeywhitelist = list("cebutris", "gremlingss", "disguiser", "siorkillbow", "lukevale")
+	character_name = list("Elizabeth Nayala", "Abby Gliese", "Rak Woodrow", "Hoi Blackburn", "Hepsie Mull", "Luna")
 
 /datum/gear/fluff/res_key_rm3
 	path = /obj/item/weapon/card/id/residential/rm3
