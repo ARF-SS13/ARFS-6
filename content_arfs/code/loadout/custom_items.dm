@@ -67,6 +67,13 @@
 	display_name = "The Enormous RIG"
 	description = "A modified version of the Hacker RIG"
 
+/datum/gear/fluff/dameon_10
+	path = /obj/item/clothing/mask/breath/transparent
+	display_name = "Transparent Breath Mask"
+	description = "A very clear breath mask"
+	ckeywhitelist = list("andyman105", "dameonowen")
+	character_name = null
+
 /datum/gear/fluff/thing_1
 	path = /obj/item/weapon/implanter/blindsight
 	display_name = "Blindsight Implant"
