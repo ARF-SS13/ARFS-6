@@ -289,6 +289,7 @@
 	cell_type = /obj/item/weapon/cell/hyper
 	w_class = 4
 	armor = list(melee = 10, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 10, rad = 10)
+	boot_type = /obj/item/clothing/shoes/magboots/rig/light
 	initial_modules = list(
 		/obj/item/rig_module/ai_container,
 		/obj/item/rig_module/power_sink,
@@ -304,4 +305,4 @@
 		/obj/item/rig_module/sprinter,
 		/obj/item/rig_module/stealth_field,
 		/obj/item/rig_module/teleporter
-		)
+	)
