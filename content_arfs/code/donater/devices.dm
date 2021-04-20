@@ -287,8 +287,8 @@
 	desc = "An oversized RIG suit with custom enhancements for giant individuals. Developed by Dameon Owen for the Owen family."
 	req_access = list()
 	cell_type = /obj/item/weapon/cell/hyper
-	w_class = 4;
-	armor = list(melee = 25, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 10, rad = 10)
+	w_class = 4
+	armor = list(melee = 10, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 10, rad = 10)
 	initial_modules = list(
 		/obj/item/rig_module/ai_container,
 		/obj/item/rig_module/power_sink,
