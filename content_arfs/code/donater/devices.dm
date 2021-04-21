@@ -298,6 +298,7 @@
 		/obj/item/rig_module/device/healthscanner,
 		/obj/item/rig_module/chem_dispenser/injector/advanced,
 		/obj/item/rig_module/rescue_pharm,
+		/obj/item/rig_module/mounted,
 		/obj/item/rig_module/mounted/taser,
 		/obj/item/rig_module/mounted/egun,
 		/obj/item/rig_module/grenade_launcher,
