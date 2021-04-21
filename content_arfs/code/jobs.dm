@@ -1,0 +1,1 @@
+var/const/BLUESHIELD		=(1<<16)

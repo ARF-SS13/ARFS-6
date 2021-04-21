@@ -281,3 +281,16 @@
 /obj/item/weapon/bedsheet/piratedouble/huge
 	icon_scale_x = 3.3
 	icon_scale_y = 3.3
+
+
+/obj/item/clothing/accessory/poncho/roles/cloak/blueshield
+	name = "bodyguard's cloak"
+	desc = "A dark blue cloak with silver trim around the neck. The mark of a professional bodyguard, and ideal for concealing holsters or other items."
+	icon = 'content_arfs/icons/obj/clothing/tie_obj.dmi'
+	icon_state = "cloak_blueshield"
+	icon_override = 'content_arfs/icons/mob/clothing/ties.dmi'
+	item_state = "cloak_blueshield"
+
+
+/obj/item/clothing/accessory/poncho/roles/cloak/blueshield/dropped() //makes the blueshield suit not kek when used by a teshari
+	icon_override = 'content_arfs/icons/mob/clothing/ties.dmi'
