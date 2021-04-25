@@ -4848,8 +4848,10 @@
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
 "alX" = (
+/obj/machinery/door/firedoor/glass{
+	req_one_access = list(18,8102)
+	},
 /obj/machinery/door/airlock/silver,
-/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/lino,
 /area/residential/mroom2)
 "alY" = (
@@ -22292,7 +22294,6 @@
 	dir = 4
 	},
 /obj/effect/catwalk_plated/white,
-/obj/effect/catwalk_plated/white,
 /obj/structure/curtain/open/shower{
 	color = "#64844F"
 	},
@@ -23482,6 +23483,10 @@
 	dir = 1
 	},
 /obj/structure/coatrack,
+/obj/structure/sign/poster{
+	dir = 1;
+	pixel_y = 32
+	},
 /turf/simulated/floor/wood,
 /area/residential/mroom2)
 "btV" = (
@@ -23711,6 +23716,7 @@
 /obj/effect/floor_decal/corner_kafel/blue{
 	dir = 5
 	},
+/obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "bFC" = (
@@ -23863,6 +23869,7 @@
 	dir = 8;
 	pixel_x = -5
 	},
+/obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/steel_grid,
 /area/residential/mroom2)
 "bNa" = (
@@ -24056,12 +24063,11 @@
 /turf/simulated/floor/carpet/purcarpet,
 /area/residential/room13_main_bedroom)
 "bVh" = (
-/obj/machinery/neonsign/cafe{
-	id = "rm2_sign";
-	pixel_x = -30
-	},
 /obj/effect/floor_decal/spline/fancy/wood,
 /obj/structure/flora/pottedplant/crystal,
+/obj/structure/sign/department/bar{
+	pixel_x = -29
+	},
 /turf/simulated/floor/wood,
 /area/residential/mroom2)
 "bVH" = (
@@ -24100,6 +24106,7 @@
 /area/residential/mansion)
 "bXH" = (
 /obj/structure/undies_wardrobe,
+/obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/wood/sif,
 /area/residential/mroom2bed2)
 "bYM" = (
@@ -24368,14 +24375,22 @@
 	desc = "A safety railing.";
 	dir = 8
 	},
+/obj/effect/mist/mapped/moving,
 /turf/simulated/floor/water/arf_hotspring,
 /area/residential/mroom2)
 "cpb" = (
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/pink/border{
+	dir = 1
+	},
 /obj/structure/sign/poster{
 	dir = 1;
+	pixel_y = 32;
 	poster_type = "/datum/poster/vore_6"
 	},
-/turf/simulated/wall,
+/turf/simulated/floor/wmarble,
 /area/residential/mroom2bed2)
 "cpl" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -24610,6 +24625,7 @@
 /turf/simulated/floor/wood,
 /area/residential/room13)
 "czX" = (
+/obj/effect/mist/mapped/moving,
 /turf/simulated/floor/water/arf_hotspring,
 /area/residential/mroom2)
 "cBv" = (
@@ -24685,6 +24701,8 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/flora/pottedplant/tropical,
+/obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "cHt" = (
@@ -24758,6 +24776,7 @@
 /obj/effect/floor_decal/corner_kafel/red/diagonal{
 	dir = 8
 	},
+/obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "cKM" = (
@@ -25223,6 +25242,7 @@
 /obj/effect/floor_decal/corner_kafel/blue{
 	dir = 6
 	},
+/obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "dms" = (
@@ -25364,6 +25384,9 @@
 	dir = 8;
 	pixel_x = -32
 	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
 /turf/simulated/floor/wood/sif,
 /area/residential/mroom2bed2)
 "dyJ" = (
@@ -25452,6 +25475,7 @@
 /obj/machinery/shower{
 	pixel_y = 7
 	},
+/obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/steel_grid,
 /area/residential/mroom2)
 "dDV" = (
@@ -25474,6 +25498,7 @@
 /obj/structure/table/rack,
 /obj/item/clothing/under/pj/blue,
 /obj/item/clothing/suit/chef/classic,
+/obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/wood/sif,
 /area/residential/mroom2bed2)
 "dFd" = (
@@ -25561,7 +25586,7 @@
 /turf/simulated/floor/wood,
 /area/residential/room14)
 "dJY" = (
-/obj/structure/bed/chair/wood{
+/obj/structure/bed/chair/comfy/blue{
 	dir = 8
 	},
 /turf/simulated/floor/wood,
@@ -25654,11 +25679,10 @@
 /area/residential/mroom6)
 "dOR" = (
 /obj/structure/sign/poster{
-	dir = 4;
-	poster_type = "/datum/poster/vore_28"
+	pixel_y = -32
 	},
-/turf/simulated/wall,
-/area/residential/mroom2bed2)
+/turf/simulated/floor/lino,
+/area/residential/mroom2)
 "dPK" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -25975,6 +25999,7 @@
 /obj/effect/floor_decal/corner_kafel/red{
 	dir = 6
 	},
+/obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "efb" = (
@@ -26007,13 +26032,20 @@
 /turf/simulated/floor/bmarble,
 /area/residential/room13)
 "efP" = (
-/obj/structure/flora/pottedplant/tropical,
 /obj/effect/floor_decal/corner_kafel/red{
 	dir = 10
 	},
 /obj/effect/floor_decal/corner_kafel/blue{
 	dir = 5
 	},
+/obj/machinery/button/remote/airlock{
+	id = "rm2_bath";
+	name = "Bathroom Lock";
+	pixel_x = 26;
+	pixel_y = 25;
+	specialfunctions = 4
+	},
+/obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "ego" = (
@@ -26177,6 +26209,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
 /turf/simulated/floor/wood/sif,
 /area/residential/mroom2bed2)
 "erU" = (
@@ -26308,12 +26343,14 @@
 	id_tag = "eli_bath";
 	name = "Bathroom"
 	},
-/obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/machinery/door/firedoor/glass{
+	req_one_access = list(18,8102)
 	},
 /turf/simulated/floor/tiled/white,
 /area/residential/mroom2bed1)
@@ -26413,6 +26450,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
+/obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "eDF" = (
@@ -26463,6 +26501,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "eGX" = (
@@ -26968,7 +27007,10 @@
 /area/residential/mroom7)
 "foG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 6
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/fancy/wood/corner{
+	dir = 1
 	},
 /turf/simulated/floor/wood/sif,
 /area/residential/mroom2bed2)
@@ -26993,6 +27035,7 @@
 /area/residential/ship_bay)
 "fph" = (
 /obj/machinery/button/windowtint/multitint{
+	id = "rm2_bathroom";
 	pixel_x = -22;
 	pixel_y = 8
 	},
@@ -27219,10 +27262,10 @@
 /turf/simulated/floor/wood/sif,
 /area/residential/corridors)
 "fyN" = (
-/obj/structure/table/woodentable,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
+/obj/structure/table/darkglass,
 /turf/simulated/floor/wood,
 /area/residential/mroom2)
 "fzq" = (
@@ -27240,6 +27283,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
+/obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "fzD" = (
@@ -27965,6 +28009,9 @@
 /turf/simulated/floor/wood,
 /area/residential/mroom6)
 "gkq" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
 /turf/simulated/floor/wood/sif,
 /area/residential/mroom2bed2)
 "gmr" = (
@@ -28293,6 +28340,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "gDv" = (
@@ -28308,9 +28356,10 @@
 /area/residential/lobby)
 "gDL" = (
 /obj/structure/sign/poster{
-	dir = 8
+	dir = 8;
+	pixel_x = 32
 	},
-/turf/simulated/wall,
+/turf/simulated/floor/lino,
 /area/residential/mroom2)
 "gDP" = (
 /obj/structure/table/woodentable,
@@ -28593,6 +28642,7 @@
 /obj/item/clothing/shoes/footwraps,
 /obj/item/clothing/shoes/footwraps,
 /obj/item/clothing/head/pin/butterfly,
+/obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/wood/sif,
 /area/residential/mroom2bed2)
 "gWn" = (
@@ -28653,6 +28703,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "gYC" = (
@@ -28888,9 +28939,11 @@
 	id_tint = "rm2_bathroom";
 	name = "Toilet"
 	},
-/obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/firedoor/glass{
+	req_one_access = list(18,8102)
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "hmu" = (
@@ -28954,7 +29007,6 @@
 /turf/simulated/floor/wood,
 /area/residential/room4)
 "hqi" = (
-/obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/gold{
 	id_tag = "eli_bed";
 	name = "Elizabeth's Room"
@@ -28967,6 +29019,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
+	},
+/obj/machinery/door/firedoor/glass{
+	req_one_access = list(18,8102)
 	},
 /turf/simulated/floor/lino,
 /area/residential/mroom2bed1)
@@ -29642,6 +29697,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 1
 	},
+/obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "hWJ" = (
@@ -30419,6 +30475,9 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 9
+	},
 /turf/simulated/floor/wood/sif,
 /area/residential/mroom2bed2)
 "iSL" = (
@@ -30585,6 +30644,7 @@
 	desc = "A safety railing.";
 	dir = 1
 	},
+/obj/effect/mist/mapped/moving,
 /turf/simulated/floor/water/arf_hotspring,
 /area/residential/mroom2)
 "jkb" = (
@@ -30601,6 +30661,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
+/obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "jkv" = (
@@ -30653,6 +30714,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
 	},
 /turf/simulated/floor/wood/sif,
 /area/residential/mroom2bed2)
@@ -30899,11 +30963,6 @@
 	pixel_x = -15;
 	starts_with = list(/obj/item/weapon/reagent_containers/food/condiment/flour = 7, /obj/item/weapon/reagent_containers/food/condiment/sugar = 2, /obj/item/weapon/reagent_containers/food/condiment/spacespice = 2)
 	},
-/obj/machinery/button/holosign{
-	id = "rm2_sign";
-	pixel_x = -27;
-	pixel_y = 24
-	},
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
@@ -30939,6 +30998,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/machinery/door/firedoor/glass{
+	req_one_access = list(18,8102)
 	},
 /turf/simulated/floor/wood/sif,
 /area/residential/mroom2bed2)
@@ -31040,6 +31102,9 @@
 	dir = 8;
 	pixel_x = -32
 	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
 /turf/simulated/floor/wood/sif,
 /area/residential/mroom2bed2)
 "jLv" = (
@@ -31067,11 +31132,15 @@
 /area/residential/mroom42pet_room)
 "jMU" = (
 /obj/structure/sign/poster{
-	dir = 4;
-	poster_type = "/datum/poster/vore_6"
+	dir = 1;
+	pixel_y = 32;
+	poster_type = "/datum/poster/vore_2"
 	},
-/turf/simulated/wall,
-/area/residential/mroom2)
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 5
+	},
+/turf/simulated/floor/wood/sif,
+/area/residential/mroom2bed2)
 "jNp" = (
 /obj/machinery/button/windowtint{
 	id = "nicole_tint";
@@ -31282,8 +31351,10 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/door/firedoor/glass{
+	req_one_access = list(18,8102)
+	},
 /obj/machinery/door/airlock/silver,
-/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/lino,
 /area/residential/mroom2)
 "jZc" = (
@@ -31328,6 +31399,9 @@
 "jZw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
 	},
 /turf/simulated/floor/wood/sif,
 /area/residential/mroom2bed2)
@@ -31611,6 +31685,7 @@
 /obj/effect/floor_decal/corner_kafel/blue{
 	dir = 10
 	},
+/obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "knB" = (
@@ -31895,6 +31970,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
 	},
+/obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "kBc" = (
@@ -32854,6 +32930,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "lDW" = (
@@ -32888,6 +32965,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "lHM" = (
@@ -32995,6 +33073,10 @@
 	dir = 5
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "lRs" = (
@@ -33098,12 +33180,10 @@
 /obj/effect/floor_decal/corner/pink/border{
 	dir = 10
 	},
-/obj/machinery/disposal/wall{
-	dir = 4
-	},
 /obj/structure/disposalpipe/trunk{
 	dir = 4
 	},
+/obj/machinery/disposal,
 /turf/simulated/floor/wmarble,
 /area/residential/mroom2bed2)
 "lWL" = (
@@ -33474,14 +33554,14 @@
 /turf/simulated/floor/tiled/eris/cafe,
 /area/residential/mroom12_bathroom)
 "mlQ" = (
-/obj/structure/bed/chair/wood{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
+	},
+/obj/structure/bed/chair/comfy/blue{
+	dir = 4
 	},
 /turf/simulated/floor/wood,
 /area/residential/mroom2)
@@ -34279,6 +34359,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "nbJ" = (
@@ -34491,6 +34572,7 @@
 /obj/effect/floor_decal/corner_kafel/red/full{
 	dir = 4
 	},
+/obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "nrZ" = (
@@ -34716,6 +34798,9 @@
 	pixel_y = -2
 	},
 /obj/effect/floor_decal/spline/plain,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/residential/mroom2)
 "nEY" = (
@@ -34913,7 +34998,9 @@
 /turf/simulated/floor/wood,
 /area/residential/corridors)
 "nQc" = (
-/obj/machinery/door/firedoor/multi_tile,
+/obj/machinery/door/firedoor/multi_tile{
+	req_one_access = list(18,8102)
+	},
 /obj/machinery/door/airlock/multi_tile/metal{
 	name = "Closet"
 	},
@@ -34924,7 +35011,11 @@
 "nQh" = (
 /obj/structure/table/woodentable,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 4
+	dir = 1
+	},
+/obj/structure/bedsheetbin,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 10
 	},
 /turf/simulated/floor/wood/sif,
 /area/residential/mroom2bed2)
@@ -35364,6 +35455,10 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
+/obj/machinery/vending/bedsheet/huge,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 6
+	},
 /turf/simulated/floor/wood/sif,
 /area/residential/mroom2bed2)
 "ojQ" = (
@@ -35677,6 +35772,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "oFY" = (
@@ -35719,6 +35815,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
 	},
 /turf/simulated/floor/wood/sif,
 /area/residential/mroom2bed2)
@@ -36465,17 +36564,6 @@
 /obj/machinery/light,
 /turf/simulated/floor/lino,
 /area/residential/mroom2)
-"pps" = (
-/obj/effect/floor_decal/corner_kafel/yellow{
-	color = "#FFD700";
-	dir = 6
-	},
-/obj/effect/floor_decal/corner_kafel/yellow{
-	color = "#FFD700";
-	dir = 9
-	},
-/turf/simulated/floor/tiled/kafel_full,
-/area/residential/mroom2)
 "ppG" = (
 /obj/machinery/computer/security/wooden_tv{
 	desc = "A retro television.";
@@ -36770,6 +36858,11 @@
 	dir = 6
 	},
 /obj/structure/dogbed,
+/obj/structure/sign/poster{
+	dir = 4;
+	pixel_x = 32;
+	poster_type = "/datum/poster/vore_28"
+	},
 /turf/simulated/floor/wood/sif,
 /area/residential/mroom2bed2)
 "pHa" = (
@@ -36801,6 +36894,10 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/corner_kafel/red/full,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "pIF" = (
@@ -37053,6 +37150,11 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
+/obj/structure/sign/poster{
+	dir = 1;
+	pixel_y = 32;
+	poster_type = "/datum/poster/bay_32"
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "pUO" = (
@@ -37151,6 +37253,7 @@
 /obj/effect/floor_decal/corner_kafel/red{
 	dir = 10
 	},
+/obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "pZb" = (
@@ -37184,6 +37287,7 @@
 /obj/effect/floor_decal/corner_kafel/red/diagonal{
 	dir = 8
 	},
+/obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "qbq" = (
@@ -37353,6 +37457,14 @@
 /obj/item/device/multitool,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mansion)
+"qhd" = (
+/obj/effect/floor_decal/corner_kafel/yellow{
+	color = "#FFD700";
+	dir = 6
+	},
+/obj/effect/mist/mapped,
+/turf/simulated/floor/tiled/kafel_full,
+/area/residential/mroom2)
 "qhl" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -37850,6 +37962,17 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/mroom6)
+"qAg" = (
+/obj/effect/floor_decal/corner_kafel/red/diagonal{
+	color = "#ffa1a1"
+	},
+/obj/effect/floor_decal/corner_kafel/red/diagonal{
+	color = "#ffa1a1";
+	dir = 8
+	},
+/obj/effect/mist/mapped,
+/turf/simulated/floor/tiled/kafel_full,
+/area/residential/mroom2)
 "qAy" = (
 /obj/structure/sink{
 	dir = 4;
@@ -38093,8 +38216,10 @@
 /turf/simulated/floor/carpet,
 /area/residential/room15)
 "qQH" = (
-/obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/obj/machinery/disposal/wall{
 	dir = 8
 	},
 /turf/simulated/floor/wood,
@@ -38249,6 +38374,7 @@
 	dir = 5
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "qXm" = (
@@ -38394,7 +38520,7 @@
 /obj/effect/floor_decal/corner/pink/border{
 	dir = 4
 	},
-/obj/item/modular_computer/console{
+/obj/item/modular_computer/console/preset{
 	dir = 8
 	},
 /turf/simulated/floor/wmarble,
@@ -38488,6 +38614,7 @@
 /obj/effect/floor_decal/corner_kafel/red{
 	dir = 10
 	},
+/obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "rkW" = (
@@ -38603,6 +38730,7 @@
 	dir = 5
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "roL" = (
@@ -38800,7 +38928,6 @@
 /obj/machinery/door/airlock{
 	name = "Closet"
 	},
-/obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/corner_kafel/purple/diagonal,
 /obj/effect/floor_decal/corner_kafel/purple/diagonal{
 	dir = 8
@@ -38814,6 +38941,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/firedoor/glass{
+	req_one_access = list(18,8102)
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "rAt" = (
@@ -38844,11 +38974,14 @@
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
 "rCv" = (
-/obj/structure/bed/chair/comfy/black{
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/carpet/bcarpet,
-/area/residential/mroom2)
+/obj/effect/floor_decal/spline/fancy/wood/corner{
+	dir = 4
+	},
+/turf/simulated/floor/wood/sif,
+/area/residential/mroom2bed2)
 "rDD" = (
 /obj/machinery/light{
 	dir = 4
@@ -39207,6 +39340,12 @@
 /obj/item/clothing/under/pants/blackjeans,
 /obj/item/clothing/accessory/sweater/heart,
 /obj/item/clothing/under/dress/qipao,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
 /turf/simulated/floor/wood/sif,
 /area/residential/mroom2bed2)
 "sbj" = (
@@ -39667,6 +39806,7 @@
 /obj/effect/floor_decal/corner_kafel/red{
 	dir = 5
 	},
+/obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "syD" = (
@@ -39757,6 +39897,7 @@
 	dir = 8
 	},
 /obj/machinery/light,
+/obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "sEF" = (
@@ -39773,6 +39914,7 @@
 /obj/effect/floor_decal/corner_kafel/red{
 	dir = 5
 	},
+/obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "sGl" = (
@@ -39790,6 +39932,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "sGs" = (
@@ -39885,6 +40028,9 @@
 /obj/machinery/alarm{
 	dir = 4;
 	pixel_x = -23
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 9
 	},
 /turf/simulated/floor/wood/sif,
 /area/residential/mroom2bed2)
@@ -40332,11 +40478,11 @@
 /turf/simulated/floor/grass,
 /area/residential/mansion)
 "taY" = (
-/obj/structure/bed/chair/wood{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
+	},
+/obj/structure/bed/chair/comfy/blue{
+	dir = 4
 	},
 /turf/simulated/floor/wood,
 /area/residential/mroom2)
@@ -40524,6 +40670,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
 /turf/simulated/floor/wood/sif,
 /area/residential/mroom2bed2)
 "tjS" = (
@@ -40695,6 +40844,7 @@
 /obj/effect/floor_decal/corner_kafel/blue{
 	dir = 5
 	},
+/obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "tsm" = (
@@ -41187,10 +41337,8 @@
 /area/residential/mroom12_hallway)
 "tTE" = (
 /obj/structure/table/rack,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 9
-	},
 /obj/machinery/light,
+/obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/wood/sif,
 /area/residential/mroom2bed2)
 "tTF" = (
@@ -41439,6 +41587,7 @@
 /obj/effect/floor_decal/corner_kafel/blue{
 	dir = 8
 	},
+/obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "uml" = (
@@ -41535,6 +41684,9 @@
 "urU" = (
 /obj/structure/table/rack,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 5
+	},
 /turf/simulated/floor/wood/sif,
 /area/residential/mroom2bed2)
 "usm" = (
@@ -41919,6 +42071,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "uHY" = (
@@ -42039,6 +42192,7 @@
 	dir = 4;
 	pixel_x = 5
 	},
+/obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/steel_grid,
 /area/residential/mroom2)
 "uOr" = (
@@ -43011,6 +43165,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
+/obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "vVU" = (
@@ -43029,7 +43184,6 @@
 /turf/simulated/floor/wood,
 /area/residential/mroom12_bedroom)
 "vWv" = (
-/obj/structure/table/woodentable,
 /obj/structure/flora/pottedplant/small{
 	pixel_x = 1;
 	pixel_y = 1
@@ -43040,6 +43194,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/table/darkglass,
 /turf/simulated/floor/wood,
 /area/residential/mroom2)
 "vWP" = (
@@ -43232,6 +43387,9 @@
 /obj/structure/closet/walllocker{
 	dir = 4;
 	pixel_x = 32
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
 	},
 /turf/simulated/floor/wood/sif,
 /area/residential/mroom2bed2)
@@ -43968,6 +44126,11 @@
 /obj/structure/bed/chair/sofa/black/left{
 	dir = 8
 	},
+/obj/structure/sign/poster{
+	dir = 4;
+	pixel_x = 32;
+	poster_type = "/datum/poster/vore_5"
+	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/residential/mroom2)
 "xcE" = (
@@ -44232,6 +44395,7 @@
 /obj/effect/floor_decal/corner_kafel/blue{
 	dir = 5
 	},
+/obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "xsp" = (
@@ -44258,13 +44422,6 @@
 /obj/machinery/smartfridge/food,
 /turf/simulated/floor/tiled/white,
 /area/residential/mroom1)
-"xtU" = (
-/obj/structure/sign/poster{
-	dir = 1;
-	poster_type = "/datum/poster/bay_32"
-	},
-/turf/simulated/wall,
-/area/residential/mroom2)
 "xuu" = (
 /obj/item/weapon/reagent_containers/food/snacks/beans,
 /obj/structure/table/rack/shelf/steel,
@@ -44320,6 +44477,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
+/obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "xxy" = (
@@ -44591,6 +44749,7 @@
 /obj/effect/floor_decal/corner_kafel/blue{
 	dir = 5
 	},
+/obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "xIr" = (
@@ -44618,6 +44777,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "xJp" = (
@@ -44675,6 +44835,16 @@
 /obj/item/clothing/under/moderncoat,
 /turf/simulated/floor/carpet/sblucarpet,
 /area/residential/mroom12_bedroom)
+"xLH" = (
+/obj/machinery/door/firedoor/glass{
+	req_one_access = list(18,8102)
+	},
+/obj/machinery/door/airlock/diamond{
+	id_tag = "rm2_bath";
+	name = "Bathroom"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/residential/mroom2)
 "xLJ" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/structure/sign/warning{
@@ -44860,6 +45030,7 @@
 	desc = "A safety railing.";
 	dir = 8
 	},
+/obj/effect/mist/mapped/moving,
 /turf/simulated/floor/water/arf_hotspring,
 /area/residential/mroom2)
 "xYq" = (
@@ -44885,7 +45056,6 @@
 /turf/simulated/floor/carpet/purcarpet,
 /area/residential/mroom6)
 "xZw" = (
-/obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock{
 	id_tag = "luna_bath";
 	name = "Bathroom"
@@ -44895,6 +45065,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/machinery/door/firedoor/glass{
+	req_one_access = list(18,8102)
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2bed2)
@@ -71933,7 +72106,7 @@ aaa
 apq
 tBL
 amw
-xtU
+apq
 pUC
 uQZ
 fMm
@@ -72694,7 +72867,7 @@ bol
 nrZ
 dGY
 kuO
-aNh
+dOR
 apq
 atd
 hqi
@@ -74209,8 +74382,8 @@ aNh
 gnV
 aNh
 aNh
-aNh
-apq
+gDL
+xLH
 efP
 nby
 kns
@@ -74451,7 +74624,7 @@ aaa
 apq
 nzi
 clD
-rCv
+clD
 kBc
 teU
 nDK
@@ -74461,7 +74634,7 @@ aNh
 gnV
 apq
 apq
-gDL
+apq
 apq
 cGw
 jkb
@@ -74718,8 +74891,8 @@ rkF
 nby
 qbf
 umi
-kQC
-kQC
+qhd
+qhd
 fzq
 sDE
 apq
@@ -74965,7 +75138,7 @@ aNh
 gnV
 apq
 dDE
-pps
+qAg
 rkF
 nby
 syA
@@ -75711,7 +75884,7 @@ aaa
 apq
 apq
 apq
-jMU
+apq
 apq
 lRR
 bEb
@@ -76732,7 +76905,7 @@ fGM
 ksL
 wln
 jei
-gkq
+jMU
 gkq
 gkq
 foG
@@ -76970,8 +77143,8 @@ aaa
 aaa
 aaa
 aaa
+jei
 cpb
-gVi
 kIH
 ren
 uRm
@@ -77490,8 +77663,8 @@ vgL
 jei
 iSl
 tiD
-gkq
-jZw
+teJ
+rCv
 bXH
 jei
 aaa
@@ -77990,7 +78163,7 @@ feg
 feg
 qtp
 jei
-dOR
+jei
 jei
 jei
 jei
