@@ -1,4 +1,4 @@
-/obj/item/weapon/storage/wallet/residential
+/*/obj/item/weapon/storage/wallet/residential
 	desc = "It can hold a few small and personal things. This has more slots to accomadate keys."
 	storage_slots = 30
 	starts_with = list(
@@ -30,7 +30,7 @@
 		/obj/item/weapon/card/id/residential/rm11,
 		/obj/item/weapon/card/id/residential/rm12
 		)
-
+*/
 /obj/item/weapon/card/id/residential
 	name = "generic residential key"
 	desc = "A keyring with a small steel key, and a blue fob."
@@ -455,8 +455,21 @@
 	path = /obj/item/weapon/card/id/residential/mansion
 	display_name = "Mansion keys"
 	description = "residential"
-	ckeywhitelist = list("andyman105", "dameonowen", "secondattemps", "thingpony", "hagawaga","brimcon")
-	character_name = list("Dameon Owen", "Amber Owen", "Amber", "Jake Owen", "Lilith Owen", "Iris Miller", "Brian Owen", "Percy Owen", "Ruby Flare", "Zephyr Sharpe", "Peter Sharpe", "Eve", "Ashlyn", "Agalon", "Lana Xavier", "Scryden Sako", "Scarlet Owen")
+	ckeywhitelist = list("andyman105", "dameonowen", "secondattemps", "thingpony", "hagawaga","brimcon", "lukevale")
+	character_name = list("Dameon Owen", "Amber Owen", "Amber", "Jake Owen", "Lilith Owen", "Iris Miller", "Brian Owen", "Percy Owen", "Ruby Flare", "Zephyr Sharpe", "Peter Sharpe", "Eve", "Ashlyn", "Agalon", "Lana Xavier", "Scryden Sako", "Scarlet Owen", "Luna")
+
+//Master Key. Why wasn't this made before? So much easier!
+
+/obj/item/weapon/card/id/residential/master_key
+	name = "Master Residential Key"
+	icon = 'content_arfs/icons/obj/misc.dmi'
+	icon_state = "master_key"
+	access = list(8001, 8002, 8003, 8004, 8005, 8006, 8007, 8008, 8009, 8010, 8011, 8012, 8013, 8014, 8015, 8016, 8101, 8102, 8103, 8104, 8105, 8106, 8107, 8108, 8109, 8110, 8111, 8112, 8113, 8142, 8100, 8201, 8202, 8203, 8204, 8206, 8207, 8208)
+
+/obj/item/weapon/storage/wallet/residential
+	desc = "It can hold a few small and personal things. This has more slots to accomadate keys."
+	storage_slots = 30
+	starts_with = list(/obj/item/weapon/card/id/residential/master_key)
 
 /datum/gear/fluff/res_key_wallet
 	path = /obj/item/weapon/storage/wallet/residential
