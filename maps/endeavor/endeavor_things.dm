@@ -429,6 +429,13 @@
 /obj/machinery/computer/med_data/laptop
     density = 0
 
+/obj/effect/mist/mapped
+	name = "mist"
+	icon = 'content_arfs/icons/misc/effects.dmi'
+	icon_state = "mist"
+/obj/effect/mist/mapped/moving
+	icon_state = "mist_moving"
+
 
 /obj/random/single/xeno_egg_25
 	name = "xenomorph egg 25% chance"
