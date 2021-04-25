@@ -296,8 +296,7 @@
 		/obj/item/rig_module/vision/multi,
 		/obj/item/rig_module/maneuvering_jets,
 		/obj/item/rig_module/device/healthscanner,
-		/obj/item/rig_module/chem_dispenser/injector/advanced,
-		/obj/item/rig_module/rescue_pharm,
+		/obj/item/rig_module/rescue_pharm/andy,
 		/obj/item/rig_module/mounted,
 		/obj/item/rig_module/mounted/taser,
 		/obj/item/rig_module/mounted/egun,
@@ -306,4 +305,28 @@
 		/obj/item/rig_module/sprinter,
 		/obj/item/rig_module/stealth_field,
 		/obj/item/rig_module/teleporter
+	)
+
+/obj/item/rig_module/rescue_pharm/andy
+
+	max_reagent_volume = 30 //Regen to this volume
+	chems_to_use = 5 //Per injection
+
+	charges = list(
+		list("Anti-Toxin", "anti_toxin",  0, 30),
+		list("Alkysine", "alkysine", 0, 30),
+		list("Bicaridine", "bicaridine", 0, 30),
+		list("Carthatoline", "carthatoline", 0, 30),
+		list("Dermaline", "dermaline", 0, 30),
+		list("Dexalin Plus", "dexalinp", 0, 30),
+		list("Hyronalin", "hyronalin", 0, 30),
+		list("Imidazoline", "imidazoline", 0, 30),
+		list("Inaprovaline", "inaprovaline", 0, 30),
+		list("Kelotane", "kelotane", 0, 30),
+		list("Myelamine", "myelamine", 0, 30),
+		list("Oxycodone", "oxycodone", 0, 30),
+		list("Peridaxon", "peridaxon", 0, 30),
+		list("Spaceacillin", "spaceacillin", 0, 30),
+		list("Traumadol", "tramadol", 0, 30),
+		list("Tricordrazine", "tricordrazine", 0, 30)
 	)
