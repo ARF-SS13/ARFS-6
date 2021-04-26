@@ -1,4 +1,4 @@
-/obj/item/weapon/storage/wallet/residential
+/*/obj/item/weapon/storage/wallet/residential
 	desc = "It can hold a few small and personal things. This has more slots to accomadate keys."
 	storage_slots = 30
 	starts_with = list(
@@ -30,7 +30,7 @@
 		/obj/item/weapon/card/id/residential/rm11,
 		/obj/item/weapon/card/id/residential/rm12
 		)
-
+*/
 /obj/item/weapon/card/id/residential
 	name = "generic residential key"
 	desc = "A keyring with a small steel key, and a blue fob."
@@ -153,6 +153,28 @@
 	name = "RM13 residential Key"
 	access = list(8113)
 
+/obj/item/weapon/card/id/residential/rm42/laria
+	name = "Laria's Key"
+	desc = "A special keycard for residentals RM42 Laria Darlos is written on it."
+	icon = 'icons/obj/card_vr.dmi'
+	icon_state = "itg_purple"
+	access = list(8142)
+	registered_name = "Laria Darlos"
+	age = "35"
+	blood_type = "0-"
+	gender = "plural"
+
+/obj/item/weapon/card/id/residential/rm42/cylus
+	name = "Cylus's Key"
+	desc = "A special keycard for residentals RM42 Cylus Typhon is written on it."
+	registered_name = "Cylus Typhon"
+	age = "32"
+	blood_type = "AB+"
+	access = list(8142)
+	icon = 'icons/obj/card_vr.dmi'
+	icon_state = "itg_white"
+	gender = "male"
+
 /obj/item/weapon/card/id/residential/mansion
 	name = "Mansion residential key"
 	access = list(8100)
@@ -228,15 +250,15 @@
 	path = /obj/item/weapon/card/id/residential/rm1
 	display_name = "RM1 keys"
 	description = "residential"
-	ckeywhitelist = list("thingpony", "siorkillbow", "cebutris", "dameonowen", "brimcon")
-	character_name = list("Iris Miller", "Elizabeth Nayala", "Hepsie Mull", "Amber Owen", "Amber", "Scryden Sako")
+	ckeywhitelist = list("thingpony", "siorkillbow", "cebutris", "dameonowen", "brimcon", "foxyrose", "lukevale", "andyman105")
+	character_name = list("Iris Miller", "Elizabeth Nayala", "Hepsie Mull", "Amber Owen", "Amber", "Scryden Sako", "Emma Miller", "Aiden Miller", "Scarlet Owen", "Luna")
 
 /datum/gear/fluff/res_key_rm2
 	path = /obj/item/weapon/card/id/residential/rm2
 	display_name = "RM2 keys"
 	description = "residential"
-	ckeywhitelist = list("cebutris", "gremlingss", "disguiser", "siorkillbow")
-	character_name = list("Elizabeth Nayala", "Abby Gliese", "Rak Woodrow", "Hoi Blackburn", "Hepsie Mull")
+	ckeywhitelist = list("cebutris", "gremlingss", "disguiser", "siorkillbow", "lukevale")
+	character_name = list("Elizabeth Nayala", "Abby Gliese", "Rak Woodrow", "Hoi Blackburn", "Hepsie Mull", "Luna")
 
 /datum/gear/fluff/res_key_rm3
 	path = /obj/item/weapon/card/id/residential/rm3
@@ -306,6 +328,20 @@
 	description = "residential"
 	ckeywhitelist = list("talkingcactus")
 	character_name = list("Nicole Cherry")
+
+/datum/gear/fluff/res_key_rm42/laria
+	path = /obj/item/weapon/card/id/residential/rm42/laria
+	display_name = "RM42 keycard (Laria Darlos)"
+	description = "A special keycard for residential Room M42"
+	ckeywhitelist = list("laria")
+	character_name = list("Laria Darlos")
+
+/datum/gear/fluff/res_key_rm42/cylus
+	path = /obj/item/weapon/card/id/residential/rm42/cylus
+	display_name = "RM42 keycard (Cylus Typhon)"
+	description = "A special keycard for residential Room M42"
+	ckeywhitelist = list("tinncatt")
+	character_name = list("Cylus Typhon")
 
 // SMALL KEYS
 
@@ -419,8 +455,21 @@
 	path = /obj/item/weapon/card/id/residential/mansion
 	display_name = "Mansion keys"
 	description = "residential"
-	ckeywhitelist = list("andyman105", "dameonowen", "secondattemps", "thingpony", "hagawaga","brimcon")
-	character_name = list("Dameon Owen", "Amber Owen", "Amber", "Jake Owen", "Lilith Owen", "Iris Miller", "Brian Owen", "Percy Owen", "Ruby Flare", "Zephyr Sharpe", "Peter Sharpe", "Eve", "Ashlyn", "Agalon", "Lana Xavier", "Scryden Sako")
+	ckeywhitelist = list("andyman105", "dameonowen", "secondattemps", "thingpony", "hagawaga","brimcon", "lukevale")
+	character_name = list("Dameon Owen", "Amber Owen", "Amber", "Jake Owen", "Lilith Owen", "Iris Miller", "Brian Owen", "Percy Owen", "Ruby Flare", "Zephyr Sharpe", "Peter Sharpe", "Eve", "Ashlyn", "Agalon", "Lana Xavier", "Scryden Sako", "Scarlet Owen", "Luna")
+
+//Master Key. Why wasn't this made before? So much easier!
+
+/obj/item/weapon/card/id/residential/master_key
+	name = "Master Residential Key"
+	icon = 'content_arfs/icons/obj/misc.dmi'
+	icon_state = "master_key"
+	access = list(8001, 8002, 8003, 8004, 8005, 8006, 8007, 8008, 8009, 8010, 8011, 8012, 8013, 8014, 8015, 8016, 8101, 8102, 8103, 8104, 8105, 8106, 8107, 8108, 8109, 8110, 8111, 8112, 8113, 8142, 8100, 8201, 8202, 8203, 8204, 8206, 8207, 8208)
+
+/obj/item/weapon/storage/wallet/residential
+	desc = "It can hold a few small and personal things. This has more slots to accomadate keys."
+	storage_slots = 30
+	starts_with = list(/obj/item/weapon/card/id/residential/master_key)
 
 /datum/gear/fluff/res_key_wallet
 	path = /obj/item/weapon/storage/wallet/residential

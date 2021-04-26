@@ -26,7 +26,7 @@
 	display_name = "Curious Cookie"
 	description = "A very curious cookie. Do not eat"
 	ckeywhitelist = list("andyman105", "dameonowen")
-	character_name = list("Amber Owen", "Amber")
+	character_name = list("Amber Owen", "Amber", "Scarlet Owen")
 
 // /datum/gear/fluff/dameon_3
 //	path = /obj/item/device/communicator/andy
@@ -54,6 +54,26 @@
 	display_name = "The Dominator"
 	description = "A modified version of the MWPSB Dominator"
 	ckeywhitelist = list("andyman105", "dameonowen","thingpony")
+	character_name = null
+
+/datum/gear/fluff/dameon_8
+	path = /obj/item/clothing/mask/smokable/ecig/deluxe
+	display_name = "Deluxe Ecig"
+	ckeywhitelist = list("andyman105", "dameonowen")
+	character_name = null
+
+/datum/gear/fluff/dameon_9
+	path = /obj/item/weapon/rig/light/hacker/fluff/andy
+	display_name = "The Enormous RIG"
+	description = "A modified version of the Hacker RIG"
+	ckeywhitelist = list("andyman105", "dameonowen")
+	character_name = null
+
+/datum/gear/fluff/dameon_10
+	path = /obj/item/clothing/mask/breath/transparent
+	display_name = "Transparent Breath Mask"
+	description = "A very clear breath mask"
+	ckeywhitelist = list("andyman105", "dameonowen")
 	character_name = null
 
 /datum/gear/fluff/thing_1

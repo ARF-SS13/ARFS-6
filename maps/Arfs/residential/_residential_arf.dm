@@ -312,6 +312,30 @@ var/global/list/latejoin_residential = list()
 /area/residential/mroom13bath
 	name = "\improper Residential - Medium Room 13 Bathroom"
 
+/area/residential/mroom42
+	name = "\improper Residential - Medium Room 42 Living Room"
+	icon_state = "mediumroom42"
+/area/residential/mroom42kitchen
+	name = "\improper Residential - Medium Room 42 Kitchen"
+	icon_state = "mediumroom42"
+/area/residential/mroom42washroom
+	name = "\improper Residential - Medium Room 42 Wash Room"
+	icon_state = "mediumroom42"
+/area/residential/mroom42_bed_1
+	name = "\improper Residential - Medium Room 42 Bedroom Cylus"
+	icon_state = "mediumroom42"
+/area/residential/mroom42_bed_2
+	name = "\improper Residential - Medium Room 42 Bedroom Laria"
+	icon_state = "mediumroom42"
+/area/residential/mroom42vault
+	name = "\improper Residential - Medium Room 42 L Vault"
+	icon_state = "mediumroom42"
+/area/residential/mroom42pet_room
+	name = "\improper Residential - Medium Room 42 Pet Garden"
+	icon_state = "mediumroom42"
+/area/residential/mroom42_bed_3
+	name = "\improper Residential - Medium Room 42 Guest Room"
+	icon_state = "mediumroom42"
 
 /area/residential/mansion
 	name = "\improper Residential -  Mansion"

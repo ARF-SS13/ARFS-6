@@ -51,3 +51,11 @@
 	name = "Ship Exterior - Deck Two"
 /area/exterior/deckthree
 	name = "Ship Exterior - Deck Three"
+
+
+//blueshield office
+/area/bridge/blueshield
+	name = "\improper Blueshield Office"
+	icon_state = "bridge"
+	music = null
+	sound_env = MEDIUM_SOFTFLOOR

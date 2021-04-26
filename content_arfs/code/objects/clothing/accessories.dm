@@ -281,3 +281,115 @@
 /obj/item/weapon/bedsheet/piratedouble/huge
 	icon_scale_x = 3.3
 	icon_scale_y = 3.3
+
+//Mega Bedsheets
+/obj/item/weapon/bedsheet/transpridedouble/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/doublepanpride/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/doublenonbinpride/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/doublebipride/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/doubledeer/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/double/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/bluedouble/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/greendouble/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/orangedouble/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/purpledouble/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/rainbowdouble/mega //all the way across the sky.
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/reddouble/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/yellowdouble/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/mimedouble/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/clowndouble/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/captaindouble/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/rddouble/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/hosdouble/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/hopdouble/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/cedouble/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/browndouble/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/iandouble/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/cosmosdouble/mega
+	icon_state = "dobulesheetcosmos"
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/piratedouble/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+
+
+/obj/item/clothing/accessory/poncho/roles/cloak/blueshield
+	name = "bodyguard's cloak"
+	desc = "A dark blue cloak with silver trim around the neck. The mark of a professional bodyguard, and ideal for concealing holsters or other items."
+	icon = 'content_arfs/icons/obj/clothing/tie_obj.dmi'
+	icon_state = "cloak_blueshield"
+	icon_override = 'content_arfs/icons/mob/clothing/ties.dmi'
+	item_state = "cloak_blueshield"
+
+
+/obj/item/clothing/accessory/poncho/roles/cloak/blueshield/dropped() //makes the blueshield suit not kek when used by a teshari
+	icon_override = 'content_arfs/icons/mob/clothing/ties.dmi'

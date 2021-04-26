@@ -128,7 +128,7 @@
 //Mist like on the Endeavour
 /obj/effect/mist/mapped
 	name = "mist"
-	icon = 'icons/effects/effects.dmi'
+	icon = 'content_arfs/icons/misc/effects.dmi'
 	icon_state = "mist"
 
 /obj/effect/mist/mapped/moving

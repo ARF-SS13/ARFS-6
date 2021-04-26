@@ -280,3 +280,53 @@
 	name = "The Dominator"
 	desc = "A heavily modified MWPSB Dominator, with a self-recharging power cell. The weapon can only be fired by the owner and is alert-level locked."
 	cell_type = /obj/item/weapon/cell/device/weapon/recharge/alien
+
+
+/obj/item/weapon/rig/light/hacker/fluff/andy
+	name = "oversized cybersuit control module"
+	desc = "An oversized RIG suit with custom enhancements for giant individuals. Developed by Dameon Owen for the Owen family."
+	req_access = list()
+	cell_type = /obj/item/weapon/cell/hyper
+	w_class = 4
+	armor = list(melee = 10, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 10, rad = 10)
+	boot_type = /obj/item/clothing/shoes/magboots/rig/light
+	initial_modules = list(
+		/obj/item/rig_module/ai_container,
+		/obj/item/rig_module/power_sink,
+		/obj/item/rig_module/vision/multi,
+		/obj/item/rig_module/maneuvering_jets,
+		/obj/item/rig_module/device/healthscanner,
+		/obj/item/rig_module/rescue_pharm/andy,
+		/obj/item/rig_module/mounted,
+		/obj/item/rig_module/mounted/taser,
+		/obj/item/rig_module/mounted/egun,
+		/obj/item/rig_module/grenade_launcher,
+		/obj/item/rig_module/device/plasmacutter,
+		/obj/item/rig_module/sprinter,
+		/obj/item/rig_module/stealth_field,
+		/obj/item/rig_module/teleporter
+	)
+
+/obj/item/rig_module/rescue_pharm/andy
+
+	max_reagent_volume = 30 //Regen to this volume
+	chems_to_use = 5 //Per injection
+
+	charges = list(
+		list("Anti-Toxin", "anti_toxin",  0, 30),
+		list("Alkysine", "alkysine", 0, 30),
+		list("Bicaridine", "bicaridine", 0, 30),
+		list("Carthatoline", "carthatoline", 0, 30),
+		list("Dermaline", "dermaline", 0, 30),
+		list("Dexalin Plus", "dexalinp", 0, 30),
+		list("Hyronalin", "hyronalin", 0, 30),
+		list("Imidazoline", "imidazoline", 0, 30),
+		list("Inaprovaline", "inaprovaline", 0, 30),
+		list("Kelotane", "kelotane", 0, 30),
+		list("Myelamine", "myelamine", 0, 30),
+		list("Oxycodone", "oxycodone", 0, 30),
+		list("Peridaxon", "peridaxon", 0, 30),
+		list("Spaceacillin", "spaceacillin", 0, 30),
+		list("Traumadol", "tramadol", 0, 30),
+		list("Tricordrazine", "tricordrazine", 0, 30)
+	)
