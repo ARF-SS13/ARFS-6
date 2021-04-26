@@ -292,7 +292,8 @@ Once in open space, consider disabling nonessential power-consuming electronics 
 		/obj/item/clothing/suit/space/void/refurb/marine/talon,
 		/obj/item/weapon/tank/oxygen,
 		/obj/item/device/suit_cooling_unit,
-		/obj/item/device/gps/security/talonguard
+		/obj/item/device/gps/security/talonguard,
+		/obj/item/weapon/melee/baton
 	)
 
 /obj/structure/closet/secure_closet/talon_doctor
@@ -344,7 +345,7 @@ Once in open space, consider disabling nonessential power-consuming electronics 
 
 	starts_with = list(
 		/obj/item/weapon/material/knife/tacknife/survival,
-		/obj/item/clothing/head/pilot,
+		/obj/item/clothing/head/ompilot,
 		/obj/item/clothing/under/rank/pilot1,
 		/obj/item/clothing/suit/storage/toggle/bomber/pilot,
 		/obj/item/clothing/gloves/fingerless,
@@ -439,6 +440,7 @@ Once in open space, consider disabling nonessential power-consuming electronics 
 
 /obj/item/modular_computer/laptop/preset/custom_loadout/standard/talon/pilot/install_default_programs()
 	..()
+	hard_drive.store_file(new/datum/computer_file/program/ship_nav())
 
 /obj/item/modular_computer/laptop/preset/custom_loadout/standard/talon/engineer
 	name = "engineer's laptop"

@@ -527,6 +527,8 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	if(equipment)
 		if(charjob)
 			job_master.EquipRank(new_character, charjob, 1)
+			new_character.mind.assigned_role = charjob
+			new_character.mind.role_alt_title = job_master.GetPlayerAltTitle(new_character, charjob)
 		//equip_custom_items(new_character)	//VOREStation Removal
 
 	//If desired, add records.
@@ -534,7 +536,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 		data_core.manifest_inject(new_character)
 
 	//A redraw for good measure
-	new_character.update_icons_all()
+	new_character.regenerate_icons()
 
 	//If we're announcing their arrival
 	if(announce)
@@ -629,7 +631,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	message_admins("[key_name_admin(src)] has created a command report", 1)
 	feedback_add_details("admin_verb","CCR") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
-/client/proc/cmd_admin_delete(atom/O as obj|mob|turf in admin_atom_validate(O)) // I don't understand precisely how this fixes the string matching against a substring, but it does - Ater
+/client/proc/cmd_admin_delete(atom/O as obj|mob|turf in _validate_atom(O)) // I don't understand precisely how this fixes the string matching against a substring, but it does - Ater
 	set category = "Admin"
 	set name = "Delete"
 
