@@ -282,6 +282,105 @@
 	icon_scale_x = 3.3
 	icon_scale_y = 3.3
 
+//Mega Bedsheets
+/obj/item/weapon/bedsheet/transpridedouble/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/doublepanpride/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/doublenonbinpride/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/doublebipride/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/doubledeer/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/double/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/bluedouble/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/greendouble/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/orangedouble/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/purpledouble/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/rainbowdouble/mega //all the way across the sky.
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/reddouble/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/yellowdouble/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/mimedouble/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/clowndouble/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/captaindouble/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/rddouble/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/hosdouble/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/hopdouble/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/cedouble/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/browndouble/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/iandouble/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/cosmosdouble/mega
+	icon_state = "dobulesheetcosmos"
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+/obj/item/weapon/bedsheet/piratedouble/mega
+	icon_scale_x = 9.9
+	icon_scale_y = 9.9
+
+
 
 /obj/item/clothing/accessory/poncho/roles/cloak/blueshield
 	name = "bodyguard's cloak"

@@ -691,6 +691,32 @@
 	/obj/item/weapon/bedsheet/doublenonbinpride/huge=5
 	)
 
+/obj/machinery/vending/bedsheet/mega
+	name = "Mega Bedsheet Selector"
+	desc = "For all your mega bedsheet needs"
+	products = list(
+	/obj/item/weapon/bedsheet/bluedouble/mega =5,
+	/obj/item/weapon/bedsheet/greendouble/mega =5,
+	/obj/item/weapon/bedsheet/orangedouble/mega =5,
+	/obj/item/weapon/bedsheet/purpledouble/mega =5,
+	/obj/item/weapon/bedsheet/rainbowdouble/mega =5,
+	/obj/item/weapon/bedsheet/reddouble/mega =5,
+	/obj/item/weapon/bedsheet/yellowdouble/mega =5,
+	/obj/item/weapon/bedsheet/mimedouble/mega =5,
+	/obj/item/weapon/bedsheet/clowndouble/mega =5,
+	/obj/item/weapon/bedsheet/captaindouble/mega =5,
+	/obj/item/weapon/bedsheet/rddouble/mega =5,
+	/obj/item/weapon/bedsheet/hosdouble/mega =5,
+	/obj/item/weapon/bedsheet/hopdouble/mega =5,
+	/obj/item/weapon/bedsheet/cedouble/mega =5,
+	/obj/item/weapon/bedsheet/browndouble/mega =5,
+	/obj/item/weapon/bedsheet/iandouble/mega =5,
+	/obj/item/weapon/bedsheet/doubledeer/mega =5,
+	/obj/item/weapon/bedsheet/transpridedouble/mega=5,
+	/obj/item/weapon/bedsheet/doublepanpride/mega=5,
+	/obj/item/weapon/bedsheet/doublenonbinpride/mega=5
+	)
+
 /obj/machinery/smartfridge/food
 	name = "\improper Food Showcase"
 	desc = "A refrigerated storage unit for tasty tasty food. Keeps cold foods cold and warm foods warm."
