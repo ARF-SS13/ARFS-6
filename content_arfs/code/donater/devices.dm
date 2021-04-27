@@ -167,7 +167,7 @@
 				to_chat(nif.human,"<span class='notice'>The safety features of the NIF Program prevent you from choosing this size.</span>")
 				return
 			else
-				nif.human.resize(new_size/100, FALSE, FALSE)
+				nif.human.resize(new_size/100, TRUE, TRUE, TRUE)
 				to_chat(nif.human,"<span class='notice'>You set the size to [new_size]%</span>")
 
 			nif.human.visible_message("<span class='warning'>Swirling grey mist envelops [nif.human] as they change size!</span>","<span class='notice'>Swirling streams of nanites wrap around you as you change size!</span>")
@@ -258,7 +258,7 @@
 /obj/item/projectile/beam/andysizelaser/on_hit(var/atom/target)
 	var/mob/living/M = target
 	if(istype(M))
-		M.resize(set_size, FALSE, FALSE)
+		M.resize(set_size, TRUE, TRUE, FALSE)
 		to_chat(M, "<font color='blue'> The beam fires into your body, changing your size!</font>")
 		M.updateicon()
 		return
