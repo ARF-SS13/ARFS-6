@@ -238,7 +238,7 @@ var/list/datum/power/changeling/playerpowerinstances = list()
 		new_character.mind.loaded_from_ckey = picked_ckey
 		new_character.mind.loaded_from_slot = picked_slot
 	//A redraw for good measure
-	new_character.update_icons_all()
+	new_character.regenerate_icons()
 
 	//Less fun code
 	var/mob/living/carbon/human/T = new_character

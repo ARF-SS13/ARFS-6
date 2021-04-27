@@ -35,6 +35,7 @@
 	name = "generic residential key"
 	desc = "A keyring with a small steel key, and a blue fob."
 	icon = 'icons/obj/vehicles.dmi'
+	base_icon = 'icons/obj/vehicles.dmi'
 	icon_state = "quad_keys"
 
 /obj/item/weapon/card/id/residential/rs1

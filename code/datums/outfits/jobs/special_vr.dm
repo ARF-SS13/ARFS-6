@@ -8,7 +8,7 @@
 	glasses = /obj/item/clothing/glasses/omnihud/all
 	id_type = /obj/item/weapon/card/id/centcom
 	pda_type = /obj/item/device/pda/centcom
-	flags = OUTFIT_EXTENDED_SURVIVAL|OUTFIT_COMPREHENSIVE_SURVIVAL
+	flags = OUTFIT_EXTENDED_SURVIVAL|OUTFIT_COMPREHENSIVE_SURVIVAL|OUTFIT_HAS_BACKPACK //ARFS EDIT - BACKPACKS
 
 /decl/hierarchy/outfit/job/emergency_responder
 	name = OUTFIT_JOB_NAME("Emergency Responder")
@@ -20,7 +20,7 @@
 	back = /obj/item/weapon/storage/backpack/satchel
 	id_type = /obj/item/weapon/card/id/centcom/ERT
 	pda_type = /obj/item/device/pda/centcom
-	flags = OUTFIT_EXTENDED_SURVIVAL|OUTFIT_COMPREHENSIVE_SURVIVAL
+	flags = OUTFIT_EXTENDED_SURVIVAL|OUTFIT_COMPREHENSIVE_SURVIVAL|OUTFIT_HAS_BACKPACK //ARFS EDIT - BACKPACKS
 
 	post_equip(var/mob/living/carbon/human/H)
 		..()
