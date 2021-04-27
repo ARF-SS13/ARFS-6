@@ -527,10 +527,11 @@
 		user.update_icons()
 
 	// Inform Admins
-	if(pred == user)
-		add_attack_logs(pred, prey, "Eaten via [belly.name]")
-	else
-		add_attack_logs(user, pred, "Forced to eat [key_name(prey)]")
+	if(prey.ckey != null)
+		if(pred == user)
+			add_attack_logs(pred, prey, "Eaten via [belly.name]")
+		else
+			add_attack_logs(user, pred, "Forced to eat [key_name(prey)]")
 	return TRUE
 
 //
