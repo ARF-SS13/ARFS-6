@@ -84,6 +84,7 @@
 			icon_state = "[icon_dead]-[vore_fullness]"
 		else if(((stat == UNCONSCIOUS) || resting || incapacitated(INCAPACITATION_DISABLED) ) && icon_rest && (vore_icons & SA_ICON_REST))
 			icon_state = "[icon_rest]-[vore_fullness]"
+	update_transform()
 
 /mob/living/simple_mob/proc/will_eat(var/mob/living/M)
 	if(client) //You do this yourself, dick!
@@ -279,7 +280,7 @@
 
 // Riding
 /datum/riding/simple_mob
-	keytype = /obj/item/weapon/material/twohanded/fluff/riding_crop // Crack!
+	keytype = /obj/item/weapon/material/twohanded/riding_crop // Crack!
 	nonhuman_key_exemption = FALSE	// If true, nonhumans who can't hold keys don't need them, like borgs and simplemobs.
 	key_name = "a riding crop"		// What the 'keys' for the thing being rided on would be called.
 	only_one_driver = TRUE			// If true, only the person in 'front' (first on list of riding mobs) can drive.
