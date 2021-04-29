@@ -288,6 +288,7 @@
 	req_access = list()
 	cell_type = /obj/item/weapon/cell/hyper
 	w_class = 4
+	rigsuit_max_pressure = 20 * ONE_ATMOSPHERE
 	armor = list(melee = 10, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 10, rad = 10)
 	boot_type = /obj/item/clothing/shoes/magboots/rig/light
 	initial_modules = list(
