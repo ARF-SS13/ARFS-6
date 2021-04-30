@@ -157,7 +157,7 @@
 /obj/item/weapon/card/id/residential/rm42/laria
 	name = "Laria's Key"
 	desc = "A special keycard for residentals RM42 Laria Darlos is written on it."
-	icon = 'icons/obj/card_vr.dmi'
+	base_icon = 'icons/obj/card_vr.dmi'
 	icon_state = "itg_purple"
 	access = list(8142)
 	registered_name = "Laria Darlos"
@@ -172,7 +172,7 @@
 	age = "32"
 	blood_type = "AB+"
 	access = list(8142)
-	icon = 'icons/obj/card_vr.dmi'
+	base_icon = 'icons/obj/card_vr.dmi'
 	icon_state = "itg_white"
 	gender = "male"
 
