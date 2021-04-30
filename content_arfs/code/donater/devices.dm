@@ -308,6 +308,11 @@
 		/obj/item/rig_module/teleporter
 	)
 
+/obj/item/weapon/rig/light/hacker/fluff/andy/New()
+	..()
+	cell.self_recharge = 1
+	START_PROCESSING(SSobj, cell)
+
 /obj/item/rig_module/rescue_pharm/andy
 
 	max_reagent_volume = 30 //Regen to this volume
