@@ -463,7 +463,7 @@
 
 /obj/item/weapon/card/id/residential/master_key
 	name = "Master Residential Key"
-	icon = 'content_arfs/icons/obj/misc.dmi'
+	base_icon = 'content_arfs/icons/obj/misc.dmi'
 	icon_state = "master_key"
 	access = list(8001, 8002, 8003, 8004, 8005, 8006, 8007, 8008, 8009, 8010, 8011, 8012, 8013, 8014, 8015, 8016, 8101, 8102, 8103, 8104, 8105, 8106, 8107, 8108, 8109, 8110, 8111, 8112, 8113, 8142, 8100, 8201, 8202, 8203, 8204, 8206, 8207, 8208)
 
