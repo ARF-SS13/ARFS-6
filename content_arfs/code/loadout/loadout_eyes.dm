@@ -18,3 +18,12 @@
 	path = /obj/item/clothing/glasses/omnihud/all
 	cost = 2
 	allowed_roles = list("Colony Director","Head of Personnel","Blueshield Guard")
+
+/datum/gear/eyes/arglasses/visor
+	display_name = "AR visor"
+	path = /obj/item/clothing/glasses/omnihud/visor
+
+/datum/gear/eyes/arglasses/visor/New()
+	..()
+	gear_tweaks = list(gear_tweak_free_color_choice)
+/datum/gear/eyes/arglassespres

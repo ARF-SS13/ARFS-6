@@ -25,3 +25,11 @@
 	desc = "A blue hammock with two white stripes along one side and a black hexagonal pattern on the other."
 	icon = 'content_arfs/icons/obj/custom_furniture_yw.dmi'
 	icon_state = "kbraid_hammock_lower"
+
+// ******
+// Luke Vale
+// ******
+/obj/item/weapon/storage/box/tgs
+	name = "box of RTGs"
+	desc = "A box full of rose tinted glasses, with 'property of Luna' written on the label."
+	starts_with = list(/obj/item/clothing/glasses/omnihud/visor/rtgs = 7)
