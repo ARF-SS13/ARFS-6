@@ -124,3 +124,12 @@
 	ckeywhitelist = list("dopiotl","kbraid")
 	character_name = list("Jeanne Petite","Eili","Braid")
 
+// L CKEYS
+//lukevale
+//Luna
+/datum/gear/fluff/rosetinted
+	path = /obj/item/weapon/storage/box/tgs
+	display_name = "rose tinted glasses box"
+	description = "a box of RTGs"
+	ckeywhitelist = list("lukevale")
+	character_name = list("Luna")
