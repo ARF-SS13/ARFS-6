@@ -450,7 +450,7 @@
 	H.update_transform()
 
 /datum/trait/neutral/waterbreathing
-	name = "Waterbreathing"
+	name = "Water Breathing"
 	desc = "Allows you to breath in water."
 	cost = 0
 	custom_only = TRUE
