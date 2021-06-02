@@ -56,7 +56,10 @@
 //Called when face-down in the water or otherwise over their head.
 // Return: TRUE for able to breathe fine in water.
 /datum/species/custom/can_breathe_water()
-	return ..()
+	if (water_breath)
+		return TRUE
+	else
+		return FALSE
 
 //Called during handle_environment in Life() ticks.
 // Return: Not used.
