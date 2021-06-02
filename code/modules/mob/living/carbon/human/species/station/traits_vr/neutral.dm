@@ -448,3 +448,10 @@
 /datum/trait/neutral/thinner/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
 	H.update_transform()
+
+/datum/trait/neutral/waterbreathing
+	name = "Waterbreathing"
+	desc = "Allows you to breath in water."
+	cost = 0
+	custom_only = TRUE
+	var_changes = list("water_breath" = 1)
