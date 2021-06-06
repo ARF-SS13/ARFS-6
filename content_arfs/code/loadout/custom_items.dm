@@ -25,8 +25,8 @@
 	path = /obj/item/weapon/reagent_containers/food/snacks/cookie/curious
 	display_name = "Curious Cookie"
 	description = "A very curious cookie. Do not eat"
-	ckeywhitelist = list("andyman105", "dameonowen")
-	character_name = list("Amber Owen", "Amber", "Scarlet Owen")
+	ckeywhitelist = list("andyman105", "dameonowen", "thingpony")
+	character_name = list("Amber Owen", "Amber", "Scarlet Owen", "Emma Miller")
 
 // /datum/gear/fluff/dameon_3
 //	path = /obj/item/device/communicator/andy
