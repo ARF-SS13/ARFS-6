@@ -23,3 +23,4 @@
 #define P_TYPE_BUG		"bug"
 
 #define M_GHOSTED		"ghosted" //A ghost is using their phase move
+#define MAP_LEVEL_VORESPAWN	0x100 // Z-levels players are allowed to late join to via vorish means. Usually non-dangerous locations.
