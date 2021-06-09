@@ -89,7 +89,7 @@
 		return ..()
 
 /datum/map_z_level/arfs/ship
-	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES
+	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_VORESPAWN
 
 /datum/map_z_level/arfs/ship/one
 	z = Z_LEVEL_ARFS_ONE
@@ -112,30 +112,37 @@
 /datum/map_z_level/arfs/centcom
 	z = Z_LEVEL_CENTCOM_ARFS
 	name = "Centcom"
-	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_CONTACT
+	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES|MAP_LEVEL_VORESPAWN
 
 /datum/map_z_level/arfs/empty
 	z = Z_LEVEL_EMPTY_ARFS
 	name = "Empty Space"
-	flags = MAP_LEVEL_PLAYER
+	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_VORESPAWN
 	transit_chance = 50
 
 /datum/map_z_level/arfs/abandoned
 	z = Z_LEVEL_ABANDONED_ASTEROID_ARFS
 	name = "Empty Space"
-	flags = MAP_LEVEL_PLAYER
+	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_VORESPAWN
 	transit_chance = 10
 
 /datum/map_z_level/arfs/mine
 	name = "Asteroid"
-	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER
+	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_VORESPAWN
 	base_turf = /turf/simulated/mineral/floor
 
 /datum/map_z_level/arfs/mine/top
 	z = Z_LEVEL_MINING_ARFS
 	name = "Asteroid Topside"
 	transit_chance = 30
+	flags = MAP_LEVEL_VORESPAWN
 
 /datum/map_z_level/arfs/mine/bottom
 	z = Z_LEVEL_MINING_DANGER_ARFS
 	name = "Asteroid Underdark"
+	flags = MAP_LEVEL_VORESPAWN
+
+/datum/map_z_level/arfs/residential
+	z = Z_LEVEL_RESIDENTIAL_ARFS
+	name = "ARFS Residential District"
+	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_VORESPAWN
