@@ -49,6 +49,8 @@ var/list/datum/power/changeling/playerpowerinstances = list()
 	for(var/language in languages)
 		mind.changeling.absorbed_languages |= language
 
+	mind.changeling.changelingID = real_name
+
 	var/mob/living/carbon/human/H = src
 	if(istype(H))
 		var/datum/absorbed_dna/newDNA = new(H.real_name, H.dna, H.species.name, H.languages, H.identifying_gender, H.flavor_texts)
