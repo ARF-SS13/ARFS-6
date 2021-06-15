@@ -16993,6 +16993,9 @@
 	dir = 1
 	},
 /obj/structure/disposalpipe/trunk,
+/obj/machinery/alarm{
+	pixel_y = 22
+	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/bar)
 "aIo" = (
@@ -17417,9 +17420,20 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/cryo)
 "aJv" = (
-/obj/machinery/status_display,
-/turf/simulated/wall,
-/area/crew_quarters/bar)
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/corner/grey{
+	dir = 9;
+	tag = "icon-corner_white (NORTHWEST)"
+	},
+/obj/machinery/vending/kink,
+/turf/simulated/floor/tiled/dark,
+/area/hallway/primary/fore)
 "aJw" = (
 /obj/random/maintenance/engineering,
 /obj/structure/closet/crate,
@@ -17707,10 +17721,6 @@
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
-	},
-/obj/machinery/alarm{
-	dir = 4;
-	pixel_x = -25
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/bar)
@@ -21307,9 +21317,12 @@
 /turf/simulated/floor/tiled/dark,
 /area/rnd/lab)
 "aQw" = (
-/obj/machinery/floodlight,
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/airlock/glass{
+	name = "Bar"
+	},
 /turf/simulated/floor/plating,
-/area/maintenance/research)
+/area/crew_quarters/bar)
 "aQx" = (
 /obj/machinery/computer/transhuman/resleeving{
 	dir = 8
@@ -21616,36 +21629,21 @@
 /turf/simulated/floor/tiled/dark,
 /area/rnd/lab)
 "aRe" = (
-/obj/structure/table/standard,
-/obj/item/device/electronic_assembly/large{
-	pixel_y = 6
-	},
-/obj/machinery/recharger/wallcharger{
-	pixel_y = 22
+/obj/structure/bed/chair/office/dark{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/misc_lab)
 "aRf" = (
-/obj/structure/table/standard,
-/obj/item/device/integrated_electronics/wirer{
-	pixel_x = 5
-	},
-/obj/item/device/integrated_electronics/wirer{
-	pixel_x = 5
-	},
-/obj/item/device/integrated_electronics/debugger{
-	pixel_x = -5
-	},
-/obj/item/device/integrated_electronics/debugger{
-	pixel_x = -5
-	},
-/turf/simulated/floor/tiled/dark,
-/area/rnd/misc_lab)
+/obj/machinery/status_display,
+/turf/simulated/wall,
+/area/crew_quarters/bar)
 "aRi" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/bag/circuits/basic,
-/obj/item/weapon/storage/bag/circuits/basic,
-/obj/machinery/light,
+/obj/item/weapon/storage/belt/utility/full,
+/obj/item/weapon/storage/belt/utility/full,
+/obj/item/weapon/storage/belt/utility/full,
+/obj/item/weapon/storage/belt/utility/full,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/misc_lab)
 "aRj" = (
@@ -26914,15 +26912,15 @@
 /turf/simulated/floor/plating,
 /area/maintenance/research)
 "baK" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
 /obj/structure/closet/crate,
 /obj/random/maintenance/research,
 /obj/random/maintenance/research,
 /obj/random/maintenance/research,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/research)
 "baL" = (
@@ -30029,9 +30027,6 @@
 /area/rnd/misc_lab)
 "bho" = (
 /obj/machinery/media/jukebox,
-/obj/machinery/light{
-	dir = 1
-	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/misc_lab)
 "bhp" = (
@@ -30580,14 +30575,15 @@
 /turf/simulated/floor/plating,
 /area/maintenance/research)
 "biG" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
+/obj/structure/table/standard,
+/obj/item/device/electronic_assembly/large{
+	pixel_y = 6
 	},
-/obj/random/junk,
-/turf/simulated/floor/plating,
-/area/maintenance/research)
+/obj/machinery/recharger/wallcharger{
+	pixel_y = 22
+	},
+/turf/simulated/floor/tiled/dark,
+/area/rnd/misc_lab)
 "biH" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -30785,18 +30781,20 @@
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research_foyer)
 "biX" = (
-/obj/structure/bed/chair/office/dark{
-	dir = 4
+/obj/structure/table/standard,
+/obj/item/device/integrated_electronics/debugger{
+	pixel_x = -5
+	},
+/obj/item/device/integrated_electronics/wirer{
+	pixel_x = 5
+	},
+/obj/machinery/light{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/misc_lab)
 "biY" = (
-/obj/item/device/integrated_circuit_printer,
 /obj/structure/table/standard,
-/obj/machinery/camera/network/research{
-	c_tag = "SCI -Circut Office";
-	dir = 1
-	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/misc_lab)
 "biZ" = (
@@ -31529,15 +31527,17 @@
 	pixel_y = -32
 	},
 /obj/structure/cable/green,
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/fiftyspawner/copper,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/misc_lab)
 "bkL" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
+/obj/machinery/floodlight,
 /turf/simulated/floor/plating,
 /area/maintenance/research)
 "bkM" = (
@@ -34298,6 +34298,7 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
 	},
+/obj/fiftyspawner/copper,
 /turf/simulated/floor/tiled/dark,
 /area/assembly/robotics)
 "bro" = (
@@ -41825,6 +41826,11 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
+"dMo" = (
+/obj/structure/table/standard,
+/obj/item/device/multitool,
+/turf/simulated/floor/tiled/dark,
+/area/rnd/misc_lab)
 "dNl" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/white/border,
@@ -45310,6 +45316,11 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/engine_monitoring)
+"iuO" = (
+/obj/structure/table/standard,
+/obj/item/device/integrated_circuit_printer,
+/turf/simulated/floor/tiled/dark,
+/area/rnd/misc_lab)
 "iuT" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -46705,6 +46716,15 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cafeteria)
+"kpY" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/research)
 "krw" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -47366,6 +47386,12 @@
 /obj/machinery/ai_status_display,
 /turf/simulated/wall,
 /area/crew_quarters/bar)
+"lwP" = (
+/obj/structure/table/standard,
+/obj/machinery/light,
+/obj/item/weapon/cell/hyper,
+/turf/simulated/floor/tiled/dark,
+/area/rnd/misc_lab)
 "lxn" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/machinery/camera/autoname,
@@ -50416,6 +50442,11 @@
 /obj/machinery/media/jukebox,
 /turf/simulated/floor/tiled/dark,
 /area/engineering/break_room)
+"pzO" = (
+/obj/structure/table/standard,
+/obj/item/weapon/storage/bag/circuits/basic,
+/turf/simulated/floor/tiled/dark,
+/area/rnd/misc_lab)
 "pzV" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -54442,6 +54473,19 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/armoury)
+"uFK" = (
+/obj/structure/table/rack,
+/obj/fiftyspawner/copper,
+/obj/fiftyspawner/copper,
+/obj/fiftyspawner/copper,
+/obj/fiftyspawner/copper,
+/obj/fiftyspawner/copper,
+/obj/fiftyspawner/copper,
+/obj/fiftyspawner/copper,
+/obj/fiftyspawner/copper,
+/obj/fiftyspawner/copper,
+/turf/simulated/floor/tiled/dark,
+/area/rnd/research_storage)
 "uGq" = (
 /obj/effect/floor_decal/corner/lightgrey{
 	dir = 9
@@ -91898,7 +91942,7 @@ aFM
 aGF
 aHn
 aHO
-ayN
+aJv
 bvF
 ayN
 aHo
@@ -92670,9 +92714,9 @@ aFt
 aFt
 aHP
 bRI
+aQw
 bRI
-aJv
-aFt
+aRf
 bRI
 aWs
 bRI
@@ -93756,7 +93800,7 @@ bnK
 boy
 bpk
 bqf
-bqU
+uFK
 boy
 aov
 aov
@@ -95546,7 +95590,7 @@ blx
 bho
 bih
 bic
-biX
+bih
 biY
 bib
 bmi
@@ -95800,10 +95844,10 @@ bez
 aSz
 bew
 bib
-bib
-bib
+biG
+bih
 aRe
-aRf
+bih
 aRi
 bib
 bmj
@@ -96056,12 +96100,12 @@ aov
 bez
 bao
 biF
-bda
-blz
-brS
-brS
 bib
-bib
+biX
+pzO
+iuO
+dMo
+lwP
 bib
 bhT
 bhT
@@ -96312,14 +96356,14 @@ aaa
 aaa
 bez
 baK
-bfN
-bfN
-bfN
-bfN
-bjd
-bkL
-biG
 bew
+brS
+brS
+brS
+brS
+brS
+brS
+brS
 aZZ
 aZZ
 bnR
@@ -96568,14 +96612,14 @@ aov
 aaa
 aaa
 bez
-bez
-bez
-bgt
-aQw
-biE
-bdK
-bez
 bkM
+bfN
+bfN
+bfN
+kpY
+kpY
+bfN
+bfN
 bfN
 biH
 baa
@@ -96824,14 +96868,14 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
 bez
-bez
-bez
-bez
-bez
-bez
+bda
+blz
+bgt
+bkL
+biF
+bew
+bew
 bkN
 blz
 bmk
@@ -97081,13 +97125,13 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aov
-aaa
-aaa
-aaa
+bez
+bez
+bez
+bez
+bez
+bez
+bez
 bez
 bez
 bez
