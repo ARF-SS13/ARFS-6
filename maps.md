@@ -7,7 +7,7 @@
 1. [Asteroid](#asteroid)
 1. [Mining](#mining)
 1. [Underdark](#underdark)
-1. [NCS Serenity / Residential](#ncs-serenity-/-residential)
+1. [Residential](#residential)
 
 ---
 
@@ -53,7 +53,7 @@
 
 ---
 
-## NCS Serenity / Residential
+## Residential
 <br/>
 
-![NCS Serenity / Residential](icons/_nanomaps/arfs_nanomap_z9.png)
+![Residential](icons/_nanomaps/arfs_nanomap_z9.png)
