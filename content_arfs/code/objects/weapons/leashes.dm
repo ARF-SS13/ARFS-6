@@ -36,10 +36,10 @@
         return
 
     if(ishuman(possible_victim))
-        var/mob/living/carbon/human/HV //Human Victim
-        if(istype(HV.wear_mask,/obj/item/clothing/accessory/collar) || HV.w_uniform.contents.Find(/obj/item/clothing/accessory/collar))
+        var/mob/living/carbon/human/HV = possible_victim //Human Victim
+
+        if((typesof(/obj/item/clothing/accessory/collar) in HV.w_uniform.contents))
             leashthatboi(HV)
-            return
         else
             to_chat(user,"They aren't wearing a collar, how can you clip this leash onto them dummy??!!?!!?!?!?!?!?!?")
             return
@@ -47,20 +47,21 @@
         leashthatboi(possible_victim, user)
 
 /obj/item/weapon/leash/proc/leashthatboi(mob/living/poorfella as mob, mob/user as mob)
-    visible_message("[user] starts to clip the [src] onto [poorfella]")
-    if(do_after(user, 40))
-        to_chat(user,"You clip the [src] onto [poorfella]")
-        to_chat(poorfella,"[user] clips the [src] onto you.")
+    user.visible_message("<span class='danger'>[user] starts to clip the [src] onto [poorfella]</span>")
+    if(do_after(user, 30))
+        if(in_range(user,poorfella))
+            to_chat(user,"You clip the [src] onto [poorfella]")
+            to_chat(poorfella,"[user] clips the [src] onto you.")
 
-        victim = poorfella
-        poorfella.leashed = user
-        poorfella.update_canmove()
+            victim = poorfella
+            poorfella.leashed = user
+            poorfella.update_canmove()
 
-       	playsound(src, 'sound/effects/seatbelt.ogg', 50, 1)
+            playsound(src, 'sound/effects/seatbelt.ogg', 50, 1)
 
-        user.start_pulling(poorfella)
+            user.start_pulling(poorfella)
 
-        START_PROCESSING(SSobj,src)
+            START_PROCESSING(SSobj,src)
 
 /obj/item/weapon/leash/proc/deleash()
     if(isliving(loc))
