@@ -16,7 +16,8 @@
 /obj/item/weapon/leash
     name = "leash"
     desc = "When there's a leash, there's... a way?"
-	icon_state = "leash"
+
+    icon_state = "leash"
 
     icon = 'content_arfs/icons/obj/weapon/kinky.dmi'
 
@@ -34,9 +35,9 @@
         to_chat(user,"You can't clip multiple people? You some kinda sadist magician, what the fuck how, we still have covid yknow, gotta let them have their distance. . w.")
         return
 
-    if(ishuman(possible_victim, user))
+    if(ishuman(possible_victim))
         var/mob/living/carbon/human/HV //Human Victim
-        if(possible_victim equipped with collar or has collar in uniform)
+        if(istype(HV.wear_mask,/obj/item/clothing/accessory/collar) || HV.w_uniform.contents.Find(/obj/item/clothing/accessory/collar))
             leashthatboi(HV)
             return
         else
@@ -45,18 +46,19 @@
     else
         leashthatboi(possible_victim, user)
 
-/obj/item/weapon/leash/proc/leashthatboi(mob/poorfella as mob, mob/user as mob)
+/obj/item/weapon/leash/proc/leashthatboi(mob/living/poorfella as mob, mob/user as mob)
+    visible_message("[user] starts to clip the [src] onto [poorfella]")
     if(do_after(user, 40))
         to_chat(user,"You clip the [src] onto [poorfella]")
         to_chat(poorfella,"[user] clips the [src] onto you.")
 
-        victim = possible_victim
-        possible_victim.leashed = user
-        possible_victim.update_canmove()
+        victim = poorfella
+        poorfella.leashed = user
+        poorfella.update_canmove()
 
        	playsound(src, 'sound/effects/seatbelt.ogg', 50, 1)
 
-        user.start_pulling(possible_victim)
+        user.start_pulling(poorfella)
 
         START_PROCESSING(SSobj,src)
 
@@ -65,7 +67,7 @@
         var/mob/living/leashholder = loc
 
         if(victim)
-            to_chat([leashholder],"You unleash [victim]")
+            to_chat(leashholder,"You unleash [victim]")
             to_chat(victim,"[leashholder] unclips the leash from you!")
 
             if(victim == leashholder.pulling)
@@ -80,14 +82,14 @@
 
 /obj/item/weapon/leash/Destroy()
     deleash()
-	STOP_PROCESSING(SSobj, src)
-	return ..()
+    STOP_PROCESSING(SSobj, src)
+    return ..()
 
 /obj/item/weapon/leash/process()
     if(!victim)
         STOP_PROCESSING(SSobj,src)
 
-	if(!victim.pulledby == loc || !victim.pulledby)
+    if(!victim.pulledby == loc || !victim.pulledby)
         deleash()
 
 /obj/item/weapon/leash/dropped()
