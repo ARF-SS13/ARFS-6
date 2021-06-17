@@ -8,8 +8,7 @@
 1. [Mining](#mining)
 1. [Underdark](#underdark)
 1. [NCS Serenity / Residential](#ncs-serenity-/-residential)
-<br/>
-<br/>
+
 ---
 
 ## Level One - GUTS
