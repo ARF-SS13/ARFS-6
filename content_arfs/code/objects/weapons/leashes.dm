@@ -27,19 +27,32 @@
     if(user.stat || user.lying)
         return
 
+    if(possible_victim == user)
+        to_chat(user,"You can't leash yourself!")
+        return
+
     if(victim == possible_victim)
         deleash()
         return
 
     if(victim)
-        to_chat(user,"You can't clip multiple people? You some kinda sadist magician, what the fuck how, we still have covid yknow, gotta let them have their distance. . w.")
+        to_chat(user,"You can't leash multiple people..!")
         return
 
     if(ishuman(possible_victim))
         var/mob/living/carbon/human/HV = possible_victim //Human Victim
 
-        if((typesof(/obj/item/clothing/accessory/collar) in HV.w_uniform.contents))
-            leashthatboi(HV)
+        var/canLeash = 0
+
+        if(HV.w_uniform)
+            var/obj/item/clothing/under/VC = HV.w_uniform // Victim's clothes
+
+            // Very dumbass way to check for a collar being equipped, fuck off, I tried almost everything ; _;
+            for(var/obj/item/clothing/accessory/collar/C in VC.contents)
+                canLeash = 1
+        
+        if(canLeash)
+            leashthatboi(HV,user)
         else
             to_chat(user,"They aren't wearing a collar, how can you clip this leash onto them dummy??!!?!!?!?!?!?!?!?")
             return
@@ -76,9 +89,11 @@
 
             playsound(src, 'sound/effects/seatbelt.ogg', 50, 1)
 
+            victim.leashed = 0
             victim.update_canmove()
             victim = null
     else
+        victim.leashed = 0
         victim = null
 
 /obj/item/weapon/leash/Destroy()
