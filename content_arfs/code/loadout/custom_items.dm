@@ -66,6 +66,8 @@
 	path = /obj/item/weapon/rig/light/hacker/fluff/andy
 	display_name = "The Enormous RIG"
 	description = "A modified version of the Hacker RIG"
+	ckeywhitelist = list("andyman105", "dameonowen")
+	character_name = null
 
 /datum/gear/fluff/dameon_10
 	path = /obj/item/clothing/mask/breath/transparent
