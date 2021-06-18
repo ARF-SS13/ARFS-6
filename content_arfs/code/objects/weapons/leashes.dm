@@ -28,7 +28,7 @@
         return
 
     if(possible_victim == user)
-        to_chat(user,"You can't leash yourself!")
+        to_chat(user,"<span class='notice'>You can't leash yourself!</span>")
         return
 
     if(victim == possible_victim)
@@ -36,7 +36,7 @@
         return
 
     if(victim)
-        to_chat(user,"You can't leash multiple people..!")
+        to_chat(user,"<span class='notice'>You can't leash multiple people..!</span>")
         return
 
     if(ishuman(possible_victim))
@@ -54,17 +54,17 @@
         if(canLeash)
             leashthatboi(HV,user)
         else
-            to_chat(user,"They aren't wearing a collar, how can you clip this leash onto them dummy??!!?!!?!?!?!?!?!?")
+            to_chat(user,"<span class='notice'>They aren't wearing a collar, you can't find a good clipping point.</span>")
             return
     else
         leashthatboi(possible_victim, user)
 
 /obj/item/weapon/leash/proc/leashthatboi(mob/living/poorfella as mob, mob/user as mob)
-    user.visible_message("<span class='danger'>[user] starts to clip the [src] onto [poorfella]</span>")
+    user.visible_message("<span class='warning'>[user] starts to clip the [src] onto [poorfella]</span>")
     if(do_after(user, 30))
         if(in_range(user,poorfella))
-            to_chat(user,"You clip the [src] onto [poorfella]")
-            to_chat(poorfella,"[user] clips the [src] onto you.")
+            to_chat(user,"<span class='notice'>You clip the [src] onto [poorfella]</span>")
+            to_chat(poorfella,"<span class='notice'>[user] clips the [src] onto you.</span>")
 
             victim = poorfella
             poorfella.leashed = user
