@@ -258,8 +258,8 @@
 	path = /obj/item/weapon/card/id/residential/rm2
 	display_name = "RM2 keys"
 	description = "residential"
-	ckeywhitelist = list("cebutris", "gremlingss", "disguiser", "siorkillbow", "lukevale")
-	character_name = list("Elizabeth Nayala", "Abby Gliese", "Rak Woodrow", "Hoi Blackburn", "Hepsie Mull", "Luna")
+	ckeywhitelist = list("cebutris", "gremlingss", "disguiser", "siorkillbow", "lukevale", "thingpony")
+	character_name = list("Elizabeth Nayala", "Abby Gliese", "Rak Woodrow", "Hoi Blackburn", "Hepsie Mull", "Luna", "Iris Miller")
 
 /datum/gear/fluff/res_key_rm3
 	path = /obj/item/weapon/card/id/residential/rm3
@@ -280,7 +280,7 @@
 	display_name = "RM5 keys"
 	description = "residential"
 	ckeywhitelist = list("theamazingdaito", "thingpony")
-	character_name = list("Madalyn Rose", "Kitsuno Harume", "Dawn Rani")
+	character_name = list("Madalyn Rose", "Kitsuno Harume", "Dawn Rani",  "Melanie Fawyer")
 
 /datum/gear/fluff/res_key_rm6
 	path = /obj/item/weapon/card/id/residential/rm6
@@ -435,7 +435,7 @@
 	display_name = "RS14 keys"
 	description = "residential"
 	ckeywhitelist = list("phantomwolfzero","disguiser", "thingpony")
-	character_name = list("Kobalt Frevath", "Rak Woodrow","Tak Flourin", "Dottie")
+	character_name = list("Kobalt Frevath", "Rak Woodrow","Tak Flourin", "Dottie Frevath")
 
 /datum/gear/fluff/res_key_rs15
 	path = /obj/item/weapon/card/id/residential/rs15
@@ -456,8 +456,8 @@
 	path = /obj/item/weapon/card/id/residential/mansion
 	display_name = "Mansion keys"
 	description = "residential"
-	ckeywhitelist = list("andyman105", "dameonowen", "secondattemps", "thingpony", "hagawaga","brimcon", "lukevale")
-	character_name = list("Dameon Owen", "Amber Owen", "Amber", "Jake Owen", "Lilith Owen", "Iris Miller", "Brian Owen", "Percy Owen", "Ruby Flare", "Zephyr Sharpe", "Peter Sharpe", "Eve", "Ashlyn", "Agalon", "Lana Xavier", "Scryden Sako", "Scarlet Owen", "Luna")
+	ckeywhitelist = list("andyman105", "dameonowen", "secondattemps", "thingpony", "hagawaga","brimcon", "lukevale", "foxyrose")
+	character_name = list("Dameon Owen", "Amber Owen", "Amber", "Jake Owen", "Lilith Owen", "Iris Miller", "Brian Owen", "Percy Owen", "Ruby Flare", "Zephyr Sharpe", "Peter Sharpe", "Eve", "Ashlyn", "Agalon", "Lana Xavier", "Scryden Sako", "Scarlet Owen", "Luna","Emma Miller", "Aiden Miller")
 
 //Master Key. Why wasn't this made before? So much easier!
 
