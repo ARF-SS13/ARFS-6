@@ -252,7 +252,7 @@
 	display_name = "RM1 keys"
 	description = "residential"
 	ckeywhitelist = list("thingpony", "siorkillbow", "cebutris", "dameonowen", "brimcon", "foxyrose", "lukevale", "andyman105")
-	character_name = list("Iris Miller", "Elizabeth Nayala", "Hepsie Mull", "Amber Owen", "Amber", "Scryden Sako", "Emma Miller", "Aiden Miller", "Scarlet Owen", "Luna")
+	character_name = list("Iris Miller", "Elizabeth Nayala", "Hepsie Mull", "Amber Owen", "Amber", "Scryden Sako", "Emma Miller", "Aiden Miller", "Scarlet Owen", "Luna", "Dameon Owen")
 
 /datum/gear/fluff/res_key_rm2
 	path = /obj/item/weapon/card/id/residential/rm2
