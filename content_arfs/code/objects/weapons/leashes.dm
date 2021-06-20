@@ -2,6 +2,42 @@
 /mob/living/
     var/leashed = null
 
+/mob/living/process_resist()
+	. = ..()
+
+	if(leashed)
+		resist_leash()
+
+/mob/living/proc/resist_leash()
+	if(!pulledby)
+		leashed = 0 // failsafe incase no one is pulling them.
+		update_canmove()
+
+	var/obj/item/weapon/leash/L
+	for(var/obj/item/weapon/leash/Leash in pulledby)
+		if(Leash.victim == src)
+			L = Leash
+	
+	visible_message("<span class='danger'>[src] is trying to unclip the [L]!</span>",
+		"<span class='warning'>You attempt to unclip the [L].</span>")
+	if(do_after(src, 3 SECONDS, target = src))
+		if(!pulledby || !leashed)
+			update_canmove()
+			return
+
+		visible_message("<span class='danger'>[src] manages to unclip the [L]!</span>",
+			"<span class='warning'>You successfully unclip the [L].</span>")
+		
+		L.victim = null
+		leashed = 0
+
+		update_canmove()
+
+	else
+		to_chat(src, "<span class='warning'>You fail to unclip the [L].</span>")
+
+	return
+
 /*
 /mob/living/stop_pulling()
     if(isliving(pulling))
@@ -24,40 +60,44 @@
     var/mob/living/victim = null
 
 /obj/item/weapon/leash/attack(mob/possible_victim as mob, mob/user as mob)
-    if(user.stat || user.lying)
-        return
+	if(user.stat || user.lying)
+		return
 
-    if(possible_victim == user)
-        to_chat(user,"<span class='notice'>You can't leash yourself!</span>")
-        return
+	if(possible_victim == user)
+		to_chat(user,"<span class='notice'>You can't leash yourself!</span>")
+		return
 
-    if(victim == possible_victim)
-        deleash()
-        return
+	if(victim == possible_victim)
+		deleash()
+		return
 
-    if(victim)
-        to_chat(user,"<span class='notice'>You can't leash multiple people..!</span>")
-        return
+	if(victim)
+		to_chat(user,"<span class='notice'>You can't leash multiple people..!</span>")
+		return
 
-    if(ishuman(possible_victim))
-        var/mob/living/carbon/human/HV = possible_victim //Human Victim
+	if(victim.leashed)
+		to_chat(user,"<span class='notice'>They're already leashed..!</span>")
+		return
 
-        var/canLeash = 0
+	if(ishuman(possible_victim))
+		var/mob/living/carbon/human/HV = possible_victim //Human Victim
 
-        if(HV.w_uniform)
-            var/obj/item/clothing/under/VC = HV.w_uniform // Victim's clothes
+		var/canLeash = 0
 
-            // Very dumbass way to check for a collar being equipped, fuck off, I tried almost everything ; _;
-            for(var/obj/item/clothing/accessory/collar/C in VC.contents)
-                canLeash = 1
-        
-        if(canLeash)
-            leashthatboi(HV,user)
-        else
-            to_chat(user,"<span class='notice'>They aren't wearing a collar, you can't find a good clipping point.</span>")
-            return
-    else
-        leashthatboi(possible_victim, user)
+		if(HV.w_uniform)
+			var/obj/item/clothing/under/VC = HV.w_uniform // Victim's clothes
+
+			// Very dumbass way to check for a collar being equipped, fuck off, I tried almost everything ; _;
+			for(var/obj/item/clothing/accessory/collar/C in VC.contents)
+				canLeash = 1
+
+		if(canLeash)
+			leashthatboi(HV,user)
+		else
+			to_chat(user,"<span class='notice'>They aren't wearing a collar, you can't find a good clipping point.</span>")
+			return
+	else
+		leashthatboi(possible_victim, user)
 
 /obj/item/weapon/leash/proc/leashthatboi(mob/living/poorfella as mob, mob/user as mob)
     user.visible_message("<span class='warning'>[user] starts to clip the [src] onto [poorfella]</span>")
@@ -105,7 +145,7 @@
     if(!victim)
         STOP_PROCESSING(SSobj,src)
 
-    if(!victim.pulledby == loc || !victim.pulledby)
+    if(!victim.pulledby == loc || !victim.pulledby || !victim.leashed)
         deleash()
 
 /obj/item/weapon/leash/dropped()
