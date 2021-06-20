@@ -42,4 +42,5 @@
 		"Slacker",
 		"Nanotrasen Peace Officer",
 		"Prisoner",
-		"Belly Filler")
+		"Belly Filler",
+		"Resident")
