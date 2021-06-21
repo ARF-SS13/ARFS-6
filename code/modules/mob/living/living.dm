@@ -846,8 +846,7 @@
 			lying = incapacitated(INCAPACITATION_KNOCKDOWN)
 			canmove = !incapacitated(INCAPACITATION_DISABLED)
 
-	if(leashed) // ARFS ADD: LEASHES BOIIIIIIIIIIIIIIIIIIIII
-		canmove = 0
+	if(leashed)	canmove = 0 // ARFS ADD: LEASHES YA YEET
 
 	if(lying)
 		density = 0
