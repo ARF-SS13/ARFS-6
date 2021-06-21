@@ -292,19 +292,12 @@
 	armor = list(melee = 10, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 10, rad = 10)
 	boot_type = /obj/item/clothing/shoes/magboots/rig/light
 	initial_modules = list(
-		/obj/item/rig_module/ai_container,
 		/obj/item/rig_module/power_sink,
 		/obj/item/rig_module/vision/multi,
 		/obj/item/rig_module/maneuvering_jets,
 		/obj/item/rig_module/device/healthscanner,
 		/obj/item/rig_module/rescue_pharm/andy,
-		/obj/item/rig_module/mounted,
-		/obj/item/rig_module/mounted/taser,
-		/obj/item/rig_module/mounted/egun,
-		/obj/item/rig_module/grenade_launcher,
-		/obj/item/rig_module/device/plasmacutter,
 		/obj/item/rig_module/sprinter,
-		/obj/item/rig_module/stealth_field,
 		/obj/item/rig_module/teleporter
 	)
 
