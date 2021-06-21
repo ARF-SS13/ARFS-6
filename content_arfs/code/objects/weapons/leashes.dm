@@ -1,4 +1,15 @@
 // Leashes! Made by a idiot
+
+// ------- *EXTERNAL EDITS* -------
+// IF LEASHES SUDDENLY STOP WORKING AND YOU CAN MOVE WHEN LEASHED.
+// ENSURE THAT THIS CODE IS IN code\modules\mob\living\living.dm JUST ABOVE if(lying)
+/*
+	if(leashed) 
+		canmove = 0
+*/
+// Thanks c:
+
+
 /mob/living/
     var/leashed = null
 
