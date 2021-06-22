@@ -1,13 +1,14 @@
 /datum/job/assistant
     alt_titles = list(
-    	"Tourist",
-    	"Businessman",
-    	"Trader",
     	"Assistant",
     	"Technical Assistant",
     	"Medical Intern",
     	"Research Assistant",
-    	"Passenger",
+    	"Passenger")
+	/*
+		"Tourist",
+    	"Businessman",
+    	"Trader",
 		"Entertainer",
 		"Lifeguard",
 		"Waiter",
@@ -43,4 +44,4 @@
 		"Nanotrasen Peace Officer",
 		"Prisoner",
 		"Belly Filler",
-		"Resident")
+		"Resident") */
