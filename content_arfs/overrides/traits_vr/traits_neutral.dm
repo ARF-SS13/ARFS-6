@@ -144,3 +144,41 @@
 
 	var/mob/living/carbon/human/C = src
 	C.mob_size = !C.mob_size
+
+//Accents
+#define ACCENTS_LIST_ALL list(/datum/trait/neutral/autohiss_unathi,/datum/trait/neutral/autohiss_tajaran,/datum/trait/autohiss_vassilian,/datum/trait/neutral/accent_swedish,/datum/trait/neutral/accent_japenese)
+
+/datum/trait/neutral/accent_swedish
+	name = "Accent (Swedish)"
+	desc = "You have a noticeable Swedish accent. Uses the autohiss function, which must be enabled in-game with Toggle-Auto-Hiss. Excludes: Other accents/auto-hisses"
+	cost = 0
+	excludes = ACCENTS_LIST_ALL
+	var_changes = list(autohiss_basic_map = list(
+		"j" = list("y"),
+		"ch" = list("sh"),
+		"hu" = list("yu"),
+		"hoo" = list("yu")
+		))
+
+/datum/trait/neutral/accent_japenese
+	name = "Accent (Japanese)"
+	desc = "You have a noticeable Japanese accent. Uses the autohiss function, which must be enabled in-game with Toggle-Auto-Hiss. Excludes: Other accents/auto-hisses"
+	cost = 0
+	var_changes = list(autohiss_basic_map = list(
+		"l" = list("r"),
+		"v" = list("b"),
+		"f" = list("hu"),
+		"'t" = list(""),
+		" I " = list(" ai "),
+		"th" = list("z"),
+		"is" = list("izu"),
+		"ow" = list("au"),
+		"are" = list("aa"),
+		"ay" = list("ayu"),
+		"ea" = list("ii"),
+		"ch" = list("chi")
+		))
+	excludes = ACCENTS_LIST_ALL
+
+//accents go above this ^
+#undef ACCENTS_LIST_ALL
