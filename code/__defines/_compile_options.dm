@@ -19,3 +19,5 @@
 	#define USING_MAP_DATUM /datum/map
 	#define MAP_OVERRIDE 1
 #endif
+
+// kobalt is a husky stinky
