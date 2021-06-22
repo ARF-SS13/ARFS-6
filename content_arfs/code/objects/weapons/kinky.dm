@@ -1,3 +1,7 @@
+////////////////////////////////////////////////////////////////
+// Sextoys!
+////////////////////////////////////////////////////////////////
+
 /obj/item/weapon/sextoy/dildo
 	name = "dildo"
 	desc = "This is a generic dildo, how surreal. How did you get this?"
@@ -116,7 +120,66 @@
 	item_state = "chemkit"
 	force = 0
 
-//Just placing the plushies in here, least for now.
+////////////////////////////////////////////////////////////////
+// Vibrating Sextoys!
+////////////////////////////////////////////////////////////////
+
+/datum/looping_sound/vibrator
+	mid_sounds = list('sound/machines/sm/loops/calm.ogg'=1) // I need to find a buzzing sound reee
+	mid_length = 1 SECOND
+	volume = 10
+	extra_range = 1
+//	pref_check = /datum/client_preference/buzzbuzz // Maybe in the future have a pref for lewd sounds?
+
+
+/obj/item/weapon/sextoy/dildo/vibrator
+	name = "bullet vibrator"
+	desc = "A discreet, versatile vibrator, and don't you let its size fool you. Still one of the most popular vibes on the market."
+	icon_state = "bulletvibe"
+	item_state = "bulletvibe"
+	attack_verb = list("pleasured", "vibrated", "violated", "teased", "poked")
+
+	var/enabled = 0
+
+	var/datum/looping_sound/vibrator/soundloop
+
+/obj/item/weapon/sextoy/dildo/vibrator/Initialize()
+	soundloop = new(list(src), FALSE)
+	return ..()
+
+/obj/item/weapon/sextoy/dildo/vibrator/Destroy()
+	STOP_PROCESSING(SSobj, src)
+	QDEL_NULL(soundloop)
+	return ..()
+
+/obj/item/weapon/sextoy/dildo/vibrator/process()
+	update_sound()
+
+
+/obj/item/weapon/sextoy/dildo/vibrator/proc/update_sound()
+	var/datum/looping_sound/vibrator/loop = soundloop
+
+	if(!enabled)
+		loop.stop()
+		return
+
+	loop.start()
+
+/obj/item/weapon/sextoy/dildo/vibrator/attack_self(var/mob/user)
+	enabled = !enabled
+	if(enabled)
+		START_PROCESSING(SSobj, src)
+	else
+		STOP_PROCESSING(SSobj, src)
+	update_icon()
+	update_sound()
+
+	to_chat(user, "<span class='notice'>[bicon(src)] You switch [enabled ? "on" : "off"] \the [src].</span>")
+
+
+////////////////////////////////////////////////////////////////
+// Plushies! Totally kinky!
+////////////////////////////////////////////////////////////////
 
 /obj/item/toy/plushie/bubblegum
 	name = "bubblegum plushie"

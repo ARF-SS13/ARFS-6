@@ -24,6 +24,7 @@
 		/obj/item/weapon/sextoy/dildo/analbeads=2,
 		/obj/item/clothing/suit/stripper/stripper_pink/arf=4,
 		/obj/item/clothing/suit/stripper/stripper_green/arf=4,
+		/obj/item/weapon/gun/energy/sizegun=5,
 //		/obj/item/clothing/under/birthdaysuit=5,
 //		/obj/item/clothing/under/nuditypermit=5,
 //		/obj/item/clothing/suit/strapon = 5,

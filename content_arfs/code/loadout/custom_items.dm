@@ -21,11 +21,18 @@
 	ckeywhitelist = list("andyman105", "dameonowen", "lukevale")
 	character_name = null
 
+/datum/gear/fluff/dameon_4
+	path = /obj/item/weapon/reagent_containers/food/snacks/cookie/dubious
+	display_name = "Dubious Cookie"
+	description = "A very dubious cookie. Do not eat"
+	ckeywhitelist = list("andyman105", "dameonowen", "foxyrose")
+	character_name = list("Amber Owen", "Amber", "Scarlet Owen", "Emma Miller", "Dameon Owen")
+
 /datum/gear/fluff/dameon_5
 	path = /obj/item/weapon/reagent_containers/food/snacks/cookie/curious
 	display_name = "Curious Cookie"
 	description = "A very curious cookie. Do not eat"
-	ckeywhitelist = list("andyman105", "dameonowen", "thingpony")
+	ckeywhitelist = list("andyman105", "dameonowen", "foxyrose")
 	character_name = list("Amber Owen", "Amber", "Scarlet Owen", "Emma Miller")
 
 // /datum/gear/fluff/dameon_3
