@@ -3319,8 +3319,19 @@
 /turf/simulated/floor/wood,
 /area/residential/mansion_bed_2)
 "aiU" = (
-/obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/purpledouble,
+/obj/structure/table/fancyblack,
+/obj/item/device/flashlight/lamp,
+/obj/machinery/light_switch{
+	dir = 8;
+	pixel_x = 28
+	},
+/obj/item/toy/plushie/red_fox,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/item/modular_computer/tablet/preset/custom_loadout/elite,
+/obj/item/device/uav/loaded,
 /turf/simulated/floor/carpet/purcarpet,
 /area/residential/mroom1bed1)
 "aiV" = (
@@ -13800,19 +13811,10 @@
 /turf/simulated/floor/wood,
 /area/residential/mansion_gameroom)
 "aHT" = (
-/obj/structure/table/fancyblack,
-/obj/item/device/flashlight/lamp,
-/obj/machinery/light_switch{
-	dir = 8;
-	pixel_x = 28
-	},
-/obj/item/toy/plushie/red_fox,
 /obj/structure/disposalpipe/segment{
 	dir = 8;
 	icon_state = "pipe-c"
 	},
-/obj/item/modular_computer/tablet/preset/custom_loadout/elite,
-/obj/item/device/uav/loaded,
 /turf/simulated/floor/carpet/purcarpet,
 /area/residential/mroom1bed1)
 "aHU" = (
@@ -15408,6 +15410,7 @@
 /area/residential/room5)
 "aLR" = (
 /obj/structure/table/woodentable,
+/obj/item/weapon/gun/energy/sizegun/admin,
 /turf/simulated/floor/wood,
 /area/residential/mroom1bed1)
 "aLS" = (
@@ -16911,7 +16914,6 @@
 /obj/item/clothing/under/pants,
 /obj/item/weapon/storage/belt/security,
 /obj/item/weapon/handcuffs,
-/obj/item/weapon/melee/baton/fluff/stunstaff,
 /turf/simulated/floor/carpet,
 /area/residential/room7)
 "aPk" = (
@@ -22167,6 +22169,9 @@
 	},
 /obj/structure/table/woodentable,
 /obj/item/weapon/material/kitchen/rollingpin,
+/obj/item/weapon/material/knife{
+	pixel_x = 10
+	},
 /turf/simulated/floor/tiled/white,
 /area/residential/room10)
 "baw" = (
@@ -24221,9 +24226,12 @@
 /turf/simulated/floor/carpet/purcarpet,
 /area/residential/mroom42_bed_2)
 "cmW" = (
-/obj/machinery/floodlight,
 /obj/machinery/light{
 	dir = 1
+	},
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/residential/corridors)
@@ -24311,8 +24319,7 @@
 "crw" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/glass{
-	name = "Hydroponics";
-	req_access = list(0)
+	name = "Hydroponics"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -25370,6 +25377,10 @@
 "dAr" = (
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/residential/mroom12_kitchen)
+"dAY" = (
+/obj/machinery/autolathe,
+/turf/simulated/floor/wood,
+/area/space)
 "dBp" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -26753,12 +26764,10 @@
 /turf/simulated/floor/carpet/bcarpet,
 /area/residential/mroom2)
 "eRU" = (
-/obj/machinery/disposal,
-/obj/structure/disposalpipe/trunk{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/kafel_full/green,
-/area/residential/corridors)
+/obj/structure/bed/double/huge,
+/obj/item/weapon/bedsheet/transpridedouble/big,
+/turf/simulated/floor/carpet/purcarpet,
+/area/residential/mroom1bed1)
 "eRY" = (
 /obj/effect/floor_decal/corner_kafel/yellow{
 	dir = 10
@@ -30111,6 +30120,18 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
+"iac" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/door/airlock/silver{
+	name = "Storage"
+	},
+/turf/simulated/floor/wood,
+/area/residential/room14)
 "iae" = (
 /obj/machinery/light,
 /obj/structure/table/reinforced,
@@ -30430,6 +30451,9 @@
 "iuN" = (
 /obj/machinery/requests_console{
 	pixel_y = 30
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/residential/corridors)
@@ -30930,6 +30954,10 @@
 /obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/kafel_full/beige,
 /area/residential/lobby)
+"jbv" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/wood,
+/area/space)
 "jcm" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
@@ -31139,6 +31167,15 @@
 	},
 /turf/simulated/floor/lino,
 /area/residential/corridors)
+"jsY" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/residential/room14)
 "jto" = (
 /obj/machinery/vending/event/accessory,
 /turf/simulated/floor/wood/sif,
@@ -32708,23 +32745,11 @@
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/residential/mroom12_kitchen)
 "kUj" = (
-/obj/structure/closet/secure_closet/CMO,
-/obj/item/weapon/cmo_disk_holder,
-/obj/item/clothing/accessory/stethoscope,
-/obj/item/device/radio{
-	frequency = 1487;
-	name = "Medbay Emergency Radio Link"
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
-/obj/item/device/megaphone,
-/obj/item/clothing/glasses/hud/health,
-/obj/item/weapon/storage/belt/medical,
-/obj/item/weapon/cmo_disk_holder,
-/obj/item/device/defib_kit/compact/combat/loaded,
-/obj/item/device/flashlight/pen,
-/obj/item/clothing/suit/storage/teshari/beltcloak/jobs/cmo,
-/obj/item/clothing/suit/storage/teshari/cloak/jobs/cmo,
-/turf/simulated/floor/wood,
-/area/residential/mroom12_office)
+/turf/simulated/floor/tiled/kafel_full/green,
+/area/residential/corridors)
 "kUp" = (
 /obj/structure/table/marble,
 /obj/item/weapon/reagent_containers/food/snacks/donut/cherryjelly,
@@ -32871,6 +32896,8 @@
 /obj/item/clothing/under/cheongsam/darkblue,
 /obj/item/clothing/under/cheongsam/pink,
 /obj/item/clothing/head/chameleon,
+/obj/item/clothing/shoes/boots/winter/security,
+/obj/item/clothing/suit/storage/hooded/wintercoat/security,
 /turf/simulated/floor/wood,
 /area/residential/room14)
 "lcc" = (
@@ -33617,16 +33644,16 @@
 /turf/simulated/floor/tiled/freezer,
 /area/residential/corridors)
 "lNQ" = (
-/obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/residential/corridors)
@@ -34887,7 +34914,6 @@
 /area/residential/room9)
 "mXe" = (
 /obj/structure/safe/floor,
-/obj/item/weapon/grenade/flashbang/clusterbang,
 /turf/simulated/floor/carpet/blue,
 /area/residential/room9)
 "mXH" = (
@@ -35897,10 +35923,8 @@
 /turf/simulated/floor/carpet/blucarpet,
 /area/residential/mroom7)
 "nXT" = (
-/obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/transpridedouble,
-/turf/simulated/floor/carpet/purcarpet,
-/area/residential/mroom1bed1)
+/turf/simulated/floor/wood,
+/area/space)
 "nYa" = (
 /obj/structure/closet/crate/hydroponics{
 	name = "beehive crate"
@@ -37179,6 +37203,15 @@
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/wood,
 /area/residential/mroom9)
+"pnk" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/space)
 "pnp" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -38275,8 +38308,7 @@
 "qpe" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/glass{
-	name = "Food Storage";
-	req_access = list(0)
+	name = "Food Storage"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -39466,12 +39498,8 @@
 /turf/simulated/floor/tiled/kafel_full/beige,
 /area/residential/lobby)
 "rqC" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 9
-	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/wood,
 /area/residential/room14)
 "rqD" = (
@@ -40186,6 +40214,9 @@
 /obj/structure/sink{
 	pixel_y = 25
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/residential/corridors)
 "shP" = (
@@ -40328,6 +40359,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/white,
 /area/residential/mroom6)
+"snh" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/machinery/light,
+/turf/simulated/floor/wood,
+/area/space)
 "snn" = (
 /obj/machinery/holoplant,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -41366,6 +41404,15 @@
 	},
 /turf/simulated/floor/lino,
 /area/residential/corridors)
+"tcz" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/turf/simulated/floor/wood,
+/area/space)
 "tcI" = (
 /obj/machinery/alarm/cold{
 	dir = 1;
@@ -44279,6 +44326,16 @@
 /obj/structure/flora/pottedplant/tropical,
 /turf/simulated/floor/carpet/bcarpet,
 /area/residential/corridors)
+"wjb" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/table/rack,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/glass,
+/turf/simulated/floor/wood,
+/area/space)
 "wjH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 1
@@ -45277,7 +45334,6 @@
 /obj/effect/overlay/snow/floor/edges{
 	dir = 1
 	},
-/obj/item/weapon/gun/projectile/cell_loaded/medical,
 /obj/structure/closet,
 /obj/item/device/defib_kit/compact/combat/loaded,
 /obj/item/device/healthanalyzer/phasic,
@@ -45743,7 +45799,6 @@
 /area/residential/mansion)
 "xEM" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/gun/projectile/p92x,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/item/weapon/book/bundle/custom_library/fiction/poemsforarainyday,
 /turf/simulated/floor/wood,
@@ -46300,11 +46355,9 @@
 /area/residential/mroom2bed2)
 "yid" = (
 /obj/item/weapon/gun/projectile/automatic/tommygun,
-/obj/item/ammo_magazine/m45tommydrum,
 /obj/item/weapon/storage/bag/cash{
 	starts_with = list(/obj/item/weapon/spacecash/c1000 = 5, /obj/item/weapon/spacecash/c500 = 10, /obj/item/weapon/spacecash/c100 = 50)
 	},
-/obj/item/ammo_magazine/m45tommydrum,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
@@ -57894,7 +57947,7 @@ hga
 vuN
 rDh
 aeP
-eRU
+oSq
 sXJ
 oSq
 oSq
@@ -58398,7 +58451,7 @@ vuN
 vuN
 vuN
 dKB
-oSq
+kUj
 sjG
 xmb
 oSq
@@ -59154,7 +59207,7 @@ ale
 ale
 ale
 dKB
-oSq
+kUj
 rNf
 oSq
 rNf
@@ -59406,7 +59459,7 @@ ale
 ale
 ale
 sGK
-oSq
+kUj
 oSq
 oSq
 oSq
@@ -69772,7 +69825,7 @@ mOG
 mOG
 mOG
 mOG
-mOG
+jsY
 mOG
 nNI
 aaa
@@ -70024,7 +70077,7 @@ uwJ
 nNI
 nNI
 hLO
-nNI
+iac
 nNI
 nNI
 aaa
@@ -70274,11 +70327,11 @@ nNI
 nhg
 tIl
 nNI
-aaa
-aaa
-aaa
-aaa
-aaa
+nXT
+nXT
+pnk
+nXT
+ado
 aaa
 aaa
 aaa
@@ -70526,11 +70579,11 @@ nNI
 wpb
 mLZ
 nNI
-aaa
-aaa
-aaa
-aaa
-aaa
+wjb
+jbv
+tcz
+snh
+ado
 aaa
 aaa
 aaa
@@ -70778,11 +70831,11 @@ nNI
 ads
 adP
 nNI
-aaa
-aaa
-aaa
-aaa
-aaa
+dAY
+nXT
+nXT
+nXT
+ado
 aaa
 aaa
 aaa
@@ -71030,11 +71083,11 @@ ado
 ado
 ado
 ado
-aaa
-aaa
-aaa
-aaa
-aaa
+ado
+ado
+ado
+ado
+ado
 aaa
 aaa
 aaa
@@ -74449,7 +74502,7 @@ aqB
 aGg
 aGg
 qym
-aGg
+eRU
 aLT
 aqB
 aaa
@@ -74699,10 +74752,10 @@ ayr
 dMa
 aZE
 xoG
-xoG
-aHT
 aiU
-nXT
+aHT
+aGg
+aGg
 aqB
 aaa
 apq
@@ -80824,7 +80877,7 @@ ayl
 aaa
 aaa
 hfb
-kUj
+sFf
 uqT
 vHC
 ePd
