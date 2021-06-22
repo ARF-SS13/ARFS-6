@@ -1,0 +1,1 @@
+var/const/RESIDENTIAL		=(1<<15)
