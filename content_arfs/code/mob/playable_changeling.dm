@@ -1,12 +1,4 @@
-var/list/playerpowers = list(/datum/power/changeling/arm_blade, /datum/power/changeling/darksight, /datum/power/changeling/extractdnaplayer, /datum/power/changeling/metaextractdna, \
-						     /datum/power/changeling/player_transform, /datum/power/changeling/fleshmend, /datum/power/changeling/panacea, /datum/power/changeling/rapid_regen, \
-						     /datum/power/changeling/endoarmor, /datum/power/changeling/MetaEngorgedGlands, /datum/power/changeling/self_respiration, /datum/power/changeling/space_suit, \
-						     /datum/power/changeling/visible_camouflage, /datum/power/changeling/recursive_enhancement, /datum/power/changeling/metafleshmend, \
-							 /datum/power/changeling/size_change)
-var/list/datum/power/changeling/playerpowerinstances = list()
-
-
-/mob/proc/make_playable_changeling()
+/mob/proc/make_playable_changeling(var/list/playerpowers, var/list/datum/power/changeling/playerpowerinstances)
 
 	if(!mind)				return
 	if(!mind.changeling)	mind.changeling = new /datum/changeling(gender)
