@@ -126,3 +126,21 @@
 	icon_dead = "princess_dead"
 	faction = "neutral"
 	update_icon = 0
+
+/mob/living/simple_mob/animal/passive/dragon_green
+	name = "green dragon"
+	desc = "Is a giant green dragon!"
+	icon_state = "dragongreen"
+	icon_living = "dragongreen"
+	icon_dead = "dragongreendead"
+	icon_rest = "dragongreendead"
+	icon = 'content_arfs/icons/mob/mobs/dragon.dmi'
+
+/mob/living/simple_mob/animal/passive/dragon_white
+	name = "white dragon"
+	desc = "Is a giant white dragon!"
+	icon_state = "dragonwhite"
+	icon_living = "dragonwhite"
+	icon_dead = "dragonwhitedead"
+	icon_rest = "dragonwhitedead"
+	icon = 'content_arfs/icons/mob/mobs/dragon.dmi'
