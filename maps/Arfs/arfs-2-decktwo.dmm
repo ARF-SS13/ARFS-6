@@ -17610,7 +17610,9 @@
 /area/maintenance/medbay)
 "aJO" = (
 /turf/simulated/wall,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "aJP" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -17903,7 +17905,9 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "aKq" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -25215,7 +25219,9 @@
 	pixel_x = -32
 	},
 /turf/simulated/floor/carpet,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "aXn" = (
 /turf/simulated/floor/tiled/dark,
 /area/storage/tech)
@@ -27957,6 +27963,15 @@
 /obj/machinery/alarm{
 	pixel_y = 25
 	},
+/obj/structure/table/standard,
+/obj/item/stack/material/phoron{
+	amount = 50;
+	pixel_x = -1;
+	pixel_y = 7
+	},
+/obj/item/weapon/reagent_containers/glass/beaker/large,
+/obj/item/weapon/reagent_containers/glass/beaker/large,
+/obj/item/weapon/reagent_containers/glass/beaker/large,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/lab)
 "bcY" = (
@@ -27967,6 +27982,8 @@
 	layer = 3.3;
 	pixel_y = 26
 	},
+/obj/structure/table/standard,
+/obj/machinery/reagentgrinder,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/lab)
 "bcZ" = (
@@ -28584,10 +28601,8 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
 	},
-/obj/machinery/chemical_dispenser{
-	density = 1
-	},
 /obj/structure/table/standard,
+/obj/machinery/chemical_dispenser/full,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/lab)
 "beo" = (
@@ -30897,12 +30912,16 @@
 	pixel_y = 22
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "bjv" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/plating,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "bjw" = (
 /obj/effect/floor_decal/corner/grey{
 	dir = 9;
@@ -30914,7 +30933,9 @@
 	tag = "icon-corner_white (SOUTHWEST)"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "bjx" = (
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
@@ -40976,7 +40997,9 @@
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/carpet,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "clD" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -41640,7 +41663,9 @@
 	tag = "icon-corner_white (NORTHEAST)"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "diZ" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -42216,7 +42241,9 @@
 "esw" = (
 /obj/structure/table/bench/padded,
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "etm" = (
 /obj/machinery/portable_atmospherics/powered/pump,
 /obj/machinery/atmospherics/portables_connector,
@@ -42811,7 +42838,9 @@
 	tag = "icon-corner_white (NORTHWEST)"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "fby" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/external{
@@ -43499,7 +43528,9 @@
 	tag = "icon-corner_white (NORTHWEST)"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "fZo" = (
 /obj/effect/floor_decal/corner/yellow/diagonal,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
@@ -44425,7 +44456,9 @@
 	},
 /obj/machinery/vending/snack,
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "hiL" = (
 /obj/machinery/iv_drip,
 /obj/machinery/alarm{
@@ -44886,13 +44919,10 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 24
-	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "hOb" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -45019,7 +45049,9 @@
 	},
 /obj/machinery/vending/coffee,
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "hXq" = (
 /obj/machinery/shower{
 	dir = 4;
@@ -45460,7 +45492,9 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "iDS" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 4;
@@ -45479,7 +45513,9 @@
 	pixel_x = -24
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "iEH" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/maintenance/common,
@@ -47210,7 +47246,9 @@
 /obj/effect/floor_decal/carpet,
 /obj/structure/table/woodentable,
 /turf/simulated/floor/carpet,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "lbm" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 10
@@ -47330,7 +47368,9 @@
 	},
 /obj/structure/closet/walllocker/emerglocker/south,
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "lkx" = (
 /obj/machinery/firealarm{
 	dir = 4;
@@ -47435,7 +47475,9 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "lsu" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -47485,7 +47527,9 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "lym" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -47717,7 +47761,9 @@
 /area/engineering/engine_room)
 "lGl" = (
 /turf/simulated/floor/carpet,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "lHn" = (
 /obj/machinery/computer/rcon{
 	dir = 8
@@ -49218,7 +49264,9 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "nOR" = (
 /obj/machinery/vending/blue_lotus,
 /obj/effect/floor_decal/corner/blue{
@@ -49681,7 +49729,9 @@
 	tag = "icon-corner_white (SOUTHWEST)"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "ovU" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/weapon/storage/toolbox/electrical,
@@ -49713,7 +49763,9 @@
 	tag = "icon-corner_white (SOUTHWEST)"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "oxG" = (
 /obj/machinery/atmospherics/pipe/simple/visible/blue{
 	dir = 4
@@ -49947,7 +49999,9 @@
 	name = "Residential Dock Airlock"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "oLl" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/weapon/storage/toolbox/mechanical{
@@ -50801,7 +50855,9 @@
 	dir = 4
 	},
 /turf/simulated/floor/carpet,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "pXk" = (
 /obj/machinery/computer/station_alert{
 	dir = 8
@@ -50952,7 +51008,9 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "qgW" = (
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_emt_bay)
@@ -51003,7 +51061,9 @@
 	},
 /obj/structure/table/woodentable,
 /turf/simulated/floor/carpet,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "qjL" = (
 /obj/structure/cable/yellow{
 	d1 = 4;
@@ -51408,7 +51468,9 @@
 	pixel_y = 25
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "qOd" = (
 /obj/machinery/power/apc{
 	cell_type = /obj/item/weapon/cell/super;
@@ -51591,7 +51653,9 @@
 	pixel_x = -30
 	},
 /turf/simulated/floor/carpet,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "qXI" = (
 /obj/machinery/ai_status_display,
 /turf/simulated/wall,
@@ -52391,7 +52455,9 @@
 "rOB" = (
 /obj/machinery/computer/shuttle_control/residential_shuttle,
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "rPw" = (
 /turf/simulated/wall/r_lead,
 /area/engineering/gravity)
@@ -52577,7 +52643,9 @@
 	tag = "icon-carpet_edges (NORTHEAST)"
 	},
 /turf/simulated/floor/carpet,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "sbl" = (
 /obj/machinery/light{
 	dir = 8
@@ -52711,7 +52779,9 @@
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "sjR" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -52910,14 +52980,18 @@
 	tag = "icon-corner_white (NORTHWEST)"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "swB" = (
 /obj/effect/floor_decal/corner/grey{
 	dir = 8;
 	tag = "icon-corner_white (WEST)"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "sxz" = (
 /obj/effect/floor_decal/corner/green{
 	dir = 5
@@ -53137,7 +53211,9 @@
 /area/engineering/engine_room)
 "sMU" = (
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "sNz" = (
 /obj/machinery/light,
 /obj/machinery/newscaster{
@@ -54112,7 +54188,9 @@
 	},
 /obj/machinery/disposal,
 /turf/simulated/floor/carpet,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "uev" = (
 /obj/structure/morgue{
 	dir = 8
@@ -54392,7 +54470,9 @@
 	},
 /obj/machinery/computer/timeclock/premade/west,
 /turf/simulated/floor/carpet,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "uwk" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 9
@@ -54466,7 +54546,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "uBA" = (
 /obj/structure/sign/warning/radioactive,
 /turf/simulated/wall/r_wall,
@@ -54859,7 +54941,9 @@
 	},
 /obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "uWy" = (
 /obj/machinery/atmospherics/binary/pump,
 /turf/simulated/floor/tiled/dark,
@@ -55243,7 +55327,9 @@
 	pixel_x = -32
 	},
 /turf/simulated/floor/carpet,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "vGa" = (
 /obj/machinery/floodlight,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -55268,7 +55354,9 @@
 	},
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/carpet,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "vJU" = (
 /obj/structure/bed/padded,
 /obj/machinery/light{
@@ -55306,7 +55394,9 @@
 	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/carpet,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "vNa" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
@@ -56351,7 +56441,9 @@
 "xtr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/carpet,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "xva" = (
 /obj/structure/cable/yellow{
 	d2 = 2;
@@ -56622,7 +56714,9 @@
 	dir = 1
 	},
 /turf/simulated/floor/carpet,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "xKq" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/effect/floor_decal/industrial/warning{
@@ -56715,7 +56809,9 @@
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "xQl" = (
 /obj/machinery/portable_atmospherics/canister/phoron,
 /turf/simulated/floor/plating,
@@ -56854,7 +56950,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/carpet,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "yeI" = (
 /obj/machinery/vending/coffee,
 /obj/effect/floor_decal/corner/yellow/border,
