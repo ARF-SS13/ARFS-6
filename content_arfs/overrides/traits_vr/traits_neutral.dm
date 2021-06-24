@@ -158,7 +158,7 @@
 //  ~Dictated via TK from Cactus
 // "" = list(""), ~Tk made this for anyone who wants to have a set copy/paste bit of code to add lots of accents in.
 
-#define ACCENTS_LIST_ALL list(/datum/trait/neutral/autohiss_unathi,/datum/trait/neutral/autohiss_tajaran,/datum/trait/autohiss_vassilian,/datum/trait/neutral/accent_swedish,/datum/trait/neutral/accent_japenese,/datum/trait/neutral/accent_irish,/datum/trait/neutral/accent_french)
+#define ACCENTS_LIST_ALL list(/datum/trait/neutral/autohiss_unathi,/datum/trait/neutral/autohiss_tajaran,/datum/trait/autohiss_vassilian,/datum/trait/neutral/accent_swedish,/datum/trait/neutral/accent_japenese,/datum/trait/neutral/accent_irish,/datum/trait/neutral/accent_french,/datum/trait/neutral/accent_scottish)
 
 /datum/trait/neutral/accent_swedish
 	name = "Accent (Swedish)"
@@ -230,6 +230,24 @@
 		" thank you very much " = list(" merci beaucoup "),
 		" bye " = list(" au revoir "),
 		" good bye " = list(" au revoir "),
+		))
+	excludes = ACCENTS_LIST_ALL
+
+
+/datum/trait/neutral/accent_scottish
+	name = "Accent (Scottish)"
+	desc = "You have a noticeable Scottish accent. Uses the autohiss function, which must be enabled in-game with Toggle-Auto-Hiss. Excludes: Other accents/auto-hisses"
+	cost = 0
+	custom_only = FALSE
+	var_changes = list(autohiss_basic_map = list(
+		"h" = list("'"),
+		"g" = list("'"),
+		" your " = list(" yer "),
+		" you " = list(" ye "),
+		" captain " = list(" cap'n "),
+		" you'll " = list(" ye'll "),
+		" you've " = list(" ye've "),
+		" of " = list(" o' ")
 		))
 	excludes = ACCENTS_LIST_ALL
 
