@@ -171,6 +171,17 @@
 		"ch" = list("sh"),
 		"hu" = list("yu"),
 		"hoo" = list("yu")
+		),
+
+	autohiss_extra_map = list(
+		" your " = list(" din "),
+		" you " = list(" du "),
+		" you'll " = list(" du kommer "),
+		" you've " = list(" du har "),
+		" and " = list(" och "),
+		" or " = list(" eller "),
+		" but " = list(" men "), // haha butt men ~TK
+		" so " = list(" sa ") //Should be så, but Byond a shit ~TK
 		))
 
 /datum/trait/neutral/accent_japenese
@@ -201,11 +212,21 @@
 	cost = 0
 	custom_only = FALSE
 	var_changes = list(autohiss_basic_map = list(
+		"ing" = list("eng"),
 		"i" = list("ei"),
 		"th" = list("d"),
 		"r" = list("er"),
-		"'l" = list("ll"),
-		"'ing" = list("eng")
+		"'l" = list("ll")
+		),
+
+	autohiss_extra_map = list(
+		" youer " = list(" do "),
+		" you " = list(" tú "),
+		" you've " = list(" tá tú "),
+		" and " = list(" agus "),
+		" or " = list("  nó "),
+		" but " = list(" ach "),
+		" so " = list(" mar sin ")
 		))
 	excludes = ACCENTS_LIST_ALL
 
@@ -216,20 +237,21 @@
 	custom_only = FALSE
 	var_changes = list(autohiss_basic_map = list(
 		"th" = list("zh"),
-		" no " = list("non"),
 		"s" = list("z"),
 		"r" = list("rr"),
 		"h" = list("'"),
-		" yes " = list("oui"),
-		" hello " = list(" bonjour "),
-		" mr. " = list(" monsieur"),
-		" miss " = list(" mademoiselle "),
-		" mrs. " = list(" madame "),
-		" excuse me " = list(" excusez-moi "),
-		" thank you " = list(" merci "),
-		" thank you very much " = list(" merci beaucoup "),
-		" bye " = list(" au revoir "),
-		" good bye " = list(" au revoir "),
+		"i" = list("e", "ee", "i")
+		),
+
+	autohiss_extra_map = list(
+		" yourr " = list(" votre "),
+		" you " = list(" toi "),
+		" you'll " = list(" tu vas "),
+		" you've " = list(" vous avez "),
+		" and " = list(" et "),
+		" orr " = list(" ou "), //Or -> Orr -> Ou
+		" but " = list(" mais "),
+		" zo " = list(" donc ") //So -> Zo -> Donc
 		))
 	excludes = ACCENTS_LIST_ALL
 
@@ -242,11 +264,18 @@
 	var_changes = list(autohiss_basic_map = list(
 		"h" = list("'"),
 		"g" = list("'"),
+		" of " = list(" o' ")
+		),
+
+	autohiss_extra_map = list(
 		" your " = list(" yer "),
 		" you " = list(" ye "),
-		" captain " = list(" cap'n "),
 		" you'll " = list(" ye'll "),
 		" you've " = list(" ye've "),
+		" and " = list(" agus "),
+		" or " = list("  no "),
+		" but " = list(" ach "),
+		" so " = list(" mar sin "),
 		" of " = list(" o' ")
 		))
 	excludes = ACCENTS_LIST_ALL
