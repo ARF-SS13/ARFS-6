@@ -220,9 +220,9 @@
 		"s" = list("z"),
 		"r" = list("rr"),
 		"h" = list("'")
-		))
+		),
 
-	var_changes = list(lautohiss_extra_map = list(
+	autohiss_extra_map = list(
 		" yes " = list("oui"),
 		" hello " = list(" bonjour "),
 		" mr. " = list(" monsieur"),
