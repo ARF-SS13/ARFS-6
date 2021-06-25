@@ -219,7 +219,10 @@
 		" no " = list("non"),
 		"s" = list("z"),
 		"r" = list("rr"),
-		"h" = list("'"),
+		"h" = list("'")
+		))
+
+	var_changes = list(lautohiss_extra_map = list(
 		" yes " = list("oui"),
 		" hello " = list(" bonjour "),
 		" mr. " = list(" monsieur"),
@@ -229,7 +232,7 @@
 		" thank you " = list(" merci "),
 		" thank you very much " = list(" merci beaucoup "),
 		" bye " = list(" au revoir "),
-		" good bye " = list(" au revoir "),
+		" good bye " = list(" au revoir ")
 		))
 	excludes = ACCENTS_LIST_ALL
 
