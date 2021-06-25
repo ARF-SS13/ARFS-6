@@ -139,6 +139,12 @@ var/global/list/latejoin_residential = list()
 /area/residential/lobby
 	name = "\improper Residential - Residential Lobby"
 
+/area/residential/cafe
+	name = "\improper Residential - Cafe"
+
+/area/residential/healthcenter
+	name = "\improper Health and Wellness Center"
+
 /area/residential/medbay
 	name = "\improper Residential - Residential Medbay"
 
