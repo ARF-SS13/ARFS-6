@@ -7,6 +7,7 @@
 #define Z_LEVEL_MINING_ARFS					7
 #define Z_LEVEL_MINING_DANGER_ARFS			8
 #define Z_LEVEL_RESIDENTIAL_ARFS			9
+#define Z_LEVEL_RESIDENTIAL_STATION_ARFS			10
 
 #define Z_LEVEL_BOTTOM_DECK				Z_LEVEL_ARFS_ONE
 #define Z_LEVEL_TOP_DECK				Z_LEVEL_ARFS_THREE
@@ -145,4 +146,9 @@
 /datum/map_z_level/arfs/residential
 	z = Z_LEVEL_RESIDENTIAL_ARFS
 	name = "ARFS Residential District"
+	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_VORESPAWN
+
+/datum/map_z_level/arfs/residential_station
+	z = Z_LEVEL_RESIDENTIAL_STATION_ARFS
+	name = "ARFS Residential Station"
 	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_VORESPAWN
