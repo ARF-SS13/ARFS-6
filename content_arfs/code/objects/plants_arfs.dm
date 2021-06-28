@@ -72,22 +72,22 @@
 /obj/structure/flora/arfs/tree1
 	name = "tree"
 	icon = 'content_arfs/icons/obj/plants_arfs.dmi'
-	icon_state = "tree1"
+	icon_state = "tree_1"
 
 /obj/structure/flora/arfs/tree2
 	name = "tree"
 	icon = 'content_arfs/icons/obj/plants_arfs.dmi'
-	icon_state = "tree2"
+	icon_state = "tree_2"
 
 /obj/structure/flora/arfs/tree3
 	name = "tree"
 	icon = 'content_arfs/icons/obj/plants_arfs.dmi'
-	icon_state = "tree3"
+	icon_state = "tree_3"
 
 /obj/structure/flora/arfs/tree4
 	name = "tree"
 	icon = 'content_arfs/icons/obj/plants_arfs.dmi'
-	icon_state = "tree4"
+	icon_state = "tree_4"
 
 
 /obj/structure/flora/arfs/lightgrass1
