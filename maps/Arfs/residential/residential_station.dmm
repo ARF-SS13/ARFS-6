@@ -632,6 +632,7 @@
 /area/residential/outside)
 "dA" = (
 /obj/structure/table/woodentable,
+/obj/machinery/computer/timeclock/premade/east,
 /turf/simulated/floor/wood,
 /area/residential/docking_lobby)
 "dB" = (
@@ -868,6 +869,12 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/healthcenter)
+"eU" = (
+/obj/machinery/door/airlock/voidcraft{
+	name = "Teleporter from Apartments"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/residential/teleporter)
 "eV" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -1333,6 +1340,10 @@
 	name = "Teleporter to Apartments"
 	},
 /turf/simulated/floor/tiled/kafel_full,
+/area/residential/teleporter)
+"hR" = (
+/obj/structure/sign/deck/first,
+/turf/simulated/wall,
 /area/residential/teleporter)
 "hT" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
@@ -2402,8 +2413,8 @@
 /turf/simulated/floor/tiled/dark,
 /area/residential/outside)
 "pz" = (
-/turf/simulated/floor/outdoors/grass/forest,
-/area/residential/cafe)
+/turf/simulated/wall/sandstone,
+/area/residential/outside)
 "pA" = (
 /obj/machinery/vending/foodstuffing{
 	dir = 1
@@ -2768,6 +2779,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/cafe)
+"rZ" = (
+/obj/effect/floor_decal/industrial/loading{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/residential/teleporter)
 "sf" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/glass{
@@ -3601,6 +3618,9 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/healthcenter)
+"xO" = (
+/turf/simulated/wall/sandstonediamond,
+/area/residential/outside)
 "xS" = (
 /obj/effect/floor_decal/corner_kafel/blue{
 	dir = 10
@@ -5153,6 +5173,7 @@
 "HC" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/newspaper,
+/obj/machinery/computer/timeclock/premade/east,
 /turf/simulated/floor/wood,
 /area/residential/docking_lobby)
 "HD" = (
@@ -6425,7 +6446,7 @@
 /area/residential/healthcenter)
 "PH" = (
 /obj/machinery/light/flamp,
-/obj/effect/floor_decal/borderfloorblack/shifted{
+/obj/effect/floor_decal/borderfloor{
 	dir = 9
 	},
 /turf/simulated/floor/tiled/dark,
@@ -6751,6 +6772,7 @@
 	teleport_y = 121;
 	teleport_z = 9
 	},
+/obj/machinery/light,
 /turf/simulated/floor/flock,
 /area/residential/teleporter)
 "Rz" = (
@@ -7535,6 +7557,7 @@
 	},
 /area/residential/outside)
 "Wr" = (
+/obj/machinery/light,
 /turf/simulated/floor/flock,
 /area/residential/teleporter)
 "Ws" = (
@@ -23986,7 +24009,7 @@ tO
 KH
 ws
 Nv
-UC
+hR
 UC
 KL
 HD
@@ -24237,8 +24260,8 @@ YZ
 tO
 KH
 FN
-Nv
-Nv
+rZ
+eU
 Wr
 KL
 dl
@@ -29275,7 +29298,7 @@ kb
 NA
 HZ
 kb
-pz
+KL
 KL
 KL
 KL
@@ -33794,16 +33817,16 @@ KS
 KS
 Fv
 qy
-hZ
-hZ
-hZ
-hZ
+xO
+xO
+xO
+xO
 sn
 sn
 sn
-hZ
-hZ
-hZ
+xO
+xO
+xO
 kb
 zj
 VP
@@ -34045,8 +34068,8 @@ kb
 kb
 kb
 HA
-hZ
-hZ
+xO
+xO
 PH
 Cv
 Cv
@@ -34055,7 +34078,7 @@ jz
 Cv
 NF
 Jt
-hZ
+xO
 VP
 kb
 kb
@@ -34297,7 +34320,7 @@ kb
 oI
 qy
 HA
-hZ
+xO
 MF
 Xv
 UE
@@ -34307,7 +34330,7 @@ aK
 bu
 tN
 tL
-hZ
+xO
 YZ
 kb
 hH
@@ -34559,7 +34582,7 @@ wy
 Pm
 zf
 HH
-hZ
+xO
 kb
 kb
 Fv
@@ -35305,7 +35328,7 @@ oI
 XP
 Fv
 kb
-hZ
+xO
 cq
 vS
 UE
@@ -35315,7 +35338,7 @@ sv
 Pm
 zf
 wd
-hZ
+xO
 kb
 Fv
 kb
@@ -35557,8 +35580,8 @@ kb
 kb
 kb
 kb
-hZ
-hZ
+xO
+xO
 qO
 kV
 kV
@@ -35567,7 +35590,7 @@ tE
 kV
 Uz
 tJ
-hZ
+xO
 Bo
 MS
 CG
@@ -35810,16 +35833,16 @@ kb
 qy
 kb
 kb
-hZ
-hZ
-hZ
-hZ
+xO
+xO
+xO
+xO
 sn
 sn
 sn
-hZ
-hZ
-hZ
+xO
+xO
+xO
 pY
 HA
 KS
@@ -38054,10 +38077,10 @@ XS
 XS
 XS
 WV
-cI
-cI
-cI
-cI
+pz
+pz
+pz
+pz
 kb
 Jp
 vU
@@ -38309,7 +38332,7 @@ WV
 lz
 lz
 Ai
-cI
+pz
 vU
 vU
 CS
@@ -38813,7 +38836,7 @@ WV
 vU
 vU
 vU
-cI
+pz
 He
 vU
 CV
@@ -39065,7 +39088,7 @@ WV
 oy
 oy
 oy
-cI
+pz
 vU
 vU
 CV
@@ -39314,10 +39337,10 @@ XS
 XS
 XS
 WV
-cI
-cI
-cI
-cI
+pz
+pz
+pz
+pz
 vU
 vU
 CV
