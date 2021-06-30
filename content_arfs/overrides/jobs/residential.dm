@@ -1,7 +1,7 @@
 datum/job/residential
 	title = "Resident"
 	flag = RESIDENTIAL
-	departments = list(DEPARTMENT_CIVILIAN)
+	departments = list(DEPARTMENT_RESIDENTIAL)
 	department_flag = RESIDENTIAL
 	faction = "Station"
 	total_positions = -1
