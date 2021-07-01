@@ -1,9 +1,12 @@
-#define ORGANICS	1
-#define SYNTHETICS	2
-
 /datum/trait/positive
 	category = 1
 
+<<<<<<< HEAD
+/datum/trait/positive
+	category = 1
+
+=======
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 /datum/trait/positive/speed_fast
 	name = "Haste"
 	desc = "Allows you to move faster on average than baseline."
@@ -17,7 +20,11 @@
 	var_changes = list("item_slowdown_mod" = 0.5)
 
 /datum/trait/positive/hardy_plus
+<<<<<<< HEAD
 	name = "Major Hardy"
+=======
+	name = "Hardy, Major"
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 	desc = "Allows you to carry heavy equipment with almost no slowdown."
 	cost = 2
 	var_changes = list("item_slowdown_mod" = 0.25)
@@ -28,15 +35,16 @@
 	cost = 4
 	var_changes = list("total_health" = 125)
 
-	apply(var/datum/species/S,var/mob/living/carbon/human/H)
-		..(S,H)
-		H.setMaxHealth(S.total_health)
+/datum/trait/positive/endurance_high/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..(S,H)
+	H.setMaxHealth(S.total_health)
 
 /datum/trait/positive/nonconductive
 	name = "Non-Conductive"
 	desc = "Decreases your susceptibility to electric shocks by a 10% amount."
 	cost = 1 //This effects tasers!
 	var_changes = list("siemens_coefficient" = 0.9)
+<<<<<<< HEAD
 
 /datum/trait/positive/nonconductive_plus
 	name = "Major Non-Conductive"
@@ -44,6 +52,15 @@
 	cost = 2 //Let us not forget this effects tasers!
 	var_changes = list("siemens_coefficient" = 0.75)
 
+=======
+
+/datum/trait/positive/nonconductive_plus
+	name = "Non-Conductive, Major"
+	desc = "Decreases your susceptibility to electric shocks by a 25% amount."
+	cost = 2 //Let us not forget this effects tasers!
+	var_changes = list("siemens_coefficient" = 0.75)
+
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 /datum/trait/positive/darksight
 	name = "Darksight"
 	desc = "Allows you to see a short distance in the dark."
@@ -51,7 +68,11 @@
 	var_changes = list("darksight" = 5, "flash_mod" = 1.1)
 
 /datum/trait/positive/darksight_plus
+<<<<<<< HEAD
 	name = "Darksight (Major)"
+=======
+	name = "Darksight, Major"
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 	desc = "Allows you to see in the dark for the whole screen."
 	cost = 2
 	var_changes = list("darksight" = 8, "flash_mod" = 1.2)
@@ -75,7 +96,11 @@
 	var_changes = list("unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/punch, /datum/unarmed_attack/bite/sharp/numbing))
 
 /datum/trait/positive/minor_brute_resist
+<<<<<<< HEAD
 	name = "Minor Brute Resist"
+=======
+	name = "Brute Resist, Minor"
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 	desc = "Adds 15% resistance to brute damage sources."
 	cost = 2
 	var_changes = list("brute_mod" = 0.85)
@@ -88,7 +113,11 @@
 	excludes = list(/datum/trait/positive/minor_burn_resist,/datum/trait/positive/burn_resist)
 
 /datum/trait/positive/minor_burn_resist
+<<<<<<< HEAD
 	name = "Minor Burn Resist"
+=======
+	name = "Burn Resist, Minor"
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 	desc = "Adds 15% resistance to burn damage sources."
 	cost = 2
 	var_changes = list("burn_mod" = 0.85)
@@ -156,3 +185,11 @@
 	H.verbs |= /mob/living/carbon/human/proc/weave_structure
 	H.verbs |= /mob/living/carbon/human/proc/weave_item
 	H.verbs |= /mob/living/carbon/human/proc/set_silk_color
+<<<<<<< HEAD
+=======
+
+/datum/trait/positive/water_breather
+	name = "Water Breather"
+	desc = "You can breathe under water."
+	cost = 1
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491

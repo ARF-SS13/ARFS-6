@@ -38,7 +38,6 @@
 		set src in usr
 
 		adjust_fibers(usr)
-		..()
 
 /obj/item/clothing/under/hyperfiber/proc/adjust_fibers(mob/user)
 	if(hides_bulges == FALSE)
@@ -63,7 +62,10 @@
 	set category = "Object"
 	set src in usr
 	bluespace_size(usr)
+<<<<<<< HEAD
 	..()
+=======
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 
 /obj/item/clothing/under/hyperfiber/bluespace/proc/bluespace_size(mob/usr as mob)
 	if (!ishuman(usr))
@@ -78,7 +80,11 @@
 		to_chat(H,"<span class='warning'>You must be WEARING the uniform to change your size.</span>")
 		return
 
+<<<<<<< HEAD
 	var/new_size = input("Put the desired size (25-200%), or (1-600%) in dormitory areas.", "Set Size", 200) as num|null
+=======
+	var/new_size = input(usr, "Put the desired size (25-200%), or (1-600%) in dormitory areas.", "Set Size", 200) as num|null
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 	if(!new_size)
 		return //cancelled
 
@@ -138,3 +144,70 @@
 	name = "red qipao"
 	icon_state = "qipao_red"
 	item_state = "qipao_red"
+
+/obj/item/clothing/under/pizzaguy
+	name = "pizza delivery uniform"
+	desc = "A dedicated outfit for pizza delivery people, one of most dangerous occupations around these parts. Can be rolled up for extra show of skin."
+	icon = 'icons/obj/clothing/uniforms_vr.dmi'
+	index = "vr"
+	rolled_down_icon = 'icons/mob/uniform_rolled_down_vr.dmi'
+	icon_state = "pizzadelivery"
+	item_state = "pizzadelivery"
+	rolled_down = 0
+
+//////////////////////TALON JUMPSUITS//////////////////////
+
+/obj/item/clothing/under/rank/talon/basic
+	name = "ITV jumpsuit"
+	desc = "A basic jumpsuit that bares the ITV logo on the breast."
+	icon = 'icons/obj/clothing/uniforms_vr.dmi'
+	index = "vr"
+	rolled_down_icon = 'icons/mob/uniform_rolled_down_vr.dmi'
+	icon_override = 'icons/mob/uniform_vr.dmi'
+	icon_state = "talon_basic"
+	item_state = "talon_basic"
+	rolled_sleeves = 0
+
+/obj/item/clothing/under/rank/talon/proper
+	name = "ITV proper jumpsuit"
+	desc = "A neat and proper uniform for a proper company."
+	icon = 'icons/obj/clothing/uniforms_vr.dmi'
+	index = "vr"
+	rolled_down_icon = 'icons/mob/uniform_rolled_down_vr.dmi'
+	icon_override = 'icons/mob/uniform_vr.dmi'
+	icon_state = "talon_jumpsuit"
+	item_state = "talon_jumpsuit"
+	rolled_sleeves = 0
+
+/obj/item/clothing/under/rank/talon/security
+	name = "ITV security jumpsuit"
+	desc = "A sleek, streamlined version of ITV's standard jumpsuit that bares security markings."
+	icon = 'icons/obj/clothing/uniforms_vr.dmi'
+	index = "vr"
+	rolled_down_icon = 'icons/mob/uniform_rolled_down_vr.dmi'
+	icon_override = 'icons/mob/uniform_vr.dmi'
+	icon_state = "talon_security"
+	item_state = "talon_security"
+	rolled_sleeves = 0
+
+/obj/item/clothing/under/rank/talon/pilot
+	name = "ITV pilot jumpsuit"
+	desc = "A sleek, streamlined version of ITV's standard jumpsuit. Made from cushioned fabric to handle intense flight."
+	icon = 'icons/obj/clothing/uniforms_vr.dmi'
+	index = "vr"
+	rolled_down_icon = 'icons/mob/uniform_rolled_down_vr.dmi'
+	icon_override = 'icons/mob/uniform_vr.dmi'
+	icon_state = "talon_pilot"
+	item_state = "talon_pilot"
+	rolled_sleeves = 0
+
+/obj/item/clothing/under/rank/talon/command
+	name = "ITV command jumpsuit"
+	desc = "A commanding jumpsuit fit for a commanding officer."
+	icon = 'icons/obj/clothing/uniforms_vr.dmi'
+	index = "vr"
+	rolled_down_icon = 'icons/mob/uniform_rolled_down_vr.dmi'
+	icon_override = 'icons/mob/uniform_vr.dmi'
+	icon_state = "talon_captain"
+	item_state = "talon_captain"
+	rolled_sleeves = 0

@@ -42,6 +42,12 @@
 		BP_R_FOOT = list("path" = /obj/item/organ/external/foot/right, "descriptor" = "right foot")
 		)
 
+<<<<<<< HEAD
+=======
+/datum/species/custom/update_sort_hint()
+	sort_hint = SPECIES_SORT_CUSTOM
+
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 /datum/species/custom/get_race_key()
 	var/datum/species/real = GLOB.all_species[base_species]
 	return real.race_key
@@ -56,10 +62,15 @@
 //Called when face-down in the water or otherwise over their head.
 // Return: TRUE for able to breathe fine in water.
 /datum/species/custom/can_breathe_water()
+<<<<<<< HEAD
 	if (water_breath)
 		return TRUE
 	else
 		return FALSE
+=======
+	return /datum/trait/positive/water_breather in traits
+
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 
 //Called during handle_environment in Life() ticks.
 // Return: Not used.
@@ -67,19 +78,18 @@
 	return ..()
 
 //Called when spawning to equip them with special things.
-/datum/species/custom/equip_survival_gear(var/mob/living/carbon/human/H)
-	/* Example, from Vox:
-	H.equip_to_slot_or_del(new /obj/item/clothing/mask/breath(H), slot_wear_mask)
-	if(H.backbag == 1)
-		H.equip_to_slot_or_del(new /obj/item/weapon/tank/vox(H), slot_back)
-		H.equip_to_slot_or_del(new /obj/item/weapon/storage/box/vox(H), slot_r_hand)
-		H.internal = H.back
-	else
-		H.equip_to_slot_or_del(new /obj/item/weapon/tank/vox(H), slot_r_hand)
-		H.equip_to_slot_or_del(new /obj/item/weapon/storage/box/vox(H.back), slot_in_backpack)
-		H.internal = H.r_hand
-	H.internal = locate(/obj/item/weapon/tank) in H.contents
-	if(istype(H.internal,/obj/item/weapon/tank) && H.internals)
-		H.internals.icon_state = "internal1"
-	*/
-	return ..()
+/datum/species/custom/equip_survival_gear(var/mob/living/carbon/human/H, var/extendedtank = 0, var/comprehensive = 0)
+	. = ..()
+	if(breath_type != "oxygen")
+		H.equip_to_slot_or_del(new /obj/item/clothing/mask/breath(H), slot_wear_mask)
+		var/obj/item/weapon/tank/tankpath
+		if(breath_type == "phoron")
+			tankpath = /obj/item/weapon/tank/vox
+		else
+			tankpath = text2path("/obj/item/weapon/tank/" + breath_type)
+
+		if(tankpath)
+			H.equip_to_slot_or_del(new tankpath(H), slot_r_hand)
+			H.internal = H.r_hand
+			if(istype(H.internal,/obj/item/weapon/tank) && H.internals)
+				H.internals.icon_state = "internal1"

@@ -516,4 +516,20 @@
 			trans_to(M, mobportion, multiplier, copy)
 	trans_to(T, total_volume, multiplier, copy)
 	if (total_volume <= 0)
+<<<<<<< HEAD:code/modules/reagents/holder/holder.dm
 		qdel(src)
+=======
+		qdel(src)
+		
+/**
+ * Calls [/datum/reagent/proc/on_update] on every reagent in this holder
+ *
+ * Arguments:
+ * * atom/A - passed to on_update
+ */
+/datum/reagents/proc/conditional_update(atom/A)
+	var/list/cached_reagents = reagent_list
+	for(var/datum/reagent/reagent as anything in cached_reagents)
+		reagent.on_update(A)
+	update_total()
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Holder.dm

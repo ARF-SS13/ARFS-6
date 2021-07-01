@@ -13,10 +13,17 @@
 //Central
 
 /obj/item/weapon/card/id/centcom
+<<<<<<< HEAD
 	initial_sprite_stack = list("base-stamp-silver", "top-darkgreen", "stamp-n", "pips-gold", "stripe-gold")
 
 /obj/item/weapon/card/id/centcom/vip
 	initial_sprite_stack = list("base-stamp-gold", "top-darkgreen", "stamp-n", "pips-gold", "stripe-gold")
+=======
+	initial_sprite_stack = list("base-stamp-gold", "top-blue", "stamp-n", "pips-white", "stripe-gold")
+
+/obj/item/weapon/card/id/centcom/vip
+	initial_sprite_stack = list("base-stamp-gold", "top-blue", "stamp-n", "pips-gold", "stripe-gold")
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 
 //ERT
 
@@ -145,7 +152,11 @@
 	initial_sprite_stack = list("base-stamp", "top-generic", "stamp-n", "stripe-red")
 
 /obj/item/weapon/card/id/civilian/pilot
+<<<<<<< HEAD
 	initial_sprite_stack = list("base-stamp", "top-generic", "stamp-n", "stripe-pink")
+=======
+	initial_sprite_stack = list("base-stamp", "top-generic", "stamp-n", "stripe-olive")
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 
 /obj/item/weapon/card/id/civilian/entertainer
  	initial_sprite_stack = list("base-stamp", "top-generic", "stamp-n", "stripe-brown")
@@ -179,6 +190,7 @@
 //Exploration
 
 /obj/item/weapon/card/id/exploration
+<<<<<<< HEAD
 	initial_sprite_stack = list("base-stamp", "top-pink", "stamp-n")
 
 /obj/item/weapon/card/id/exploration/fm
@@ -186,6 +198,15 @@
 
 /obj/item/weapon/card/id/exploration/head
 	initial_sprite_stack = list("base-stamp-silver", "top-pink", "stamp-n", "pips-white")
+=======
+	initial_sprite_stack = list("base-stamp", "top-olive", "stamp-n")
+
+/obj/item/weapon/card/id/exploration/fm
+	initial_sprite_stack = list("base-stamp", "top-olive", "stamp-n", "stripe-medblu")
+
+/obj/item/weapon/card/id/exploration/head
+	initial_sprite_stack = list("base-stamp-silver", "top-olive", "stamp-n", "pips-white")
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 
 //Talon
 

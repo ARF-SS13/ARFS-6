@@ -11,6 +11,10 @@
 	do_colouration = 0 //Set to 1 to enable coloration using the tail color.
 
 	color_blend_mode = ICON_ADD // Only appliciable if do_coloration = 1
+<<<<<<< HEAD
+=======
+	em_block = TRUE
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 	var/extra_overlay // Icon state of an additional overlay to blend in.
 	var/extra_overlay2 //Tertiary.
 	var/show_species_tail = 0 // If false, do not render species' tail.
@@ -922,7 +926,10 @@
 	icon_state = "shadekin-short"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
+<<<<<<< HEAD
 	//apply_restrictions = TRUE
+=======
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 	//species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW)
 
 /datum/sprite_accessory/tail/wartacosushi_tail //brightened +20RGB from matching roboparts

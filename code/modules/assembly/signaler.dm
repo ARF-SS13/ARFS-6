@@ -4,7 +4,11 @@
 	icon_state = "signaller"
 	item_state = "signaler"
 	origin_tech = list(TECH_MAGNET = 1)
+<<<<<<< HEAD
 	matter = list(DEFAULT_WALL_MATERIAL = 1000, "glass" = 200, MAT_COPPER = 10, "waste" = 100)
+=======
+	matter = list(DEFAULT_WALL_MATERIAL = 1000, MAT_GLASS = 200)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 	wires = WIRE_RECEIVE | WIRE_PULSE | WIRE_RADIO_PULSE | WIRE_RADIO_RECEIVE
 
 	secured = TRUE

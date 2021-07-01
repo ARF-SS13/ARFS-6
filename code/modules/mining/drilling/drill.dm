@@ -29,7 +29,11 @@
 		"silicates" = /obj/item/weapon/ore/glass,
 		"carbon" = /obj/item/weapon/ore/coal,
 		"copper" = /obj/item/weapon/ore/copper,
+<<<<<<< HEAD
 		"tin" = /obj/item/weapon/ore/tin,
+=======
+	//	"tin" = /obj/item/weapon/ore/tin,
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 		"bauxite" = /obj/item/weapon/ore/bauxite,
 		"rutile" = /obj/item/weapon/ore/rutile
 		)

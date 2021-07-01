@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /mob
 	var/nextemote = 1
 
@@ -180,6 +181,16 @@
 		return TRUE
 
 	return FALSE
+=======
+/mob/living/carbon/human/verb/toggle_resizing_immunity()
+	set name = "Toggle Resizing Immunity"
+	set desc = "Toggles your ability to resist resizing attempts"
+	set category = "IC"
+
+	resizable = !resizable
+	to_chat(src, "<span class='notice'>You are now [resizable ? "susceptible" : "immune"] to being resized.</span>")
+
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 
 /mob/living/carbon/human/proc/handle_flip_vr()
 	var/original_density = density
@@ -210,7 +221,7 @@
 	set name = "Set Gender Identity"
 	set desc = "Sets the pronouns when examined and performing an emote."
 	set category = "IC"
-	var/new_gender_identity = input("Please select a gender Identity.") as null|anything in list(FEMALE, MALE, NEUTER, PLURAL, HERM)
+	var/new_gender_identity = tgui_input_list(usr, "Please select a gender Identity.", list(FEMALE, MALE, NEUTER, PLURAL, HERM))
 	if(!new_gender_identity)
 		return 0
 	change_gender_identity(new_gender_identity)

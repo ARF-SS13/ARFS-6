@@ -10,6 +10,7 @@
 	sprite_sheets = list(
 		SPECIES_TESHARI = 'maps/southern_cross/icons/mob/species/teshari/sc_suit.dmi'
 	)
+<<<<<<< HEAD
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 
 //Misc
@@ -27,3 +28,6 @@
 	/obj/item/weapon/dnainjector,/obj/item/weapon/reagent_containers/dropper,/obj/item/weapon/reagent_containers/syringe,/obj/item/weapon/reagent_containers/hypospray,
 	/obj/item/device/healthanalyzer,/obj/item/weapon/reagent_containers/glass/bottle,/obj/item/weapon/reagent_containers/glass/beaker,
 	/obj/item/weapon/reagent_containers/pill,/obj/item/weapon/storage/pill_bottle)
+=======
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491

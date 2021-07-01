@@ -18,6 +18,10 @@
 	name = "adv. NIF repair tool"
 	id = "anrt"
 	req_tech = list(TECH_MAGNET = 5, TECH_BLUESPACE = 5, TECH_MATERIAL = 5, TECH_ENGINEERING = 5, TECH_DATA = 5)
+<<<<<<< HEAD
 	materials = list(DEFAULT_WALL_MATERIAL = 2000, "glass" = 3000, MAT_COPPER = 4000, "uranium" = 2000, "diamond" = 2000)
+=======
+	materials = list(DEFAULT_WALL_MATERIAL = 2000, "glass" = 3000, "uranium" = 2000, "diamond" = 2000)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 	build_path = /obj/item/device/nifrepairer
 	sort_string = "JVABA"

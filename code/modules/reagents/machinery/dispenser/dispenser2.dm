@@ -92,7 +92,11 @@
 		add_cartridge(W, user)
 
 	else if(W.is_screwdriver())
+<<<<<<< HEAD:code/modules/reagents/machinery/dispenser/dispenser2.dm
 		var/label = input(user, "Which cartridge would you like to remove?", "Chemical Dispenser") as null|anything in cartridges
+=======
+		var/label = tgui_input_list(user, "Which cartridge would you like to remove?", "Chemical Dispenser", cartridges)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/dispenser/dispenser2.dm
 		if(!label) return
 		var/obj/item/weapon/reagent_containers/chem_disp_cartridge/C = remove_cartridge(label)
 		if(C)

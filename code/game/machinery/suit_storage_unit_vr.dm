@@ -6,7 +6,11 @@
 /obj/machinery/suit_cycler/exploration
 	req_access = null
 	req_one_access = list(access_explorer,access_medical_equip)
+<<<<<<< HEAD
 	departments = list("Exploration","Expedition Medic","No Change")
+=======
+	departments = list("Exploration","Field Medic","No Change")
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 
 /obj/machinery/suit_cycler/pilot
 	req_access = list(access_pilot)

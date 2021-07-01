@@ -139,7 +139,24 @@
 	descriptors = list(
 		/datum/mob_descriptor/height = -3,
 		/datum/mob_descriptor/build = -3
-		)
+	)
+
+	var/static/list/flight_bodyparts = list(
+		BP_L_ARM,
+		BP_R_ARM,
+		BP_L_HAND,
+		BP_R_HAND
+	)
+	var/static/list/flight_suit_blacklisted_types = list(
+		/obj/item/clothing/suit/space,
+		/obj/item/clothing/suit/straight_jacket
+	)
+
+	default_emotes = list(
+		/decl/emote/audible/teshsqueak,
+		/decl/emote/audible/teshchirp,
+		/decl/emote/audible/teshtrill
+	)
 
 	var/static/list/flight_bodyparts = list(
 		BP_L_ARM,
@@ -159,7 +176,11 @@
 /datum/species/teshari/handle_falling(mob/living/carbon/human/H, atom/hit_atom, damage_min, damage_max, silent, planetary)
 
 	// Tesh can glide to save themselves from some falls. Basejumping bird
+<<<<<<< HEAD:code/modules/mob/living/carbon/human/species/station/teshari.dm
 	// without parachute, or falling bird without free wings goes splat.
+=======
+	// without parachute, or falling bird without free wings, goes splat.
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/mob/living/carbon/human/species/station/seromi.dm
 
 	// Are we landing from orbit, or handcuffed/unconscious/tied to something? 
 	if(planetary || !istype(H) || H.incapacitated(INCAPACITATION_DEFAULT|INCAPACITATION_DISABLED))

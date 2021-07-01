@@ -1,6 +1,7 @@
 /obj
 	layer = OBJ_LAYER
 	plane = OBJ_PLANE
+	vis_flags = VIS_INHERIT_PLANE //when this be added to vis_contents of something it inherit something.plane, important for visualisation of obj in openspace.
 	//Used to store information about the contents of the object.
 	var/list/matter
 	var/w_class // Size of the object.
@@ -119,9 +120,6 @@
 /obj/attack_ghost(mob/user)
 	tgui_interact(user)
 	..()
-
-/obj/proc/interact(mob/user)
-	return
 
 /mob/proc/unset_machine()
 	machine?.remove_visual(src)

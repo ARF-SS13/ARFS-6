@@ -239,7 +239,11 @@
 				if("create_bottle_multiple")
 					if(condi || !reagents.total_volume)
 						return
+<<<<<<< HEAD:code/modules/reagents/machinery/chem_master.dm
 					tgui_modal_input(src, id, "Please enter the amount of bottles to make (max [MAX_MULTI_AMOUNT] at a time):", null, arguments, pillamount, 5)
+=======
+					tgui_modal_input(src, id, "Please enter the amount of bottles to make (max [MAX_MULTI_AMOUNT] at a time):", null, arguments, pillamount / 5, 5)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Machinery.dm
 				if("change_bottle_style")
 					var/list/choices = list()
 					for(var/i = 1 to MAX_BOTTLE_SPRITE)

@@ -26,7 +26,11 @@
 	var/affects_dead = 0	// Does this chem process inside a corpse?
 	var/affects_robots = 0	// Does this chem process inside a Synth?
 	
+<<<<<<< HEAD:code/modules/reagents/reagents/_reagents.dm
 	var/allergen_type = GENERIC	// What potential allergens does this contain?
+=======
+	var/allergen_type		// What potential allergens does this contain?
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents.dm
 	var/allergen_factor = 1	// If the potential allergens are mixed and low-volume, they're a bit less dangerous. Needed for drinks because they're a single reagent compared to food which contains multiple seperate reagents.
 
 	var/cup_icon_state = null
@@ -235,3 +239,10 @@
 
 /datum/reagent/proc/reaction_mob(var/mob/target)
 	touch_mob(target)
+<<<<<<< HEAD:code/modules/reagents/reagents/_reagents.dm
+=======
+
+/// Called by [/datum/reagents/proc/conditional_update]
+/datum/reagent/proc/on_update(atom/A)
+	return
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents.dm

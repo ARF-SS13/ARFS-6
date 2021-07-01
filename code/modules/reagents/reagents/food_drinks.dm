@@ -124,7 +124,11 @@
 	icon_raw = "batter_raw"
 	icon_cooked = "batter_cooked"
 	coated_adj = "battered"
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS | EGGS //Made with flour(grain), and eggs(eggs)
+=======
+	allergen_type = ALLERGEN_GRAINS | ALLERGEN_EGGS //Made with flour(grain), and eggs(eggs)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/nutriment/coating/beerbatter
 	name = "beer batter mix"
@@ -135,7 +139,11 @@
 	icon_raw = "batter_raw"
 	icon_cooked = "batter_cooked"
 	coated_adj = "beer-battered"
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS | EGGS //Made with flour(grain), eggs(eggs), and beer(grain)
+=======
+	allergen_type = ALLERGEN_GRAINS | ALLERGEN_EGGS //Made with flour(grain), eggs(eggs), and beer(grain)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/nutriment/coating/beerbatter/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -239,7 +247,11 @@
 	id = "cornoil"
 	description = "An oil derived from various types of corn."
 	reagent_state = LIQUID
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = VEGETABLE //Corn is a vegetable
+=======
+	allergen_type = ALLERGEN_VEGETABLE //Corn is a vegetable
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/nutriment/triglyceride/oil/peanut
 	name = "Peanut Oil"
@@ -249,7 +261,11 @@
 	taste_mult = 0.3
 	nutriment_factor = 15
 	color = "#4F3500"
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = SEEDS //Peanut oil would come from peanuts, hence seeds.
+=======
+	allergen_type = ALLERGEN_SEEDS //Peanut oil would come from peanuts, hence seeds.
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 // Aurora Cooking Port Insertion End
 
@@ -266,7 +282,11 @@
 	id = "protein"
 	taste_description = "some sort of meat"
 	color = "#440000"
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = MEAT //"Animal protein" implies it comes from animals, therefore meat.
+=======
+	allergen_type = ALLERGEN_MEAT //"Animal protein" implies it comes from animals, therefore meat.
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/nutriment/protein/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	switch(alien)
@@ -286,35 +306,55 @@
 	id = "tofu"
 	color = "#fdffa8"
 	taste_description = "tofu"
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = BEANS //Made from soy beans
+=======
+	allergen_type = ALLERGEN_BEANS //Made from soy beans
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/nutriment/protein/seafood
 	name = "seafood protein"
 	id = "seafood"
 	color = "#f5f4e9"
 	taste_description = "fish"
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FISH //I suppose the fish allergy likely refers to seafood in general.
+=======
+	allergen_type = ALLERGEN_FISH //I suppose the fish allergy likely refers to seafood in general.
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/nutriment/protein/cheese
 	name = "cheese"
 	id = "cheese"
 	color = "#EDB91F"
 	taste_description = "cheese"
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = DAIRY //Cheese is made from dairy
+=======
+	allergen_type = ALLERGEN_DAIRY //Cheese is made from dairy
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/nutriment/protein/egg
 	name = "egg yolk"
 	id = "egg"
 	taste_description = "egg"
 	color = "#FFFFAA"
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = EGGS //Eggs contain egg
+=======
+	allergen_type = ALLERGEN_EGGS //Eggs contain egg
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/nutriment/protein/murk
 	name = "murkfin protein"
 	id = "murk_protein"
 	taste_description = "mud"
 	color = "#664330"
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FISH //Murkfin is fish
+=======
+	allergen_type = ALLERGEN_FISH //Murkfin is fish
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/nutriment/honey
 	name = "Honey"
@@ -352,7 +392,11 @@
 	taste_description = "unmistakably mayonnaise"
 	nutriment_factor = 10
 	color = "#FFFFFF"
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = EGGS	//Mayo is made from eggs
+=======
+	allergen_type = ALLERGEN_EGGS	//Mayo is made from eggs
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/nutriment/yeast
 	name = "Yeast"
@@ -370,7 +414,11 @@
 	reagent_state = SOLID
 	nutriment_factor = 1
 	color = "#FFFFFF"
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS //Flour is made from grain
+=======
+	allergen_type = ALLERGEN_GRAINS //Flour is made from grain
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/nutriment/flour/touch_turf(var/turf/simulated/T)
 	if(!istype(T, /turf/space))
@@ -384,7 +432,11 @@
 	taste_mult = 1.3
 	nutriment_factor = 1
 	color = "#482000"
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = COFFEE //Again, coffee contains coffee
+=======
+	allergen_type = ALLERGEN_COFFEE //Again, coffee contains coffee
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/nutriment/tea
 	name = "Tea Powder"
@@ -411,7 +463,11 @@
 	description = "Dehydrated, powdered juice of some kind."
 	taste_mult = 1.3
 	nutriment_factor = 1
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //I suppose it's implied here that the juice is from dehydrated fruit.
+=======
+	allergen_type = ALLERGEN_FRUIT //I suppose it's implied here that the juice is from dehydrated fruit.
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/nutriment/instantjuice/grape
 	name = "Grape Juice Powder"
@@ -450,7 +506,11 @@
 	reagent_state = LIQUID
 	nutriment_factor = 2
 	color = "#792300"
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = BEANS //Soy (beans)
+=======
+	allergen_type = ALLERGEN_BEANS //Soy (beans)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 
 /datum/reagent/nutriment/ketchup
@@ -461,7 +521,11 @@
 	reagent_state = LIQUID
 	nutriment_factor = 5
 	color = "#731008"
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT 	//Tomatoes are a fruit.
+=======
+	allergen_type = ALLERGEN_FRUIT 	//Tomatoes are a fruit.
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/nutriment/barbecue
 	name = "Barbeque Sauce"
@@ -491,7 +555,11 @@
 	reagent_state = LIQUID
 	nutriment_factor = 1
 	color = "#801E28"
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Cherries are fruits
+=======
+	allergen_type = ALLERGEN_FRUIT //Cherries are fruits
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/nutriment/peanutbutter
 	name = "Peanut Butter"
@@ -502,7 +570,11 @@
 	reagent_state = LIQUID
 	nutriment_factor = 30
 	color = "#4F3500"
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = SEEDS //Peanuts(seeds)
+=======
+	allergen_type = ALLERGEN_SEEDS //Peanuts(seeds)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/nutriment/vanilla
 	name = "Vanilla Extract"
@@ -548,7 +620,7 @@
 	reagent_state = LIQUID
 	nutriment_factor = 2
 	color = "#899613"
-	allergen_type = DAIRY	//incase anyone is dumb enough to drink it - it does contain milk!
+	allergen_type = ALLERGEN_DAIRY	//incase anyone is dumb enough to drink it - it does contain milk!
 
 /datum/reagent/nutriment/sprinkles
 	name = "Sprinkles"
@@ -917,7 +989,11 @@
 
 	glass_name = "banana juice"
 	glass_desc = "The raw essence of a banana. HONK!"
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Bananas are fruit
+=======
+	allergen_type = ALLERGEN_FRUIT //Bananas are fruit
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/juice/berry
 	name = "Berry Juice"
@@ -928,7 +1004,11 @@
 
 	glass_name = "berry juice"
 	glass_desc = "Berry juice. Or maybe it's jam. Who cares?"
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Berries are fruit
+=======
+	allergen_type = ALLERGEN_FRUIT //Berries are fruit
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/juice/pineapple
 	name = "Pineapple Juice"
@@ -939,7 +1019,11 @@
 
 	glass_name = "pineapple juice"
 	glass_desc = "Pineapple juice. Or maybe it's spineapple. Who cares?"
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Pineapples are fruit
+=======
+	allergen_type = ALLERGEN_FRUIT //Pineapples are fruit
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/juice/carrot
 	name = "Carrot juice"
@@ -950,7 +1034,11 @@
 
 	glass_name = "carrot juice"
 	glass_desc = "It is just like a carrot but without crunching."
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = VEGETABLE //Carrots are vegetables
+=======
+	allergen_type = ALLERGEN_VEGETABLE //Carrots are vegetables
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/juice/carrot/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -966,7 +1054,11 @@
 
 	glass_name = "grape juice"
 	glass_desc = "It's grrrrrape!"
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Grapes are fruit
+=======
+	allergen_type = ALLERGEN_FRUIT //Grapes are fruit
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/juice/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -1000,7 +1092,11 @@
 
 	glass_name = "lemon juice"
 	glass_desc = "Sour..."
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Lemons are fruit
+=======
+	allergen_type = ALLERGEN_FRUIT //Lemons are fruit
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 
 /datum/reagent/drink/juice/apple
@@ -1013,7 +1109,11 @@
 
 	glass_name = "apple juice"
 	glass_desc = "An earth favorite."
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Apples are fruit
+=======
+	allergen_type = ALLERGEN_FRUIT //Apples are fruit
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/juice/lime
 	name = "Lime Juice"
@@ -1025,7 +1125,11 @@
 
 	glass_name = "lime juice"
 	glass_desc = "A glass of sweet-sour lime juice"
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Limes are fruit
+=======
+	allergen_type = ALLERGEN_FRUIT //Limes are fruit
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/juice/lime/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -1042,7 +1146,11 @@
 
 	glass_name = "orange juice"
 	glass_desc = "Vitamins! Yay!"
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Oranges are fruit
+=======
+	allergen_type = ALLERGEN_FRUIT //Oranges are fruit
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/orangejuice/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -1072,7 +1180,11 @@
 
 	glass_name = "potato juice"
 	glass_desc = "Juice from a potato. Bleh."
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = VEGETABLE //Potatoes are vegetables
+=======
+	allergen_type = ALLERGEN_VEGETABLE //Potatoes are vegetables
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/juice/tomato
 	name = "Tomato Juice"
@@ -1084,7 +1196,11 @@
 
 	glass_name = "tomato juice"
 	glass_desc = "Are you sure this is tomato juice?"
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Yes tomatoes are a fruit
+=======
+	allergen_type = ALLERGEN_FRUIT //Yes tomatoes are a fruit
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/juice/tomato/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -1101,7 +1217,11 @@
 
 	glass_name = "watermelon juice"
 	glass_desc = "Delicious juice made from watermelon."
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Watermelon is a fruit
+=======
+	allergen_type = ALLERGEN_FRUIT //Watermelon is a fruit
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 // Everything else
 
@@ -1118,7 +1238,11 @@
 	cup_icon_state = "cup_cream"
 	cup_name = "cup of milk"
 	cup_desc = "White and nutritious goodness!"
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = DAIRY //Milk is dairy
+=======
+	allergen_type = ALLERGEN_DAIRY //Milk is dairy
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/milk/chocolate
 	name =  "Chocolate Milk"
@@ -1164,7 +1288,11 @@
 	cup_icon_state = "cup_cream"
 	cup_name = "cup of cream"
 	cup_desc = "Ewwww..."
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = DAIRY //Cream is dairy
+=======
+	allergen_type = ALLERGEN_DAIRY //Cream is dairy
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/milk/soymilk
 	name = "Soy Milk"
@@ -1179,7 +1307,11 @@
 	cup_icon_state = "cup_cream"
 	cup_name = "cup of milk"
 	cup_desc = "White and nutritious goodness!"
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = BEANS //Would be made from soy beans
+=======
+	allergen_type = ALLERGEN_BEANS //Would be made from soy beans
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/tea
 	name = "Tea"
@@ -1264,7 +1396,11 @@
 
 	cup_name = "cup of lemon tea"
 	cup_desc = "A tasty mixture of lemon and tea. It's apparently good for you!"
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made with lemon juice
+=======
+	allergen_type = ALLERGEN_FRUIT //Made with lemon juice
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/tea/limetea
 	name = "Lime Tea"
@@ -1278,7 +1414,11 @@
 
 	cup_name = "cup of lime tea"
 	cup_desc = "A tasty mixture of lime and tea. It's apparently good for you!"
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made with lime juice
+=======
+	allergen_type = ALLERGEN_FRUIT //Made with lime juice
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/tea/orangetea
 	name = "Orange Tea"
@@ -1292,7 +1432,11 @@
 
 	cup_name = "cup of orange tea"
 	cup_desc = "A tasty mixture of orange and tea. It's apparently good for you!"
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made with orange juice
+=======
+	allergen_type = ALLERGEN_FRUIT //Made with orange juice
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/tea/berrytea
 	name = "Berry Tea"
@@ -1306,7 +1450,11 @@
 
 	cup_name = "cup of berry tea"
 	cup_desc = "A tasty mixture of berries and tea. It's apparently good for you!"
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made with berry juice
+=======
+	allergen_type = ALLERGEN_FRUIT //Made with berry juice
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/greentea
 	name = "Green Tea"
@@ -1353,7 +1501,11 @@
 
 	glass_name = "coffee"
 	glass_desc = "Don't drop it, or you'll send scalding liquid and glass shards everywhere."
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = COFFEE //Apparently coffee contains coffee
+=======
+	allergen_type = ALLERGEN_COFFEE //Apparently coffee contains coffee
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/coffee/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
@@ -1425,7 +1577,11 @@
 	cup_icon_state = "cup_latte"
 	cup_name = "cup of soy latte"
 	cup_desc = "A nice and refreshing beverage while you are reading."
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = COFFEE|BEANS 	//Soy(beans) and coffee
+=======
+	allergen_type = ALLERGEN_COFFEE|ALLERGEN_BEANS 	//Soy(beans) and coffee
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/coffee/soy_latte/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -1445,7 +1601,11 @@
 	cup_icon_state = "cup_latte"
 	cup_name = "cup of cafe latte"
 	cup_desc = "A nice and refreshing beverage while you are reading."
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = COFFEE|DAIRY //Cream and coffee
+=======
+	allergen_type = ALLERGEN_COFFEE|ALLERGEN_DAIRY //Cream and coffee
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/coffee/cafe_latte/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -1466,7 +1626,11 @@
 
 	glass_name = "decaf coffee"
 	glass_desc = "Basically just brown, bitter water."
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = COFFEE //Decaf coffee would still likely trigger allergy symptoms.
+=======
+	allergen_type = ALLERGEN_COFFEE //Decaf coffee would still likely trigger allergy symptoms.
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/hot_coco
 	name = "Hot Chocolate"
@@ -1510,7 +1674,11 @@
 	glass_name = "grape soda"
 	glass_desc = "Looks like a delicious drink!"
 	glass_special = list(DRINK_FIZZ)
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made with grape juice
+=======
+	allergen_type = ALLERGEN_FRUIT //Made with grape juice
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/soda/tonic
 	name = "Tonic Water"
@@ -1538,7 +1706,11 @@
 	glass_name = "lemonade"
 	glass_desc = "Oh the nostalgia..."
 	glass_special = list(DRINK_FIZZ)
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made with lemon juice
+=======
+	allergen_type = ALLERGEN_FRUIT //Made with lemon juice
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/soda/melonade
 	name = "Melonade"
@@ -1551,7 +1723,11 @@
 	glass_name = "melonade"
 	glass_desc = "Oh the.. nostalgia?"
 	glass_special = list(DRINK_FIZZ)
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made with watermelon juice
+=======
+	allergen_type = ALLERGEN_FRUIT //Made with watermelon juice
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/soda/appleade
 	name = "Appleade"
@@ -1564,7 +1740,11 @@
 	glass_name = "appleade"
 	glass_desc = "Applejuice, improved."
 	glass_special = list(DRINK_FIZZ)
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made with apple juice
+=======
+	allergen_type = ALLERGEN_FRUIT //Made with apple juice
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/soda/pineappleade
 	name = "Pineappleade"
@@ -1577,7 +1757,11 @@
 	glass_name = "pineappleade"
 	glass_desc = "Pineapple, juiced up."
 	glass_special = list(DRINK_FIZZ)
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made with pineapple juice
+=======
+	allergen_type = ALLERGEN_FRUIT //Made with pineapple juice
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/soda/kiraspecial
 	name = "Kira Special"
@@ -1590,7 +1774,11 @@
 	glass_name = "Kira Special"
 	glass_desc = "Long live the guy who everyone had mistaken for a girl. Baka!"
 	glass_special = list(DRINK_FIZZ)
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made from orange and lime juice
+=======
+	allergen_type = ALLERGEN_FRUIT //Made from orange and lime juice
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/soda/brownstar
 	name = "Brown Star"
@@ -1602,7 +1790,11 @@
 
 	glass_name = "Brown Star"
 	glass_desc = "It's not what it sounds like..."
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made with orangejuice and cola
+=======
+	allergen_type = ALLERGEN_FRUIT //Made with orangejuice and cola
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/milkshake
 	name = "Milkshake"
@@ -1614,7 +1806,11 @@
 
 	glass_name = "milkshake"
 	glass_desc = "Glorious brainfreezing mixture."
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = DAIRY //Made with dairy products
+=======
+	allergen_type = ALLERGEN_DAIRY //Made with dairy products
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/milkshake/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -1647,7 +1843,11 @@
 
 	glass_name = "Chocolate Milkshake"
 	glass_desc = "A refreshing chocolate milkshake, just like mom used to make."
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = DAIRY //Made with dairy products
+=======
+	allergen_type = ALLERGEN_DAIRY //Made with dairy products
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/milkshake/berryshake
 	name = "Berry Milkshake"
@@ -1659,7 +1859,11 @@
 
 	glass_name = "Berry Milkshake"
 	glass_desc = "A refreshing berry milkshake, just like mom used to make."
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT|DAIRY //Made with berry juice and dairy products
+=======
+	allergen_type = ALLERGEN_FRUIT|ALLERGEN_DAIRY //Made with berry juice and dairy products
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/milkshake/coffeeshake
 	name = "Coffee Milkshake"
@@ -1674,7 +1878,11 @@
 
 	glass_name = "Coffee Milkshake"
 	glass_desc = "An energizing coffee milkshake, perfect for hot days at work.."
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = DAIRY|COFFEE //Made with coffee and dairy products
+=======
+	allergen_type = ALLERGEN_DAIRY|ALLERGEN_COFFEE //Made with coffee and dairy products
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/milkshake/coffeeshake/overdose(var/mob/living/carbon/M, var/alien)
 	M.make_jittery(5)
@@ -1688,7 +1896,11 @@
 
 	glass_name = "Peanut Milkshake"
 	glass_desc = "Savory cream in an ice-cold stature."
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = SEEDS|DAIRY //Made with peanutbutter(seeds) and dairy products
+=======
+	allergen_type = ALLERGEN_SEEDS|ALLERGEN_DAIRY //Made with peanutbutter(seeds) and dairy products
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/rewriter
 	name = "Rewriter"
@@ -1700,7 +1912,11 @@
 
 	glass_name = "Rewriter"
 	glass_desc = "The secret of the sanctuary of the Libarian..."
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT|COFFEE //Made with space mountain wind (Fruit)
+=======
+	allergen_type = ALLERGEN_FRUIT|ALLERGEN_COFFEE //Made with space mountain wind (Fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/rewriter/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -1765,7 +1981,11 @@
 	glass_name = "Space Mountain Wind"
 	glass_desc = "Space Mountain Wind. As you know, there are no mountains in space, only wind."
 	glass_special = list(DRINK_FIZZ)
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Fruit allergens because citrus is implied to come from limes/lemons
+=======
+	allergen_type = ALLERGEN_FRUIT //Fruit allergens because citrus is implied to come from limes/lemons
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/soda/dr_gibb
 	name = "Dr. Gibb"
@@ -1790,7 +2010,7 @@
 	glass_name = "Space-up"
 	glass_desc = "Space-up. It helps keep your cool."
 	glass_special = list(DRINK_FIZZ)
-	allergen_type = FRUIT
+	allergen_type = ALLERGEN_FRUIT
 
 /datum/reagent/drink/soda/lemon_lime
 	name = "Lemon-Lime"
@@ -1803,7 +2023,11 @@
 	glass_name = "lemon lime soda"
 	glass_desc = "A tangy substance made of 0.5% natural citrus!"
 	glass_special = list(DRINK_FIZZ)
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made with lemon and lime juice
+=======
+	allergen_type = ALLERGEN_FRUIT //Made with lemon and lime juice
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/soda/gingerale
 	name = "Ginger Ale"
@@ -1860,7 +2084,11 @@
 	glass_name = "roy rogers"
 	glass_desc = "I'm a cowboy, on a steel horse I ride"
 	glass_special = list(DRINK_FIZZ)
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made with lemon lime
+=======
+	allergen_type = ALLERGEN_FRUIT //Made with lemon lime
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/collins_mix
 	name = "Collins Mix"
@@ -1873,7 +2101,11 @@
 	glass_name = "collins mix"
 	glass_desc = "Best hope it isn't a hoax."
 	glass_special = list(DRINK_FIZZ)
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made with lemon lime
+=======
+	allergen_type = ALLERGEN_FRUIT //Made with lemon lime
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/arnold_palmer
 	name = "Arnold Palmer"
@@ -1886,7 +2118,11 @@
 	glass_name = "arnold palmer"
 	glass_desc = "Tastes just like the old man."
 	glass_special = list(DRINK_FIZZ)
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made with lemonade
+=======
+	allergen_type = ALLERGEN_FRUIT //Made with lemonade
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/doctor_delight
 	name = "The Doctor's Delight"
@@ -1899,7 +2135,11 @@
 
 	glass_name = "The Doctor's Delight"
 	glass_desc = "A healthy mixture of juices, guaranteed to keep you healthy until the next toolboxing takes place."
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT|DAIRY //Made from several fruit juices, and cream.
+=======
+	allergen_type = ALLERGEN_FRUIT|ALLERGEN_DAIRY //Made from several fruit juices, and cream.
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/doctor_delight/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -2008,7 +2248,11 @@
 
 	glass_name = "Dream Cream"
 	glass_desc = "A smoothy, silky mix of honey and dairy."
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = DAIRY //Made using dairy
+=======
+	allergen_type = ALLERGEN_DAIRY //Made using dairy
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/soda/vilelemon
 	name = "Vile Lemon"
@@ -2020,7 +2264,11 @@
 	glass_name = "Vile Lemon"
 	glass_desc = "A sour, fizzy drink with lemonade and lemonlime."
 	glass_special = list(DRINK_FIZZ)
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made from lemonade
+=======
+	allergen_type = ALLERGEN_FRUIT //Made from lemonade
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/entdraught
 	name = "Ent's Draught"
@@ -2031,7 +2279,11 @@
 
 	glass_name = "Ent's Draught"
 	glass_desc = "You can almost smell the tranquility emanating from this."
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	//allergen_type = FRUIT Sorry to break the news, chief. Honey is not a fruit.
+=======
+	//allergen_type = ALLERGEN_FRUIT Sorry to break the news, chief. Honey is not a fruit.
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/lovepotion
 	name = "Love Potion"
@@ -2042,7 +2294,11 @@
 
 	glass_name = "Love Potion"
 	glass_desc = "Love me tender, love me sweet."
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT|DAIRY //Made from cream(dairy) and berryjuice(fruit)
+=======
+	allergen_type = ALLERGEN_FRUIT|ALLERGEN_DAIRY //Made from cream(dairy) and berryjuice(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/oilslick
 	name = "Oil Slick"
@@ -2055,7 +2311,11 @@
 	glass_name = "Oil Slick"
 	glass_desc = "A concoction that should probably be in an engine, rather than your stomach."
 	glass_icon = DRINK_ICON_NOISY
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = VEGETABLE //Made from corn oil
+=======
+	allergen_type = ALLERGEN_VEGETABLE //Made from corn oil
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/slimeslammer
 	name = "Slick Slimes Slammer"
@@ -2068,7 +2328,11 @@
 	glass_name = "Slick Slime Slammer"
 	glass_desc = "A concoction that should probably be in an engine, rather than your stomach. Still."
 	glass_icon = DRINK_ICON_NOISY
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = VEGETABLE|SEEDS //Made from corn oil and peanutbutter
+=======
+	allergen_type = ALLERGEN_VEGETABLE|ALLERGEN_SEEDS //Made from corn oil and peanutbutter
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/eggnog
 	name = "Eggnog"
@@ -2079,7 +2343,11 @@
 
 	glass_name = "Eggnog"
 	glass_desc = "You can't egg-nore the holiday cheer all around you"
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = DAIRY|EGGS //Eggnog is made with dairy and eggs.
+=======
+	allergen_type = ALLERGEN_DAIRY|ALLERGEN_EGGS //Eggnog is made with dairy and eggs.
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/nuclearwaste
 	name = "Nuclear Waste"
@@ -2093,7 +2361,11 @@
 	glass_desc = "Sadly, no super powers."
 	glass_icon = DRINK_ICON_NOISY
 	glass_special = list(DRINK_FIZZ)
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = VEGETABLE //Made from oilslick, so has the same allergens.
+=======
+	allergen_type = ALLERGEN_VEGETABLE //Made from oilslick, so has the same allergens.
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/nuclearwaste/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -2119,7 +2391,11 @@
 	glass_desc = "A pitiful sludge that looks vaguely like a soda.. if you look at it a certain way."
 	glass_icon = DRINK_ICON_NOISY
 	glass_special = list(DRINK_FIZZ)
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = VEGETABLE //Made from corn oil
+=======
+	allergen_type = ALLERGEN_VEGETABLE //Made from corn oil
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/sodaoil/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -2149,7 +2425,11 @@
 	glass_name = "mojito"
 	glass_desc = "Mint, bubbly water, and citrus, made for sailing."
 	glass_special = list(DRINK_FIZZ)
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made with lime juice
+=======
+	allergen_type = ALLERGEN_FRUIT //Made with lime juice
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/sexonthebeach
 	name = "Virgin Sex On The Beach"
@@ -2160,7 +2440,11 @@
 
 	glass_name = "sex on the beach"
 	glass_desc = "A secret combination of orange juice and pomegranate."
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made with orange juice
+=======
+	allergen_type = ALLERGEN_FRUIT //Made with orange juice
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/driverspunch
 	name = "Driver's Punch"
@@ -2172,7 +2456,11 @@
 	glass_name = "driver`s punch"
 	glass_desc = "A fruity punch!"
 	glass_special = list(DRINK_FIZZ)
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made with appleade and orange juice
+=======
+	allergen_type = ALLERGEN_FRUIT //Made with appleade and orange juice
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/mintapplesparkle
 	name = "Mint Apple Sparkle"
@@ -2184,7 +2472,11 @@
 	glass_name = "mint apple sparkle"
 	glass_desc = "Delicious appleade with a touch of mint."
 	glass_special = list(DRINK_FIZZ)
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made with appleade
+=======
+	allergen_type = ALLERGEN_FRUIT //Made with appleade
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/berrycordial
 	name = "Berry Cordial"
@@ -2196,7 +2488,11 @@
 	glass_name = "berry cordial"
 	glass_desc = "How <font face='comic sans ms'>berry cordial</font> of you."
 	glass_icon = DRINK_ICON_NOISY
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made with berry and lemonjuice
+=======
+	allergen_type = ALLERGEN_FRUIT //Made with berry and lemonjuice
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/tropicalfizz
 	name = "Tropical Fizz"
@@ -2209,7 +2505,11 @@
 	glass_desc = "One sip and you're in the bahamas."
 	glass_icon = DRINK_ICON_NOISY
 	glass_special = list(DRINK_FIZZ)
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made with several fruit juices
+=======
+	allergen_type = ALLERGEN_FRUIT //Made with several fruit juices
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/fauxfizz
 	name = "Faux Fizz"
@@ -2222,7 +2522,11 @@
 	glass_desc = "One sip and you're in the bahamas... maybe."
 	glass_icon = DRINK_ICON_NOISY
 	glass_special = list(DRINK_FIZZ)
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //made with several fruit juices
+=======
+	allergen_type = ALLERGEN_FRUIT //made with several fruit juices
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 
 /* Alcohol */
@@ -2252,7 +2556,11 @@
 	glass_name = "ale"
 	glass_desc = "A freezing pint of delicious ale"
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS //Barley is grain
+=======
+	allergen_type = ALLERGEN_GRAINS //Barley is grain
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/beer
 	name = "Beer"
@@ -2266,7 +2574,11 @@
 	glass_name = "beer"
 	glass_desc = "A freezing pint of beer"
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS //Made from grains
+=======
+	allergen_type = ALLERGEN_GRAINS //Made from grains
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/beer/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -2286,7 +2598,11 @@
 	glass_name = "lite beer"
 	glass_desc = "A freezing pint of lite beer"
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS //Made from grains
+=======
+	allergen_type = ALLERGEN_GRAINS //Made from grains
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/bluecuracao
 	name = "Blue Curacao"
@@ -2300,7 +2616,11 @@
 	glass_name = "blue curacao"
 	glass_desc = "Exotically blue, fruity drink, distilled from oranges."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made from oranges(fruit)
+=======
+	allergen_type = ALLERGEN_FRUIT //Made from oranges(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/cognac
 	name = "Cognac"
@@ -2314,7 +2634,11 @@
 	glass_name = "cognac"
 	glass_desc = "Damn, you feel like some kind of French aristocrat just by holding this."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Cognac is made from wine which is made from grapes.
+=======
+	allergen_type = ALLERGEN_FRUIT //Cognac is made from wine which is made from grapes.
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/deadrum
 	name = "Deadrum"
@@ -2356,12 +2680,20 @@
 	glass_name = "gin"
 	glass_desc = "A crystal clear glass of Griffeater gin."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made from juniper berries
+=======
+	allergen_type = ALLERGEN_FRUIT //Made from juniper berries
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 //Base type for alchoholic drinks containing coffee
 /datum/reagent/ethanol/coffee
 	overdose = 45
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = COFFEE //Contains coffee or is made from coffee
+=======
+	allergen_type = ALLERGEN_COFFEE //Contains coffee or is made from coffee
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/coffee/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
@@ -2415,7 +2747,11 @@
 	glass_name = "melon liquor"
 	glass_desc = "A relatively sweet and fruity 46 proof liquor."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made from watermelons
+=======
+	allergen_type = ALLERGEN_FRUIT //Made from watermelons
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/melonspritzer
 	name = "Melon Spritzer"
@@ -2429,7 +2765,11 @@
 	glass_desc = "Melons: Citrus style."
 	glass_special = list(DRINK_FIZZ)
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made from watermelon juice, apple juice, and lime juice
+=======
+	allergen_type = ALLERGEN_FRUIT //Made from watermelon juice, apple juice, and lime juice
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/rum
 	name = "Rum"
@@ -2465,7 +2805,11 @@
 	glass_name = "sex on the beach"
 	glass_desc = "A concoction of vodka and a secret combination of orange juice and pomegranate."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made from orange juice
+=======
+	allergen_type = ALLERGEN_FRUIT //Made from orange juice
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/tequila
 	name = "Tequila"
@@ -2510,7 +2854,11 @@
 
 	glass_name = "vermouth"
 	glass_desc = "You wonder why you're even drinking this straight."
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Vermouth is made from wine which is made from grapes(fruit)
+=======
+	allergen_type = ALLERGEN_FRUIT //Vermouth is made from wine which is made from grapes(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/vodka
 	name = "Vodka"
@@ -2523,7 +2871,11 @@
 	glass_name = "vodka"
 	glass_desc = "The glass contain wodka. Xynta."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS //Vodka is made from grains
+=======
+	allergen_type = ALLERGEN_GRAINS //Vodka is made from grains
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/vodka/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -2540,7 +2892,11 @@
 	glass_name = "whiskey"
 	glass_desc = "The silky, smokey whiskey goodness inside the glass makes the drink look very classy."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS //Whiskey is also made from grain.
+=======
+	allergen_type = ALLERGEN_GRAINS //Whiskey is also made from grain.
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/wine
 	name = "Wine"
@@ -2553,7 +2909,11 @@
 	glass_name = "wine"
 	glass_desc = "A very classy looking drink."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Wine is made from grapes (fruit)
+=======
+	allergen_type = ALLERGEN_FRUIT //Wine is made from grapes (fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/wine/champagne
 	name = "Champagne"
@@ -2565,7 +2925,11 @@
 	glass_name = "champagne"
 	glass_desc = "An even classier looking drink."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Still wine, and still made from grapes (fruit)
+=======
+	allergen_type = ALLERGEN_FRUIT //Still wine, and still made from grapes (fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/cider
 	name = "Cider"
@@ -2579,7 +2943,11 @@
 	glass_desc = "The second most Irish drink."
 	glass_special = list(DRINK_FIZZ)
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made from fruit
+=======
+	allergen_type = ALLERGEN_FRUIT //Made from fruit
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 // Cocktails
 
@@ -2596,7 +2964,11 @@
 	glass_name = "Acid Spit"
 	glass_desc = "A drink from the company archives. Made from live aliens."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made from wine (fruit)
+=======
+	allergen_type = ALLERGEN_FRUIT //Made from wine (fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/alliescocktail
 	name = "Allies Cocktail"
@@ -2609,7 +2981,11 @@
 	glass_name = "Allies cocktail"
 	glass_desc = "A drink made from your allies."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS|FRUIT //Made from vodka(grain) as well as martini(vermouth(fruit) and gin(fruit))
+=======
+	allergen_type = ALLERGEN_GRAINS|ALLERGEN_FRUIT //Made from vodka(grain) as well as martini(vermouth(fruit) and gin(fruit))
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/aloe
 	name = "Aloe"
@@ -2622,7 +2998,11 @@
 	glass_name = "Aloe"
 	glass_desc = "Very, very, very good."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT|DAIRY|GRAINS //Made from cream(dairy), whiskey(grains), and watermelon juice(fruit)
+=======
+	allergen_type = ALLERGEN_FRUIT|ALLERGEN_DAIRY|ALLERGEN_GRAINS //Made from cream(dairy), whiskey(grains), and watermelon juice(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/amasec
 	name = "Amasec"
@@ -2636,7 +3016,11 @@
 	glass_name = "Amasec"
 	glass_desc = "Always handy before combat!"
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT|GRAINS //Made from wine(fruit) and vodka(grains)
+=======
+	allergen_type = ALLERGEN_FRUIT|ALLERGEN_GRAINS //Made from wine(fruit) and vodka(grains)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/andalusia
 	name = "Andalusia"
@@ -2649,7 +3033,11 @@
 	glass_name = "Andalusia"
 	glass_desc = "A nice, strange named drink."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS|FRUIT //Made from whiskey(grains) and lemonjuice (fruit)
+=======
+	allergen_type = ALLERGEN_GRAINS|ALLERGEN_FRUIT //Made from whiskey(grains) and lemonjuice (fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/antifreeze
 	name = "Anti-freeze"
@@ -2664,7 +3052,11 @@
 	glass_name = "Anti-freeze"
 	glass_desc = "The ultimate refreshment."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS|DAIRY //Made from vodka(grains) and cream(dairy)
+=======
+	allergen_type = ALLERGEN_GRAINS|ALLERGEN_DAIRY //Made from vodka(grains) and cream(dairy)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/atomicbomb
 	name = "Atomic Bomb"
@@ -2679,7 +3071,11 @@
 	glass_name = "Atomic Bomb"
 	glass_desc = "We cannot take legal responsibility for your actions after imbibing."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = COFFEE|DAIRY|FRUIT|GRAINS //Made from b52 which contains kahlua(coffee), cognac(fruit), and irish cream(Whiskey(grains),cream(dairy))
+=======
+	allergen_type = ALLERGEN_COFFEE|ALLERGEN_DAIRY|ALLERGEN_FRUIT|ALLERGEN_GRAINS //Made from b52 which contains kahlua(coffee), cognac(fruit), and irish cream(Whiskey(grains),cream(dairy))
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/coffee/b52
 	name = "B-52"
@@ -2693,7 +3089,11 @@
 	glass_name = "B-52"
 	glass_desc = "Kahlua, Irish cream, and cognac. You will get bombed."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = COFFEE|DAIRY|FRUIT|GRAINS //Made from kahlua(coffee), cognac(fruit), and irish cream(Whiskey(grains),cream(dairy))
+=======
+	allergen_type = ALLERGEN_COFFEE|ALLERGEN_DAIRY|ALLERGEN_FRUIT|ALLERGEN_GRAINS //Made from kahlua(coffee), cognac(fruit), and irish cream(Whiskey(grains),cream(dairy))
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/bahama_mama
 	name = "Bahama mama"
@@ -2706,7 +3106,11 @@
 	glass_name = "Bahama Mama"
 	glass_desc = "Tropical cocktail."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made from orange juice and lime juice
+=======
+	allergen_type = ALLERGEN_FRUIT //Made from orange juice and lime juice
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/bananahonk
 	name = "Banana Mama"
@@ -2720,7 +3124,11 @@
 	glass_name = "Banana Honk"
 	glass_desc = "A drink from Banana Heaven."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT|DAIRY //Made from banana juice(fruit) and cream(dairy)
+=======
+	allergen_type = ALLERGEN_FRUIT|ALLERGEN_DAIRY //Made from banana juice(fruit) and cream(dairy)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/barefoot
 	name = "Barefoot"
@@ -2733,7 +3141,11 @@
 	glass_name = "Barefoot"
 	glass_desc = "Barefoot and pregnant."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = DAIRY|FRUIT //Made from berry juice (fruit), cream(dairy), and vermouth(fruit)
+=======
+	allergen_type = ALLERGEN_DAIRY|ALLERGEN_FRUIT //Made from berry juice (fruit), cream(dairy), and vermouth(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/beepsky_smash
 	name = "Beepsky Smash"
@@ -2748,7 +3160,11 @@
 	glass_name = "Beepsky Smash"
 	glass_desc = "Heavy, hot and strong. Just like the Iron fist of the LAW."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT|GRAINS //Made from whiskey(grains), and limejuice(fruit)
+=======
+	allergen_type = ALLERGEN_FRUIT|ALLERGEN_GRAINS //Made from whiskey(grains), and limejuice(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/beepsky_smash/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -2766,7 +3182,11 @@
 	glass_name = "bilk"
 	glass_desc = "A brew of milk and beer. For those alcoholics who fear osteoporosis."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS|DAIRY //Made from milk(dairy) and beer(grains)
+=======
+	allergen_type = ALLERGEN_GRAINS|ALLERGEN_DAIRY //Made from milk(dairy) and beer(grains)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/black_russian
 	name = "Black Russian"
@@ -2779,7 +3199,11 @@
 	glass_name = "Black Russian"
 	glass_desc = "For the lactose-intolerant. Still as classy as a White Russian."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = COFFEE|GRAINS //Made from vodka(grains) and kahlua(coffee)
+=======
+	allergen_type = ALLERGEN_COFFEE|ALLERGEN_GRAINS //Made from vodka(grains) and kahlua(coffee)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/bloody_mary
 	name = "Bloody Mary"
@@ -2792,7 +3216,11 @@
 	glass_name = "Bloody Mary"
 	glass_desc = "Tomato juice, mixed with Vodka and a lil' bit of lime. Tastes like liquid murder."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS|FRUIT //Made from vodka (grains), tomato juice(fruit), and lime juice(fruit)
+=======
+	allergen_type = ALLERGEN_GRAINS|ALLERGEN_FRUIT //Made from vodka (grains), tomato juice(fruit), and lime juice(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/booger
 	name = "Booger"
@@ -2805,7 +3233,11 @@
 	glass_name = "Booger"
 	glass_desc = "Ewww..."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = DAIRY|FRUIT //Made from cream(dairy), banana juice(fruit), and watermelon juice(fruit)
+=======
+	allergen_type = ALLERGEN_DAIRY|ALLERGEN_FRUIT //Made from cream(dairy), banana juice(fruit), and watermelon juice(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/coffee/brave_bull //Since it's under the /coffee subtype, it already has coffee allergens.
 	name = "Brave Bull"
@@ -2830,7 +3262,11 @@
 	glass_name = "Changeling Sting"
 	glass_desc = "A stingy drink."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT|GRAINS //Made from screwdriver(vodka(grains), orange juice(fruit)), lime juice(fruit), and lemon juice(fruit)
+=======
+	allergen_type = ALLERGEN_FRUIT|ALLERGEN_GRAINS //Made from screwdriver(vodka(grains), orange juice(fruit)), lime juice(fruit), and lemon juice(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/martini
 	name = "Classic Martini"
@@ -2843,7 +3279,11 @@
 	glass_name = "classic martini"
 	glass_desc = "Damn, the bartender even stirred it, not shook it."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made from gin(fruit) and vermouth(fruit)
+=======
+	allergen_type = ALLERGEN_FRUIT //Made from gin(fruit) and vermouth(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/cuba_libre
 	name = "Cuba Libre"
@@ -2867,7 +3307,11 @@
 
 	glass_name = "Demons' Blood"
 	glass_desc = "Just looking at this thing makes the hair on the back of your neck stand up."
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made from space mountain wind(fruit)
+=======
+	allergen_type = ALLERGEN_FRUIT //Made from space mountain wind(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/devilskiss
 	name = "Devils Kiss"
@@ -2879,7 +3323,11 @@
 
 	glass_name = "Devil's Kiss"
 	glass_desc = "Creepy time!"
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = COFFEE //Made from kahlua (Coffee)
+=======
+	allergen_type = ALLERGEN_COFFEE //Made from kahlua (Coffee)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/driestmartini
 	name = "Driest Martini"
@@ -2892,7 +3340,11 @@
 
 	glass_name = "Driest Martini"
 	glass_desc = "Only for the experienced. You think you see sand floating in the glass."
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made from gin(fruit)
+=======
+	allergen_type = ALLERGEN_FRUIT //Made from gin(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/ginfizz
 	name = "Gin Fizz"
@@ -2905,7 +3357,11 @@
 	glass_name = "gin fizz"
 	glass_desc = "Refreshingly lemony, deliciously dry."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made from gin(fruit) and lime juice(fruit)
+=======
+	allergen_type = ALLERGEN_FRUIT //Made from gin(fruit) and lime juice(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/grog
 	name = "Grog"
@@ -2930,7 +3386,11 @@
 	glass_name = "Erika Surprise"
 	glass_desc = "The surprise is, it's green!"
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS|FRUIT //Made from ale (grains), lime juice (fruit), whiskey(grains), banana juice(fruit)
+=======
+	allergen_type = ALLERGEN_GRAINS|ALLERGEN_FRUIT //Made from ale (grains), lime juice (fruit), whiskey(grains), banana juice(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/gargle_blaster
 	name = "Pan-Galactic Gargle Blaster"
@@ -2946,7 +3406,11 @@
 	glass_name = "Pan-Galactic Gargle Blaster"
 	glass_desc = "Does... does this mean that Arthur and Ford are on the station? Oh joy."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT|GRAINS //Made from vodka(grains), gin(fruit), whiskey(grains), cognac(fruit), and lime juice(fruit)
+=======
+	allergen_type = ALLERGEN_FRUIT|ALLERGEN_GRAINS //Made from vodka(grains), gin(fruit), whiskey(grains), cognac(fruit), and lime juice(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/gintonic
 	name = "Gin and Tonic"
@@ -2959,7 +3423,11 @@
 	glass_name = "gin and tonic"
 	glass_desc = "A mild but still great cocktail. Drink up, like a true Englishman."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made from gin(fruit)
+=======
+	allergen_type = ALLERGEN_FRUIT //Made from gin(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/goldschlager
 	name = "Goldschlager"
@@ -2973,7 +3441,11 @@
 	glass_name = "Goldschlager"
 	glass_desc = "100 proof that teen girls will drink anything with gold in it."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS //Made from vodka(grains)
+=======
+	allergen_type = ALLERGEN_GRAINS //Made from vodka(grains)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/hippies_delight
 	name = "Hippies' Delight"
@@ -2988,7 +3460,11 @@
 	glass_name = "Hippie's Delight"
 	glass_desc = "A drink enjoyed by people during the 1960's."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT|GRAINS //Made from gargle blaster which contains vodka(grains), gin(fruit), whiskey(grains), cognac(fruit), and lime juice(fruit)
+=======
+	allergen_type = ALLERGEN_FRUIT|ALLERGEN_GRAINS //Made from gargle blaster which contains vodka(grains), gin(fruit), whiskey(grains), cognac(fruit), and lime juice(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 	//Also, yes. Mushrooms produce psilocybin; however, it's also still just a chemical compound, and not necessarily going to trigger a fungi allergy.
 
 /datum/reagent/ethanol/hooch
@@ -3016,7 +3492,11 @@
 	glass_name = "iced beer"
 	glass_desc = "A beer so frosty, the air around it freezes."
 	glass_special = list(DRINK_ICE)
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS //Made from beer(grains)
+=======
+	allergen_type = ALLERGEN_GRAINS //Made from beer(grains)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/irishcarbomb
 	name = "Irish Car Bomb"
@@ -3029,7 +3509,11 @@
 	glass_name = "Irish Car Bomb"
 	glass_desc = "An irish car bomb."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = DAIRY|GRAINS //Made from ale(grains) and irish cream(whiskey(grains), cream(dairy))
+=======
+	allergen_type = ALLERGEN_DAIRY|ALLERGEN_GRAINS //Made from ale(grains) and irish cream(whiskey(grains), cream(dairy))
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/coffee/irishcoffee
 	name = "Irish Coffee"
@@ -3042,7 +3526,11 @@
 	glass_name = "Irish coffee"
 	glass_desc = "Coffee and alcohol. More fun than a Mimosa to drink in the morning."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = COFFEE|DAIRY|GRAINS //Made from Coffee(coffee) and irish cream(whiskey(grains), cream(dairy))
+=======
+	allergen_type = ALLERGEN_COFFEE|ALLERGEN_DAIRY|ALLERGEN_GRAINS //Made from Coffee(coffee) and irish cream(whiskey(grains), cream(dairy))
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/irish_cream
 	name = "Irish Cream"
@@ -3055,7 +3543,11 @@
 	glass_name = "Irish cream"
 	glass_desc = "It's cream, mixed with whiskey. What else would you expect from the Irish?"
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = DAIRY|GRAINS //Made from cream(dairy) and whiskey(grains)
+=======
+	allergen_type = ALLERGEN_DAIRY|ALLERGEN_GRAINS //Made from cream(dairy) and whiskey(grains)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/longislandicedtea
 	name = "Long Island Iced Tea"
@@ -3068,7 +3560,11 @@
 	glass_name = "Long Island iced tea"
 	glass_desc = "The liquor cabinet, brought together in a delicious mix. Intended for middle-aged alcoholic women only."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS|FRUIT //Made from vodka(grains) and gin(fruit)
+=======
+	allergen_type = ALLERGEN_GRAINS|ALLERGEN_FRUIT //Made from vodka(grains) and gin(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/manhattan
 	name = "Manhattan"
@@ -3081,7 +3577,11 @@
 	glass_name = "Manhattan"
 	glass_desc = "The Detective's undercover drink of choice. He never could stomach gin..."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS|FRUIT //Made from whiskey(grains), and vermouth(fruit)
+=======
+	allergen_type = ALLERGEN_GRAINS|ALLERGEN_FRUIT //Made from whiskey(grains), and vermouth(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/manhattan_proj
 	name = "Manhattan Project"
@@ -3094,7 +3594,11 @@
 
 	glass_name = "Manhattan Project"
 	glass_desc = "A scientist's drink of choice, for thinking how to blow up the station."
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS|FRUIT //Made from manhattan which is made from whiskey(grains), and vermouth(fruit)
+=======
+	allergen_type = ALLERGEN_GRAINS|ALLERGEN_FRUIT //Made from manhattan which is made from whiskey(grains), and vermouth(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/manly_dorf
 	name = "The Manly Dorf"
@@ -3107,7 +3611,11 @@
 	glass_name = "The Manly Dorf"
 	glass_desc = "A manly concotion made from Ale and Beer. Intended for true men only."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS //Made from beer(grains) and ale(grains)
+=======
+	allergen_type = ALLERGEN_GRAINS //Made from beer(grains) and ale(grains)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/margarita
 	name = "Margarita"
@@ -3120,7 +3628,11 @@
 	glass_name = "margarita"
 	glass_desc = "On the rocks with salt on the rim. Arriba~!"
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made from lime juice(fruit)
+=======
+	allergen_type = ALLERGEN_FRUIT //Made from lime juice(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/mead
 	name = "Mead"
@@ -3161,7 +3673,11 @@
 	glass_icon = DRINK_ICON_NOISY
 	glass_special = list("neuroright")
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT|GRAINS //Made from gargle blaster which is made from vodka(grains), gin(fruit), whiskey(grains), cognac(fruit), and lime juice(fruit)
+=======
+	allergen_type = ALLERGEN_FRUIT|ALLERGEN_GRAINS //Made from gargle blaster which is made from vodka(grains), gin(fruit), whiskey(grains), cognac(fruit), and lime juice(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/neurotoxin/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -3189,7 +3705,11 @@
 
 	glass_name = "???"
 	glass_desc = "A black ichor with an oily purple sheer on top. Are you sure you should drink this?"
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made from berries which are fruit
+=======
+	allergen_type = ALLERGEN_FRUIT //Made from berries which are fruit
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/pwine/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -3228,7 +3748,11 @@
 	glass_name = "Sbiten"
 	glass_desc = "A spicy mix of Vodka and Spice. Very hot."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS //Made from vodka(grains)
+=======
+	allergen_type = ALLERGEN_GRAINS //Made from vodka(grains)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/screwdrivercocktail
 	name = "Screwdriver"
@@ -3241,7 +3765,11 @@
 	glass_name = "Screwdriver"
 	glass_desc = "A simple, yet superb mixture of Vodka and orange juice. Just the thing for the tired engineer."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT|GRAINS //Made from vodka(grains) and orange juice(fruit)
+=======
+	allergen_type = ALLERGEN_FRUIT|ALLERGEN_GRAINS //Made from vodka(grains) and orange juice(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/silencer
 	name = "Silencer"
@@ -3255,7 +3783,11 @@
 
 	glass_name = "Silencer"
 	glass_desc = "A drink from mime Heaven."
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = DAIRY //Made from cream (dairy)
+=======
+	allergen_type = ALLERGEN_DAIRY //Made from cream (dairy)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/singulo
 	name = "Singulo"
@@ -3268,7 +3800,11 @@
 	glass_name = "Singulo"
 	glass_desc = "A blue-space beverage."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS|FRUIT //Made from vodka(grains) and wine(fruit)
+=======
+	allergen_type = ALLERGEN_GRAINS|ALLERGEN_FRUIT //Made from vodka(grains) and wine(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/snowwhite
 	name = "Snow White"
@@ -3281,7 +3817,11 @@
 	glass_name = "Snow White"
 	glass_desc = "A cold refreshment."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = COFFEE|FRUIT //made from Pineapple juice(fruit), lemon_lime(fruit), and kahlua(coffee)
+=======
+	allergen_type = ALLERGEN_COFFEE|ALLERGEN_FRUIT //made from Pineapple juice(fruit), lemon_lime(fruit), and kahlua(coffee)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/suidream
 	name = "Sui Dream"
@@ -3294,7 +3834,11 @@
 	glass_name = "Sui Dream"
 	glass_desc = "A froofy, fruity, and sweet mixed drink. Understanding the name only brings shame."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made from blue curacao(fruit) and melon liquor(fruit)
+=======
+	allergen_type = ALLERGEN_FRUIT //Made from blue curacao(fruit) and melon liquor(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/syndicatebomb
 	name = "Syndicate Bomb"
@@ -3307,7 +3851,11 @@
 	glass_name = "Syndicate Bomb"
 	glass_desc = "Tastes like terrorism!"
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS //Made from beer(grain) and whiskeycola(whiskey(grain))
+=======
+	allergen_type = ALLERGEN_GRAINS //Made from beer(grain) and whiskeycola(whiskey(grain))
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/tequilla_sunrise
 	name = "Tequila Sunrise"
@@ -3332,7 +3880,11 @@
 	glass_name = "Three Mile Island iced tea"
 	glass_desc = "A glass of this is sure to prevent a meltdown."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS|FRUIT //Made from long island iced tea(vodka(grains) and gin(fruit))
+=======
+	allergen_type = ALLERGEN_GRAINS|ALLERGEN_FRUIT //Made from long island iced tea(vodka(grains) and gin(fruit))
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/toxins_special
 	name = "Toxins Special"
@@ -3348,7 +3900,11 @@
 	glass_name = "Toxins Special"
 	glass_desc = "Whoah, this thing is on fire!"
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made from vermouth(fruit)
+=======
+	allergen_type = ALLERGEN_FRUIT //Made from vermouth(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/vodkamartini
 	name = "Vodka Martini"
@@ -3361,7 +3917,11 @@
 	glass_name = "vodka martini"
 	glass_desc ="A bastardization of the classic martini. Still great."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS|FRUIT //made from vodka(grains) and vermouth(fruit)
+=======
+	allergen_type = ALLERGEN_GRAINS|ALLERGEN_FRUIT //made from vodka(grains) and vermouth(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/vodkatonic
 	name = "Vodka and Tonic"
@@ -3374,7 +3934,11 @@
 	glass_name = "vodka and tonic"
 	glass_desc = "For when a gin and tonic isn't Russian enough."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS //Made from vodka(grains)
+=======
+	allergen_type = ALLERGEN_GRAINS //Made from vodka(grains)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/white_russian
 	name = "White Russian"
@@ -3387,7 +3951,11 @@
 	glass_name = "White Russian"
 	glass_desc = "A very nice looking drink. But that's just, like, your opinion, man."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = COFFEE|GRAINS|DAIRY //Made from black russian(vodka(grains), kahlua(coffee)) and cream(dairy)
+=======
+	allergen_type = ALLERGEN_COFFEE|ALLERGEN_GRAINS|ALLERGEN_DAIRY //Made from black russian(vodka(grains), kahlua(coffee)) and cream(dairy)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/whiskey_cola
 	name = "Whiskey Cola"
@@ -3400,7 +3968,11 @@
 	glass_name = "whiskey cola"
 	glass_desc = "An innocent-looking mixture of cola and Whiskey. Delicious."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS //Made from whiskey(grains)
+=======
+	allergen_type = ALLERGEN_GRAINS //Made from whiskey(grains)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/whiskeysoda
 	name = "Whiskey Soda"
@@ -3413,7 +3985,11 @@
 	glass_name = "whiskey soda"
 	glass_desc = "Ultimate refreshment."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS //Made from whiskey(grains)
+=======
+	allergen_type = ALLERGEN_GRAINS //Made from whiskey(grains)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/specialwhiskey // I have no idea what this is and where it comes from
 	name = "Special Blend Whiskey"
@@ -3426,7 +4002,11 @@
 	glass_name = "special blend whiskey"
 	glass_desc = "Just when you thought regular station whiskey was good... This silky, amber goodness has to come along and ruin everything."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS //Whiskey(grains)
+=======
+	allergen_type = ALLERGEN_GRAINS //Whiskey(grains)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/unathiliquor
 	name = "Redeemer's Brew"
@@ -3464,7 +4044,11 @@
 	glass_name = "Sake Bomb"
 	glass_desc = "Some sake mixed into a pint of beer."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS //Made from beer(grains)
+=======
+	allergen_type = ALLERGEN_GRAINS //Made from beer(grains)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/tamagozake
 	name = "Tamagozake"
@@ -3477,7 +4061,11 @@
 
 	glass_name = "Tamagozake"
 	glass_desc = "An egg cracked into sake and sugar."
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = EGGS //Made with eggs
+=======
+	allergen_type = ALLERGEN_EGGS //Made with eggs
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/ginzamary
 	name = "Ginza Mary"
@@ -3490,7 +4078,11 @@
 	glass_name = "Ginza Mary"
 	glass_desc = "Tomato juice, vodka, and sake make something not quite completely unlike a Bloody Mary."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT|GRAINS //Made from vodka(grains) and tomatojuice(fruit)
+=======
+	allergen_type = ALLERGEN_FRUIT|ALLERGEN_GRAINS //Made from vodka(grains) and tomatojuice(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/tokyorose
 	name = "Tokyo Rose"
@@ -3503,7 +4095,11 @@
 	glass_name = "Tokyo Rose"
 	glass_desc = "It's kinda pretty!"
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made from berryjuice
+=======
+	allergen_type = ALLERGEN_FRUIT //Made from berryjuice
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/saketini
 	name = "Saketini"
@@ -3516,7 +4112,11 @@
 	glass_name = "Saketini"
 	glass_desc = "What are you doing drinking this outside of New Kyoto?"
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made from gin(fruit)
+=======
+	allergen_type = ALLERGEN_FRUIT //Made from gin(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/coffee/elysiumfacepunch
 	name = "Elysium Facepunch"
@@ -3529,7 +4129,11 @@
 	glass_name = "Elysium Facepunch"
 	glass_desc = "A loathesome cocktail favored by Heaven's skeleton shift workers."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = COFFEE|FRUIT //Made from kahlua(Coffee) and lemonjuice(fruit)
+=======
+	allergen_type = ALLERGEN_COFFEE|ALLERGEN_FRUIT //Made from kahlua(Coffee) and lemonjuice(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/erebusmoonrise
 	name = "Erebus Moonrise"
@@ -3542,7 +4146,11 @@
 	glass_name = "Erebus Moonrise"
 	glass_desc = "A deeply alcoholic mix, popular in Nyx."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS //Made from whiskey(grains) and Vodka(grains)
+=======
+	allergen_type = ALLERGEN_GRAINS //Made from whiskey(grains) and Vodka(grains)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/balloon
 	name = "Balloon"
@@ -3555,7 +4163,11 @@
 	glass_name = "Balloon"
 	glass_desc = "A strange drink invented in the aerostats of Venus."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = DAIRY|FRUIT //Made from blue curacao(fruit) and cream(dairy)
+=======
+	allergen_type = ALLERGEN_DAIRY|ALLERGEN_FRUIT //Made from blue curacao(fruit) and cream(dairy)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/natunabrandy
 	name = "Natuna Brandy"
@@ -3569,7 +4181,11 @@
 	glass_desc = "On Natuna, they do the best with what they have."
 	glass_special = list(DRINK_FIZZ)
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS //Made from beer(grains)
+=======
+	allergen_type = ALLERGEN_GRAINS //Made from beer(grains)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/euphoria
 	name = "Euphoria"
@@ -3582,7 +4198,11 @@
 	glass_name = "Euphoria"
 	glass_desc = "Invented by a Eutopian marketing team, this is one of the most expensive cocktails in existence."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS|FRUIT //Made from specialwhiskey(grain) and cognac(fruit)
+=======
+	allergen_type = ALLERGEN_GRAINS|ALLERGEN_FRUIT //Made from specialwhiskey(grain) and cognac(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/xanaducannon
 	name = "Xanadu Cannon"
@@ -3595,7 +4215,11 @@
 	glass_name = "Xanadu Cannon"
 	glass_desc = "Common in the entertainment districts of Titan."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS //Made from ale(grain)
+=======
+	allergen_type = ALLERGEN_GRAINS //Made from ale(grain)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/debugger
 	name = "Debugger"
@@ -3607,7 +4231,11 @@
 
 	glass_name = "Debugger"
 	glass_desc = "From Shelf. Not for human consumption."
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = VEGETABLE //Made from corn oil(vegetable)
+=======
+	allergen_type = ALLERGEN_VEGETABLE //Made from corn oil(vegetable)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/spacersbrew
 	name = "Spacer's Brew"
@@ -3620,7 +4248,11 @@
 	glass_name = "Spacer's Brew"
 	glass_desc = "Ethanol and orange soda. A common emergency drink on frontier colonies."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made from brownstar(orange juice(fruit))
+=======
+	allergen_type = ALLERGEN_FRUIT //Made from brownstar(orange juice(fruit))
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/binmanbliss
 	name = "Binman Bliss"
@@ -3644,7 +4276,11 @@
 	glass_name = "Chrysanthemum"
 	glass_desc = "An exotic cocktail from New Kyoto."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made from melon liquor(fruit)
+=======
+	allergen_type = ALLERGEN_FRUIT //Made from melon liquor(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/bitters
 	name = "Bitters"
@@ -3668,7 +4304,11 @@
 	glass_name = "Soemmer Fire"
 	glass_desc = "A painfully hot mixed drink, for when you absolutely need to hurt right now."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS|FRUIT //Made from manhattan(whiskey(grains), vermouth(fruit))
+=======
+	allergen_type = ALLERGEN_GRAINS|ALLERGEN_FRUIT //Made from manhattan(whiskey(grains), vermouth(fruit))
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/soemmerfire/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -3687,7 +4327,11 @@
 	glass_name = "Wine Brandy"
 	glass_desc = "A very classy looking after-dinner drink."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made from wine, which is made from fruit
+=======
+	allergen_type = ALLERGEN_FRUIT //Made from wine, which is made from fruit
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/morningafter
 	name = "Morning After"
@@ -3700,7 +4344,11 @@
 	glass_name = "Morning After"
 	glass_desc = "The finest hair of the dog, coming up!"
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS|COFFEE //Made from sbiten(vodka(grain)) and coffee(coffee)
+=======
+	allergen_type = ALLERGEN_GRAINS|ALLERGEN_COFFEE //Made from sbiten(vodka(grain)) and coffee(coffee)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/vesper
 	name = "Vesper"
@@ -3713,7 +4361,11 @@
 	glass_name = "Vesper"
 	glass_desc = "A dry martini, ice cold and well shaken."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT|GRAINS //Made from wine(fruit), vodka(grain), and gin(fruit)
+=======
+	allergen_type = ALLERGEN_FRUIT|ALLERGEN_GRAINS //Made from wine(fruit), vodka(grain), and gin(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/rotgut
 	name = "Rotgut Fever Dream"
@@ -3726,7 +4378,11 @@
 	glass_name = "Rotgut Fever Dream"
 	glass_desc = "Why are you doing this to yourself?"
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS //Made from whiskey(grains) and vodka(grains)
+=======
+	allergen_type = ALLERGEN_GRAINS //Made from whiskey(grains) and vodka(grains)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/voxdelight
 	name = "Vox's Delight"
@@ -3759,7 +4415,11 @@
 	glass_name = "Screaming Viking"
 	glass_desc = "A boozy, citrus-packed brew."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT|GRAINS //Made from martini(gin(fruit), vermouth(fruit)), vodka tonic(vodka(grain)), and lime juice(fruit)
+=======
+	allergen_type = ALLERGEN_FRUIT|ALLERGEN_GRAINS //Made from martini(gin(fruit), vermouth(fruit)), vodka tonic(vodka(grain)), and lime juice(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/robustin
 	name = "Robustin"
@@ -3772,7 +4432,11 @@
 	glass_name = "Robustin"
 	glass_desc = "A bootleg brew of all the worst things on station."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS|DAIRY //Made from antifreeze(vodka(grains),cream(dairy)) and vodka(grains)
+=======
+	allergen_type = ALLERGEN_GRAINS|ALLERGEN_DAIRY //Made from antifreeze(vodka(grains),cream(dairy)) and vodka(grains)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/virginsip
 	name = "Virgin Sip"
@@ -3785,7 +4449,11 @@
 	glass_name = "Virgin Sip"
 	glass_desc = "A perfect martini, watered down and ruined."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made from driest martini(gin(fruit))
+=======
+	allergen_type = ALLERGEN_FRUIT //Made from driest martini(gin(fruit))
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/jellyshot
 	name = "Jelly Shot"
@@ -3798,7 +4466,11 @@
 	glass_name = "Jelly Shot"
 	glass_desc = "A thick and vibrant alcoholic gel, perfect for the night life."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT|GRAINS //Made from cherry jelly(fruit), and vodka(grains)
+=======
+	allergen_type = ALLERGEN_FRUIT|ALLERGEN_GRAINS //Made from cherry jelly(fruit), and vodka(grains)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/slimeshot
 	name = "Named Bullet"
@@ -3811,7 +4483,11 @@
 	glass_name = "Named Bullet"
 	glass_desc = "A thick slime jelly shot. You can feel your death approaching."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS //Made from vodka(grains)
+=======
+	allergen_type = ALLERGEN_GRAINS //Made from vodka(grains)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/drink/slimeshot/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -3830,7 +4506,11 @@
 	glass_name = "Clover Club"
 	glass_desc = "A light and refreshing raspberry cocktail."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made from berry juice(fruit), lemon juice(fruit), and gin(fruit)
+=======
+	allergen_type = ALLERGEN_FRUIT //Made from berry juice(fruit), lemon juice(fruit), and gin(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/negroni
 	name = "Negroni"
@@ -3843,7 +4523,11 @@
 	glass_name = "Negroni"
 	glass_desc = "A dark, complicated blend, perfect for relaxing nights by the fire."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made from gin(fruit) and vermouth(fruit)
+=======
+	allergen_type = ALLERGEN_FRUIT //Made from gin(fruit) and vermouth(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/whiskeysour
 	name = "Whiskey Sour"
@@ -3856,7 +4540,11 @@
 	glass_name = "Whiskey Sour"
 	glass_desc = "A smokey, refreshing lemoned whiskey."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS|FRUIT //Made from whiskey(grains) and lemon juice(fruit)
+=======
+	allergen_type = ALLERGEN_GRAINS|ALLERGEN_FRUIT //Made from whiskey(grains) and lemon juice(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/oldfashioned
 	name = "Old Fashioned"
@@ -3869,7 +4557,11 @@
 	glass_name = "Old Fashioned"
 	glass_desc = "A classic mix of whiskey and sugar... simple and direct."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS //Made from whiskey(grains)
+=======
+	allergen_type = ALLERGEN_GRAINS //Made from whiskey(grains)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/daiquiri
 	name = "Daiquiri"
@@ -3882,7 +4574,11 @@
 	glass_name = "Daiquiri"
 	glass_desc = "Refeshing rum and citrus. Time for a tropical get away."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made from lime juice(fruit)
+=======
+	allergen_type = ALLERGEN_FRUIT //Made from lime juice(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/mojito
 	name = "Mojito"
@@ -3896,7 +4592,11 @@
 	glass_desc = "Minty rum and citrus, made for sailing."
 	glass_special = list(DRINK_FIZZ)
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made from lime juice(fruit)
+=======
+	allergen_type = ALLERGEN_FRUIT //Made from lime juice(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/paloma
 	name = "Paloma"
@@ -3910,7 +4610,11 @@
 	glass_desc = "Tequila and citrus, iced just right..."
 	glass_special = list(DRINK_FIZZ)
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made from orange juice(fruit)
+=======
+	allergen_type = ALLERGEN_FRUIT //Made from orange juice(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/piscosour
 	name = "Pisco Sour"
@@ -3923,7 +4627,11 @@
 	glass_name = "Pisco Sour"
 	glass_desc = "South American bliss, served ice cold."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made from wine brandy(fruit), and lemon juice(fruit)
+=======
+	allergen_type = ALLERGEN_FRUIT //Made from wine brandy(fruit), and lemon juice(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/coldfront
 	name = "Cold Front"
@@ -3938,7 +4646,11 @@
 	glass_name = "Cold Front"
 	glass_desc = "Minty, rich, and painfully cold. It's a blizzard in a cup."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = COFFEE //Made from iced coffee(coffee)
+=======
+	allergen_type = ALLERGEN_COFFEE //Made from iced coffee(coffee)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/mintjulep
 	name = "Mint Julep"
@@ -3975,7 +4687,11 @@
 	glass_desc = "The glass is barely able to contain the wodka. Xynta."
 	glass_special = list(DRINK_FIZZ)
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS //Made from vodka(grain)
+=======
+	allergen_type = ALLERGEN_GRAINS //Made from vodka(grain)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/godka/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -4005,7 +4721,11 @@
 	glass_desc = "A very pious looking drink."
 	glass_icon = DRINK_ICON_NOISY
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made from grapes(fruit)
+=======
+	allergen_type = ALLERGEN_FRUIT //Made from grapes(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/holy_mary
 	name = "Holy Mary"
@@ -4018,7 +4738,11 @@
 	glass_name = "Holy Mary"
 	glass_desc = "Angel's Ichor, mixed with Vodka and a lil' bit of lime. Tastes like liquid ascension."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT|GRAINS //Made from vodka(grain), holy wine(fruit), and lime juice(fruit)
+=======
+	allergen_type = ALLERGEN_FRUIT|ALLERGEN_GRAINS //Made from vodka(grain), holy wine(fruit), and lime juice(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/angelswrath
 	name = "Angels Wrath"
@@ -4034,7 +4758,11 @@
 	glass_icon = DRINK_ICON_NOISY
 	glass_special = list(DRINK_FIZZ)
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made from space mountain wind(fruit), and holy wine(fruit)
+=======
+	allergen_type = ALLERGEN_FRUIT //Made from space mountain wind(fruit), and holy wine(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/angelskiss
 	name = "Angels Kiss"
@@ -4047,7 +4775,11 @@
 	glass_name = "Angel's Kiss"
 	glass_desc = "Miracle time!"
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT|COFFEE //Made from holy wine(fruit), and kahlua(coffee)
+=======
+	allergen_type = ALLERGEN_FRUIT|ALLERGEN_COFFEE //Made from holy wine(fruit), and kahlua(coffee)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/ichor_mead
 	name = "Ichor Mead"
@@ -4060,7 +4792,11 @@
 	glass_name = "Ichor Mead"
 	glass_desc = "A trip to Valhalla."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made from holy wine(fruit)
+=======
+	allergen_type = ALLERGEN_FRUIT //Made from holy wine(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/schnapps_pep
 	name = "Peppermint Schnapps"
@@ -4084,7 +4820,11 @@
 	glass_name = "peach schnapps"
 	glass_desc = "A glass of peach schnapps. It seems like it'd be better, mixed."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made from peach(fruit)
+=======
+	allergen_type = ALLERGEN_FRUIT //Made from peach(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/schnapps_lem
 	name = "Lemonade Schnapps"
@@ -4097,7 +4837,11 @@
 	glass_name = "lemonade schnapps"
 	glass_desc = "A glass of lemonade schnapps. It seems like it'd be better, mixed."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT //Made from lemons(fruit)
+=======
+	allergen_type = ALLERGEN_FRUIT //Made from lemons(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/jager
 	name = "Schuss Konig"
@@ -4121,7 +4865,11 @@
 	glass_name = "fusionnaire"
 	glass_desc = "A relatively new cocktail, mostly served in the bars of NanoTrasen owned stations."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = FRUIT|GRAINS //Made from lemon juice(fruit), vodka(grains), and lemon schnapps(fruit)
+=======
+	allergen_type = ALLERGEN_FRUIT|ALLERGEN_GRAINS //Made from lemon juice(fruit), vodka(grains), and lemon schnapps(fruit)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/deathbell
 	name = "Deathbell"
@@ -4137,7 +4885,11 @@
 	glass_name = "Deathbell"
 	glass_desc = "The perfect blend of the most alcoholic things a bartender can get their hands on."
 
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	allergen_type = GRAINS|DAIRY|FRUIT //Made from antifreeze(vodka(grains),cream(dairy)), gargleblaster(vodka(grains),gin(fruit),whiskey(grains),cognac(fruit),lime juice(fruit)), and syndicate bomb(beer(grain),whiskeycola(whiskey(grain)))
+=======
+	allergen_type = ALLERGEN_GRAINS|ALLERGEN_DAIRY|ALLERGEN_FRUIT //Made from antifreeze(vodka(grains),cream(dairy)), gargleblaster(vodka(grains),gin(fruit),whiskey(grains),cognac(fruit),lime juice(fruit)), and syndicate bomb(beer(grain),whiskeycola(whiskey(grain)))
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 
 /datum/reagent/ethanol/deathbell/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -4163,7 +4915,11 @@
 	name = "Kompot"
 	id = "kompot"
 	description = "A traditional Eastern European beverage once used to preserve fruit in the 1980s"
+<<<<<<< HEAD:code/modules/reagents/reagents/food_drinks.dm
 	taste_description = "refreshuingly sweet and fruity"
+=======
+	taste_description = "refreshingly sweet and fruity"
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/Chemistry-Reagents/Chemistry-Reagents-Food-Drinks.dm
 	color = "#ed9415" // rgb: 237, 148, 21
 	adj_drowsy = -1
 	adj_temp = -6

@@ -80,4 +80,8 @@
 	var/flying = 0				// Allows flight
 	var/inventory_panel_type = /datum/inventory_panel
 	var/datum/inventory_panel/inventory_panel
+<<<<<<< HEAD
 
+=======
+	var/last_resist_time = 0 // world.time of the most recent resist that wasn't on cooldown. 
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491

@@ -67,7 +67,7 @@
 		to_chat(src, "<span class='alium'>Their plasma vessel is missing.</span>")
 		return
 
-	var/amount = input("Amount:", "Transfer Plasma to [M]") as num
+	var/amount = input(usr, "Amount:", "Transfer Plasma to [M]") as num
 	if (amount)
 		amount = abs(round(amount))
 		if(check_alien_ability(amount,0,O_PLASMA))
@@ -145,15 +145,13 @@
 		P.old_style_target(A)
 		P.fire()
 		playsound(src, 'sound/weapons/pierce.ogg', 25, 0)
-	else
-		..()
 
 /mob/living/carbon/human/proc/corrosive_acid(O as obj|turf in oview(1)) //If they right click to corrode, an error will flash if its an invalid target./N
 	set name = "Corrosive Acid (200)"
 	set desc = "Drench an object in acid, destroying it over time."
 	set category = "Abilities"
 
-	if(!O in oview(1))
+	if(!(O in oview(1)))
 		to_chat(src, "<span class='alium'>[O] is too far away.</span>")
 		return
 
@@ -233,7 +231,7 @@
 	set desc = "Secrete tough malleable resin."
 	set category = "Abilities"
 
-	var/choice = input("Choose what you wish to shape.","Resin building") as null|anything in list("resin door","resin wall","resin membrane","resin nest","resin blob") //would do it through typesof but then the player choice would have the type path and we don't want the internal workings to be exposed ICly - Urist
+	var/choice = tgui_input_list(usr, "Choose what you wish to shape.","Resin building", list("resin door","resin wall","resin membrane","resin nest","resin blob")) //would do it through typesof but then the player choice would have the type path and we don't want the internal workings to be exposed ICly - Urist
 	if(!choice)
 		return
 
@@ -279,7 +277,7 @@
 			choices += M
 	choices -= src
 
-	var/mob/living/T = input(src,"Who do you wish to leap at?") as null|anything in choices
+	var/mob/living/T = tgui_input_list(src, "Who do you wish to leap at?", "Target Choice", choices)
 
 	if(!T || !src || src.stat) return
 

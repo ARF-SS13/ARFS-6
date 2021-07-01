@@ -161,10 +161,17 @@
 	required_reagents = list("monstertamer" = 2, "nutriment" = 1)
 	result_amount = 3
 
+<<<<<<< HEAD
 /decl/chemical_reaction/instant/drinks/pink_moo
 	name = "Pink Moo"
 	id = "pinkmoo"
 	result = "pinkmoo"
+=======
+/decl/chemical_reaction/instant/drinks/pink_russian
+	name = "Pink Russian"
+	id = "pinkrussian"
+	result = "pinkrussian"
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 	required_reagents = list("blackrussian" = 2, "berryshake" = 1)
 	result_amount = 3
 

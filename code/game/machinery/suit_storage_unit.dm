@@ -73,15 +73,10 @@
 			if(prob(50))
 				dump_everything() //So suits dont survive all the time
 			qdel(src)
-			return
 		if(2.0)
 			if(prob(50))
 				dump_everything()
 				qdel(src)
-			return
-		else
-			return
-	return
 
 /obj/machinery/suit_storage_unit/attack_hand(mob/user)
 	if(..())
@@ -1109,7 +1104,11 @@
 		if("Exploration")
 			parent_helmet = /obj/item/clothing/head/helmet/space/void/exploration
 			parent_suit = /obj/item/clothing/suit/space/void/exploration
+<<<<<<< HEAD
 		if("Expedition Medic")
+=======
+		if("Field Medic")
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 			parent_helmet = /obj/item/clothing/head/helmet/space/void/expedition_medical
 			parent_suit = /obj/item/clothing/suit/space/void/expedition_medical
 		if("Old Exploration")

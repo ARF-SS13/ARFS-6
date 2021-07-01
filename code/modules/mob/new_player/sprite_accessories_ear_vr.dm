@@ -20,11 +20,23 @@
 	icon_state = "shadekin"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
+<<<<<<< HEAD
 	apply_restrictions = TRUE
+=======
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 	species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW)
 
 // Ears avaliable to anyone
 
+<<<<<<< HEAD
+=======
+/datum/sprite_accessory/ears/taj_ears
+	name = "tajaran, colorable (old)"
+
+/datum/sprite_accessory/ears/taj_ears_tall
+	name = "tajaran tall, colorable (old)"
+
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 /datum/sprite_accessory/ears/alt_ram_horns
 	name = "Solid ram horns"
 	desc = ""
@@ -249,6 +261,16 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
+<<<<<<< HEAD
+=======
+/datum/sprite_accessory/ears/tajaran_standard
+	name = "tajaran, colorable"
+	desc = ""
+	icon_state = "ears_tajaran_standard"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 /datum/sprite_accessory/ears/kittyhc
 	name = "kitty, colorable"
 	desc = ""

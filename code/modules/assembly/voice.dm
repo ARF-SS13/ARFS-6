@@ -3,7 +3,11 @@
 	desc = "A small electronic device able to record a voice sample, and send a signal when that sample is repeated."
 	icon_state = "voice"
 	origin_tech = list(TECH_MAGNET = 1)
+<<<<<<< HEAD
 	matter = list(DEFAULT_WALL_MATERIAL = 500, "glass" = 50, MAT_COPPER = 10, "waste" = 10)
+=======
+	matter = list(DEFAULT_WALL_MATERIAL = 500, MAT_GLASS = 50)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 	var/listening = 0
 	var/recorded	//the activation message
 

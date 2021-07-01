@@ -10,6 +10,8 @@ const pauseEvent = e => {
   return false;
 };
 
+const zoomScale = 280;
+
 export class NanoMap extends Component {
   constructor(props) {
     super(props);
@@ -69,6 +71,17 @@ export class NanoMap extends Component {
       document.removeEventListener('mouseup', this.handleDragEnd);
       pauseEvent(e);
     };
+
+    this.handleOnClick = e => {
+      let byondX = (e.offsetX/this.state.zoom)/zoomScale;
+      let byondY = 1-(e.offsetY/this.state.zoom)/zoomScale; // Byond origin is bottom left, this is top left
+  
+      e.byondX = byondX;
+      e.byondY = byondY;
+      if (typeof(this.props.onClick) === "function") {
+        this.props.onClick(e);
+      }
+    };
     
     this.handleZoom = (_e, value) => {
       this.setState(state => {
@@ -102,7 +115,11 @@ export class NanoMap extends Component {
     
     const mapUrl = config.map + "_nanomap_z" + config.mapZLevel + ".png";
     // (x * zoom), x Needs to be double the turf- map size. (for virgo, 140x140)
+<<<<<<< HEAD
     const mapSize = (510 * zoom) + 'px';
+=======
+    const mapSize = (zoomScale * zoom) + 'px';
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
     const newStyle = {
       width: mapSize,
       height: mapSize,
@@ -122,7 +139,8 @@ export class NanoMap extends Component {
         <Box
           style={newStyle}
           textAlign="center"
-          onMouseDown={this.handleDragStart}>
+          onMouseDown={this.handleDragStart}
+          onClick={this.handleOnClick}>
           <Box>
             {children}
           </Box>
@@ -146,7 +164,9 @@ const NanoMapMarker = (props, context) => {
 
   const handleOnClick = e => {
     pauseEvent(e);
-    onClick(e);
+    if (onClick) {
+      onClick(e);
+    }
   };
 
   const rx = ((x * 2 * zoom) - zoom) - 3;

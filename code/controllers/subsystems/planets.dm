@@ -33,7 +33,11 @@ SUBSYSTEM_DEF(planets)
 			z_to_planet[Z] = NP
 
 // DO NOT CALL THIS DIRECTLY UNLESS IT'S IN INITIALIZE,
+<<<<<<< HEAD
 // USE turf/simulated/proc/make_indoors() and\
+=======
+// USE turf/simulated/proc/make_indoors() and
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 //     tyrf/simulated/proc/make_outdoors()
 /datum/controller/subsystem/planets/proc/addTurf(var/turf/T)
 	if(z_to_planet.len >= T.z && z_to_planet[T.z])
@@ -44,10 +48,16 @@ SUBSYSTEM_DEF(planets)
 			P.planet_walls += T
 		else if(istype(T, /turf/simulated) && T.outdoors)
 			P.planet_floors += T
+<<<<<<< HEAD
 			T.vis_contents |= P.weather_holder.visuals
 			T.vis_contents |= P.weather_holder.special_visuals		
 
 
+=======
+			P.weather_holder.apply_to_turf(T)
+			P.sun_holder.apply_to_turf(T)
+
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 /datum/controller/subsystem/planets/proc/removeTurf(var/turf/T,var/is_edge)
 	if(z_to_planet.len >= T.z)
 		var/datum/planet/P = z_to_planet[T.z]
@@ -57,8 +67,13 @@ SUBSYSTEM_DEF(planets)
 			P.planet_walls -= T
 		else
 			P.planet_floors -= T
+<<<<<<< HEAD
 			T.vis_contents -= P.weather_holder.visuals
 			T.vis_contents -= P.weather_holder.special_visuals
+=======
+			P.weather_holder.remove_from_turf(T)
+			P.sun_holder.remove_from_turf(T)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 
 
 /datum/controller/subsystem/planets/fire(resumed = 0)
@@ -72,7 +87,8 @@ SUBSYSTEM_DEF(planets)
 		updateSunlight(P)
 		if(MC_TICK_CHECK)
 			return
-
+	
+	#ifndef UNIT_TEST // Don't be updating temperatures and such during unit tests
 	var/list/needs_temp_update = src.needs_temp_update
 	while(needs_temp_update.len)
 		var/datum/planet/P = needs_temp_update[needs_temp_update.len]
@@ -80,6 +96,7 @@ SUBSYSTEM_DEF(planets)
 		updateTemp(P)
 		if(MC_TICK_CHECK)
 			return
+	#endif
 
 	var/list/currentrun = src.currentrun
 	while(currentrun.len)
@@ -102,21 +119,11 @@ SUBSYSTEM_DEF(planets)
 			return
 
 /datum/controller/subsystem/planets/proc/updateSunlight(var/datum/planet/P)
-	// Remove old value from corners
-	var/list/sunlit_corners = P.sunlit_corners
-	var/old_lum_r = -P.sun["lum_r"]
-	var/old_lum_g = -P.sun["lum_g"]
-	var/old_lum_b = -P.sun["lum_b"]
-	if(old_lum_r || old_lum_g || old_lum_b)
-		for(var/C in sunlit_corners)
-			var/datum/lighting_corner/LC = C
-			LC.update_lumcount(old_lum_r, old_lum_g, old_lum_b)
-			CHECK_TICK
-	sunlit_corners.Cut()
-
-	// Calculate new values to apply
 	var/new_brightness = P.sun["brightness"]
+	P.sun_holder.update_brightness(new_brightness, P.planet_floors)
+	
 	var/new_color = P.sun["color"]
+<<<<<<< HEAD
 	var/lum_r = new_brightness * GetRedPart  (new_color) / 255
 	var/lum_g = new_brightness * GetGreenPart(new_color) / 255
 	var/lum_b = new_brightness * GetBluePart (new_color) / 255
@@ -135,6 +142,9 @@ SUBSYSTEM_DEF(planets)
 	P.sun["lum_r"] = lum_r
 	P.sun["lum_g"] = lum_g
 	P.sun["lum_b"] = lum_b
+=======
+	P.sun_holder.update_color(new_color)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 
 /datum/controller/subsystem/planets/proc/updateTemp(var/datum/planet/P)
 	//Set new temperatures

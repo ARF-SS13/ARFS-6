@@ -18,7 +18,11 @@
 	name = "Size gun"
 	id = "sizegun"
 	req_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 3, TECH_POWER = 2)
+<<<<<<< HEAD
 	materials = list(DEFAULT_WALL_MATERIAL = 3000, MAT_GLASS = 2000, MAT_COPPER = 2000)
+=======
+	materials = list(DEFAULT_WALL_MATERIAL = 3000, MAT_GLASS = 2000)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 	build_path = /obj/item/weapon/gun/energy/sizegun
 	sort_string = "TAVBA"
 
@@ -26,7 +30,11 @@
 	name = "Body Snatcher"
 	id = "bodysnatcher"
 	req_tech = list(TECH_MAGNET = 3, TECH_BIO = 3, TECH_ILLEGAL = 2)
+<<<<<<< HEAD
 	materials = list(DEFAULT_WALL_MATERIAL = 4000, MAT_GLASS = 4000, MAT_COPPER = 2000)
+=======
+	materials = list(DEFAULT_WALL_MATERIAL = 4000, MAT_GLASS = 4000, MAT_URANIUM = 2000)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 	build_path = /obj/item/device/bodysnatcher
 	sort_string = "TBVAA"
 
@@ -45,3 +53,29 @@
 	materials = list(DEFAULT_WALL_MATERIAL = 2500, MAT_GLASS = 2000, MAT_COPPER = 2000, MAT_URANIUM = 1500, MAT_TITANIUM = 1000)
 	build_path = /obj/item/weapon/inducer/unloaded
 	sort_string = "TCVAB"
+<<<<<<< HEAD
+=======
+
+/datum/design/item/weapon/mining/mining_scanner
+	id = "mining_scanner"
+	req_tech = list(TECH_MAGNET = 3, TECH_ENGINEERING = 4, TECH_BLUESPACE = 1)
+	materials = list(DEFAULT_WALL_MATERIAL = 1000,"glass" = 500)
+	build_path = /obj/item/weapon/mining_scanner/advanced
+	sort_string = "FBAAB" 
+
+/datum/design/item/general/walkpod
+	name = "PodZu Music Player"
+	id = "walkpod"
+	req_tech = list(TECH_MAGNET = 3, TECH_ENGINEERING = 3)
+	materials = list(DEFAULT_WALL_MATERIAL = 2000, MAT_GLASS = 2000)
+	build_path = /obj/item/device/walkpod
+	sort_string = "TCVAD"
+
+/datum/design/item/general/juke_remote
+	name = "BoomTown Cordless Speaker"
+	id = "juke_remote"
+	req_tech = list(TECH_MAGNET = 3, TECH_ENGINEERING = 4, TECH_BLUESPACE = 1)
+	materials = list(DEFAULT_WALL_MATERIAL = 4000, MAT_GLASS = 4000, MAT_URANIUM = 2000)
+	build_path = /obj/item/device/juke_remote
+	sort_string = "TCVAE"
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491

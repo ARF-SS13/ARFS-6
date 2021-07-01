@@ -12,7 +12,11 @@
 	set name = "Set transfer amount"
 	set category = "Object"
 	set src in range(0)
+<<<<<<< HEAD:code/modules/reagents/reagent_containers/_reagent_containers.dm
 	var/N = input("Amount per transfer from this:","[src]") as null|anything in possible_transfer_amounts
+=======
+	var/N = tgui_input_list(usr, "Amount per transfer from this:","[src]", possible_transfer_amounts)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491:code/modules/reagents/reagent_containers.dm
 	if(N)
 		amount_per_transfer_from_this = N
 

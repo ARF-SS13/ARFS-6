@@ -25,7 +25,11 @@
 			return TRUE
 
 		if("set_tag")
+<<<<<<< HEAD
 			var/new_ident = sanitize_text(input("Enter a new ident tag.", "Core Control", core_tag) as null|text)
+=======
+			var/new_ident = sanitize_text(input(usr, "Enter a new ident tag.", "Core Control", core_tag) as null|text)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 			if(new_ident)
 				core_tag = new_ident
 			return TRUE

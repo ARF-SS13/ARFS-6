@@ -69,13 +69,13 @@
 		var/mob/living/L = user
 		//They're in it, and want to get out.
 		if(L.loc == src)
-			var/choice = alert("Do you want to exit \the [src]?","Un-Hide?","Exit","Stay")
+			var/choice = tgui_alert(usr, "Do you want to exit \the [src]?","Un-Hide?",list("Exit","Stay"))
 			if(choice == "Exit")
 				if(L == hider)
 					hider = null
 				L.forceMove(get_turf(src))
 		else if(!hider)
-			var/choice = alert("Do you want to hide in \the [src]?","Un-Hide?","Hide","Stay")
+			var/choice = tgui_alert(usr, "Do you want to hide in \the [src]?","Un-Hide?",list("Hide","Stay"))
 			if(choice == "Hide" && !hider) //Check again because PROMPT
 				L.forceMove(src)
 				hider = L
@@ -187,7 +187,7 @@
 					prob(2);/obj/item/device/flashlight/glowstick/blue,
 					prob(2);/obj/item/weapon/card/emag_broken,
 					prob(2);/obj/item/weapon/cell/super,
-					prob(2);/obj/item/weapon/contraband/poster,
+					prob(2);/obj/item/poster,
 					prob(2);/obj/item/weapon/reagent_containers/glass/rag,
 					prob(2);/obj/item/weapon/storage/box/sinpockets,
 					prob(2);/obj/item/weapon/storage/secure/briefcase,
@@ -242,6 +242,10 @@
 					prob(2);/obj/item/weapon/storage/box/syndie_kit/spy,
 					prob(2);/obj/item/weapon/grenade/anti_photon,
 					prob(2);/obj/item/clothing/under/hyperfiber/bluespace,
+<<<<<<< HEAD
+=======
+					prob(2);/obj/item/weapon/reagent_containers/glass/beaker/vial/amorphorovir,
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 					prob(1);/obj/item/clothing/suit/storage/vest/heavy/merc,
 					prob(1);/obj/item/device/nif/bad,
 					prob(1);/obj/item/device/radio_jammer,

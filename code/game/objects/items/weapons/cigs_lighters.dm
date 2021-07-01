@@ -520,10 +520,17 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		var/obj/item/weapon/reagent_containers/food/snacks/grown/G = W
 		if (!G.dry)                                                                                          //This prevents people from just stuffing cheeseburgers into their joint
 			to_chat(user, "<span class='notice'>[G.name] must be dried before you add it to [src].</span>")
+<<<<<<< HEAD
 			return
 		if (G.reagents.total_volume + src.reagents.total_volume > src.reagents.maximum_volume)               //Check that we don't have too much already in the paper before adding things
 			to_chat(user, "<span class='warning'>The [src] is too full to add [G.name].</span>")
 			return
+=======
+			return
+		if (G.reagents.total_volume + src.reagents.total_volume > src.reagents.maximum_volume)               //Check that we don't have too much already in the paper before adding things
+			to_chat(user, "<span class='warning'>The [src] is too full to add [G.name].</span>")
+			return
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 		if (src.reagents.total_volume == 0)
 			if (istype(src, /obj/item/weapon/reagent_containers/rollingpaper/blunt))                         //update the icon if this is the first thing we're adding to the paper
 				src.icon_state = "blunt_full"
@@ -578,10 +585,10 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	deactivation_sound = 'sound/items/zippo_off.ogg'
 
 /obj/item/weapon/flame/lighter/random
-	New()
-		icon_state = "lighter-[pick("r","c","y","g")]"
-		item_state = icon_state
-		base_state = icon_state
+/obj/item/weapon/flame/lighter/random/New()
+	icon_state = "lighter-[pick("r","c","y","g")]"
+	item_state = icon_state
+	base_state = icon_state
 
 /obj/item/weapon/flame/lighter/attack_self(mob/living/user)
 	if(!base_state)

@@ -12,6 +12,12 @@ var/global/list/all_traits = list()			// All of 'em at once (same instances)
 var/global/list/active_ghost_pods = list()
 
 var/global/list/sensorpreflist = list("Off", "Binary", "Vitals", "Tracking", "No Preference")
+<<<<<<< HEAD
+=======
+
+// Closets have magic appearances
+GLOBAL_LIST_EMPTY(closet_appearances)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 
 //stores numeric player size options indexed by name
 var/global/list/player_sizes_list = list(
@@ -232,6 +238,7 @@ var/global/list/contamination_flavors = list(
 				"Dirty" = contamination_flavors_dirty,
 				"Musky" = contamination_flavors_musky,
 				"Smelly" = contamination_flavors_smelly,
+				"Slimy" = contamination_flavors_slimy,
 				"Wet" = contamination_flavors_wet)
 
 var/global/list/contamination_flavors_generic = list("acrid",
@@ -435,6 +442,21 @@ var/global/list/contamination_flavors_musky = list("drenched",
 				"sticky",
 				"tainted")
 
+var/global/list/contamination_flavors_slimy = list("slimy",
+				"sloppy",
+				"drippy",
+				"glistening",
+				"dripping",
+				"gunky",
+				"slimed",
+				"mucky",
+				"viscous",
+				"dank",
+				"glutinous",
+				"syrupy",
+				"slippery",
+				"gelatinous")
+
 var/global/list/contamination_colors = list("green",
 				"white",
 				"black",
@@ -494,15 +516,31 @@ var/global/list/remainless_species = list(SPECIES_PROMETHEAN,
 		var/cost = instance.cost
 		traits_costs[path] = cost
 		all_traits[path] = instance
+<<<<<<< HEAD
+=======
+	
+	// Shakey shakey shake
+	sortTim(all_traits, /proc/cmp_trait_datums_name, associative = TRUE)
+	
+	// Split 'em up
+	for(var/traitpath in all_traits)
+		var/datum/trait/T = all_traits[traitpath]
+		var/category = T.category
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 		switch(category)
 			if(-INFINITY to -0.1)
-				negative_traits[path] = instance
+				negative_traits[traitpath] = T
 			if(0)
-				neutral_traits[path] = instance
-				if(!(instance.custom_only))
-					everyone_traits[path] = instance
+				neutral_traits[traitpath] = T
+				if(!(T.custom_only))
+					everyone_traits[traitpath] = T
 			if(0.1 to INFINITY)
+<<<<<<< HEAD
 				positive_traits[path] = instance
+=======
+				positive_traits[traitpath] = T
+		
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 
 	// Weaver recipe stuff
 	paths = typesof(/datum/weaver_recipe/structure) - /datum/weaver_recipe/structure

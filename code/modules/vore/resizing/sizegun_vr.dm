@@ -24,10 +24,14 @@
 
 /obj/item/weapon/gun/energy/sizegun/New()
 	..()
+<<<<<<< HEAD
 	if(istype(src, /obj/item/weapon/gun/energy/sizegun/admin))
 		verbs += /obj/item/weapon/gun/energy/sizegun/admin/select_size
 	else
 		verbs += /obj/item/weapon/gun/energy/sizegun/proc/select_size
+=======
+	verbs += .proc/select_size
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 
 /obj/item/weapon/gun/energy/sizegun/attack_self(mob/user)
 	. = ..()
@@ -44,7 +48,11 @@
 	set category = "Object"
 	set src in view(1)
 
+<<<<<<< HEAD
 	var/size_select = input("Put the desired size (25-200%), (1-600%) in dormitory areas.", "Set Size", size_set_to * 100) as num|null
+=======
+	var/size_select = input(usr, "Put the desired size (25-200%), (1-600%) in dormitory areas.", "Set Size", size_set_to * 100) as num|null
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 	if(!size_select)
 		return //cancelled
 	//We do valid resize testing in actual firings because people move after setting these things.
@@ -69,7 +77,11 @@
 	set category = "Object"
 	set src in view(1)
 
+<<<<<<< HEAD
 	var/size_select = input("Put the desired size (1-600%)", "Set Size", size_set_to * 100) as num|null
+=======
+	var/size_select = input(usr, "Put the desired size (1-600%)", "Set Size", size_set_to * 100) as num|null
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 	if(!size_select)
 		return //cancelled
 	size_set_to = clamp((size_select/100), 0, 1000) //eheh

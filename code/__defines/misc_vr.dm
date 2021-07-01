@@ -19,7 +19,11 @@
 #define ANNOUNCER_NAME "Facility PA"
 
 //For custom species
+<<<<<<< HEAD
 #define STARTING_SPECIES_POINTS 3 //ARFS EDIT - THREE!
+=======
+#define STARTING_SPECIES_POINTS 2
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 #define MAX_SPECIES_TRAITS 5
 
 // Xenochimera thing mostly

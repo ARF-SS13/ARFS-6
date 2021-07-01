@@ -214,7 +214,11 @@
 	modifystate = "phaserkill"
 	firemodes = list(
 		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/beam/blue, modifystate="phaserkill", charge_cost = 300),
+<<<<<<< HEAD
 		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/weaklaser/blue, modifystate="phaserstun", charge_cost = 80),
+=======
+		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/weaklaser/blue, modifystate="phaserstun", charge_cost = 100),
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 	)
 
 /obj/item/weapon/gun/energy/locked/frontier/unload_ammo(var/mob/user)
@@ -268,7 +272,11 @@
 	modifystate = "carbinekill"
 	firemodes = list(
 		list(mode_name="lethal", fire_delay=8, projectile_type=/obj/item/projectile/beam/blue, modifystate="carbinekill", charge_cost = 300),
+<<<<<<< HEAD
 		list(mode_name="low-power", fire_delay=5, projectile_type=/obj/item/projectile/beam/weaklaser/blue, modifystate="carbinestun", charge_cost = 80),
+=======
+		list(mode_name="low-power", fire_delay=5, projectile_type=/obj/item/projectile/beam/weaklaser/blue, modifystate="carbinestun", charge_cost = 100),
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 	)
 
 /obj/item/weapon/gun/energy/locked/frontier/carbine/update_icon()
@@ -299,7 +307,7 @@
 	modifystate = "holdoutkill"
 	firemodes = list(
 		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/beam/blue, modifystate="holdoutkill", charge_cost = 600),
-		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/weaklaser/blue, modifystate="holdoutstun", charge_cost = 160),
+		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/weaklaser/blue, modifystate="holdoutstun", charge_cost = 200),
 		list(mode_name="stun", fire_delay=12, projectile_type=/obj/item/projectile/beam/stun/med, modifystate="holdoutshock", charge_cost = 300),
 	)
 
@@ -327,6 +335,10 @@
 	one_handed_penalty = 50 // The weapon itself is heavy, and the long barrel makes it hard to hold steady with just one hand.
 	phase_power = 150 //efficient crank charger
 
+<<<<<<< HEAD
+=======
+	projectile_type = /obj/item/projectile/beam/sniper
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 	modifystate = "riflekill"
 	firemodes = list(
 		list(mode_name="sniper", fire_delay=35, projectile_type=/obj/item/projectile/beam/sniper, modifystate="riflekill", charge_cost = 600),
@@ -355,3 +367,30 @@
 	req_access = newlist() //for toggling safety
 	locked = 0
 	lockable = 0
+<<<<<<< HEAD
+=======
+
+///phaser bow///
+
+/obj/item/weapon/gun/energy/locked/frontier/handbow
+	name = "phaser handbow"
+	desc = "An minaturized weapon that fires a bolt of energy. Includes a built-in crank charger for recharging away from civilization. This one has a safety interlock that prevents firing while in proximity to the facility."
+	icon = 'icons/obj/gun_vr.dmi'
+	icon_state = "handbowkill"
+	item_state = null
+	phase_power = 100
+
+	w_class = ITEMSIZE_SMALL
+	charge_cost = 600
+	modifystate = "handbowkill"
+	firemodes = list(
+		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/energy/bow/heavy, modifystate="handbowkill", charge_cost = 600),
+		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/energy/bow, modifystate="handbowstun", charge_cost = 200),
+	)
+
+/obj/item/weapon/gun/energy/locked/frontier/handbow/unlocked
+	desc = "An minaturized weapon that fires a bolt of energy. Includes a built-in crank charger for recharging away from civilization."
+	req_access = newlist() //for toggling safety
+	locked = 0
+	lockable = 0
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491

@@ -19,7 +19,11 @@
 	drop_sound = 'sound/items/drop/wrapper.ogg'
 	pickup_sound = 'sound/items/pickup/wrapper.ogg'
 
+<<<<<<< HEAD
 obj/item/weapon/newspaper/attack_self(mob/user as mob)
+=======
+/obj/item/weapon/newspaper/attack_self(mob/user as mob)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 	if(ishuman(user))
 		var/mob/living/carbon/human/human_user = user
 		var/dat
@@ -27,7 +31,11 @@ obj/item/weapon/newspaper/attack_self(mob/user as mob)
 		switch(screen)
 			if(0) //Cover
 				dat+="<DIV ALIGN='center'><B><FONT SIZE=6>The Griffon</FONT></B></div>"
+<<<<<<< HEAD
 				dat+="<DIV ALIGN='center'><FONT SIZE=2>[using_map.company_name]-standard newspaper, for use on [using_map.company_name]© Space Facilities</FONT></div><HR>"
+=======
+				dat+="<DIV ALIGN='center'><FONT SIZE=2>[using_map.company_name]-standard newspaper, for use on [using_map.company_name]ï¿½ Space Facilities</FONT></div><HR>"
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 				if(isemptylist(news_content))
 					if(important_message)
 						dat+="Contents:<BR><ul><B><FONT COLOR='red'>**</FONT>Important Security Announcement<FONT COLOR='red'>**</FONT></B> <FONT SIZE=2>\[page [pages+2]\]</FONT><BR></ul>"
@@ -99,7 +107,11 @@ obj/item/weapon/newspaper/attack_self(mob/user as mob)
 	else
 		to_chat(user, "The paper is full of intelligible symbols!")
 
+<<<<<<< HEAD
 obj/item/weapon/newspaper/Topic(href, href_list)
+=======
+/obj/item/weapon/newspaper/Topic(href, href_list)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 	var/mob/living/U = usr
 	..()
 	if((src in U.contents) || (istype(loc, /turf) && in_range(src, U)))
@@ -130,7 +142,11 @@ obj/item/weapon/newspaper/Topic(href, href_list)
 		if(istype(src.loc, /mob))
 			attack_self(src.loc)
 
+<<<<<<< HEAD
 obj/item/weapon/newspaper/attackby(obj/item/weapon/W as obj, mob/user as mob)
+=======
+/obj/item/weapon/newspaper/attackby(obj/item/weapon/W as obj, mob/user as mob)
+>>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 	if(istype(W, /obj/item/weapon/pen))
 		if(scribble_page == curr_page)
 			to_chat(user, "<FONT COLOR='blue'>There's already a scribble in this page... You wouldn't want to make things too cluttered, would you?</FONT>")
