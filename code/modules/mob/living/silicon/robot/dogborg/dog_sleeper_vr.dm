@@ -22,7 +22,7 @@
 	var/decompiler = FALSE
 	var/delivery = FALSE
 	var/delivery_tag = "Fuel"
-	var/list/deliverylists = list()
+	var/list/list/deliverylists = list()
 	var/list/deliveryslot_1 = list()
 	var/list/deliveryslot_2 = list()
 	var/list/deliveryslot_3 = list()
@@ -321,7 +321,7 @@
 		return
 	if(href_list["clean"])
 		if(!cleaning)
-			var/confirm = alert(usr, "You are about to engage self-cleaning mode. This will fill your [src] with caustic enzymes to remove any objects or biomatter, and convert them into energy. Are you sure?", "Confirmation", "Self-Clean", "Cancel")
+			var/confirm = tgui_alert(usr, "You are about to engage self-cleaning mode. This will fill your [src] with caustic enzymes to remove any objects or biomatter, and convert them into energy. Are you sure?", "Confirmation", list("Self-Clean", "Cancel"))
 			if(confirm == "Self-Clean")
 				if(cleaning)
 					return
@@ -345,7 +345,7 @@
 		sleeperUI(usr)
 		return
 	if(href_list["deliveryslot"])
-		var/tag = input("Select active delivery slot.") as null|anything in deliverylists
+		var/tag = tgui_input_list(usr, "Select active delivery slot:", "Slot Choice", deliverylists)
 		if(!tag)
 			return 0
 		delivery_tag = tag
@@ -716,3 +716,10 @@
 	recycles = FALSE
 
 #undef SLEEPER_INJECT_COST
+
+
+/obj/item/device/dogborg/sleeper/compactor/brewer
+	name = "Brew Belly"
+	desc = "A mounted drunk tank unit with fuel processor."
+	icon_state = "brewer"
+	injection_chems = null
