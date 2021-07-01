@@ -14,11 +14,7 @@
 //     III. Thou shalt not write a decl that relies on arguments supplied to New().
 //     IV.  Thou shalt not call Initialize() on a /decl.
 
-<<<<<<< HEAD
-var/repository/decls/decls_repository = new()
-=======
 var/repository/decls/decls_repository // Initialiozed in /datum/global_init/New()
->>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 
 /repository/decls
 	var/list/fetched_decls
@@ -65,20 +61,11 @@ var/repository/decls/decls_repository // Initialiozed in /datum/global_init/New(
 		fetched_decl_subtypes[decl_prototype] = .
 
 /decl/proc/Initialize()
-<<<<<<< HEAD
-	//SHOULD_CALL_PARENT(TRUE)
-	//SHOULD_NOT_SLEEP(TRUE)
-	return
-
-/decl/Destroy()
-	//SHOULD_CALL_PARENT(FALSE)
-=======
 	SHOULD_CALL_PARENT(TRUE)
 	SHOULD_NOT_SLEEP(TRUE)
 	return
 
 /decl/Destroy()
 	SHOULD_CALL_PARENT(FALSE)
->>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 	crash_with("Prevented attempt to delete a decl instance: [log_info_line(src)]")
 	return QDEL_HINT_LETMELIVE // Prevents decl destruction

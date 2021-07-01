@@ -36,16 +36,6 @@
 		autolathe_recipes = new()
 	wires = new(src)
 
-<<<<<<< HEAD
-	for(var/Name in name_to_material)
-		if(Name in stored_material)
-			continue
-
-		stored_material[Name] = 0
-		storage_capacity[Name] = 0
-
-=======
->>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 	default_apply_parts()
 	RefreshParts()
 
@@ -272,13 +262,8 @@
 	for(var/obj/item/weapon/stock_parts/manipulator/M in component_parts)
 		man_rating += M.rating
 
-<<<<<<< HEAD
-	for(var/mat_name in storage_capacity)
-		storage_capacity[mat_name] = mb_rating * 25000
-=======
 	var/datum/component/material_container/materials = GetComponent(/datum/component/material_container)
 	materials.max_amount = mb_rating * 75000
->>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 
 	build_time = 50 / man_rating
 	mat_efficiency = 1.1 - man_rating * 0.1// Normally, price is 1.25 the amount of material, so this shouldn't go higher than 0.6. Maximum rating of parts is 5

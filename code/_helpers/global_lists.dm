@@ -302,46 +302,6 @@ GLOBAL_LIST_EMPTY(mannequins)
 
 	return 1 // Hooks must return 1
 
-<<<<<<< HEAD
-/*
-	// Custom species traits
-	paths = typesof(/datum/trait) - /datum/trait
-	for(var/path in paths)
-		var/datum/trait/instance = new path()
-		if(!instance.name)
-			continue //A prototype or something
-		var/cost = instance.cost
-		traits_costs[path] = cost
-		all_traits[path] = instance
-		switch(cost)
-			if(-INFINITY to -0.1)
-				negative_traits[path] = instance
-			if(0)
-				neutral_traits[path] = instance
-			if(0.1 to INFINITY)
-				positive_traits[path] = instance
-*/
-
-	// Custom species icon bases
-	var/list/blacklisted_icons = list(SPECIES_CUSTOM,SPECIES_PROMETHEAN) //VOREStation Edit
-	var/list/whitelisted_icons = list(SPECIES_FENNEC,SPECIES_XENOHYBRID) //VOREStation Edit
-	for(var/species_name in GLOB.playable_species)
-		if(species_name in blacklisted_icons)
-			continue
-		var/datum/species/S = GLOB.all_species[species_name]
-		if(S.spawn_flags & SPECIES_IS_WHITELISTED)
-			continue
-		GLOB.custom_species_bases += species_name
-	for(var/species_name in whitelisted_icons)
-		GLOB.custom_species_bases += species_name
-
-	return 1 // Hooks must return 1
-
-
-	return 1
-=======
->>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
-
 /// Inits the crafting recipe list, sorting crafting recipe requirements in the process.
 /proc/init_crafting_recipes(list/crafting_recipes)
 	for(var/path in subtypesof(/datum/crafting_recipe))

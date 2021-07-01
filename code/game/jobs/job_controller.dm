@@ -386,55 +386,6 @@ var/global/datum/controller/occupations/job_master
 
 	if(job)
 
-<<<<<<< HEAD
-			//Equip custom gear loadout.
-			var/list/custom_equip_slots = list()
-			var/list/custom_equip_leftovers = list()
-			if(H.client.prefs.gear && H.client.prefs.gear.len && !(job.mob_type & JOB_SILICON))
-				for(var/thing in H.client.prefs.gear)
-					var/datum/gear/G = gear_datums[thing]
-					if(!G) //Not a real gear datum (maybe removed, as this is loaded from their savefile)
-						continue
-
-					var/permitted
-					// Check if it is restricted to certain roles
-					if(G.allowed_roles)
-						for(var/job_name in G.allowed_roles)
-							if(job.title == job_name)
-								permitted = 1
-					else
-						permitted = 1
-
-					// Check if they're whitelisted for this gear (in alien whitelist? seriously?)
-					if(G.whitelisted && !is_alien_whitelisted(H, GLOB.all_species[G.whitelisted]))
-						permitted = 0
-
-					// If they aren't, tell them
-					if(!permitted)
-						to_chat(H, "<span class='warning'>Your current species, job or whitelist status does not permit you to spawn with [thing]!</span>")
-						continue
-
-					// Implants get special treatment
-					if(G.slot == "implant")
-						var/obj/item/weapon/implant/I = G.spawn_item(H, H.client.prefs.gear[G.display_name])
-						I.invisibility = 100
-						I.implant_loadout(H)
-						continue
-
-					// Try desperately (and sorta poorly) to equip the item. Now with increased desperation!
-					if(G.slot && !(G.slot in custom_equip_slots))
-						var/metadata = H.client.prefs.gear[G.display_name]
-						if(G.slot == slot_wear_mask || G.slot == slot_wear_suit || G.slot == slot_head)
-							custom_equip_leftovers += thing
-						else if(H.equip_to_slot_or_del(G.spawn_item(H, metadata), G.slot))
-							to_chat(H, "<span class='notice'>Equipping you with \the [thing]!</span>")
-							if(G.slot != slot_tie)
-								custom_equip_slots.Add(G.slot)
-						else
-							custom_equip_leftovers.Add(thing)
-					else
-						spawn_in_storage += thing
-=======
 		//Equip custom gear loadout.
 		var/list/custom_equip_slots = list()
 		var/list/custom_equip_leftovers = list()
@@ -443,7 +394,6 @@ var/global/datum/controller/occupations/job_master
 				var/datum/gear/G = gear_datums[thing]
 				if(!G) //Not a real gear datum (maybe removed, as this is loaded from their savefile)
 					continue
->>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 
 				var/permitted
 				// Check if it is restricted to certain roles
@@ -482,81 +432,7 @@ var/global/datum/controller/occupations/job_master
 					else
 						custom_equip_leftovers.Add(thing)
 				else
-<<<<<<< HEAD
-					to_chat(H, "<span class='danger'>Failed to locate a storage object on your mob, either you spawned with no arms and no backpack or this is a bug.</span>")
-
-		if(istype(H)) //give humans wheelchairs, if they need them.
-			var/obj/item/organ/external/l_foot = H.get_organ("l_foot")
-			var/obj/item/organ/external/r_foot = H.get_organ("r_foot")
-			var/obj/item/weapon/storage/S = locate() in H.contents
-			var/obj/item/wheelchair/R
-			if(S)
-				R = locate() in S.contents
-			if(!l_foot || !r_foot || R)
-				var/wheelchair_type = R?.unfolded_type || /obj/structure/bed/chair/wheelchair
-				var/obj/structure/bed/chair/wheelchair/W = new wheelchair_type(H.loc)
-				W.buckle_mob(H)
-				H.update_canmove()
-				W.set_dir(H.dir)
-				W.add_fingerprint(H)
-				if(R)
-					W.color = R.color
-					qdel(R)
-
-		to_chat(H, "<B>You are [job.total_positions == 1 ? "the" : "a"] [alt_title ? alt_title : rank].</B>")
-
-		if(job.supervisors)
-			to_chat(H, "<b>As the [alt_title ? alt_title : rank] you answer directly to [job.supervisors]. Special circumstances may change this.</b>")
-		if(job.has_headset)
-			H.equip_to_slot_or_del(new /obj/item/device/radio/headset(H), slot_l_ear)
-			to_chat(H, "<b>To speak on your department's radio channel use :h. For the use of other channels, examine your headset.</b>")
-
-		if(job.req_admin_notify)
-			to_chat(H, "<b>You are playing a job that is important for Game Progression. If you have to disconnect, please notify the admins via adminhelp.</b>")
-
-		// EMAIL GENERATION
-		// Email addresses will be created under this domain name. Mostly for the looks.
-		var/domain = "freemail.nt"
-		if(using_map && LAZYLEN(using_map.usable_email_tlds))
-			domain = using_map.usable_email_tlds[1]
-		var/sanitized_name = sanitize(replacetext(replacetext(lowertext(H.real_name), " ", "."), "'", ""))
-		var/complete_login = "[sanitized_name]@[domain]"
-
-		// It is VERY unlikely that we'll have two players, in the same round, with the same name and branch, but still, this is here.
-		// If such conflict is encountered, a random number will be appended to the email address. If this fails too, no email account will be created.
-		if(ntnet_global.does_email_exist(complete_login))
-			complete_login = "[sanitized_name][random_id(/datum/computer_file/data/email_account/, 100, 999)]@[domain]"
-
-		// If even fallback login generation failed, just don't give them an email. The chance of this happening is astronomically low.
-		if(ntnet_global.does_email_exist(complete_login))
-			to_chat(H, "You were not assigned an email address.")
-			H.mind.store_memory("You were not assigned an email address.")
-		else
-			var/datum/computer_file/data/email_account/EA = new/datum/computer_file/data/email_account()
-			EA.password = GenerateKey()
-			EA.login = 	complete_login
-			to_chat(H, "Your email account address is <b>[EA.login]</b> and the password is <b>[EA.password]</b>. This information has also been placed into your notes.")
-			H.mind.store_memory("Your email account address is [EA.login] and the password is [EA.password].")
-		// END EMAIL GENERATION
-
-		//Gives glasses to the vision impaired
-		if(H.disabilities & NEARSIGHTED)
-			var/equipped = H.equip_to_slot_or_del(new /obj/item/clothing/glasses/regular(H), slot_glasses)
-			if(equipped != 1)
-				var/obj/item/clothing/glasses/G = H.glasses
-				G.prescription = 1
-
-		BITSET(H.hud_updateflag, ID_HUD)
-		BITSET(H.hud_updateflag, IMPLOYAL_HUD)
-		BITSET(H.hud_updateflag, SPECIALROLE_HUD)
-		return H
-
-	proc/LoadJobs(jobsfile) //ran during round setup, reads info from jobs.txt -- Urist
-		if(!config.load_jobs_from_txt)
-			return 0
-=======
 					spawn_in_storage += thing
->>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
 
 		// Set up their account
 		job.setup_account(H)

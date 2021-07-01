@@ -40,11 +40,6 @@
 
 #define ARGS_DEBUG log_debug("[__FILE__] - [__LINE__]") ; for(var/arg in args) { log_debug("\t[log_info_line(arg)]") }
 
-<<<<<<< HEAD
-#define isitem(A)		istype(A, /obj/item)
-#define isTaurTail(A)	istype(A, /datum/sprite_accessory/tail/taur)
-=======
 #define WORLD_ICON_SIZE 32 //Needed for the R-UST port
 
 #define PIXEL_MULTIPLIER WORLD_ICON_SIZE/32 //Needed for the R-UST port
->>>>>>> 7744a7d5cf8e1b6601b793f2cf1038c0d873a491
