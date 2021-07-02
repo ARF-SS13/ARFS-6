@@ -154,6 +154,15 @@ var/global/list/latejoin_residential = list()
 /area/residential/teleporter
 	name = "\improper Residential - Residential Teleporters"
 
+/area/residential/obs1
+	name = "\improper Residential - Observation One"
+
+/area/residential/obs2
+	name = "\improper Residential - Observation Two"
+
+/area/residential/obs3
+	name = "\improper Residential - Observation Three"
+
 /area/residential/outside
 	name = "\improper Residential - Outside"
 
