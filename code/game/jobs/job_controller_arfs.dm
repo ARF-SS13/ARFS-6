@@ -375,19 +375,26 @@ var/global/datum/controller/occupations/job_master
 				to_chat(H, "<span class='critical'>You were unable to be spawned at your chosen late-join spawnpoint. Please verify your job/spawn point combination makes sense, and try another one.</span>")
 				return
 			else
-			// ARFS EDIT - Late Spawn in Bellies
+				// ARFS EDIT - Late Spawn in Bellies
 
-			// var/list/spawn_props = LateSpawn(H.client, rank)
-			// var/turf/T = spawn_props["turf"]
-			var/turf/T = get_turf(pick(latejoin))
+				// var/list/spawn_props = LateSpawn(H.client, rank)
+				// var/turf/T = spawn_props["turf"]
+				var/turf/T = get_turf(pick(latejoin))
 
-			// END ARFS EDIT
-			if(!T)
-				to_chat(H, "<span class='critical'>You were unable to be spawned at your chosen late-join spawnpoint. Please verify your job/spawn point combination makes sense, and try another one.</span>")
-				return
-			else
-				H.forceMove(T)
+				// END ARFS EDIT
+				if(!T)
+					to_chat(H, "<span class='critical'>You were unable to be spawned at your chosen late-join spawnpoint. Please verify your job/spawn point combination makes sense, and try another one.</span>")
+					return
+				else
+					H.forceMove(T)
+			
+		// Moving wheelchair if they have one
+		if(H.buckled && istype(H.buckled, /obj/structure/bed/chair/wheelchair))
+			H.buckled.forceMove(H.loc)
+			H.buckled.set_dir(H.dir)
 
+	if(job)
+	
 		//Equip custom gear loadout.
 		var/list/custom_equip_slots = list()
 		var/list/custom_equip_leftovers = list()
