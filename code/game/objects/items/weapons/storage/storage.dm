@@ -25,7 +25,7 @@
 	var/max_w_class = ITEMSIZE_SMALL //Max size of objects that this object can store (in effect only if can_hold isn't set)
 	var/max_storage_space = ITEMSIZE_COST_SMALL * 4 //The sum of the storage costs of all the items in this storage item.
 	var/storage_slots = null //The number of storage slots in this container.  If null, it uses the volume-based storage instead.
-	
+
 	/// Boxes screen object for fixed-size storage (belts, etc)
 	var/obj/screen/storage/boxes = null
 	/// List of 'click catchers' for boxes for fixed-size storage
@@ -37,8 +37,8 @@
 	var/obj/screen/storage/storage_continue = null
 	/// For dynamic storage, the rightmost pixel column for the whole storage display. Decorative.
 	var/obj/screen/storage/storage_end = null
-	
-	/// The "X" button at the far right of the storage 
+
+	/// The "X" button at the far right of the storage
 	var/obj/screen/close/closer = null
 
 	var/use_to_pickup	//Set this to make it possible to use this item in an inverse way, so you can have the item in your hand and click items on the floor to pick them up.
@@ -177,12 +177,12 @@
 				return
 	if(user.s_active)
 		user.s_active.hide_from(user)
-	
+
 	var/client/C = user.client
 	if(!C)
 		return
 
-	if(storage_slots)	
+	if(storage_slots)
 		C.screen += src.boxes
 		create_slot_catchers()
 		C.screen += src.box_catchers
@@ -190,7 +190,7 @@
 		C.screen += src.storage_start
 		C.screen += src.storage_continue
 		C.screen += src.storage_end
-	
+
 	C.screen += src.closer
 	C.screen += src.contents
 
@@ -200,12 +200,12 @@
 /obj/item/weapon/storage/proc/hide_from(mob/user as mob)
 	var/client/C = user.client
 	LAZYREMOVE(is_seeing,user)
-	
+
 	if(!C)
 		if(!LAZYLEN(is_seeing))
 			clear_slot_catchers()
 		return
-	
+
 	if(storage_slots)
 		C.screen -= src.boxes
 		C.screen -= src.box_catchers
@@ -213,13 +213,13 @@
 		C.screen -= src.storage_start
 		C.screen -= src.storage_continue
 		C.screen -= src.storage_end
-	
+
 	C.screen -= src.closer
 	C.screen -= src.contents
-	
+
 	if(user.s_active == src)
 		user.s_active = null
-	
+
 	if(!LAZYLEN(is_seeing))
 		clear_slot_catchers()
 
@@ -318,7 +318,7 @@
 
 /obj/item/weapon/storage/proc/space_orient_objs(var/list/obj/item/display_contents)
 	SHOULD_NOT_SLEEP(TRUE)
-	
+
 	/// A prototype for drawing the leftmost border behind each item in storage
 	var/static/mutable_appearance/stored_start
 	/// A prototype for drawing the wide backing space behind each item in storage
@@ -511,7 +511,7 @@
 		F.update_icon(1)
 
 	for(var/mob/M in is_seeing)
-		M?.client.screen -= W
+		M.client?.screen -= W
 
 	if(new_location)
 		if(ismob(loc))
@@ -812,7 +812,7 @@
 	ASSERT(held_item)
 	name += held_item.name
 	src.held_item = weakref(held_item)
-	
+
 /atom/movable/storage_slot/Destroy()
 	held_item = null
 
