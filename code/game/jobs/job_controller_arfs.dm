@@ -370,23 +370,18 @@ var/global/datum/controller/occupations/job_master
 			H.forceMove(S.loc)
 		else
 			var/list/spawn_props = LateSpawn(H.client, rank)
-			var/turf/T = spawn_props["turf"]
+			// ARFS EDIT - Late Spawn in Bellies
+
+			// var/list/spawn_props = LateSpawn(H.client, rank)
+			// var/turf/T = spawn_props["turf"]
+			var/turf/T = get_turf(pick(latejoin))
+
+			// END ARFS EDIT
 			if(!T)
 				to_chat(H, "<span class='critical'>You were unable to be spawned at your chosen late-join spawnpoint. Please verify your job/spawn point combination makes sense, and try another one.</span>")
 				return
 			else
-				// ARFS EDIT - Late Spawn in Bellies
-
-				// var/list/spawn_props = LateSpawn(H.client, rank)
-				// var/turf/T = spawn_props["turf"]
-				var/turf/T = get_turf(pick(latejoin))
-
-				// END ARFS EDIT
-				if(!T)
-					to_chat(H, "<span class='critical'>You were unable to be spawned at your chosen late-join spawnpoint. Please verify your job/spawn point combination makes sense, and try another one.</span>")
-					return
-				else
-					H.forceMove(T)
+				H.forceMove(T)
 			
 		// Moving wheelchair if they have one
 		if(H.buckled && istype(H.buckled, /obj/structure/bed/chair/wheelchair))
