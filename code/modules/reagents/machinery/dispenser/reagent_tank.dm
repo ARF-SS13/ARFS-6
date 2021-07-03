@@ -442,7 +442,7 @@
 	icon_state = "oiltank"
 	amount_per_transfer_from_this = 120
 
-/obj/structure/reagent_dispensers/cookingoil/New()
+/obj/structure/reagent_dispensers/cookingoil/Initialize()
 		..()
 		reagents.add_reagent("cornoil",5000)
 
