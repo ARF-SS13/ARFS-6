@@ -11,6 +11,7 @@ var/global/list/image/splatter_cache=list()
 	density = 0
 	anchored = 1
 	plane = BLOOD_PLANE
+	layer = BLOOD_DECAL_LAYER
 	icon = 'icons/effects/blood.dmi'
 	icon_state = "mfloor1"
 	random_icon_states = list("mfloor1", "mfloor2", "mfloor3", "mfloor4", "mfloor5", "mfloor6", "mfloor7")
@@ -87,10 +88,10 @@ var/global/list/image/splatter_cache=list()
 			if(!S.blood_DNA)
 				S.blood_DNA = list()
 				S.blood_overlay.color = basecolor
-				S.overlays += S.blood_overlay
+				S.add_overlay(S.blood_overlay)
 			if(S.blood_overlay && S.blood_overlay.color != basecolor)
 				S.blood_overlay.color = basecolor
-				S.overlays += S.blood_overlay
+				S.add_overlay(S.blood_overlay)
 			S.blood_DNA |= blood_DNA.Copy()
 			perp.update_inv_shoes()
 
@@ -191,8 +192,8 @@ var/global/list/image/splatter_cache=list()
 	blood.Blend(basecolor,ICON_MULTIPLY)
 
 	icon = blood
-	overlays.Cut()
-	overlays += giblets
+	cut_overlays()
+	add_overlay(giblets)
 
 /obj/effect/decal/cleanable/blood/gibs/up
 	random_icon_states = list("gib1", "gib2", "gib3", "gib5", "gib6","gibup1","gibup1","gibup1")

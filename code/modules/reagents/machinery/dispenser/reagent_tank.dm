@@ -51,7 +51,7 @@
 	set name = "Set transfer amount"
 	set category = "Object"
 	set src in view(1)
-	var/N = input("Amount per transfer from this:","[src]") as null|anything in possible_transfer_amounts
+	var/N = tgui_input_list(usr, "Amount per transfer from this:","[src]", possible_transfer_amounts)
 	if (N)
 		amount_per_transfer_from_this = N
 
@@ -193,7 +193,7 @@
 			var/icon/test = getFlatIcon(W)
 			test.Shift(NORTH,1)
 			test.Shift(EAST,6)
-			overlays += test
+			add_overlay(test)
 
 	return ..()
 
@@ -389,12 +389,9 @@
 
 /obj/structure/reagent_dispensers/water_cooler/update_icon()
 	icon_state = "water_cooler"
-	overlays.Cut()
-	var/image/I
+	cut_overlays()
 	if(bottle)
-		I = image(icon, "water_cooler_bottle")
-		overlays += I
-	return
+		add_overlay("water_cooler_bottle")
 
 /obj/structure/reagent_dispensers/beerkeg
 	name = "beer keg"
@@ -436,7 +433,7 @@
 /obj/structure/reagent_dispensers/acid/Initialize()
 	. = ..()
 	reagents.add_reagent("sacid", 1000)
-
+	
 //Cooking oil refill tank
 /obj/structure/reagent_dispensers/cookingoil
 	name = "cooking oil tank"
@@ -445,11 +442,9 @@
 	icon_state = "oiltank"
 	amount_per_transfer_from_this = 120
 
-// START ARFS EDIT - BAD INIT
-/obj/structure/reagent_dispensers/cookingoil/Initialize()
-		. = ..()
+/obj/structure/reagent_dispensers/cookingoil/New()
+		..()
 		reagents.add_reagent("cornoil",5000)
-// END ARFS EDIT
 
 /obj/structure/reagent_dispensers/cookingoil/bullet_act(var/obj/item/projectile/Proj)
 	if(Proj.get_structure_damage())
