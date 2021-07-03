@@ -442,6 +442,7 @@
 	icon_state = "oiltank"
 	amount_per_transfer_from_this = 120
 
+// ARFS Edit - This needs to be Initialize, not New
 /obj/structure/reagent_dispensers/cookingoil/Initialize()
 		..()
 		reagents.add_reagent("cornoil",5000)
