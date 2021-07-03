@@ -369,7 +369,7 @@ var/global/datum/controller/occupations/job_master
 		if(istype(S, /obj/effect/landmark/start) && istype(S.loc, /turf))
 			H.forceMove(S.loc)
 		else
-			var/list/spawn_props = LateSpawn(H.client, rank)
+			// var/list/spawn_props = LateSpawn(H.client, rank)
 			// ARFS EDIT - Late Spawn in Bellies
 
 			// var/list/spawn_props = LateSpawn(H.client, rank)
