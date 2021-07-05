@@ -2,9 +2,6 @@
 	desc = "An odd cookie"
 	bitesize = 1
 
-/obj/item/weapon/reagent_containers/food/snacks/variable/cookie/curious/Initialize()
-	. = ..()
-
 /obj/item/weapon/reagent_containers/food/snacks/variable/cookie/curious/attack(mob/living/M as mob, mob/user as mob, def_zone)
 	. = ..()
 	if (M == user)
@@ -15,15 +12,11 @@
 							 /datum/power/changeling/size_change)
 		var/list/datum/power/changeling/playerpowerinstances = list()
 		M.make_playable_changeling(playerpowers, playerpowerinstances)
-		M.drop_from_inventory(src)
-		qdel(src)
+	return
 
 /obj/item/weapon/reagent_containers/food/snacks/variable/cookie/dubious
 	desc = "An odd cookie"
 	bitesize = 1
-
-/obj/item/weapon/reagent_containers/food/snacks/variable/cookie/dubious/Initialize()
-	. = ..()
 
 /obj/item/weapon/reagent_containers/food/snacks/variable/cookie/dubious/attack(mob/living/M as mob, mob/user as mob, def_zone)
 	. = ..()
@@ -31,5 +24,4 @@
 		var/list/playerpowers = list(/datum/power/changeling/size_change)
 		var/list/datum/power/changeling/playerpowerinstances = list()
 		M.make_playable_changeling(playerpowers, playerpowerinstances)
-		M.drop_from_inventory(src)
-		qdel(src)
+	return
