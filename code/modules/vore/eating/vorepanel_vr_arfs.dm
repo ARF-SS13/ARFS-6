@@ -164,7 +164,6 @@
 			"emote_time" = selected.emote_time,
 			"emote_active" = selected.emote_active,
 			"belly_fullscreen" = selected.belly_fullscreen,
-			"possible_fullscreens" = icon_states('icons/mob/screen_full_vore.dmi'),
 			"vorespawn_blacklist" = selected.vorespawn_blacklist // ARFS EDIT
 		)
 
@@ -561,7 +560,7 @@
 	var/list/available_options = list("Examine", "Eject", "Move")
 	if(ishuman(target))
 		available_options += "Transform"
-	intent = tgui_input_list(user, "What would you like to do with [target]?", "Vore Pick", "Examine", available_options)
+	intent = tgui_alert(user, "What would you like to do with [target]?", "Vore Pick", available_options)
 	switch(intent)
 		if("Examine")
 			var/list/results = target.examine(host)
