@@ -67,16 +67,16 @@
 	glass_name = "Monster Tamer"
 	glass_desc = "This looks like a vaguely-alcoholic slurry of meat. Gross."
 
-/datum/reagent/ethanol/pink_moo
-	name = "Pink Moo"
-	id = "pinkmoo"
+/datum/reagent/ethanol/pink_russian
+	name = "Pink Russian"
+	id = "pinkrussian"
 	description = "Like a White Russian but with 100% more pink!"
 	taste_description = "strawberry icecream, with a coffee kick"
 	color = "#d789bd"
 	strength = 15
 
-	glass_name = "Pink Moo"
-	glass_desc = "A very familiar looking drink. ...moo?"
+	glass_name = "Pink Russian"
+	glass_desc = "A very pink drink, yet with strong sense of power to it."
 
 /datum/reagent/ethanol/originalsin
 	name = "Original Sin"
@@ -459,3 +459,61 @@
 	if(M.species.organic_food_coeff)
 		if(alien == IS_SLIME || alien == IS_CHIMERA) //slimes and chimera can get nutrition from injected nutriment and protein
 			M.nutrition += (alt_nutriment_factor * removed)
+
+//////////////////////Bepis Drinks (04/29/2021)//////////////////////
+
+/datum/reagent/drink/soda/bepis_cola
+	name = "Bepis"
+	id = "bepis"
+	description = "A weird cola-like beverage."
+	taste_description = "bepsi"
+	reagent_state = LIQUID
+	color = "#100800"
+	adj_drowsy = -3
+	adj_temp = -5
+
+	glass_name = "Bepis Cola"
+	glass_desc = "A glass of weird cola beverage."
+	glass_special = list(DRINK_FIZZ)
+
+/datum/reagent/drink/soda/buzz_fuzz
+	name = "Buzz Fuzz"
+	id = "buzz_fuzz"
+	description = "A delicious frontier beverage that's simply a Hive of Flavour!"
+	taste_description = "carbonated honey and pollen"
+	reagent_state = LIQUID
+	color = "#8CFF00"
+	adj_drowsy = -3
+	adj_temp = -5
+
+	glass_name = "Buzz Fuzz"
+	glass_desc = "A glass that's stinging with flavour."
+	glass_special = list(DRINK_FIZZ)
+
+/datum/reagent/drink/soda/sprited_cranberry
+	name = "Sprited Cranberry"
+	id = "sprited_cranberry"
+	description = "A winter spiced cranberry drink. Perfect for year-round consumption."
+	taste_description = "sweet spiced cranberry"
+	reagent_state = LIQUID
+	color = "#fffafa"
+	adj_drowsy = -3
+	adj_temp = -5
+
+	glass_name = "Sprited Cranberry"
+	glass_desc = "A glass of sprited cranberry"
+	glass_special = list(DRINK_FIZZ)
+
+/datum/reagent/drink/soda/shamblers
+	name = "Shambler's Juice"
+	id = "shamblers"
+	description = "A strange off-brand beverage that's bursting with flavor."
+	taste_description = "carbonated metallic soda"
+	reagent_state = LIQUID
+	color = "#f00060"
+	adj_drowsy = -3
+	adj_temp = -5
+
+	glass_name = "Shambler's Juice"
+	glass_desc = "A glass of something shambly"
+	glass_special = list(DRINK_FIZZ)

@@ -12,14 +12,17 @@
 		to_chat(src,"<span class='warning'>You must be awake and standing to perform this action!</span>")
 		return
 
+	if(!isturf(loc))
+		to_chat(src,"<span class='warning'>You need more space to perform this action!</span>")
+		return
+
 	var/obj/item/organ/internal/nano/refactory/refactory = nano_get_refactory()
 	//Missing the organ that does this
 	if(!istype(refactory))
 		to_chat(src,"<span class='warning'>You don't have a working refactory module!</span>")
 		return
-
-
-	var/choice = input(src,"Pick the bodypart to change:", "Refactor - One Bodypart") as null|anything in species.has_limbs
+		
+	var/choice = tgui_input_list(src,"Pick the bodypart to change:", "Refactor - One Bodypart", species.has_limbs)
 	if(!choice)
 		return
 
@@ -28,7 +31,7 @@
 		if(refactory.get_stored_material(DEFAULT_WALL_MATERIAL) < PER_LIMB_STEEL_COST)
 			to_chat(src,"<span class='warning'>You're missing that limb, and need to store at least [PER_LIMB_STEEL_COST] steel to regenerate it.</span>")
 			return
-		var/regen = alert(src,"That limb is missing, do you want to regenerate it in exchange for [PER_LIMB_STEEL_COST] steel?","Regenerate limb?","Yes","No")
+		var/regen = tgui_alert(src,"That limb is missing, do you want to regenerate it in exchange for [PER_LIMB_STEEL_COST] steel?","Regenerate limb?",list("Yes","No"))
 		if(regen != "Yes")
 			return
 		if(!refactory.use_stored_material(DEFAULT_WALL_MATERIAL,PER_LIMB_STEEL_COST))
@@ -65,7 +68,7 @@
 		usable_manufacturers[company] = M
 	if(!usable_manufacturers.len)
 		return
-	var/manu_choice = input(src, "Which manufacturer do you wish to mimic for this limb?", "Manufacturer for [choice]") as null|anything in usable_manufacturers
+	var/manu_choice = tgui_input_list(src, "Which manufacturer do you wish to mimic for this limb?", "Manufacturer for [choice]", usable_manufacturers)
 
 	if(!manu_choice)
 		return //Changed mind
@@ -91,6 +94,10 @@
 		to_chat(src,"<span class='warning'>You must be awake and standing to perform this action!</span>")
 		return
 
+	if(!isturf(loc))
+		to_chat(src,"<span class='warning'>You need more space to perform this action!</span>")
+		return
+
 	var/obj/item/organ/internal/nano/refactory/refactory = nano_get_refactory()
 	//Missing the organ that does this
 	if(!istype(refactory))
@@ -102,7 +109,7 @@
 		to_chat(src, "<span class='warning'>You are already refactoring!</span>")
 		return
 
-	var/swap_not_rebuild = alert(src,"Do you want to rebuild, or reshape?","Rebuild or Reshape","Reshape","Cancel","Rebuild")
+	var/swap_not_rebuild = tgui_alert(src,"Do you want to rebuild, or reshape?","Rebuild or Reshape",list("Reshape","Cancel","Rebuild"))
 	if(swap_not_rebuild == "Cancel")
 		return
 	if(swap_not_rebuild == "Reshape")
@@ -118,7 +125,7 @@
 			usable_manufacturers[company] = M
 		if(!usable_manufacturers.len)
 			return
-		var/manu_choice = input(src, "Which manufacturer do you wish to mimic?", "Manufacturer") as null|anything in usable_manufacturers
+		var/manu_choice = tgui_input_list(src, "Which manufacturer do you wish to mimic?", "Manufacturer", usable_manufacturers)
 
 		if(!manu_choice)
 			return //Changed mind
@@ -232,6 +239,11 @@
 	set category = "Abilities"
 	set hidden = TRUE
 
+	var/atom/movable/to_locate = temporary_form || src
+	if(!isturf(to_locate.loc))
+		to_chat(to_locate,"<span class='warning'>You need more space to perform this action!</span>")
+		return
+	
 	//Blob form
 	if(temporary_form)
 		if(health < maxHealth*0.5)
@@ -260,9 +272,10 @@
 		to_chat(src,"<span class='warning'>You must be awake and standing to perform this action!</span>")
 		return
 
-	var/new_species = input("Please select a species to emulate.", "Shapeshifter Body") as null|anything in GLOB.playable_species
+	var/new_species = tgui_input_list(usr, "Please select a species to emulate.", "Shapeshifter Body", GLOB.playable_species)
 	if(new_species)
 		impersonate_bodytype = new_species
+		species?.base_species = new_species // Really though you better have a species
 		regenerate_icons() //Expensive, but we need to recrunch all the icons we're wearing
 
 ////
