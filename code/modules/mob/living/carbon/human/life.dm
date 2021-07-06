@@ -1252,7 +1252,7 @@
 				else if(no_damage)
 					health_images += image('icons/mob/screen1_health.dmi',"fullhealth")
 
-				healths_ma.add_overlay(health_images)
+				healths_ma.overlays += health_images // ARFS Edit - fix broken things
 				healths.appearance = healths_ma
 
 

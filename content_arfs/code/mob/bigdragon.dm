@@ -548,7 +548,7 @@ I think I covered everything.
 	B = new /obj/belly/dragon/stomach(src)
 	B.emote_lists[DM_DIGEST] = list(
 		"The stomach walls spontaneously contract! Those wavey, fleshy walls binding your body in their embrace for the moment, slathering you with thick, caustic acids.",
-		"You hear a soft rumbling as the dragon’s insides churn around your body, the well-used stomach walls shuddering with a growl as you melt down.",
+		"You hear a soft rumbling as the dragonï¿½s insides churn around your body, the well-used stomach walls shuddering with a growl as you melt down.",
 		"The stomach squishes and squelches over your body, the growling and grumbling of those bowels kneading you into submission like a deafening orchestra. Gradually melting you down into something easier to manage",
 		"As your body breaks down into this beasts lunch you feel the walls compress tighter and tighter every moment pressing a crushing weight on your form.",
 		"The constant, rhythmic kneading and massaging starts to take its toll along with the muggy heat, making you feel weaker and weaker!",
@@ -576,11 +576,12 @@ I think I covered everything.
 		"A soft swaying, like the waves of an ocean, squish you to one side, and then to the other. The dragon's gentle movements seem to sway you side to side, as if in a tight possessive hammock on it's underside.",
 		"Nearby, a louder cacophany of gushing glrrrbles, deep dull squelches, and even deeper glrrns call out. This safe pocket of flesh seems to be up close and intimate with the dragon's normal, larger stomach, thus you rest safely spectating the sounds it makes.",
 		"The rushing breathing of the beast continues at a slow pace, indicating the calm it has. Holding you like this seems quite enjoyable to them, the chamber's folds just as calm and lazy in their motions of squelching the slimy contents all over your form.")
-	..()
+	.=..()
 
 //Making unique belly subtypes for cleanliness and my sanity
 /obj/belly/dragon
-	transferchance = 50
+	autotransferchance = 50
+	autotransferwait = 150
 	escapable = 1
 	escapechance = 100
 	escapetime = 30
@@ -599,7 +600,7 @@ I think I covered everything.
 		"You try to wriggle to the very front of the jaws to keep safe from that abyssal gullet. It works for a while, before the tongue scoops you right up close to that slick hatch, presenting you with a view of those dark, undulating, sloppy depths.",
 		"You brace your back against the spongey mattress of the tongue, and plant your limbs up against the roof. Straining hard, you try to force the jaws agape. A dull growl increases, blasting you in humid murk and drool the more you strain, your efforts ultimately useless.",
 		"Struggling for escape, you find yourself able to slip an arm between the beast's teeth and lips, reaching into the colder outside air. It doesn't take long for the beast's tongue to slither out with it, wrap over the limb, tugging it back inside with a noisy slllrrrp of it's lips.")
-	transferlocation = "Throat"
+	autotransferlocation = "Throat"
 	belly_fullscreen = "a_tumby"
 	vore_sound = "Insertion1"
 
@@ -610,7 +611,7 @@ I think I covered everything.
 	mode_flags = DM_FLAG_NUMBING
 	struggle_messages_inside = list(
 		"Wriggling around and resisting the beast's efforts to gently devour you, makes them call out to you with a deeply concerned rhhhrrrl. It sounds like it's trying to reassure you, though it seems to relent and let you pry the jaws agape to attempt to slide yourself free.")
-	transferlocation = "Throat."
+	autotransferlocation = "Throat."
 
 /obj/belly/dragon/throat
 	name = "Throat"
@@ -624,7 +625,7 @@ I think I covered everything.
 		"Bracing your back against a wall, you try to press outwards with all the strength you have, to spread the throat agape. For a moment, it affords you a nice view down your body, towards the sealed muscular entryway to it's stomach. Everything clenches back shut around you shortly after.",
 		"More squirming and struggling outwards, trying to hold the throat's muscular walls at bay. Every time you press outwards, the walls press back with twice the strength. Much more of this and it might threaten to crush. Perhaps you should just give in...",
 		"You frantically writhe upwards a couple of inches, before the beast swallows with a sloppy-sounding glllggk, sending you back down a foot or so. Each struggle you make only seems to hasten your journey down the hatch. ")
-	transferlocation = "Stomach"
+	autotransferlocation = "Stomach"
 	belly_fullscreen = "another_tumby"
 	vore_sound = "Tauric Swallow"
 
@@ -639,6 +640,7 @@ I think I covered everything.
 	mode_flags = DM_FLAG_NUMBING
 	struggle_messages_inside = list(
 		"Writhing firmly inside the tunnel, you try to 'swim' back up the way you came. The swallows relent, and the beast croons softly at you - the walls of the throat tensing to allow for better grip. Slowly but surely, you start wriggling back up towards the dragon's jaws, the beast seeming to permit the action.")
+	autotransferlocation = "Second Stomach"
 
 /obj/belly/dragon/stomach
 	name = "Stomach"
