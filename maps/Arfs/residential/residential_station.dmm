@@ -27,11 +27,7 @@
 /turf/simulated/floor/wood,
 /area/residential/corridors)
 "al" = (
-/obj/structure/bed/chair/sofa/black/corner{
-	dir = 4
-	},
-/obj/structure/window/reinforced,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/tiled,
 /area/residential/docking_lobby)
 "an" = (
 /obj/structure/table/fancyblack,
@@ -419,7 +415,6 @@
 /turf/simulated/floor/wood,
 /area/residential/healthcenter)
 "cq" = (
-/obj/structure/device/piano,
 /obj/effect/floor_decal/borderfloorblack/shifted{
 	dir = 5
 	},
@@ -1156,11 +1151,6 @@
 /turf/simulated/floor/carpet/oracarpet,
 /area/residential/library)
 "fK" = (
-/obj/structure/device/piano{
-	density = 0;
-	dir = 4;
-	name = "piano"
-	},
 /obj/machinery/light{
 	dir = 1
 	},
@@ -1963,11 +1953,12 @@
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/residential/cafe)
 "kJ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 1;
-	tag = "icon-intact (SOUTHWEST)"
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled,
 /area/residential/docking_lobby)
 "kL" = (
 /obj/structure/table/marble,
@@ -2009,10 +2000,11 @@
 /turf/simulated/floor/tiled,
 /area/residential/healthcenter)
 "lg" = (
-/obj/structure/bed/chair/sofa/black{
-	dir = 4
+/obj/structure/bed/chair,
+/obj/machinery/light{
+	dir = 1
 	},
-/turf/simulated/floor/wood,
+/turf/simulated/floor/tiled,
 /area/residential/docking_lobby)
 "lj" = (
 /obj/machinery/button/remote/airlock{
@@ -3983,15 +3975,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/residential/docking_lobby)
-"wB" = (
-/obj/structure/bed/chair/sofa/black{
-	dir = 4
-	},
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/simulated/floor/wood,
-/area/residential/docking_lobby)
 "wF" = (
 /obj/structure/flora/tree/sif,
 /turf/simulated/floor/outdoors/grass/forest,
@@ -5297,10 +5280,11 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/healthcenter)
 "Dw" = (
-/obj/machinery/light{
-	dir = 8
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled,
 /area/residential/docking_lobby)
 "Dy" = (
 /obj/effect/floor_decal/spline/plain{
@@ -5588,16 +5572,16 @@
 /turf/simulated/floor/tiled/dark,
 /area/residential/outside)
 "Fa" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden{
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/obj/machinery/light{
 	dir = 8
 	},
 /obj/machinery/computer/shuttle_control/residential_shuttle{
 	dir = 4
 	},
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled,
 /area/residential/docking_lobby)
 "Fc" = (
 /obj/structure/table/reinforced,
@@ -5657,7 +5641,7 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/healthcenter)
 "Fx" = (
-/turf/unsimulated/wall,
+/turf/simulated/wall,
 /area/residential/docking_lobby)
 "FC" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
@@ -7138,10 +7122,15 @@
 /turf/simulated/floor/outdoors/grass/forest,
 /area/residential/outside)
 "NY" = (
-/obj/structure/bed/chair/sofa/black/corner{
-	dir = 1
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
-/turf/simulated/floor/wood,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
 /area/residential/docking_lobby)
 "Oa" = (
 /obj/structure/flora/ausbushes/pointybush,
@@ -7276,7 +7265,7 @@
 	},
 /obj/machinery/door/airlock/glass_external,
 /obj/effect/map_helper/airlock/door/int_door,
-/obj/machinery/atmospherics/pipe/simple/hidden{
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
@@ -23289,8 +23278,8 @@ WV
 WV
 WV
 WV
-Fx
-Fx
+WV
+WV
 Fx
 Fx
 Fx
@@ -23299,7 +23288,7 @@ OH
 vY
 Fx
 Fx
-Fx
+WV
 WV
 WV
 WV
@@ -23541,17 +23530,17 @@ kb
 kb
 kb
 kb
-MD
-NY
-wB
+kb
+kb
+Fx
 lg
 al
 Dw
-Jk
+NY
 kJ
 Fa
-QL
-MD
+Fx
+kb
 kb
 kb
 kb
