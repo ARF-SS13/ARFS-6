@@ -7,7 +7,6 @@
 	var/totalPlayersReady = 0
 	var/show_hidden_jobs = 0	//Show jobs that are set to "Never" in preferences
 	var/datum/browser/panel
-	var/age_gate_result
 	universal_speak = 1
 
 	invisibility = 101
@@ -17,6 +16,8 @@
 	canmove = 0
 
 	anchored = 1	//  don't get pushed around
+
+	var/created_for
 
 /mob/new_player/New()
 	mob_list += src
@@ -28,11 +29,11 @@
 
 
 /mob/new_player/proc/new_player_panel_proc()
-	if(age_gate_result == null && client.prefs && !client.is_preference_enabled(/datum/client_preference/debug/age_verified)) // run first time verification
-		verifyage()
 	var/output = "<div align='center'>"
+	/* VOREStation Removal
 	output += "[using_map.get_map_info()]"
 	output +="<hr>"
+	VOREStation Removal End */
 	output += "<p><a href='byond://?src=\ref[src];show_preferences=1'>Character Setup</A></p>"
 
 	if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
@@ -82,78 +83,11 @@
 	if(GLOB.news_data.station_newspaper && !client.seen_news)
 		show_latest_news(GLOB.news_data.station_newspaper)
 
-	panel = new(src, "Welcome","Welcome", 500, 480, src)
+	panel = new(src, "Welcome","Welcome", 210, 300, src) // VOREStation Edit
 	panel.set_window_options("can_close=0")
 	panel.set_content(output)
 	panel.open()
 	return
-
-/mob/new_player/proc/age_gate()
-	var/list/dat = list("<center>")
-	dat += "Enter your date of birth here, to confirm that you are over 18.<BR>"
-	dat += "<b>Your date of birth is not saved, only the fact that you are over/under 18 is.</b><BR>"
-	dat += "</center>"
-
-	dat += "<form action='?src=[REF(src)]'>"
-	dat += "<input type='hidden' name='src' value='[REF(src)]'>"
-//	dat += HrefTokenFormField()
-	dat += "<select name = 'Month'>"
-	var/monthList = list("January" = 1, "February" = 2, "March" = 3, "April" = 4, "May" = 5, "June" = 6, "July" = 7, "August" = 8, "September" = 9, "October" = 10, "November" = 11, "December" = 12)
-	for(var/month in monthList)
-		dat += "<option value = [monthList[month]]>[month]</option>"
-	dat += "</select>"
-	dat += "<select name = 'Year' style = 'float:right'>"
-	var/current_year = text2num(time2text(world.realtime, "YYYY"))
-	var/start_year = 1920
-	for(var/year in start_year to current_year)
-		var/reverse_year = 1920 + (current_year - year)
-		dat += "<option value = [reverse_year]>[reverse_year]</option>"
-	dat += "</select>"
-	dat += "<center><input type='submit' value='Submit information'></center>"
-	dat += "</form>"
-
-	winshow(src, "age_gate", TRUE)
-	var/datum/browser/popup = new(src, "age_gate", "<div align='center'>Age Gate</div>", 400, 250)
-	popup.set_window_options("can_close=0")
-	popup.set_content(dat.Join())
-	popup.open(FALSE)
-	onclose(src, "age_gate")
-
-	while(age_gate_result == null)
-		stoplag(1)
-
-	popup.close()
-
-	return age_gate_result
-
-/mob/new_player/proc/verifyage()
-	if(client.holder)		// they're an admin
-		client.set_preference(/datum/client_preference/debug/age_verified, 1)
-		return TRUE
-	if(!client.is_preference_enabled(/datum/client_preference/debug/age_verified)) //make sure they are verified
-		if(!client.prefs)
-			message_admins("Blocked [src] from new player panel because age gate could not access client preferences.")
-			return FALSE
-		else
-			var/hasverified = client.is_preference_enabled(/datum/client_preference/debug/age_verified)
-			if(!hasverified) //they have not completed age gate
-				var/verify = age_gate()
-				if(verify == FALSE)
-					client.add_system_note("Automated-Age-Gate", "Failed automatic age gate process")
-					//ban them and kick them
-					to_chat(src, "You have failed the initial age verification check. \nIf you believe this was in error, you MUST message a staff member on our Discord server for further verification")
-					if(client)
-						AddBan(ckey, computer_id, "Failed initial age verification check. Appeal on the Discord server by PMing a staff member.", "SYSTEM", 0, 0)
-						Logout()
-					return FALSE
-				else
-					//they claim to be of age, so allow them to continue and update their flags
-					client.set_preference(/datum/client_preference/debug/age_verified, 1)
-					SScharacter_setup.queue_preferences_save(client.prefs)
-					//log this
-					message_admins("[ckey] has joined through the automated age gate process.")
-					return TRUE
-	return TRUE
 
 /mob/new_player/Stat()
 	..()
@@ -180,56 +114,6 @@
 				if(player.ready)totalPlayersReady++
 
 /mob/new_player/Topic(href, href_list[])
-	if(src != usr)
-		return 0
-
-	if(!client)
-		return 0
-
-	//start age gate
-	//don't let people get to this unless they are specifically not verified
-	if(href_list["Month"] && !client.is_preference_enabled(/datum/client_preference/debug/age_verified))
-		var/player_month = text2num(href_list["Month"])
-		var/player_year = text2num(href_list["Year"])
-
-		var/current_time = world.realtime
-		var/current_month = text2num(time2text(current_time, "MM"))
-		var/current_year = text2num(time2text(current_time, "YYYY"))
-
-		var/player_total_months = (player_year * 12) + player_month
-
-		var/current_total_months = (current_year * 12) + current_month
-
-		var/months_in_eighteen_years = 18 * 12
-
-		var/month_difference = current_total_months - player_total_months
-		if(month_difference > months_in_eighteen_years)
-			age_gate_result = TRUE // they're fine
-		else
-			if(month_difference < months_in_eighteen_years)
-				age_gate_result = FALSE
-			else
-				//they could be 17 or 18 depending on the /day/ they were born in
-				var/current_day = text2num(time2text(current_time, "DD"))
-				var/days_in_months = list(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31)
-				if((player_year % 4) == 0) // leap year so february actually has 29 days
-					days_in_months[2] = 29
-				var/total_days_in_player_month = days_in_months[player_month]
-				var/list/days = list()
-				for(var/number in 1 to total_days_in_player_month)
-					days += number
-				var/player_day = input(src, "What day of [player_month] were you born in.") as anything in days
-				if(player_day <= current_day)
-					//their birthday has passed
-					age_gate_result = TRUE
-				else
-					//it has NOT been their 18th birthday yet
-					age_gate_result = FALSE
-
-	if(!verifyage())
-		return
-	//end age gate
-
 	if(!client)	return 0
 
 	if(href_list["show_preferences"])
@@ -248,10 +132,9 @@
 		new_player_panel_proc()
 
 	if(href_list["observe"])
-		if(!client.is_preference_enabled(/datum/client_preference/debug/age_verified)) return
 		var/alert_time = ticker?.current_state <= GAME_STATE_SETTING_UP ? 1 : round(config.respawn_time/10/60)
 
-		if(alert(src,"Are you sure you wish to observe? You will have to wait up to [alert_time] minute\s before being able to spawn into the game!","Player Setup","Yes","No") == "Yes")
+		if(tgui_alert(src,"Are you sure you wish to observe? You will have to wait up to [alert_time] minute\s before being able to spawn into the game!","Player Setup",list("Yes","No")) == "Yes")
 			if(!client)	return 1
 
 			//Make a new mannequin quickly, and allow the observer to take the appearance
@@ -289,11 +172,11 @@
 			return 1
 
 	if(href_list["late_join"])
-		if(!client.is_preference_enabled(/datum/client_preference/debug/age_verified)) return
+
 		if(!ticker || ticker.current_state != GAME_STATE_PLAYING)
 			to_chat(usr, "<font color='red'>The round is either not ready, or has already finished...</font>")
 			return
-
+		
 		var/time_till_respawn = time_till_respawn()
 		if(time_till_respawn == -1) // Special case, never allowed to respawn
 			to_chat(usr, "<span class='warning'>Respawning is not allowed!</span>")
@@ -304,7 +187,7 @@
 		if(client.prefs.species != "Human" && !check_rights(R_ADMIN, 0)) //VORESTATION EDITS: THE COMMENTED OUT AREAS FROM LINE 154 TO 178
 			if (config.usealienwhitelist)
 				if(!is_alien_whitelisted(src, client.prefs.species))
-					alert(src, "You are currently not whitelisted to Play [client.prefs.species].")
+					tgui_alert(src, "You are currently not whitelisted to Play [client.prefs.species].")
 					return 0
 */
 		LateChoices()
@@ -331,13 +214,13 @@
 			return
 
 		if(!is_alien_whitelisted(src, GLOB.all_species[client.prefs.species]))
-			alert(src, "You are currently not whitelisted to play [client.prefs.species].")
+			tgui_alert(src, "You are currently not whitelisted to play [client.prefs.species].")
 			return 0
 
 		var/datum/species/S = GLOB.all_species[client.prefs.species]
-
+		
 		if(!(S.spawn_flags & SPECIES_CAN_JOIN))
-			alert(src,"Your current species, [client.prefs.species], is not available for play on the station.")
+			tgui_alert_async(src,"Your current species, [client.prefs.species], is not available for play on the station.")
 			return 0
 
 		AttemptLateSpawn(href_list["SelectedJob"],client.prefs.spawnpoint)
@@ -520,7 +403,7 @@
 		to_chat(usr, "<span class='notice'>There is an administrative lock on entering the game!</span>")
 		return 0
 	if(!IsJobAvailable(rank))
-		alert(src,"[rank] is not available. Please try another.")
+		tgui_alert_async(src,"[rank] is not available. Please try another.")
 		return 0
 	if(!spawn_checks_vr(rank)) return 0 // VOREStation Insert
 	if(!client)
@@ -599,7 +482,6 @@
 
 	// END ARFS EDIT
 
-
 	qdel(src) // Delete new_player mob
 
 /mob/new_player/proc/AnnounceCyborg(var/mob/living/character, var/rank, var/join_message, var/channel, var/zlevel)
@@ -660,7 +542,6 @@
 
 
 /mob/new_player/proc/create_character(var/turf/T)
-	if(!client.is_preference_enabled(/datum/client_preference/debug/age_verified)) return
 	spawning = 1
 	close_spawn_windows()
 

@@ -38,3 +38,8 @@
 		/obj/item/stack/medical/ointment,
 		/obj/item/stack/medical/ointment,
 		/obj/item/weapon/storage/pill_bottle/paracetamol )
+
+//Fuzzy cuffs. Why normal timer?
+/obj/item/weapon/handcuffs/fuzzy
+	desc = "Plastic and easy to break cuffs with soft fuzz on them. Wow, kinky!"
+	breakouttime = 100

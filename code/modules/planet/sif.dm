@@ -2,9 +2,6 @@ var/datum/planet/sif/planet_sif = null
 
 /datum/planet/sif
 	name = "Sif"
-
-/datum/planet/sif
-	name = "Sif"
 	desc = "Sif is a terrestrial planet in the Vir system. It is somewhat earth-like, in that it has oceans, a \
 	breathable atmosphere, a magnetic field, weather, and similar gravity to Earth. It is currently the capital planet of Vir. \
 	Its center of government is the equatorial city and site of first settlement, New Reykjavik." // Ripped straight from the wiki.
@@ -98,7 +95,7 @@ var/datum/planet/sif/planet_sif = null
 		new_color = rgb(new_r, new_g, new_b)
 
 	spawn(1)
-		update_sun_deferred(2, new_brightness, new_color)
+		update_sun_deferred(new_brightness, new_color)
 
 // We're gonna pretend there are 32 hours in a Sif day instead of 32.64 for the purposes of not losing sanity.  We lose 38m 24s but the alternative is a path to madness.
 /datum/time/sif
@@ -156,6 +153,9 @@ var/datum/planet/sif/planet_sif = null
 	sky_visible = TRUE
 	observed_message = "The sky is clear."
 
+	outdoor_sounds_type = /datum/looping_sound/weather/wind/gentle
+	indoor_sounds_type = /datum/looping_sound/weather/wind/gentle/indoors
+
 /datum/weather/sif/overcast
 	name = "overcast"
 	light_modifier = 0.8
@@ -174,6 +174,9 @@ var/datum/planet/sif/planet_sif = null
 		"It's very cloudy."
 		)
 
+	outdoor_sounds_type = /datum/looping_sound/weather/wind/gentle
+	indoor_sounds_type = /datum/looping_sound/weather/wind/gentle/indoors
+
 /datum/weather/sif/light_snow
 	name = "light snow"
 	icon_state = "snowfall_light"
@@ -191,6 +194,9 @@ var/datum/planet/sif/planet_sif = null
 		"Small snowflakes begin to fall from above.",
 		"It begins to snow lightly.",
 		)
+
+	outdoor_sounds_type = /datum/looping_sound/weather/wind/gentle
+	indoor_sounds_type = /datum/looping_sound/weather/wind/gentle/indoors
 
 /datum/weather/sif/snow
 	name = "moderate snow"
@@ -282,8 +288,8 @@ var/datum/planet/sif/planet_sif = null
 	transition_messages = list(
 		"The sky is dark, and rain falls down upon you."
 	)
-//	outdoor_sounds_type = /datum/looping_sound/weather/rain
-//	indoor_sounds_type = /datum/looping_sound/weather/rain/indoors
+	outdoor_sounds_type = /datum/looping_sound/weather/rain
+	indoor_sounds_type = /datum/looping_sound/weather/rain/indoors
 
 /datum/weather/sif/rain/process_effects()
 	..()
@@ -327,8 +333,8 @@ var/datum/planet/sif/planet_sif = null
 		"Loud thunder is heard in the distance.",
 		"A bright flash heralds the approach of a storm."
 	)
-//	outdoor_sounds_type = /datum/looping_sound/weather/rain
-//	indoor_sounds_type = /datum/looping_sound/weather/rain/indoors
+	outdoor_sounds_type = /datum/looping_sound/weather/rain/heavy
+	indoor_sounds_type = /datum/looping_sound/weather/rain/heavy/indoors
 
 
 	transition_chances = list(

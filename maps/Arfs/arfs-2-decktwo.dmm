@@ -545,6 +545,22 @@
 	},
 /turf/simulated/floor/wood,
 /area/bridge)
+"abo" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/mob/living/simple_mob/animal/passive/fox/renault,
+/turf/simulated/floor/wood,
+/area/crew_quarters/captain)
+"abp" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/mob/living/simple_mob/animal/passive/dog/corgi/Ian,
+/turf/simulated/floor/wood,
+/area/crew_quarters/heads/hop)
 "abq" = (
 /obj/structure/grille,
 /turf/simulated/floor/plating,
@@ -1173,14 +1189,12 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
 "acC" = (
-/mob/living/simple_mob/animal/passive/fox/renault,
-/obj/structure/disposalpipe/segment{
-	dir = 4
+/obj/machinery/atmospherics/pipe/simple/visible/green{
+	dir = 4;
+	tag = "icon-intact (EAST)"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/wood,
-/area/crew_quarters/captain)
+/turf/simulated/floor/plating,
+/area/space)
 "acD" = (
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
@@ -1284,6 +1298,12 @@
 "acO" = (
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
+"acP" = (
+/obj/machinery/atmospherics/pipe/simple/visible/blue{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/space)
 "acQ" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
@@ -1425,6 +1445,13 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
+"ade" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow,
+/obj/machinery/atmospherics/pipe/simple/visible/blue{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/space)
 "adf" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -1931,6 +1958,10 @@
 /obj/item/weapon/gun/magnetic/railgun/heater,
 /turf/simulated/floor/tiled/dark,
 /area/security/armoury)
+"aee" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow,
+/turf/simulated/floor/plating,
+/area/space)
 "aef" = (
 /obj/machinery/deployable/barrier,
 /obj/machinery/light{
@@ -2285,6 +2316,13 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/warden)
+"aez" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/outline/blue,
+/turf/simulated/floor/plating,
+/area/space)
 "aeA" = (
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/fore{
@@ -5014,13 +5052,6 @@
 	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
-/turf/simulated/floor/wood,
-/area/crew_quarters/heads/hop)
-"akH" = (
-/mob/living/simple_mob/animal/passive/dog/corgi/Ian,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 10
-	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/hop)
 "akI" = (
@@ -16868,6 +16899,7 @@
 /area/crew_quarters/bar)
 "aHW" = (
 /obj/machinery/ai_status_display,
+/obj/structure/sign/poster,
 /turf/simulated/wall,
 /area/crew_quarters/kitchen)
 "aHX" = (
@@ -18308,9 +18340,16 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/cafeteria)
 "aLe" = (
+/obj/structure/bed/chair/wood{
+	dir = 4;
+	tag = "icon-wooden_chair (EAST)"
+	},
+/obj/effect/landmark/start{
+	name = "Assistant"
+	},
 /obj/structure/sign/poster,
-/turf/simulated/wall,
-/area/crew_quarters/kitchen)
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
 "aLf" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
@@ -19536,10 +19575,8 @@
 	pixel_y = -26
 	},
 /obj/effect/floor_decal/borderfloorblack,
-/obj/structure/device/piano{
-	density = 0;
-	dir = 4;
-	name = "piano"
+/obj/structure/musician/piano{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/bar)
@@ -19937,10 +19974,6 @@
 "aOb" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/wood,
-/area/crew_quarters/cafeteria)
-"aOc" = (
-/obj/structure/sign/poster,
-/turf/simulated/wall,
 /area/crew_quarters/cafeteria)
 "aOd" = (
 /obj/machinery/door/window/southleft{
@@ -24075,6 +24108,7 @@
 	c_tag = "CIV - Main Loop 7";
 	dir = 1
 	},
+/obj/structure/sign/poster,
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/central_two)
 "aVi" = (
@@ -43247,7 +43281,7 @@
 	dir = 8
 	},
 /obj/effect/effect/steam,
-/turf/simulated/floor/water,
+/turf/simulated/floor/water/deep/indoors,
 /area/crew_quarters/visitor_lodging{
 	name = "\improper Fishing Area"
 	})
@@ -46767,7 +46801,7 @@
 	dir = 8
 	},
 /obj/effect/effect/steam,
-/turf/simulated/floor/water,
+/turf/simulated/floor/water/deep/indoors,
 /area/crew_quarters/visitor_lodging{
 	name = "\improper Fishing Area"
 	})
@@ -47752,13 +47786,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/medbay)
-"lGf" = (
-/obj/machinery/atmospherics/pipe/simple/visible/yellow,
-/obj/machinery/atmospherics/pipe/simple/visible/blue{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/engineering/engine_room)
 "lGl" = (
 /turf/simulated/floor/carpet,
 /area/hallway/station/residentialdock{
@@ -48587,7 +48614,7 @@
 "mNM" = (
 /obj/structure/railing,
 /obj/effect/effect/steam,
-/turf/simulated/floor/water,
+/turf/simulated/floor/water/deep/indoors,
 /area/crew_quarters/visitor_lodging{
 	name = "\improper Fishing Area"
 	})
@@ -50106,7 +50133,7 @@
 /obj/structure/railing{
 	dir = 4
 	},
-/turf/simulated/floor/water,
+/turf/simulated/floor/water/deep/indoors,
 /area/crew_quarters/visitor_lodging{
 	name = "\improper Fishing Area"
 	})
@@ -51047,7 +51074,7 @@
 	dir = 1
 	},
 /obj/effect/effect/steam,
-/turf/simulated/floor/water,
+/turf/simulated/floor/water/deep/indoors,
 /area/crew_quarters/visitor_lodging{
 	name = "\improper Fishing Area"
 	})
@@ -52056,13 +52083,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
-"rwi" = (
-/obj/machinery/atmospherics/portables_connector{
-	dir = 1
-	},
-/obj/effect/floor_decal/industrial/outline/blue,
-/turf/simulated/floor/plating,
-/area/engineering/engine_room)
 "rwB" = (
 /obj/machinery/atmospherics/binary/pump{
 	name = "Cold Loop Drain"
@@ -52711,10 +52731,6 @@
 "sen" = (
 /turf/simulated/wall,
 /area/engineering/break_room)
-"sgv" = (
-/obj/structure/sign/poster,
-/turf/simulated/wall,
-/area/maintenance/central)
 "sgO" = (
 /obj/structure/curtain/open/privacy,
 /obj/effect/floor_decal/corner/paleblue{
@@ -53173,7 +53189,7 @@
 /obj/structure/railing{
 	dir = 4
 	},
-/turf/simulated/floor/water,
+/turf/simulated/floor/water/deep/indoors,
 /area/crew_quarters/visitor_lodging{
 	name = "\improper Fishing Area"
 	})
@@ -53283,7 +53299,7 @@
 /obj/structure/railing{
 	dir = 4
 	},
-/turf/simulated/floor/water,
+/turf/simulated/floor/water/deep/indoors,
 /area/crew_quarters/visitor_lodging{
 	name = "\improper Fishing Area"
 	})
@@ -55878,7 +55894,7 @@
 	dir = 8
 	},
 /obj/effect/effect/steam,
-/turf/simulated/floor/water,
+/turf/simulated/floor/water/deep/indoors,
 /area/crew_quarters/visitor_lodging{
 	name = "\improper Fishing Area"
 	})
@@ -90557,7 +90573,7 @@ aba
 abN
 acd
 aco
-acC
+abo
 adt
 adt
 adt
@@ -90838,7 +90854,7 @@ aiJ
 uAV
 ajB
 akb
-akH
+abp
 alu
 ama
 amE
@@ -91422,7 +91438,7 @@ aOr
 aUj
 aQi
 aVh
-sgv
+agx
 aVQ
 aWt
 aWL
@@ -92274,8 +92290,8 @@ vZd
 kst
 qrK
 hTy
-qwu
-ygb
+acC
+acP
 hsn
 rsW
 dCV
@@ -92532,8 +92548,8 @@ fZW
 gto
 mVw
 iuc
-lGf
-oZz
+ade
+aee
 oZz
 uwk
 nbV
@@ -92791,7 +92807,7 @@ nkS
 qwu
 qEy
 qMM
-rwi
+aez
 wMj
 nbV
 vZd
@@ -93048,8 +93064,8 @@ xUs
 qwu
 qEy
 rwB
-rwi
-wMj
+aez
+oZp
 oQk
 vZd
 fQF
@@ -95511,7 +95527,7 @@ uQf
 aFw
 aFw
 aHW
-aLe
+aFw
 bRC
 bwm
 aFw
@@ -95777,8 +95793,8 @@ aLd
 tqR
 koY
 aMH
-aNo
-aOc
+aLe
+aKP
 aPr
 aPp
 aQj

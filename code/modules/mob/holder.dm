@@ -87,14 +87,14 @@ var/list/holder_mob_icon_cache = list()
 
 /obj/item/weapon/holder/proc/sync(var/mob/living/M)
 	dir = 2
-	overlays.Cut()
+	overlays.Cut() // Not using SSoverlays for this due to performance
 	icon = M.icon
 	icon_state = M.icon_state
 	item_state = M.item_state
 	color = M.color
 	name = M.name
 	desc = M.desc
-	overlays |= M.overlays
+	overlays |= M.overlays // Not using SSoverlays for this due to performance
 	var/mob/living/carbon/human/H = loc
 	if(istype(H))
 		if(H.l_hand == src)
@@ -211,7 +211,8 @@ var/list/holder_mob_icon_cache = list()
 		to_chat(src, "<span class='notice'>\The [grabber] scoops you up!</span>")
 
 	add_attack_logs(grabber, H.held_mob, "Scooped up", FALSE) // Not important enough to notify admins, but still helpful.
-	H.sync(src)
+	spawn(2) // ARFS Edit - Fix Race Condition
+		H.sync(src)
 	return H
 
 /obj/item/weapon/holder/human

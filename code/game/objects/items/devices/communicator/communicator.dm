@@ -128,7 +128,7 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 // Description: Shows all the voice mobs inside the device, and their status.
 /obj/item/device/communicator/examine(mob/user)
 	. = ..()
-
+	
 	for(var/mob/living/voice/voice in contents)
 		. += "<span class='notice'>On the screen, you can see a image feed of [voice].</span>"
 
@@ -266,7 +266,7 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 	. = ..()
 	if(exonet)
 		exonet.remove_address()
-		exonet = null
+		qdel_null(exonet)
 	return ..()
 
 // Proc: register_device()

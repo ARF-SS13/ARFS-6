@@ -29,3 +29,8 @@
 	path = /obj/item/weapon/reagent_containers/food/drinks/bluespace_coffee
 	sort_category = "Utility"
 	cost = 2
+
+/datum/gear/utility/leash
+	display_name = "Leash"
+	path = /obj/item/weapon/leash
+	cost = 1
