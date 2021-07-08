@@ -530,7 +530,7 @@
 		user.update_icons()
 
 	// Inform Admins
-	if(prey.ckey != null)
+	if(prey.ckey != null) // ARFS Edit - Don't spam admins
 		if(pred == user)
 			add_attack_logs(pred, prey, "Eaten via [belly.name]")
 		else

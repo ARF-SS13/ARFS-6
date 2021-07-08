@@ -521,7 +521,6 @@ var/global/list/remainless_species = list(SPECIES_PROMETHEAN,
 		var/datum/trait/instance = new path()
 		if(!instance.name)
 			continue //A prototype or something
-		var/category = instance.category
 		var/cost = instance.cost
 		traits_costs[path] = cost
 		all_traits[path] = instance

@@ -117,15 +117,6 @@
 	build_path = /obj/item/weapon/storage/box/empshells
 	sort_string = "MABBC"
 
-/datum/design/item/weapon/ballistic/ammo/ptrshell
-	name = "14.5mm shell"
-	desc = "A dense-core projectile fired from a small cannon."
-	id = "ptrshell"
-	req_tech = list(TECH_COMBAT = 7, TECH_ILLEGAL = 4)
-	materials = list(MAT_TITANIUM = 4000, MAT_URANIUM = 500, MAT_PLASTEEL = 500)
-	build_path = /obj/item/ammo_casing/a145
-	sort_string = "MABBD"
-
 // Phase weapons
 
 /datum/design/item/weapon/phase/AssembleDesignName()

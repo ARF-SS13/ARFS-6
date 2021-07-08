@@ -768,9 +768,9 @@ const VoreUserPreferences = (props, context) => {
         </Flex.Item>
         <Flex.Item basis="32%">
           <Button
-            onClick={() => act("toggle_pickuppref")}
-            icon={pickup_mechanics_active ? "toggle-on" : "toggle-off"}
-            selected={pickup_mechanics_active}
+            onClick={() => act("toggle_fx")}
+            icon={show_vore_fx ? "toggle-on" : "toggle-off"}
+            selected={show_vore_fx}
             fluid
             tooltipPosition="top"
             tooltip={show_vore_fx

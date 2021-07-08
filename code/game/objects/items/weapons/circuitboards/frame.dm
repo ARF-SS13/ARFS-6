@@ -122,7 +122,6 @@
 	name = T_BOARD("conveyor")
 	build_path = /obj/machinery/conveyor
 	board_type = new /datum/frame/frame_types/conveyor
-	matter = list(DEFAULT_WALL_MATERIAL = 50, "glass" = 50, MAT_COPPER = 100)
 	req_components = list(
 							/obj/item/weapon/stock_parts/gear = 2,
 							/obj/item/weapon/stock_parts/motor = 2,
@@ -132,7 +131,6 @@
 	name = T_BOARD("recharger")
 	build_path = /obj/machinery/recharger
 	board_type = new /datum/frame/frame_types/recharger
-	matter = list(DEFAULT_WALL_MATERIAL = 50, "glass" = 50, MAT_COPPER = 100)
 	req_components = list(
 							/obj/item/weapon/stock_parts/capacitor = 1,
 							/obj/item/stack/cable_coil = 5)
@@ -146,7 +144,6 @@
 	name = T_BOARD("heavy-duty cell charger")
 	build_path = /obj/machinery/cell_charger
 	board_type = new /datum/frame/frame_types/cell_charger
-	matter = list(DEFAULT_WALL_MATERIAL = 50, "glass" = 50, MAT_COPPER = 100)
 	req_components = list(
 							/obj/item/weapon/stock_parts/capacitor = 1,
 							/obj/item/stack/cable_coil = 5)
@@ -164,7 +161,6 @@
 	name = T_BOARD("reagent grinder")
 	build_path = /obj/machinery/reagentgrinder
 	board_type = new /datum/frame/frame_types/grinder
-	matter = list(DEFAULT_WALL_MATERIAL = 50, "glass" = 50, MAT_COPPER = 100)
 	req_components = list(
 							/obj/item/weapon/stock_parts/motor = 1,
 							/obj/item/weapon/stock_parts/gear = 1,
@@ -173,7 +169,6 @@
 /obj/item/weapon/circuitboard/distiller
 	build_path = /obj/machinery/portable_atmospherics/powered/reagent_distillery
 	board_type = new /datum/frame/frame_types/reagent_distillery
-	matter = list(DEFAULT_WALL_MATERIAL = 50, "glass" = 50, MAT_COPPER = 100)
 	req_components = list(
 							/obj/item/weapon/stock_parts/capacitor = 1,
 							/obj/item/weapon/stock_parts/micro_laser = 1,
@@ -184,7 +179,6 @@
 	name = T_BOARD("teleporter hub")
 	build_path = /obj/machinery/teleport/hub
 	board_type = "teleporter_hub"
-	matter = list(DEFAULT_WALL_MATERIAL = 50, "glass" = 50, MAT_GOLD = 100)
 //	origin_tech = list(TECH_DATA = 2, TECH_BLUESPACE = 4)
 	req_components = list(
 							/obj/item/weapon/stock_parts/scanning_module = 4,
@@ -195,7 +189,6 @@
 	name = T_BOARD("teleporter station")
 	build_path = /obj/machinery/teleport/station
 	board_type = "teleporter_station"
-	matter = list(DEFAULT_WALL_MATERIAL = 50, "glass" = 50, MAT_GOLD = 100)
 //	origin_tech = list(TECH_DATA = 2, TECH_BLUESPACE = 3)
 	req_components = list(
 							/obj/item/weapon/stock_parts/console_screen = 1,
@@ -207,7 +200,6 @@
 	build_path = /obj/machinery/bodyscanner
 	board_type = new /datum/frame/frame_types/medical_pod
 	origin_tech = list(TECH_MAGNET = 2, TECH_BIO = 2)
-	matter = list(DEFAULT_WALL_MATERIAL = 50, "glass" = 50, MAT_COPPER = 100)
 	req_components = list(
 							/obj/item/weapon/stock_parts/scanning_module = 3,
 							/obj/item/stack/material/glass/reinforced = 2)
@@ -216,7 +208,6 @@
 	name = T_BOARD("sleeper")
 	build_path = /obj/machinery/sleeper
 	board_type = new /datum/frame/frame_types/medical_pod
-	matter = list(DEFAULT_WALL_MATERIAL = 50, "glass" = 50, MAT_COPPER = 100)
 	origin_tech = list(TECH_MAGNET = 2, TECH_BIO = 2)
 	req_components = list(
 							/obj/item/weapon/stock_parts/manipulator = 1,
@@ -229,7 +220,6 @@
 	name = T_BOARD("VR sleeper")
 	build_path = /obj/machinery/vr_sleeper
 	board_type = new /datum/frame/frame_types/medical_pod
-	matter = list(DEFAULT_WALL_MATERIAL = 50, "glass" = 50, MAT_GOLD = 100)
 	origin_tech = list(TECH_MAGNET = 2, TECH_BIO = 2)
 	req_components = list(
 							/obj/item/weapon/stock_parts/scanning_module = 1,
@@ -239,7 +229,6 @@
 	name = T_BOARD("dna analyzer")
 	build_path = /obj/machinery/dnaforensics
 	board_type = new /datum/frame/frame_types/dna_analyzer
-	matter = list(DEFAULT_WALL_MATERIAL = 50, "glass" = 50, MAT_GOLD = 100)
 	origin_tech = list(TECH_MAGNET = 4, TECH_BIO = 2, TECH_DATA = 2)
 	req_components = list(
 							/obj/item/weapon/stock_parts/scanning_module = 2,
@@ -250,7 +239,6 @@
 	name = T_BOARD("mass driver")
 	build_path = /obj/machinery/mass_driver
 	board_type = new /datum/frame/frame_types/mass_driver
-	matter = list(DEFAULT_WALL_MATERIAL = 50, "glass" = 50, MAT_GOLD = 100)
 	req_components = list(
 							/obj/item/weapon/stock_parts/gear = 2,
 							/obj/item/weapon/stock_parts/motor = 2,

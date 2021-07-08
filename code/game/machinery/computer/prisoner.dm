@@ -66,7 +66,6 @@
 	return list("locked" = !screen, "chemImplants" = chemImplants, "trackImplants" = trackImplants)
 
 
-
 /obj/machinery/computer/prisoner/tgui_act(action, list/params)
 	if(..())
 		return TRUE

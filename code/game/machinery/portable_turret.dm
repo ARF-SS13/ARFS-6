@@ -684,7 +684,7 @@
 
 	for(var/mob in living_mob_list)
 		var/mob/M = mob
-		if(M == null || M.z != z) //Skip
+		if(M == null || M.z != z) //Skip // ARFS Edit - Fix Roundstart error
 			continue
 		if(get_turf(M) in seenturfs)
 			assess_and_assign(mob, targets, secondarytargets)

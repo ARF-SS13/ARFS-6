@@ -87,7 +87,7 @@
 			atc.reroute_traffic(yes = 0)
 
 		spawn()
-			SSnightshift.check_nightshift(TRUE)
+			SSnightshift.check_nightshift(TRUE) // ARFS Edit - Disable Nightshift
 
 		admin_chat_message(message = "Security level is now: [uppertext(get_security_level())]", color = "#CC2222") //VOREStation Add
 

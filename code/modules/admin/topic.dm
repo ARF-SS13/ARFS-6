@@ -1793,10 +1793,6 @@
 		src.admincaster_feed_message.title = sanitize(input(usr, "Enter the Feed title", "Network Channel Handler", ""))
 		src.access_news_network()
 
-	else if(href_list["ac_set_new_title"])
-		src.admincaster_feed_message.title = sanitize(input(usr, "Enter the Feed title", "Network Channel Handler", ""))
-		src.access_news_network()
-
 	else if(href_list["ac_set_new_message"])
 		src.admincaster_feed_message.body = sanitize(input(usr, "Write your Feed story", "Network Channel Handler", "")  as message)
 		src.access_news_network()

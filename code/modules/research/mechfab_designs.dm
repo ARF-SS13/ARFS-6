@@ -357,13 +357,11 @@
 	name = "PBT \"Pacifier\" Mounted Taser"
 	id = "mech_taser"
 	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/energy/taser
-	materials = list(DEFAULT_WALL_MATERIAL = 6500, MAT_COPPER = 1000)
 
 /datum/design/item/mecha/rigged_taser
 	name = "Jury-Rigged Taser"
 	id = "mech_taser-r"
 	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/energy/taser/rigged
-	materials = list(DEFAULT_WALL_MATERIAL = 6500, MAT_COPPER = 200)
 
 /datum/design/item/mecha/shocker
 	name = "Exosuit Electrifier"
@@ -610,7 +608,7 @@
 	desc = "An advanced mech-mounted device that is not quite as powerful as a stationary body scanner, though still suitably powerful."
 	id = "mech_med_analyzer"
 	req_tech = list(TECH_PHORON = 4, TECH_MAGNET = 5, TECH_BIO = 5, TECH_DATA = 4)
-	materials = list(MAT_ALUMINIUM = 4500, MAT_GOLD = 2000, MAT_URANIUM = 3000, MAT_GLASS = 3000)
+	materials = list(MAT_PLASTEEL = 4500, MAT_GOLD = 2000, MAT_URANIUM = 3000, MAT_GLASS = 3000)
 	build_path = /obj/item/mecha_parts/mecha_equipment/tool/powertool/medanalyzer
 
 /datum/design/item/mecha/jetpack
@@ -928,7 +926,7 @@
 	desc = "A compact cleaning-foam grenade system for a hardsuit."
 	id = "rig_grenade_cleanfoam"
 	req_tech = list(TECH_MATERIAL = 3, TECH_ENGINEERING = 3, TECH_BIO = 2, TECH_POWER = 2)
-	materials = list(MAT_ALUMINIUM = 2000, MAT_GLASS = 1000, MAT_GRAPHITE = 1500, MAT_PLASTIC = 750)
+	materials = list(MAT_PLASTEEL = 2000, MAT_GLASS = 1000, MAT_GRAPHITE = 1500, MAT_PLASTIC = 750)
 	build_path = /obj/item/rig_module/cleaner_launcher
 
 /datum/design/item/mechfab/rigsuit/taser
@@ -936,7 +934,7 @@
 	desc = "A compact taser system for a hardsuit."
 	id = "rig_gun_taser"
 	req_tech = list(TECH_MATERIAL = 5, TECH_ENGINEERING = 3, TECH_MAGNET = 2, TECH_POWER = 3, TECH_COMBAT = 2)
-	materials = list(MAT_ALUMINIUM = 2000, MAT_GRAPHITE = 1500, MAT_PLASTIC = 500)
+	materials = list(MAT_PLASTEEL = 2000, MAT_GRAPHITE = 1500, MAT_PLASTIC = 500)
 	build_path = /obj/item/rig_module/mounted/taser
 
 /datum/design/item/mechfab/rigsuit/egun
@@ -960,7 +958,7 @@
 	desc = "A compact overclocking system for a hardsuit."
 	id = "rig_component_sprinter"
 	req_tech = list(TECH_MATERIAL = 5, TECH_ENGINEERING = 5, TECH_BIO = 4, TECH_POWER = 4)
-	materials = list(MAT_ALUMINIUM = 2000, MAT_GRAPHITE = 1500, MAT_PLASTIC = 500, MAT_VERDANTIUM = 1000)
+	materials = list(MAT_PLASTEEL = 2000, MAT_GRAPHITE = 1500, MAT_PLASTIC = 500, MAT_VERDANTIUM = 1000)
 	build_path = /obj/item/rig_module/sprinter
 
 /datum/design/item/mechfab/rigsuit/meson
@@ -968,7 +966,7 @@
 	desc = "A compact meson visor for a hardsuit."
 	id = "rig_component_meson"
 	req_tech = list(TECH_MATERIAL = 4, TECH_ENGINEERING = 5, TECH_MAGNET = 3, TECH_POWER = 4)
-	materials = list(MAT_ALUMINIUM = 2000, MAT_GRAPHITE = 1500, MAT_OSMIUM = 500)
+	materials = list(MAT_PLASTEEL = 2000, MAT_GRAPHITE = 1500, MAT_OSMIUM = 500)
 	build_path = /obj/item/rig_module/vision/meson
 
 /datum/design/item/mechfab/rigsuit/material
@@ -976,7 +974,7 @@
 	desc = "A compact material visor for a hardsuit."
 	id = "rig_component_material"
 	req_tech = list(TECH_MATERIAL = 4, TECH_ENGINEERING = 5, TECH_MAGNET = 3, TECH_POWER = 4)
-	materials = list(MAT_ALUMINIUM = 2000, MAT_GRAPHITE = 1500, MAT_OSMIUM = 500)
+	materials = list(MAT_PLASTEEL = 2000, MAT_GRAPHITE = 1500, MAT_OSMIUM = 500)
 	build_path = /obj/item/rig_module/vision/material
 
 /datum/design/item/mechfab/rigsuit/nvg
@@ -984,7 +982,7 @@
 	desc = "A compact night-vision visor for a hardsuit."
 	id = "rig_component_nvg"
 	req_tech = list(TECH_MATERIAL = 5, TECH_ENGINEERING = 6, TECH_MAGNET = 4, TECH_POWER = 5)
-	materials = list(MAT_ALUMINIUM = 2000, MAT_GRAPHITE = 1500, MAT_OSMIUM = 500, MAT_URANIUM = 1000)
+	materials = list(MAT_PLASTEEL = 2000, MAT_GRAPHITE = 1500, MAT_OSMIUM = 500, MAT_URANIUM = 1000)
 	build_path = /obj/item/rig_module/vision/nvg
 
 /datum/design/item/mechfab/rigsuit/sechud
@@ -992,7 +990,7 @@
 	desc = "A compact security visor for a hardsuit."
 	id = "rig_component_sechud"
 	req_tech = list(TECH_MATERIAL = 4, TECH_ENGINEERING = 3, TECH_MAGNET = 3, TECH_POWER = 2)
-	materials = list(MAT_ALUMINIUM = 2000, MAT_GRAPHITE = 1500, MAT_PLASTIC = 500, MAT_SILVER = 500)
+	materials = list(MAT_PLASTEEL = 2000, MAT_GRAPHITE = 1500, MAT_PLASTIC = 500, MAT_SILVER = 500)
 	build_path = /obj/item/rig_module/vision/sechud
 
 /datum/design/item/mechfab/rigsuit/medhud
@@ -1000,7 +998,7 @@
 	desc = "A compact medical visor for a hardsuit."
 	id = "rig_component_medhud"
 	req_tech = list(TECH_MATERIAL = 4, TECH_ENGINEERING = 3, TECH_MAGNET = 3, TECH_BIO = 2)
-	materials = list(MAT_ALUMINIUM = 2000, MAT_GRAPHITE = 1500, MAT_PLASTIC = 500, MAT_SILVER = 500)
+	materials = list(MAT_PLASTEEL = 2000, MAT_GRAPHITE = 1500, MAT_PLASTIC = 500, MAT_SILVER = 500)
 	build_path = /obj/item/rig_module/vision/medhud
 
 /datum/design/item/mechfab/rigsuit/voice
@@ -1032,7 +1030,7 @@
 	desc = "A compact chemical injector network for a hardsuit."
 	id = "rig_component_chemicals"
 	req_tech = list(TECH_MATERIAL = 5, TECH_ENGINEERING = 5, TECH_MAGNET = 5, TECH_BIO = 4)
-	materials = list(MAT_ALUMINIUM = 3000, MAT_GRAPHITE = 2000, MAT_PLASTIC = 3500, MAT_SILVER = 1750, MAT_GOLD = 1250)
+	materials = list(MAT_PLASTEEL = 3000, MAT_GRAPHITE = 2000, MAT_PLASTIC = 3500, MAT_SILVER = 1750, MAT_GOLD = 1250)
 	build_path = /obj/item/rig_module/chem_dispenser/injector/advanced/empty
 
 /datum/design/item/mechfab/rigsuit/teleporter

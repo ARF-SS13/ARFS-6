@@ -969,9 +969,6 @@
 	icon_state = "recreation_area_restroom"
 	sound_env = SMALL_ENCLOSED
 
-/area/crew_quarters/sleep
-	limit_mob_size = FALSE
-
 /area/crew_quarters/sleep/maintDorm1
 	name = "\improper Construction Dorm 1"
 	icon_state = "Sleep"
@@ -1187,9 +1184,6 @@
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
-
-/area/holodeck/holodorm
-	limit_mob_size = FALSE
 
 /area/holodeck/holodorm/source_basic
 	name = "\improper Holodeck Source"

@@ -20,7 +20,7 @@
 
 //For custom species
 #define STARTING_SPECIES_POINTS 3 //ARFS EDIT - THREE!
-#define MAX_SPECIES_TRAITS 8
+#define MAX_SPECIES_TRAITS 8 // ARFS EDIT - EIGHT!
 
 // Xenochimera thing mostly
 #define REVIVING_NOW		-1
