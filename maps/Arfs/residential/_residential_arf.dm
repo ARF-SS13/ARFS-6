@@ -18,7 +18,7 @@
 	if (current_location == landmark_station)
 		command_announcement.Announce("The Residential Shuttle has docked at ARFS Dallus.", announcer)
 	if (current_location == landmark_offsite)
-		command_announcement.Announce("The Residential Shuttle has docked at NCS Serenity Residential.", announcer)
+		command_announcement.Announce("The Residential Shuttle has docked at NCS Serenity Residential Biodome.", announcer)
 
 /obj/effect/shuttle_landmark/premade/residential/residences
 	name = "NCS Serenity Residential"

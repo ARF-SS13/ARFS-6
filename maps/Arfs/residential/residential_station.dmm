@@ -27,12 +27,8 @@
 /turf/simulated/floor/wood,
 /area/residential/corridors)
 "al" = (
-/obj/structure/bed/chair/sofa/black/corner{
-	dir = 4
-	},
-/obj/structure/window/reinforced,
-/turf/simulated/floor/wood,
-/area/residential/docking_lobby)
+/turf/space,
+/area/space)
 "an" = (
 /obj/structure/table/fancyblack,
 /obj/item/weapon/flame/candle/candelabra/everburn{
@@ -538,11 +534,21 @@
 /turf/simulated/floor/wood,
 /area/residential/healthcenter)
 "cT" = (
-/obj/effect/shuttle_landmark/premade/residential/residences,
-/turf/space,
-/area/space{
-	has_gravity = 1
-	})
+/obj/machinery/light/small,
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
+	frequency = 1380;
+	id_tag = "residential_shuttle_offsite";
+	pixel_y = 28
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/residential/docking_lobby)
 "cU" = (
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner_kafel/blue{
@@ -694,9 +700,7 @@
 /turf/simulated/floor/outdoors/grass/forest,
 /area/residential/outside)
 "dA" = (
-/obj/structure/table/woodentable,
-/obj/machinery/computer/timeclock/premade/east,
-/turf/simulated/floor/wood,
+/turf/simulated/wall,
 /area/residential/docking_lobby)
 "dB" = (
 /obj/machinery/vending/engivend{
@@ -1538,7 +1542,7 @@
 /area/residential/teleporter)
 "hR" = (
 /obj/structure/sign/deck/first,
-/turf/simulated/wall,
+/turf/simulated/wall/wood,
 /area/residential/teleporter)
 "hT" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
@@ -1912,18 +1916,6 @@
 "km" = (
 /turf/unsimulated/wall,
 /area/residential/obs2)
-"kq" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced,
-/turf/simulated/floor/plating,
-/area/residential/docking_lobby)
 "ks" = (
 /obj/structure/railing,
 /obj/structure/railing{
@@ -1957,8 +1949,8 @@
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/residential/cafe)
 "kJ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/turf/simulated/floor/wood,
+/obj/effect/wingrille_spawn/reinforced,
+/turf/simulated/floor/plating,
 /area/residential/docking_lobby)
 "kL" = (
 /obj/structure/table/marble,
@@ -2000,8 +1992,9 @@
 /turf/simulated/floor/tiled,
 /area/residential/healthcenter)
 "lg" = (
-/obj/structure/bed/chair/sofa/black{
-	dir = 4
+/obj/structure/bed/chair,
+/obj/machinery/light{
+	dir = 1
 	},
 /turf/simulated/floor/wood,
 /area/residential/docking_lobby)
@@ -2259,10 +2252,7 @@
 /turf/simulated/floor/outdoors/grass/forest,
 /area/residential/outside)
 "mB" = (
-/obj/machinery/disposal,
-/obj/structure/disposalpipe/trunk{
-	dir = 8
-	},
+/obj/structure/bed/chair,
 /turf/simulated/floor/wood,
 /area/residential/docking_lobby)
 "mE" = (
@@ -2444,11 +2434,16 @@
 /turf/simulated/floor/outdoors/grass/forest,
 /area/residential/outside)
 "oa" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 10;
-	tag = "icon-intact (SOUTHWEST)"
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
 	},
-/turf/simulated/floor/wood,
+/obj/structure/window/reinforced,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
 /area/residential/docking_lobby)
 "ob" = (
 /obj/structure/table/woodentable,
@@ -2529,24 +2524,14 @@
 /turf/simulated/floor/carpet/purcarpet,
 /area/residential/obs2)
 "ou" = (
-/obj/machinery/airlock_sensor{
-	pixel_y = -28
-	},
-/obj/effect/floor_decal/industrial/warning,
-/obj/effect/floor_decal/industrial/warning{
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+/obj/structure/disposalpipe/segment{
 	dir = 4;
-	frequency = 1380;
-	id_tag = "specops_dock_pump"
+	icon_state = "pipe-c"
 	},
-/obj/effect/map_helper/airlock/atmos/chamber_pump,
-/obj/effect/map_helper/airlock/sensor/chamber_sensor,
-/turf/simulated/floor/tiled/techmaint,
+/turf/simulated/floor/wood,
 /area/residential/docking_lobby)
 "ov" = (
 /obj/machinery/light/flamp,
@@ -2622,24 +2607,6 @@
 /obj/structure/flora/pottedplant/fern,
 /turf/simulated/floor/wood,
 /area/residential/healthcenter)
-"oR" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/multi_tile/glass{
-	dir = 2;
-	name = "Ferry Dock";
-	tag = "icon-door_closed (NORTH)"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/dark,
-/area/residential/docking_lobby)
 "oS" = (
 /obj/structure/flora/bush,
 /turf/simulated/floor/outdoors/grass/forest,
@@ -2795,10 +2762,13 @@
 /turf/simulated/floor/plating,
 /area/residential/outside)
 "qb" = (
-/obj/machinery/vending/cola/soft{
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
 	dir = 1
 	},
-/turf/simulated/floor/wood,
+/turf/simulated/floor/plating,
 /area/residential/docking_lobby)
 "qf" = (
 /obj/structure/table/woodentable,
@@ -3356,10 +3326,13 @@
 /turf/simulated/floor/tiled,
 /area/residential/healthcenter)
 "tr" = (
-/obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
 /obj/structure/window/reinforced,
-/obj/structure/flora/pottedplant/orientaltree,
-/turf/simulated/floor/wood,
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/plating,
 /area/residential/docking_lobby)
 "ts" = (
 /obj/machinery/bookbinder,
@@ -3856,11 +3829,15 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
+/obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/window/reinforced,
+/obj/structure/sign/securearea{
+	desc = "A warning sign which reads 'KEEP CLEAR OF DOCKING AREA'.";
+	name = "KEEP CLEAR: DOCKING AREA"
+	},
 /turf/simulated/floor/plating,
 /area/residential/docking_lobby)
 "wb" = (
@@ -3945,15 +3922,6 @@
 	},
 /turf/simulated/floor/outdoors/grass/forest,
 /area/residential/outside)
-"wu" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced,
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/turf/simulated/floor/plating,
-/area/residential/docking_lobby)
 "wx" = (
 /obj/structure/flora/ausbushes/fullgrass,
 /obj/structure/flora/ausbushes/leafybush,
@@ -3969,8 +3937,9 @@
 /turf/simulated/floor/tiled/dark,
 /area/residential/outside)
 "wz" = (
-/obj/machinery/vending/cigarette{
-	dir = 1
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
 	},
 /turf/simulated/floor/wood,
 /area/residential/docking_lobby)
@@ -4133,18 +4102,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/residential/healthcenter)
-"xT" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 6
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/wood,
-/area/residential/docking_lobby)
 "xX" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/structure/flora/grass/brown,
@@ -4610,11 +4567,9 @@
 /turf/simulated/floor/plating,
 /area/residential/outside)
 "Au" = (
-/obj/machinery/vending/snack{
-	dir = 1
-	},
-/turf/simulated/floor/wood,
-/area/residential/docking_lobby)
+/obj/effect/shuttle_landmark/premade/residential/residences,
+/turf/space,
+/area/space)
 "Ay" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -4747,7 +4702,14 @@
 /turf/simulated/floor/outdoors/grass/forest,
 /area/residential/outside)
 "Bc" = (
-/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/mech_sensor{
+	dir = 8;
+	id_tag = "residential_dock_north_mech";
+	pixel_y = -19
+	},
+/obj/machinery/door/airlock/glass_external,
+/obj/effect/map_helper/airlock/door/ext_door,
 /turf/simulated/floor/tiled/dark,
 /area/residential/docking_lobby)
 "Bd" = (
@@ -5072,15 +5034,6 @@
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/simulated/floor/outdoors/grass/forest,
 /area/residential/outside)
-"CH" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/window/reinforced,
-/turf/simulated/floor/plating,
-/area/residential/docking_lobby)
 "CI" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -5162,10 +5115,24 @@
 /turf/simulated/floor/wood,
 /area/residential/library)
 "CX" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
+/obj/machinery/airlock_sensor{
+	pixel_y = -28
+	},
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/turf/simulated/floor/wood,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 4;
+	frequency = 1380;
+	id_tag = "specops_dock_pump"
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
+/obj/effect/map_helper/airlock/sensor/chamber_sensor,
+/turf/simulated/floor/tiled/techmaint,
 /area/residential/docking_lobby)
 "CY" = (
 /obj/machinery/portable_atmospherics/canister/oxygen/prechilled,
@@ -5284,18 +5251,6 @@
 	},
 /turf/simulated/floor/tiled/eris/cafe,
 /area/residential/obs1)
-"DA" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced,
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
-/area/residential/docking_lobby)
 "DB" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
@@ -5479,8 +5434,18 @@
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/residential/cafe)
 "EE" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/wood,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/mech_sensor{
+	dir = 8;
+	id_tag = "residential_dock_north_mech";
+	pixel_y = -19
+	},
+/obj/machinery/door/airlock/glass_external,
+/obj/effect/map_helper/airlock/door/int_door,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
 /area/residential/docking_lobby)
 "EG" = (
 /obj/structure/table/woodentable,
@@ -5564,14 +5529,13 @@
 /turf/simulated/floor/tiled/dark,
 /area/residential/outside)
 "Fa" = (
-/obj/machinery/light{
-	dir = 8
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
-/obj/machinery/computer/shuttle_control/residential_shuttle{
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 5
 	},
 /turf/simulated/floor/wood,
 /area/residential/docking_lobby)
@@ -5633,7 +5597,16 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/healthcenter)
 "Fx" = (
-/turf/unsimulated/wall,
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/turf/simulated/floor/plating,
 /area/residential/docking_lobby)
 "FC" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
@@ -5677,10 +5650,13 @@
 /turf/simulated/floor/tiled,
 /area/residential/healthcenter)
 "FL" = (
-/obj/machinery/vending/coffee{
+/obj/structure/grille,
+/obj/structure/window/reinforced{
 	dir = 1
 	},
-/turf/simulated/floor/wood,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced,
+/turf/simulated/floor/plating,
 /area/residential/docking_lobby)
 "FM" = (
 /obj/structure/table/reinforced,
@@ -5932,10 +5908,16 @@
 /turf/simulated/floor/outdoors/grass/forest,
 /area/residential/outside)
 "HC" = (
-/obj/structure/table/woodentable,
-/obj/item/weapon/newspaper,
-/obj/machinery/computer/timeclock/premade/east,
-/turf/simulated/floor/wood,
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced,
+/turf/simulated/floor/plating,
 /area/residential/docking_lobby)
 "HD" = (
 /obj/structure/closet/secure_closet/freezer/meat,
@@ -6238,12 +6220,6 @@
 /obj/structure/flora/ausbushes/ywflowers,
 /turf/simulated/floor/outdoors/grass/forest,
 /area/residential/outside)
-"Jk" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 10
-	},
-/turf/simulated/floor/wood,
-/area/residential/docking_lobby)
 "Jm" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -6486,13 +6462,7 @@
 /turf/simulated/floor/outdoors/grass/forest,
 /area/residential/outside)
 "KF" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced,
-/obj/machinery/door/firedoor/border_only,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/wood,
 /area/residential/docking_lobby)
 "KG" = (
 /obj/machinery/door/firedoor/border_only,
@@ -6619,7 +6589,11 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/residential/outside)
 "Ln" = (
-/obj/structure/disposalpipe/segment,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/wood,
 /area/residential/docking_lobby)
 "Lo" = (
@@ -6795,10 +6769,7 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/healthcenter)
 "Mz" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
-	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/wood,
 /area/residential/docking_lobby)
 "MB" = (
@@ -6818,7 +6789,16 @@
 /turf/simulated/floor/outdoors/grass/forest,
 /area/residential/outside)
 "MD" = (
-/turf/simulated/wall/wood,
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/computer/shuttle_control/residential_shuttle{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
 /area/residential/docking_lobby)
 "MF" = (
 /obj/structure/barricade/cutout/fukken_xeno,
@@ -6939,9 +6919,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/healthcenter)
-"Ng" = (
-/turf/simulated/floor/wood,
-/area/residential/docking_lobby)
 "Nl" = (
 /obj/effect/floor_decal/corner_kafel/blue{
 	dir = 10;
@@ -7113,8 +7090,10 @@
 /turf/simulated/floor/outdoors/grass/forest,
 /area/residential/outside)
 "NY" = (
-/obj/structure/bed/chair/sofa/black/corner{
-	dir = 1
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/wood,
 /area/residential/docking_lobby)
@@ -7243,19 +7222,17 @@
 /turf/simulated/floor/wood,
 /area/residential/healthcenter)
 "OH" = (
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/mech_sensor{
-	dir = 8;
-	id_tag = "residential_dock_north_mech";
-	pixel_y = -19
-	},
-/obj/machinery/door/airlock/glass_external,
-/obj/effect/map_helper/airlock/door/int_door,
-/obj/machinery/atmospherics/pipe/simple/hidden{
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/dark,
-/area/residential/docking_lobby)
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/airlock/multi_tile/glass{
+	dir = 2
+	},
+/turf/simulated/floor/wood,
+/area/residential/outside)
 "OK" = (
 /turf/simulated/floor/water/beach{
 	dir = 9
@@ -7379,20 +7356,11 @@
 	},
 /area/residential/outside)
 "Pu" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced{
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
 	dir = 1
 	},
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/sign/securearea{
-	desc = "A warning sign which reads 'KEEP CLEAR OF DOCKING AREA'.";
-	name = "KEEP CLEAR: DOCKING AREA"
-	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/wood,
 /area/residential/docking_lobby)
 "Pz" = (
 /obj/machinery/smartfridge/drying_rack,
@@ -7446,13 +7414,6 @@
 	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/residential/library)
-"PP" = (
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
-	},
-/turf/simulated/floor/wood,
-/area/residential/docking_lobby)
 "PU" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -7537,17 +7498,6 @@
 	},
 /turf/simulated/floor/grass,
 /area/residential/library)
-"Ql" = (
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/mech_sensor{
-	dir = 8;
-	id_tag = "residential_dock_north_mech";
-	pixel_y = -19
-	},
-/obj/machinery/door/airlock/glass_external,
-/obj/effect/map_helper/airlock/door/ext_door,
-/turf/simulated/floor/tiled/dark,
-/area/residential/docking_lobby)
 "Qm" = (
 /obj/item/weapon/stool/baystool/padded,
 /turf/simulated/floor/carpet/bcarpet,
@@ -7630,16 +7580,6 @@
 /obj/structure/flora/ausbushes/brflowers,
 /turf/simulated/floor/outdoors/grass/forest,
 /area/residential/outside)
-"QL" = (
-/obj/machinery/portable_atmospherics/canister/air,
-/obj/machinery/atmospherics/portables_connector{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/turf/simulated/floor/wood,
-/area/residential/docking_lobby)
 "QO" = (
 /obj/structure/flora/rocks2,
 /obj/structure/flora/ausbushes/sparsegrass,
@@ -8042,20 +7982,10 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/healthcenter)
 "SL" = (
-/obj/machinery/light/small,
-/obj/effect/floor_decal/industrial/warning,
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
 	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
-/obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
-	id_tag = "residential_shuttle_offsite";
-	pixel_y = 28
-	},
-/turf/simulated/floor/tiled/techmaint,
+/turf/simulated/floor/wood,
 /area/residential/docking_lobby)
 "SM" = (
 /obj/machinery/vending/blue_lotus,
@@ -8496,9 +8426,6 @@
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/simulated/floor/outdoors/grass/forest,
 /area/residential/outside)
-"UC" = (
-/turf/simulated/wall,
-/area/residential/teleporter)
 "UE" = (
 /turf/simulated/floor/tiled/dark,
 /area/residential/outside)
@@ -8708,17 +8635,14 @@
 /turf/simulated/floor/outdoors/grass/forest,
 /area/residential/outside)
 "Wj" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/wood,
-/area/residential/docking_lobby)
+/turf/simulated/floor/outdoors/dirt,
+/area/residential/outside)
 "Wk" = (
 /obj/machinery/autolathe,
 /turf/simulated/floor/tiled/dark,
@@ -17969,22 +17893,22 @@ XS
 XS
 XS
 XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
 XS
 XS
 XS
@@ -18221,22 +18145,22 @@ XS
 XS
 XS
 XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
 XS
 XS
 XS
@@ -18473,22 +18397,22 @@ XS
 XS
 XS
 XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
 XS
 XS
 XS
@@ -18725,22 +18649,22 @@ XS
 XS
 XS
 XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
 XS
 XS
 XS
@@ -18977,22 +18901,22 @@ XS
 XS
 XS
 XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
 XS
 XS
 XS
@@ -19229,22 +19153,22 @@ XS
 XS
 XS
 XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
 XS
 XS
 XS
@@ -19481,22 +19405,22 @@ XS
 XS
 XS
 XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
 XS
 XS
 XS
@@ -19733,22 +19657,22 @@ XS
 XS
 XS
 XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
+al
+al
+al
+al
+al
+al
+al
+al
+al
+Au
+al
+al
+al
+al
+al
+al
 XS
 XS
 XS
@@ -19985,22 +19909,22 @@ XS
 XS
 XS
 XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
 XS
 XS
 XS
@@ -20237,22 +20161,22 @@ XS
 XS
 XS
 XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
 XS
 XS
 XS
@@ -20489,22 +20413,22 @@ XS
 XS
 XS
 XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
 XS
 XS
 XS
@@ -20741,22 +20665,22 @@ XS
 XS
 XS
 XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
 XS
 XS
 XS
@@ -20993,22 +20917,22 @@ XS
 XS
 XS
 XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
+al
+al
+al
+al
+al
+al
+al
+al
+oa
+Bc
+Fx
+al
+al
+al
+al
+al
 XS
 XS
 XS
@@ -21245,22 +21169,22 @@ XS
 XS
 XS
 XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
+al
+al
+al
+al
+al
+al
+al
+al
+qb
 cT
-XS
-XS
-XS
-XS
-XS
-XS
+FL
+al
+al
+al
+al
+al
 XS
 XS
 XS
@@ -21497,22 +21421,22 @@ XS
 XS
 XS
 XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
+al
+al
+al
+al
+al
+al
+al
+al
+tr
+CX
+FL
+al
+al
+al
+al
+al
 XS
 XS
 XS
@@ -21749,22 +21673,22 @@ XS
 XS
 XS
 XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
+al
+al
+al
+al
+al
+dA
+dA
+dA
+vY
+EE
+HC
+dA
+dA
+al
+al
+al
 XS
 XS
 XS
@@ -22001,22 +21925,22 @@ XS
 XS
 XS
 XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
+al
+al
+al
+al
+al
+dA
+lg
+KF
+wz
+Fa
+Ln
+MD
+dA
+al
+al
+al
 XS
 XS
 XS
@@ -22253,22 +22177,22 @@ XS
 XS
 XS
 XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
+al
+al
+al
+al
+al
+kJ
+mB
+KF
+KF
+SL
+KF
+NY
+kJ
+al
+al
+al
 XS
 XS
 XS
@@ -22505,22 +22429,22 @@ XS
 XS
 XS
 XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-DA
-Ql
-kq
-XS
-XS
-XS
-XS
-XS
+al
+al
+al
+al
+al
+kJ
+mB
+KF
+KF
+SL
+KF
+KF
+kJ
+al
+al
+al
 XS
 XS
 XS
@@ -22757,22 +22681,22 @@ XS
 XS
 XS
 XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-wu
+al
+al
+al
+al
+al
+kJ
+mB
+KF
+KF
 SL
-CH
-XS
-XS
-XS
-XS
-XS
+KF
+KF
+kJ
+al
+al
+al
 XS
 XS
 XS
@@ -23009,22 +22933,22 @@ XS
 XS
 XS
 XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
+al
+al
+al
+al
+al
+kJ
+mB
+KF
 KF
 ou
-CH
-XS
-XS
-XS
-XS
-XS
+Mz
+Pu
+kJ
+al
+al
+al
 XS
 XS
 XS
@@ -23264,16 +23188,16 @@ WV
 WV
 WV
 WV
-Fx
-Fx
-Fx
-Fx
-Fx
-Pu
+WV
+WV
+WV
+WV
+WV
+Ac
 OH
-vY
-Fx
-Fx
+WV
+WV
+WV
 WV
 WV
 WV
@@ -23516,17 +23440,17 @@ kb
 kb
 kb
 kb
-MD
-NY
-lg
-lg
-al
-Ng
-Jk
-kJ
-Fa
-MD
-cI
+kb
+kb
+kb
+kb
+jj
+iR
+Wj
+KJ
+kb
+kb
+kb
 kb
 kb
 kb
@@ -23768,17 +23692,17 @@ kb
 pY
 kb
 kb
-MD
-Ng
-Ng
-Ng
-Ng
-Ng
-Ng
-Ng
-oa
-QL
-MD
+kb
+kb
+kb
+kb
+bC
+iR
+Wj
+ND
+kb
+kb
+kb
 kb
 kb
 Xi
@@ -24020,17 +23944,17 @@ kb
 wF
 kb
 kb
-MD
-Mz
-Ln
-Ln
-Ln
-Ln
-PP
-Ng
-Au
-MD
-MD
+kb
+kb
+kb
+kb
+bC
+iR
+Wj
+ND
+kb
+kb
+kb
 kb
 kb
 wF
@@ -24272,16 +24196,16 @@ VB
 kb
 kb
 rz
-MD
-mB
-HC
-dA
-tr
-EE
-xT
-CX
-FL
-Fr
+kb
+kb
+kb
+kb
+bC
+iR
+Wj
+ND
+kb
+kb
 kb
 kb
 KS
@@ -24524,16 +24448,16 @@ VB
 nr
 VB
 YZ
-MD
-MD
-MD
-MD
-MD
-Ng
+kb
+kb
+kb
+kb
+bC
+iR
 Wj
-Ng
-wz
-Fr
+ND
+kb
+kb
 kb
 kb
 kb
@@ -24780,12 +24704,12 @@ kb
 kb
 kb
 kb
-MD
-Ng
+bC
+iR
 Wj
-Ng
-qb
-Fr
+ND
+kb
+kb
 kb
 tO
 tO
@@ -25032,12 +24956,12 @@ VB
 kb
 YZ
 kb
-MD
-Bc
-oR
-MD
-MD
-cI
+bC
+iR
+Wj
+ND
+kb
+kb
 pY
 tO
 fC
@@ -25296,7 +25220,7 @@ KH
 ws
 Nv
 hR
-UC
+tO
 KL
 HD
 No
@@ -25799,8 +25723,8 @@ tO
 lN
 FN
 Nv
-UC
-UC
+tO
+tO
 KL
 oh
 Xk
@@ -26303,8 +26227,8 @@ uy
 cD
 he
 Nv
-UC
-UC
+tO
+tO
 KL
 ri
 VT
@@ -26807,8 +26731,8 @@ tO
 Nv
 BY
 Nv
-UC
-UC
+tO
+tO
 KL
 SM
 Jr

@@ -1062,14 +1062,6 @@
 /turf/simulated/floor/wood,
 /area/residential/room14)
 "ado" = (
-/obj/effect/step_trigger/teleporter{
-	teleport_x = 64;
-	teleport_y = 135;
-	teleport_z = 10
-	},
-/obj/machinery/light{
-	dir = 1
-	},
 /turf/simulated/floor/flock,
 /area/residential/corridors)
 "adp" = (
@@ -2587,8 +2579,10 @@
 /turf/simulated/floor/wood,
 /area/residential/mansion_bed_4)
 "ahj" = (
-/obj/machinery/light{
-	dir = 1
+/obj/effect/step_trigger/teleporter{
+	teleport_x = 64;
+	teleport_y = 135;
+	teleport_z = 10
 	},
 /turf/simulated/floor/flock,
 /area/residential/corridors)
@@ -2879,18 +2873,18 @@
 /area/residential/mansion_office)
 "aid" = (
 /obj/machinery/door/airlock/voidcraft{
-	name = "Teleporter to Serenity"
+	name = "Teleporter to Apartments"
 	},
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
 "aie" = (
-/obj/effect/floor_decal/sign/dock,
-/turf/simulated/wall,
+/obj/machinery/door/airlock/voidcraft{
+	name = "Teleporter from Apartments"
+	},
+/turf/simulated/floor/tiled,
 /area/residential/corridors)
 "aih" = (
-/obj/machinery/door/airlock/voidcraft{
-	name = "Teleporter from Serenity"
-	},
+/obj/effect/floor_decal/industrial/loading,
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
 "aii" = (
@@ -2900,7 +2894,7 @@
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
 "aij" = (
-/obj/effect/floor_decal/industrial/loading,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
 "aik" = (
@@ -3121,7 +3115,10 @@
 /turf/simulated/floor/tiled/white,
 /area/residential/medbay)
 "aiH" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
 "aiI" = (
@@ -3161,9 +3158,14 @@
 /turf/simulated/floor/carpet/tealcarpet,
 /area/residential/mroom8)
 "aiR" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
@@ -3232,11 +3234,11 @@
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
 "ajb" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 6
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -3246,18 +3248,11 @@
 "aje" = (
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
-	dir = 4
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
 "ajf" = (
-/obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
-	},
-/turf/simulated/floor/tiled,
-/area/residential/corridors)
-"ajg" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
@@ -58919,17 +58914,17 @@ aaa
 aaa
 aaa
 aaa
-aeP
-aeP
-aeP
-aeP
-aeP
-aeP
-aeP
-aeP
-aeP
-aeP
-aeP
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -59171,17 +59166,17 @@ aaa
 aaa
 aaa
 aaa
-aeP
-ado
-aid
-aii
-aeR
-aQj
-aeR
-aeR
-aeR
-aje
-aeP
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -59425,14 +59420,14 @@ aaa
 aaa
 aeP
 aeP
-aie
-aeR
-aeR
-aeR
-aeR
-aeR
-aiR
-ajf
+aeP
+aeP
+aeP
+aeP
+aeP
+aeP
+aeP
+aeP
 aeP
 aaa
 aaa
@@ -59676,15 +59671,15 @@ aaa
 aaa
 aaa
 aeP
-ahj
+ado
+aid
 aih
-aij
 aeR
 aeR
 aeR
 aeR
-ako
-aeR
+aiH
+aje
 aeP
 aaa
 aaa
@@ -59930,13 +59925,13 @@ aaa
 aeP
 aeP
 aeP
-aeP
-aeP
-aeP
-ahW
-aiH
-ajb
-ajg
+aeR
+aeR
+aeR
+aeR
+aeR
+ako
+aeR
 aeP
 aaa
 aaa
@@ -60179,16 +60174,16 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
 aeP
+ahj
+aie
+aii
+alW
 aeR
-aeR
-aja
-aeR
+ahW
+aij
+aiR
+ajf
 aeP
 aaa
 aaa
@@ -60431,15 +60426,15 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+aeP
+aeP
+aeP
+aeP
+aeP
 aeP
 ahO
 aeR
-aja
+ajb
 aiI
 aeP
 aaa
@@ -60691,7 +60686,7 @@ aaa
 aeP
 aeR
 aeR
-aja
+ajb
 aeR
 aeP
 aaa
@@ -63966,7 +63961,7 @@ aeP
 abC
 aiS
 aeR
-aeR
+aiS
 aja
 aeR
 aeR
