@@ -12,7 +12,7 @@
 var/list/shell_module_types = list(
 	"Standard", "Engineering", "Pupdozer", "Service", "Service-Hound", "Clerical",
 	"Surgeon", "Medihound", "Janitor", "Janihound", "Research", "Sci-borg", "Security", "K9"
-)
+) // ARFS EDIT - MORE DOGGO
 
 var/list/awayabductors = list() // List of scatter landmarks for Abductors in Gateways
 var/list/eventdestinations = list() // List of scatter landmarks for VOREStation event portals

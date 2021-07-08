@@ -202,7 +202,7 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 	icon_state = "table"
 
 /obj/structure/table/survival_pod/New()
-	material = get_material_by_name(DEFAULT_WALL_MATERIAL)
+	material = get_material_by_name(MAT_STEEL)
 	verbs -= /obj/structure/table/verb/do_flip
 	verbs -= /obj/structure/table/proc/do_put
 	..()
@@ -253,7 +253,7 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 	icon_state = "bed"
 
 /obj/structure/bed/pod/New(var/newloc)
-	..(newloc,DEFAULT_WALL_MATERIAL,"cotton")
+	..(newloc,MAT_STEEL,"cotton")
 
 //Survival Storage Unit
 /obj/machinery/smartfridge/survival_pod
@@ -332,9 +332,6 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 	light_power = 1
 	light_color = "#FFFFFF"
 	light_on = TRUE
-
-/obj/structure/fans/hardlight/ex_act()
-	return
 
 /obj/structure/fans/hardlight/ex_act()
 	return

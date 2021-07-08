@@ -247,13 +247,6 @@
 	custom_only = FALSE
 	var_changes = list("allergen_damage_severity" = 0.6)
 
-/datum/trait/neutral/allergen_reduced_effect
-	name = "Reduced Allergen Reaction"
-	desc = "This trait halves the lethality of allergen reactions. If you don't have any allergens set, it does nothing. It does not apply to nonlethal reactions or special reactions (such as unathi drowsiness from sugars)."
-	cost = 0
-	custom_only = FALSE
-	var_changes = list("allergen_damage_severity" = 0.6)
-
 // Spicy Food Traits, from negative to positive.
 /datum/trait/neutral/spice_intolerance_extreme
 	name = "Spice Intolerance, Extreme"
@@ -472,10 +465,3 @@
 /datum/trait/neutral/thinner/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
 	H.update_transform()
-
-/datum/trait/neutral/waterbreathing
-	name = "Water Breathing"
-	desc = "Allows you to breath in water."
-	cost = 0
-	custom_only = TRUE
-	var_changes = list("water_breath" = 1)

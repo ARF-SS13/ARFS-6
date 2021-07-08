@@ -12,7 +12,7 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 	w_class = ITEMSIZE_SMALL
 	throw_speed = 5
 	throw_range = 10
-	matter = list(DEFAULT_WALL_MATERIAL = 200)
+	matter = list(MAT_STEEL = 200)
 	origin_tech = list(TECH_MAGNET = 2, TECH_BIO = 2)
 
 	var/datum/mind/stored_mind
@@ -270,7 +270,7 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 		if(istype(target, /mob/living/carbon/human))
 			var/mob/living/carbon/human/H = target
 			if(H.resleeve_lock && stored_mind.loaded_from_ckey != H.resleeve_lock)
-				to_chat(usr,"<span class='warning'>\[H] is protected from impersonation!</span>")
+				to_chat(usr,"<span class='warning'>\The [H] is protected from impersonation!</span>")
 				return
 
 		usr.visible_message("<span class='warning'>[usr] begins uploading someone's mind into [target]!</span>","<span class='notice'>You begin uploading a mind into [target]!</span>")

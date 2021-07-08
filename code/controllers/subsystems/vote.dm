@@ -13,7 +13,7 @@ SUBSYSTEM_DEF(vote)
 	var/duration
 	var/mode
 	var/question
-	var/gamemode_vote_called = TRUE // Have we had a gamemode vote this round?  Only auto-call if we haven't
+	var/gamemode_vote_called = TRUE // Have we had a gamemode vote this round?  Only auto-call if we haven't // ARFS Edit - Stop Gamemode vote
 	var/list/choices = list()
 	var/list/gamemode_names = list()
 	var/list/voted = list()

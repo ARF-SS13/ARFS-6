@@ -66,7 +66,7 @@
 	sharp = 1
 	edge = 1
 	force_divisor = 0.15 // 9 when wielded with hardness 60 (steel)
-	matter = list(DEFAULT_WALL_MATERIAL = 12000)
+	matter = list(MAT_STEEL = 12000)
 	origin_tech = list(TECH_MATERIAL = 1)
 	attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 	drop_sound = 'sound/items/drop/knife.ogg'
@@ -122,6 +122,16 @@
 	icon = 'icons/obj/wizard.dmi'
 	icon_state = "render"
 	applies_material_colour = 0
+
+/obj/item/weapon/material/knife/table
+	name = "table knife"
+	icon = 'icons/obj/kitchen.dmi'
+	icon_state = "knife_table"
+	sharp = FALSE // blunted tip
+	force_divisor = 0.1
+
+/obj/item/weapon/material/knife/table/plastic
+	default_material = "plastic"
 
 /obj/item/weapon/material/knife/butch
 	name = "butcher's cleaver"

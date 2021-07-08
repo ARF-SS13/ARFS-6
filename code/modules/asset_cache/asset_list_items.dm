@@ -552,4 +552,5 @@
 		"arfs_nanomap_z7.png"               = 'icons/_nanomaps/arfs_nanomap_z7.png',
 		"arfs_nanomap_z8.png"               = 'icons/_nanomaps/arfs_nanomap_z8.png',
 		"arfs_nanomap_z9.png"               = 'icons/_nanomaps/arfs_nanomap_z9.png',
+		// ARFS Edit End
 	)

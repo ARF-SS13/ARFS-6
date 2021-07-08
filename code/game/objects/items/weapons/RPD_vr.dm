@@ -32,7 +32,7 @@
 	var/category = ATMOS_CATEGORY
 	var/piping_layer = PIPING_LAYER_DEFAULT
 	var/obj/item/weapon/tool/wrench/tool
-	var/datum/pipe_recipe/recipe = null	// pipe recipie selected for display/construction //YW edit, added = null
+	var/datum/pipe_recipe/recipe	// pipe recipie selected for display/construction
 	var/static/datum/pipe_recipe/first_atmos
 	var/static/datum/pipe_recipe/first_disposal
 	var/mode = BUILD_MODE | DESTROY_MODE | WRENCH_MODE

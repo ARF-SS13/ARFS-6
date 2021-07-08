@@ -163,6 +163,7 @@
 	data["on"] = on
 	data["open"] = open
 	data["locked"] = locked
+
 	data["patrol"] = will_patrol
 	data["vocal"] = vocal
 
