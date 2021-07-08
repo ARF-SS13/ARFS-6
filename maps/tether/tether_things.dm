@@ -170,7 +170,7 @@
 
 // Walking on maglev tracks will shock you! Horray!
 /turf/simulated/floor/maglev/Entered(var/atom/movable/AM, var/atom/old_loc)
-	if(isliving(AM) && prob(50))
+	if(isliving(AM) && !(AM.is_incorporeal()) && prob(50))
 		track_zap(AM)
 /turf/simulated/floor/maglev/attack_hand(var/mob/user)
 	if(prob(75))
@@ -249,7 +249,7 @@
 
 	var/mob/living/carbon/human/user = AM
 
-	var/choice = tgui_alert(usr, "Do you want to depart via the tram? Your character will leave the round.","Departure",list("Yes","No"))
+	var/choice = tgui_alert(user, "Do you want to depart via the tram? Your character will leave the round.","Departure",list("Yes","No"))
 	if(user && Adjacent(user) && choice == "Yes")
 		var/mob/observer/dead/newghost = user.ghostize()
 		newghost.timeofdeath = world.time

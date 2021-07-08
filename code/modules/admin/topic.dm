@@ -1278,7 +1278,7 @@
 		var/client/C = usr.client
 		if(!isobserver(usr))	C.admin_ghost()
 		sleep(2)
-		C.jumptomob(M)
+		C.do_jumptomob(M)
 
 	else if(href_list["adminplayerobservefollow"])
 		if(!check_rights(R_MOD|R_ADMIN|R_SERVER)) //VOREStation Edit
@@ -1570,9 +1570,16 @@
 		var/mob/M = locate(href_list["sendmob"])
 		if(!M)
 			return
-		var/area/A = tgui_input_list(usr, "Pick an area:", "Send Mob", return_sorted_areas())
+		
+		var/list/areachoices = return_sorted_areas()
+		var/choice = tgui_input_list(usr, "Pick an area:", "Send Mob", areachoices)
+		if(!choice)
+			return
+		
+		var/area/A = areachoices[choice]
 		if(!A)
 			return
+			
 		M.on_mob_jump()
 		M.forceMove(pick(get_area_turfs(A)))
 		var/msg = "[key_name_admin(usr)] teleported [ADMIN_LOOKUPFLW(M)]"
@@ -1780,10 +1787,6 @@
 		for(var/datum/feed_channel/F in news_network.network_channels)
 			available_channels += F.channel_name
 		src.admincaster_feed_channel.channel_name = sanitizeSafe(tgui_input_list(usr, "Choose receiving Feed Channel", "Network Channel Handler", available_channels ))
-		src.access_news_network()
-
-	else if(href_list["ac_set_new_title"])
-		src.admincaster_feed_message.title = sanitize(input(usr, "Enter the Feed title", "Network Channel Handler", ""))
 		src.access_news_network()
 
 	else if(href_list["ac_set_new_title"])

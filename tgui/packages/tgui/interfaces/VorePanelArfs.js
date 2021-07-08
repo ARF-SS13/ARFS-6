@@ -47,7 +47,7 @@ const digestModeToPreyMode = {
 export const VorePanelArfs = (props, context) => {
   const { act, data } = useBackend(context);
   return (
-    <Window width={700} height={660} resizable>
+    <Window width={700} height={660} theme="abstract" resizable>
       <Window.Content scrollable>
         {data.unsaved_changes && (
           <NoticeBox danger>
@@ -793,17 +793,17 @@ const VoreUserPreferences = (props, context) => {
         </Flex.Item>
         <Flex.Item basis="32%">
           <Button
-            onClick={() => act("toggle_pickuppref")}
-            icon={pickup_mechanics_active ? "toggle-on" : "toggle-off"}
-            selected={pickup_mechanics_active}
+            onClick={() => act("toggle_fx")}
+            icon={show_vore_fx ? "toggle-on" : "toggle-off"}
+            selected={show_vore_fx}
             fluid
             tooltipPosition="top"
-            tooltip={pickup_mechanics_active 
-              ? "Allows macros to pick you up into their hands, and you to pick up micros."
-              + "Click to disable pick-up mechanics"
-              : ("You will not participate in pick-up mechanics."
-                + " Click this to allow picking up/being picked up.")}
-            content={pickup_mechanics_active ? "Pick-up Mechanics Enabled" : "Pick-up Mechanics Disabled"} />
+            tooltip={show_vore_fx
+              ? "This setting controls whether or not a pred is allowed to mess with your HUD and fullscreen overlays."
+              + "Click to disable all FX."
+              : ("Regardless of Predator Setting, you will not see their FX settings."
+                + " Click this to enable showing FX.")}
+            content={show_vore_fx ? "Show Vore FX" : "Do Not Show Vore FX"} />
         </Flex.Item>
         <Flex.Item basis="32%">
           <Button

@@ -176,7 +176,7 @@
 	var/light_dam											// If set, mob will be damaged in light over this value and heal in light below its negative.
 	var/minimum_breath_pressure = 16						// Minimum required pressure for breath, in kPa
 
-	var/water_breath = 0									//only affects custom species. Will lets them water breath if set to true.
+	var/water_breath = 0									//only affects custom species. Will lets them water breath if set to true. // ARFS Edit
 
 	var/metabolic_rate = 1
 

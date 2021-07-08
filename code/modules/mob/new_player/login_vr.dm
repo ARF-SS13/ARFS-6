@@ -1,2 +1,2 @@
 /obj/effect/lobby_image
-	name = "VORE Station"
+	name = "Nova Station" // ARFS Edit

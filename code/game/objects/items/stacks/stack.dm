@@ -76,7 +76,7 @@
 
 /obj/item/stack/tgui_data(mob/user, datum/tgui/ui, datum/tgui_state/state)
 	var/list/data = ..()
-
+	
 	data["amount"] = get_amount()
 
 	return data
@@ -120,7 +120,7 @@
 			if(get_amount() < 1)
 				qdel(src)
 				return
-
+			
 			var/datum/stack_recipe/R = locate(params["ref"])
 			if(!is_valid_recipe(R, recipes)) //href exploit protection
 				return FALSE
@@ -378,16 +378,12 @@
 		return ..()
 
 /obj/item/stack/proc/combine_in_loc()
-	for(var/obj/item/stack/S in get_turf(src))
-		if(stacktype == S.stacktype && S != src)
-			S.transfer_to(src)
+	return //STUBBED for now, as it seems to randomly delete stacks
 
-/* // TO DO: Possibly add this feature in? Currently calls 3 times when dropped onto a single sheet.
 /obj/item/stack/dropped(atom/old_loc)
 	. = ..()
 	if(isturf(loc))
 		combine_in_loc()
-*/
 
 /obj/item/stack/Moved(atom/old_loc, direction, forced)
 	. = ..()
