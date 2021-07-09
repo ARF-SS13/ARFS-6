@@ -7,7 +7,7 @@
 #define Z_LEVEL_MINING_ARFS					7
 #define Z_LEVEL_MINING_DANGER_ARFS			8
 #define Z_LEVEL_RESIDENTIAL_ARFS			9
-#define Z_LEVEL_RESIDENTIAL_STATION_ARFS			10
+#define Z_LEVEL_RESIDENTIAL_STATION_ARFS	10
 
 #define Z_LEVEL_BOTTOM_DECK				Z_LEVEL_ARFS_ONE
 #define Z_LEVEL_TOP_DECK				Z_LEVEL_ARFS_THREE
@@ -60,6 +60,7 @@
 	)
 
 	allowed_spawns = list("Arrivals Shuttle","Gateway","Cryogenic Storage","Cyborg Storage","NCS Serenity Residential")
+	planet_datums_to_make = list(/datum/planet/biodome)
 
 /datum/map/arfs/perform_map_generation()
 	new /datum/random_map/automata/cave_system(null, 1, 1, Z_LEVEL_MINING_ARFS, world.maxx, world.maxy) // Create the mining Z-level.
@@ -152,3 +153,8 @@
 	z = Z_LEVEL_RESIDENTIAL_STATION_ARFS
 	name = "ARFS Residential Station"
 	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_VORESPAWN
+
+/datum/planet/biodome
+	expected_z_levels = list(
+		Z_LEVEL_RESIDENTIAL_STATION_ARFS
+	)

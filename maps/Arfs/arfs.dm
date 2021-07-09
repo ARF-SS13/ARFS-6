@@ -16,6 +16,7 @@
 
 	#include "residential/_residential_arf.dm"
 	#include "residential/residential_keys_arf.dm"
+	#include "arfs_turfs.dm"
 	#include "arfs_defines.dm"
 	#include "arfs_misc.dm"
 	#include "arfs_areas.dm"
