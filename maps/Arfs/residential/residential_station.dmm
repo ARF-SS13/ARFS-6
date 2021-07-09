@@ -14,15 +14,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/healthcenter)
-"aj" = (
-/obj/effect/floor_decal/corner_kafel/blue{
-	dir = 5
-	},
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/kafel_full,
-/area/residential/healthcenter)
 "ak" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -60,18 +51,11 @@
 /area/residential/healthcenter)
 "ar" = (
 /obj/machinery/light{
-	alpha = 0;
 	dir = 4
 	},
-/obj/structure/closet/jcloset,
-/obj/item/weapon/storage/box/lights/mixed,
-/obj/item/weapon/storage/box/lights/mixed,
-/obj/item/weapon/storage/box/lights/mixed,
-/obj/item/weapon/storage/box/lights/mixed,
-/obj/item/weapon/storage/box/lights/mixed,
-/obj/item/weapon/storage/box/mousetraps,
+/obj/machinery/vending/event/accessory,
 /turf/simulated/floor/wood,
-/area/residential/corridors)
+/area/residential/docking_lobby)
 "at" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/airlock/multi_tile/glass{
@@ -137,17 +121,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/residential/outside)
-"aL" = (
-/obj/machinery/light{
-	dir = 8
-	},
-/obj/structure/table/marble,
-/obj/item/weapon/soap/cebusoap,
-/obj/item/weapon/soap/deluxe,
-/obj/item/weapon/soap/nanotrasen,
-/obj/item/weapon/soap/syndie,
-/turf/simulated/floor/wood,
-/area/residential/corridors)
 "aN" = (
 /obj/machinery/smartfridge/chemistry,
 /turf/simulated/wall,
@@ -189,11 +162,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/cafe)
-"bc" = (
-/obj/machinery/light,
-/obj/effect/floor_decal/spline/plain,
-/turf/simulated/floor/tiled/freezer,
-/area/residential/cafe)
 "bd" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -224,6 +192,12 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/residential/cafe)
+"bh" = (
+/obj/machinery/vending/wardrobe/atmosdrobe{
+	req_access = list()
+	},
+/turf/simulated/floor/wood,
+/area/residential/docking_lobby)
 "bi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -331,6 +305,10 @@
 /obj/structure/railing,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
+"bE" = (
+/obj/machinery/vending/event/overwear,
+/turf/simulated/floor/wood,
+/area/residential/docking_lobby)
 "bI" = (
 /obj/machinery/light{
 	dir = 4
@@ -375,6 +353,15 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/healthcenter)
+"bQ" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/machinery/vending/wardrobe/engidrobe{
+	req_access = list()
+	},
+/turf/simulated/floor/wood,
+/area/residential/docking_lobby)
 "bS" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
@@ -434,13 +421,14 @@
 /obj/item/weapon/autopsy_scanner,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/healthcenter)
-"ck" = (
-/obj/machinery/door/airlock/multi_tile/glass{
-	name = "Cleaning Closet";
-	tag = "icon-door_closed (NORTH)"
+"cg" = (
+/obj/machinery/light{
+	dir = 8;
+	light_color = "#edb02d"
 	},
+/obj/structure/table/bench/sifwooden,
 /turf/simulated/floor/wood,
-/area/residential/corridors)
+/area/residential/docking_lobby)
 "cn" = (
 /obj/effect/floor_decal/corner_kafel/blue{
 	dir = 10
@@ -559,12 +547,6 @@
 /obj/structure/flora/arfs/bush1_right_top,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
-"cN" = (
-/obj/structure/flora/arfs/bush1_left_bottom,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/outdoors/grass/forest/biodome,
-/area/residential/outside)
 "cR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -626,13 +608,6 @@
 /obj/machinery/disposal,
 /turf/simulated/floor/tiled/eris/cafe,
 /area/residential/cafe)
-"cX" = (
-/obj/machinery/atmospherics/binary/pump/high_power/on{
-	name = "Waste In";
-	target_pressure = 4500
-	},
-/turf/simulated/floor/plating,
-/area/residential/outside)
 "cY" = (
 /obj/structure/lightpost,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
@@ -757,7 +732,7 @@
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
 "dA" = (
-/turf/simulated/wall,
+/turf/unsimulated/wall/planetary/biodome,
 /area/residential/docking_lobby)
 "dB" = (
 /obj/machinery/vending/engivend{
@@ -894,12 +869,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/obs2)
-"el" = (
-/turf/unsimulated/wall/fakeglass{
-	dir = 5;
-	tag = "icon-fakewindows (NORTHEAST)"
-	},
-/area/residential/outside)
 "em" = (
 /obj/structure/window/reinforced/full,
 /obj/structure/grille,
@@ -1264,6 +1233,14 @@
 /obj/structure/bed/chair/comfy/brown,
 /turf/simulated/floor/carpet/purcarpet,
 /area/residential/library)
+"fT" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/ntnet_relay,
+/obj/machinery/light,
+/turf/simulated/floor/plating,
+/area/residential/outside)
 "fU" = (
 /obj/structure/railing{
 	dir = 1
@@ -1666,20 +1643,15 @@
 /obj/structure/flora/ausbushes/pointybush,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
+"il" = (
+/obj/machinery/vending/toy/thingpony,
+/turf/simulated/floor/wood,
+/area/residential/docking_lobby)
 "in" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/healthcenter)
-"io" = (
-/obj/machinery/shower{
-	dir = 4;
-	pixel_x = 2
-	},
-/obj/effect/catwalk_plated/white,
-/obj/structure/curtain/open/shower,
-/turf/simulated/floor/tiled/freezer,
-/area/residential/cafe)
 "ip" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -1724,6 +1696,15 @@
 	},
 /turf/simulated/floor/tiled/eris/cafe,
 /area/residential/obs2)
+"iH" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/vending/wardrobe/cargodrobe{
+	req_access = list()
+	},
+/turf/simulated/floor/wood,
+/area/residential/docking_lobby)
 "iI" = (
 /obj/structure/table/marble,
 /obj/item/weapon/paper_bin,
@@ -1774,19 +1755,20 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/healthcenter)
-"iT" = (
-/obj/effect/floor_decal/spline/plain{
-	dir = 4
-	},
-/obj/effect/floor_decal/spline/plain{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/freezer,
-/area/residential/cafe)
 "iX" = (
 /obj/structure/flora/arfs/lightgrass9,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
+"jb" = (
+/obj/structure/mirror{
+	pixel_y = -30
+	},
+/turf/simulated/floor/wood,
+/area/residential/docking_lobby)
+"jc" = (
+/obj/machinery/vending/event/loadout_misc,
+/turf/simulated/floor/wood,
+/area/residential/docking_lobby)
 "jd" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -1897,11 +1879,6 @@
 /obj/structure/flora/ausbushes/brflowers,
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
-/area/residential/outside)
-"jK" = (
-/turf/unsimulated/wall/fakeglass{
-	dir = 6
-	},
 /area/residential/outside)
 "jM" = (
 /obj/structure/table/reinforced,
@@ -2108,6 +2085,12 @@
 /obj/structure/flora/ausbushes/lavendergrass,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
+"ln" = (
+/obj/machinery/vending/wardrobe/detdrobe{
+	req_access = list()
+	},
+/turf/simulated/floor/wood,
+/area/residential/docking_lobby)
 "lq" = (
 /obj/structure/flora/smallbould,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
@@ -2294,19 +2277,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/healthcenter)
-"mq" = (
-/obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/spray/cleaner,
-/obj/item/weapon/reagent_containers/spray/cleaner,
-/obj/item/weapon/reagent_containers/spray/cleaner,
-/obj/item/weapon/reagent_containers/spray/cleaner,
-/obj/item/weapon/reagent_containers/spray/cleaner,
-/obj/item/weapon/reagent_containers/spray/cleaner,
-/obj/item/weapon/reagent_containers/spray/cleaner,
-/obj/item/weapon/reagent_containers/spray/cleaner,
-/obj/item/weapon/reagent_containers/spray/cleaner,
-/turf/simulated/floor/wood,
-/area/residential/corridors)
 "ms" = (
 /obj/structure/railing{
 	dir = 1
@@ -2354,6 +2324,20 @@
 /obj/structure/bed/chair,
 /turf/simulated/floor/wood,
 /area/residential/docking_lobby)
+"mC" = (
+/obj/machinery/light{
+	alpha = 0;
+	dir = 4
+	},
+/obj/structure/closet/jcloset,
+/obj/item/weapon/storage/box/lights/mixed,
+/obj/item/weapon/storage/box/lights/mixed,
+/obj/item/weapon/storage/box/lights/mixed,
+/obj/item/weapon/storage/box/lights/mixed,
+/obj/item/weapon/storage/box/lights/mixed,
+/obj/item/weapon/storage/box/mousetraps,
+/turf/simulated/floor/wood,
+/area/residential/corridors)
 "mE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -2405,15 +2389,6 @@
 "mW" = (
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/healthcenter)
-"mZ" = (
-/obj/machinery/light{
-	dir = 8
-	},
-/obj/structure/table/marble,
-/obj/item/weapon/storage/bag/trash,
-/obj/item/weapon/storage/bag/trash,
-/turf/simulated/floor/wood,
-/area/residential/corridors)
 "nb" = (
 /obj/structure/flora/ausbushes/leafybush,
 /obj/structure/flora/ausbushes/ppflowers,
@@ -2423,6 +2398,14 @@
 /obj/structure/table/woodentable,
 /turf/simulated/floor/wood,
 /area/residential/cafe)
+"ng" = (
+/obj/structure/table/glass,
+/turf/simulated/floor/wood,
+/area/residential/healthcenter)
+"nk" = (
+/obj/machinery/vending/event/clothing,
+/turf/simulated/floor/wood,
+/area/residential/docking_lobby)
 "nl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -2687,18 +2670,6 @@
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
-"oK" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5
-	},
-/turf/simulated/floor/outdoors/grass/forest/biodome,
-/area/residential/outside)
 "oL" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -2737,6 +2708,13 @@
 "oV" = (
 /turf/simulated/wall/wood,
 /area/residential/corridors)
+"oW" = (
+/obj/structure/railing,
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/grass/forest/biodome,
+/area/residential/outside)
 "oX" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -2751,6 +2729,12 @@
 	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/residential/cafe)
+"oZ" = (
+/obj/structure/flora/arfs/bush1_left_bottom,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/outdoors/grass/forest/biodome,
+/area/residential/outside)
 "pa" = (
 /obj/structure/railing{
 	dir = 8
@@ -2771,6 +2755,13 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/cafe)
+"ph" = (
+/obj/machinery/light{
+	dir = 8;
+	light_color = "#edb02d"
+	},
+/turf/simulated/floor/wood,
+/area/residential/docking_lobby)
 "pk" = (
 /turf/simulated/floor/water/beach{
 	dir = 4
@@ -2783,6 +2774,25 @@
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
+"pm" = (
+/obj/structure/table/marble,
+/obj/item/weapon/grenade/chem_grenade/cleaner,
+/obj/item/weapon/grenade/chem_grenade/cleaner,
+/obj/item/weapon/grenade/chem_grenade/cleaner,
+/obj/item/weapon/grenade/chem_grenade/cleaner,
+/obj/item/weapon/grenade/chem_grenade/cleaner,
+/obj/item/weapon/grenade/chem_grenade/cleaner,
+/obj/item/weapon/grenade/chem_grenade/cleaner,
+/obj/item/weapon/grenade/chem_grenade/cleaner,
+/obj/item/weapon/grenade/chem_grenade/cleaner,
+/obj/item/weapon/grenade/chem_grenade/cleaner,
+/turf/simulated/floor/wood,
+/area/residential/corridors)
+"po" = (
+/obj/machinery/light,
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/tiled/freezer,
+/area/residential/cafe)
 "pp" = (
 /obj/structure/table/standard{
 	name = "plastic table frame"
@@ -2995,11 +3005,6 @@
 /obj/item/weapon/material/kitchen/rollingpin,
 /turf/simulated/floor/tiled/eris/cafe,
 /area/residential/cafe)
-"qL" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/outdoors/grass/forest/biodome,
-/area/residential/outside)
 "qO" = (
 /obj/machinery/light/flamp,
 /obj/effect/floor_decal/borderfloorblack/shifted{
@@ -3007,14 +3012,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/residential/outside)
-"qP" = (
-/obj/structure/bookcase,
-/obj/item/weapon/book/custom_library/fiction/blacksmithandkinglybloke,
-/obj/item/weapon/book/custom_library/fiction/starsandsometimesfallingones,
-/obj/item/weapon/book/custom_library/nonfiction/freesirisailightbulbs,
-/obj/item/weapon/book/manual/medical_diagnostics_manual,
-/turf/simulated/floor/wood,
-/area/residential/healthcenter)
 "qU" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -3030,6 +3027,15 @@
 	},
 /turf/simulated/floor/carpet,
 /area/residential/outside)
+"qW" = (
+/obj/effect/floor_decal/corner_kafel/blue{
+	dir = 5
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/residential/healthcenter)
 "qX" = (
 /obj/structure/flora/rocks1,
 /obj/structure/flora/ausbushes/sparsegrass,
@@ -3052,14 +3058,6 @@
 /obj/structure/flora/ausbushes/grassybush,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
-"rg" = (
-/obj/machinery/light{
-	alpha = 0;
-	dir = 4
-	},
-/obj/structure/reagent_dispensers/watertank,
-/turf/simulated/floor/wood,
-/area/residential/corridors)
 "rh" = (
 /obj/structure/flora/ausbushes/brflowers,
 /obj/structure/flora/ausbushes/fullgrass,
@@ -3415,13 +3413,6 @@
 /obj/machinery/portable_atmospherics/hydroponics,
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/residential/cafe)
-"ta" = (
-/obj/structure/bookcase,
-/obj/item/weapon/book/custom_library/religious/wayofbleedingswan,
-/obj/item/weapon/book/custom_library/fiction/myrock,
-/obj/item/weapon/book/custom_library/fiction/irishairmanforseesdeath,
-/turf/simulated/floor/wood,
-/area/residential/healthcenter)
 "tb" = (
 /obj/structure/flora/arfs/bush1_left_top,
 /turf/simulated/wall/wood,
@@ -3723,12 +3714,6 @@
 /obj/effect/floor_decal/spline/plain,
 /turf/simulated/floor/tiled/eris/cafe,
 /area/residential/obs2)
-"uw" = (
-/obj/effect/floor_decal/spline/plain{
-	dir = 6
-	},
-/turf/simulated/floor/tiled/freezer,
-/area/residential/cafe)
 "uy" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -3854,13 +3839,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/healthcenter)
-"vn" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/silver{
-	name = "Shower"
-	},
-/turf/simulated/floor/tiled/freezer,
-/area/residential/cafe)
 "vr" = (
 /obj/machinery/portable_atmospherics/hydroponics,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -3888,6 +3866,15 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/healthcenter)
+"vz" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/residential/cafe)
 "vC" = (
 /obj/structure/flora/ausbushes/brflowers,
 /obj/structure/flora/ausbushes/brflowers,
@@ -4083,12 +4070,13 @@
 /turf/simulated/floor/tiled/dark,
 /area/residential/outside)
 "wz" = (
-/obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2"
+/obj/structure/flora/tree/sif,
+/obj/structure/flora/ausbushes/fullgrass,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
 	},
-/turf/simulated/floor/wood,
-/area/residential/docking_lobby)
+/turf/simulated/floor/outdoors/grass/forest/biodome,
+/area/residential/outside)
 "wF" = (
 /obj/structure/flora/tree/sif,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
@@ -4187,6 +4175,11 @@
 	},
 /turf/simulated/floor/tiled/eris/cafe,
 /area/residential/cafe)
+"xk" = (
+/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/item/weapon/mop,
+/turf/simulated/floor/wood,
+/area/residential/corridors)
 "xq" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/glass{
@@ -4238,6 +4231,13 @@
 "xO" = (
 /turf/simulated/wall/sandstonediamond,
 /area/residential/outside)
+"xQ" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/vending/kink,
+/turf/simulated/floor/wood,
+/area/residential/docking_lobby)
 "xS" = (
 /obj/effect/floor_decal/corner_kafel/blue{
 	dir = 10
@@ -4248,6 +4248,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/residential/healthcenter)
+"xT" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/turf/simulated/floor/outdoors/grass/forest/biodome,
+/area/residential/outside)
 "xX" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/structure/flora/grass/brown,
@@ -4385,12 +4397,6 @@
 /obj/structure/bed/chair/sofa/black/corner,
 /turf/simulated/floor/wood,
 /area/residential/healthcenter)
-"yJ" = (
-/obj/structure/flora/arfs/bush1_left_top,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/outdoors/grass/forest/biodome,
-/area/residential/outside)
 "yN" = (
 /obj/structure/railing,
 /obj/structure/railing{
@@ -4488,13 +4494,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/healthcenter)
-"zu" = (
-/obj/structure/railing,
-/obj/structure/railing{
-	dir = 8
-	},
-/turf/simulated/floor/outdoors/grass/forest/biodome,
-/area/residential/outside)
 "zv" = (
 /obj/structure/flora/tree/sif,
 /obj/structure/flora/ausbushes/brflowers,
@@ -4721,23 +4720,16 @@
 /turf/simulated/wall/iron,
 /area/residential/obs1)
 "Aq" = (
-/obj/structure/flora/tree/sif,
-/obj/structure/flora/ausbushes/fullgrass,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 6;
+	tag = "icon-intact (SOUTHEAST)"
 	},
-/turf/simulated/floor/outdoors/grass/forest/biodome,
+/turf/simulated/floor/plating,
 /area/residential/outside)
 "Au" = (
 /obj/effect/shuttle_landmark/premade/residential/residences,
 /turf/space,
 /area/space)
-"Ax" = (
-/obj/structure/sink{
-	pixel_y = 17
-	},
-/turf/simulated/floor/wood,
-/area/residential/corridors)
 "Ay" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -4765,6 +4757,12 @@
 	dir = 4
 	},
 /turf/simulated/floor/wood,
+/area/residential/cafe)
+"AG" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/freezer,
 /area/residential/cafe)
 "AI" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -4985,6 +4983,13 @@
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
+"BM" = (
+/obj/machinery/door/airlock/multi_tile/glass{
+	name = "Cleaning Closet";
+	tag = "icon-door_closed (NORTH)"
+	},
+/turf/simulated/floor/wood,
+/area/residential/corridors)
 "BN" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -5043,6 +5048,13 @@
 /obj/item/weapon/towel/random,
 /turf/simulated/floor/beach/sand/desert,
 /area/residential/outside)
+"Cb" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/structure/table/bench/sifwooden,
+/turf/simulated/floor/wood,
+/area/residential/docking_lobby)
 "Cc" = (
 /obj/structure/railing{
 	dir = 8
@@ -5204,6 +5216,12 @@
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
+"CH" = (
+/obj/structure/sink{
+	pixel_y = 17
+	},
+/turf/simulated/floor/wood,
+/area/residential/corridors)
 "CI" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -5415,6 +5433,21 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/healthcenter)
+"Dw" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/residential/docking_lobby)
+"Dx" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/table/marble,
+/obj/item/weapon/storage/bag/trash,
+/obj/item/weapon/storage/bag/trash,
+/turf/simulated/floor/wood,
+/area/residential/corridors)
 "Dy" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
@@ -5514,6 +5547,16 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/healthcenter)
+"Eb" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/residential/cafe)
+"Ec" = (
+/obj/machinery/vending/wardrobe/lawdrobe,
+/turf/simulated/floor/wood,
+/area/residential/docking_lobby)
 "Ed" = (
 /obj/machinery/shower{
 	dir = 4
@@ -5688,11 +5731,12 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/healthcenter)
 "EW" = (
-/obj/machinery/atmospherics/pipe/simple/visible/red{
-	dir = 6;
-	tag = "icon-intact (SOUTHEAST)"
+/obj/structure/flora/ausbushes/brflowers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
 "EY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -5700,16 +5744,12 @@
 /turf/simulated/floor/tiled/dark,
 /area/residential/outside)
 "Fa" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+/obj/machinery/atmospherics/binary/pump/high_power/on{
+	name = "Waste In";
+	target_pressure = 4500
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/turf/simulated/floor/wood,
-/area/residential/docking_lobby)
+/turf/simulated/floor/plating,
+/area/residential/outside)
 "Fc" = (
 /obj/structure/table/reinforced,
 /obj/item/device/radio,
@@ -5737,6 +5777,19 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/wood,
 /area/residential/cafe)
+"Fi" = (
+/obj/structure/table/marble,
+/obj/item/weapon/reagent_containers/spray/cleaner,
+/obj/item/weapon/reagent_containers/spray/cleaner,
+/obj/item/weapon/reagent_containers/spray/cleaner,
+/obj/item/weapon/reagent_containers/spray/cleaner,
+/obj/item/weapon/reagent_containers/spray/cleaner,
+/obj/item/weapon/reagent_containers/spray/cleaner,
+/obj/item/weapon/reagent_containers/spray/cleaner,
+/obj/item/weapon/reagent_containers/spray/cleaner,
+/obj/item/weapon/reagent_containers/spray/cleaner,
+/turf/simulated/floor/wood,
+/area/residential/corridors)
 "Fj" = (
 /obj/structure/flora/arfs/bush1_left_bottom,
 /obj/structure/flora/ausbushes/ppflowers,
@@ -5867,6 +5920,12 @@
 /obj/structure/flora/ausbushes/palebush,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
+"FW" = (
+/obj/machinery/door/airlock/glass{
+	name = "Changing Room"
+	},
+/turf/simulated/floor/wood,
+/area/residential/docking_lobby)
 "Ga" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/glass_medical{
@@ -5911,6 +5970,12 @@
 /obj/structure/flora/ausbushes/lavendergrass,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
+"Gi" = (
+/obj/machinery/vending/wardrobe/secdrobe{
+	req_access = list()
+	},
+/turf/simulated/floor/wood,
+/area/residential/docking_lobby)
 "Gk" = (
 /obj/structure/bed/chair/wood{
 	dir = 8
@@ -5981,20 +6046,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/teleporter)
-"GT" = (
-/obj/structure/table/marble,
-/obj/item/weapon/grenade/chem_grenade/cleaner,
-/obj/item/weapon/grenade/chem_grenade/cleaner,
-/obj/item/weapon/grenade/chem_grenade/cleaner,
-/obj/item/weapon/grenade/chem_grenade/cleaner,
-/obj/item/weapon/grenade/chem_grenade/cleaner,
-/obj/item/weapon/grenade/chem_grenade/cleaner,
-/obj/item/weapon/grenade/chem_grenade/cleaner,
-/obj/item/weapon/grenade/chem_grenade/cleaner,
-/obj/item/weapon/grenade/chem_grenade/cleaner,
-/obj/item/weapon/grenade/chem_grenade/cleaner,
-/turf/simulated/floor/wood,
-/area/residential/corridors)
 "GW" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
@@ -6061,13 +6112,6 @@
 "Hn" = (
 /turf/simulated/floor/wood,
 /area/residential/obs2)
-"Ho" = (
-/obj/structure/railing,
-/obj/structure/railing{
-	dir = 4
-	},
-/turf/simulated/floor/outdoors/grass/forest/biodome,
-/area/residential/outside)
 "Hq" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -6093,13 +6137,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/healthcenter)
-"Hv" = (
-/turf/unsimulated/wall/fakeglass{
-	dir = 4;
-	icon_state = "fakewindows2";
-	tag = "icon-fakewindows2 (EAST)"
-	},
-/area/residential/docking_lobby)
 "Hz" = (
 /obj/structure/hammock_kbraid_s,
 /turf/simulated/floor/beach/sand/desert,
@@ -6180,6 +6217,10 @@
 /obj/structure/flora/ausbushes/leafybush,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
+"HT" = (
+/obj/structure/curtain/black,
+/turf/simulated/floor/wood,
+/area/residential/docking_lobby)
 "HV" = (
 /obj/machinery/light,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -6236,9 +6277,6 @@
 "Ij" = (
 /obj/machinery/atmospherics/pipe/simple/visible/universal,
 /turf/simulated/floor/tiled/dark,
-/area/residential/outside)
-"Ik" = (
-/turf/unsimulated/wall/fakeglass,
 /area/residential/outside)
 "In" = (
 /obj/effect/floor_decal/spline/plain,
@@ -6472,6 +6510,10 @@
 	},
 /turf/simulated/floor/tiled/eris/cafe,
 /area/residential/cafe)
+"Js" = (
+/obj/machinery/vending/weeb,
+/turf/simulated/floor/wood,
+/area/residential/docking_lobby)
 "Jt" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/flame/lighter/zippo/moff,
@@ -6522,6 +6564,10 @@
 /obj/structure/flora/grass/brown,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
+"JK" = (
+/obj/machinery/vending/event/gadget,
+/turf/simulated/floor/wood,
+/area/residential/docking_lobby)
 "JS" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
@@ -6753,12 +6799,6 @@
 /obj/item/weapon/bedsheet/browndouble,
 /turf/simulated/floor/carpet/purcarpet,
 /area/residential/obs2)
-"KV" = (
-/obj/effect/floor_decal/spline/plain{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/freezer,
-/area/residential/cafe)
 "KZ" = (
 /obj/structure/table/reinforced,
 /obj/effect/floor_decal/corner_kafel/blue{
@@ -6792,6 +6832,13 @@
 /obj/machinery/light,
 /turf/simulated/floor/wood,
 /area/residential/corridors)
+"Lg" = (
+/obj/structure/railing,
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/forest/biodome,
+/area/residential/outside)
 "Lk" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -6799,13 +6846,12 @@
 /turf/simulated/floor/outdoors/dirt/biodome,
 /area/residential/outside)
 "Ln" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/wood,
-/area/residential/docking_lobby)
+/obj/structure/flora/ausbushes/brflowers,
+/obj/structure/flora/ausbushes/fullgrass,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/outdoors/grass/forest/biodome,
+/area/residential/outside)
 "Lo" = (
 /obj/machinery/iv_drip,
 /obj/effect/floor_decal/corner_kafel/blue{
@@ -6892,6 +6938,25 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/library)
+"LV" = (
+/obj/machinery/light{
+	alpha = 0;
+	dir = 4
+	},
+/obj/structure/reagent_dispensers/watertank,
+/turf/simulated/floor/wood,
+/area/residential/corridors)
+"Ma" = (
+/turf/unsimulated/wall/fakeglass{
+	dir = 5;
+	tag = "icon-fakewindows (NORTHEAST)"
+	},
+/area/residential/outside)
+"Md" = (
+/obj/structure/janitorialcart,
+/obj/structure/mopbucket,
+/turf/simulated/floor/wood,
+/area/residential/corridors)
 "Me" = (
 /obj/structure/flora/ausbushes/genericbush,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
@@ -6999,9 +7064,6 @@
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
 "MD" = (
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
 /obj/machinery/light{
 	dir = 8
 	},
@@ -7140,6 +7202,12 @@
 /obj/structure/table/marble,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/healthcenter)
+"Nm" = (
+/obj/machinery/vending/wardrobe/medidrobe{
+	req_access = list()
+	},
+/turf/simulated/floor/wood,
+/area/residential/docking_lobby)
 "Nn" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/structure/lightpost,
@@ -7303,13 +7371,12 @@
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
 "NY" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 10;
+	tag = "icon-intact (NORTHWEST)"
 	},
-/turf/simulated/floor/wood,
-/area/residential/docking_lobby)
+/turf/simulated/floor/plating,
+/area/residential/outside)
 "Oa" = (
 /obj/structure/flora/ausbushes/pointybush,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
@@ -7405,6 +7472,15 @@
 	name = "red sofa"
 	},
 /turf/simulated/floor/wood,
+/area/residential/cafe)
+"Ow" = (
+/obj/machinery/shower{
+	dir = 4;
+	pixel_x = 2
+	},
+/obj/effect/catwalk_plated/white,
+/obj/structure/curtain/open/shower,
+/turf/simulated/floor/tiled/freezer,
 /area/residential/cafe)
 "Ox" = (
 /obj/machinery/chem_master,
@@ -7507,13 +7583,6 @@
 "OZ" = (
 /turf/simulated/floor/tiled/eris/cafe,
 /area/residential/cafe)
-"Pc" = (
-/obj/machinery/atmospherics/pipe/simple/visible/red{
-	dir = 10;
-	tag = "icon-intact (NORTHWEST)"
-	},
-/turf/simulated/floor/plating,
-/area/residential/outside)
 "Pg" = (
 /obj/structure/table/marble,
 /obj/item/weapon/reagent_containers/glass/bucket,
@@ -7634,11 +7703,13 @@
 	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/residential/library)
-"PM" = (
-/obj/item/weapon/reagent_containers/glass/bucket,
-/obj/item/weapon/mop,
-/turf/simulated/floor/wood,
-/area/residential/corridors)
+"PP" = (
+/turf/unsimulated/wall/fakeglass{
+	dir = 4;
+	icon_state = "fakewindows2";
+	tag = "icon-fakewindows2 (EAST)"
+	},
+/area/residential/docking_lobby)
 "PU" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -7823,6 +7894,17 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/healthcenter)
+"QQ" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/table/marble,
+/obj/item/weapon/soap/cebusoap,
+/obj/item/weapon/soap/deluxe,
+/obj/item/weapon/soap/nanotrasen,
+/obj/item/weapon/soap/syndie,
+/turf/simulated/floor/wood,
+/area/residential/corridors)
 "QS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/firedoor/border_only,
@@ -7855,11 +7937,8 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/healthcenter)
 "QY" = (
-/obj/structure/flora/ausbushes/brflowers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 10
-	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
 "Ra" = (
@@ -7872,6 +7951,10 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/healthcenter)
+"Re" = (
+/obj/machinery/vending/wardrobe/chemdrobe,
+/turf/simulated/floor/wood,
+/area/residential/docking_lobby)
 "Rf" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -7889,6 +7972,12 @@
 	dir = 1
 	},
 /obj/structure/flora/arfs/bush2_right_top,
+/turf/simulated/floor/outdoors/grass/forest/biodome,
+/area/residential/outside)
+"Rk" = (
+/obj/structure/flora/arfs/bush1_left_top,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
 "Rm" = (
@@ -8484,6 +8573,13 @@
 /obj/fiftyspawner/leather,
 /turf/simulated/floor/tiled/dark,
 /area/residential/outside)
+"TM" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/airlock/silver{
+	name = "Shower"
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/residential/cafe)
 "TP" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -8514,10 +8610,6 @@
 /obj/machinery/exonet_node,
 /turf/simulated/floor/plating,
 /area/residential/outside)
-"TT" = (
-/obj/structure/table/glass,
-/turf/simulated/floor/wood,
-/area/residential/healthcenter)
 "TW" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -8542,6 +8634,12 @@
 	},
 /turf/simulated/floor/grass,
 /area/residential/library)
+"Ub" = (
+/turf/unsimulated/wall/fakeglass{
+	icon_state = "fakewindows2";
+	tag = "icon-fakewindows2"
+	},
+/area/residential/outside)
 "Uc" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/storage/pill_bottle/dice_nerd,
@@ -8550,6 +8648,10 @@
 	},
 /turf/simulated/floor/carpet/blucarpet,
 /area/residential/library)
+"Ud" = (
+/obj/machinery/vending/event/costume,
+/turf/simulated/floor/wood,
+/area/residential/docking_lobby)
 "Uf" = (
 /turf/simulated/floor/water/deep,
 /area/residential/library)
@@ -8580,14 +8682,6 @@
 /obj/machinery/light,
 /turf/simulated/floor/carpet/oracarpet,
 /area/residential/library)
-"Um" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/ntnet_relay,
-/obj/machinery/light,
-/turf/simulated/floor/plating,
-/area/residential/outside)
 "Uo" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/carpet,
@@ -8701,12 +8795,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/healthcenter)
-"UM" = (
-/turf/unsimulated/wall/fakeglass{
-	icon_state = "fakewindows2";
-	tag = "icon-fakewindows2"
-	},
-/area/residential/outside)
 "UR" = (
 /obj/machinery/media/jukebox,
 /obj/machinery/light,
@@ -8738,6 +8826,10 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/residential/teleporter)
+"Va" = (
+/obj/machinery/vending/event/uniform,
+/turf/simulated/floor/wood,
+/area/residential/docking_lobby)
 "Vc" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/multi_tile/glass{
@@ -8860,6 +8952,13 @@
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
+"VV" = (
+/obj/structure/bookcase,
+/obj/item/weapon/book/custom_library/religious/wayofbleedingswan,
+/obj/item/weapon/book/custom_library/fiction/myrock,
+/obj/item/weapon/book/custom_library/fiction/irishairmanforseesdeath,
+/turf/simulated/floor/wood,
+/area/residential/healthcenter)
 "VY" = (
 /obj/structure/flora/ausbushes/grassybush,
 /obj/structure/railing{
@@ -9079,11 +9178,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/healthcenter)
-"WZ" = (
-/obj/structure/janitorialcart,
-/obj/structure/mopbucket,
-/turf/simulated/floor/wood,
-/area/residential/corridors)
 "Xa" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
@@ -9180,6 +9274,14 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/cafe)
+"Xx" = (
+/obj/structure/bookcase,
+/obj/item/weapon/book/custom_library/fiction/blacksmithandkinglybloke,
+/obj/item/weapon/book/custom_library/fiction/starsandsometimesfallingones,
+/obj/item/weapon/book/custom_library/nonfiction/freesirisailightbulbs,
+/obj/item/weapon/book/manual/medical_diagnostics_manual,
+/turf/simulated/floor/wood,
+/area/residential/healthcenter)
 "Xy" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/storage/box/donut,
@@ -9223,7 +9325,7 @@
 /obj/machinery/alarm{
 	pixel_y = 25
 	},
-/obj/machinery/vending/coffee,
+/obj/machinery/vending/cola,
 /turf/simulated/floor/wood,
 /area/residential/cafe)
 "XM" = (
@@ -9321,6 +9423,10 @@
 /obj/machinery/vending/blood,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/healthcenter)
+"XZ" = (
+/obj/machinery/vending/wardrobe/chapdrobe,
+/turf/simulated/floor/wood,
+/area/residential/docking_lobby)
 "Yc" = (
 /obj/structure/morgue{
 	dir = 8
@@ -9552,13 +9658,10 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/cafe)
-"Zd" = (
-/obj/structure/flora/ausbushes/brflowers,
-/obj/structure/flora/ausbushes/fullgrass,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/outdoors/grass/forest/biodome,
-/area/residential/outside)
+"Zf" = (
+/obj/machinery/vending/nifsoft_shop,
+/turf/simulated/floor/wood,
+/area/residential/docking_lobby)
 "Zh" = (
 /obj/structure/railing{
 	dir = 4
@@ -9637,6 +9740,12 @@
 	},
 /turf/simulated/floor/tiled/eris/cafe,
 /area/residential/cafe)
+"ZB" = (
+/obj/machinery/vending/wardrobe/hydrobe{
+	req_access = list()
+	},
+/turf/simulated/floor/wood,
+/area/residential/docking_lobby)
 "ZE" = (
 /obj/machinery/cryopod,
 /turf/simulated/floor/wood,
@@ -9695,6 +9804,9 @@
 /obj/machinery/reagentgrinder,
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/residential/cafe)
+"ZQ" = (
+/turf/unsimulated/wall/fakeglass,
+/area/residential/outside)
 "ZR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -21944,22 +22056,22 @@ EE
 HC
 dA
 dA
-al
-al
-al
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
+dA
+dA
+dA
+dA
+dA
+dA
+dA
+dA
+dA
+dA
+dA
+dA
+dA
+dA
+dA
+dA
 XS
 XS
 XS
@@ -22191,27 +22303,27 @@ al
 dA
 lg
 KF
-wz
-Fa
-Ln
+KF
+SL
+KF
 MD
 dA
-al
-al
-al
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
+xQ
+Zf
+il
+Gi
+Nm
+Re
+XZ
+bh
+iH
+dA
+ph
+KF
+HT
+KF
+cg
+dA
 XS
 XS
 XS
@@ -22446,24 +22558,24 @@ KF
 KF
 SL
 KF
-NY
-kJ
-al
-al
-al
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
+KF
+dA
+KF
+KF
+KF
+KF
+KF
+KF
+KF
+KF
+KF
+dA
+KF
+KF
+HT
+KF
+jb
+dA
 XS
 XS
 XS
@@ -22692,30 +22804,30 @@ al
 al
 al
 al
-Hv
+PP
 mB
 KF
 KF
 SL
 KF
 KF
-Hv
-al
-al
-al
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
+FW
+KF
+KF
+KF
+KF
+Ec
+ZB
+Js
+KF
+KF
+FW
+KF
+KF
+dA
+dA
+dA
+dA
 XS
 XS
 XS
@@ -22944,30 +23056,30 @@ al
 al
 al
 al
-Hv
+PP
 mB
 KF
 KF
 SL
 KF
 KF
-Hv
-al
-al
-al
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
+dA
+KF
+KF
+KF
+KF
+KF
+KF
+KF
+KF
+KF
+dA
+KF
+KF
+HT
+KF
+jb
+dA
 XS
 XS
 XS
@@ -23196,30 +23308,30 @@ al
 al
 al
 al
-Hv
+PP
 mB
 KF
 KF
 ou
 Mz
 Pu
-Hv
-al
-al
-al
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
-XS
+dA
+ar
+nk
+Ud
+jc
+bE
+Va
+JK
+ln
+bQ
+dA
+Dw
+KF
+HT
+KF
+Cb
+dA
 XS
 XS
 XS
@@ -23440,7 +23552,7 @@ GN
 GN
 GN
 GN
-Ik
+ZQ
 YT
 YT
 YT
@@ -23448,14 +23560,29 @@ YT
 YT
 YT
 YT
-el
-UM
-Ik
+Ma
+Ub
+ZQ
 Ac
 OH
 tA
-UM
-jK
+ZQ
+YT
+YT
+YT
+YT
+YT
+YT
+YT
+YT
+YT
+YT
+YT
+YT
+YT
+YT
+YT
+YT
 YT
 YT
 YT
@@ -23468,22 +23595,7 @@ GN
 GN
 GN
 GN
-Ik
-YT
-YT
-YT
-YT
-YT
-YT
-tA
-GN
-GN
-GN
-GN
-GN
-GN
-GN
-Ik
+ZQ
 YT
 YT
 YT
@@ -24201,12 +24313,12 @@ kb
 kb
 wF
 oV
-aL
-mq
-GT
-mZ
+QQ
+Fi
+pm
+Dx
 oV
-Ho
+oW
 iR
 Wj
 ND
@@ -24428,8 +24540,8 @@ YT
 RH
 WN
 Ef
-EW
-cX
+Aq
+Fa
 Vk
 iC
 SG
@@ -24457,7 +24569,7 @@ CJ
 CJ
 CJ
 CJ
-ck
+BM
 iR
 iR
 Wj
@@ -24705,7 +24817,7 @@ kb
 VB
 nr
 oV
-Ax
+CH
 CJ
 CJ
 CJ
@@ -24934,10 +25046,10 @@ SG
 bi
 rR
 SG
-Pc
+NY
 iC
 SG
-Um
+fT
 YT
 kb
 kb
@@ -24949,7 +25061,7 @@ dO
 mW
 cn
 sI
-aj
+qW
 mW
 Nl
 sI
@@ -24957,12 +25069,12 @@ kb
 kb
 kb
 oV
-ar
-WZ
-PM
-rg
+mC
+Md
+xk
+LV
 oV
-zu
+Lg
 iR
 Wj
 ND
@@ -25435,13 +25547,13 @@ XS
 dt
 kb
 kb
-Aq
+wz
+EW
+Ln
 QY
-Zd
-qL
-yJ
-cN
-oK
+Rk
+oZ
+xT
 kb
 kb
 nX
@@ -26713,7 +26825,7 @@ Yc
 xd
 ld
 sI
-aj
+qW
 cR
 YW
 sI
@@ -28772,8 +28884,8 @@ KL
 KL
 KL
 KL
-io
-io
+Ow
+Ow
 KL
 kb
 HA
@@ -29024,8 +29136,8 @@ hL
 jF
 Ly
 KL
-KV
-bc
+AG
+po
 KL
 oI
 GZ
@@ -29275,9 +29387,9 @@ Qd
 Qd
 BN
 bg
-vn
-iT
-uw
+TM
+vz
+Eb
 KL
 kb
 HA
@@ -30994,7 +31106,7 @@ kb
 gn
 kb
 sI
-qP
+Xx
 gt
 gt
 Xc
@@ -31246,7 +31358,7 @@ cr
 gn
 kb
 sI
-ta
+VV
 gt
 gt
 ZR
@@ -31754,7 +31866,7 @@ yF
 lG
 lG
 vl
-TT
+ng
 bI
 eE
 lG
@@ -47623,7 +47735,7 @@ GN
 GN
 GN
 GN
-Ik
+ZQ
 YT
 YT
 YT
@@ -47641,7 +47753,7 @@ GN
 GN
 GN
 GN
-Ik
+ZQ
 YT
 YT
 YT
@@ -47675,7 +47787,7 @@ GN
 GN
 GN
 GN
-Ik
+ZQ
 YT
 YT
 YT
