@@ -12,3 +12,7 @@
 
 /datum/language/shadekin
 	flags = HIVEMIND
+
+/datum/species/tajaran
+	body_temperature = 320.15	//Even more cold resistant, even more flammable\
+	cold_discomfort_level = 275
