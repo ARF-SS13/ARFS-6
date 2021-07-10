@@ -8781,10 +8781,11 @@
 /turf/simulated/floor/tiled,
 /area/engineering/atmos/backup)
 "auX" = (
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/simulated/floor/tiled/monofloor{
+/obj/effect/floor_decal/steeldecal/monofloor{
 	dir = 4
 	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/tiled/monotile,
 /area/tether/station/dock_two)
 "auY" = (
 /obj/machinery/atmospherics/omni/atmos_filter{
@@ -11091,6 +11092,9 @@
 	name = "Engineering EVA Storage";
 	req_one_access = list(11,24)
 	},
+/obj/effect/floor_decal/steeldecal/monofloor{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/engineering/workshop)
 "aCP" = (
@@ -11636,9 +11640,6 @@
 	name = "\improper Telecomms Solar Field"
 	})
 "aFe" = (
-/obj/machinery/door/airlock{
-	name = "Unisex Bathrooms"
-	},
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
@@ -12712,13 +12713,6 @@
 /obj/structure/catwalk,
 /turf/simulated/floor,
 /area/maintenance/station/eng_lower)
-"aMy" = (
-/obj/machinery/conveyor{
-	dir = 5;
-	id = "QMLoad"
-	},
-/turf/simulated/floor,
-/area/quartermaster/storage)
 "aMB" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -13478,6 +13472,15 @@
 /obj/structure/catwalk,
 /turf/simulated/floor,
 /area/maintenance/station/eng_lower)
+"aVm" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/glass_engineering{
+	name = "Engineering EVA Storage";
+	req_one_access = list(11,24)
+	},
+/obj/effect/floor_decal/steeldecal/monofloor,
+/turf/simulated/floor/tiled/monotile,
+/area/engineering/workshop)
 "aVs" = (
 /obj/structure/plasticflaps,
 /obj/machinery/conveyor{
@@ -19592,7 +19595,7 @@
 "fWn" = (
 /obj/machinery/light,
 /obj/machinery/conveyor{
-	dir = 1;
+	dir = 5;
 	id = "QMLoad"
 	},
 /turf/simulated/floor,
@@ -29614,13 +29617,6 @@
 	},
 /turf/simulated/floor/tiled/eris/dark/techfloor_grid,
 /area/shuttle/securiship/engines)
-"qby" = (
-/obj/machinery/conveyor{
-	dir = 6;
-	id = "miningops"
-	},
-/turf/simulated/floor/plating,
-/area/quartermaster/belterdock/refinery)
 "qcg" = (
 /obj/machinery/camera/network/telecom,
 /obj/structure/cable/yellow{
@@ -32022,11 +32018,12 @@
 /turf/simulated/floor/tiled,
 /area/hallway/station/atrium)
 "sKB" = (
-/obj/machinery/conveyor{
-	dir = 10;
-	id = "miningops"
-	},
 /obj/machinery/mineral/input,
+/obj/machinery/conveyor{
+	dir = 8;
+	id = "miningops";
+	movedir = null
+	},
 /turf/simulated/floor/plating,
 /area/quartermaster/belterdock/refinery)
 "sLp" = (
@@ -33152,11 +33149,12 @@
 /area/ai_monitored/storage/eva)
 "tZN" = (
 /obj/machinery/door/airlock/multi_tile/glass,
-/obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/effect/map_helper/airlock/door/simple,
-/turf/simulated/floor/tiled/monofloor{
+/obj/effect/floor_decal/steeldecal/monofloor{
 	dir = 8
 	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/tiled/monotile,
 /area/tether/station/dock_two)
 "tZQ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
@@ -42227,7 +42225,7 @@ agd
 acS
 aqN
 aCM
-aCM
+aVm
 aqN
 acS
 anu
@@ -48086,7 +48084,7 @@ sBQ
 aAr
 aAz
 aBF
-aMy
+aDq
 gVb
 dQD
 fWn
@@ -48803,7 +48801,7 @@ asG
 asG
 sLH
 xur
-qby
+cWq
 cWq
 dgF
 nEy
