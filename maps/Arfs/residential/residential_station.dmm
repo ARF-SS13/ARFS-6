@@ -209,9 +209,7 @@
 /turf/simulated/floor/tiled/freezer,
 /area/residential/cafe)
 "bi" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
+/obj/machinery/atmospherics/pipe/manifold/visible/supply,
 /turf/simulated/floor/plating,
 /area/residential/outside)
 "bj" = (
@@ -3398,8 +3396,8 @@
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
 "rR" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
+/obj/machinery/atmospherics/pipe/manifold/visible/scrubbers{
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/residential/outside)
@@ -4099,6 +4097,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/healthcenter)
+"vo" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/forest/biodome,
+/area/residential/outside)
 "vr" = (
 /obj/machinery/portable_atmospherics/hydroponics,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -4362,11 +4366,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/residential/outside)
 "wz" = (
-/obj/structure/flora/tree/sif,
 /obj/structure/flora/ausbushes/fullgrass,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
 "wE" = (
@@ -5339,6 +5343,9 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/residential/outside)
+"BF" = (
+/turf/simulated/floor/beach/sand/desert/outdoors,
+/area/residential/outside)
 "BH" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/eris/cafe,
@@ -6122,8 +6129,8 @@
 "EW" = (
 /obj/structure/flora/ausbushes/brflowers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 10
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
@@ -6171,6 +6178,12 @@
 /obj/structure/flora/ausbushes/ppflowers,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
+"Fm" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/forest/biodome,
+/area/residential/outside)
 "Fo" = (
 /obj/effect/map_effect/perma_light,
 /turf/simulated/floor/outdoors/dirt/biodome,
@@ -6216,6 +6229,17 @@
 	icon_state = "pipe-j2"
 	},
 /turf/simulated/floor/outdoors/dirt/biodome,
+/area/residential/outside)
+"FE" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -23
+	},
+/turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
 "FF" = (
 /obj/structure/toilet,
@@ -6353,6 +6377,12 @@
 /obj/structure/flora/ausbushes/grassybush,
 /obj/structure/flora/ausbushes/lavendergrass,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
+/area/residential/outside)
+"Gi" = (
+/obj/machinery/alarm{
+	pixel_y = 22
+	},
+/turf/simulated/floor/plating,
 /area/residential/outside)
 "Gk" = (
 /obj/structure/bed/chair/wood{
@@ -7965,6 +7995,10 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/outside)
+"OI" = (
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/turf/simulated/floor/plating,
+/area/residential/outside)
 "OK" = (
 /turf/simulated/floor/water/beach{
 	dir = 9
@@ -8423,6 +8457,12 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/healthcenter)
+"Rc" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/turf/simulated/floor/outdoors/grass/forest/biodome,
+/area/residential/outside)
 "Rf" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -8935,6 +8975,12 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/residential/outside)
+"Th" = (
+/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/residential/outside)
 "Ti" = (
 /obj/structure/railing{
 	dir = 8
@@ -9144,6 +9190,12 @@
 	dir = 1
 	},
 /turf/simulated/floor/carpet,
+/area/residential/outside)
+"Uk" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
 /area/residential/outside)
 "Ul" = (
 /obj/structure/table/woodentable,
@@ -10044,9 +10096,6 @@
 "YI" = (
 /obj/structure/flora/ausbushes/stalkybush,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
-/area/residential/outside)
-"YJ" = (
-/turf/simulated/floor/beach/sand/desert/outdoors,
 /area/residential/outside)
 "YL" = (
 /obj/structure/table/steel_reinforced,
@@ -24796,7 +24845,7 @@ XS
 YT
 RH
 WN
-SG
+Th
 SG
 SG
 SG
@@ -25550,11 +25599,11 @@ XS
 XS
 XS
 YT
-SG
-SG
+Gi
+OI
 bi
 rR
-SG
+Uk
 NY
 iC
 SG
@@ -26054,8 +26103,8 @@ XS
 XS
 XS
 dt
-kb
-kb
+Rc
+FE
 wz
 EW
 Ln
@@ -26306,8 +26355,8 @@ XS
 XS
 XS
 oo
-kb
-kb
+vo
+Fm
 nr
 kb
 kb
@@ -26812,7 +26861,7 @@ XS
 oo
 kb
 kb
-kb
+wF
 kb
 kb
 kb
@@ -39929,7 +39978,7 @@ FR
 wT
 Cs
 Hz
-YJ
+BF
 ea
 FR
 FR
@@ -40173,19 +40222,19 @@ pz
 BW
 wT
 Jp
-YJ
+BF
 Iy
 Iy
 Cz
 Jp
-YJ
-YJ
-YJ
-YJ
-YJ
-YJ
-YJ
-YJ
+BF
+BF
+BF
+BF
+BF
+BF
+BF
+BF
 qd
 FR
 VM
@@ -40422,13 +40471,13 @@ lz
 lz
 Ai
 pz
-YJ
-YJ
+BF
+BF
 CS
 pk
 pk
 aB
-YJ
+BF
 CS
 pk
 pk
@@ -40439,7 +40488,7 @@ pk
 Kr
 pk
 Wl
-YJ
+BF
 Oo
 bE
 DY
@@ -40673,9 +40722,9 @@ pz
 lE
 vU
 vU
-YJ
-YJ
-YJ
+BF
+BF
+BF
 CV
 Kt
 Kt
@@ -41178,7 +41227,7 @@ oy
 oy
 oy
 pz
-YJ
+BF
 Iy
 CV
 Kt
@@ -41196,7 +41245,7 @@ Kt
 Kt
 Kt
 FI
-YJ
+BF
 mV
 kp
 aj
@@ -41430,8 +41479,8 @@ pz
 pz
 pz
 pz
-YJ
-YJ
+BF
+BF
 CV
 Kt
 Kt
@@ -41448,7 +41497,7 @@ Kt
 Kt
 Kt
 FI
-YJ
+BF
 Iy
 qd
 kp
@@ -41682,7 +41731,7 @@ kb
 iW
 BT
 aO
-YJ
+BF
 Cg
 CV
 Kt
@@ -41700,9 +41749,9 @@ Kt
 Kt
 Kt
 FI
-YJ
-YJ
-YJ
+BF
+BF
+BF
 qd
 FR
 kp
@@ -41934,7 +41983,7 @@ kb
 zH
 gi
 LK
-YJ
+BF
 CS
 Jo
 Kt
@@ -42186,7 +42235,7 @@ kb
 zH
 aO
 Ca
-YJ
+BF
 CV
 Kt
 Kt
@@ -42689,8 +42738,8 @@ YT
 KS
 ez
 aO
-YJ
-YJ
+BF
+BF
 CV
 Kt
 Kt
@@ -44223,7 +44272,7 @@ Kt
 OK
 Ku
 Pr
-YJ
+BF
 yz
 Gl
 DE
@@ -44474,7 +44523,7 @@ Kt
 Kt
 FI
 Jp
-YJ
+BF
 Iy
 fj
 sC
@@ -44725,8 +44774,8 @@ Kt
 Kt
 Kt
 FI
-YJ
-YJ
+BF
+BF
 mC
 DE
 YP
@@ -45228,7 +45277,7 @@ Qw
 Kt
 Kt
 FI
-YJ
+BF
 Ca
 fj
 sC
@@ -45714,7 +45763,7 @@ Fv
 Td
 aO
 Iy
-YJ
+BF
 CV
 Kt
 Kt
@@ -45733,7 +45782,7 @@ Kt
 Kt
 Kt
 FI
-YJ
+BF
 fj
 YP
 TI
@@ -45966,7 +46015,7 @@ Hr
 Td
 aO
 Iy
-YJ
+BF
 CV
 Kt
 Kt
@@ -45985,7 +46034,7 @@ Kt
 Kt
 Kt
 FI
-YJ
+BF
 fj
 YP
 kb
@@ -46218,7 +46267,7 @@ kb
 zH
 aO
 Iy
-YJ
+BF
 CV
 Kt
 Kt
@@ -46486,9 +46535,9 @@ Kt
 Kt
 Kt
 FI
-YJ
+BF
 Oh
-YJ
+BF
 fj
 sC
 gj
@@ -46722,7 +46771,7 @@ KS
 lM
 uR
 aO
-YJ
+BF
 EN
 KD
 Kt
@@ -46738,8 +46787,8 @@ Kt
 Kt
 Kt
 FI
-YJ
-YJ
+BF
+BF
 yz
 DE
 YP
@@ -46974,13 +47023,13 @@ KS
 kb
 Td
 aO
-YJ
-YJ
+BF
+BF
 EN
 Ku
 Pr
-YJ
-YJ
+BF
+BF
 EN
 Ku
 Ku
@@ -46990,7 +47039,7 @@ Ku
 Ku
 Ku
 Pr
-YJ
+BF
 yz
 DE
 sC
@@ -47234,14 +47283,14 @@ Iy
 Iy
 Bs
 Cz
-YJ
-YJ
+BF
+BF
 yz
 Gl
 Gl
 OS
-YJ
-YJ
+BF
+BF
 yz
 DE
 gU
