@@ -12,9 +12,11 @@
 	#include "arfs-7-mining.dmm"
 	#include "arfs-8-underdark.dmm"
 	#include "residential/residential_arf.dmm"
+	#include "residential/residential_station.dmm"
 
 	#include "residential/_residential_arf.dm"
 	#include "residential/residential_keys_arf.dm"
+	#include "arfs_turfs.dm"
 	#include "arfs_defines.dm"
 	#include "arfs_misc.dm"
 	#include "arfs_areas.dm"
