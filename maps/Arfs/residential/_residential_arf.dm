@@ -18,7 +18,7 @@
 	if (current_location == landmark_station)
 		command_announcement.Announce("The Residential Shuttle has docked at ARFS Dallus.", announcer)
 	if (current_location == landmark_offsite)
-		command_announcement.Announce("The Residential Shuttle has docked at NCS Serenity Residential.", announcer)
+		command_announcement.Announce("The Residential Shuttle has docked at NCS Serenity Residential Biodome.", announcer)
 
 /obj/effect/shuttle_landmark/premade/residential/residences
 	name = "NCS Serenity Residential"
@@ -147,6 +147,24 @@ var/global/list/latejoin_residential = list()
 
 /area/residential/medbay
 	name = "\improper Residential - Residential Medbay"
+
+/area/residential/library
+	name = "\improper Residential - Residential Library"
+
+/area/residential/teleporter
+	name = "\improper Residential - Residential Teleporters"
+
+/area/residential/obs1
+	name = "\improper Residential - Observation One"
+
+/area/residential/obs2
+	name = "\improper Residential - Observation Two"
+
+/area/residential/obs3
+	name = "\improper Residential - Observation Three"
+
+/area/residential/outside
+	name = "\improper Residential - Outside"
 
 /area/residential/room1
 	name = "\improper Residential - Room 1"
