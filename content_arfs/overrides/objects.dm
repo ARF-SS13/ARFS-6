@@ -43,3 +43,55 @@
 /obj/item/weapon/handcuffs/fuzzy
 	desc = "Plastic and easy to break cuffs with soft fuzz on them. Wow, kinky!"
 	breakouttime = 100
+
+// Proc: update_active_camera_screen()
+// Parameters: None
+// Description: This refreshes the camera location
+/obj/item/device/communicator/update_active_camera_screen()
+	if(!video_source?.can_use())
+		show_static()
+		return
+
+	var/newturf = get_turf(video_source)
+	if(!get_z(newturf) in using_map.get_map_levels(get_z(src), TRUE))
+		show_static()
+		return
+
+	var/obj/item/device/communicator/communicator = video_source.loc
+	if(istype(communicator))
+		if(communicator.selfie_mode)
+			var/mob/target = get(communicator, /mob)
+			if(istype(target))
+				cam_screen.vis_contents = list(target)
+			else
+				cam_screen.vis_contents = list(communicator)
+			cam_background.fill_rect(1, 1, 1, 1)
+			cam_background.icon_state = "clear"
+			local_skybox.cut_overlays()
+			return
+
+	// If we're not forcing an update for some reason and the cameras are in the same location,
+	// we don't need to update anything.
+	if(last_camera_turf == newturf)
+		return
+
+	// We get a new turf in case they've moved in the last half decisecond (it's BYOND, it might happen)
+	last_camera_turf = get_turf(video_source)
+
+	if(!get_z(last_camera_turf) in using_map.get_map_levels(get_z(src), TRUE))
+		show_static()
+		return
+
+	var/list/visible_turfs = list()
+	var/list/visible_things = view(video_range, last_camera_turf)
+	for(var/turf/visible_turf in visible_things)
+		visible_turfs += visible_turf
+
+	cam_screen.vis_contents = visible_turfs
+	cam_background.icon_state = "clear"
+	cam_background.fill_rect(1, 1, (video_range * 2), (video_range * 2))
+	
+	local_skybox.cut_overlays()
+	local_skybox.add_overlay(SSskybox.get_skybox(get_z(last_camera_turf)))
+	local_skybox.scale_to_view(video_range * 2)
+	local_skybox.set_position("CENTER", "CENTER", (world.maxx>>1) - last_camera_turf.x, (world.maxy>>1) - last_camera_turf.y)

@@ -61,6 +61,15 @@
 
 	allowed_spawns = list("Arrivals Shuttle","Gateway","Cryogenic Storage","Cyborg Storage","NCS Serenity Residential")
 	planet_datums_to_make = list(/datum/planet/biodome)
+	map_levels = list(
+		Z_LEVEL_ARFS_ONE,
+		Z_LEVEL_ARFS_TWO,
+		Z_LEVEL_ARFS_THREE,
+		Z_LEVEL_CENTCOM_ARFS,
+		Z_LEVEL_MINING_ARFS,
+		Z_LEVEL_MINING_DANGER_ARFS,
+		Z_LEVEL_RESIDENTIAL_ARFS,
+		Z_LEVEL_RESIDENTIAL_STATION_ARFS)
 
 /datum/map/arfs/perform_map_generation()
 	new /datum/random_map/automata/cave_system(null, 1, 1, Z_LEVEL_MINING_ARFS, world.maxx, world.maxy) // Create the mining Z-level.
@@ -87,6 +96,10 @@
 			Z_LEVEL_ARFS_ONE,
 			Z_LEVEL_ARFS_TWO,
 			Z_LEVEL_ARFS_THREE)
+	else if (srcz >= Z_LEVEL_RESIDENTIAL_ARFS && srcz <= Z_LEVEL_RESIDENTIAL_STATION_ARFS)
+		return list(
+			Z_LEVEL_RESIDENTIAL_ARFS,
+			Z_LEVEL_RESIDENTIAL_STATION_ARFS)
 	else
 		return ..()
 
