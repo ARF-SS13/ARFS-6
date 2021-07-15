@@ -39,9 +39,9 @@
 	)
 	build_icons()
 
-/mob/living/simple_mob/vore/bigdragon/soul
+/mob/living/simple_mob/vore/bigdragon/friendly/soul
 
-/mob/living/simple_mob/vore/bigdragon/soul/Initialize()
+/mob/living/simple_mob/vore/bigdragon/friendly/soul/Initialize()
 	..()
 	name = "Soul"
 	under = "Smooth"
