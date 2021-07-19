@@ -6150,12 +6150,136 @@
 /turf/simulated/floor/plating,
 /area/maintenance/station/sec_upper)
 "fWU" = (
-/turf/simulated/floor/tiled,
-/area/space)
+/obj/machinery/computer/supplycomp/control,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/quartermaster/qm)
 "fXA" = (
+/obj/structure/table/woodentable,
+/obj/machinery/requests_console{
+	pixel_y = 30
+	},
+/obj/item/weapon/paper_bin{
+	pixel_x = -5;
+	pixel_y = 7
+	},
+/obj/item/weapon/stamp/qm{
+	pixel_x = 8;
+	pixel_y = 6
+	},
+/obj/item/weapon/pen/red{
+	pixel_x = -3;
+	pixel_y = -3
+	},
+/obj/item/weapon/pen{
+	pixel_x = 4;
+	pixel_y = -2
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/quartermaster/qm)
+"fXF" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/clipboard,
+/obj/item/weapon/folder/yellow{
+	pixel_x = 5
+	},
+/obj/machinery/button/remote/blast_door{
+	id = "qm";
+	name = "Office Lockdown";
+	pixel_x = -8;
+	pixel_y = 25;
+	req_access = list(2)
+	},
+/obj/machinery/light_switch{
+	pixel_y = 24
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/quartermaster/qm)
+"fXM" = (
+/mob/living/simple_mob/animal/passive/dog/tamaskan/Spice{
+	desc = "This appears to be a germen shepard. It seems like it would be bad at World of Tanks. Whatever that is";
+	name = "Serdy";
+	real_name = "Serdy"
+	},
+/obj/structure/dogbed,
+/turf/simulated/floor/carpet/oracarpet,
+/area/quartermaster/qm)
+"fYi" = (
+/obj/machinery/alarm{
+	frequency = 1441;
+	pixel_y = 22
+	},
+/turf/simulated/floor/wood,
+/area/quartermaster/qm)
+"fYG" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/quartermaster/qm)
+"gam" = (
+/obj/machinery/computer/security/mining{
+	dir = 8;
+	tag = "icon-computer (WEST)"
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/quartermaster/qm)
+"gau" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	dir = 4;
+	icon_state = "shutter0";
+	id = "qm";
+	name = "Blast Shutters";
+	opacity = 0
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/miningdock)
+"gaA" = (
+/obj/machinery/mineral/unloading_machine{
+	icon_state = "unloader-corner"
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
+"gaD" = (
+/obj/machinery/conveyor{
+	dir = 4;
+	id = "mining_internal"
+	},
+/obj/machinery/mineral/output,
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
+"gch" = (
+/obj/machinery/conveyor{
+	dir = 4;
+	id = "mining_internal"
+	},
+/obj/machinery/mineral/input,
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
+"gcn" = (
+/obj/machinery/mineral/processing_unit,
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
+"gcx" = (
+/obj/machinery/mineral/stacking_machine,
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
+"gdh" = (
+/turf/simulated/wall,
+/area/quartermaster/miningdock)
+"gdk" = (
 /turf/simulated/floor/plating,
 /area/space)
-"fXF" = (
+"gdJ" = (
 /obj/machinery/camera/network/engine{
 	c_tag = "ENGI - Civilian Substation";
 	dir = 8
@@ -6166,163 +6290,79 @@
 /obj/machinery/atmospherics/pipe/zpipe/up/scrubbers{
 	dir = 8
 	},
-/turf/simulated/floor/plating,
-/area/space)
-"fXM" = (
-/obj/machinery/portable_atmospherics/powered/pump,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating,
-/area/space)
-"fYi" = (
-/obj/machinery/portable_atmospherics/canister/air,
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating,
-/area/space)
-"fYG" = (
-/obj/machinery/portable_atmospherics/canister/air,
-/turf/simulated/floor/plating,
-/area/space)
-"gam" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/machinery/door/firedoor/border_only,
-/turf/simulated/floor/plating,
-/area/space)
-"gau" = (
-/obj/machinery/door/firedoor/border_only,
-/turf/simulated/floor/wood,
-/area/space)
-"gaA" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance/common,
-/turf/simulated/floor/plating,
-/area/space)
-"gaD" = (
-/obj/random/tool,
-/obj/effect/decal/cleanable/dirt,
-/obj/random/junk,
-/turf/simulated/floor/plating,
-/area/space)
-"gch" = (
-/obj/structure/loot_pile/maint/junk,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating,
-/area/space)
-"gcn" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/machinery/door/firedoor/border_only,
-/turf/simulated/floor/plating,
-/area/space)
-"gcx" = (
-/obj/structure/closet/emcloset,
-/turf/simulated/floor/plating,
-/area/space)
-"gdh" = (
-/obj/structure/table/rack,
-/obj/random/firstaid,
-/obj/effect/decal/cleanable/dirt,
-/obj/random/junk,
-/turf/simulated/floor/plating,
-/area/space)
-"gdk" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced,
-/obj/machinery/door/firedoor/border_only,
-/turf/simulated/floor/plating,
-/area/space)
-"gdJ" = (
-/obj/structure/closet/firecloset/full,
-/turf/simulated/floor/plating,
+/turf/simulated/open,
 /area/space)
 "gev" = (
-/obj/structure/reagent_dispensers/watertank,
-/obj/machinery/light{
-	dir = 1
+/obj/structure/grille,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced/full,
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	dir = 8;
+	icon_state = "shutter0";
+	id = "qm";
+	name = "Blast Shutters";
+	opacity = 0
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
-/area/space)
+/area/quartermaster/qm)
 "geX" = (
-/obj/structure/closet/firecloset/full,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating,
-/area/space)
+/turf/simulated/floor/carpet/oracarpet,
+/area/quartermaster/qm)
 "gfe" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/random/junk,
-/turf/simulated/floor/plating,
-/area/space)
+/obj/structure/bed/chair/office/dark{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/quartermaster/qm)
 "gfB" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/random/maintenance/security,
-/turf/simulated/floor/plating,
-/area/space)
+/obj/structure/table/woodentable,
+/turf/simulated/floor/carpet/oracarpet,
+/area/quartermaster/qm)
 "gge" = (
-/obj/random/junk,
-/obj/effect/landmark{
-	name = "morphspawn"
-	},
-/turf/simulated/floor/plating,
-/area/space)
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/carpet/oracarpet,
+/area/quartermaster/qm)
 "ggg" = (
-/obj/structure/closet/emcloset,
-/obj/item/weapon/extinguisher,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating,
-/area/space)
+/turf/simulated/floor/wood,
+/area/quartermaster/qm)
 "ghc" = (
-/obj/structure/table/rack,
-/obj/item/weapon/storage/box/lights/mixed,
-/obj/random/tool,
-/obj/random/junk,
-/turf/simulated/floor/plating,
-/area/space)
+/obj/machinery/computer/card{
+	dir = 8;
+	req_access = list();
+	tag = "icon-computer (WEST)"
+	},
+/turf/simulated/floor/wood,
+/area/quartermaster/qm)
 "ghD" = (
-/obj/structure/table/rack,
-/obj/random/firstaid,
-/obj/random/tool,
-/obj/random/tool,
-/obj/random/maintenance/security,
-/turf/simulated/floor/plating,
-/area/space)
+/obj/effect/floor_decal/industrial/loading{
+	dir = 1
+	},
+/obj/machinery/mineral/input,
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
 "gij" = (
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/structure/railing{
-	dir = 1
-	},
-/turf/simulated/open,
-/area/space)
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/plating,
+/area/quartermaster/miningdock)
 "giq" = (
-/obj/structure/railing{
-	dir = 1
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/plating,
+/area/quartermaster/miningdock)
+"gjT" = (
+/obj/machinery/mineral/processing_unit_console,
+/turf/simulated/wall,
+/area/quartermaster/miningdock)
+"gkO" = (
+/obj/machinery/conveyor{
+	id = "mining_internal"
 	},
-/turf/simulated/open,
-/area/space)
+/obj/machinery/mineral/output,
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
 "glZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -6342,6 +6382,314 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/port)
+"gme" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/cartridge/quartermaster,
+/obj/item/weapon/cartridge/quartermaster,
+/obj/item/weapon/cartridge/quartermaster,
+/turf/simulated/floor/carpet/oracarpet,
+/area/quartermaster/qm)
+"gmi" = (
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/quartermaster/qm)
+"gmA" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/wood,
+/area/quartermaster/qm)
+"gmO" = (
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+	},
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/wood,
+/area/quartermaster/qm)
+"gnc" = (
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -22
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
+"gnt" = (
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
+"gnG" = (
+/obj/machinery/conveyor_switch/oneway{
+	id = "mining_internal";
+	name = "mining conveyor"
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
+"gnH" = (
+/obj/machinery/mineral/stacking_unit_console,
+/turf/simulated/wall,
+/area/quartermaster/miningdock)
+"goU" = (
+/obj/machinery/conveyor{
+	id = "mining_internal"
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
+"goV" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/quartermaster/qm)
+"gpf" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/quartermaster/qm)
+"gpM" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/turf/simulated/floor/wood,
+/area/quartermaster/qm)
+"grQ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/quartermaster/qm)
+"gsl" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/quartermaster/qm)
+"gtm" = (
+/obj/machinery/camera/network/cargo{
+	c_tag = "CRG - QM Office";
+	dir = 9
+	},
+/turf/simulated/floor/wood,
+/area/quartermaster/qm)
+"gtp" = (
+/obj/structure/closet/crate,
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
+"gty" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
+"guD" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
+"guI" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
+"gvm" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
+"gvn" = (
+/obj/machinery/conveyor{
+	id = "mining_internal"
+	},
+/obj/structure/plasticflaps,
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
+"gvr" = (
+/obj/structure/closet/secure_closet/quartermaster,
+/obj/item/clothing/accessory/poncho/roles/cloak/qm,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -25
+	},
+/obj/machinery/light,
+/turf/simulated/floor/wood,
+/area/quartermaster/qm)
+"gvB" = (
+/obj/structure/filingcabinet/wide,
+/turf/simulated/floor/wood,
+/area/quartermaster/qm)
+"gvD" = (
+/obj/machinery/papershredder/arfs{
+	pixel_x = -14
+	},
+/turf/simulated/floor/wood,
+/area/quartermaster/qm)
+"gwY" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/wood,
+/area/quartermaster/qm)
+"gxx" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/quartermaster/qm)
+"gyv" = (
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/obj/machinery/light,
+/turf/simulated/floor/wood,
+/area/quartermaster/qm)
+"gzd" = (
+/obj/structure/ore_box,
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
+"gAI" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
+"gAN" = (
+/obj/effect/floor_decal/industrial/loading,
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
+"gBQ" = (
+/obj/machinery/portable_atmospherics/powered/pump,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/space)
+"gCa" = (
+/obj/machinery/portable_atmospherics/canister/air,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/space)
+"gCx" = (
+/obj/machinery/portable_atmospherics/canister/air,
+/turf/simulated/floor/plating,
+/area/space)
+"gCN" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/plating,
+/area/space)
+"gDr" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	dir = 2;
+	icon_state = "shutter0";
+	id = "qm";
+	name = "Blast Shutters";
+	opacity = 0
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/qm)
+"gEu" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/airlock/command{
+	name = "QM";
+	req_one_access = list(41)
+	},
+/turf/simulated/floor/wood,
+/area/quartermaster/qm)
+"gEF" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
+"gFA" = (
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
+"gGs" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/airlock/maintenance/common,
+/turf/simulated/floor/plating,
+/area/space)
+"gGt" = (
+/obj/random/tool,
+/obj/effect/decal/cleanable/dirt,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/space)
+"gGv" = (
+/obj/structure/loot_pile/maint/junk,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/space)
+"gHN" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/plating,
+/area/space)
+"gHV" = (
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
 "gHZ" = (
 /obj/machinery/hologram/holopad,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -6359,6 +6707,110 @@
 /area/ai_monitored/storage{
 	name = "Vault"
 	})
+"gIn" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
+"gJB" = (
+/obj/machinery/alarm{
+	frequency = 1441;
+	pixel_y = 22
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
+"gJD" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
+"gJR" = (
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24
+	},
+/obj/structure/cable/green{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
+"gLB" = (
+/obj/structure/closet/emcloset,
+/turf/simulated/floor/plating,
+/area/space)
+"gMq" = (
+/obj/structure/table/rack,
+/obj/random/firstaid,
+/obj/effect/decal/cleanable/dirt,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/space)
+"gNY" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced,
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/plating,
+/area/space)
+"gPt" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
+"gPu" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
+"gPx" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
+"gPy" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
+"gPz" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
 "gQi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -6373,6 +6825,280 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/port)
+"gRg" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
+"gRk" = (
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
+"gRO" = (
+/obj/structure/shuttle/engine/propulsion{
+	dir = 8;
+	icon_state = "propulsion_l"
+	},
+/turf/simulated/floor/airless,
+/area/shuttle/mining)
+"gRR" = (
+/turf/simulated/shuttle/wall{
+	color = "#ff6700";
+	hard_corner = 1
+	},
+/area/shuttle/mining)
+"gRV" = (
+/obj/structure/shuttle/window,
+/obj/structure/grille,
+/turf/simulated/shuttle/plating,
+/area/shuttle/mining)
+"gSl" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
+"gSz" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/open,
+/area/quartermaster/miningdock)
+"gSD" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/simulated/open,
+/area/quartermaster/miningdock)
+"gTk" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/open,
+/area/quartermaster/miningdock)
+"gTs" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
+"gUA" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
+"gUU" = (
+/obj/structure/closet/firecloset/full,
+/turf/simulated/floor/plating,
+/area/space)
+"gVc" = (
+/obj/structure/reagent_dispensers/watertank,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/space)
+"gVi" = (
+/obj/structure/closet/firecloset/full,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/space)
+"gVl" = (
+/obj/structure/closet/crate,
+/obj/random/maintenance/cargo,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor{
+	icon_state = "floor_yellow";
+	tag = "icon-floor_yellow"
+	},
+/area/shuttle/mining)
+"gVE" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/structure/bed/chair,
+/turf/simulated/shuttle/floor,
+/area/shuttle/mining)
+"gWj" = (
+/obj/structure/bed/chair,
+/turf/simulated/shuttle/floor,
+/area/shuttle/mining)
+"gWJ" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor,
+/area/shuttle/mining)
+"gXu" = (
+/obj/machinery/computer/shuttle_control/mining{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor,
+/area/shuttle/mining)
+"gXv" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 9
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1380;
+	id_tag = "mining_dock_pump"
+	},
+/turf/simulated/floor/tiled/steel,
+/area/quartermaster/miningdock)
+"gYE" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel,
+/area/quartermaster/miningdock)
+"gZe" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 5
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1380;
+	id_tag = "mining_dock_pump"
+	},
+/turf/simulated/floor/tiled/steel,
+/area/quartermaster/miningdock)
+"gZh" = (
+/obj/machinery/computer/shuttle_control/mining{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
+"gZz" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/open,
+/area/quartermaster/miningdock)
+"gZI" = (
+/turf/simulated/open,
+/area/quartermaster/miningdock)
+"gZL" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/open,
+/area/quartermaster/miningdock)
+"hap" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
+"hat" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
+"haM" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
+"haY" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/space)
+"hbL" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/random/maintenance/security,
+/turf/simulated/floor/plating,
+/area/space)
+"hbO" = (
+/obj/random/junk,
+/obj/effect/landmark{
+	name = "morphspawn"
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"hbR" = (
+/turf/simulated/shuttle/floor{
+	icon_state = "floor_yellow";
+	tag = "icon-floor_yellow"
+	},
+/area/shuttle/mining)
+"hcF" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor,
+/area/shuttle/mining)
+"hcM" = (
+/turf/simulated/shuttle/floor,
+/area/shuttle/mining)
+"hcU" = (
+/obj/effect/shuttle_landmark/premade/mining/station,
+/turf/simulated/shuttle/floor,
+/area/shuttle/mining)
 "hcX" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -6383,6 +7109,229 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/deckthree/aft)
+"hdd" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/external{
+	frequency = 1380;
+	icon_state = "door_locked";
+	id_tag = "mining_shuttle_hatch";
+	locked = 1;
+	name = "Shuttle Hatch";
+	req_access = list(13)
+	},
+/turf/simulated/shuttle/floor,
+/area/shuttle/mining)
+"hdm" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/external{
+	frequency = 1380;
+	icon_state = "door_locked";
+	id_tag = "mining_dock_outer";
+	locked = 1;
+	name = "Mining Dock Airlock";
+	req_access = list(13)
+	},
+/turf/simulated/floor,
+/area/quartermaster/miningdock)
+"hdv" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5;
+	tag = "icon-intact-f (NORTHEAST)"
+	},
+/turf/simulated/floor/tiled/steel,
+/area/quartermaster/miningdock)
+"heq" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4;
+	tag = "icon-intact (EAST)"
+	},
+/turf/simulated/floor/tiled/steel,
+/area/quartermaster/miningdock)
+"hfG" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden,
+/turf/simulated/floor/tiled/steel,
+/area/quartermaster/miningdock)
+"hfP" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/external{
+	frequency = 1380;
+	icon_state = "door_locked";
+	id_tag = "mining_dock_inner";
+	locked = 1;
+	name = "Mining Dock Airlock";
+	req_access = list(13)
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4;
+	tag = "icon-intact (EAST)"
+	},
+/turf/simulated/floor/tiled/steel,
+/area/quartermaster/miningdock)
+"hgk" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/universal{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
+"hhD" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
+"hiq" = (
+/obj/structure/closet/emcloset,
+/obj/item/weapon/extinguisher,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/space)
+"hix" = (
+/obj/structure/table/rack,
+/obj/item/weapon/storage/box/lights/mixed,
+/obj/random/tool,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/space)
+"hiI" = (
+/obj/structure/table/rack,
+/obj/random/firstaid,
+/obj/random/tool,
+/obj/random/tool,
+/obj/random/maintenance/security,
+/turf/simulated/floor/plating,
+/area/space)
+"hjD" = (
+/obj/structure/ore_box,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor{
+	icon_state = "floor_yellow";
+	tag = "icon-floor_yellow"
+	},
+/area/shuttle/mining)
+"hkf" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor,
+/area/shuttle/mining)
+"hkk" = (
+/obj/machinery/camera/network/mining{
+	c_tag = "OPM - Shuttle";
+	dir = 1
+	},
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor,
+/area/shuttle/mining)
+"hkI" = (
+/obj/structure/table/reinforced,
+/turf/simulated/shuttle/floor,
+/area/shuttle/mining)
+"hlq" = (
+/obj/structure/table/reinforced,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor,
+/area/shuttle/mining)
+"hlw" = (
+/obj/structure/closet/crate,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 10
+	},
+/obj/machinery/camera/network/cargo{
+	c_tag = "CRG - Mining Airlock";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel,
+/area/quartermaster/miningdock)
+"hmn" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
+	frequency = 1380;
+	id_tag = "mining_dock_airlock";
+	pixel_x = -6;
+	pixel_y = -25;
+	req_one_access = list(13,48);
+	tag_airpump = "mining_dock_pump";
+	tag_chamber_sensor = "mining_dock_sensor";
+	tag_exterior_door = "mining_dock_outer";
+	tag_interior_door = "mining_dock_inner"
+	},
+/obj/machinery/airlock_sensor{
+	frequency = 1380;
+	id_tag = "mining_dock_sensor";
+	pixel_x = 6;
+	pixel_y = -24
+	},
+/turf/simulated/floor/tiled/steel,
+/area/quartermaster/miningdock)
+"hmG" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/steel,
+/area/quartermaster/miningdock)
+"hnf" = (
+/turf/simulated/floor/tiled/steel,
+/area/quartermaster/miningdock)
+"hnx" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/railing,
+/turf/simulated/open,
+/area/quartermaster/miningdock)
+"hnG" = (
+/obj/structure/railing,
+/turf/simulated/open,
+/area/quartermaster/miningdock)
+"hnQ" = (
+/obj/structure/railing,
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/open,
+/area/quartermaster/miningdock)
+"hok" = (
+/obj/machinery/computer/security/mining{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel,
+/area/quartermaster/miningdock)
+"hoL" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
+"hoN" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
+"hoX" = (
+/turf/space,
+/area/quartermaster/miningdock)
+"hpn" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
+"hpD" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
 "hDg" = (
 /obj/effect/floor_decal/corner_kafel/blue{
 	dir = 10;
@@ -6890,6 +7839,9 @@
 /area/ai_monitored/storage{
 	name = "Vault"
 	})
+"pBR" = (
+/turf/simulated/wall,
+/area/quartermaster/qm)
 "qvr" = (
 /turf/simulated/floor/tiled/dark,
 /area/space)
@@ -29094,11 +30046,11 @@ uYf
 uYf
 uYf
 uYf
-uYf
-uYf
-uYf
-uYf
-uYf
+gRO
+gRR
+gRV
+gRR
+gRO
 uYf
 uYf
 uYf
@@ -29351,11 +30303,11 @@ uYf
 uYf
 uYf
 uYf
-uYf
-uYf
-uYf
-uYf
-uYf
+gRR
+gVl
+hbR
+hjD
+gRR
 uYf
 uYf
 uYf
@@ -29608,11 +30560,11 @@ uYf
 uYf
 uYf
 uYf
-uYf
-uYf
-uYf
-uYf
-uYf
+gRV
+gVE
+hcF
+hkf
+gRV
 uYf
 uYf
 uYf
@@ -29865,11 +30817,11 @@ uYf
 uYf
 uYf
 uYf
-uYf
-uYf
-uYf
-uYf
-uYf
+gRR
+gWj
+hcM
+hkk
+gRR
 uYf
 uYf
 uYf
@@ -30122,11 +31074,11 @@ uYf
 uYf
 uYf
 uYf
-uYf
-uYf
-uYf
-uYf
-uYf
+gRV
+gWJ
+hcM
+hkI
+gRV
 uYf
 uYf
 uYf
@@ -30379,11 +31331,11 @@ uYf
 uYf
 uYf
 uYf
-uYf
-uYf
-uYf
-uYf
-uYf
+gRR
+gXu
+hcU
+hlq
+gRR
 uYf
 uYf
 uYf
@@ -30636,11 +31588,11 @@ uYf
 uYf
 uYf
 uYf
-uYf
-uYf
-uYf
-uYf
-uYf
+gRR
+gRR
+hdd
+gRR
+gRR
 uYf
 uYf
 uYf
@@ -30893,11 +31845,11 @@ uYf
 uYf
 uYf
 uYf
-uYf
-uYf
-uYf
-uYf
-uYf
+gij
+gij
+hdm
+gij
+gij
 uYf
 uYf
 uYf
@@ -31150,11 +32102,11 @@ uYf
 uYf
 uYf
 uYf
-uYf
-uYf
-uYf
-uYf
-uYf
+gij
+gXv
+hdv
+hlw
+gij
 uYf
 uYf
 uYf
@@ -31407,11 +32359,11 @@ uYf
 uYf
 uYf
 uYf
-uYf
-uYf
-uYf
-uYf
-uYf
+gij
+gYE
+heq
+hmn
+gij
 uYf
 uYf
 uYf
@@ -31664,13 +32616,13 @@ uYf
 uYf
 uYf
 uYf
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
+gij
+gZe
+hfG
+hmG
+gij
+hoX
+hoX
 uYf
 uYf
 uYf
@@ -31913,21 +32865,21 @@ cAq
 cAq
 cAq
 cAq
-ogO
-ogO
-ogO
-ogO
-ogO
-ogO
-ogO
-ogO
-ogO
-ogO
-ogO
-ogO
-ogO
-ogO
-ogO
+pBR
+gev
+gev
+gev
+pBR
+pBR
+gdh
+gdh
+gij
+gij
+hfP
+gij
+gij
+gdh
+gdh
 uYf
 uYf
 uYf
@@ -32170,21 +33122,21 @@ cWB
 dnm
 eDz
 cAq
-sHT
-sHT
-sHT
-sHT
-sHT
-ogO
 fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-ogO
+geX
+geX
+ggg
+gvr
+pBR
+gzd
+gnt
+gnt
+gZh
+hgk
+hnf
+hok
+gnt
+gdh
 uYf
 uYf
 uYf
@@ -32427,21 +33379,21 @@ dnm
 dnm
 cKF
 cAq
-sHT
-sHT
-sHT
-sHT
-sHT
-ogO
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-ogO
+fXA
+gfe
+gme
+goV
+gvB
+gDr
+gzd
+gPt
+gSl
+gSl
+hhD
+gSl
+hoL
+gnt
+gdh
 uYf
 uYf
 uYf
@@ -32684,21 +33636,21 @@ eYX
 eYX
 cWx
 cAq
-sHT
-sHT
-sHT
-sHT
-sHT
-ogO
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-ogO
+fXF
+gfB
+gfB
+gpf
+gvD
+gDr
+gHV
+gPu
+gSz
+gZz
+gZz
+hnx
+hoN
+hpn
+gdh
 uYf
 uYf
 uYf
@@ -32941,21 +33893,21 @@ fDp
 eYX
 cWx
 cAq
-sHT
-sHT
-sHT
-sHT
-sHT
-gau
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-ogO
+fXM
+gge
+gmi
+gpM
+gwY
+gEu
+gIn
+gPx
+gSD
+gZI
+gZI
+hnG
+gnt
+gnt
+gdh
 uYf
 uYf
 uYf
@@ -33198,21 +34150,21 @@ fDp
 eYX
 dnm
 cAq
-sHT
-sHT
-sHT
-sHT
-sHT
-ogO
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-ogO
+fYi
+ggg
+gmA
+grQ
+gxx
+gDr
+gnt
+gPy
+gSD
+gZI
+gZI
+hnG
+gnt
+gnt
+gdh
 uYf
 uYf
 uYf
@@ -33455,21 +34407,21 @@ fDp
 eYX
 dnm
 cAq
-sHT
-sHT
-sHT
-sHT
-sHT
-ogO
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-gij
-ogO
+fYG
+ggg
+gmA
+gsl
+gxx
+gDr
+gnt
+gPy
+gSD
+gZI
+gZI
+hnG
+gnt
+gnt
+gdh
 uYf
 uYf
 uYf
@@ -33712,21 +34664,21 @@ fDp
 eYX
 dnm
 cAq
-sHT
-sHT
-sHT
-sHT
-sHT
-ogO
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-giq
-ogO
+gam
+ghc
+gmO
+gtm
+gyv
+pBR
+gnt
+gPy
+gSD
+gZI
+gZI
+hnG
+gnt
+gSz
+gdh
 uYf
 uYf
 uYf
@@ -33969,21 +34921,21 @@ fDp
 eYX
 fst
 cAq
-ogO
-ogO
-ogO
-ogO
-ogO
-ogO
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-ogO
+gau
+gau
+pBR
+gau
+gau
+gdh
+gnt
+gPy
+gTk
+gZL
+gZL
+hnQ
+gnt
+gSD
+gdh
 uYf
 uYf
 uYf
@@ -34226,21 +35178,21 @@ eYX
 eYX
 cKF
 cAq
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-ogO
+gaA
+ghD
+gnc
+gtp
+gzd
+gdh
+gJB
+gPy
+gnt
+gnt
+gnt
+gnt
+gnt
+gnt
+gdh
 uYf
 uYf
 uYf
@@ -34483,21 +35435,21 @@ cNP
 cAq
 cKF
 cAq
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-ogO
+gaD
+gij
+gnt
+gty
+gnt
+gdh
+gJD
+gPz
+gTs
+gTs
+gTs
+gTs
+gTs
+hpD
+gdh
 uYf
 uYf
 uYf
@@ -34740,21 +35692,21 @@ fUp
 fSC
 dnm
 cAq
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-ogO
+gch
+giq
+gnG
+guD
+gAI
+gEF
+gAI
+gRg
+gnt
+gnt
+gnt
+gnt
+gnt
+gnt
+gdh
 uYf
 uYf
 uYf
@@ -34997,21 +35949,21 @@ cAq
 cAq
 dnm
 cAq
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-ogO
+gcn
+gjT
+gnt
+guI
+gnt
+gFA
+gnt
+gPy
+gnt
+gnt
+gnt
+gnt
+gnt
+gnt
+gdh
 uYf
 uYf
 uYf
@@ -35254,21 +36206,21 @@ dKj
 fWp
 dnm
 cAq
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-ogO
+gaD
+giq
+gnt
+gvm
+gnt
+gdh
+gnt
+gPy
+gnt
+gnt
+gnt
+gnt
+gnt
+gnt
+gdh
 uYf
 uYf
 uYf
@@ -35511,21 +36463,21 @@ cNP
 cNP
 dnm
 cAq
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-ogO
+gch
+gdh
+gnH
+giq
+gnt
+gdh
+gJR
+gRk
+gUA
+hap
+gnt
+gnt
+gnt
+gnt
+gdh
 uYf
 uYf
 uYf
@@ -35768,21 +36720,21 @@ dnm
 dnm
 fWG
 cAq
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-fWU
-ogO
+gcx
+gkO
+goU
+gvn
+gAN
+gdh
+gnt
+gnt
+gnt
+hat
+gnt
+gnt
+gnt
+gnt
+gdh
 uYf
 uYf
 uYf
@@ -36025,22 +36977,22 @@ cAq
 cAq
 cAq
 cAq
+gdh
+giq
+giq
+giq
+gdh
+gdh
+gdh
+giq
+giq
+haM
+gFA
+giq
+giq
+gdh
+gdh
 ogO
-ogO
-ogO
-ogO
-ogO
-ogO
-ogO
-ogO
-ogO
-ogO
-ogO
-ogO
-ogO
-ogO
-ogO
-uYf
 uYf
 uYf
 uYf
@@ -36281,23 +37233,23 @@ qvr
 qvr
 qvr
 qvr
+qvr
+qvr
+qvr
+qvr
+qvr
+qvr
+qvr
+qvr
+qvr
+qvr
+qvr
+qvr
+qvr
+qvr
+qvr
+qvr
 ogO
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
 uYf
 uYf
 uYf
@@ -36538,23 +37490,23 @@ qvr
 qvr
 qvr
 qvr
+qvr
+qvr
+qvr
+qvr
+qvr
+qvr
+qvr
+qvr
+qvr
+qvr
+qvr
+qvr
+qvr
+qvr
+qvr
+qvr
 ogO
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
 uYf
 uYf
 uYf
@@ -36795,23 +37747,23 @@ qvr
 qvr
 qvr
 qvr
+qvr
+qvr
+qvr
+qvr
+qvr
+qvr
+qvr
+qvr
+qvr
+qvr
+qvr
+qvr
+qvr
+qvr
+qvr
+qvr
 ogO
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
 uYf
 uYf
 uYf
@@ -37053,22 +38005,22 @@ ogO
 ogO
 ogO
 ogO
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
-uYf
+ogO
+ogO
+ogO
+ogO
+ogO
+ogO
+ogO
+ogO
+ogO
+ogO
+ogO
+ogO
+ogO
+ogO
+ogO
+ogO
 uYf
 uYf
 uYf
@@ -40908,16 +41860,16 @@ uYf
 uYf
 uYf
 ogO
-fXA
-fXA
+gdk
+gdk
 ogO
 ogO
 ogO
-gaA
+gGs
 ogO
 ogO
 ogO
-gaA
+gGs
 ogO
 ogO
 uYf
@@ -41165,17 +42117,17 @@ uYf
 uYf
 uYf
 ogO
-fXA
-fXA
-fXA
+gdk
+gdk
+gdk
 ogO
-fXM
-fXA
-fXA
+gBQ
+gdk
+gdk
 ogO
-gdJ
-gfe
-ggg
+gUU
+haY
+hiq
 ogO
 uYf
 uYf
@@ -41422,17 +42374,17 @@ uYf
 uYf
 uYf
 ogO
-fXA
-fXA
-fXA
+gdk
+gdk
+gdk
 ogO
-fYi
-gaD
-gcx
+gCa
+gGt
+gLB
 ogO
-gev
-gfB
-ghc
+gVc
+hbL
+hix
 ogO
 uYf
 uYf
@@ -41679,17 +42631,17 @@ uYf
 uYf
 uYf
 ogO
-fXF
-fXA
-fXA
+gdJ
+gdk
+gdk
 ogO
-fYG
-gch
-gdh
+gCx
+gGv
+gMq
 ogO
-geX
-gge
-ghD
+gVi
+hbO
+hiI
 ogO
 uYf
 uYf
@@ -41940,13 +42892,13 @@ ogO
 ogO
 ogO
 ogO
-gam
-gcn
-gdk
+gCN
+gHN
+gNY
 ogO
-gam
-gcn
-gdk
+gCN
+gHN
+gNY
 ogO
 uYf
 uYf
