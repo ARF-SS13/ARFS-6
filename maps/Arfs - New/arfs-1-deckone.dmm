@@ -8910,17 +8910,19 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/Dorm_2)
 "cof" = (
-/obj/machinery/power/apc{
-	dir = 8;
-	name = "west bump";
-	pixel_x = -28
+/obj/effect/floor_decal/borderfloorblack/corner{
+	dir = 4
 	},
-/obj/structure/cable/green{
-	d2 = 2;
-	icon_state = "0-2"
+/obj/effect/floor_decal/corner/green/bordercorner{
+	dir = 4
 	},
-/turf/simulated/floor/plating,
-/area/maintenance/dormitory)
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/hallway/primary/fore)
 "cov" = (
 /turf/simulated/wall,
 /area/crew_quarters/sleep)
@@ -8991,6 +8993,11 @@
 "cHF" = (
 /obj/effect/floor_decal/borderfloorblack/corner,
 /obj/effect/floor_decal/corner/green/bordercorner,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/fore)
 "cIL" = (
@@ -9139,6 +9146,11 @@
 /area/crew_quarters/sleep/Dorm_1)
 "dBF" = (
 /obj/machinery/door/firedoor/border_only,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plating,
 /area/hallway/primary/fore)
 "dED" = (
@@ -9304,6 +9316,11 @@
 	},
 /obj/effect/floor_decal/corner/green/border{
 	dir = 6
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/fore)
@@ -11077,9 +11094,14 @@
 /turf/simulated/floor/tiled/dark,
 /area/janitor)
 "ngg" = (
-/obj/machinery/alarm{
+/obj/machinery/power/apc{
 	dir = 8;
-	pixel_x = 24
+	name = "west bump";
+	pixel_x = -28
+	},
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/dormitory)
@@ -11149,6 +11171,14 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/Dorm_2)
+"nDf" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/dormitory)
 "nIs" = (
 /obj/machinery/door/firedoor/glass/hidden,
 /obj/effect/floor_decal/borderfloorblack{
@@ -11191,6 +11221,13 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/fore)
+"nZj" = (
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 24
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/dormitory)
 "nZr" = (
 /obj/structure/sign/deck/first{
 	pixel_x = 1;
@@ -11424,6 +11461,14 @@
 /obj/random/junk,
 /turf/simulated/floor/plating,
 /area/maintenance/dormitory)
+"oKc" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/hallway/primary/fore)
 "oPd" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -11732,6 +11777,14 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/Dorm_3)
+"qbw" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/dormitory)
 "qdQ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -12245,6 +12298,14 @@
 /obj/structure/cable/green,
 /turf/simulated/floor/plating,
 /area/security/security_cell_hallway)
+"sTN" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/dormitory)
 "sVm" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -12810,6 +12871,12 @@
 /area/maintenance/dormitory)
 "vpz" = (
 /obj/machinery/door/firedoor/border_only,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	dir = 4;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/station/cargo)
 "vrd" = (
@@ -46578,14 +46645,14 @@ vnK
 ard
 mkR
 xwC
-nnj
-ayY
+cof
+oKc
 cHF
 euT
 dBF
+sTN
 uYi
-uYi
-cof
+ngg
 aqk
 dXU
 uqF
@@ -46840,14 +46907,14 @@ riC
 cIL
 amK
 amK
-uYi
-uYi
-uYi
+nDf
+qbw
+qbw
 irL
+sTN
 uYi
 uYi
-uYi
-ngg
+nZj
 uYi
 uYi
 uYi
