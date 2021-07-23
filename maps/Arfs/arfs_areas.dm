@@ -272,3 +272,45 @@
 	name = "\improper Explorationn Waiting Room"
 	icon_state = "exploration"
 	icon = 'maps/arfs/arfs_areas.dmi'
+
+// Elevator areas.
+/area/turbolift
+	delay_time = 2 SECONDS
+	forced_ambience = list('sound/music/elevator.ogg')
+	dynamic_lighting = FALSE //Temporary fix for elevator lighting
+
+	requires_power = FALSE
+
+/area/turbolift/tether/transit
+	name = "arfs (midway)"
+	lift_floor_label = "Arfs Midpoint"
+	lift_floor_name = "Arfs"
+	lift_announce_str = "Arriving at Arfs midway point."
+	delay_time = 5 SECONDS
+
+/area/turbolift/t_surface/level1
+	name = "Bottom Deck(level 1)"
+	lift_floor_label = "Bottom Deck"
+	lift_floor_name = "Underbar"
+	lift_announce_str = "Arriving at Bottom Level 1."
+	base_turf = /turf/simulated/floor/plating
+
+/area/turbolift/t_surface/level2
+	name = "Middle Deck (level 2)"
+	lift_floor_label = "Middle Deck"
+	lift_floor_name = "Bridge, Lower Security, Dorms, Bar, Kitchen/Botany, Cargo, Lower Medical, Lower Science, Lower Engineering"
+	lift_announce_str = "Arriving at Middle Level 2."
+
+/area/turbolift/t_surface/level3
+	name = "Top Deck (level 3)"
+	lift_floor_label = "Top Deck"
+	lift_floor_name = "AI Upload, Telecoms, Mining Dock, Pool, Gym, Upper Security, Upper Medical, Upper Science, Upper Engineering, Arrivals and Departures."
+	lift_announce_str = "Arriving at Top Level 3."
+
+/area/tether/elevator
+	name = "\improper Arfs Elevator"
+	icon = 'icons/turf/areas_vr.dmi'
+	icon_state = "elevator"
+	dynamic_lighting = FALSE
+
+	requires_power = FALSE
