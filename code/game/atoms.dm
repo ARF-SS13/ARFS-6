@@ -140,9 +140,6 @@
 		return flags & INSERT_CONTAINER
 */
 
-/atom/proc/CheckExit()
-	return 1
-
 // Used to be for the PROXMOVE flag, but that was terrible, so instead it's just here as a stub for
 // all the atoms that still have the proc, but get events other ways.
 /atom/proc/HasProximity(turf/T, atom/movable/AM, old_loc)
@@ -715,3 +712,11 @@
 
 /atom/proc/interact(mob/user)
 	return
+
+// Purpose: Determines if the object can pass this atom.
+// Called by: Movement.
+// Inputs: The moving atom, target turf.
+// Outputs: Boolean if can pass.
+// Airflow and ZAS zones now uses CanZASPass() instead of this proc.
+/atom/proc/CanPass(atom/movable/mover, turf/target)
+	return !density
