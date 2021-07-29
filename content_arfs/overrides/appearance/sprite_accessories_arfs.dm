@@ -6,15 +6,15 @@
 
 /datum/sprite_accessory/tail/taur/fatdrake/andy
 	name = "Fat Drake (Taur dual-color) - Special"
-	ckeys_allowed = list("dameonowen")
+	ckeys_allowed = list("dameonowen", "andyman105")
 
 /datum/sprite_accessory/tail/taur/drake/andy
 	name = "Drake (Taur) - Special"
-	ckeys_allowed = list("dameonowen")
+	ckeys_allowed = list("dameonowen", "andyman105")
 
 /datum/sprite_accessory/tail/dragon/andy
 	name = "dragon, colorable - Special"
-	ckeys_allowed = list("dameonowen")
+	ckeys_allowed = list("dameonowen", "andyman105")
 
 /mob/living/carbon/human/proc/special_select_tail()
 	set name = "Select Taur"
