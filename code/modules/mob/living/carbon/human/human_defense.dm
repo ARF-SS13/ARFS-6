@@ -135,8 +135,7 @@ emp_act
 			siemens_coefficient *= C.siemens_coefficient
 
 	// Modifiers.
-	for(var/thing in modifiers)
-		var/datum/modifier/M = thing
+	for(var/datum/modifier/M as anything in modifiers)
 		if(!isnull(M.siemens_coefficient))
 			siemens_coefficient *= M.siemens_coefficient
 
@@ -181,8 +180,7 @@ emp_act
 	for(var/obj/item/clothing/gear in protective_gear)
 		protection += gear.armor[type]
 
-	for(var/thing in modifiers)
-		var/datum/modifier/M = thing
+	for(var/datum/modifier/M as anything in modifiers)
 		var/modifier_armor = LAZYACCESS(M.armor_percent, type)
 		if(modifier_armor)
 			protection += modifier_armor
@@ -197,8 +195,7 @@ emp_act
 	for(var/obj/item/clothing/gear in protective_gear)
 		soaked += gear.armorsoak[type]
 
-	for(var/thing in modifiers)
-		var/datum/modifier/M = thing
+	for(var/datum/modifier/M as anything in modifiers)
 		var/modifier_armor = LAZYACCESS(M.armor_flat, type)
 		if(modifier_armor)
 			soaked += modifier_armor
@@ -472,7 +469,7 @@ emp_act
 			mass = I.w_class/THROWNOBJ_KNOCKBACK_DIVISOR
 		var/momentum = speed*mass
 
-		if(O.throw_source && momentum >= THROWNOBJ_KNOCKBACK_SPEED)
+		if(O.throw_source && momentum >= THROWNOBJ_KNOCKBACK_SPEED && !buckled)
 			var/dir = get_dir(O.throw_source, src)
 
 			visible_message("<font color='red'>[src] staggers under the impact!</font>","<font color='red'>You stagger under the impact!</font>")
@@ -486,7 +483,7 @@ emp_act
 				if(T)
 					src.loc = T
 					visible_message("<span class='warning'>[src] is pinned to the wall by [O]!</span>","<span class='warning'>You are pinned to the wall by [O]!</span>")
-					src.anchored = 1
+					src.anchored = TRUE
 					src.pinned += O
 
 // This does a prob check to catch the thing flying at you, with a minimum of 1%

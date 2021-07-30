@@ -126,7 +126,7 @@
 /obj/structure/holostool
 	name = "stool"
 	desc = "Apply butt."
-	icon = 'icons/obj/furniture.dmi'
+	icon = 'icons/obj/furniture_vr.dmi'
 	icon_state = "stool_padded_preview"
 	anchored = TRUE
 	pressure_resistance = 15
@@ -256,7 +256,7 @@
 	return
 
 /obj/machinery/door/window/holowindoor/shatter(var/display_message = 1)
-	src.density = 0
+	src.density = FALSE
 	playsound(src, "shatter", 70, 1)
 	if(display_message)
 		visible_message("[src] fades away as it shatters!")

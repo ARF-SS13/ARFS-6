@@ -65,7 +65,7 @@
 		.+=360
 
 //Returns location. Returns null if no location was found.
-/proc/get_teleport_loc(turf/location,mob/target,distance = 1, density = 0, errorx = 0, errory = 0, eoffsetx = 0, eoffsety = 0)
+/proc/get_teleport_loc(turf/location,mob/target,distance = 1, density = FALSE, errorx = 0, errory = 0, eoffsetx = 0, eoffsety = 0)
 /*
 Location where the teleport begins, target that will teleport, distance to go, density checking 0/1(yes/no).
 Random error in tile placement x, error in tile placement y, and block offset.
@@ -552,10 +552,6 @@ Turf and target are seperate in case you want to teleport some distance from a t
 	var/x = min(world.maxx, max(1, A.x + dx))
 	var/y = min(world.maxy, max(1, A.y + dy))
 	return locate(x,y,A.z)
-
-//Makes sure MIDDLE is between LOW and HIGH. If not, it adjusts it. Returns the adjusted value.
-/proc/between(var/low, var/middle, var/high)
-	return max(min(middle, high), low)
 
 //returns random gauss number
 /proc/GaussRand(var/sigma)
@@ -1256,8 +1252,7 @@ var/mob/dview/dview_mob = new
 	if(orange)
 		turfs -= get_turf(center)
 	. = list()
-	for(var/V in turfs)
-		var/turf/T = V
+	for(var/turf/T as anything in turfs)
 		. += T
 		. += T.contents
 		if(areas)

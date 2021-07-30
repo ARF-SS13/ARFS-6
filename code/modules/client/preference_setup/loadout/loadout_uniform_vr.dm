@@ -171,8 +171,7 @@ Swimsuits
 /datum/gear/uniform/swimsuits/New()
 	..()
 	var/list/swimsuits = list()
-	for(var/swimsuit in typesof(/obj/item/weapon/storage/box/fluff/swimsuit))
-		var/obj/item/weapon/storage/box/fluff/swimsuit/swimsuit_type = swimsuit
+	for(var/obj/item/weapon/storage/box/fluff/swimsuit/swimsuit_type as anything in typesof(/obj/item/weapon/storage/box/fluff/swimsuit))
 		swimsuits[initial(swimsuit_type.name)] = swimsuit_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(swimsuits))
 
@@ -221,8 +220,8 @@ Bluespace jumpsuit
 Talon jumpsuit
 */
 /datum/gear/uniform/talonbasic
-	display_name = "ITV Jumpsuit"
-	description = "A jumpsuit that is usually issued to ITV contractors, however others can purchase it to show their support towards ITV."
+	display_name = "Talon Jumpsuit"
+	description = "A jumpsuit that is usually issued to ITV Talon contractors, however others can purchase it to show their support towards the ship."
 	path = /obj/item/clothing/under/rank/talon/basic
 
 // Summer dresses
