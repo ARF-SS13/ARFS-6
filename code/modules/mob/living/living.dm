@@ -850,9 +850,9 @@
 
 	if(lying)
 		density = FALSE
-		if(l_hand) 
+		if(l_hand)
 			unEquip(l_hand)
-		if(r_hand) 
+		if(r_hand)
 			unEquip(r_hand)
 		for(var/obj/item/weapon/holder/holder in get_mob_riding_slots())
 			unEquip(holder)
@@ -1166,6 +1166,8 @@
 		screen_icon = new()
 		RegisterSignal(screen_icon, COMSIG_CLICK, .proc/character_setup_click)
 	screen_icon.icon = HUD.ui_style
+	screen_icon.color = HUD.ui_color
+	screen_icon.alpha = HUD.ui_alpha
 	LAZYADD(HUD.other_important, screen_icon)
 	user.client?.screen += screen_icon
 
