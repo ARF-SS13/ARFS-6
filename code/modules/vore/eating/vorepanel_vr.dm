@@ -22,7 +22,8 @@
 	vorePanel.tgui_interact(src)
 
 /mob/living/proc/updateVRPanel() //Panel popup update call from belly events.
-	SStgui.update_uis(vorePanel)
+	if(vorePanel)
+		SStgui.update_uis(vorePanel)
 
 //
 // Callback Handler for the Inside form
@@ -302,6 +303,10 @@
 			return set_attr(usr, params)
 
 		if("saveprefs")
+			if(!ishuman(host) && !issilicon(host))
+				var/choice = tgui_alert(usr, "Warning: Saving your vore panel while playing what is very-likely not your normal character will overwrite whatever character you have loaded in character setup. Maybe this is your 'playing a simple mob' slot, though. Are you SURE you want to overwrite your current slot with these vore bellies?", "WARNING!", list("No, abort!", "Yes, save."))
+				if(choice != "Yes, save.")
+					return TRUE
 			if(!host.save_vore_prefs())
 				tgui_alert_async(usr, "ERROR: Virgo-specific preferences failed to save!","Error")
 			else
@@ -744,6 +749,31 @@
 					var/new_message = input(user,"These are sent to prey every minute when you are on Drain mode. Write them in 2nd person ('%pred's %belly squishes down on you.')"+help,"Idle Message (Drain)",host.vore_selected.get_messages("im_drain")) as message
 					if(new_message)
 						host.vore_selected.set_messages(new_message,"im_drain")
+
+				if("im_steal")
+					var/new_message = input(user,"These are sent to prey every minute when you are on Size Steal mode. Write them in 2nd person ('%pred's %belly squishes down on you.')"+help,"Idle Message (Size Steal)",host.vore_selected.get_messages("im_steal")) as message
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"im_steal")
+
+				if("im_egg")
+					var/new_message = input(user,"These are sent to prey every minute when you are on Encase In Egg mode. Write them in 2nd person ('%pred's %belly squishes down on you.')"+help,"Idle Message (Encase In Egg)",host.vore_selected.get_messages("im_egg")) as message
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"im_egg")
+
+				if("im_shrink")
+					var/new_message = input(user,"These are sent to prey every minute when you are on Shrink mode. Write them in 2nd person ('%pred's %belly squishes down on you.')"+help,"Idle Message (Shrink)",host.vore_selected.get_messages("im_shrink")) as message
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"im_shrink")
+
+				if("im_grow")
+					var/new_message = input(user,"These are sent to prey every minute when you are on Grow mode. Write them in 2nd person ('%pred's %belly squishes down on you.')"+help,"Idle Message (Grow)",host.vore_selected.get_messages("im_grow")) as message
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"im_grow")
+
+				if("im_unabsorb")
+					var/new_message = input(user,"These are sent to prey every minute when you are on Unabsorb mode. Write them in 2nd person ('%pred's %belly squishes down on you.')"+help,"Idle Message (Unabsorb)",host.vore_selected.get_messages("im_unabsorb")) as message
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"im_unabsorb")
 
 				if("reset")
 					var/confirm = tgui_alert(user,"This will delete any custom messages. Are you sure?","Confirmation",list("Cancel","DELETE"))

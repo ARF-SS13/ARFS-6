@@ -164,10 +164,15 @@
 	)
 	gear_tweaks += new/datum/gear_tweak/path(labcoats)
 
-/datum/gear/suit/labcoat/emt
+/datum/gear/suit/labcoat_emt
 	display_name = "labcoat, EMT"
 	path = /obj/item/clothing/suit/storage/toggle/labcoat/emt
 	allowed_roles = list("Medical Doctor","Chief Medical Officer","Chemist","Paramedic","Geneticist", "Psychiatrist")
+
+/datum/gear/suit/labcoat_rd
+	display_name = "labcoat, research director"
+	path = /obj/item/clothing/suit/storage/toggle/labcoat/rd
+	allowed_roles = list("Research Director")
 
 /datum/gear/suit/miscellaneous/labcoat
 	display_name = "plague doctor's coat"
@@ -549,6 +554,18 @@
 	)
 	gear_tweaks += new/datum/gear_tweak/path(jacket)
 
+/datum/gear/suit/miscellaneous/light_jacket
+	display_name = "light jacket selection"
+	path = /obj/item/clothing/suit/storage/toggle/light_jacket
+
+/datum/gear/suit/miscellaneous/light_jacket/New()
+	..()
+	var/list/jacket = list(
+		"grey light jacket" = /obj/item/clothing/suit/storage/toggle/light_jacket,
+		"dark blue light jacket" = /obj/item/clothing/suit/storage/toggle/light_jacket/blue
+	)
+	gear_tweaks += new/datum/gear_tweak/path(jacket)
+
 /datum/gear/suit/miscellaneous/peacoat
 	display_name = "peacoat"
 	path = /obj/item/clothing/suit/storage/toggle/peacoat
@@ -602,3 +619,8 @@
 /datum/gear/suit/miscellaneous/cardigan/New()
 	..()
 	gear_tweaks += gear_tweak_free_color_choice
+
+/datum/gear/suit/cmddressjacket
+	display_name = "command dress jacket"
+	path = /obj/item/clothing/suit/storage/cmddressjacket
+	allowed_roles = list("Facility Director", "Head of Personnel", "Command Secretary")

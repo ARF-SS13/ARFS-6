@@ -118,9 +118,6 @@
 	if(!can_see_target(the_target) && vision_required)
 		return FALSE
 
-	if(istype(the_target, /mob/zshadow))
-		return FALSE // no
-
 	if(isliving(the_target))
 		var/mob/living/L = the_target
 		if(ishuman(L) || issilicon(L))
@@ -254,6 +251,10 @@
 		ai_log("react_to_attack() : Was attacked by [attacker], but we switched targets too recently to change.", AI_LOG_TRACE)
 		on_attacked(attacker)
 		return FALSE
+
+	if(holder.resting)	// I can't kill someone while I'm laying down!
+		ai_log("react_to_attack() : AI is resting. Getting up.", AI_LOG_TRACE)
+		holder.lay_down()
 
 	if(stance == STANCE_SLEEP) // If we're asleep, try waking up if someone's wailing on us.
 		ai_log("react_to_attack() : AI is asleep. Waking up.", AI_LOG_TRACE)
