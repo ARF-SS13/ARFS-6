@@ -58,6 +58,10 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/healthcenter)
+"ar" = (
+/obj/structure/bed/chair/sofa/teal/left,
+/turf/simulated/floor/carpet/retro,
+/area/residential/outside)
 "at" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/airlock/multi_tile/glass{
@@ -239,8 +243,13 @@
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
 "bn" = (
-/obj/structure/closet/lasertag/blue,
-/turf/simulated/floor/outdoors/grass/forest/biodome,
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/machinery/suit_cycler{
+	req_access = list()
+	},
+/turf/simulated/floor/tiled/dark,
 /area/residential/outside)
 "bo" = (
 /obj/structure/table/steel_reinforced,
@@ -258,12 +267,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/residential/outside)
-"bp" = (
-/obj/structure/sign/deck/third{
-	pixel_y = -31
-	},
-/turf/simulated/floor/tiled/kafel_full,
-/area/residential/teleporter)
 "bs" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -1005,6 +1008,12 @@
 /obj/item/weapon/beach_ball,
 /turf/simulated/floor/water,
 /area/residential/outside)
+"eG" = (
+/obj/structure/sign/deck/fourth{
+	pixel_y = -31
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/residential/teleporter)
 "eJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -1220,8 +1229,11 @@
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
 "fC" = (
-/obj/machinery/atmospherics/unary/vent_pump/on,
-/turf/simulated/floor/carpet/retro,
+/obj/machinery/atmospherics/portables_connector{
+	dir = 8
+	},
+/obj/machinery/portable_atmospherics/powered/pump/filled,
+/turf/simulated/floor/tiled/dark,
 /area/residential/outside)
 "fH" = (
 /obj/structure/table/marble,
@@ -1309,6 +1321,12 @@
 /obj/structure/bed/chair/comfy/brown,
 /turf/simulated/floor/carpet/purcarpet,
 /area/residential/library)
+"fT" = (
+/obj/machinery/door/airlock/voidcraft{
+	name = "Teleporter from Level Four"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/residential/teleporter)
 "fU" = (
 /obj/structure/railing{
 	dir = 1
@@ -1451,12 +1469,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/residential/outside)
-"gC" = (
-/obj/machinery/door/airlock/voidcraft{
-	name = "Teleporter from Level Four"
-	},
-/turf/simulated/floor/tiled/kafel_full,
-/area/residential/teleporter)
 "gD" = (
 /obj/machinery/alarm{
 	pixel_y = 22
@@ -1640,17 +1652,6 @@
 /obj/structure/table/glass,
 /turf/simulated/floor/wood,
 /area/residential/healthcenter)
-"hB" = (
-/obj/structure/table/alien/blue,
-/obj/item/toy/plushie/face_hugger{
-	pixel_y = 14
-	},
-/obj/item/toy/plushie/deer{
-	pixel_y = 7
-	},
-/obj/item/toy/plushie/goose,
-/turf/simulated/floor/carpet/retro,
-/area/residential/outside)
 "hD" = (
 /obj/machinery/papershredder/arfs{
 	pixel_x = 10;
@@ -1732,16 +1733,10 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/teleporter)
 "hR" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
+/obj/machinery/atmospherics/pipe/manifold/visible/cyan{
+	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/outdoors/dirt/biodome,
+/turf/simulated/floor/tiled/dark,
 /area/residential/outside)
 "hT" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
@@ -1781,9 +1776,6 @@
 /obj/item/clothing/head/helmet/space/void/engineering,
 /obj/item/clothing/mask/breath,
 /obj/item/weapon/tank/jetpack/carbondioxide,
-/obj/machinery/light{
-	dir = 4
-	},
 /obj/item/clothing/suit/space/void/engineering{
 	name = "Gravity stablizing suit"
 	},
@@ -2182,11 +2174,10 @@
 /turf/simulated/floor/carpet,
 /area/residential/outside)
 "kt" = (
-/mob/living/simple_mob/animal/passive/mouse/gray{
-	name = "Pucky Pheese";
-	size_multiplier = 2
+/obj/machinery/atmospherics/binary/pump/high_power/on{
+	dir = 1
 	},
-/turf/simulated/floor/carpet/retro,
+/turf/simulated/floor/tiled/dark,
 /area/residential/outside)
 "kz" = (
 /obj/structure/window/reinforced/full,
@@ -2230,12 +2221,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/residential/outside)
-"kW" = (
-/obj/machinery/door/airlock/voidcraft{
-	name = "Teleporter to Level Four"
-	},
-/turf/simulated/floor/tiled/kafel_full,
-/area/residential/teleporter)
 "lc" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -2275,10 +2260,8 @@
 /turf/simulated/floor/wood,
 /area/residential/outside)
 "lk" = (
-/obj/effect/map_effect/perma_light/brighter{
-	light_color = "#00008B"
-	},
-/turf/simulated/floor/carpet/retro,
+/obj/machinery/portable_atmospherics/canister/carbon_dioxide,
+/turf/simulated/floor/tiled/dark,
 /area/residential/outside)
 "ll" = (
 /obj/effect/floor_decal/corner_kafel/blue{
@@ -2368,9 +2351,15 @@
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
 "lN" = (
-/obj/structure/sign/deck/first,
-/turf/simulated/wall/wood,
-/area/residential/teleporter)
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/residential/outside)
 "lO" = (
 /obj/effect/floor_decal/corner_kafel/blue{
 	dir = 5
@@ -2540,17 +2529,14 @@
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
 "mG" = (
-/obj/item/toy/cultsword{
-	pixel_x = 10
-	},
 /obj/structure/table/alien/blue,
-/obj/item/toy/crossbow{
-	pixel_y = -5
+/obj/item/toy/plushie/face_hugger{
+	pixel_y = 14
 	},
-/obj/item/toy/eight_ball{
-	pixel_x = -4;
-	pixel_y = 8
+/obj/item/toy/plushie/deer{
+	pixel_y = 7
 	},
+/obj/item/toy/plushie/goose,
 /turf/simulated/floor/carpet/retro,
 /area/residential/outside)
 "mH" = (
@@ -2627,6 +2613,15 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/healthcenter)
+"nm" = (
+/obj/structure/table/alien/blue,
+/obj/item/toy/plushie/octopus{
+	pixel_y = -7
+	},
+/obj/item/toy/plushie/spider,
+/obj/item/toy/plushie/teshari/b_yw,
+/turf/simulated/floor/carpet/retro,
+/area/residential/outside)
 "nn" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/multi_tile/glass{
@@ -2680,7 +2675,7 @@
 /turf/simulated/floor/wood,
 /area/residential/docking_lobby)
 "nB" = (
-/obj/machinery/portable_atmospherics/canister/carbon_dioxide,
+/obj/machinery/atmospherics/pipe/simple/visible/universal,
 /turf/simulated/floor/tiled/dark,
 /area/residential/outside)
 "nC" = (
@@ -2972,6 +2967,10 @@
 /obj/structure/flora/ausbushes/leafybush,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
+"pc" = (
+/obj/structure/closet/lasertag/red,
+/turf/simulated/floor/outdoors/grass/forest/biodome,
+/area/residential/outside)
 "pf" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -3080,12 +3079,6 @@
 /obj/structure/table/glass,
 /turf/simulated/floor/tiled/eris/cafe,
 /area/residential/cafe)
-"pP" = (
-/obj/structure/bed/chair/sofa/purp/left{
-	dir = 1
-	},
-/turf/simulated/floor/carpet/retro,
-/area/residential/outside)
 "pT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -3176,6 +3169,13 @@
 "qo" = (
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/residential/cafe)
+"qs" = (
+/obj/structure/table/alien,
+/obj/item/pizzabox/margherita,
+/obj/item/pizzabox/margherita,
+/obj/item/weapon/material/knife/plastic,
+/turf/simulated/floor/carpet/retro,
+/area/residential/outside)
 "qt" = (
 /obj/machinery/cryopod/robot{
 	dir = 4
@@ -3235,6 +3235,12 @@
 /obj/machinery/light/flamp,
 /turf/simulated/floor/carpet/purcarpet,
 /area/residential/obs3)
+"qI" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/retro,
+/area/residential/outside)
 "qJ" = (
 /obj/structure/table/marble,
 /obj/item/weapon/material/knife/butch,
@@ -3435,8 +3441,8 @@
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/residential/cafe)
 "rQ" = (
-/obj/item/weapon/stool/baystool/padded,
-/turf/simulated/floor/carpet/retro,
+/obj/structure/closet/lasertag/blue,
+/turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
 "rR" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/scrubbers{
@@ -3592,6 +3598,20 @@
 /obj/structure/flora/ausbushes/ppflowers,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
+"sB" = (
+/obj/item/toy/cultsword{
+	pixel_x = 10
+	},
+/obj/structure/table/alien/blue,
+/obj/item/toy/crossbow{
+	pixel_y = -5
+	},
+/obj/item/toy/eight_ball{
+	pixel_x = -4;
+	pixel_y = 8
+	},
+/turf/simulated/floor/carpet/retro,
+/area/residential/outside)
 "sC" = (
 /obj/effect/floor_decal/grass_edge{
 	dir = 9
@@ -3689,12 +3709,6 @@
 /obj/machinery/portable_atmospherics/hydroponics,
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/residential/cafe)
-"sY" = (
-/obj/structure/bed/chair/sofa/purp/right{
-	dir = 1
-	},
-/turf/simulated/floor/carpet/retro,
-/area/residential/outside)
 "tb" = (
 /obj/structure/flora/arfs/bush1_left_top,
 /turf/simulated/wall/wood,
@@ -3728,12 +3742,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/healthcenter)
-"tn" = (
-/obj/structure/sign/deck/second{
-	pixel_y = -31
-	},
-/turf/simulated/floor/tiled/kafel_full,
-/area/residential/teleporter)
 "to" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
@@ -3799,10 +3807,8 @@
 /turf/simulated/floor/tiled/freezer,
 /area/residential/cafe)
 "tx" = (
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	dir = 6
-	},
-/turf/simulated/floor/tiled/dark,
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/turf/simulated/floor/carpet/retro,
 /area/residential/outside)
 "ty" = (
 /obj/structure/flora/grass/green,
@@ -3910,13 +3916,6 @@
 /obj/machinery/biogenerator,
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/residential/cafe)
-"tS" = (
-/obj/structure/bed/chair/sofa/teal{
-	dir = 1
-	},
-/obj/machinery/light,
-/turf/simulated/floor/carpet/retro,
-/area/residential/outside)
 "tT" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -3972,18 +3971,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/healthcenter)
-"ug" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/outdoors/dirt/biodome,
-/area/residential/outside)
 "ui" = (
 /obj/structure/railing{
 	dir = 1
@@ -4047,6 +4034,13 @@
 	},
 /turf/simulated/floor/tiled/eris/cafe,
 /area/residential/cafe)
+"uB" = (
+/obj/structure/table/fancyblack,
+/obj/effect/map_effect/perma_light/brighter{
+	light_color = "#00008B"
+	},
+/turf/simulated/floor/carpet/retro,
+/area/residential/outside)
 "uD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -4073,10 +4067,9 @@
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
 "uP" = (
-/obj/machinery/atmospherics/portables_connector{
-	dir = 8
+/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+	dir = 6
 	},
-/obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor/tiled/dark,
 /area/residential/outside)
 "uQ" = (
@@ -4102,10 +4095,6 @@
 /obj/structure/flora/rocks1,
 /obj/structure/flora/ausbushes/sunnybush,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
-/area/residential/outside)
-"uX" = (
-/obj/structure/bed/chair/sofa/teal/left,
-/turf/simulated/floor/carpet/retro,
 /area/residential/outside)
 "uY" = (
 /obj/structure/flora/arfs/bush1_left_top,
@@ -4206,13 +4195,6 @@
 /obj/structure/flora/ausbushes/brflowers,
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
-/area/residential/outside)
-"vD" = (
-/obj/structure/table/fancyblack,
-/obj/effect/map_effect/perma_light/brighter{
-	light_color = "#00008B"
-	},
-/turf/simulated/floor/carpet/retro,
 /area/residential/outside)
 "vG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -4316,6 +4298,18 @@
 	},
 /turf/simulated/floor/plating,
 /area/residential/docking_lobby)
+"vZ" = (
+/obj/structure/table/alien,
+/obj/item/pizzabox/mushroom,
+/obj/item/pizzabox/mushroom,
+/obj/item/pizzabox/meat{
+	pixel_y = 15
+	},
+/obj/item/pizzabox/meat{
+	pixel_y = 15
+	},
+/turf/simulated/floor/carpet/retro,
+/area/residential/outside)
 "wa" = (
 /obj/item/weapon/towel/random,
 /obj/effect/floor_decal/grass_edge{
@@ -4409,12 +4403,17 @@
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
 "ws" = (
-/obj/machinery/disposal,
-/obj/structure/disposalpipe/trunk{
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/kafel_full,
-/area/residential/teleporter)
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/dirt/biodome,
+/area/residential/outside)
 "wt" = (
 /obj/structure/railing{
 	dir = 1
@@ -4574,17 +4573,14 @@
 /turf/simulated/floor/tiled/eris/cafe,
 /area/residential/cafe)
 "xo" = (
-/obj/structure/table/alien,
-/obj/item/pizzabox/vegetable,
-/obj/item/pizzabox/pineapple{
-	pixel_y = 16
+/obj/effect/step_trigger/teleporter{
+	teleport_x = 59;
+	teleport_y = 121;
+	teleport_z = 9
 	},
-/obj/item/pizzabox/vegetable,
-/obj/item/pizzabox/pineapple{
-	pixel_y = 16
-	},
-/turf/simulated/floor/carpet/retro,
-/area/residential/outside)
+/obj/machinery/light,
+/turf/simulated/floor/flock,
+/area/residential/teleporter)
 "xq" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/glass{
@@ -4592,10 +4588,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/cafe)
-"xt" = (
-/obj/structure/closet/lasertag/red,
-/turf/simulated/floor/outdoors/grass/forest/biodome,
-/area/residential/outside)
 "xu" = (
 /obj/structure/railing{
 	dir = 4
@@ -4695,6 +4687,12 @@
 /obj/machinery/microwave/advanced,
 /turf/simulated/floor/wood,
 /area/residential/obs2)
+"yg" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/residential/teleporter)
 "yk" = (
 /obj/structure/closet/secure_closet/personal,
 /obj/item/weapon/sextoy/dildo/analbeads,
@@ -4786,6 +4784,12 @@
 	},
 /turf/simulated/floor/beach/sand/desert/outdoors,
 /area/residential/outside)
+"yB" = (
+/obj/structure/sign/deck/second{
+	pixel_y = -31
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/residential/teleporter)
 "yE" = (
 /obj/effect/overlay/palmtree_r,
 /obj/effect/floor_decal/grass_edge{
@@ -5198,10 +5202,6 @@
 /obj/effect/shuttle_landmark/premade/residential/residences,
 /turf/space,
 /area/space)
-"Aw" = (
-/obj/structure/table/fancyblack,
-/turf/simulated/floor/carpet/retro,
-/area/residential/outside)
 "Ay" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -5323,14 +5323,12 @@
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
 "AY" = (
-/obj/machinery/light{
-	dir = 1
+/mob/living/simple_mob/animal/passive/mouse/gray{
+	name = "Pucky Pheese";
+	size_multiplier = 2
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/kafel_full,
-/area/residential/teleporter)
+/turf/simulated/floor/carpet/retro,
+/area/residential/outside)
 "Bc" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/mech_sensor{
@@ -5363,6 +5361,12 @@
 /obj/structure/flora/rocks2,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
+"Bq" = (
+/obj/machinery/door/airlock/voidcraft{
+	name = "Teleporter to Level Four"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/residential/teleporter)
 "Br" = (
 /obj/structure/table/marble,
 /obj/machinery/camera/network/civilian{
@@ -5438,10 +5442,10 @@
 /turf/simulated/floor/tiled/eris/cafe,
 /area/residential/cafe)
 "BJ" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/cyan{
-	dir = 8
+/obj/effect/map_effect/perma_light/brighter{
+	light_color = "#00008B"
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/carpet/retro,
 /area/residential/outside)
 "BN" = (
 /obj/structure/cable/green{
@@ -5594,11 +5598,9 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/healthcenter)
 "Cn" = (
-/obj/machinery/computer/arcade/battle{
-	dir = 1
-	},
-/turf/simulated/floor/carpet/retro,
-/area/residential/outside)
+/obj/structure/sign/deck/first,
+/turf/simulated/wall/wood,
+/area/residential/teleporter)
 "Co" = (
 /obj/structure/railing,
 /obj/structure/flora/grass/green,
@@ -5817,6 +5819,18 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/wood,
 /area/residential/obs3)
+"Db" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/retro,
+/area/residential/outside)
 "Dc" = (
 /obj/structure/closet/wardrobe/red,
 /obj/machinery/light{
@@ -5954,12 +5968,6 @@
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
-"DN" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/carpet/retro,
-/area/residential/outside)
 "DO" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
@@ -6059,10 +6067,8 @@
 /turf/simulated/floor/wood,
 /area/residential/healthcenter)
 "El" = (
-/obj/machinery/atmospherics/binary/pump/high_power/on{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/dark,
+/obj/item/weapon/stool/baystool/padded,
+/turf/simulated/floor/carpet/retro,
 /area/residential/outside)
 "En" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -6295,12 +6301,6 @@
 /obj/structure/window/reinforced,
 /turf/simulated/floor/plating,
 /area/residential/docking_lobby)
-"FA" = (
-/obj/structure/sign/deck/fourth{
-	pixel_y = -31
-	},
-/turf/simulated/floor/tiled/kafel_full,
-/area/residential/teleporter)
 "FC" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
@@ -6515,6 +6515,12 @@
 	icon_state = "fakewindows2"
 	},
 /area/residential/outside)
+"GP" = (
+/obj/structure/bed/chair/sofa/purp/right{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/retro,
+/area/residential/outside)
 "GS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -6706,12 +6712,23 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/library)
-"HS" = (
-/obj/machinery/computer/arcade/orion_trail{
-	dir = 1
-	},
+"HQ" = (
+/obj/structure/table/fancyblack,
 /turf/simulated/floor/carpet/retro,
 /area/residential/outside)
+"HR" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/residential/teleporter)
+"HS" = (
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/residential/teleporter)
 "HV" = (
 /obj/machinery/light,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -6766,9 +6783,14 @@
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
 "Ij" = (
-/obj/machinery/atmospherics/pipe/simple/visible/universal,
-/turf/simulated/floor/tiled/dark,
-/area/residential/outside)
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/residential/teleporter)
 "In" = (
 /obj/effect/floor_decal/spline/plain,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -6886,18 +6908,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/wood,
 /area/residential/library)
-"Ja" = (
-/obj/structure/table/alien,
-/obj/item/pizzabox/mushroom,
-/obj/item/pizzabox/mushroom,
-/obj/item/pizzabox/meat{
-	pixel_y = 15
-	},
-/obj/item/pizzabox/meat{
-	pixel_y = 15
-	},
-/turf/simulated/floor/carpet/retro,
-/area/residential/outside)
 "Jb" = (
 /obj/structure/flora/rocks2,
 /obj/structure/flora/ausbushes/ywflowers,
@@ -7071,6 +7081,35 @@
 /obj/structure/flora/grass/brown,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
+"JK" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/outdoors/dirt/biodome,
+/area/residential/outside)
+"JM" = (
+/obj/machinery/door/airlock/multi_tile/metal{
+	dir = 1;
+	name = "Arcade"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/retro,
+/area/residential/outside)
 "JS" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
@@ -7082,15 +7121,6 @@
 /obj/structure/flora/ausbushes/brflowers,
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
-/area/residential/outside)
-"JX" = (
-/obj/structure/table/alien/blue,
-/obj/item/toy/plushie/octopus{
-	pixel_y = -7
-	},
-/obj/item/toy/plushie/spider,
-/obj/item/toy/plushie/teshari/b_yw,
-/turf/simulated/floor/carpet/retro,
 /area/residential/outside)
 "JY" = (
 /obj/structure/flora/grass/green,
@@ -7127,6 +7157,18 @@
 	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/residential/obs2)
+"Km" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/retro,
+/area/residential/outside)
 "Kn" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -7367,6 +7409,12 @@
 	},
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
+"Ls" = (
+/obj/machinery/vending/radren{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/retro,
+/area/residential/outside)
 "Lt" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -7474,6 +7522,18 @@
 /obj/structure/flora/ausbushes/genericbush,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
+"Mf" = (
+/obj/structure/table/alien,
+/obj/item/pizzabox/vegetable,
+/obj/item/pizzabox/pineapple{
+	pixel_y = 16
+	},
+/obj/item/pizzabox/vegetable,
+/obj/item/pizzabox/pineapple{
+	pixel_y = 16
+	},
+/turf/simulated/floor/carpet/retro,
+/area/residential/outside)
 "Mg" = (
 /obj/structure/bed/chair/wood{
 	dir = 8
@@ -7495,11 +7555,13 @@
 /obj/machinery/vending/loadout/gadget,
 /turf/simulated/floor/wood,
 /area/residential/docking_lobby)
-"Mk" = (
-/obj/machinery/door/airlock/voidcraft{
-	name = "Teleporter from level three"
+"Ml" = (
+/obj/effect/step_trigger/teleporter{
+	teleport_x = 110;
+	teleport_y = 193;
+	teleport_z = 11
 	},
-/turf/simulated/floor/tiled/kafel_full,
+/turf/simulated/floor/flock,
 /area/residential/teleporter)
 "Mm" = (
 /obj/machinery/chem_master/condimaster,
@@ -7656,17 +7718,6 @@
 	dir = 1
 	},
 /turf/simulated/floor/beach/sand/desert,
-/area/residential/outside)
-"MT" = (
-/obj/structure/table/alien/blue,
-/obj/item/toy/plushie/black_cat{
-	pixel_y = 12
-	},
-/obj/item/toy/plushie/black_fox{
-	pixel_y = 4
-	},
-/obj/item/toy/plushie/box,
-/turf/simulated/floor/carpet/retro,
 /area/residential/outside)
 "MV" = (
 /obj/structure/flora/ausbushes/lavendergrass,
@@ -8462,6 +8513,12 @@
 /obj/structure/flora/ausbushes/brflowers,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
+"QN" = (
+/obj/structure/sign/deck/third{
+	pixel_y = -31
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/residential/teleporter)
 "QO" = (
 /obj/structure/flora/rocks2,
 /obj/structure/flora/ausbushes/sparsegrass,
@@ -8722,11 +8779,11 @@
 /turf/simulated/floor/plating,
 /area/residential/outside)
 "Sa" = (
-/obj/machinery/light{
-	dir = 8
+/obj/machinery/computer/arcade/battle{
+	dir = 1
 	},
-/turf/simulated/floor/tiled/kafel_full,
-/area/residential/teleporter)
+/turf/simulated/floor/carpet/retro,
+/area/residential/outside)
 "Sc" = (
 /obj/machinery/smartfridge/produce/persistent_lossy,
 /turf/simulated/wall/wood,
@@ -8790,7 +8847,9 @@
 /turf/simulated/floor/tiled/eris/cafe,
 /area/residential/cafe)
 "Sl" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/residential/outside)
 "Sn" = (
@@ -8873,15 +8932,6 @@
 	},
 /turf/simulated/floor/outdoors/dirt/biodome,
 /area/residential/outside)
-"SD" = (
-/obj/effect/step_trigger/teleporter{
-	teleport_x = 59;
-	teleport_y = 121;
-	teleport_z = 9
-	},
-/obj/machinery/light,
-/turf/simulated/floor/flock,
-/area/residential/teleporter)
 "SG" = (
 /turf/simulated/floor/plating,
 /area/residential/outside)
@@ -9066,6 +9116,12 @@
 	},
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
+"Tj" = (
+/obj/structure/bed/chair/sofa/purp/left{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/retro,
+/area/residential/outside)
 "Tl" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/structure/flora/ausbushes/sparsegrass,
@@ -9098,13 +9154,7 @@
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
 "Tu" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 8
-	},
-/obj/machinery/portable_atmospherics/canister/oxygen,
-/obj/machinery/light{
-	dir = 4
-	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor/tiled/dark,
 /area/residential/outside)
 "Tv" = (
@@ -9152,6 +9202,13 @@
 "TI" = (
 /obj/structure/flora/ausbushes/lavendergrass,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
+/area/residential/outside)
+"TJ" = (
+/obj/structure/bed/chair/sofa/teal{
+	dir = 1
+	},
+/obj/machinery/light,
+/turf/simulated/floor/carpet/retro,
 /area/residential/outside)
 "TL" = (
 /obj/structure/table/steel_reinforced,
@@ -9217,17 +9274,15 @@
 /turf/simulated/floor/plating,
 /area/residential/outside)
 "TT" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 8
+/obj/structure/table/alien/blue,
+/obj/item/toy/plushie/black_cat{
+	pixel_y = 12
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 8
+/obj/item/toy/plushie/black_fox{
+	pixel_y = 4
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
-	},
-/turf/simulated/floor/outdoors/dirt/biodome,
+/obj/item/toy/plushie/box,
+/turf/simulated/floor/carpet/retro,
 /area/residential/outside)
 "TW" = (
 /obj/structure/window/reinforced{
@@ -9406,18 +9461,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/healthcenter)
-"UQ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 10
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/carpet/retro,
-/area/residential/outside)
 "UR" = (
 /obj/machinery/media/jukebox,
 /obj/machinery/light,
@@ -9549,22 +9592,6 @@
 /obj/structure/flora/ausbushes/genericbush,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
-"VF" = (
-/obj/machinery/door/airlock/multi_tile/metal{
-	dir = 1;
-	name = "Arcade"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/carpet/retro,
-/area/residential/outside)
 "VH" = (
 /obj/machinery/vending/loadout/overwear,
 /turf/simulated/floor/wood,
@@ -9585,14 +9612,18 @@
 /obj/structure/flora/rocks1,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
-"VQ" = (
-/obj/effect/step_trigger/teleporter{
-	teleport_x = 110;
-	teleport_y = 193;
-	teleport_z = 11
+"VR" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
 	},
-/turf/simulated/floor/flock,
-/area/residential/teleporter)
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/dirt/biodome,
+/area/residential/outside)
 "VT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -9611,13 +9642,6 @@
 /obj/structure/flora/tree/jungle,
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
-/area/residential/outside)
-"VV" = (
-/obj/structure/table/alien,
-/obj/item/pizzabox/margherita,
-/obj/item/pizzabox/margherita,
-/obj/item/weapon/material/knife/plastic,
-/turf/simulated/floor/carpet/retro,
 /area/residential/outside)
 "VY" = (
 /obj/structure/flora/ausbushes/grassybush,
@@ -9807,12 +9831,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/healthcenter)
-"WI" = (
-/obj/machinery/door/airlock/voidcraft{
-	name = "Teleporter to Level Two"
-	},
-/turf/simulated/floor/tiled/kafel_full,
-/area/residential/teleporter)
 "WJ" = (
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/tiled,
@@ -10207,11 +10225,11 @@
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
 "YB" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 4
+/obj/machinery/computer/arcade/orion_trail{
+	dir = 1
 	},
-/turf/simulated/floor/tiled/kafel_full,
-/area/residential/teleporter)
+/turf/simulated/floor/carpet/retro,
+/area/residential/outside)
 "YC" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
@@ -10360,6 +10378,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/cafe)
+"Zf" = (
+/obj/machinery/door/airlock/voidcraft{
+	name = "Teleporter from level three"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/residential/teleporter)
 "Zg" = (
 /obj/machinery/vending/loadout/loadout_misc,
 /turf/simulated/floor/wood,
@@ -10424,12 +10448,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/healthcenter)
-"Zv" = (
-/obj/machinery/vending/radren{
-	dir = 4
-	},
-/turf/simulated/floor/carpet/retro,
-/area/residential/outside)
 "Zx" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -10452,6 +10470,12 @@
 /obj/machinery/vending/wardrobe/chapdrobe,
 /turf/simulated/floor/wood,
 /area/residential/docking_lobby)
+"ZD" = (
+/obj/machinery/door/airlock/voidcraft{
+	name = "Teleporter to Level Two"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/residential/teleporter)
 "ZE" = (
 /obj/machinery/cryopod,
 /turf/simulated/floor/wood,
@@ -10546,18 +10570,6 @@
 	},
 /turf/simulated/floor/tiled/eris/cafe,
 /area/residential/cafe)
-"ZW" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/carpet/retro,
-/area/residential/outside)
 "ZZ" = (
 /obj/structure/flora/ausbushes/fullgrass,
 /obj/structure/flora/ausbushes/lavendergrass,
@@ -25545,11 +25557,11 @@ kb
 kb
 kb
 tO
-ws
-Sa
+HS
+HR
 rZ
-WI
-SD
+ZD
+xo
 tO
 kb
 kb
@@ -25798,8 +25810,8 @@ kb
 kb
 tO
 KH
-YB
-tn
+yg
+yB
 tO
 tO
 tO
@@ -26301,7 +26313,7 @@ kb
 Bo
 kb
 tO
-AY
+Ij
 FN
 Nv
 tO
@@ -26804,10 +26816,10 @@ Tr
 Zh
 Zh
 xu
-lN
+Cn
 KH
 FN
-bp
+QN
 tO
 tO
 KL
@@ -27060,7 +27072,7 @@ UZ
 KH
 FN
 CZ
-Mk
+Zf
 IG
 KL
 KL
@@ -27564,8 +27576,8 @@ tO
 Nv
 GS
 rZ
-kW
-VQ
+Bq
+Ml
 KL
 Ct
 PU
@@ -27815,7 +27827,7 @@ pY
 tO
 Nv
 BY
-FA
+eG
 tO
 tO
 KL
@@ -28068,7 +28080,7 @@ tO
 Nv
 QU
 CZ
-gC
+fT
 IG
 KL
 KL
@@ -37098,10 +37110,10 @@ XS
 WV
 hG
 UE
-tx
-BJ
-El
-Ij
+UE
+UE
+UE
+UE
 Sl
 cI
 kb
@@ -37351,8 +37363,8 @@ WV
 ib
 UE
 uP
-uP
-UE
+hR
+kt
 nB
 Tu
 cI
@@ -37387,7 +37399,7 @@ VP
 qy
 cY
 iR
-hR
+ws
 cY
 YO
 kb
@@ -37600,13 +37612,13 @@ XS
 XS
 XS
 WV
-cI
-cI
-cI
-cI
-cI
-cI
-cI
+bn
+UE
+fC
+fC
+UE
+lk
+lN
 cI
 kb
 kb
@@ -37639,7 +37651,7 @@ Fv
 kb
 kb
 iR
-hR
+ws
 kb
 kb
 wF
@@ -37852,14 +37864,14 @@ XS
 XS
 XS
 YT
-kb
-kb
-kb
-kb
-kb
-kb
-kb
-kb
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
 kb
 kb
 kb
@@ -37891,7 +37903,7 @@ VP
 CG
 om
 iR
-hR
+ws
 YO
 kb
 kb
@@ -38143,7 +38155,7 @@ HA
 KS
 kb
 iR
-hR
+ws
 CL
 kb
 Gu
@@ -38395,7 +38407,7 @@ KS
 mc
 hX
 iR
-hR
+ws
 kb
 rz
 kb
@@ -38647,7 +38659,7 @@ zn
 fe
 vR
 iR
-hR
+ws
 kb
 kb
 VB
@@ -38899,7 +38911,7 @@ kb
 kb
 kb
 iR
-hR
+ws
 kb
 kb
 VB
@@ -39151,7 +39163,7 @@ kb
 kb
 cY
 iR
-hR
+ws
 cY
 kb
 VB
@@ -39403,7 +39415,7 @@ wF
 KS
 kb
 iR
-hR
+ws
 kb
 kb
 VB
@@ -39655,7 +39667,7 @@ kb
 XP
 Gu
 iR
-hR
+ws
 CL
 kb
 VB
@@ -39907,7 +39919,7 @@ iR
 iR
 iR
 iR
-hR
+ws
 kb
 kb
 VB
@@ -40159,7 +40171,7 @@ kb
 YO
 kb
 iR
-hR
+ws
 kb
 kb
 VB
@@ -40411,7 +40423,7 @@ LL
 Xh
 Fv
 iR
-hR
+ws
 kb
 kb
 VB
@@ -40663,7 +40675,7 @@ Ve
 TQ
 cY
 iR
-hR
+ws
 cY
 kb
 VB
@@ -40915,7 +40927,7 @@ uK
 kb
 kb
 iR
-hR
+ws
 kb
 kb
 VB
@@ -41167,7 +41179,7 @@ ij
 Me
 kb
 iR
-hR
+ws
 rz
 kb
 kb
@@ -41419,7 +41431,7 @@ kb
 kb
 kb
 iR
-hR
+ws
 kb
 kb
 kb
@@ -41674,7 +41686,7 @@ iR
 uQ
 rm
 rm
-TT
+JK
 rW
 rW
 rW
@@ -41926,7 +41938,7 @@ iR
 iR
 iR
 iR
-ug
+VR
 iR
 iR
 iR
@@ -42178,7 +42190,7 @@ kb
 kb
 cY
 iR
-ug
+VR
 cY
 kb
 kb
@@ -42424,17 +42436,17 @@ TI
 kb
 TI
 kb
-bn
-bn
+rQ
+rQ
 kb
 kb
 kb
 iR
-ug
+VR
 kb
 kb
-xt
-xt
+pc
+pc
 kb
 kb
 TI
@@ -42682,7 +42694,7 @@ cI
 cI
 cI
 mx
-VF
+JM
 cI
 cI
 cI
@@ -42934,10 +42946,10 @@ ID
 mx
 mx
 mx
-ZW
-Zv
-VV
-Ja
+Km
+Ls
+qs
+vZ
 cI
 YO
 kb
@@ -43186,10 +43198,10 @@ mx
 mx
 mx
 mx
-ZW
+Km
 mx
 mx
-xo
+Mf
 cI
 kb
 kb
@@ -43435,10 +43447,10 @@ kb
 cI
 qF
 ID
-kt
-rQ
-Cn
-ZW
+AY
+El
+Sa
+Km
 mx
 mx
 mx
@@ -43686,14 +43698,14 @@ kb
 kb
 cI
 mx
-fC
+tx
 gw
 gw
 gw
-UQ
+Db
 Hk
-Aw
-pP
+HQ
+Tj
 cI
 ro
 kb
@@ -43939,13 +43951,13 @@ YO
 cI
 Gh
 ID
-lk
-rQ
-HS
-DN
+BJ
+El
+YB
+qI
 ya
-vD
-tS
+uB
+TJ
 cI
 Oz
 ro
@@ -44194,10 +44206,10 @@ mx
 mx
 mx
 mx
-DN
-uX
-Aw
-sY
+qI
+ar
+HQ
+GP
 cI
 TI
 kb
@@ -44444,9 +44456,9 @@ cI
 qF
 ID
 mx
-rQ
-Cn
-DN
+El
+Sa
+qI
 mx
 mx
 mx
@@ -44698,10 +44710,10 @@ mx
 mx
 mx
 mx
-DN
+qI
 mx
 mx
-JX
+nm
 cI
 kb
 kb
@@ -44951,9 +44963,9 @@ mx
 mx
 mx
 Xr
+sB
+TT
 mG
-MT
-hB
 cI
 ro
 kb
