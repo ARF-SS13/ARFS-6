@@ -428,6 +428,54 @@
 	ckeywhitelist = list("cebutris", "technicalmagi", "fludd12", "thingpony")
 	character_name = list("Kaibus Wordsmith", "Nia Wordsmith", "Naomi Reids", "Tye Riggle")
 
+/obj/item/weapon/card/id/residential/rb1
+	name = "Residential Level Four - Room 1 Residential Key"
+	access = list(1201)
+
+/obj/item/weapon/card/id/residential/rb2
+	name = "Residential Level Four - Room 2 Residential Key"
+	access = list(1202)
+
+/obj/item/weapon/card/id/residential/rb3
+	name = "Residential Level Four - Room 3 residential key"
+	access = list(1203)
+
+/obj/item/weapon/card/id/residential/rb4
+	name = "Residential Level Four - Room 4 residential key"
+	access = list(1204)
+
+
+//Residential Level Four Fluff Spawns
+
+/datum/gear/fluff/res_key_rb1
+	path = /obj/item/weapon/card/id/residential/rb1
+	display_name = "Res level four, room one keys"
+	description = "residential"
+	ckeywhitelist = list("cebutris", "gremlingss", "disguiser", "siorkillbow", "lukevale", "thingpony")
+	character_name = list("Elizabeth Nayala", "Abby Gliese", "Rak Woodrow", "Hoi Blackburn", "Hepsie Mull", "Luna", "Iris Miller")
+
+/datum/gear/fluff/res_key_rb2
+	path = /obj/item/weapon/card/id/residential/rb2
+	display_name = "res level four, room two keys"
+	description = "residential"
+	ckeywhitelist = list("thingpony", "siorkillbow", "cebutris", "dameonowen", "brimcon", "foxyrose", "lukevale", "andyman105")
+	character_name = list("Iris Miller", "Elizabeth Nayala", "Hepsie Mull", "Amber Owen", "Amber", "Scryden Sako", "Emma Miller", "Aiden Miller", "Scarlet Owen", "Luna", "Dameon Owen", "Jake Owen")
+
+/datum/gear/fluff/res_key_rb3
+	path = /obj/item/weapon/card/id/residential/rb3
+	display_name = "res level four, room three keys"
+	description = "residential"
+	ckeywhitelist = list("brimcon", "thingpony")
+	character_name = list("Scryden Sako", "Fleur Sako")
+
+
+/datum/gear/fluff/res_key_rb4
+	path = /obj/item/weapon/card/id/residential/rb4
+	display_name = "Res level four, room four keys"
+	description = "residential"
+	ckeywhitelist = list("thingpony","brimcon","truedark")
+	character_name = list("Willow Snow", "Scryden Sako", "Sheyss Brauror")
+
 //Mansion
 
 /datum/gear/fluff/res_key_mansion
