@@ -229,7 +229,7 @@ var/datum/planet/biodome/biodome = null
 	for(var/mob/living/L in living_mob_list)
 		if(L.z in holder.our_planet.expected_z_levels)
 			var/turf/T = get_turf(L)
-			if(!T.outdoors)
+			if(!T.is_outdoors())
 				continue // They're indoors, so no need to rain on them.
 
 			// If they have an open umbrella, it'll guard from rain
