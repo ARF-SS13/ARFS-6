@@ -17,11 +17,13 @@
 	id = "Asteroid Surface Relay"
 	listening_level = Z_LEVEL_MINING_ARFS
 	autolinkers = list("mining_high")
+
 //Might not use this one, i dunno
 /obj/machinery/telecomms/relay/preset/arfs/mining_low
 	id = "Asteroid Interior Relay"
 	listening_level = Z_LEVEL_MINING_DANGER_ARFS
 	autolinkers = list("mining_low")
+
 /obj/machinery/telecomms/relay/preset/arfs/residential
 	id = "NCS Serenity Residential Relay"
 	listening_level = Z_LEVEL_RESIDENTIAL_ARFS

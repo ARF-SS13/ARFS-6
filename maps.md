@@ -7,7 +7,10 @@
 1. [Asteroid](#asteroid)
 1. [Mining](#mining)
 1. [Underdark](#underdark)
-1. [Residential](#residential)
+1. [Biodome](#biodome)
+1. [Upper Residential](#upper-residential)
+1. [Mansion](#mansion)
+1. [Lower Residential](#lower-residential)
 
 ---
 
@@ -53,7 +56,27 @@
 
 ---
 
-## Residential
+## Biodome
 <br/>
 
-![Residential](icons/_nanomaps/arfs_nanomap_z9.png)
+![Biodome](icons/_nanomaps/arfs_nanomap_z9.png)
+
+---
+
+## Upper Residential
+<br/>
+
+![Upper Residential](icons/_nanomaps/arfs_nanomap_z10.png)
+
+---
+## Mansion
+<br/>
+
+![Mansion](icons/_nanomaps/arfs_nanomap_z11.png)
+
+---
+
+## Lower Residential
+<br/>
+
+![Lower Residential](icons/_nanomaps/arfs_nanomap_z11.png)
