@@ -8,6 +8,8 @@
 #define Z_LEVEL_MINING_DANGER_ARFS			8
 #define Z_LEVEL_RESIDENTIAL_ARFS			9
 #define Z_LEVEL_RESIDENTIAL_STATION_ARFS	10
+#define Z_LEVEL_RESIDENTIAL_MANSION_ARFS		11
+#define Z_LEVEL_RESIDNENTIAL_TWO_ARFS		12
 
 #define Z_LEVEL_BOTTOM_DECK				Z_LEVEL_ARFS_ONE
 #define Z_LEVEL_TOP_DECK				Z_LEVEL_ARFS_THREE
@@ -69,7 +71,9 @@
 		Z_LEVEL_MINING_ARFS,
 		Z_LEVEL_MINING_DANGER_ARFS,
 		Z_LEVEL_RESIDENTIAL_ARFS,
-		Z_LEVEL_RESIDENTIAL_STATION_ARFS)
+		Z_LEVEL_RESIDENTIAL_STATION_ARFS,
+		Z_LEVEL_RESIDENTIAL_MANSION_ARFS,
+		Z_LEVEL_RESIDNENTIAL_TWO_ARFS)
 
 /datum/map/arfs/perform_map_generation()
 	new /datum/random_map/automata/cave_system(null, 1, 1, Z_LEVEL_MINING_ARFS, world.maxx, world.maxy) // Create the mining Z-level.
@@ -159,7 +163,7 @@
 
 /datum/map_z_level/arfs/residential
 	z = Z_LEVEL_RESIDENTIAL_ARFS
-	name = "ARFS Residential District"
+	name = "ARFS Residential level two"
 	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_VORESPAWN
 
 /datum/map_z_level/arfs/residential_station
@@ -169,5 +173,16 @@
 
 /datum/planet/biodome
 	expected_z_levels = list(
-		Z_LEVEL_RESIDENTIAL_STATION_ARFS
+		Z_LEVEL_RESIDENTIAL_STATION_ARFS,
+		Z_LEVEL_RESIDENTIAL_MANSION_ARFS
 	)
+
+/datum/map_z_level/arfs/residential_arf_mansion
+	z = Z_LEVEL_RESIDENTIAL_MANSION_ARFS
+	name = "ARFS Residential level four"
+	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_VORESPAWN
+
+/datum/map_z_level/arfs/residential_arf_two
+	z = Z_LEVEL_RESIDNENTIAL_TWO_ARFS
+	name = "ARFS Residential level three"
+	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_VORESPAWN

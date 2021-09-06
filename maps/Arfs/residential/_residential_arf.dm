@@ -166,60 +166,62 @@ var/global/list/latejoin_residential = list()
 /area/residential/outside
 	name = "\improper Residential - Outside"
 
+//Level Two - Small Rooms
+
 /area/residential/room1
-	name = "\improper Residential - Room 1"
+	name = "\improper Residential Level Two - Room 1"
 	icon_state = "room1"
 
 /area/residential/room2
-	name = "\improper Residential - Room 2"
+	name = "\improper Residential Level Two- Room 2"
 	icon_state = "room2"
 
 /area/residential/room3
-	name = "\improper Residential - Room 3"
+	name = "\improper Residential Level Two - Room 3"
 	icon_state = "room3"
 
 /area/residential/room4
-	name = "\improper Residential - Room 4"
+	name = "\improper Residential Level Two - Room 4"
 	icon_state = "room4"
 
 /area/residential/room5
-	name = "\improper Residential - Room 5"
+	name = "\improper Residential Level Two - Room 5"
 	icon_state = "room5"
 
 /area/residential/room6
-	name = "\improper Residential - Room 6"
+	name = "\improper Residential Level Two- Room 6"
 	icon_state = "room6"
 
 /area/residential/room6/bedroom
-	name = "\improper Residential Bedroom- Room 6"
+	name = "\improper Residential Level Two Bedroom- Room 6"
 	icon_state = "room6"
 
 /area/residential/room6/bathroom
-	name = "\improper Residential Bathroom- Room 6"
+	name = "\improper Residential Level Two Bathroom- Room 6"
 	icon_state = "room6"
 
 /area/residential/room7
-	name = "\improper Residential - Room 7"
+	name = "\improper Residential Level Two - Room 7"
 	icon_state = "room7"
 
 /area/residential/room8
-	name = "\improper Residential - Room 8"
+	name = "\improper Residential Level Two- Room 8"
 	icon_state = "room8"
 
 /area/residential/room9
-	name = "\improper Residential - Room 9"
+	name = "\improper Residential Level Two- Room 9"
 	icon_state = "room9"
 
 /area/residential/room10
-	name = "\improper Residential - Room 10"
+	name = "\improper Residential Level Two- Room 10"
 	icon_state = "room10"
 
 /area/residential/room11
-	name = "\improper Residential - Room 11"
+	name = "\improper Residential Level Two- Room 11"
 	icon_state = "room11"
 
 /area/residential/room12
-	name = "\improper Residential - Room 12"
+	name = "\improper Residential Level Two- Room 12"
 	icon_state = "room12"
 
 /area/residential/mroom12
