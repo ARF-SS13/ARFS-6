@@ -43,7 +43,11 @@ mv "arfs-5-space_nanomap_z1.png" "arfs_nanomap_z5.png"
 mv "arfs-6-asteroid_nanomap_z1.png" "arfs_nanomap_z6.png"
 mv "arfs-7-mining_nanomap_z1.png" "arfs_nanomap_z7.png"
 mv "arfs-8-underdark_nanomap_z1.png" "arfs_nanomap_z8.png"
-mv "residential_arf_nanomap_z1.png" "arfs_nanomap_z9.png"
+mv "residential_station_nanomap_z1.png" "arfs_nanomap_z9.png"
+mv "residential_arf_nanomap_z1.png" "arfs_nanomap_z10.png"
+mv "residential_arf_two_nanomap_z1.png" "arfs_nanomap_z11.png"
+mv "residential_arf_mansion_nanomap_z1.png" "arfs_nanomap_z12.png"
+
 
 
 cd "../../"
