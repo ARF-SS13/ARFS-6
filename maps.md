@@ -9,8 +9,8 @@
 1. [Underdark](#underdark)
 1. [Biodome](#biodome)
 1. [Upper Residential](#upper-residential)
-1. [Mansion](#mansion)
 1. [Lower Residential](#lower-residential)
+1. [Mansion](#mansion)
 
 ---
 
@@ -69,14 +69,15 @@
 ![Upper Residential](icons/_nanomaps/arfs_nanomap_z10.png)
 
 ---
-## Mansion
-<br/>
-
-![Mansion](icons/_nanomaps/arfs_nanomap_z11.png)
-
----
 
 ## Lower Residential
 <br/>
 
 ![Lower Residential](icons/_nanomaps/arfs_nanomap_z11.png)
+
+---
+
+## Mansion
+<br/>
+
+![Mansion](icons/_nanomaps/arfs_nanomap_z12.png)

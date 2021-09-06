@@ -13,8 +13,8 @@
 	#include "arfs-8-underdark.dmm"
 	#include "residential/residential_station.dmm"
 	#include "residential/residential_arf.dmm"
-	#include "residential/residential_arf_mansion.dmm"
 	#include "residential/residential_arf_two.dmm"
+	#include "residential/residential_arf_mansion.dmm"
 
 	#include "residential/_residential_arf.dm"
 	#include "residential/residential_keys_arf.dm"
