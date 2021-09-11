@@ -126,3 +126,14 @@
 	icon_dead = "princess_dead"
 	faction = "neutral"
 	update_icon = 0
+
+//pet robot
+/mob/living/simple_mob/animal/passive/dronepup
+	name = "Maurice"
+	faction = "neutral"
+	desc = "It's a pet drone! Aw! How cute."
+	icon = 'icons/mob/robots.dmi'
+	icon_living = "constructiondrone"
+	icon_state = "constructiondrone"
+	icon_dead = "constructiondrone"
+
