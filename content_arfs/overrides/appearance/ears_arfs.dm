@@ -293,7 +293,7 @@
 	icon = 'content_arfs/icons/mob/player/ears_arfs.dmi'
 	icon_state = "big_liz"
 
-/datum/sprite_accessory/ears/deathclaw-colorable
+/datum/sprite_accessory/ears/deathclaw_colorable
 	name = "Dealthclaw - Colorable"
 	desc = ""
 	icon = 'content_arfs/icons/mob/player/ears_arfs.dmi'
