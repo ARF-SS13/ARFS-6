@@ -233,6 +233,10 @@
 	name = "RM15, level three residential key"
 	access = list(8115)
 
+/obj/item/weapon/card/id/residential/rm16
+	name = "RM16, level three residential key"
+	access = list(8116)
+
 //medium key fluff spawn
 /datum/gear/fluff/res_key_rm1
 	path = /obj/item/weapon/card/id/residential/rm1
@@ -330,6 +334,12 @@
 	display_name = "RM15, level three keys"
 	ckeywhitelist = list("thingpony", "theamazingdaito")
 	character_name = list("Nuri", "Haruka Kusanagi")
+
+/datum/gear/fluff/res_key_rm16
+	path = /obj/item/weapon/card/id/residential/rm16
+	display_name = "RM16, level three keys"
+	ckeywhitelist = list("1ceres", "liujr")
+	character_name = list("Garnet Steele", "Bismuth Steele")
 
 /obj/item/weapon/card/id/residential/rm42/laria
 	name = "Laria's Key"
