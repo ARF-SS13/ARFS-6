@@ -305,18 +305,16 @@
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
 "adn" = (
-/obj/structure/catwalk,
-/obj/structure/marker_beacon{
-	icon_state = "markerburgundy-on"
-	},
-/turf/space,
-/area/space)
+/obj/effect/floor_decal/industrial/warning,
+/obj/machinery/light/floortube,
+/turf/simulated/floor/tiled/techfloor,
+/area/residential/ship_bay)
 "ado" = (
 /turf/simulated/floor/flock,
 /area/residential/corridors)
 "adr" = (
-/obj/structure/lattice,
-/turf/space,
+/obj/machinery/door/blast/regular,
+/turf/simulated/floor/reinforced,
 /area/space)
 "ads" = (
 /obj/structure/table/marble,
@@ -331,33 +329,18 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/residential/ship_bay)
 "ady" = (
-/obj/structure/table/standard,
-/obj/item/weapon/paper_bin{
-	pixel_x = 12;
-	pixel_y = 5
-	},
-/obj/item/device/flashlight/lamp{
-	pixel_x = -4;
-	pixel_y = 3
-	},
-/obj/item/weapon/phone{
-	pixel_x = -2;
-	pixel_y = -13
-	},
-/obj/item/modular_computer/telescreen{
-	pixel_y = 23
-	},
-/turf/simulated/floor/tiled/eris/white/techfloor_grid,
+/obj/structure/bed/chair,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/residential/ship_bay)
 "adA" = (
-/obj/structure/table/standard,
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/structure/noticeboard/anomaly{
-	desc = "A board for pinning shuttle blueprints upon.";
-	name = "blueprint board";
-	pixel_y = 28
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
 	},
-/turf/simulated/floor/tiled/eris/white/techfloor_grid,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
 /area/residential/ship_bay)
 "adB" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -369,15 +352,10 @@
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
 "adC" = (
-/obj/structure/table/standard,
-/obj/machinery/atmospherics/unary/vent_pump/on{
+/obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
 	},
-/obj/item/weapon/clipboard{
-	pixel_y = 6
-	},
-/obj/item/weapon/pen/fountain3,
-/turf/simulated/floor/tiled/eris/white/techfloor_grid,
+/turf/simulated/floor/tiled/techfloor,
 /area/residential/ship_bay)
 "adD" = (
 /turf/simulated/shuttle/wall/dark,
@@ -890,11 +868,7 @@
 	},
 /area/residential/ship_bay)
 "ahM" = (
-/obj/structure/shuttle/engine/propulsion{
-	dir = 8;
-	icon_state = "burst_r"
-	},
-/turf/simulated/shuttle/floor/glass,
+/turf/simulated/floor/tiled,
 /area/residential/ship_bay)
 "ahO" = (
 /obj/machinery/light{
@@ -903,26 +877,11 @@
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
 "ahP" = (
-/obj/structure/shuttle/engine/heater{
-	dir = 8
+/obj/machinery/door/firedoor/glass/hidden{
+	dir = 2
 	},
-/obj/structure/window/reinforced/polarized{
-	dir = 4;
-	id = "kaiwindow"
-	},
-/obj/structure/window/reinforced/polarized{
-	id = "kaiwindow"
-	},
-/obj/machinery/door/blast/shutters{
-	density = 0;
-	dir = 8;
-	icon_state = "shutter0";
-	id = "kaiwindow";
-	name = "Window Shutters";
-	opacity = 0
-	},
-/turf/simulated/shuttle/floor/glass,
-/area/residential/ship_bay)
+/turf/simulated/floor/tiled,
+/area/residential/corridors)
 "ahW" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled,
@@ -932,8 +891,17 @@
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
 "ahZ" = (
-/turf/simulated/shuttle/wall/voidcraft,
-/area/residential/ship_bay)
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass/hidden{
+	dir = 2
+	},
+/turf/simulated/floor/tiled,
+/area/residential/corridors)
 "aid" = (
 /obj/machinery/door/airlock/voidcraft{
 	name = "Teleporter from level three"
@@ -973,24 +941,32 @@
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
 "aik" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
+/obj/structure/shuttle/engine/propulsion{
+	dir = 8;
+	icon_state = "burst_r"
+	},
+/turf/simulated/shuttle/floor/glass,
+/area/residential/ship_bay)
+"ail" = (
+/obj/structure/shuttle/engine/heater{
+	dir = 8
+	},
+/obj/structure/window/reinforced/polarized{
+	dir = 4;
+	id = "kaiwindow"
+	},
+/obj/structure/window/reinforced/polarized{
+	id = "kaiwindow"
 	},
 /obj/machinery/door/blast/shutters{
 	density = 0;
-	dir = 2;
+	dir = 8;
 	icon_state = "shutter0";
 	id = "kaiwindow";
 	name = "Window Shutters";
 	opacity = 0
 	},
-/obj/structure/shuttle/window{
-	color = "#444444"
-	},
 /turf/simulated/shuttle/floor/glass,
-/area/residential/ship_bay)
-"ail" = (
-/turf/simulated/shuttle/wall/voidcraft/blue,
 /area/residential/ship_bay)
 "ain" = (
 /obj/structure/shuttle/engine/heater{
@@ -1118,6 +1094,29 @@
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
 "aji" = (
+/turf/simulated/shuttle/wall/voidcraft,
+/area/residential/ship_bay)
+"ajk" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	dir = 2;
+	icon_state = "shutter0";
+	id = "kaiwindow";
+	name = "Window Shutters";
+	opacity = 0
+	},
+/obj/structure/shuttle/window{
+	color = "#444444"
+	},
+/turf/simulated/shuttle/floor/glass,
+/area/residential/ship_bay)
+"ajp" = (
+/turf/simulated/shuttle/wall/voidcraft/blue,
+/area/residential/ship_bay)
+"ajr" = (
 /obj/machinery/door/window{
 	dir = 2
 	},
@@ -1126,7 +1125,7 @@
 	},
 /turf/simulated/shuttle/floor/yellow,
 /area/residential/ship_bay)
-"ajk" = (
+"ajA" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/clothing/suit/space/void/pilot/alt,
 /obj/item/weapon/storage/belt/utility/alien/full,
@@ -1138,7 +1137,7 @@
 	},
 /turf/simulated/shuttle/floor/yellow,
 /area/residential/ship_bay)
-"ajp" = (
+"ajE" = (
 /obj/machinery/shower{
 	pixel_y = 13
 	},
@@ -1146,13 +1145,13 @@
 /obj/effect/catwalk_plated/white,
 /turf/simulated/shuttle/floor/white,
 /area/residential/ship_bay)
-"ajr" = (
+"ajH" = (
 /obj/structure/toilet{
 	pixel_y = 18
 	},
 /turf/simulated/shuttle/floor/white,
 /area/residential/ship_bay)
-"ajA" = (
+"ajJ" = (
 /obj/item/weapon/towel{
 	color = "#00FFFF"
 	},
@@ -1167,29 +1166,14 @@
 	},
 /turf/simulated/shuttle/floor/white,
 /area/residential/ship_bay)
-"ajE" = (
+"ajM" = (
 /turf/simulated/shuttle/floor/glass,
 /area/residential/ship_bay)
-"ajH" = (
+"ajP" = (
 /obj/structure/bed/chair/sofa/black/left{
 	dir = 4
 	},
 /turf/simulated/shuttle/floor/glass,
-/area/residential/ship_bay)
-"ajJ" = (
-/obj/structure/table/darkglass,
-/obj/item/modular_computer/laptop/preset/custom_loadout/elite,
-/turf/simulated/shuttle/floor/glass,
-/area/residential/ship_bay)
-"ajM" = (
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/simulated/shuttle/floor/glass,
-/area/residential/ship_bay)
-"ajP" = (
-/obj/machinery/telecomms/relay/preset/arfs/residential,
-/turf/simulated/shuttle/floor/black,
 /area/residential/ship_bay)
 "ajQ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -7073,11 +7057,9 @@
 /turf/simulated/floor/wood,
 /area/residential/room8)
 "aOy" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/flight_left{
-	icon_state = "left0"
-	},
-/turf/simulated/floor/tiled/eris/dark/brown_perforated,
+/obj/structure/table/darkglass,
+/obj/item/modular_computer/laptop/preset/custom_loadout/elite,
+/turf/simulated/shuttle/floor/glass,
 /area/residential/ship_bay)
 "aOA" = (
 /obj/structure/disposalpipe/segment,
@@ -8674,11 +8656,10 @@
 /turf/simulated/floor/tiled,
 /area/residential/room5)
 "bjD" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/effect/floor_decal/industrial/warning,
-/obj/effect/floor_decal/rust,
-/obj/machinery/floodlight,
-/turf/simulated/floor/plating,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/glass,
 /area/residential/ship_bay)
 "bBx" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -8708,12 +8689,8 @@
 /turf/simulated/floor/plating,
 /area/residential/ship_bay)
 "bOF" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/computer/shuttle_control{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/eris/dark/brown_perforated,
+/obj/machinery/telecomms/relay/preset/arfs/residential,
+/turf/simulated/shuttle/floor/black,
 /area/residential/ship_bay)
 "bWh" = (
 /obj/machinery/light/floortube,
@@ -8736,26 +8713,31 @@
 /turf/simulated/floor/plating,
 /area/residential/ship_bay)
 "ckE" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 9
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	dir = 2;
+	icon_state = "shutter0";
+	id = "kaiwindow";
+	name = "Window Shutters";
+	opacity = 0
 	},
-/turf/simulated/floor/wood,
+/obj/structure/shuttle/window{
+	color = "#444444"
+	},
+/turf/simulated/shuttle/floor/glass,
 /area/residential/ship_bay)
 "cnf" = (
-/obj/item/modular_computer/console/preset/civilian{
-	dir = 8
-	},
-/obj/machinery/light,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/wood,
 /area/residential/ship_bay)
 "cqL" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/effect/floor_decal/spline/plain,
-/turf/simulated/floor/reinforced,
+/obj/structure/closet/crate/plastic,
+/obj/item/clothing/under/skirt/outfit/plaid_blue,
+/obj/item/clothing/under/color/blackjumpskirt,
+/obj/item/clothing/under/circuitry,
+/turf/simulated/floor/wood,
 /area/residential/ship_bay)
 "cCb" = (
 /obj/structure/cable{
@@ -8764,26 +8746,41 @@
 /turf/simulated/floor/carpet/oracarpet,
 /area/residential/ship_bay)
 "cFV" = (
-/obj/effect/floor_decal/industrial/warning,
-/obj/machinery/light/floortube,
-/turf/simulated/floor/tiled/techfloor,
+/obj/machinery/door/window{
+	dir = 2
+	},
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -14;
+	pixel_y = 6
+	},
+/obj/structure/mirror{
+	pixel_x = -25;
+	pixel_y = 5
+	},
+/obj/machinery/button/windowtint{
+	id = "kaibathroom";
+	pixel_x = -20;
+	pixel_y = -4
+	},
+/turf/simulated/shuttle/floor/white,
 /area/residential/ship_bay)
 "cHy" = (
-/obj/machinery/door/blast/regular{
-	id = "mechanic"
+/obj/structure/window/reinforced/polarized{
+	id = "kaibathroom"
 	},
-/turf/simulated/floor/tiled/techfloor,
+/obj/machinery/light,
+/turf/simulated/shuttle/floor/white,
 /area/residential/ship_bay)
 "cNu" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
+/obj/structure/window/reinforced/polarized{
+	dir = 4;
+	id = "kaibathroom"
 	},
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/floodlight{
-	dir = 1
+/obj/structure/window/reinforced/polarized{
+	id = "kaibathroom"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/shuttle/floor/white,
 /area/residential/ship_bay)
 "cSm" = (
 /obj/structure/sign/levels/dock{
@@ -8800,61 +8797,14 @@
 /turf/simulated/floor/carpet/oracarpet,
 /area/residential/room3)
 "ddC" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
+/obj/structure/bed/chair/sofa/black/right{
+	dir = 4
 	},
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/table/rack,
-/obj/item/integrated_circuit/input/EPv2{
-	pixel_x = -5;
-	pixel_y = 4
-	},
-/obj/item/integrated_circuit/input/atmo_scanner{
-	pixel_x = 5;
-	pixel_y = 7
-	},
-/obj/item/integrated_circuit/input/gps,
-/obj/item/integrated_circuit/input/numberpad{
-	pixel_x = 2;
-	pixel_y = -6
-	},
-/obj/item/integrated_circuit/input/sensor{
-	pixel_x = -8;
-	pixel_y = -8
-	},
-/obj/effect/decal/cleanable/generic,
-/turf/simulated/floor/plating,
+/turf/simulated/shuttle/floor/glass,
 /area/residential/ship_bay)
 "dqZ" = (
-/obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/structure/table/standard,
-/obj/machinery/microwave{
-	pixel_y = 29
-	},
-/obj/item/weapon/material/kitchen/utensil/fork/plastic{
-	pixel_x = 7;
-	pixel_y = 5
-	},
-/obj/item/weapon/material/kitchen/utensil/fork/plastic{
-	pixel_x = 5;
-	pixel_y = 6
-	},
-/obj/item/weapon/reagent_containers/food/snacks/mars{
-	desc = "A steaming self-heated bowl of poutine: fries, cheese curds and brown sauce!";
-	name = "Frouka's Poutine";
-	nutriment_desc = list("cheese" = 2, "potato" = 6);
-	pixel_x = -12;
-	pixel_y = 10
-	},
-/obj/item/weapon/reagent_containers/food/snacks/mars{
-	desc = "A steaming self-heated bowl of poutine: fries, cheese curds and brown sauce!";
-	name = "Frouka's Poutine";
-	nutriment_desc = list("cheese" = 2, "potato" = 6);
-	pixel_x = -8;
-	pixel_y = 2
-	},
-/turf/simulated/floor/tiled/eris/steel/techfloor,
+/obj/structure/table/darkglass,
+/turf/simulated/shuttle/floor/glass,
 /area/residential/ship_bay)
 "dyj" = (
 /obj/structure/cable{
@@ -8873,22 +8823,18 @@
 /turf/simulated/floor/carpet/oracarpet,
 /area/residential/ship_bay)
 "dzl" = (
-/turf/simulated/shuttle/wall/voidcraft/hard_corner,
+/obj/machinery/computer/security/telescreen/entertainment{
+	icon_state = "frame";
+	pixel_x = 30
+	},
+/turf/simulated/shuttle/floor/glass,
 /area/residential/ship_bay)
 "dHu" = (
-/obj/structure/window/reinforced/survival_pod{
-	dir = 8;
-	pixel_x = -4
+/obj/structure/bed/chair/shuttle{
+	dir = 4;
+	icon_state = "shuttle_chair"
 	},
-/obj/effect/floor_decal/spline/plain{
-	dir = 1
-	},
-/obj/effect/floor_decal/spline/plain,
-/obj/effect/floor_decal/spline/plain{
-	dir = 8
-	},
-/obj/structure/table/bench/wooden,
-/turf/simulated/floor/carpet/turcarpet,
+/turf/simulated/shuttle/floor/black,
 /area/residential/ship_bay)
 "ebS" = (
 /obj/structure/bed/chair/backed_red{
@@ -8907,33 +8853,17 @@
 /turf/simulated/shuttle/floor/black,
 /area/residential/ship_bay)
 "ejq" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+/obj/machinery/computer/shuttle_control{
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+/obj/machinery/light{
+	dir = 1
 	},
-/obj/item/weapon/storage/toolbox/syndicate/powertools{
-	desc = "A titanium case meant to hold specialized tools.";
-	icon = 'icons/obj/forensics.dmi';
-	icon_state = "case";
-	item_state_slots = null;
-	name = "Mechanic's toolcase";
-	pixel_x = -9;
-	pixel_y = 23;
-	starts_with = list(/obj/item/clothing/gloves/yellow,/obj/item/weapon/tool/screwdriver/power,/obj/item/weapon/tool/crowbar/power,/obj/item/stack/cable_coil/random_belt,/obj/item/device/analyzer)
-	},
-/turf/simulated/floor/tiled/eris/white/techfloor_grid,
+/turf/simulated/shuttle/floor/black,
 /area/residential/ship_bay)
 "ekw" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/floor_decal/industrial/warning,
-/obj/structure/frame,
-/turf/simulated/floor/plating,
+/obj/machinery/door/airlock/voidcraft/vertical,
+/turf/simulated/shuttle/floor/glass,
 /area/residential/ship_bay)
 "eBY" = (
 /obj/structure/window/titanium{
@@ -8947,48 +8877,10 @@
 /turf/simulated/floor/carpet/oracarpet,
 /area/residential/room3)
 "eJh" = (
-/obj/structure/closet/walllocker{
-	desc = "A tiny fridge meant to hold all kinds of food... but mostly alcohol.";
-	name = "Minifridge";
-	pixel_x = -10;
-	pixel_y = 7
+/obj/item/modular_computer/console/preset/civilian{
+	dir = 8
 	},
-/obj/item/weapon/reagent_containers/food/snacks/canned/beans{
-	pixel_x = 3;
-	pixel_y = 6
-	},
-/obj/item/weapon/reagent_containers/food/snacks/canned/beef{
-	pixel_x = -6;
-	pixel_y = 3
-	},
-/obj/item/weapon/reagent_containers/food/snacks/canned/beef{
-	pixel_x = -1;
-	pixel_y = 1
-	},
-/obj/item/weapon/reagent_containers/food/snacks/canned/beans{
-	pixel_x = 8;
-	pixel_y = 3
-	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer{
-	pixel_x = 6;
-	pixel_y = 3
-	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/litebeer{
-	pixel_x = 1;
-	pixel_y = 3
-	},
-/obj/item/weapon/reagent_containers/food/drinks/smallchocmilk{
-	pixel_x = -8
-	},
-/obj/item/weapon/reagent_containers/food/drinks/smallchocmilk{
-	pixel_x = -8;
-	pixel_y = -6
-	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer/meteor,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer/silverdragon{
-	pixel_x = 7
-	},
-/turf/simulated/floor/tiled/eris/steel/techfloor,
+/turf/simulated/shuttle/floor/black,
 /area/residential/ship_bay)
 "eLD" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -9010,69 +8902,48 @@
 /turf/simulated/shuttle/floor/black,
 /area/residential/ship_bay)
 "ftW" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
+/obj/structure/safe/floor{
+	open = 1;
+	tumbler_1_open = null;
+	tumbler_2_open = null
 	},
-/obj/machinery/door/blast/shutters{
-	density = 0;
-	dir = 2;
-	icon_state = "shutter0";
-	id = "kaiwindow";
-	name = "Window Shutters";
-	opacity = 0
-	},
-/obj/structure/shuttle/window{
-	color = "#444444"
-	},
-/turf/simulated/shuttle/floor/glass,
+/obj/item/weapon/sextoy/dildo/canine,
+/obj/item/clothing/accessory/collar/holo,
+/obj/item/weapon/melee/baton,
+/obj/item/weapon/handcuffs,
+/obj/item/weapon/handcuffs/legcuffs,
+/obj/item/weapon/sextoy/dildo/analbeads,
+/obj/item/weapon/sextoy/dildo/bulletvibe,
+/obj/item/weapon/sextoy/dildo/bulletvibe,
+/turf/simulated/floor/wood,
 /area/residential/ship_bay)
 "fvh" = (
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/simulated/floor/wood,
 /area/residential/ship_bay)
 "fMg" = (
-/obj/structure/closet/crate/plastic,
-/obj/item/clothing/under/skirt/outfit/plaid_blue,
-/obj/item/clothing/under/color/blackjumpskirt,
-/obj/item/clothing/under/circuitry,
-/turf/simulated/floor/wood,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/glass,
 /area/residential/ship_bay)
 "fWG" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 6
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/structure/table/standard,
+/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+	pixel_x = 3
 	},
-/obj/machinery/button/remote/blast_door{
-	id = "mechanic";
-	name = "mechanic access door control";
-	pixel_x = -25
+/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+	pixel_x = -2
 	},
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/tiled/white,
 /area/residential/ship_bay)
 "fZa" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/floor_decal/industrial/warning,
-/obj/structure/table/rack/gun_rack{
-	desc = "Seems like you could prop up quite a lot of plating here.";
-	name = "plating rack"
-	},
-/obj/item/mecha_parts/component/armor{
-	name = "shuttle plating";
-	pixel_x = -3;
-	pixel_y = -5
-	},
-/obj/item/mecha_parts/component/armor{
-	name = "shuttle plating";
-	pixel_x = 1;
-	pixel_y = -2
-	},
-/obj/item/mecha_parts/component/armor{
-	name = "shuttle plating";
-	pixel_x = -1;
-	pixel_y = 1
-	},
-/obj/effect/decal/cleanable/generic,
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/machinery/appliance/cooker/oven,
+/turf/simulated/floor/tiled/white,
 /area/residential/ship_bay)
 "fZh" = (
 /obj/machinery/light{
@@ -9081,10 +8952,9 @@
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
 "gfp" = (
-/obj/structure/girder,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/grille,
-/turf/simulated/floor/tiled/eris/dark/brown_perforated,
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/machinery/appliance/cooker/grill,
+/turf/simulated/floor/tiled/white,
 /area/residential/ship_bay)
 "ghA" = (
 /obj/structure/sign/levels/dock{
@@ -9093,56 +8963,47 @@
 /turf/simulated/wall/bay,
 /area/residential/ship_bay)
 "gik" = (
-/obj/structure/table/rack,
-/obj/item/stack/material/steel{
-	amount = 50;
-	pixel_x = 5;
-	pixel_y = 3
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/structure/closet/secure_closet/freezer/fridge{
+	starts_with = list(/obj/item/weapon/reagent_containers/food/drinks/milk = 6, /obj/item/weapon/storage/fancy/egg_box = 4, /obj/item/weapon/reagent_containers/food/condiment/flour = 7, /obj/item/weapon/reagent_containers/food/condiment/sugar = 2)
 	},
-/obj/item/stack/material/titanium{
-	pixel_x = -3
-	},
-/obj/item/stack/material/plastic{
-	amount = 50;
-	pixel_x = 4;
-	pixel_y = 1
-	},
-/obj/item/stack/material/plasteel{
-	amount = 10
-	},
-/obj/item/stack/material/glass{
-	amount = 50;
-	pixel_x = -3;
-	pixel_y = 3
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/eris/white/techfloor_grid,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/turf/simulated/floor/tiled/white,
 /area/residential/ship_bay)
 "gjz" = (
-/obj/effect/floor_decal/spline/plain,
-/obj/effect/floor_decal/industrial/warning/corner,
-/turf/simulated/floor/reinforced,
+/obj/structure/bed/chair/shuttle{
+	dir = 4;
+	icon_state = "shuttle_chair"
+	},
+/obj/machinery/button/remote/blast_door{
+	id = "kaiwindow";
+	name = "remote shutter control";
+	pixel_x = -23
+	},
+/turf/simulated/shuttle/floor/black,
 /area/residential/ship_bay)
 "gnx" = (
 /obj/structure/flora/pottedplant/shoot,
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
 "gqp" = (
-/obj/structure/shuttle/engine/heater,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/window/reinforced/survival_pod{
-	dir = 1
+/obj/item/modular_computer/console/preset/civilian{
+	dir = 8
 	},
-/turf/simulated/floor/tiled/eris/dark/brown_perforated,
+/obj/machinery/light,
+/turf/simulated/shuttle/floor/black,
 /area/residential/ship_bay)
 "gvz" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/floor_decal/industrial/warning,
-/obj/machinery/space_heater,
-/turf/simulated/floor/plating,
+/obj/structure/bed/double,
+/obj/item/weapon/bedsheet/hopdouble,
+/turf/simulated/floor/wood,
 /area/residential/ship_bay)
 "gyI" = (
 /obj/structure/sign/levels/dock,
@@ -9167,13 +9028,15 @@
 /turf/simulated/floor/tiled/eris/cafe,
 /area/residential/room12)
 "gTd" = (
-/obj/effect/floor_decal/industrial/warning,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/effect/floor_decal/rust,
-/obj/effect/decal/cleanable/blood/oil/streak,
-/obj/machinery/power/port_gen/pacman,
-/turf/simulated/floor/plating,
+/obj/structure/closet/cabinet,
+/obj/item/clothing/under/shorts/black,
+/obj/item/clothing/under/pants/blackjeans,
+/obj/item/clothing/suit/storage/toggle/hoodie/black,
+/obj/structure/safe/floor{
+	tumbler_1_open = 6;
+	tumbler_2_open = 9
+	},
+/turf/simulated/floor/wood,
 /area/residential/ship_bay)
 "gUp" = (
 /obj/structure/window/titanium{
@@ -9191,9 +9054,8 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/residential/ship_bay)
 "hdh" = (
-/obj/structure/bed/double,
-/obj/item/weapon/bedsheet/hopdouble,
-/turf/simulated/floor/wood,
+/obj/machinery/light,
+/turf/simulated/shuttle/floor/glass,
 /area/residential/ship_bay)
 "hil" = (
 /obj/structure/bed/chair/wood{
@@ -9202,66 +9064,92 @@
 /turf/simulated/floor/tiled,
 /area/residential/room5)
 "hiv" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/reinforced,
+/obj/effect/floor_decal/corner/black/diagonal{
+	dir = 1
+	},
+/obj/structure/closet/walllocker_double/kitchen{
+	dir = 1;
+	pixel_y = -26
+	},
+/obj/item/weapon/storage/box/donkpockets,
+/obj/item/weapon/storage/box/donkpockets,
+/obj/item/weapon/storage/mre,
+/obj/item/weapon/storage/mre,
+/obj/item/weapon/storage/mre,
+/obj/item/weapon/storage/mre,
+/obj/item/weapon/storage/mre/menu4,
+/obj/item/weapon/storage/mre/menu4,
+/obj/item/weapon/storage/mre/menu5,
+/obj/item/weapon/storage/mre/menu5,
+/turf/simulated/floor/tiled/white,
 /area/residential/ship_bay)
 "hiE" = (
-/obj/structure/bed/chair/shuttle_padded{
-	dir = 8
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/machinery/microwave/advanced{
+	density = 0;
+	pixel_y = -20
 	},
-/obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled/eris/dark/brown_perforated,
+/turf/simulated/floor/tiled/white,
 /area/residential/ship_bay)
 "hoE" = (
-/obj/effect/floor_decal/industrial/warning,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/machinery/chemical_dispenser/bar_soft/full{
+	dir = 1;
+	pixel_y = -19
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5
-	},
-/mob/living/simple_mob/animal/passive/dronepup,
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/tiled/white,
 /area/residential/ship_bay)
 "hDk" = (
 /obj/structure/table/marble,
 /turf/simulated/floor/carpet/oracarpet,
 /area/residential/ship_bay)
 "hWm" = (
-/obj/machinery/door/window{
-	dir = 2
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/structure/closet/walllocker_double/kitchen{
+	dir = 4;
+	pixel_x = 30
 	},
-/obj/structure/sink{
-	dir = 8;
-	pixel_x = -14;
-	pixel_y = 6
-	},
-/obj/structure/mirror{
-	pixel_x = -25;
-	pixel_y = 5
-	},
-/obj/machinery/button/windowtint{
-	id = "kaibathroom";
-	pixel_x = -20;
-	pixel_y = -4
-	},
-/turf/simulated/shuttle/floor/white,
+/obj/item/weapon/material/knife,
+/obj/item/weapon/material/kitchen/rollingpin,
+/obj/machinery/light,
+/obj/item/weapon/storage/box/glasses/meta,
+/turf/simulated/floor/tiled/white,
 /area/residential/ship_bay)
 "ibL" = (
-/obj/machinery/door/airlock/glass,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/residential/corridors)
+/obj/structure/closet,
+/obj/item/device/radio/headset/pilot/alt,
+/obj/item/clothing/suit/storage/toggle/bomber/pilot,
+/obj/item/clothing/under/rank/pilot1,
+/obj/item/weapon/material/knife/tacknife/survival,
+/obj/item/clothing/accessory/holster/machete,
+/obj/item/weapon/material/knife/machete/deluxe,
+/obj/item/clothing/accessory/solgov/specialty/pilot,
+/obj/item/clothing/head/pilot,
+/obj/item/clothing/glasses/goggles,
+/obj/item/device/survivalcapsule/luxury,
+/turf/simulated/shuttle/floor/black,
+/area/residential/ship_bay)
 "ieO" = (
-/obj/structure/bed/chair/backed_grey{
+/obj/structure/shuttle/engine/heater{
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
+/obj/structure/window/reinforced/polarized{
+	dir = 1;
+	id = "kaiwindow"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5
+/obj/structure/window/reinforced/polarized{
+	dir = 4;
+	id = "kaiwindow"
 	},
-/turf/simulated/floor/tiled/eris/white/techfloor_grid,
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	dir = 8;
+	icon_state = "shutter0";
+	id = "kaiwindow";
+	name = "Window Shutters";
+	opacity = 0
+	},
+/turf/simulated/shuttle/floor/glass,
 /area/residential/ship_bay)
 "iip" = (
 /turf/simulated/floor/carpet/oracarpet,
@@ -9287,34 +9175,24 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/residential/ship_bay)
 "ium" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/shuttle/wall/voidcraft/hard_corner,
 /area/residential/ship_bay)
 "iuV" = (
-/obj/structure/bed/chair,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/residential/ship_bay)
-"iDb" = (
-/obj/effect/floor_decal/spline/plain,
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
+/obj/effect/floor_decal/industrial/warning,
+/obj/structure/fans/tiny,
+/obj/machinery/door/airlock/voidcraft{
+	name = "S8";
+	req_one_access = list(8208)
 	},
-/turf/simulated/floor/reinforced,
-/area/residential/ship_bay)
-"iER" = (
-/obj/effect/floor_decal/corner/black/diagonal,
-/obj/structure/closet/walllocker_double/kitchen{
-	dir = 4;
-	pixel_x = 30
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	dir = 8;
+	icon_state = "shutter0";
+	id = "kaiwindow";
+	name = "Window Shutters";
+	opacity = 0
 	},
-/obj/item/weapon/material/knife,
-/obj/item/weapon/material/kitchen/rollingpin,
-/obj/machinery/light,
-/obj/item/weapon/storage/box/glasses/meta,
-/turf/simulated/floor/tiled/white,
+/turf/simulated/shuttle/floor/white,
 /area/residential/ship_bay)
 "iKH" = (
 /obj/structure/table/steel_reinforced,
@@ -9326,34 +9204,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/carpet/oracarpet,
 /area/residential/room3)
-"iMI" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 5
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/techfloor,
-/area/residential/ship_bay)
-"iSZ" = (
-/obj/structure/bed/chair/shuttle{
-	dir = 4;
-	icon_state = "shuttle_chair"
-	},
-/obj/machinery/button/remote/blast_door{
-	id = "kaiwindow";
-	name = "remote shutter control";
-	pixel_x = -23
-	},
-/turf/simulated/shuttle/floor/black,
-/area/residential/ship_bay)
-"jaR" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
-	},
-/obj/structure/closet/secure_closet/engineering_electrical{
-	req_access = null
-	},
-/turf/simulated/floor/tiled/eris/white/techfloor_grid,
-/area/residential/ship_bay)
 "jen" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
@@ -9378,42 +9228,10 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/residential/room3)
-"jvs" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/turf/simulated/floor/wood,
-/area/residential/ship_bay)
-"jyc" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/floor_decal/industrial/warning,
-/obj/structure/loot_pile/maint/technical,
-/obj/effect/decal/cleanable/generic,
-/turf/simulated/floor/plating,
-/area/residential/ship_bay)
-"jAH" = (
-/obj/effect/floor_decal/corner/black/diagonal,
-/obj/machinery/microwave/advanced{
-	density = 0;
-	pixel_y = -20
-	},
-/turf/simulated/floor/tiled/white,
-/area/residential/ship_bay)
 "jXJ" = (
 /obj/machinery/door/firedoor/glass/hidden,
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
-"ktl" = (
-/obj/structure/window/reinforced/polarized{
-	id = "kaibathroom"
-	},
-/obj/machinery/light,
-/turf/simulated/shuttle/floor/white,
-/area/residential/ship_bay)
 "kzd" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
@@ -9426,29 +9244,6 @@
 	},
 /turf/simulated/floor/snow,
 /area/residential/room12)
-"kDY" = (
-/obj/structure/catwalk,
-/obj/machinery/door/blast/regular{
-	id = "mechanic"
-	},
-/turf/simulated/floor/plating,
-/area/residential/ship_bay)
-"kKH" = (
-/obj/structure/window/reinforced/polarized{
-	dir = 4;
-	id = "kaibathroom"
-	},
-/obj/structure/window/reinforced/polarized{
-	id = "kaibathroom"
-	},
-/turf/simulated/shuttle/floor/white,
-/area/residential/ship_bay)
-"lcB" = (
-/obj/structure/bed/chair/sofa/black/right{
-	dir = 4
-	},
-/turf/simulated/shuttle/floor/glass,
-/area/residential/ship_bay)
 "llH" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -9458,21 +9253,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
-"lnH" = (
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/simulated/floor/reinforced,
-/area/residential/ship_bay)
-"lEV" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 9
-	},
-/obj/machinery/light/floortube{
-	pixel_x = 2
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/residential/ship_bay)
 "lYb" = (
 /obj/structure/closet/crate/bin,
 /obj/item/trash/genration,
@@ -9504,33 +9284,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
-"muQ" = (
-/obj/structure/table/darkglass,
-/turf/simulated/shuttle/floor/glass,
-/area/residential/ship_bay)
 "mxo" = (
 /turf/simulated/wall,
 /area/residential/room3)
-"mEj" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/reinforced,
-/area/residential/ship_bay)
-"mHo" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/shuttle/engine/propulsion/burst,
-/turf/simulated/floor/tiled/eris/dark/brown_perforated,
-/area/residential/ship_bay)
-"mIm" = (
-/obj/effect/floor_decal/industrial/warning,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/reinforced,
-/area/residential/ship_bay)
 "mNR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -9540,24 +9296,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/room1)
-"mQE" = (
-/obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
-	pixel_x = 30
-	},
-/turf/simulated/shuttle/floor/glass,
-/area/residential/ship_bay)
-"mRd" = (
-/obj/structure/bed/chair/shuttle{
-	dir = 4;
-	icon_state = "shuttle_chair"
-	},
-/turf/simulated/shuttle/floor/black,
-/area/residential/ship_bay)
-"nim" = (
-/obj/machinery/light,
-/turf/simulated/shuttle/floor/glass,
-/area/residential/ship_bay)
 "nnG" = (
 /obj/structure/sign/levels/dock{
 	dir = 4
@@ -9603,36 +9341,12 @@
 /obj/machinery/light/floortube,
 /turf/simulated/floor/tiled/techfloor,
 /area/residential/ship_bay)
-"nMG" = (
-/obj/structure/catwalk,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
-/area/residential/ship_bay)
 "nNI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
 /turf/simulated/floor/tiled,
 /area/residential/room11)
-"okT" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/flight_right{
-	icon_state = "right-open"
-	},
-/turf/simulated/floor/tiled/eris/dark/brown_perforated,
-/area/residential/ship_bay)
-"owV" = (
-/obj/machinery/door/airlock/mining{
-	name = "Mechanic's Bedroom";
-	req_one_access = null
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/residential/ship_bay)
 "oxT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -9641,15 +9355,6 @@
 "oEu" = (
 /obj/machinery/holoplant,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/residential/ship_bay)
-"oFv" = (
-/obj/machinery/computer/shuttle_control{
-	dir = 8
-	},
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/simulated/shuttle/floor/black,
 /area/residential/ship_bay)
 "oId" = (
 /obj/structure/window/plastitanium/full,
@@ -9661,31 +9366,12 @@
 "oJd" = (
 /turf/simulated/wall,
 /area/residential/room5)
-"oQg" = (
-/turf/simulated/shuttle/wall/dark/hard_corner,
-/area/residential/ship_bay)
-"phn" = (
-/obj/effect/floor_decal/corner/black/diagonal,
-/obj/machinery/chemical_dispenser/bar_soft/full{
-	dir = 1;
-	pixel_y = -19
-	},
-/turf/simulated/floor/tiled/white,
-/area/residential/ship_bay)
 "pjv" = (
 /obj/item/weapon/storage/fancy/blackcandle_box,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/residential/ship_bay)
-"pjO" = (
-/obj/structure/table/bench/wooden,
-/obj/machinery/light/small{
-	dir = 1;
-	pixel_x = 9
-	},
-/turf/simulated/floor/wood,
 /area/residential/ship_bay)
 "pmN" = (
 /obj/machinery/fusion_fuel_injector{
@@ -9697,15 +9383,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
-"pLT" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/loot_pile/maint/technical,
-/obj/effect/decal/cleanable/generic,
-/turf/simulated/floor/plating,
-/area/residential/ship_bay)
 "pPF" = (
 /obj/structure/window/titanium{
 	dir = 1
@@ -9733,30 +9410,6 @@
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
 /area/residential/corridors)
-"qsY" = (
-/obj/structure/closet/cabinet,
-/obj/item/toy/chewtoy,
-/obj/item/weapon/leash,
-/obj/item/clothing/under/rippedpunk,
-/obj/item/clothing/under/swimsuit/stripper/stripper_green,
-/obj/item/clothing/under/overalls/sleek,
-/obj/item/clothing/under/overalls/sleek,
-/obj/item/clothing/under/pants/utility/orange,
-/obj/item/clothing/under/hazard,
-/obj/item/clothing/under/cyberpunkharness,
-/obj/item/clothing/under/croptop/red,
-/obj/item/clothing/shoes/boots/workboots{
-	pixel_y = -8
-	},
-/obj/effect/floor_decal/spline/plain{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 4;
-	pixel_x = 3
-	},
-/turf/simulated/floor/wood,
-/area/residential/ship_bay)
 "qtl" = (
 /obj/effect/floor_decal/spline/fancy{
 	color = "#a2120d";
@@ -9781,38 +9434,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
-"qAm" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9
-	},
-/turf/simulated/floor/wood,
-/area/residential/ship_bay)
-"qDa" = (
-/obj/effect/floor_decal/rust,
-/obj/effect/floor_decal/industrial/warning,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/table/rack,
-/obj/item/stack/material/phoron{
-	pixel_x = -3;
-	pixel_y = 7
-	},
-/obj/item/stack/material/phoron,
-/turf/simulated/floor/plating,
-/area/residential/ship_bay)
-"qIf" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/reinforced,
-/area/residential/ship_bay)
-"qIC" = (
-/obj/structure/table/rack/shelf,
-/obj/item/weapon/weldpack,
-/obj/item/weapon/storage/belt{
-	pixel_y = -6
-	},
-/obj/item/clothing/glasses/welding,
-/turf/simulated/floor/tiled/eris/white/techfloor_grid,
-/area/residential/ship_bay)
 "qJY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/bed/chair/sofa/black/corner{
@@ -9842,37 +9463,9 @@
 /obj/structure/bed/chair/comfy/red,
 /turf/simulated/floor/tiled/eris/dark/bluecorner,
 /area/residential/room11)
-"riX" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/floor_decal/industrial/warning,
-/obj/structure/ore_box,
-/turf/simulated/floor/plating,
-/area/residential/ship_bay)
-"rqh" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 6
-	},
-/obj/structure/catwalk,
-/turf/simulated/floor/plating,
-/area/residential/ship_bay)
 "rvu" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /turf/simulated/floor/tiled/steel_ridged,
-/area/residential/ship_bay)
-"rwC" = (
-/obj/structure/reagent_dispensers/fueltank/high,
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/floor_decal/rust,
-/obj/effect/decal/cleanable/blood/oil/streak,
-/turf/simulated/floor/plating,
 /area/residential/ship_bay)
 "ryh" = (
 /turf/simulated/wall,
@@ -9880,13 +9473,6 @@
 "ryp" = (
 /obj/machinery/door/unpowered/shuttle,
 /turf/simulated/floor/tiled/steel_ridged,
-/area/residential/ship_bay)
-"rzZ" = (
-/obj/effect/floor_decal/spline/plain,
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 8
-	},
-/turf/simulated/floor/reinforced,
 /area/residential/ship_bay)
 "rJf" = (
 /obj/structure/window/titanium{
@@ -9911,33 +9497,6 @@
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
 /turf/simulated/floor/carpet/bcarpet,
 /area/residential/room3)
-"rOf" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/power/generator,
-/turf/simulated/floor/tiled/eris/dark/brown_perforated,
-/area/residential/ship_bay)
-"rSm" = (
-/obj/structure/bed/chair/sofa/corp/left{
-	dir = 1
-	},
-/turf/simulated/floor/wood,
-/area/residential/ship_bay)
-"sba" = (
-/obj/structure/table/rack/shelf,
-/obj/item/weapon/rcd{
-	pixel_x = -1;
-	pixel_y = 4
-	},
-/obj/item/device/multitool{
-	pixel_x = -4;
-	pixel_y = -2
-	},
-/obj/item/weapon/inducer{
-	pixel_y = -8
-	},
-/turf/simulated/floor/tiled/eris/white/techfloor_grid,
-/area/residential/ship_bay)
 "sfD" = (
 /obj/effect/floor_decal/spline/plain,
 /obj/structure/table/marble,
@@ -9947,16 +9506,6 @@
 	},
 /turf/simulated/floor/tiled/eris/cafe,
 /area/residential/room12)
-"sjD" = (
-/obj/effect/floor_decal/industrial/warning,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/turf/simulated/floor/reinforced,
-/area/residential/ship_bay)
 "slg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 1
@@ -10007,36 +9556,11 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/residential/ship_bay)
-"tjA" = (
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 23
-	},
-/obj/effect/floor_decal/spline/plain,
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
-	},
-/turf/simulated/floor/reinforced,
-/area/residential/ship_bay)
-"tmo" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/blood/oil/streak,
-/turf/simulated/floor/reinforced,
-/area/residential/ship_bay)
 "tpA" = (
 /obj/structure/sign/levels/dock{
 	dir = 1
 	},
 /turf/simulated/wall/bay,
-/area/residential/ship_bay)
-"tCi" = (
-/obj/structure/catwalk,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/turf/simulated/floor/reinforced,
 /area/residential/ship_bay)
 "tCD" = (
 /obj/machinery/light/floortube,
@@ -10045,35 +9569,9 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/residential/ship_bay)
-"tEU" = (
-/obj/effect/catwalk_plated/white,
-/obj/structure/curtain/open/shower,
-/obj/item/weapon/soap/deluxe{
-	pixel_y = -8
-	},
-/obj/machinery/shower,
-/turf/simulated/floor/bmarble,
-/area/residential/ship_bay)
 "tWo" = (
 /obj/structure/sign/warning/nosmoking_1,
 /turf/simulated/wall/bay,
-/area/residential/ship_bay)
-"tYK" = (
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/residential/ship_bay)
-"ukw" = (
-/obj/machinery/computer/security/telescreen/entertainment{
-	pixel_x = 15;
-	pixel_y = 27
-	},
-/turf/simulated/floor/wood,
-/area/residential/ship_bay)
-"uma" = (
-/obj/machinery/door/airlock/voidcraft/vertical,
-/turf/simulated/shuttle/floor/glass,
 /area/residential/ship_bay)
 "usU" = (
 /obj/effect/floor_decal/spline/plain{
@@ -10088,54 +9586,8 @@
 	},
 /turf/simulated/floor/tiled/eris/cafe,
 /area/residential/room12)
-"utp" = (
-/obj/effect/wingrille_spawn/reinforced,
-/obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/plating,
-/area/residential/ship_bay)
-"utA" = (
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4
-	},
-/turf/simulated/floor/reinforced,
-/area/residential/ship_bay)
-"uuD" = (
-/obj/structure/closet,
-/obj/item/device/radio/headset/pilot/alt,
-/obj/item/clothing/suit/storage/toggle/bomber/pilot,
-/obj/item/clothing/under/rank/pilot1,
-/obj/item/weapon/material/knife/tacknife/survival,
-/obj/item/clothing/accessory/holster/machete,
-/obj/item/weapon/material/knife/machete/deluxe,
-/obj/item/clothing/accessory/solgov/specialty/pilot,
-/obj/item/clothing/head/pilot,
-/obj/item/clothing/glasses/goggles,
-/obj/item/device/survivalcapsule/luxury,
-/turf/simulated/shuttle/floor/black,
-/area/residential/ship_bay)
-"uvn" = (
-/obj/structure/window/reinforced/survival_pod{
-	dir = 4;
-	pixel_x = 4
-	},
-/obj/effect/floor_decal/spline/plain{
-	dir = 1
-	},
-/obj/effect/floor_decal/spline/plain,
-/obj/effect/floor_decal/spline/plain{
-	dir = 4
-	},
-/obj/structure/table/bench/wooden,
-/turf/simulated/floor/carpet/turcarpet,
-/area/residential/ship_bay)
 "uvP" = (
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/residential/ship_bay)
-"uAl" = (
-/obj/item/modular_computer/console/preset/civilian{
-	dir = 8
-	},
-/turf/simulated/shuttle/floor/black,
 /area/residential/ship_bay)
 "uDi" = (
 /obj/machinery/light{
@@ -10161,51 +9613,17 @@
 	},
 /turf/simulated/floor/tiled/eris/cafe,
 /area/residential/room12)
-"uKa" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/item/frame/apc{
-	pixel_y = 6
-	},
-/obj/item/frame/apc{
-	pixel_x = -5;
-	pixel_y = -3
-	},
-/turf/simulated/floor/tiled/eris/dark/brown_perforated,
-/area/residential/ship_bay)
 "uOq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/holoplant,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/residential/ship_bay)
-"uQu" = (
-/obj/machinery/holoposter{
-	icon_state = "grayson"
-	},
-/turf/simulated/wall/bay,
-/area/residential/ship_bay)
 "uQR" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/residential/ship_bay)
-"uSM" = (
-/obj/effect/floor_decal/industrial/warning,
-/obj/structure/fans/tiny,
-/obj/machinery/door/airlock/voidcraft{
-	name = "S8";
-	req_one_access = list(8208)
-	},
-/obj/machinery/door/blast/shutters{
-	density = 0;
-	dir = 8;
-	icon_state = "shutter0";
-	id = "kaiwindow";
-	name = "Window Shutters";
-	opacity = 0
-	},
-/turf/simulated/shuttle/floor/white,
 /area/residential/ship_bay)
 "uTn" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
@@ -10222,25 +9640,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/residential/ship_bay)
-"vcP" = (
-/obj/effect/floor_decal/spline/plain{
-	dir = 1
-	},
-/obj/effect/floor_decal/spline/plain,
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
-	pixel_x = -4;
-	pixel_y = 13
-	},
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
-	pixel_x = 2;
-	pixel_y = 13
-	},
-/obj/structure/table/wooden_reinforced,
-/obj/machinery/light/small{
-	pixel_x = -11
-	},
-/turf/simulated/floor/carpet/turcarpet,
-/area/residential/ship_bay)
 "vhm" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
@@ -10248,50 +9647,6 @@
 /obj/machinery/appliance/cooker/oven,
 /turf/simulated/floor/tiled/eris/cafe,
 /area/residential/room12)
-"vjD" = (
-/obj/machinery/fitness/heavy/lifter,
-/turf/simulated/floor/tiled/eris/steel/techfloor,
-/area/residential/ship_bay)
-"vkB" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 4
-	},
-/turf/simulated/floor/reinforced,
-/area/residential/ship_bay)
-"vkY" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/effect/wingrille_spawn/reinforced,
-/turf/simulated/floor/plating,
-/area/residential/corridors)
-"vwg" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/effect/floor_decal/rust,
-/obj/structure/reagent_dispensers/foam,
-/turf/simulated/floor/plating,
-/area/residential/ship_bay)
-"vyi" = (
-/obj/structure/closet/cabinet,
-/obj/item/clothing/under/shorts/black,
-/obj/item/clothing/under/pants/blackjeans,
-/obj/item/clothing/suit/storage/toggle/hoodie/black,
-/obj/structure/safe/floor{
-	tumbler_1_open = 6;
-	tumbler_2_open = 9
-	},
-/turf/simulated/floor/wood,
-/area/residential/ship_bay)
 "vzD" = (
 /obj/structure/catwalk,
 /turf/simulated/floor/reinforced,
@@ -10307,72 +9662,9 @@
 	},
 /turf/simulated/floor/carpet/oracarpet,
 /area/residential/ship_bay)
-"vIv" = (
-/obj/structure/bed/chair/sofa/corp/right{
-	dir = 1
-	},
-/turf/simulated/floor/wood,
-/area/residential/ship_bay)
-"vIW" = (
-/obj/structure/window/reinforced{
-	dir = 4;
-	pixel_x = 3
-	},
-/obj/structure/toilet/prison{
-	name = "industrial toilet"
-	},
-/turf/simulated/floor/wmarble,
-/area/residential/ship_bay)
-"vIZ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/obj/machinery/door/airlock/ckey{
-	icon = 'icons/obj/doors/Doormining.dmi';
-	name = "Mechanic's Apartment";
-	req_one_ckey = list("1ceres","LiuJr")
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/residential/ship_bay)
-"vKf" = (
-/obj/machinery/door/airlock/silver{
-	name = "Bathroom"
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/residential/ship_bay)
 "vLa" = (
 /obj/machinery/door/blast/regular/open,
 /turf/simulated/floor/tiled/techfloor,
-/area/residential/ship_bay)
-"vMx" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/power/breakerbox,
-/turf/simulated/floor/tiled/eris/dark/brown_perforated,
-/area/residential/ship_bay)
-"vNK" = (
-/obj/structure/shuttle/engine/heater{
-	dir = 8
-	},
-/obj/structure/window/reinforced/polarized{
-	dir = 1;
-	id = "kaiwindow"
-	},
-/obj/structure/window/reinforced/polarized{
-	dir = 4;
-	id = "kaiwindow"
-	},
-/obj/machinery/door/blast/shutters{
-	density = 0;
-	dir = 8;
-	icon_state = "shutter0";
-	id = "kaiwindow";
-	name = "Window Shutters";
-	opacity = 0
-	},
-/turf/simulated/shuttle/floor/glass,
 /area/residential/ship_bay)
 "vPL" = (
 /obj/structure/bed/chair/comfy/green{
@@ -10380,62 +9672,12 @@
 	},
 /turf/simulated/floor/carpet/oracarpet,
 /area/residential/ship_bay)
-"vWJ" = (
-/obj/structure/sign/levels/dock{
-	dir = 1;
-	pixel_y = 4
-	},
-/obj/structure/sign/directions/engineering{
-	dir = 4;
-	pixel_y = -4
-	},
-/turf/simulated/wall/bay,
-/area/residential/ship_bay)
-"wbq" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/turf/simulated/floor/reinforced,
-/area/residential/ship_bay)
 "wbY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
-"wey" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 10
-	},
-/obj/effect/decal/cleanable/blood/oil/streak,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/reinforced,
-/area/residential/ship_bay)
-"weQ" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/structure/table/standard,
-/obj/structure/sink/countertop{
-	pixel_x = 2;
-	pixel_y = 10
-	},
-/turf/simulated/floor/tiled/eris/steel/techfloor,
-/area/residential/ship_bay)
-"wgl" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 6
-	},
-/obj/machinery/light/small{
-	dir = 8;
-	pixel_y = 12
-	},
-/turf/simulated/floor/wood,
-/area/residential/ship_bay)
 "wgV" = (
 /obj/structure/sign/levels/dock{
 	dir = 10
@@ -10480,28 +9722,6 @@
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/techfloor,
 /area/residential/ship_bay)
-"wxW" = (
-/obj/structure/bed/pod,
-/obj/structure/curtain/open/bed,
-/obj/effect/floor_decal/spline/plain,
-/turf/simulated/floor/wood,
-/area/residential/ship_bay)
-"wDY" = (
-/obj/structure/safe/floor{
-	open = 1;
-	tumbler_1_open = null;
-	tumbler_2_open = null
-	},
-/obj/item/weapon/sextoy/dildo/canine,
-/obj/item/clothing/accessory/collar/holo,
-/obj/item/weapon/melee/baton,
-/obj/item/weapon/handcuffs,
-/obj/item/weapon/handcuffs/legcuffs,
-/obj/item/weapon/sextoy/dildo/analbeads,
-/obj/item/weapon/sextoy/dildo/bulletvibe,
-/obj/item/weapon/sextoy/dildo/bulletvibe,
-/turf/simulated/floor/wood,
-/area/residential/ship_bay)
 "wFe" = (
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
@@ -10517,227 +9737,38 @@
 /obj/machinery/microwave/advanced,
 /turf/simulated/floor/tiled/eris/cafe,
 /area/residential/room12)
-"wTb" = (
-/turf/simulated/wall,
-/area/space)
-"wTl" = (
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 1
-	},
-/turf/simulated/floor/reinforced,
-/area/residential/ship_bay)
 "wVI" = (
 /turf/simulated/floor/carpet/tealcarpet,
 /area/residential/room12)
 "wYk" = (
 /turf/simulated/floor/tiled/eris/cafe,
 /area/residential/room12)
-"xcY" = (
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/simulated/floor/wood,
-/area/residential/ship_bay)
-"xdm" = (
-/obj/structure/sink{
-	dir = 8;
-	pixel_x = -14
-	},
-/obj/machinery/light/small{
-	dir = 8;
-	pixel_y = 16
-	},
-/turf/simulated/floor/wmarble,
-/area/residential/ship_bay)
-"xkj" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/table/rack,
-/obj/item/integrated_circuit/passive/power/solar_cell{
-	pixel_x = -5;
-	pixel_y = 1
-	},
-/obj/item/integrated_circuit/passive/power/solar_cell{
-	pixel_x = -4;
-	pixel_y = -4
-	},
-/obj/item/integrated_circuit/passive/power/chemical_cell,
-/obj/item/integrated_circuit/passive/power/powernet,
-/obj/effect/decal/cleanable/generic,
-/turf/simulated/floor/plating,
-/area/residential/ship_bay)
-"xli" = (
-/obj/effect/floor_decal/corner/black/diagonal,
-/obj/structure/closet/secure_closet/freezer/fridge{
-	starts_with = list(/obj/item/weapon/reagent_containers/food/drinks/milk = 6, /obj/item/weapon/storage/fancy/egg_box = 4, /obj/item/weapon/reagent_containers/food/condiment/flour = 7, /obj/item/weapon/reagent_containers/food/condiment/sugar = 2)
-	},
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/turf/simulated/floor/tiled/white,
-/area/residential/ship_bay)
-"xmy" = (
-/obj/machinery/door/blast/regular{
-	id = "mechanic"
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/techfloor,
-/area/residential/ship_bay)
-"xot" = (
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/simulated/shuttle/floor/glass,
-/area/residential/ship_bay)
 "xtp" = (
 /turf/simulated/floor/reinforced,
-/area/residential/ship_bay)
-"xuj" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
-	},
-/turf/simulated/floor/wood,
-/area/residential/ship_bay)
-"xxB" = (
-/obj/structure/table/bench/standard{
-	pixel_x = 4
-	},
-/obj/item/weapon/towel/random{
-	pixel_x = 4
-	},
-/turf/simulated/floor/wmarble,
-/area/residential/ship_bay)
-"xxW" = (
-/obj/effect/forcefield,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/reinforced,
-/area/residential/ship_bay)
-"xBa" = (
-/obj/effect/floor_decal/corner/black/diagonal,
-/obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
-	pixel_x = 3
-	},
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
-	pixel_x = -2
-	},
-/turf/simulated/floor/tiled/white,
-/area/residential/ship_bay)
-"xBZ" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/effect/floor_decal/industrial/warning,
-/obj/item/frame{
-	pixel_x = -3;
-	pixel_y = 8
-	},
-/obj/item/frame{
-	pixel_y = -4
-	},
-/turf/simulated/floor/plating,
-/area/residential/ship_bay)
-"xEq" = (
-/obj/effect/floor_decal/corner/black/diagonal{
-	dir = 1
-	},
-/obj/structure/closet/walllocker_double/kitchen{
-	dir = 1;
-	pixel_y = -26
-	},
-/obj/item/weapon/storage/box/donkpockets,
-/obj/item/weapon/storage/box/donkpockets,
-/obj/item/weapon/storage/mre,
-/obj/item/weapon/storage/mre,
-/obj/item/weapon/storage/mre,
-/obj/item/weapon/storage/mre,
-/obj/item/weapon/storage/mre/menu4,
-/obj/item/weapon/storage/mre/menu4,
-/obj/item/weapon/storage/mre/menu5,
-/obj/item/weapon/storage/mre/menu5,
-/turf/simulated/floor/tiled/white,
 /area/residential/ship_bay)
 "xFX" = (
 /obj/structure/sign/warning/nosmoking_1{
 	pixel_x = 32
 	},
-/obj/structure/reagent_dispensers/water_cooler/full,
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
 "xFY" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/carpet/tealcarpet,
 /area/residential/room12)
-"xGi" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9
-	},
-/obj/structure/flora/pottedplant/minitree,
-/turf/simulated/floor/wood,
-/area/residential/ship_bay)
 "xNH" = (
 /obj/machinery/light/floortube,
 /obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor/tiled/techfloor,
 /area/residential/ship_bay)
-"xRJ" = (
-/obj/structure/table/bench/steel,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle{
-	pixel_x = -2;
-	pixel_y = 5
-	},
-/obj/item/weapon/reagent_containers/food/condiment/small/packet/watermelon{
-	pixel_x = 4;
-	pixel_y = -2
-	},
-/obj/item/weapon/storage/box/freezer{
-	can_hold = list(/obj/item);
-	pixel_x = -10;
-	pixel_y = -13
-	},
-/turf/simulated/floor/tiled/eris/steel/techfloor,
-/area/residential/ship_bay)
 "xZZ" = (
 /turf/simulated/wall,
 /area/residential/room1)
-"ybk" = (
-/obj/effect/floor_decal/corner/black/diagonal,
-/obj/machinery/appliance/cooker/oven,
-/turf/simulated/floor/tiled/white,
-/area/residential/ship_bay)
 "yby" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
-"ydC" = (
-/obj/effect/floor_decal/corner/black/diagonal,
-/obj/machinery/appliance/cooker/grill,
-/turf/simulated/floor/tiled/white,
-/area/residential/ship_bay)
-"yjx" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/obj/machinery/door/airlock/ckey{
-	icon = 'icons/obj/doors/Doormining.dmi';
-	name = "Mechanic's Workshop";
-	req_one_ckey = list("1ceres","LiuJr")
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/residential/ship_bay)
 
 (1,1,1) = {"
 aaa
@@ -37012,7 +36043,7 @@ aeR
 aeR
 aDW
 aeR
-aeR
+aTs
 aeR
 aeR
 aeR
@@ -37264,7 +36295,7 @@ aTs
 aeR
 aDW
 aeR
-aTs
+aeP
 aeP
 aeP
 aeP
@@ -37517,7 +36548,7 @@ aeR
 aDW
 aeR
 aeP
-wTb
+aaa
 aaa
 aaa
 aaa
@@ -41298,7 +40329,6 @@ aDW
 aeR
 qjf
 aaa
-adn
 aaa
 aaa
 aaa
@@ -41306,11 +40336,6 @@ aaa
 aaa
 aaa
 aaa
-adn
-aaa
-aaa
-aaa
-adn
 aaa
 aaa
 aaa
@@ -41318,11 +40343,6 @@ aaa
 aaa
 aaa
 aaa
-adn
-aaa
-aaa
-aaa
-adn
 aaa
 aaa
 aaa
@@ -41330,11 +40350,6 @@ aaa
 aaa
 aaa
 aaa
-adn
-aaa
-aaa
-aaa
-adn
 aaa
 aaa
 aaa
@@ -41342,11 +40357,6 @@ aaa
 aaa
 aaa
 aaa
-adn
-aaa
-aaa
-aaa
-adn
 aaa
 aaa
 aaa
@@ -41354,7 +40364,28 @@ aaa
 aaa
 aaa
 aaa
-adn
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -41545,12 +40576,11 @@ aaa
 aaa
 aaa
 qjf
-ibL
-vkY
-ibL
+aeR
+aDW
+aeR
 qjf
 aaa
-adr
 aaa
 aaa
 aaa
@@ -41558,11 +40588,6 @@ aaa
 aaa
 aaa
 aaa
-adr
-aaa
-aaa
-aaa
-adr
 aaa
 aaa
 aaa
@@ -41570,11 +40595,6 @@ aaa
 aaa
 aaa
 aaa
-adr
-aaa
-aaa
-aaa
-adr
 aaa
 aaa
 aaa
@@ -41582,11 +40602,6 @@ aaa
 aaa
 aaa
 aaa
-adr
-aaa
-aaa
-aaa
-adr
 aaa
 aaa
 aaa
@@ -41594,11 +40609,6 @@ aaa
 aaa
 aaa
 aaa
-adr
-aaa
-aaa
-aaa
-adr
 aaa
 aaa
 aaa
@@ -41606,7 +40616,28 @@ aaa
 aaa
 aaa
 aaa
-adr
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -41802,7 +40833,6 @@ aDW
 aeR
 qjf
 aaa
-adr
 aaa
 aaa
 aaa
@@ -41810,11 +40840,6 @@ aaa
 aaa
 aaa
 aaa
-adr
-aaa
-aaa
-aaa
-adr
 aaa
 aaa
 aaa
@@ -41822,11 +40847,6 @@ aaa
 aaa
 aaa
 aaa
-adr
-aaa
-aaa
-aaa
-adr
 aaa
 aaa
 aaa
@@ -41834,11 +40854,6 @@ aaa
 aaa
 aaa
 aaa
-adr
-aaa
-aaa
-aaa
-adr
 aaa
 aaa
 aaa
@@ -41846,11 +40861,6 @@ aaa
 aaa
 aaa
 aaa
-adr
-aaa
-aaa
-aaa
-adr
 aaa
 aaa
 aaa
@@ -41858,7 +40868,28 @@ aaa
 aaa
 aaa
 aaa
-adr
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -42049,9 +41080,9 @@ aaa
 aaa
 aaa
 vBi
-aeR
-aDW
-aeR
+ahP
+ahZ
+ahP
 vBi
 aaa
 swm
@@ -42518,7 +41549,6 @@ aaa
 aaa
 aaa
 aaa
-adn
 aaa
 aaa
 aaa
@@ -42526,11 +41556,6 @@ aaa
 aaa
 aaa
 aaa
-adn
-aaa
-aaa
-aaa
-adn
 aaa
 aaa
 aaa
@@ -42538,11 +41563,6 @@ aaa
 aaa
 aaa
 aaa
-adn
-aaa
-aaa
-aaa
-adn
 aaa
 aaa
 aaa
@@ -42550,7 +41570,18 @@ aaa
 aaa
 aaa
 aaa
-adn
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 qjf
 aeR
@@ -42770,7 +41801,6 @@ aaa
 aaa
 aaa
 aaa
-adr
 aaa
 aaa
 aaa
@@ -42778,11 +41808,6 @@ aaa
 aaa
 aaa
 aaa
-adr
-aaa
-aaa
-aaa
-adr
 aaa
 aaa
 aaa
@@ -42790,11 +41815,6 @@ aaa
 aaa
 aaa
 aaa
-adr
-aaa
-aaa
-aaa
-adr
 aaa
 aaa
 aaa
@@ -42802,7 +41822,18 @@ aaa
 aaa
 aaa
 aaa
-adr
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 qjf
 aeR
@@ -43006,23 +42037,6 @@ aaa
 aaa
 aaa
 aaa
-adn
-aaa
-aaa
-aaa
-aaa
-aaa
-adn
-aaa
-aaa
-aaa
-aaa
-aaa
-adn
-aaa
-aaa
-aaa
-adr
 aaa
 aaa
 aaa
@@ -43030,11 +42044,6 @@ aaa
 aaa
 aaa
 aaa
-adr
-aaa
-aaa
-aaa
-adr
 aaa
 aaa
 aaa
@@ -43042,11 +42051,6 @@ aaa
 aaa
 aaa
 aaa
-adr
-aaa
-aaa
-aaa
-adr
 aaa
 aaa
 aaa
@@ -43054,7 +42058,34 @@ aaa
 aaa
 aaa
 aaa
-adr
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 vBi
 aeR
@@ -43258,31 +42289,31 @@ aaa
 aaa
 aaa
 aaa
-adr
 aaa
 aaa
 aaa
 aaa
 aaa
-adr
 aaa
 aaa
 aaa
 aaa
 aaa
-adr
 aaa
 aaa
 aaa
-swm
-aac
-aac
-aac
-aac
-aac
-aac
-aac
-swm
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -43510,32 +42541,32 @@ aaa
 aaa
 aaa
 aaa
-adr
 aaa
 aaa
 aaa
 aaa
 aaa
-adr
 aaa
 aaa
 aaa
 aaa
 aaa
-adr
 aaa
-swm
-swm
-swm
-aaf
-aaf
-aaf
-aaf
-aaf
-aaf
-aaf
-swm
-swm
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 swm
 swm
 swm
@@ -43762,8 +42793,20 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 swm
-aac
+adr
 aac
 aac
 aac
@@ -43776,18 +42819,6 @@ aac
 aac
 swm
 aaa
-swm
-wub
-vzD
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
-vzD
-bbz
 swm
 wub
 vzD
@@ -44012,6 +43043,18 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 swm
 swm
 swm
@@ -44028,18 +43071,6 @@ aaf
 aaf
 swm
 swm
-swm
-adu
-vzD
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
-vzD
-sPT
 swm
 adu
 vzD
@@ -44264,6 +43295,18 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 swm
 wub
 vzD
@@ -44280,18 +43323,6 @@ xtp
 xtp
 vzD
 bbz
-swm
-adu
-vzD
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
-vzD
-sPT
 swm
 adu
 vzD
@@ -44516,6 +43547,18 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 swm
 adu
 vzD
@@ -44525,18 +43568,6 @@ xtp
 xtp
 xtp
 vzD
-xtp
-xtp
-xtp
-xtp
-xtp
-vzD
-sPT
-swm
-adu
-vzD
-xtp
-xtp
 xtp
 xtp
 xtp
@@ -44768,6 +43799,18 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 swm
 adu
 vzD
@@ -44777,18 +43820,6 @@ xtp
 xtp
 xtp
 vzD
-xtp
-xtp
-xtp
-xtp
-xtp
-vzD
-sPT
-swm
-adu
-vzD
-xtp
-xtp
 xtp
 xtp
 xtp
@@ -45020,6 +44051,18 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 swm
 adu
 vzD
@@ -45029,18 +44072,6 @@ xtp
 xtp
 xtp
 vzD
-xtp
-xtp
-xtp
-xtp
-xtp
-vzD
-sPT
-swm
-adu
-vzD
-xtp
-xtp
 xtp
 xtp
 xtp
@@ -45272,6 +44303,18 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 swm
 adu
 vzD
@@ -45288,18 +44331,6 @@ xtp
 xtp
 vzD
 sPT
-swm
-wub
-vzD
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
-vzD
-nIu
 swm
 wub
 vzD
@@ -45524,6 +44555,18 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 swm
 adu
 vzD
@@ -45533,18 +44576,6 @@ xtp
 xtp
 xtp
 vzD
-xtp
-xtp
-xtp
-xtp
-xtp
-vzD
-sPT
-swm
-adu
-vzD
-xtp
-xtp
 xtp
 xtp
 xtp
@@ -45776,6 +44807,18 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 swm
 adu
 vzD
@@ -45785,18 +44828,6 @@ xtp
 xtp
 xtp
 vzD
-xtp
-xtp
-xtp
-xtp
-xtp
-vzD
-sPT
-swm
-adu
-vzD
-xtp
-xtp
 xtp
 xtp
 xtp
@@ -46028,6 +45059,18 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 swm
 adu
 vzD
@@ -46037,18 +45080,6 @@ xtp
 xtp
 xtp
 vzD
-xtp
-xtp
-xtp
-xtp
-xtp
-vzD
-sPT
-swm
-adu
-vzD
-xtp
-xtp
 xtp
 xtp
 xtp
@@ -46280,6 +45311,18 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 swm
 adu
 vzD
@@ -46289,18 +45332,6 @@ xtp
 xtp
 xtp
 vzD
-xtp
-xtp
-xtp
-xtp
-xtp
-vzD
-sPT
-swm
-adu
-vzD
-xtp
-xtp
 xtp
 xtp
 xtp
@@ -46532,24 +45563,24 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 swm
 adu
 vzD
 vzD
 vzD
 vzD
-vzD
-vzD
-vzD
-vzD
-vzD
-vzD
-vzD
-vzD
-vzD
-sPT
-swm
-adu
 vzD
 vzD
 vzD
@@ -46784,6 +45815,18 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 swm
 imE
 uXh
@@ -46795,18 +45838,6 @@ wFe
 uXh
 wFe
 uXh
-uXh
-uXh
-uXh
-uXh
-tCD
-swm
-imE
-uXh
-uXh
-uXh
-uXh
-wFe
 uXh
 uXh
 uXh
@@ -47036,6 +46067,18 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 swm
 swm
 swm
@@ -47049,18 +46092,6 @@ qgy
 vLa
 swm
 swm
-swm
-swm
-swm
-swm
-swm
-swm
-swm
-tWo
-vLa
-qgy
-vLa
-ghA
 swm
 swm
 swm
@@ -47089,9 +46120,9 @@ swm
 swm
 swm
 swm
-aeR
-aDW
-aeR
+ahP
+ahZ
+ahP
 swm
 swm
 swm
@@ -47288,9 +46319,21 @@ aaa
 aaa
 aaa
 aaa
-adr
 aaa
-adr
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 abU
 ili
@@ -47302,18 +46345,6 @@ agR
 eTR
 aan
 uvP
-uvP
-uvP
-oEu
-uvP
-uvP
-uvP
-eTR
-agR
-wFe
-agR
-eTR
-aan
 uvP
 uvP
 oEu
@@ -47403,7 +46434,7 @@ agR
 ili
 abU
 aaa
-adr
+aaa
 aaa
 aaa
 aaa
@@ -47540,12 +46571,24 @@ aaa
 aaa
 aaa
 aaa
-adr
 aaa
-adr
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 abU
-iuV
+ady
 agR
 wFe
 agR
@@ -47554,18 +46597,6 @@ agR
 agR
 aap
 agR
-agR
-agR
-agR
-agR
-agR
-agR
-agR
-agR
-wFe
-agR
-agR
-aap
 agR
 agR
 agR
@@ -47655,7 +46686,7 @@ agR
 taM
 abU
 aaa
-adr
+aaa
 aaa
 aaa
 aaa
@@ -47792,32 +46823,32 @@ aaa
 aaa
 aaa
 aaa
-adr
 aaa
-adr
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 abU
-iuV
+ady
 agR
 wFe
 wFe
 wFe
 wFe
 wFe
-rqh
+adA
 aJC
-aJC
-aJC
-aJC
-aJC
-aJC
-aJC
-aJC
-aJC
-aJC
-aJC
-aJC
-aaH
 aJC
 aJC
 aJC
@@ -47907,7 +46938,7 @@ agR
 taM
 abU
 aaa
-adr
+aaa
 aaa
 aaa
 aaa
@@ -48044,12 +47075,24 @@ aaa
 aaa
 aaa
 aaa
-adr
 aaa
-adr
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 abU
-iuV
+ady
 agR
 wFe
 agR
@@ -48058,18 +47101,6 @@ agR
 agR
 aaA
 agR
-agR
-agR
-agR
-agR
-agR
-agR
-agR
-agR
-wFe
-agR
-agR
-aaA
 agR
 agR
 agR
@@ -48097,9 +47128,9 @@ aeR
 nBb
 wbY
 xFX
-ebS
-ebS
-ebS
+aeR
+aeR
+aeR
 gnx
 wbY
 aeR
@@ -48159,7 +47190,7 @@ agR
 taM
 abU
 aaa
-adr
+aaa
 aaa
 aaa
 aaa
@@ -48296,9 +47327,21 @@ aaa
 aaa
 aaa
 aaa
-adr
 aaa
-adr
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 abU
 ili
@@ -48332,27 +47375,15 @@ eTR
 agR
 wFe
 agR
-eTR
-aaB
-uvP
-uvP
-oEu
-uvP
-uvP
-uvP
-eTR
-agR
-wFe
-agR
 abU
 acW
 nBb
 ajS
-swm
-swm
-swm
-swm
-swm
+ahM
+ahM
+ahM
+ahM
+ahM
 ajS
 aeR
 acW
@@ -48411,7 +47442,7 @@ agR
 ili
 abU
 aaa
-adr
+aaa
 aaa
 aaa
 aaa
@@ -48548,6 +47579,18 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 swm
 swm
 swm
@@ -48561,18 +47604,6 @@ qgy
 vLa
 swm
 swm
-swm
-swm
-swm
-swm
-swm
-swm
-swm
-tWo
-vLa
-qgy
-vLa
-wgV
 swm
 swm
 swm
@@ -48591,19 +47622,19 @@ swm
 swm
 swm
 swm
-swm
 tWo
-xmy
-kDY
-cHy
-vWJ
+vLa
+qgy
+vLa
+cSm
 swm
-yjx
-uQu
 swm
-ady
-adC
-sba
+swm
+swm
+swm
+swm
+swm
+swm
 swm
 swm
 swm
@@ -48800,6 +47831,18 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 swm
 aax
 uQR
@@ -48815,7 +47858,18 @@ uQR
 uQR
 uQR
 uQR
-tYK
+adC
+swm
+xNH
+uQR
+uQR
+uQR
+uQR
+wFe
+uQR
+uQR
+uQR
+uQR
 swm
 xNH
 uQR
@@ -48829,33 +47883,10 @@ uQR
 uQR
 bWh
 swm
-xNH
-uQR
-uQR
-uQR
-uQR
-wFe
-uQR
-uQR
-uQR
-uQR
-bWh
-swm
-xNH
-uQR
-uQR
-ium
-ium
-wFe
-uQR
-uQR
-fWG
-nMG
-bbz
-swm
-adA
-ieO
-qIC
+aaa
+aaa
+aaa
+aaa
 swm
 xNH
 uQR
@@ -49052,6 +48083,18 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 swm
 wub
 vzD
@@ -49079,7 +48122,6 @@ vzD
 vzD
 vzD
 vzD
-sPT
 swm
 adu
 vzD
@@ -49093,21 +48135,10 @@ vzD
 vzD
 sPT
 swm
-gvz
-vzD
-vzD
-vzD
-vzD
-vzD
-vzD
-vzD
-vzD
-tCi
-iMI
-swm
-jaR
-ejq
-gik
+aaa
+aaa
+aaa
+aaa
 swm
 adu
 vzD
@@ -49304,6 +48335,18 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 swm
 adu
 vzD
@@ -49331,7 +48374,6 @@ xtp
 xtp
 xtp
 vzD
-sPT
 swm
 adu
 vzD
@@ -49345,31 +48387,20 @@ xtp
 vzD
 sPT
 swm
-xBZ
-vzD
-xtp
-hiv
-hiv
-xtp
-xtp
-xtp
-hiv
-mEj
-rzZ
-iDb
-wTl
-wbq
-mIm
+aaa
+aaa
+aaa
+aaa
 swm
 adu
 vzD
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
+aik
+aji
+ckE
+ckE
+ckE
+aji
+aik
 vzD
 sPT
 swm
@@ -49387,13 +48418,13 @@ sPT
 swm
 adu
 vzD
-ahM
-ahZ
-ftW
-ftW
-ftW
-ahZ
-ahM
+xtp
+xtp
+xtp
+xtp
+xtp
+xtp
+xtp
 vzD
 sPT
 swm
@@ -49556,6 +48587,18 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 swm
 adu
 vzD
@@ -49583,7 +48626,6 @@ xtp
 xtp
 xtp
 vzD
-sPT
 swm
 adu
 vzD
@@ -49597,31 +48639,20 @@ xtp
 vzD
 sPT
 swm
-jyc
-vzD
-xtp
-gfp
-acu
-acu
-xtp
-xtp
-xtp
-wey
-cqL
-cqL
-qIf
-vkB
-hoE
+aaa
+aaa
+aaa
+aaa
 swm
 adu
 vzD
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
+ail
+ajr
+cnf
+cnf
+ftW
+gvz
+ieO
 vzD
 sPT
 swm
@@ -49639,13 +48670,13 @@ sPT
 swm
 adu
 vzD
-ahP
-aji
-fvh
-fvh
-wDY
-hdh
-vNK
+xtp
+xtp
+xtp
+xtp
+xtp
+xtp
+xtp
 vzD
 sPT
 swm
@@ -49808,6 +48839,18 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 swm
 adu
 vzD
@@ -49835,7 +48878,6 @@ xtp
 xtp
 xtp
 vzD
-sPT
 swm
 adu
 vzD
@@ -49849,55 +48891,44 @@ xtp
 vzD
 sPT
 swm
-ekw
-vzD
-xtp
-acu
-gfp
-acu
-xtp
-aOy
-vMx
-hiv
-gjz
-tjA
-utA
-lnH
-sjD
+aaa
+aaa
+aaa
+aaa
 swm
 adu
 vzD
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
-vzD
-sPT
-swm
-adu
-vzD
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
-vzD
-sPT
-swm
-adu
-vzD
-ahZ
-ajk
-fMg
+aji
+ajA
+cqL
+cnf
 fvh
-xcY
-vyi
-ahZ
+gTd
+aji
+vzD
+sPT
+swm
+adu
+vzD
+xtp
+xtp
+xtp
+xtp
+xtp
+xtp
+xtp
+vzD
+sPT
+swm
+adu
+vzD
+xtp
+xtp
+xtp
+xtp
+xtp
+xtp
+xtp
 vzD
 sPT
 swm
@@ -50060,6 +49091,18 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 swm
 adu
 vzD
@@ -50087,7 +49130,6 @@ xtp
 xtp
 xtp
 vzD
-sPT
 swm
 adu
 vzD
@@ -50101,31 +49143,20 @@ xtp
 vzD
 sPT
 swm
-riX
-vzD
-xtp
-xtp
-hiv
-hiv
-xtp
-okT
-uKa
-xtp
-lEV
-swm
-swm
-swm
-vIZ
+aaa
+aaa
+aaa
+aaa
 swm
 wub
 vzD
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
+aji
+aji
+aji
+ekw
+aji
+aji
+ium
 vzD
 sPT
 swm
@@ -50143,13 +49174,13 @@ sPT
 swm
 adu
 vzD
-ahZ
-ahZ
-ahZ
-uma
-ahZ
-ahZ
-dzl
+xtp
+xtp
+xtp
+xtp
+xtp
+xtp
+xtp
 vzD
 sPT
 swm
@@ -50312,6 +49343,18 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 swm
 adu
 vzD
@@ -50328,6 +49371,17 @@ xtp
 xtp
 vzD
 sPT
+swm
+wub
+vzD
+xtp
+xtp
+xtp
+xtp
+xtp
+xtp
+xtp
+vzD
 swm
 wub
 vzD
@@ -50341,43 +49395,20 @@ xtp
 vzD
 nIu
 swm
-wub
-vzD
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
-vzD
-nIu
-swm
-wub
-vzD
-gqp
-mHo
-xtp
-tmo
-hiv
-xtp
-xtp
-xtp
-cNu
-swm
-vjD
-wgl
-ckE
+aaa
+aaa
+aaa
+aaa
 swm
 adu
 vzD
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
+aji
+ajE
+cFV
+ajM
+fMg
+ajM
+iuV
 vzD
 sPT
 swm
@@ -50395,13 +49426,13 @@ sPT
 swm
 adu
 vzD
-ahZ
-ajp
-hWm
-ajE
-xot
-ajE
-uSM
+xtp
+xtp
+xtp
+xtp
+xtp
+xtp
+xtp
 vzD
 sPT
 swm
@@ -50564,6 +49595,18 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 swm
 adu
 vzD
@@ -50591,7 +49634,6 @@ xtp
 xtp
 xtp
 vzD
-sPT
 swm
 adu
 vzD
@@ -50605,31 +49647,20 @@ xtp
 vzD
 sPT
 swm
-qDa
-vzD
-gqp
-mHo
-xtp
-hiE
-hiE
-xtp
-xtp
-xtp
-rwC
-swm
-xRJ
-xuj
-xGi
+aaa
+aaa
+aaa
+aaa
 swm
 adu
 vzD
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
+aji
+ajH
+cHy
+ajM
+ajM
+hdh
+ajp
 vzD
 sPT
 swm
@@ -50647,13 +49678,13 @@ sPT
 swm
 adu
 vzD
-ahZ
-ajr
-ktl
-ajE
-ajE
-nim
-ail
+xtp
+xtp
+xtp
+xtp
+xtp
+xtp
+xtp
 vzD
 sPT
 swm
@@ -50816,6 +49847,18 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 swm
 adu
 vzD
@@ -50843,7 +49886,6 @@ xtp
 xtp
 xtp
 vzD
-sPT
 swm
 adu
 vzD
@@ -50857,31 +49899,20 @@ xtp
 vzD
 sPT
 swm
-gTd
-vzD
-gqp
-mHo
-xtp
-bOF
-rOf
-xtp
-xtp
-xtp
-vwg
-swm
-ukw
-jvs
-vIv
+aaa
+aaa
+aaa
+aaa
 swm
 adu
 vzD
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
+aji
+ajJ
+cNu
+ajM
+ajM
+ajM
+ajp
 vzD
 sPT
 swm
@@ -50899,13 +49930,13 @@ sPT
 swm
 adu
 vzD
-ahZ
-ajA
-kKH
-ajE
-ajE
-ajE
-ail
+xtp
+xtp
+xtp
+xtp
+xtp
+xtp
+xtp
 vzD
 sPT
 swm
@@ -51068,6 +50099,18 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 swm
 adu
 vzD
@@ -51095,7 +50138,6 @@ xtp
 xtp
 xtp
 vzD
-sPT
 swm
 adu
 vzD
@@ -51109,31 +50151,20 @@ xtp
 vzD
 sPT
 swm
-bjD
+aaa
+aaa
+aaa
+aaa
+swm
+adu
 vzD
+ajk
+ajM
+ajM
+ajM
+fWG
 hiv
-xtp
-xtp
-xtp
-xtp
-hiv
-tmo
-xtp
-pLT
-swm
-fvh
-jvs
-rSm
-swm
-adu
-vzD
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
+ajp
 vzD
 sPT
 swm
@@ -51151,13 +50182,13 @@ sPT
 swm
 adu
 vzD
-aik
-ajE
-ajE
-ajE
-xBa
-xEq
-ail
+xtp
+xtp
+xtp
+xtp
+xtp
+xtp
+xtp
 vzD
 sPT
 swm
@@ -51320,8 +50351,20 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 swm
-cFV
+adn
 vzD
 xtp
 xtp
@@ -51347,7 +50390,6 @@ xtp
 xtp
 xtp
 vzD
-sPT
 swm
 adu
 vzD
@@ -51361,31 +50403,20 @@ xtp
 vzD
 sPT
 swm
-fZa
+aaa
+aaa
+aaa
+aaa
+swm
+adu
 vzD
-hiv
-oQg
-gfp
-xtp
-gfp
-dzl
-dzl
-xtp
+ajk
+ajP
 ddC
-swm
-weQ
-ckE
-dHu
-swm
-adu
-vzD
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
+ajM
+fZa
+hiE
+ajp
 vzD
 sPT
 swm
@@ -51403,13 +50434,13 @@ sPT
 swm
 adu
 vzD
-aik
-ajH
-lcB
-ajE
-ybk
-jAH
-ail
+xtp
+xtp
+xtp
+xtp
+xtp
+xtp
+xtp
 vzD
 pjv
 swm
@@ -51572,6 +50603,18 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 swm
 swm
 swm
@@ -51599,7 +50642,6 @@ xtp
 xtp
 xtp
 vzD
-sPT
 swm
 adu
 vzD
@@ -51613,31 +50655,20 @@ xtp
 vzD
 sPT
 swm
-jyc
-vzD
-xtp
-oQg
-oQg
-xtp
-dzl
-gfp
-dzl
-hiv
-xkj
+aaa
+aaa
+aaa
+aaa
 swm
+adu
+vzD
+ajk
+aOy
 dqZ
-qAm
-vcP
-swm
-adu
-vzD
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
+ajM
+gfp
+hoE
+ajp
 vzD
 sPT
 swm
@@ -51655,13 +50686,13 @@ sPT
 swm
 adu
 vzD
-aik
-ajJ
-muQ
-ajE
-ydC
-phn
-ail
+xtp
+xtp
+xtp
+xtp
+xtp
+xtp
+xtp
 vzD
 sPT
 swm
@@ -51826,8 +50857,20 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 swm
-aac
+adr
 aac
 aac
 aac
@@ -51851,7 +50894,6 @@ xtp
 xtp
 xtp
 vzD
-bbz
 swm
 wub
 vzD
@@ -51865,55 +50907,44 @@ xtp
 vzD
 bbz
 swm
-ili
-vzD
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
-hiv
-bbz
-swm
-eJh
-fvh
-uvn
+aaa
+aaa
+aaa
+aaa
 swm
 wub
 vzD
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
-vzD
-sPT
-swm
-adu
-vzD
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
-vzD
-sPT
-swm
-adu
-vzD
-aik
+ajk
+bjD
+dzl
 ajM
-mQE
-ajE
-xli
-iER
-ail
+gik
+hWm
+ajp
+vzD
+sPT
+swm
+adu
+vzD
+xtp
+xtp
+xtp
+xtp
+xtp
+xtp
+xtp
+vzD
+sPT
+swm
+adu
+vzD
+xtp
+xtp
+xtp
+xtp
+xtp
+xtp
+xtp
 vzD
 sPT
 swm
@@ -52078,19 +51109,31 @@ aaa
 aaa
 aaa
 aaa
-adr
 aaa
 aaa
 aaa
 aaa
 aaa
-adr
 aaa
 aaa
 aaa
 aaa
 aaa
-adr
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 swm
 swm
@@ -52106,7 +51149,6 @@ swm
 swm
 swm
 swm
-swm
 aaf
 aaf
 aaf
@@ -52117,31 +51159,20 @@ aaf
 swm
 swm
 swm
-swm
-swm
-aaf
-aaf
-xxW
-xxW
-aaf
-aaf
-aaf
-swm
-swm
-swm
-swm
-owV
-swm
+aaa
+aaa
+aaa
+aaa
 swm
 adu
 vzD
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
+ajp
+ajp
+ajp
+ekw
+ajp
+ajp
+ajp
 vzD
 sPT
 swm
@@ -52159,13 +51190,13 @@ sPT
 swm
 adu
 vzD
-ail
-ail
-ail
-uma
-ail
-ail
-ail
+xtp
+xtp
+xtp
+xtp
+xtp
+xtp
+xtp
 vzD
 sPT
 swm
@@ -52330,31 +51361,31 @@ aaa
 aaa
 aaa
 aaa
-adr
 aaa
 aaa
 aaa
 aaa
 aaa
-adr
 aaa
 aaa
 aaa
 aaa
 aaa
-adr
 aaa
 aaa
 aaa
-swm
-aac
-aac
-aac
-aac
-aac
-aac
-aac
-swm
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -52369,55 +51400,55 @@ aac
 aaK
 aaa
 aaa
+aaK
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+swm
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 swm
-aac
-aac
-aac
-aac
-aac
-aac
-aac
-swm
-vIW
-xdm
-vKf
-fvh
-qsY
-swm
 adu
 vzD
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
-vzD
-sPT
-swm
-adu
-vzD
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
-vzD
-sPT
-swm
-adu
-vzD
-ail
-ajP
-mRd
+ajp
+bOF
+dHu
 sRx
-iSZ
-uuD
-ail
+gjz
+ibL
+ajp
+vzD
+sPT
+swm
+adu
+vzD
+xtp
+xtp
+xtp
+xtp
+xtp
+xtp
+xtp
+vzD
+sPT
+swm
+adu
+vzD
+xtp
+xtp
+xtp
+xtp
+xtp
+xtp
+xtp
 vzD
 sPT
 swm
@@ -52582,23 +51613,6 @@ aaa
 aaa
 aaa
 aaa
-adn
-aaa
-aaa
-aaa
-aaa
-aaa
-adn
-aaa
-aaa
-aaa
-aaa
-aaa
-adn
-aaa
-aaa
-aaa
-adr
 aaa
 aaa
 aaa
@@ -52606,11 +51620,6 @@ aaa
 aaa
 aaa
 aaa
-adr
-aaa
-aaa
-aaa
-adr
 aaa
 aaa
 aaa
@@ -52618,11 +51627,6 @@ aaa
 aaa
 aaa
 aaa
-adr
-aaa
-aaa
-aaa
-adr
 aaa
 aaa
 aaa
@@ -52630,22 +51634,49 @@ aaa
 aaa
 aaa
 aaa
-utp
-tEU
-xxB
-swm
-pjO
-wxW
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 swm
 adu
 vzD
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
-xtp
+ajp
+ajp
+ejq
+eJh
+gqp
+ajp
+ajp
 vzD
 sPT
 swm
@@ -52663,13 +51694,13 @@ sPT
 swm
 adu
 vzD
-ail
-ail
-oFv
-uAl
-cnf
-ail
-ail
+xtp
+xtp
+xtp
+xtp
+xtp
+xtp
+xtp
 vzD
 sPT
 swm
@@ -52850,7 +51881,6 @@ aaa
 aaa
 aaa
 aaa
-adr
 aaa
 aaa
 aaa
@@ -52858,11 +51888,6 @@ aaa
 aaa
 aaa
 aaa
-adr
-aaa
-aaa
-aaa
-adr
 aaa
 aaa
 aaa
@@ -52870,11 +51895,6 @@ aaa
 aaa
 aaa
 aaa
-adr
-aaa
-aaa
-aaa
-adr
 aaa
 aaa
 aaa
@@ -52882,21 +51902,32 @@ aaa
 aaa
 aaa
 aaa
-utp
-utp
-utp
-swm
-utp
-utp
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 swm
 adu
 vzD
 xtp
-xtp
-xtp
-xtp
-xtp
-xtp
+ajp
+ckE
+ckE
+ckE
+ajp
 xtp
 vzD
 sPT
@@ -52916,11 +51947,11 @@ swm
 adu
 vzD
 xtp
-ail
-ftW
-ftW
-ftW
-ail
+xtp
+xtp
+xtp
+xtp
+xtp
 xtp
 vzD
 sPT
@@ -53102,31 +52133,6 @@ aaa
 aaa
 aaa
 aaa
-adn
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-adn
-aaa
-aaa
-aaa
-adn
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-adn
-aaa
-aaa
-aaa
-adn
 aaa
 aaa
 aaa
@@ -53137,7 +52143,32 @@ aaa
 aaa
 aaa
 aaa
-adr
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 swm
@@ -53389,7 +52420,7 @@ aaa
 aaa
 aaa
 aaa
-adr
+aaa
 aaa
 aaa
 swm
@@ -53641,7 +52672,7 @@ aaa
 aaa
 aaa
 aaa
-adn
+aaa
 aaa
 aaa
 aaa
@@ -53898,7 +52929,6 @@ aaa
 aaa
 aaa
 aaa
-adr
 aaa
 aaa
 aaa
@@ -53906,11 +52936,6 @@ aaa
 aaa
 aaa
 aaa
-adr
-aaa
-aaa
-aaa
-adr
 aaa
 aaa
 aaa
@@ -53918,11 +52943,6 @@ aaa
 aaa
 aaa
 aaa
-adr
-aaa
-aaa
-aaa
-adr
 aaa
 aaa
 aaa
@@ -53930,11 +52950,6 @@ aaa
 aaa
 aaa
 aaa
-adr
-aaa
-aaa
-aaa
-adr
 aaa
 aaa
 aaa
@@ -53942,11 +52957,6 @@ aaa
 aaa
 aaa
 aaa
-adr
-aaa
-aaa
-aaa
-adr
 aaa
 aaa
 aaa
@@ -53954,7 +52964,28 @@ aaa
 aaa
 aaa
 aaa
-adr
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -54150,7 +53181,6 @@ aaa
 aaa
 aaa
 aaa
-adr
 aaa
 aaa
 aaa
@@ -54158,11 +53188,6 @@ aaa
 aaa
 aaa
 aaa
-adr
-aaa
-aaa
-aaa
-adr
 aaa
 aaa
 aaa
@@ -54170,11 +53195,6 @@ aaa
 aaa
 aaa
 aaa
-adr
-aaa
-aaa
-aaa
-adr
 aaa
 aaa
 aaa
@@ -54182,11 +53202,6 @@ aaa
 aaa
 aaa
 aaa
-adr
-aaa
-aaa
-aaa
-adr
 aaa
 aaa
 aaa
@@ -54194,11 +53209,6 @@ aaa
 aaa
 aaa
 aaa
-adr
-aaa
-aaa
-aaa
-adr
 aaa
 aaa
 aaa
@@ -54206,7 +53216,28 @@ aaa
 aaa
 aaa
 aaa
-adr
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -54402,7 +53433,6 @@ aaa
 aaa
 aaa
 aaa
-adn
 aaa
 aaa
 aaa
@@ -54410,11 +53440,6 @@ aaa
 aaa
 aaa
 aaa
-adn
-aaa
-aaa
-aaa
-adn
 aaa
 aaa
 aaa
@@ -54422,11 +53447,6 @@ aaa
 aaa
 aaa
 aaa
-adn
-aaa
-aaa
-aaa
-adn
 aaa
 aaa
 aaa
@@ -54434,11 +53454,6 @@ aaa
 aaa
 aaa
 aaa
-adn
-aaa
-aaa
-aaa
-adn
 aaa
 aaa
 aaa
@@ -54446,11 +53461,6 @@ aaa
 aaa
 aaa
 aaa
-adn
-aaa
-aaa
-aaa
-adn
 aaa
 aaa
 aaa
@@ -54458,7 +53468,28 @@ aaa
 aaa
 aaa
 aaa
-adn
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
