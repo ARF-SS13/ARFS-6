@@ -136,7 +136,7 @@
 	desc = "Makes your nice clawed, scaled, hooved, armored, or otherwise just awfully calloused feet immune to glass shards."
 	cost = 1
 	var_changes = list("flags" = NO_MINOR_CUT) //Checked the flag is only used by shard stepping.
-
+/*
 /datum/trait/positive/thermal_vision
 	name = "Thermal Vision"
 	desc = "Allows you to see heat. Neat!"
@@ -154,3 +154,4 @@
 			H.vis_enabled += 23
 		if(H.species)
 			H.species.flash_mod = H.species.flash_mod += 1
+*/
