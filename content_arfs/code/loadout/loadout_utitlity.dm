@@ -34,3 +34,8 @@
 	display_name = "Leash"
 	path = /obj/item/weapon/leash
 	cost = 1
+
+/datum/gear/utility/headpods
+	display_name = "Podzu"
+	path = /obj/item/device/walkpod
+	cost = 1
