@@ -7,7 +7,7 @@
 	desc = "A highly advanced ray gun with a knob on the side to adjust the size you desire. Warning: Do not insert into mouth."
 	icon = 'icons/obj/gun_vr.dmi'
 	icon_override = 'icons/obj/gun_vr.dmi'
-	icon_state = "sizegun100"
+	icon_state = "sizegun-shrink100"
 	item_state = "sizegun"
 	fire_sound = 'sound/weapons/wave.ogg'
 	charge_cost = 240
