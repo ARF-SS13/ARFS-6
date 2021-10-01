@@ -51,3 +51,7 @@
 	display_name = "nullsuit, cargo"
 	path = /obj/item/clothing/under/rank/nullsuit/cargo
 	allowed_roles = list("Quartermaster","Shaft Miner","Cargo Technician","Head of Personnel")
+
+/datum/gear/uniform/nightgown
+	display_name = "nightgown"
+	path = /obj/item/clothing/under/fluff/nightgown
