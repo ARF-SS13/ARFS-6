@@ -172,6 +172,14 @@
 	description  = "residential"
 	ckeywhitelist = list("thingpony", "theilluminated1")
 	character_name = list ("Noel Winters", "ARES V3 Mk2", "ARES V3 Mk3")
+
+/datum/gear/fluff/res_key_rs13
+	path = /obj/item/weapon/card/id/residential/rs13
+	display_name = "RS13, level two keys"
+	description = "residential"
+	ckeywhitelist = list("thingpony", "truedark")
+	character_name = list ("River Mae", "Mimi")
+
 // Medium Keys
 /obj/item/weapon/card/id/residential/rm1
 	name = "RM1, level three residential key"
