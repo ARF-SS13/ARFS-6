@@ -308,6 +308,11 @@
 	dir = 10;
 	tag = "icon-corner_kafel (SOUTHWEST)"
 	},
+/obj/structure/table/glass,
+/obj/machinery/chemical_dispenser/full{
+	density = 1;
+	pixel_y = 28
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
 "aQ" = (
@@ -326,6 +331,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
+/obj/machinery/chem_master,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
 "aR" = (
@@ -347,6 +353,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/filingcabinet/wide,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
 "aS" = (
@@ -598,6 +605,9 @@
 /obj/effect/floor_decal/corner_kafel/green{
 	dir = 5;
 	tag = "icon-corner_kafel (NORTHEAST)"
+	},
+/obj/structure/bed/chair/office/dark{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
@@ -1782,6 +1792,11 @@
 	dir = 8;
 	pixel_x = -24
 	},
+/obj/structure/table/glass,
+/obj/item/weapon/reagent_containers/glass/beaker/large,
+/obj/item/weapon/reagent_containers/glass/beaker/large,
+/obj/item/weapon/reagent_containers/glass/beaker/large,
+/obj/item/weapon/reagent_containers/glass/beaker/large,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
 "cM" = (
@@ -2134,39 +2149,28 @@
 	dir = 5;
 	tag = "icon-corner_kafel (SOUTHWEST)"
 	},
-/obj/machinery/chemical_dispenser/full{
-	density = 1
-	},
-/obj/machinery/chemical_dispenser/full{
-	density = 1
-	},
+/obj/machinery/seed_storage/xenobotany,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
 "di" = (
-/obj/machinery/seed_storage/xenobotany,
 /obj/effect/floor_decal/corner_kafel/green{
 	dir = 10;
 	tag = "icon-corner_kafel (SOUTHWEST)"
-	},
-/obj/effect/floor_decal/corner_kafel/green{
-	dir = 5;
-	tag = "icon-corner_kafel (NORTHEAST)"
 	},
 /obj/effect/floor_decal/corner_kafel/white{
 	dir = 5;
 	tag = "icon-corner_kafel (NORTHEAST)"
 	},
+/obj/machinery/seed_extractor,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
 "dj" = (
-/obj/machinery/seed_extractor,
 /obj/effect/floor_decal/corner_kafel/green{
 	dir = 10;
 	tag = "icon-corner_kafel (SOUTHWEST)"
-	},
-/obj/effect/floor_decal/corner_kafel/green{
-	dir = 5;
-	tag = "icon-corner_kafel (NORTHEAST)"
 	},
 /obj/effect/floor_decal/corner_kafel/white{
 	dir = 5;
@@ -2229,6 +2233,9 @@
 /obj/effect/floor_decal/corner_kafel/white{
 	dir = 5;
 	tag = "icon-corner_kafel (NORTHEAST)"
+	},
+/obj/machinery/light{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
@@ -3006,6 +3013,7 @@
 	dir = 5;
 	tag = "icon-corner_kafel (NORTHEAST)"
 	},
+/obj/machinery/light/floortube,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
 "ej" = (
@@ -6666,15 +6674,19 @@
 	},
 /area/outpost/research/solars)
 "ji" = (
-/obj/effect/floor_decal/corner_kafel/purple{
+/obj/effect/floor_decal/corner_kafel/green{
+	dir = 10;
+	tag = "icon-corner_kafel (SOUTHWEST)"
+	},
+/obj/effect/floor_decal/corner_kafel/green{
 	dir = 5;
 	tag = "icon-corner_kafel (NORTHEAST)"
 	},
-/obj/structure/extinguisher_cabinet{
-	pixel_y = 32
-	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/portable_atmospherics/hydroponics,
 /turf/simulated/floor/tiled/white,
-/area/outpost/research/hallway)
+/area/rnd/xenobiology/xenoflora)
 "jj" = (
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/closet/crate/science,
@@ -12641,6 +12653,18 @@
 /obj/machinery/mineral/stacking_unit_console,
 /turf/simulated/wall,
 /area/outpost/mining_main/refinery)
+"tc" = (
+/obj/effect/floor_decal/corner_kafel/green{
+	dir = 10;
+	tag = "icon-corner_kafel (SOUTHWEST)"
+	},
+/obj/effect/floor_decal/corner_kafel/green{
+	dir = 5;
+	tag = "icon-corner_kafel (NORTHEAST)"
+	},
+/obj/machinery/portable_atmospherics/hydroponics,
+/turf/simulated/floor/tiled/white,
+/area/rnd/xenobiology/xenoflora)
 "td" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/border_only,
@@ -15266,6 +15290,31 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/outpost/mining_main/south_hall)
+"Ec" = (
+/obj/effect/floor_decal/corner_kafel/green{
+	dir = 10;
+	tag = "icon-corner_kafel (SOUTHWEST)"
+	},
+/obj/effect/floor_decal/corner_kafel/green{
+	dir = 5;
+	tag = "icon-corner_kafel (NORTHEAST)"
+	},
+/obj/effect/floor_decal/corner_kafel/white{
+	dir = 10;
+	tag = "icon-corner_kafel (SOUTHWEST)"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/light,
+/turf/simulated/floor/tiled/white,
+/area/rnd/xenobiology/xenoflora)
 "Er" = (
 /obj/effect/floor_decal/corner_kafel/green{
 	dir = 10;
@@ -15291,6 +15340,9 @@
 	dir = 4;
 	tag = "icon-heater_0 (EAST)"
 	},
+/obj/item/weapon/hand_labeler,
+/obj/structure/table/glass,
+/obj/item/weapon/hand_labeler,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
 "Fy" = (
@@ -15304,6 +15356,16 @@
 	},
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/mine/explored)
+"Hg" = (
+/obj/effect/floor_decal/corner_kafel/purple{
+	dir = 5;
+	tag = "icon-corner_kafel (NORTHEAST)"
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/white,
+/area/outpost/research/hallway)
 "NR" = (
 /obj/structure/extinguisher_cabinet{
 	dir = 4;
@@ -15334,6 +15396,9 @@
 	dir = 9;
 	tag = "icon-corner_kafel (NORTHWEST)"
 	},
+/obj/structure/table/glass,
+/obj/item/clothing/glasses/science,
+/obj/item/clothing/glasses/science,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
 "Of" = (
@@ -15438,7 +15503,7 @@
 	dir = 10;
 	tag = "icon-corner_kafel (SOUTHWEST)"
 	},
-/obj/structure/filingcabinet,
+/obj/machinery/light,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
 "WE" = (
@@ -35912,7 +35977,7 @@ es
 fb
 fC
 cq
-ji
+Hg
 hc
 fU
 av
@@ -39253,7 +39318,7 @@ WE
 ex
 fJ
 aH
-ji
+Hg
 hc
 fU
 ik
@@ -45935,7 +46000,7 @@ bj
 bj
 fY
 aD
-ji
+Hg
 fn
 fU
 iv
@@ -46701,9 +46766,9 @@ cm
 cM
 dk
 dI
-dI
+ji
 eP
-bj
+tc
 fZ
 gC
 eF
@@ -47215,9 +47280,9 @@ co
 aD
 dm
 bj
-bj
+tc
 eR
-bj
+tc
 gb
 gB
 gS
@@ -47475,7 +47540,7 @@ bj
 ei
 bj
 ei
-gb
+Ec
 gA
 eF
 hy
