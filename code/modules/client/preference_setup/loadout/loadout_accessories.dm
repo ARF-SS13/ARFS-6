@@ -138,32 +138,32 @@
 /datum/gear/accessory/brown_vest
 	display_name = "webbing, brown"
 	path = /obj/item/clothing/accessory/storage/brown_vest
-	allowed_roles = list("Station Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor", "Search and Rescue")
+	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor", "Search and Rescue")
 
 /datum/gear/accessory/black_vest
 	display_name = "webbing, black"
 	path = /obj/item/clothing/accessory/storage/black_vest
-	allowed_roles = list("Station Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor", "Search and Rescue")
+	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor", "Search and Rescue")
 
 /datum/gear/accessory/white_vest
 	display_name = "webbing, white"
 	path = /obj/item/clothing/accessory/storage/white_vest
-	allowed_roles = list("Station Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor", "Search and Rescue")
+	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor", "Search and Rescue")
 
 /datum/gear/accessory/brown_drop_pouches
 	display_name = "drop pouches, brown"
 	path = /obj/item/clothing/accessory/storage/brown_drop_pouches
-	allowed_roles = list("Station Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor", "Search and Rescue")
+	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor", "Search and Rescue")
 
 /datum/gear/accessory/black_drop_pouches
 	display_name = "drop pouches, black"
 	path = /obj/item/clothing/accessory/storage/black_drop_pouches
-	allowed_roles = list("Station Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor", "Search and Rescue")
+	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor", "Search and Rescue")
 
 /datum/gear/accessory/white_drop_pouches
 	display_name = "drop pouches, white"
 	path = /obj/item/clothing/accessory/storage/white_drop_pouches
-	allowed_roles = list("Station Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor", "Search and Rescue")
+	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor", "Search and Rescue")
 
 /datum/gear/accessory/fannypack
 	display_name = "fannypack selection"
@@ -203,6 +203,14 @@
 		var/obj/item/clothing/suit/sweater_type = sweater
 		sweaters[initial(sweater_type.name)] = sweater_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(sweaters))
+
+/datum/gear/accessory/virginkiller
+	display_name = "virgin killer sweater (colorable)"
+	path = /obj/item/clothing/accessory/sweater/virgin
+
+/datum/gear/accessory/virginkiller/New()
+	..()
+	gear_tweaks += gear_tweak_free_color_choice
 
 /datum/gear/accessory/bracelet/material
 	display_name = "bracelet selection"

@@ -16,7 +16,7 @@
 	display_name = "Airhorn - Example Item"
 	description = "An example item that you probably shouldn't see!"
 	ckeywhitelist = list("mewchild")
-	allowed_roles = list("Station Engineer")
+	allowed_roles = list("Engineer")
 */
 
 
@@ -826,6 +826,12 @@
 	ckeywhitelist = list("pastelprincedan")
 	character_name = list("Kiyoshi Maki", "Masumi Maki")
 
+/datum/gear/fluff/masumi_overalls
+	path = /obj/item/clothing/under/fluff/masumi_overalls
+	display_name = "white and blue overalls"
+	ckeywhitelist = list("pastelprincedan")
+	character_name = list("Masumi Maki")
+
 //  Q CKEYS
 
 //  R CKEYS
@@ -897,14 +903,14 @@
 	display_name = "Kateryna's Voidsuit"
 	ckeywhitelist = list("samanthafyre")
 	character_name = list("Kateryna Petrovitch")
-	allowed_roles = list("Station Engineer", "Chief Engineer", "Atmospheric Technician")
+	allowed_roles = list("Engineer", "Chief Engineer", "Atmospheric Technician")
 
 /datum/gear/fluff/katerina_spacesuit
 	path = /obj/item/clothing/head/helmet/space/fluff/kate
 	display_name = "Kateryna's Helmet"
 	ckeywhitelist = list("samanthafyre")
 	character_name = list("Kateryna Petrovitch")
-	allowed_roles = list("Station Engineer", "Chief Engineer", "Atmospheric Technician")
+	allowed_roles = list("Engineer", "Chief Engineer", "Atmospheric Technician")
 
 /datum/gear/fluff/kateryna_armorvest
 	path = /obj/item/clothing/suit/armor/vest/wolftaur/kate

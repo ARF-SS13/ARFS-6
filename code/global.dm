@@ -134,11 +134,33 @@ var/DBConnection/dbcon_old = new() // /tg/station database (Old database) -- see
 var/global/list/alphabet_uppercase = list("A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z")
 
 
-// Used by robots and robot preferences.
+// Used by robots and robot preferences for regular modules.
 var/list/robot_module_types = list(
 	"Standard", "Engineering", "Surgeon",  "Crisis",
 	"Miner",    "Janitor",     "Service",      "Clerical", "Security",
-	"Research"
+	"Research", "Medihound", "K9", "Janihound", "Sci-borg", "Pupdozer",
+	"Service-Hound", "BoozeHound", "KMine"
+)
+// List of modules added during code red
+var/list/emergency_module_types = list(
+	"Combat", "ERT"
+)
+// List of modules available to AI shells
+
+// ARFS EDIT - More Doggo
+// var/list/shell_module_types = list(
+// 	"Standard", "Service", "Clerical", "Service-Hound", "BoozeHound"
+// )
+
+var/list/shell_module_types = list(
+	"Standard", "Engineering", "Pupdozer", "Service", "Service-Hound", "Clerical",
+	"Surgeon", "Medihound", "Janitor", "Janihound", "Research", "Sci-borg", "Security", "K9"
+)
+// END ARFS EDIT
+
+// List of whitelisted modules
+var/list/whitelisted_module_types = list(
+	"Lost", "Stray"
 )
 
 // Some scary sounds.

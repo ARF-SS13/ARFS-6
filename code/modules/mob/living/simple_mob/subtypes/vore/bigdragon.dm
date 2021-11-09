@@ -70,7 +70,7 @@ I think I covered everything.
 	response_help = "pats"
 	response_disarm = "shoves"
 	response_harm = "smacks"
-	movement_cooldown = 2
+	movement_cooldown = 4 //Fixed from 2, given our slower natural speed any mob at movement cooldown 2 is a nightmare let alone a boss that has a pounce
 	maxHealth = 800
 	attacktext = list("slashed")
 	see_in_dark = 8
@@ -101,6 +101,7 @@ I think I covered everything.
 	devourable = 0	//No
 	universal_understand = 1 //So they can hear synth speach
 	max_tox = 0 // for virgo3b survivability
+	max_co2 = 0 // Also needed for 3b Survivability otherwise it chokes to death
 
 	special_attack_min_range = 1
 	special_attack_max_range = 10
@@ -648,7 +649,7 @@ I think I covered everything.
 	mode_flags = DM_FLAG_NUMBING
 	struggle_messages_inside = list(
 		"Deciding that you've stayed long enough, you wriggle and writhe, stretching yourself out in the chamber, trying to thrust your hands and face up the way you entered. The beast stirs, and this churny pocket of flesh providing you safety clenches hard, aiding your entry back up into the lowermost depths of it's gullet. rhythmic clenches continue to invite you back down, however, should you reconsider.")
-	belly_fullscreen = "anim_belly"
+	belly_fullscreen = "da_tumby"
 
 ///
 ///		AI handling stuff
