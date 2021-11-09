@@ -346,6 +346,7 @@ const VoreSelectedBellyOptions = (props, context) => {
     contaminate_flavor,
     contaminate_color,
     egg_type,
+    vorespawn_blacklist,
   } = belly;
 
   return (
