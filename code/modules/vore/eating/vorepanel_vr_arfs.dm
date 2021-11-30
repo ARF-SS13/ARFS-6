@@ -786,7 +786,7 @@
 					var/new_message = input(user,"These are sent to prey every minute when you are on Unabsorb mode. Write them in 2nd person ('%pred's %belly squishes down on you.')"+help,"Idle Message (Unabsorb)",host.vore_selected.get_messages("im_unabsorb")) as message
 					if(new_message)
 						host.vore_selected.set_messages(new_message,"im_unabsorb")
-				
+
 				if("reset")
 					var/confirm = tgui_alert(user,"This will delete any custom messages. Are you sure?","Confirmation",list("Cancel","DELETE"))
 					if(confirm == "DELETE")
@@ -958,7 +958,7 @@
 			else
 				host.vore_selected.transferlocation = choice.name
 			. = TRUE
-					if("b_transferchance_secondary")
+		if("b_transferchance_secondary")
 			var/transfer_secondary_chance_input = input(user, "Set secondary belly transfer chance on resist (as %). You must also set the location for this to have any effect.", "Prey Escape Time") as num|null
 			if(!isnull(transfer_secondary_chance_input))
 				host.vore_selected.transferchance_secondary = sanitize_integer(transfer_secondary_chance_input, 0, 100, initial(host.vore_selected.transferchance_secondary))
