@@ -461,8 +461,8 @@
 
 // ARFS Edit - This needs to be Initialize, not New
 /obj/structure/reagent_dispensers/cookingoil/Initialize()
-		..()
-		reagents.add_reagent("cornoil",5000)
+	..()
+	reagents.add_reagent("cookingoil",5000)
 
 /obj/structure/reagent_dispensers/cookingoil/bullet_act(var/obj/item/projectile/Proj)
 	if(Proj.get_structure_damage())
