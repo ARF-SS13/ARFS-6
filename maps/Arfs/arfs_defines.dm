@@ -32,6 +32,7 @@
 	company_name  = "Alliance of Racial Federations"
 	company_short = "ARF"
 	starsys_name  = "Canis Majoris - Watermelonus Cluster IV"
+	facility_type = "ship"
 
 	shuttle_docked_message = "The scheduled shuttle to the %dock_name% has docked with the ship at docks one and two. It will depart in approximately %ETD%."
 	shuttle_leaving_dock = "The Crew Transfer Shuttle has left the ship. Estimate %ETA% until the shuttle docks at %dock_name%."

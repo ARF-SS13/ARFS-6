@@ -68,6 +68,7 @@
 
 	station_name  = "NSB Adephagia"
 	station_short = "Tether"
+	facility_type = "station"
 	dock_name     = "Virgo-3B Colony"
 	dock_type     = "surface"
 	boss_name     = "Central Command"
@@ -161,7 +162,7 @@
 		list("Fuel Depot - Z1 Space")
 		)
 
-	lateload_single_pick = list(
+	lateload_gateway = list(
 		list("Carp Farm"),
 		list("Snow Field"),
 		list("Listening Post"),
@@ -193,7 +194,7 @@
 	mining_station_z =		list(Z_LEVEL_SPACE_LOW)
 	mining_outpost_z =		list(Z_LEVEL_SURFACE_MINE)
 
-	lateload_single_pick = null //Nothing right now.
+	lateload_gateway = null //Nothing right now.
 
 	planet_datums_to_make = list(/datum/planet/virgo3b,
 								/datum/planet/virgo4)
