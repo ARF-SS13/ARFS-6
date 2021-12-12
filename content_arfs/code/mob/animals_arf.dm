@@ -151,3 +151,15 @@
 	response_disarm = "nudges aside the"
 	response_harm = "kicks the"
 
+// Jess's Teppi
+/mob/living/simple_mob/vore/alienanimals/teppi/jess/New()
+	inherit_colors = TRUE
+	color = "#fff2d3"
+	marking_color = "#9F7757"
+	horn_color = "#A9A9A9"
+	eye_color = "#AAFF00"
+	skin_color = "#ff8a8e"
+	marking_type = "10"
+	allergen_preference = 1
+	allergen_unpreference = 64
+	. = ..()
