@@ -152,7 +152,7 @@
 	response_harm = "kicks the"
 
 // Jess's Teppi
-/mob/living/simple_mob/vore/alienanimals/teppi/jess/New()
+/mob/living/simple_mob/vore/alienanimals/teppi/hazel/New()
 	inherit_colors = TRUE
 	color = "#fff2d3"
 	marking_color = "#9F7757"
@@ -160,6 +160,16 @@
 	eye_color = "#AAFF00"
 	skin_color = "#ff8a8e"
 	marking_type = "10"
-	allergen_preference = 1
-	allergen_unpreference = 64
+	allergen_preference = 64
+	allergen_unpreference = 1
 	. = ..()
+
+// BobDos
+/mob/living/simple_mob/vore/alienanimals/teppi/nabbs/New()
+	inherit_colors = TRUE
+	color = "#483248"
+	marking_color = "#000000"
+	horn_color = "#6b6759"
+	eye_color = "#4848a7"
+	skin_color = "#ff8a8e"
+	marking_type = "9"
