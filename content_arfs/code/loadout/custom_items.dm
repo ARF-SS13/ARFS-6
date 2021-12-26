@@ -18,21 +18,21 @@
 	path = /obj/item/weapon/disk/nifsoft/sizechange/andy
 	display_name = "Size Change NIFSoft"
 	description = "A specialized size change NIFSoft"
-	ckeywhitelist = list("andyman105", "dameonowen", "lukevale")
+	ckeywhitelist = list("andyman105", "dameonowen", "dwagin", "lukevale")
 	character_name = null
 
 /datum/gear/fluff/dameon_4
 	path = /obj/item/weapon/reagent_containers/food/snacks/variable/cookie/dubious
 	display_name = "Dubious Cookie"
 	description = "A very dubious cookie. Do not eat"
-	ckeywhitelist = list("andyman105", "dameonowen", "foxyrose")
+	ckeywhitelist = list("andyman105", "dameonowen", "dwagin", "foxyrose")
 	character_name = list("Amber Owen", "Amber", "Scarlet Owen", "Emma Miller", "Dameon Owen")
 
 /datum/gear/fluff/dameon_5
 	path = /obj/item/weapon/reagent_containers/food/snacks/variable/cookie/curious
 	display_name = "Curious Cookie"
 	description = "A very curious cookie. Do not eat"
-	ckeywhitelist = list("andyman105", "dameonowen", "foxyrose")
+	ckeywhitelist = list("andyman105", "dameonowen", "dwagin", "foxyrose")
 	character_name = list("Amber Owen", "Amber", "Scarlet Owen", "Emma Miller")
 
 // /datum/gear/fluff/dameon_3
@@ -53,34 +53,34 @@
     path = /obj/item/weapon/gun/energy/sizegun/andy
     display_name = "Owen Sizegun"
     description = "A modified sizegun for the Owen family. Some of the safeties have been altered."
-    ckeywhitelist = list("andyman105", "dameonowen", "thingpony", "foxyrose")
+    ckeywhitelist = list("andyman105", "dameonowen", "dwagin", "thingpony", "foxyrose")
     character_name = null
 
 /datum/gear/fluff/dameon_7
 	path = /obj/item/weapon/gun/energy/gun/fluff/dominator/andy
 	display_name = "The Dominator"
 	description = "A modified version of the MWPSB Dominator"
-	ckeywhitelist = list("andyman105", "dameonowen","thingpony")
+	ckeywhitelist = list("andyman105", "dameonowen", "dwagin","thingpony")
 	character_name = null
 
 /datum/gear/fluff/dameon_8
 	path = /obj/item/clothing/mask/smokable/ecig/deluxe
 	display_name = "Deluxe Ecig"
-	ckeywhitelist = list("andyman105", "dameonowen")
+	ckeywhitelist = list("andyman105", "dameonowen", "dwagin")
 	character_name = null
 
 /datum/gear/fluff/dameon_9
 	path = /obj/item/weapon/rig/light/hacker/fluff/andy
 	display_name = "The Enormous RIG"
 	description = "A modified version of the Hacker RIG"
-	ckeywhitelist = list("andyman105", "dameonowen")
+	ckeywhitelist = list("andyman105", "dameonowen", "dwagin")
 	character_name = null
 
 /datum/gear/fluff/dameon_10
 	path = /obj/item/clothing/mask/breath/transparent
 	display_name = "Transparent Breath Mask"
 	description = "A very clear breath mask"
-	ckeywhitelist = list("andyman105", "dameonowen")
+	ckeywhitelist = list("andyman105", "dameonowen", "dwagin")
 	character_name = null
 
 /datum/gear/fluff/thing_1
@@ -94,7 +94,7 @@
 	path = /obj/item/clothing/accessory/permit/gun
 	display_name = "Gun Permit"
 	description = "A permit allowing the wearer to carry a firearm"
-	ckeywhitelist = list("thingpony", "dameonowen", "andyman105")
+	ckeywhitelist = list("thingpony", "dameonowen", "andyman105", "dwagin")
 	character_name = null
 
 //  H CKEYS
