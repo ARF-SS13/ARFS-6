@@ -83,6 +83,20 @@
 	ckeywhitelist = list("andyman105", "dameonowen", "dwagin")
 	character_name = null
 
+/datum/gear/fluff/dameon_11
+	path = /obj/item/weapon/inducer/hybrid
+	display_name = "Hybrid Inducer"
+	description = "A self-recharging inducer."
+	ckeywhitelist = list("andyman105", "dameonowen", "dwagin")
+	character_name = null
+
+/datum/gear/fluff/dameon_12
+	path = /obj/item/weapon/inducer/syndicate
+	display_name = "Fast Inducer"
+	description = "A very fast charging inducer."
+	ckeywhitelist = list("andyman105", "dameonowen", "dwagin")
+	character_name = null
+
 /datum/gear/fluff/thing_1
 	path = /obj/item/weapon/implanter/blindsight
 	display_name = "Blindsight Implant"
