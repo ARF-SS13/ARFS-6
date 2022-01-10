@@ -11,7 +11,7 @@
 	disabled_description = "Silent"
 	enabled_by_default = FALSE
 
-datum/client_preference/debug/age_verified
+/datum/client_preference/debug/age_verified
 	description = "(Debug) Age Verified Status"
 	key = "AGE_VERIFIED"
 	enabled_description = "TRUE"
