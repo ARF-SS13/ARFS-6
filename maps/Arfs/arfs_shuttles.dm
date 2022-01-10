@@ -18,8 +18,7 @@
 	vessel_mass = 10000
 	vessel_size = SHIP_SIZE_SMALL
 	shuttle = "Excursion Shuttle"
-	start_x = 4
-	start_y = 5
+	fore_dir = NORTH
 	known = TRUE
 
 // Exclusive landmark for docking *inside* the station
@@ -29,7 +28,6 @@
 	docking_controller = "expshuttle_dock"
 	base_turf = /turf/simulated/floor/tiled/techfloor/grid
 	base_area = /area/exploration/hanger
-
 
 //////////////////////////////////////////////////////////////
 // Escape shuttle

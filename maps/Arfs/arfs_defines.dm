@@ -76,6 +76,10 @@
 		Z_LEVEL_RESIDENTIAL_TWO_ARFS,
 		Z_LEVEL_RESIDENTIAL_MANSION_ARFS)
 
+	use_overmap = 1
+	overmap_size = 35
+	overmap_z = Z_LEVEL_CENTCOM_ARFS;
+
 /datum/map/arfs/perform_map_generation()
 	new /datum/random_map/automata/cave_system(null, 1, 1, Z_LEVEL_MINING_ARFS, world.maxx, world.maxy) // Create the mining Z-level.
 	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_MINING_ARFS, world.maxx, world.maxy)         // Create the mining ore distribution map.
@@ -189,3 +193,28 @@
 		Z_LEVEL_RESIDENTIAL_STATION_ARFS,
 		Z_LEVEL_RESIDENTIAL_MANSION_ARFS
 	)
+
+/obj/effect/overmap/visitable/ship/arfs
+	name = "ARFS Dallus"	// Name of the location on the overmap.
+	desc = "Placeholder desc"
+
+	scanner_desc = @{"[i]Registration[/i]: ARFS Dallus
+[i]Class[/i]: Placeholder
+[i]Transponder[/i]: Transmitting (CIV), NanoTrasen IFF
+[b]Notice[/b]: NanoTrasen Vessel, authorized personnel only"}
+
+	icon_state = "ship"
+	vessel_mass = 100000
+	burn_delay = 2 SECONDS
+	fore_dir = NORTH	// Which direction the ship/z-level is facing.  It will move dust particles from that direction when moving.
+	base = TRUE		// Honestly unsure what this does but it seems the main sector or "Map" we're at has this so here it stays
+	// The waypoints that are avaliable once you are at this Navpoint
+	initial_generic_waypoints = list("arfs_excursion_hangar")
+
+	initial_restricted_waypoints = list(
+		"Excursion Shuttle" = list("arfs_excursion_hangar"),
+		)
+
+	known = TRUE;
+
+	unowned_areas = list(/area/shuttle/excursion)

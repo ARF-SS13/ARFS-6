@@ -1988,85 +1988,70 @@
 /turf/simulated/floor/holofloor/tiled,
 /area/holodeck/source_emptycourt)
 "gw" = (
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/wall/dark,
+/obj/effect/step_trigger/thrower{
+	affect_ghosts = 1;
+	name = "thrower_throwdown";
+	tiles = 0
+	},
+/obj/effect/step_trigger/teleporter/random{
+	affect_ghosts = 1;
+	name = "escapeshuttle_leave";
+	teleport_x = 25;
+	teleport_x_offset = 245;
+	teleport_y = 25;
+	teleport_y_offset = 245;
+	teleport_z = 6;
+	teleport_z_offset = 6
+	},
+/turf/space,
 /area/space)
 "gx" = (
-/obj/machinery/door/airlock/external{
-	req_access = list(150)
+/turf/unsimulated/wall,
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"gy" = (
+/turf/simulated/mineral,
+/area/space)
+"gz" = (
+/turf/simulated/mineral,
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"gA" = (
+/obj/effect/landmark{
+	name = "voxstart"
 	},
-/obj/item/device/gps/internal/base,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
-/area/space)
-"gy" = (
-/obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1331;
-	master_tag = "vox_west_control";
-	req_one_access = list(150)
-	},
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/wall/dark,
-/area/space)
-"gz" = (
-/obj/machinery/door/airlock/hatch{
-	frequency = 1331;
-	id_tag = "vox_northwest_lock";
-	req_access = list(150)
-	},
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/plating,
-/area/space)
-"gA" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/machinery/door/blast/regular{
-	id = "skipjackshutters";
-	name = "Skipjack Blast Shielding"
-	},
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/plating,
-/area/space)
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
 "gB" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1
+/turf/unsimulated/floor{
+	icon_state = "dark"
 	},
-/obj/machinery/door/blast/regular{
-	id = "skipjackshutters";
-	name = "Skipjack Blast Shielding"
-	},
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/plating,
-/area/space)
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
 "gC" = (
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_courtroom)
 "gD" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1
+/obj/structure/table/standard,
+/obj/effect/decal/cleanable/cobweb2,
+/obj/effect/decal/cleanable/cobweb2{
+	icon_state = "spiderling";
+	name = "dead spider";
+	tag = "icon-spiderling"
 	},
-/obj/structure/window/reinforced{
-	dir = 4
+/turf/unsimulated/floor{
+	icon_state = "dark"
 	},
-/obj/machinery/door/blast/regular{
-	id = "skipjackshutters";
-	name = "Skipjack Blast Shielding"
-	},
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/plating,
-/area/space)
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
 "gE" = (
 /obj/effect/floor_decal/corner/green{
 	dir = 5
@@ -2108,32 +2093,32 @@
 /turf/simulated/floor/holofloor/tiled,
 /area/holodeck/source_basketball)
 "gK" = (
-/obj/machinery/door/airlock/hatch{
-	frequency = 1331;
-	id_tag = "vox_northeast_lock";
-	req_access = list(150)
+/obj/item/weapon/bedsheet/orange,
+/obj/structure/bed/padded,
+/turf/unsimulated/floor{
+	icon_state = "dark"
 	},
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/plating,
-/area/space)
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
 "gL" = (
-/obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1331;
-	master_tag = "vox_east_control";
+/obj/machinery/door/airlock/hatch{
 	req_access = list(150)
 	},
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/wall/dark,
-/area/space)
-"gM" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1331;
-	id_tag = "vox_west_vent"
+/turf/unsimulated/floor{
+	icon_state = "dark"
 	},
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/plating,
-/area/space)
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"gM" = (
+/turf/unsimulated/floor{
+	icon_state = "asteroid";
+	tag = "icon-asteroid"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
 "gN" = (
 /obj/effect/floor_decal/corner/green{
 	dir = 9
@@ -2171,6 +2156,623 @@
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_courtroom)
 "gU" = (
+/obj/item/weapon/tray{
+	pixel_y = 5
+	},
+/obj/structure/table/standard,
+/turf/unsimulated/floor{
+	icon_state = "white"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"gV" = (
+/turf/simulated/floor/holofloor/desert,
+/area/holodeck/source_desert)
+"gW" = (
+/obj/structure/table/standard,
+/obj/item/weapon/storage/box/glasses/square{
+	pixel_x = 1;
+	pixel_y = 4
+	},
+/turf/unsimulated/floor{
+	icon_state = "white"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"gX" = (
+/turf/unsimulated/floor{
+	icon_state = "white"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"gY" = (
+/obj/structure/table/standard,
+/obj/machinery/chemical_dispenser/bar_soft/full,
+/turf/unsimulated/floor{
+	icon_state = "white"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"gZ" = (
+/obj/structure/bed/chair/holochair{
+	dir = 8
+	},
+/turf/simulated/floor/holofloor/wood,
+/area/holodeck/source_courtroom)
+"ha" = (
+/obj/item/weapon/bedsheet/orange,
+/obj/effect/decal/cleanable/cobweb2{
+	icon_state = "cobweb1";
+	tag = "icon-cobweb1"
+	},
+/obj/structure/bed/padded,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"hb" = (
+/obj/machinery/microwave{
+	pixel_x = -1;
+	pixel_y = 8
+	},
+/obj/structure/table/standard,
+/turf/unsimulated/floor{
+	icon_state = "white"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"hc" = (
+/obj/structure/table/standard,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"hd" = (
+/obj/structure/closet/secure_closet/freezer/kitchen,
+/turf/unsimulated/floor{
+	icon_state = "white"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"he" = (
+/obj/structure/urinal{
+	pixel_y = 32
+	},
+/obj/item/weapon/soap/syndie,
+/turf/unsimulated/floor{
+	icon_state = "freezerfloor"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"hf" = (
+/obj/structure/urinal{
+	pixel_y = 32
+	},
+/turf/unsimulated/floor{
+	icon_state = "freezerfloor"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"hg" = (
+/obj/structure/closet/secure_closet/freezer/fridge,
+/turf/unsimulated/floor{
+	icon_state = "white"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"hh" = (
+/turf/unsimulated/floor{
+	icon_state = "freezerfloor"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"hi" = (
+/obj/structure/bed/chair/holochair{
+	dir = 4
+	},
+/turf/simulated/floor/holofloor/wood,
+/area/holodeck/source_courtroom)
+"hj" = (
+/obj/effect/decal/cleanable/blood,
+/turf/unsimulated/floor{
+	icon_state = "freezerfloor"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"hk" = (
+/obj/effect/floor_decal/corner/green{
+	dir = 10
+	},
+/turf/simulated/floor/holofloor/tiled,
+/area/holodeck/source_basketball)
+"hl" = (
+/obj/effect/floor_decal/corner/green{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/green{
+	dir = 6;
+	tag = "icon-corner_white (SOUTHEAST)"
+	},
+/turf/simulated/floor/holofloor/tiled,
+/area/holodeck/source_basketball)
+"hm" = (
+/obj/effect/decal/cleanable/blood,
+/turf/unsimulated/floor{
+	icon_state = "white"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"hn" = (
+/obj/machinery/gibber,
+/turf/unsimulated/floor{
+	icon_state = "white"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"ho" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
+/turf/simulated/floor/holofloor/tiled,
+/area/holodeck/source_basketball)
+"hp" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
+/turf/simulated/floor/holofloor/tiled,
+/area/holodeck/source_basketball)
+"hq" = (
+/obj/structure/kitchenspike,
+/turf/unsimulated/floor{
+	icon_state = "white"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"hr" = (
+/obj/item/clothing/head/xenos,
+/turf/unsimulated/floor{
+	icon_state = "asteroid";
+	tag = "icon-asteroid"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"hs" = (
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12;
+	pixel_y = 2
+	},
+/obj/structure/mirror{
+	dir = 4;
+	pixel_x = -28
+	},
+/turf/unsimulated/floor{
+	icon_state = "freezerfloor"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"ht" = (
+/obj/item/clothing/mask/gas/swat{
+	desc = "A close-fitting mask clearly not made for a human face.";
+	name = "\improper alien mask"
+	},
+/turf/unsimulated/floor{
+	icon_state = "asteroid";
+	tag = "icon-asteroid"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"hu" = (
+/obj/item/xenos_claw,
+/turf/unsimulated/floor{
+	icon_state = "asteroid";
+	tag = "icon-asteroid"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"hv" = (
+/obj/structure/table/rack,
+/turf/unsimulated/floor{
+	icon_state = "asteroid";
+	tag = "icon-asteroid"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"hw" = (
+/obj/structure/table/rack,
+/obj/item/weapon/gun/launcher/spikethrower,
+/turf/unsimulated/floor{
+	icon_state = "asteroid";
+	tag = "icon-asteroid"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"hx" = (
+/obj/machinery/shower{
+	dir = 1
+	},
+/turf/unsimulated/floor{
+	icon_state = "freezerfloor"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"hy" = (
+/turf/unsimulated/map/edge,
+/area/overmap)
+"hz" = (
+/obj/item/pizzabox/meat,
+/turf/unsimulated/floor{
+	icon_state = "asteroid";
+	tag = "icon-asteroid"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"hA" = (
+/obj/structure/reagent_dispensers/beerkeg,
+/turf/unsimulated/floor{
+	icon_state = "cult";
+	name = "plating";
+	tag = "icon-cult"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"hB" = (
+/turf/unsimulated/floor{
+	icon_state = "cult";
+	name = "plating";
+	tag = "icon-cult"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"hC" = (
+/obj/effect/decal/cleanable/cobweb2,
+/turf/unsimulated/floor{
+	icon_state = "cult";
+	name = "plating";
+	tag = "icon-cult"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"hD" = (
+/turf/unsimulated/map,
+/area/overmap)
+"hE" = (
+/obj/structure/table/rack,
+/obj/item/clothing/glasses/thermal/plain/monocle,
+/turf/unsimulated/floor{
+	icon_state = "asteroid";
+	tag = "icon-asteroid"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"hF" = (
+/obj/effect/landmark{
+	name = "voxstart"
+	},
+/turf/unsimulated/floor{
+	icon_state = "cult";
+	name = "plating";
+	tag = "icon-cult"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"hG" = (
+/obj/item/weapon/tank/nitrogen,
+/turf/unsimulated/floor{
+	icon_state = "asteroid";
+	tag = "icon-asteroid"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"hH" = (
+/obj/item/organ/internal/stack,
+/turf/unsimulated/floor{
+	icon_state = "asteroid";
+	tag = "icon-asteroid"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"hI" = (
+/obj/structure/bed/chair,
+/turf/unsimulated/floor{
+	icon_state = "cult";
+	name = "plating";
+	tag = "icon-cult"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"hJ" = (
+/obj/structure/grille,
+/obj/structure/lattice,
+/turf/space,
+/area/space)
+"hK" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"hL" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"hM" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"hN" = (
+/obj/machinery/computer/station_alert,
+/turf/unsimulated/floor{
+	icon_state = "cult";
+	name = "plating";
+	tag = "icon-cult"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"hO" = (
+/obj/machinery/computer/shuttle_control/multi/skipjack,
+/turf/unsimulated/floor{
+	icon_state = "cult";
+	name = "plating";
+	tag = "icon-cult"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"hP" = (
+/obj/machinery/suit_cycler/syndicate{
+	locked = 0
+	},
+/turf/unsimulated/floor{
+	icon_state = "cult";
+	name = "plating";
+	tag = "icon-cult"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"hQ" = (
+/obj/machinery/portable_atmospherics/canister/nitrogen,
+/obj/item/weapon/tank/nitrogen,
+/turf/unsimulated/floor{
+	icon_state = "asteroid";
+	tag = "icon-asteroid"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"hR" = (
+/obj/item/clothing/head/philosopher_wig,
+/turf/unsimulated/floor{
+	icon_state = "asteroid";
+	tag = "icon-asteroid"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"hS" = (
+/obj/structure/lattice,
+/turf/space,
+/area/space)
+"hT" = (
+/obj/structure/lattice,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/space,
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"hU" = (
+/obj/machinery/door/airlock/external{
+	req_access = list(150)
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"hV" = (
+/obj/structure/lattice,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/space,
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"hW" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"hX" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership{
+	name = "\improper Raider Base"
+	})
+"hY" = (
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/wall/dark,
+/area/space)
+"hZ" = (
+/obj/machinery/door/airlock/external{
+	req_access = list(150)
+	},
+/obj/item/device/gps/internal/base,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/space)
+"ia" = (
+/obj/machinery/access_button{
+	command = "cycle_exterior";
+	frequency = 1331;
+	master_tag = "vox_west_control";
+	req_one_access = list(150)
+	},
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/wall/dark,
+/area/space)
+"ib" = (
+/obj/machinery/door/airlock/hatch{
+	frequency = 1331;
+	id_tag = "vox_northwest_lock";
+	req_access = list(150)
+	},
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/plating,
+/area/space)
+"ic" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/blast/regular{
+	id = "skipjackshutters";
+	name = "Skipjack Blast Shielding"
+	},
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/plating,
+/area/space)
+"id" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/blast/regular{
+	id = "skipjackshutters";
+	name = "Skipjack Blast Shielding"
+	},
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/plating,
+/area/space)
+"ie" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/blast/regular{
+	id = "skipjackshutters";
+	name = "Skipjack Blast Shielding"
+	},
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/plating,
+/area/space)
+"if" = (
+/obj/machinery/door/airlock/hatch{
+	frequency = 1331;
+	id_tag = "vox_northeast_lock";
+	req_access = list(150)
+	},
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/plating,
+/area/space)
+"ig" = (
+/obj/machinery/access_button{
+	command = "cycle_exterior";
+	frequency = 1331;
+	master_tag = "vox_east_control";
+	req_access = list(150)
+	},
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/wall/dark,
+/area/space)
+"ih" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1331;
+	id_tag = "vox_west_vent"
+	},
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/plating,
+/area/space)
+"ii" = (
 /obj/machinery/airlock_sensor{
 	frequency = 1331;
 	id_tag = "vox_west_sensor";
@@ -2179,31 +2781,22 @@
 /obj/item/device/gps/internal/base,
 /turf/simulated/shuttle/plating,
 /area/space)
-"gV" = (
-/turf/simulated/floor/holofloor/desert,
-/area/holodeck/source_desert)
-"gW" = (
+"ij" = (
 /obj/machinery/computer/station_alert,
 /obj/item/device/gps/internal/base,
 /turf/simulated/shuttle/floor/red,
 /area/space)
-"gX" = (
+"ik" = (
 /obj/machinery/computer/shuttle_control/multi/skipjack,
 /obj/item/device/gps/internal/base,
 /turf/simulated/shuttle/floor/red,
 /area/space)
-"gY" = (
+"il" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /obj/item/device/gps/internal/base,
 /turf/simulated/shuttle/floor/red,
 /area/space)
-"gZ" = (
-/obj/structure/bed/chair/holochair{
-	dir = 8
-	},
-/turf/simulated/floor/holofloor/wood,
-/area/holodeck/source_courtroom)
-"ha" = (
+"im" = (
 /obj/machinery/button/remote/blast_door{
 	id = "skipjackshutters";
 	name = "remote shutter control";
@@ -2212,7 +2805,7 @@
 /obj/item/device/gps/internal/base,
 /turf/simulated/shuttle/wall/dark,
 /area/space)
-"hb" = (
+"in" = (
 /obj/machinery/airlock_sensor{
 	frequency = 1331;
 	id_tag = "vox_east_sensor";
@@ -2221,7 +2814,7 @@
 /obj/item/device/gps/internal/base,
 /turf/simulated/shuttle/plating,
 /area/space)
-"hc" = (
+"io" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	frequency = 1331;
 	id_tag = "vox_east_vent"
@@ -2229,7 +2822,7 @@
 /obj/item/device/gps/internal/base,
 /turf/simulated/shuttle/plating,
 /area/space)
-"hd" = (
+"ip" = (
 /obj/machinery/atmospherics/pipe/manifold/visible{
 	dir = 8
 	},
@@ -2237,7 +2830,7 @@
 /obj/item/device/gps/internal/base,
 /turf/simulated/shuttle/plating,
 /area/space)
-"he" = (
+"iq" = (
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	frequency = 1331;
 	id_tag = "vox_west_control";
@@ -2257,21 +2850,21 @@
 /obj/item/device/gps/internal/base,
 /turf/simulated/shuttle/plating,
 /area/space)
-"hf" = (
+"ir" = (
 /obj/machinery/light/small{
 	dir = 8
 	},
 /obj/item/device/gps/internal/base,
 /turf/simulated/shuttle/floor/red,
 /area/space)
-"hg" = (
+"it" = (
 /obj/structure/bed/chair{
 	dir = 1
 	},
 /obj/item/device/gps/internal/base,
 /turf/simulated/shuttle/floor/red,
 /area/space)
-"hh" = (
+"iu" = (
 /obj/structure/bed/chair{
 	dir = 1
 	},
@@ -2280,36 +2873,14 @@
 /obj/item/device/gps/internal/base,
 /turf/simulated/shuttle/floor/red,
 /area/space)
-"hi" = (
-/obj/structure/bed/chair/holochair{
-	dir = 4
-	},
-/turf/simulated/floor/holofloor/wood,
-/area/holodeck/source_courtroom)
-"hj" = (
+"iv" = (
 /obj/machinery/light/small{
 	dir = 4
 	},
 /obj/item/device/gps/internal/base,
 /turf/simulated/shuttle/floor/red,
 /area/space)
-"hk" = (
-/obj/effect/floor_decal/corner/green{
-	dir = 10
-	},
-/turf/simulated/floor/holofloor/tiled,
-/area/holodeck/source_basketball)
-"hl" = (
-/obj/effect/floor_decal/corner/green{
-	dir = 10
-	},
-/obj/effect/floor_decal/corner/green{
-	dir = 6;
-	tag = "icon-corner_white (SOUTHEAST)"
-	},
-/turf/simulated/floor/holofloor/tiled,
-/area/holodeck/source_basketball)
-"hm" = (
+"iw" = (
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	frequency = 1331;
 	id_tag = "vox_east_control";
@@ -2329,7 +2900,7 @@
 /obj/item/device/gps/internal/base,
 /turf/simulated/shuttle/plating,
 /area/space)
-"hn" = (
+"ix" = (
 /obj/machinery/atmospherics/pipe/manifold/visible{
 	dir = 4
 	},
@@ -2337,22 +2908,7 @@
 /obj/item/device/gps/internal/base,
 /turf/simulated/shuttle/plating,
 /area/space)
-"ho" = (
-/obj/effect/floor_decal/corner/red{
-	dir = 10
-	},
-/turf/simulated/floor/holofloor/tiled,
-/area/holodeck/source_basketball)
-"hp" = (
-/obj/effect/floor_decal/corner/red{
-	dir = 6
-	},
-/obj/effect/floor_decal/corner/red{
-	dir = 10
-	},
-/turf/simulated/floor/holofloor/tiled,
-/area/holodeck/source_basketball)
-"hq" = (
+"iy" = (
 /obj/machinery/door/airlock/hatch{
 	frequency = 1331;
 	id_tag = "vox_southwest_lock";
@@ -2362,515 +2918,19 @@
 /obj/item/device/gps/internal/base,
 /turf/simulated/shuttle/plating,
 /area/space)
-"hr" = (
+"iz" = (
 /obj/structure/table/rack,
 /obj/item/weapon/rig/industrial,
 /obj/item/device/gps/internal/base,
 /turf/simulated/shuttle/floor/red,
 /area/space)
-"hs" = (
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/floor/red,
-/area/space)
-"ht" = (
-/obj/structure/table/rack,
-/obj/item/weapon/rig/light/hacker,
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/floor/red,
-/area/space)
-"hu" = (
-/obj/machinery/door/airlock/hatch{
-	frequency = 1331;
-	id_tag = "vox_southeast_lock";
-	req_access = list(150)
-	},
-/obj/machinery/atmospherics/pipe/simple/visible,
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/plating,
-/area/space)
-"hv" = (
-/obj/machinery/atmospherics/pipe/simple/visible,
-/obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1331;
-	master_tag = "vox_west_control";
-	pixel_x = -22;
-	req_one_access = list(150)
-	},
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/plating,
-/area/space)
-"hw" = (
-/obj/structure/table/rack,
-/obj/item/weapon/gun/energy/ionrifle,
-/obj/item/weapon/material/harpoon,
-/obj/item/clothing/suit/space/void/merc,
-/obj/item/clothing/head/helmet/space/void/merc,
-/obj/item/clothing/head/helmet/space/void/engineering,
-/obj/item/clothing/suit/space/void/engineering,
-/obj/item/weapon/tank/oxygen,
-/obj/item/weapon/tank/oxygen,
-/obj/item/clothing/shoes/magboots,
-/obj/item/clothing/shoes/magboots,
-/obj/item/weapon/rig/light/stealth,
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/plating,
-/area/space)
-"hx" = (
-/obj/machinery/microwave{
-	pixel_x = -1;
-	pixel_y = 8
-	},
-/obj/structure/table/steel,
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/plating,
-/area/space)
-"hy" = (
-/obj/item/seeds/potatoseed,
-/obj/item/seeds/potatoseed,
-/obj/item/seeds/ambrosiavulgarisseed,
-/obj/item/weapon/material/minihoe,
-/obj/item/weapon/beartrap,
-/obj/structure/table/steel,
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/plating,
-/area/space)
-"hz" = (
-/obj/machinery/vending/hydroseeds,
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/plating,
-/area/space)
-"hA" = (
-/obj/structure/table/rack,
-/obj/item/weapon/melee/energy/sword/pirate,
-/obj/item/clothing/suit/space/pirate,
-/obj/item/clothing/suit/space/pirate,
-/obj/item/weapon/tank/oxygen,
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/floor/red,
-/area/space)
-"hB" = (
-/obj/structure/table/rack,
-/obj/item/weapon/storage/belt/utility/full,
-/obj/item/weapon/storage/belt/utility/full,
-/obj/item/device/multitool,
-/obj/item/device/multitool,
-/obj/item/clothing/shoes/magboots,
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/plating,
-/area/space)
-"hC" = (
-/obj/machinery/washing_machine,
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/plating,
-/area/space)
-"hD" = (
-/obj/structure/table/standard,
-/obj/item/weapon/storage/fancy/cigarettes,
-/obj/item/weapon/flame/lighter/zippo,
-/obj/item/clothing/gloves/yellow,
-/obj/item/stack/material/steel{
-	amount = 50
-	},
-/obj/item/stack/material/glass{
-	amount = 50
-	},
-/obj/item/weapon/card/emag,
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/plating,
-/area/space)
-"hE" = (
-/obj/structure/table/rack,
-/obj/item/weapon/gun/energy/sniperrifle,
-/obj/item/clothing/suit/space/void/mining,
-/obj/item/clothing/head/helmet/space/void/mining,
-/obj/item/clothing/head/helmet/space/void/atmos,
-/obj/item/clothing/suit/space/void/atmos,
-/obj/item/weapon/tank/oxygen,
-/obj/item/weapon/tank/oxygen,
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/plating,
-/area/space)
-"hF" = (
-/obj/machinery/atmospherics/pipe/simple/visible,
-/obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1331;
-	master_tag = "vox_east_control";
-	pixel_x = 22;
-	req_access = list(150)
-	},
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/plating,
-/area/space)
-"hG" = (
-/obj/machinery/atmospherics/pipe/simple/visible,
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/plating,
-/area/space)
-"hH" = (
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/plating,
-/area/space)
-"hI" = (
-/obj/structure/reagent_dispensers/watertank,
-/obj/machinery/light/small{
-	dir = 4
-	},
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/plating,
-/area/space)
-"hJ" = (
-/obj/machinery/door/airlock/hatch{
-	req_access = list(150)
-	},
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/floor/red,
-/area/space)
-"hK" = (
-/obj/structure/table/rack,
-/obj/item/clothing/shoes/magboots,
-/obj/item/clothing/suit/space/syndicate/black/engie,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/head/helmet/space/syndicate/black/engie,
-/obj/machinery/light/small{
-	dir = 8
-	},
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/plating,
-/area/space)
-"hL" = (
-/obj/item/robot_parts/head,
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/plating,
-/area/space)
-"hM" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/machinery/door/blast/regular{
-	id = "skipjackshutters";
-	name = "Skipjack Blast Shielding"
-	},
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/plating,
-/area/space)
-"hN" = (
-/obj/item/robot_parts/l_leg,
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/plating,
-/area/space)
-"hO" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/machinery/door/blast/regular{
-	id = "skipjackshutters";
-	name = "Skipjack Blast Shielding"
-	},
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/plating,
-/area/space)
-"hP" = (
-/obj/machinery/atmospherics/pipe/simple/visible,
-/obj/machinery/portable_atmospherics/hydroponics,
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/plating,
-/area/space)
-"hQ" = (
-/obj/machinery/floodlight,
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/plating,
-/area/space)
-"hR" = (
-/obj/item/device/suit_cooling_unit,
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/plating,
-/area/space)
-"hS" = (
-/obj/structure/table/rack,
-/obj/item/weapon/gun/launcher/crossbow,
-/obj/item/stack/rods{
-	amount = 10
-	},
-/obj/machinery/light/small{
-	dir = 8
-	},
-/obj/item/weapon/beartrap,
-/obj/item/weapon/beartrap,
-/obj/item/weapon/beartrap,
-/obj/item/weapon/beartrap,
-/obj/item/weapon/beartrap,
-/obj/item/weapon/beartrap,
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/floor/red,
-/area/space)
-"hT" = (
-/obj/structure/table/rack,
-/obj/item/weapon/grenade/empgrenade,
-/obj/item/weapon/grenade/flashbang,
-/obj/item/weapon/grenade/spawnergrenade/manhacks,
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/floor/red,
-/area/space)
-"hU" = (
-/obj/structure/table/steel,
-/obj/machinery/recharger,
-/obj/machinery/light/small{
-	dir = 4
-	},
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/floor/red,
-/area/space)
-"hV" = (
-/obj/structure/reagent_dispensers/fueltank,
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/plating,
-/area/space)
-"hW" = (
-/obj/item/robot_parts/robot_suit,
-/obj/item/robot_parts/r_leg,
-/obj/item/robot_parts/r_arm,
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/plating,
-/area/space)
-"hX" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/machinery/door/blast/regular{
-	id = "skipjackshutters";
-	name = "Skipjack Blast Shielding"
-	},
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/plating,
-/area/space)
-"hY" = (
-/obj/structure/bed/chair{
-	dir = 4
-	},
-/obj/machinery/light/small{
-	dir = 8
-	},
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/floor/red,
-/area/space)
-"hZ" = (
-/obj/structure/table/steel,
-/obj/item/clothing/glasses/regular,
-/obj/item/clothing/glasses/regular,
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/floor/red,
-/area/space)
-"ia" = (
-/obj/structure/bed/chair{
-	dir = 8
-	},
-/obj/machinery/light/small{
-	dir = 4
-	},
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/floor/red,
-/area/space)
-"ib" = (
-/obj/structure/sink{
-	dir = 8;
-	pixel_x = -12;
-	pixel_y = 2
-	},
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/plating,
-/area/space)
-"ic" = (
-/obj/item/weapon/mop,
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/plating,
-/area/space)
-"id" = (
-/obj/machinery/atmospherics/pipe/simple/visible,
-/obj/item/device/suit_cooling_unit,
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/plating,
-/area/space)
-"ie" = (
-/obj/machinery/light/small{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/tank/air{
-	dir = 1;
-	start_pressure = 740
-	},
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/plating,
-/area/space)
-"if" = (
-/obj/machinery/portable_atmospherics/hydroponics,
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/plating,
-/area/space)
-"ig" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/floor/red,
-/area/space)
-"ih" = (
-/obj/structure/bed/chair{
-	dir = 4
-	},
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/floor/red,
-/area/space)
-"ii" = (
-/obj/structure/table/steel,
-/obj/item/weapon/deck/cards,
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/floor/red,
-/area/space)
-"ij" = (
-/obj/structure/bed/chair{
-	dir = 8
-	},
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/floor/red,
-/area/space)
-"ik" = (
-/obj/machinery/bodyscanner{
-	dir = 8
-	},
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/floor/red,
-/area/space)
-"il" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
-/obj/machinery/body_scanconsole,
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/floor/red,
-/area/space)
-"im" = (
-/obj/structure/toilet{
-	dir = 4
-	},
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/plating,
-/area/space)
-"in" = (
-/obj/machinery/portable_atmospherics/canister/nitrogen,
-/obj/item/weapon/tank/nitrogen,
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/plating,
-/area/space)
-"io" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/tank/air{
-	dir = 1;
-	start_pressure = 740
-	},
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/plating,
-/area/space)
-"ip" = (
-/obj/structure/shuttle/engine/heater,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/plating/airless,
-/area/space)
-"iq" = (
-/obj/structure/table/steel,
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/floor/red,
-/area/space)
-"ir" = (
-/obj/structure/sink{
-	dir = 4;
-	pixel_x = 11
-	},
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/floor/red,
-/area/space)
-"it" = (
-/obj/structure/table/standard,
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/floor/red,
-/area/space)
-"iu" = (
-/obj/structure/table/standard,
-/obj/item/weapon/deck/cards,
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/floor/red,
-/area/space)
-"iv" = (
-/obj/machinery/light/small,
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/floor/red,
-/area/space)
-"iw" = (
-/obj/structure/table/standard,
-/obj/item/weapon/surgical/circular_saw{
-	pixel_y = 8
-	},
-/obj/item/weapon/surgical/hemostat,
-/obj/item/weapon/surgical/scalpel,
-/obj/item/stack/medical/advanced/bruise_pack,
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/floor/red,
-/area/space)
-"ix" = (
-/obj/machinery/optable,
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/floor/red,
-/area/space)
-"iy" = (
-/obj/structure/table/standard,
-/obj/item/weapon/surgical/cautery,
-/obj/item/weapon/surgical/retractor,
-/obj/item/weapon/reagent_containers/glass/bottle/stoxin,
-/obj/item/weapon/reagent_containers/glass/bottle/stoxin,
-/obj/item/weapon/reagent_containers/syringe,
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/floor/red,
-/area/space)
-"iz" = (
-/obj/item/weapon/bedsheet/rainbow,
-/obj/structure/bed/padded,
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/floor/red,
-/area/space)
 "iA" = (
-/obj/item/weapon/bedsheet/hos,
-/obj/structure/bed/padded,
 /obj/item/device/gps/internal/base,
 /turf/simulated/shuttle/floor/red,
 /area/space)
 "iB" = (
-/obj/structure/table/standard,
-/obj/item/weapon/surgical/bonesetter,
-/obj/item/weapon/surgical/bonegel,
-/obj/item/weapon/surgical/FixOVein,
-/obj/item/stack/nanopaste,
+/obj/structure/table/rack,
+/obj/item/weapon/rig/light/hacker,
 /obj/item/device/gps/internal/base,
 /turf/simulated/shuttle/floor/red,
 /area/space)
@@ -2924,69 +2984,66 @@
 /turf/simulated/floor/holofloor/space,
 /area/holodeck/source_plating)
 "iP" = (
-/obj/structure/toilet{
-	dir = 4
-	},
-/obj/machinery/light/small{
-	dir = 8
-	},
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/floor/red,
-/area/space)
-"iQ" = (
-/obj/item/weapon/bedsheet/orange,
-/obj/structure/bed/padded,
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/floor/red,
-/area/space)
-"iR" = (
-/obj/item/weapon/bedsheet/green,
-/obj/machinery/light/small{
-	dir = 4
-	},
-/obj/structure/bed/padded,
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/floor/red,
-/area/space)
-"iS" = (
-/obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/syringe/antiviral,
-/obj/item/weapon/reagent_containers/syringe/antiviral,
-/obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/floor/red,
-/area/space)
-"iT" = (
-/obj/structure/table/standard,
-/obj/item/weapon/storage/firstaid/adv{
-	pixel_x = 1
-	},
-/obj/item/weapon/storage/firstaid/toxin{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/machinery/light/small{
-	dir = 4
-	},
-/obj/structure/closet/secure_closet/medical_wall{
-	pixel_x = 32;
+/obj/machinery/door/airlock/hatch{
+	frequency = 1331;
+	id_tag = "vox_southeast_lock";
 	req_access = list(150)
 	},
-/obj/item/weapon/storage/firstaid/fire{
-	pixel_x = 1
-	},
-/obj/item/weapon/storage/firstaid/o2{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/weapon/storage/firstaid/regular,
+/obj/machinery/atmospherics/pipe/simple/visible,
 /obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/floor/red,
+/turf/simulated/shuttle/plating,
+/area/space)
+"iQ" = (
+/obj/machinery/atmospherics/pipe/simple/visible,
+/obj/machinery/access_button{
+	command = "cycle_interior";
+	frequency = 1331;
+	master_tag = "vox_west_control";
+	pixel_x = -22;
+	req_one_access = list(150)
+	},
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/plating,
+/area/space)
+"iR" = (
+/obj/structure/table/rack,
+/obj/item/weapon/gun/energy/ionrifle,
+/obj/item/weapon/material/harpoon,
+/obj/item/clothing/suit/space/void/merc,
+/obj/item/clothing/head/helmet/space/void/merc,
+/obj/item/clothing/head/helmet/space/void/engineering,
+/obj/item/clothing/suit/space/void/engineering,
+/obj/item/weapon/tank/oxygen,
+/obj/item/weapon/tank/oxygen,
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/shoes/magboots,
+/obj/item/weapon/rig/light/stealth,
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/plating,
+/area/space)
+"iS" = (
+/obj/machinery/microwave{
+	pixel_x = -1;
+	pixel_y = 8
+	},
+/obj/structure/table/steel,
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/plating,
+/area/space)
+"iT" = (
+/obj/item/seeds/potatoseed,
+/obj/item/seeds/potatoseed,
+/obj/item/seeds/ambrosiavulgarisseed,
+/obj/item/weapon/material/minihoe,
+/obj/item/weapon/beartrap,
+/obj/structure/table/steel,
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/plating,
 /area/space)
 "iU" = (
-/obj/item/weapon/bedsheet/rd,
-/obj/structure/bed/padded,
+/obj/machinery/vending/hydroseeds,
 /obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/floor/red,
+/turf/simulated/shuttle/plating,
 /area/space)
 "iV" = (
 /obj/structure/bed/double/padded,
@@ -3048,7 +3105,11 @@
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/holodeck/source_boxingcourt)
 "jh" = (
-/obj/item/pizzabox/meat,
+/obj/structure/table/rack,
+/obj/item/weapon/melee/energy/sword/pirate,
+/obj/item/clothing/suit/space/pirate,
+/obj/item/clothing/suit/space/pirate,
+/obj/item/weapon/tank/oxygen,
 /obj/item/device/gps/internal/base,
 /turf/simulated/shuttle/floor/red,
 /area/space)
@@ -3060,10 +3121,14 @@
 /turf/unsimulated/wall,
 /area/space)
 "jj" = (
-/obj/item/weapon/bedsheet/clown,
-/obj/structure/bed/padded,
+/obj/structure/table/rack,
+/obj/item/weapon/storage/belt/utility/full,
+/obj/item/weapon/storage/belt/utility/full,
+/obj/item/device/multitool,
+/obj/item/device/multitool,
+/obj/item/clothing/shoes/magboots,
 /obj/item/device/gps/internal/base,
-/turf/simulated/shuttle/floor/red,
+/turf/simulated/shuttle/plating,
 /area/space)
 "jn" = (
 /obj/effect/floor_decal/sign/small_b,
@@ -3959,10 +4024,9 @@
 /turf/simulated/floor/wood,
 /area/centcom/control)
 "ml" = (
-/obj/structure/shuttle/engine/propulsion,
+/obj/machinery/washing_machine,
 /obj/item/device/gps/internal/base,
-/turf/space,
-/turf/simulated/shuttle/plating/airless/carry,
+/turf/simulated/shuttle/plating,
 /area/space)
 "mo" = (
 /obj/structure/table/glass,
@@ -4137,8 +4201,19 @@
 /turf/simulated/floor/tiled/old_tile,
 /area/centcom/medical)
 "nc" = (
-/obj/structure/lattice,
-/turf/space,
+/obj/structure/table/standard,
+/obj/item/weapon/storage/fancy/cigarettes,
+/obj/item/weapon/flame/lighter/zippo,
+/obj/item/clothing/gloves/yellow,
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/weapon/card/emag,
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/plating,
 /area/space)
 "np" = (
 /obj/structure/table/marble,
@@ -4427,6 +4502,12 @@
 /obj/machinery/light/floortube,
 /turf/simulated/floor/tiled/old_tile,
 /area/centcom/medical)
+"pM" = (
+/obj/item/weapon/bedsheet/clown,
+/obj/structure/bed/padded,
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/floor/red,
+/area/space)
 "pS" = (
 /obj/structure/table/standard,
 /obj/item/weapon/cane,
@@ -5552,551 +5633,470 @@
 /turf/simulated/floor/airless,
 /area/space)
 "yl" = (
-/obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	name = "thrower_throwdown";
-	tiles = 0
-	},
-/obj/effect/step_trigger/teleporter/random{
-	affect_ghosts = 1;
-	name = "escapeshuttle_leave";
-	teleport_x = 25;
-	teleport_x_offset = 245;
-	teleport_y = 25;
-	teleport_y_offset = 245;
-	teleport_z = 6;
-	teleport_z_offset = 6
-	},
-/turf/space,
+/obj/structure/table/rack,
+/obj/item/weapon/gun/energy/sniperrifle,
+/obj/item/clothing/suit/space/void/mining,
+/obj/item/clothing/head/helmet/space/void/mining,
+/obj/item/clothing/head/helmet/space/void/atmos,
+/obj/item/clothing/suit/space/void/atmos,
+/obj/item/weapon/tank/oxygen,
+/obj/item/weapon/tank/oxygen,
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/plating,
 /area/space)
 "ym" = (
-/turf/unsimulated/wall,
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/obj/machinery/atmospherics/pipe/simple/visible,
+/obj/machinery/access_button{
+	command = "cycle_interior";
+	frequency = 1331;
+	master_tag = "vox_east_control";
+	pixel_x = 22;
+	req_access = list(150)
+	},
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/plating,
+/area/space)
 "yn" = (
-/turf/simulated/mineral,
+/obj/machinery/atmospherics/pipe/simple/visible,
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/plating,
 /area/space)
 "yo" = (
-/turf/simulated/mineral,
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/plating,
+/area/space)
 "yp" = (
-/obj/effect/landmark{
-	name = "voxstart"
+/obj/structure/reagent_dispensers/watertank,
+/obj/machinery/light/small{
+	dir = 4
 	},
-/turf/unsimulated/floor{
-	icon_state = "dark"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/plating,
+/area/space)
 "yq" = (
-/turf/unsimulated/floor{
-	icon_state = "dark"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
-"yr" = (
-/obj/structure/table/standard,
-/obj/effect/decal/cleanable/cobweb2,
-/obj/effect/decal/cleanable/cobweb2{
-	icon_state = "spiderling";
-	name = "dead spider";
-	tag = "icon-spiderling"
-	},
-/turf/unsimulated/floor{
-	icon_state = "dark"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
-"ys" = (
-/obj/item/weapon/bedsheet/orange,
-/obj/structure/bed/padded,
-/turf/unsimulated/floor{
-	icon_state = "dark"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
-"yt" = (
 /obj/machinery/door/airlock/hatch{
 	req_access = list(150)
 	},
-/turf/unsimulated/floor{
-	icon_state = "dark"
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/floor/red,
+/area/space)
+"yr" = (
+/obj/structure/table/rack,
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/suit/space/syndicate/black/engie,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/head/helmet/space/syndicate/black/engie,
+/obj/machinery/light/small{
+	dir = 8
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/plating,
+/area/space)
+"ys" = (
+/obj/item/robot_parts/head,
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/plating,
+/area/space)
+"yt" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/blast/regular{
+	id = "skipjackshutters";
+	name = "Skipjack Blast Shielding"
+	},
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/plating,
+/area/space)
 "yu" = (
-/turf/unsimulated/floor{
-	icon_state = "asteroid";
-	tag = "icon-asteroid"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/obj/item/robot_parts/l_leg,
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/plating,
+/area/space)
 "yv" = (
-/obj/item/weapon/tray{
-	pixel_y = 5
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
 	},
-/obj/structure/table/standard,
-/turf/unsimulated/floor{
-	icon_state = "white"
+/obj/structure/window/reinforced{
+	dir = 8
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/obj/machinery/door/blast/regular{
+	id = "skipjackshutters";
+	name = "Skipjack Blast Shielding"
+	},
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/plating,
+/area/space)
 "yw" = (
-/obj/structure/table/standard,
-/obj/item/weapon/storage/box/glasses/square{
-	pixel_x = 1;
-	pixel_y = 4
-	},
-/turf/unsimulated/floor{
-	icon_state = "white"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/obj/machinery/atmospherics/pipe/simple/visible,
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/plating,
+/area/space)
 "yx" = (
-/turf/unsimulated/floor{
-	icon_state = "white"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/obj/machinery/floodlight,
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/plating,
+/area/space)
 "yy" = (
-/obj/structure/table/standard,
-/obj/machinery/chemical_dispenser/bar_soft/full,
-/turf/unsimulated/floor{
-	icon_state = "white"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/obj/item/device/suit_cooling_unit,
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/plating,
+/area/space)
 "yz" = (
-/obj/item/weapon/bedsheet/orange,
-/obj/effect/decal/cleanable/cobweb2{
-	icon_state = "cobweb1";
-	tag = "icon-cobweb1"
+/obj/structure/table/rack,
+/obj/item/weapon/gun/launcher/crossbow,
+/obj/item/stack/rods{
+	amount = 10
 	},
-/obj/structure/bed/padded,
-/turf/unsimulated/floor{
-	icon_state = "dark"
+/obj/machinery/light/small{
+	dir = 8
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/obj/item/weapon/beartrap,
+/obj/item/weapon/beartrap,
+/obj/item/weapon/beartrap,
+/obj/item/weapon/beartrap,
+/obj/item/weapon/beartrap,
+/obj/item/weapon/beartrap,
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/floor/red,
+/area/space)
 "yA" = (
-/obj/machinery/microwave{
-	pixel_x = -1;
-	pixel_y = 8
-	},
-/obj/structure/table/standard,
-/turf/unsimulated/floor{
-	icon_state = "white"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/obj/structure/table/rack,
+/obj/item/weapon/grenade/empgrenade,
+/obj/item/weapon/grenade/flashbang,
+/obj/item/weapon/grenade/spawnergrenade/manhacks,
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/floor/red,
+/area/space)
 "yB" = (
-/obj/structure/table/standard,
-/turf/unsimulated/floor{
-	icon_state = "dark"
+/obj/structure/table/steel,
+/obj/machinery/recharger,
+/obj/machinery/light/small{
+	dir = 4
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/floor/red,
+/area/space)
 "yC" = (
-/obj/structure/closet/secure_closet/freezer/kitchen,
-/turf/unsimulated/floor{
-	icon_state = "white"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/obj/structure/reagent_dispensers/fueltank,
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/plating,
+/area/space)
 "yD" = (
-/obj/structure/urinal{
-	pixel_y = 32
-	},
-/obj/item/weapon/soap/syndie,
-/turf/unsimulated/floor{
-	icon_state = "freezerfloor"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/obj/item/robot_parts/robot_suit,
+/obj/item/robot_parts/r_leg,
+/obj/item/robot_parts/r_arm,
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/plating,
+/area/space)
 "yE" = (
-/obj/structure/urinal{
-	pixel_y = 32
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4
 	},
-/turf/unsimulated/floor{
-	icon_state = "freezerfloor"
+/obj/structure/window/reinforced{
+	dir = 8
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/obj/machinery/door/blast/regular{
+	id = "skipjackshutters";
+	name = "Skipjack Blast Shielding"
+	},
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/plating,
+/area/space)
 "yF" = (
-/obj/structure/closet/secure_closet/freezer/fridge,
-/turf/unsimulated/floor{
-	icon_state = "white"
+/obj/structure/bed/chair{
+	dir = 4
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/floor/red,
+/area/space)
 "yG" = (
-/turf/unsimulated/floor{
-	icon_state = "freezerfloor"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/obj/structure/table/steel,
+/obj/item/clothing/glasses/regular,
+/obj/item/clothing/glasses/regular,
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/floor/red,
+/area/space)
 "yH" = (
-/obj/effect/decal/cleanable/blood,
-/turf/unsimulated/floor{
-	icon_state = "freezerfloor"
+/obj/structure/bed/chair{
+	dir = 8
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/floor/red,
+/area/space)
 "yI" = (
-/obj/effect/decal/cleanable/blood,
-/turf/unsimulated/floor{
-	icon_state = "white"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
-"yJ" = (
-/obj/machinery/gibber,
-/turf/unsimulated/floor{
-	icon_state = "white"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
-"yK" = (
-/obj/structure/kitchenspike,
-/turf/unsimulated/floor{
-	icon_state = "white"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
-"yL" = (
-/obj/item/clothing/head/xenos,
-/turf/unsimulated/floor{
-	icon_state = "asteroid";
-	tag = "icon-asteroid"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
-"yM" = (
 /obj/structure/sink{
 	dir = 8;
 	pixel_x = -12;
 	pixel_y = 2
 	},
-/obj/structure/mirror{
-	dir = 4;
-	pixel_x = -28
-	},
-/turf/unsimulated/floor{
-	icon_state = "freezerfloor"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
-"yN" = (
-/obj/item/clothing/mask/gas/swat{
-	desc = "A close-fitting mask clearly not made for a human face.";
-	name = "\improper alien mask"
-	},
-/turf/unsimulated/floor{
-	icon_state = "asteroid";
-	tag = "icon-asteroid"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
-"yO" = (
-/obj/item/xenos_claw,
-/turf/unsimulated/floor{
-	icon_state = "asteroid";
-	tag = "icon-asteroid"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
-"yP" = (
-/obj/structure/table/rack,
-/turf/unsimulated/floor{
-	icon_state = "asteroid";
-	tag = "icon-asteroid"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
-"yQ" = (
-/obj/structure/table/rack,
-/obj/item/weapon/gun/launcher/spikethrower,
-/turf/unsimulated/floor{
-	icon_state = "asteroid";
-	tag = "icon-asteroid"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
-"yR" = (
-/obj/machinery/shower{
-	dir = 1
-	},
-/turf/unsimulated/floor{
-	icon_state = "freezerfloor"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
-"yS" = (
-/obj/item/pizzabox/meat,
-/turf/unsimulated/floor{
-	icon_state = "asteroid";
-	tag = "icon-asteroid"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
-"yT" = (
-/obj/structure/reagent_dispensers/beerkeg,
-/turf/unsimulated/floor{
-	icon_state = "cult";
-	name = "plating";
-	tag = "icon-cult"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
-"yU" = (
-/turf/unsimulated/floor{
-	icon_state = "cult";
-	name = "plating";
-	tag = "icon-cult"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
-"yV" = (
-/obj/effect/decal/cleanable/cobweb2,
-/turf/unsimulated/floor{
-	icon_state = "cult";
-	name = "plating";
-	tag = "icon-cult"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
-"yW" = (
-/obj/structure/table/rack,
-/obj/item/clothing/glasses/thermal/plain/monocle,
-/turf/unsimulated/floor{
-	icon_state = "asteroid";
-	tag = "icon-asteroid"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
-"yX" = (
-/obj/effect/landmark{
-	name = "voxstart"
-	},
-/turf/unsimulated/floor{
-	icon_state = "cult";
-	name = "plating";
-	tag = "icon-cult"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
-"yY" = (
-/obj/item/weapon/tank/nitrogen,
-/turf/unsimulated/floor{
-	icon_state = "asteroid";
-	tag = "icon-asteroid"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
-"yZ" = (
-/obj/item/organ/internal/stack,
-/turf/unsimulated/floor{
-	icon_state = "asteroid";
-	tag = "icon-asteroid"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
-"za" = (
-/obj/structure/bed/chair,
-/turf/unsimulated/floor{
-	icon_state = "cult";
-	name = "plating";
-	tag = "icon-cult"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
-"zb" = (
-/obj/structure/grille,
-/obj/structure/lattice,
-/turf/space,
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/plating,
 /area/space)
-"zc" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
+"yJ" = (
+/obj/item/weapon/mop,
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/plating,
+/area/space)
+"yK" = (
+/obj/machinery/atmospherics/pipe/simple/visible,
+/obj/item/device/suit_cooling_unit,
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/plating,
+/area/space)
+"yL" = (
+/obj/machinery/light/small{
 	dir = 8
 	},
-/turf/unsimulated/floor{
-	icon_state = "dark"
+/obj/machinery/atmospherics/pipe/tank/air{
+	dir = 1;
+	start_pressure = 740
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
-"zd" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/plating,
+/area/space)
+"yM" = (
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/plating,
+/area/space)
+"yN" = (
+/obj/machinery/light/small{
 	dir = 1
 	},
-/turf/unsimulated/floor{
-	icon_state = "dark"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
-"ze" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/floor/red,
+/area/space)
+"yO" = (
+/obj/structure/bed/chair{
 	dir = 4
 	},
-/turf/unsimulated/floor{
-	icon_state = "dark"
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/floor/red,
+/area/space)
+"yP" = (
+/obj/structure/table/steel,
+/obj/item/weapon/deck/cards,
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/floor/red,
+/area/space)
+"yQ" = (
+/obj/structure/bed/chair{
+	dir = 8
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
-"zf" = (
-/obj/machinery/computer/station_alert,
-/turf/unsimulated/floor{
-	icon_state = "cult";
-	name = "plating";
-	tag = "icon-cult"
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/floor/red,
+/area/space)
+"yR" = (
+/obj/machinery/bodyscanner{
+	dir = 8
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
-"zg" = (
-/obj/machinery/computer/shuttle_control/multi/skipjack,
-/turf/unsimulated/floor{
-	icon_state = "cult";
-	name = "plating";
-	tag = "icon-cult"
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/floor/red,
+/area/space)
+"yS" = (
+/obj/machinery/light/small{
+	dir = 1
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
-"zh" = (
-/obj/machinery/suit_cycler/syndicate{
-	locked = 0
+/obj/machinery/body_scanconsole,
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/floor/red,
+/area/space)
+"yT" = (
+/obj/structure/toilet{
+	dir = 4
 	},
-/turf/unsimulated/floor{
-	icon_state = "cult";
-	name = "plating";
-	tag = "icon-cult"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
-"zi" = (
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/plating,
+/area/space)
+"yU" = (
 /obj/machinery/portable_atmospherics/canister/nitrogen,
 /obj/item/weapon/tank/nitrogen,
-/turf/unsimulated/floor{
-	icon_state = "asteroid";
-	tag = "icon-asteroid"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
-"zj" = (
-/obj/item/clothing/head/philosopher_wig,
-/turf/unsimulated/floor{
-	icon_state = "asteroid";
-	tag = "icon-asteroid"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
-"zk" = (
-/obj/structure/lattice,
-/obj/structure/window/reinforced{
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/plating,
+/area/space)
+"yV" = (
+/obj/machinery/light/small{
 	dir = 4
 	},
-/turf/space,
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/obj/machinery/atmospherics/pipe/tank/air{
+	dir = 1;
+	start_pressure = 740
+	},
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/plating,
+/area/space)
+"yW" = (
+/obj/structure/shuttle/engine/heater,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/plating/airless,
+/area/space)
+"yX" = (
+/obj/structure/table/steel,
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/floor/red,
+/area/space)
+"yY" = (
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
+	},
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/floor/red,
+/area/space)
+"yZ" = (
+/obj/structure/shuttle/engine/propulsion,
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/plating/airless/carry,
+/area/space)
+"za" = (
+/obj/structure/table/standard,
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/floor/red,
+/area/space)
+"zb" = (
+/obj/structure/table/standard,
+/obj/item/weapon/deck/cards,
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/floor/red,
+/area/space)
+"zc" = (
+/obj/machinery/light/small,
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/floor/red,
+/area/space)
+"zd" = (
+/obj/structure/table/standard,
+/obj/item/weapon/surgical/circular_saw{
+	pixel_y = 8
+	},
+/obj/item/weapon/surgical/hemostat,
+/obj/item/weapon/surgical/scalpel,
+/obj/item/stack/medical/advanced/bruise_pack,
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/floor/red,
+/area/space)
+"ze" = (
+/obj/machinery/optable,
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/floor/red,
+/area/space)
+"zf" = (
+/obj/structure/table/standard,
+/obj/item/weapon/surgical/cautery,
+/obj/item/weapon/surgical/retractor,
+/obj/item/weapon/reagent_containers/glass/bottle/stoxin,
+/obj/item/weapon/reagent_containers/glass/bottle/stoxin,
+/obj/item/weapon/reagent_containers/syringe,
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/floor/red,
+/area/space)
+"zg" = (
+/obj/item/weapon/bedsheet/rainbow,
+/obj/structure/bed/padded,
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/floor/red,
+/area/space)
+"zh" = (
+/obj/item/weapon/bedsheet/hos,
+/obj/structure/bed/padded,
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/floor/red,
+/area/space)
+"zi" = (
+/obj/structure/table/standard,
+/obj/item/weapon/surgical/bonesetter,
+/obj/item/weapon/surgical/bonegel,
+/obj/item/weapon/surgical/FixOVein,
+/obj/item/stack/nanopaste,
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/floor/red,
+/area/space)
+"zj" = (
+/obj/structure/toilet{
+	dir = 4
+	},
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/floor/red,
+/area/space)
+"zk" = (
+/obj/item/weapon/bedsheet/orange,
+/obj/structure/bed/padded,
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/floor/red,
+/area/space)
 "zl" = (
-/obj/machinery/door/airlock/external{
+/obj/item/weapon/bedsheet/green,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/structure/bed/padded,
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/floor/red,
+/area/space)
+"zm" = (
+/obj/structure/table/standard,
+/obj/item/weapon/reagent_containers/syringe/antiviral,
+/obj/item/weapon/reagent_containers/syringe/antiviral,
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/floor/red,
+/area/space)
+"zn" = (
+/obj/structure/table/standard,
+/obj/item/weapon/storage/firstaid/adv{
+	pixel_x = 1
+	},
+/obj/item/weapon/storage/firstaid/toxin{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/structure/closet/secure_closet/medical_wall{
+	pixel_x = 32;
 	req_access = list(150)
 	},
-/turf/unsimulated/floor{
-	icon_state = "dark"
+/obj/item/weapon/storage/firstaid/fire{
+	pixel_x = 1
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
-"zm" = (
-/obj/structure/lattice,
-/obj/structure/window/reinforced{
-	dir = 8
+/obj/item/weapon/storage/firstaid/o2{
+	pixel_x = 3;
+	pixel_y = 3
 	},
-/turf/space,
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
-"zn" = (
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/turf/unsimulated/floor{
-	icon_state = "dark"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/obj/item/weapon/storage/firstaid/regular,
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/floor/red,
+/area/space)
 "zo" = (
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/turf/unsimulated/floor{
-	icon_state = "dark"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/obj/item/weapon/bedsheet/rd,
+/obj/structure/bed/padded,
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/floor/red,
+/area/space)
 "zs" = (
 /obj/structure/table/standard,
 /obj/item/weapon/storage/firstaid/regular,
@@ -7062,6 +7062,11 @@
 /obj/effect/alien/weeds,
 /turf/simulated/floor/wood,
 /area/centcom/control)
+"Ka" = (
+/obj/item/pizzabox/meat,
+/obj/item/device/gps/internal/base,
+/turf/simulated/shuttle/floor/red,
+/area/space)
 "Kf" = (
 /obj/effect/floor_decal/corner_kafel/blue{
 	dir = 5;
@@ -8653,41 +8658,41 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
 "}
 (2,1,1) = {"
 aa
@@ -8910,41 +8915,41 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+hy
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hy
 "}
 (3,1,1) = {"
 aa
@@ -9167,41 +9172,41 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+hy
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hy
 "}
 (4,1,1) = {"
 aa
@@ -9424,41 +9429,41 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+hy
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hy
 "}
 (5,1,1) = {"
 aa
@@ -9681,41 +9686,41 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+hy
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hy
 "}
 (6,1,1) = {"
 aa
@@ -9938,41 +9943,41 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+hy
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hy
 "}
 (7,1,1) = {"
 aa
@@ -10195,41 +10200,41 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+hy
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hy
 "}
 (8,1,1) = {"
 aa
@@ -10452,41 +10457,41 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+hy
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hy
 "}
 (9,1,1) = {"
 aa
@@ -10709,41 +10714,41 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+hy
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hy
 "}
 (10,1,1) = {"
 aa
@@ -10966,41 +10971,41 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+hy
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hy
 "}
 (11,1,1) = {"
 aa
@@ -11223,41 +11228,41 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+hy
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hy
 "}
 (12,1,1) = {"
 aa
@@ -11480,41 +11485,41 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+hy
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hy
 "}
 (13,1,1) = {"
 aa
@@ -11737,41 +11742,41 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+hy
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hy
 "}
 (14,1,1) = {"
 aa
@@ -11994,41 +11999,41 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+hy
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hy
 "}
 (15,1,1) = {"
 aa
@@ -12251,41 +12256,41 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+hy
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hy
 "}
 (16,1,1) = {"
 aa
@@ -12508,41 +12513,41 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+hy
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hy
 "}
 (17,1,1) = {"
 aa
@@ -12765,41 +12770,41 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+hy
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hy
 "}
 (18,1,1) = {"
 aa
@@ -13022,41 +13027,41 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+hy
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hy
 "}
 (19,1,1) = {"
 aa
@@ -13279,41 +13284,41 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+hy
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hy
 "}
 (20,1,1) = {"
 aa
@@ -13536,41 +13541,41 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+hy
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hy
 "}
 (21,1,1) = {"
 aa
@@ -13793,41 +13798,41 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+hy
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hy
 "}
 (22,1,1) = {"
 aa
@@ -14050,41 +14055,41 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+hy
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hy
 "}
 (23,1,1) = {"
 aa
@@ -14307,41 +14312,41 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+hy
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hy
 "}
 (24,1,1) = {"
 aa
@@ -14564,41 +14569,41 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+hy
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hy
 "}
 (25,1,1) = {"
 aa
@@ -14821,41 +14826,41 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+hy
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hy
 "}
 (26,1,1) = {"
 aa
@@ -15078,41 +15083,41 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+hy
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hy
 "}
 (27,1,1) = {"
 aa
@@ -15335,41 +15340,41 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+hy
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hy
 "}
 (28,1,1) = {"
 aa
@@ -15592,41 +15597,41 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+hy
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hy
 "}
 (29,1,1) = {"
 aa
@@ -15849,41 +15854,41 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+hy
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hy
 "}
 (30,1,1) = {"
 aa
@@ -16106,41 +16111,41 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+hy
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hy
 "}
 (31,1,1) = {"
 ab
@@ -16363,41 +16368,41 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+hy
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hy
 "}
 (32,1,1) = {"
 az
@@ -16620,41 +16625,41 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+hy
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hy
 "}
 (33,1,1) = {"
 aP
@@ -16877,41 +16882,41 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+hy
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hy
 "}
 (34,1,1) = {"
 aP
@@ -17134,41 +17139,41 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+hy
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hy
 "}
 (35,1,1) = {"
 aP
@@ -17391,41 +17396,41 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
+hy
 "}
 (36,1,1) = {"
 aP
@@ -18405,55 +18410,55 @@ aP
 aP
 aP
 aP
-yl
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-yl
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 "}
 (40,1,1) = {"
 ac
@@ -18662,55 +18667,55 @@ aP
 aP
 aP
 aP
-yl
-aQ
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yl
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 "}
 (41,1,1) = {"
 aa
@@ -18919,55 +18924,55 @@ aP
 aP
 aP
 aP
-yl
-aQ
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yo
-yL
-yN
-yS
-yo
-yo
-yo
-yo
-yo
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
 aP
 aP
-yl
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 "}
 (42,1,1) = {"
 aa
@@ -19176,55 +19181,55 @@ aP
 aP
 aP
 aP
-yl
-aQ
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yu
-yu
-yO
-yu
-yu
-yY
-yo
-yo
-yo
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
 aP
 aP
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
 aP
 aP
-yl
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 "}
 (43,1,1) = {"
 aa
@@ -19433,34 +19438,6 @@ aP
 aP
 aP
 aP
-yl
-aQ
-yn
-yn
-yn
-yo
-yo
-yo
-yo
-yo
-yo
-yu
-yu
-yP
-yP
-yP
-yu
-yu
-yo
-yo
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
 aP
 aP
 aP
@@ -19470,18 +19447,46 @@ aP
 aP
 aP
 aP
-yn
-yn
-yn
-yn
-yn
-yn
 aP
 aP
 aP
 aP
 aP
-yl
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 "}
 (44,1,1) = {"
 aa
@@ -19690,34 +19695,6 @@ aP
 aP
 aP
 aP
-yl
-aQ
-yn
-yn
-yn
-yo
-yo
-yo
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yo
-yo
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
 aP
 aP
 aP
@@ -19728,17 +19705,45 @@ aP
 aP
 aP
 aP
-yn
-yn
-yn
-yn
-yn
 aP
 aP
 aP
 aP
 aP
-yl
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 "}
 (45,1,1) = {"
 aa
@@ -19947,29 +19952,6 @@ aP
 aP
 aP
 aP
-yl
-aQ
-yn
-yn
-yn
-yo
-yq
-yu
-yu
-yo
-yu
-yu
-yu
-yQ
-yP
-yW
-yu
-yu
-zi
-yo
-yn
-yn
-yn
 aP
 aP
 aP
@@ -19995,7 +19977,30 @@ aP
 aP
 aP
 aP
-yl
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 "}
 (46,1,1) = {"
 aa
@@ -20204,29 +20209,6 @@ aP
 aP
 aP
 aP
-yl
-aQ
-yn
-yn
-yo
-yo
-yu
-yu
-yo
-yo
-yo
-yo
-yu
-yu
-yu
-yu
-yZ
-yu
-zj
-yo
-yn
-yn
-yn
 aP
 aP
 aP
@@ -20252,7 +20234,30 @@ aP
 aP
 aP
 aP
-yl
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 "}
 (47,1,1) = {"
 aa
@@ -20461,42 +20466,6 @@ aP
 aP
 aP
 aP
-yl
-aQ
-yn
-yn
-yo
-yu
-yu
-yu
-yo
-yo
-yn
-yo
-yo
-yu
-yu
-yu
-yu
-yo
-yo
-yn
-yn
-yn
-yn
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-yn
-yn
-yn
 aP
 aP
 aP
@@ -20509,7 +20478,43 @@ aP
 aP
 aP
 aP
-yl
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 "}
 (48,1,1) = {"
 aa
@@ -20718,27 +20723,6 @@ aP
 aP
 aP
 aP
-yl
-aQ
-yn
-yn
-yo
-yq
-yu
-yo
-yo
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-aP
-yn
 aP
 aP
 aP
@@ -20751,9 +20735,6 @@ aP
 aP
 aP
 aP
-yn
-yn
-yn
 aP
 aP
 aP
@@ -20766,7 +20747,31 @@ aP
 aP
 aP
 aP
-yl
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 "}
 (49,1,1) = {"
 aa
@@ -20975,25 +20980,6 @@ aP
 aP
 aP
 aP
-yl
-aQ
-yn
-yn
-ym
-yq
-yq
-yo
-yo
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-nc
 aP
 aP
 aP
@@ -21014,16 +21000,35 @@ aP
 aP
 aP
 aP
-yn
-yn
-yn
 aP
 aP
 aP
 aP
 aP
 aP
-yl
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 "}
 (50,1,1) = {"
 aa
@@ -21232,25 +21237,6 @@ aP
 aP
 aP
 aP
-yl
-ym
-yo
-yo
-ym
-yq
-yq
-yo
-yo
-yo
-yo
-yo
-ym
-ym
-yo
-aP
-aP
-zb
-zb
 aP
 aP
 aP
@@ -21271,16 +21257,35 @@ aP
 aP
 aP
 aP
-yn
-yn
-yn
 aP
 aP
 aP
-yn
 aP
 aP
-yl
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 "}
 (51,1,1) = {"
 aa
@@ -21489,21 +21494,6 @@ aP
 aP
 aP
 aP
-yl
-ym
-yo
-yo
-ym
-yq
-yq
-ym
-yo
-ym
-yD
-yG
-yM
-yM
-yo
 aP
 aP
 aP
@@ -21529,15 +21519,30 @@ aP
 aP
 aP
 aP
-yn
-yn
 aP
 aP
-yn
-yn
-yn
 aP
-yl
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 "}
 (52,1,1) = {"
 aa
@@ -21746,23 +21751,6 @@ aP
 aP
 aP
 aP
-yl
-ym
-yo
-yo
-ym
-yq
-yq
-ym
-yo
-ym
-yE
-yH
-yG
-yR
-yo
-yn
-yn
 aP
 aP
 aP
@@ -21778,8 +21766,6 @@ aP
 aP
 aP
 aP
-gw
-gw
 aP
 aP
 aP
@@ -21790,11 +21776,30 @@ aP
 aP
 aP
 aP
-yn
-yn
-yn
 aP
-yl
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 "}
 (53,1,1) = {"
 aa
@@ -22003,41 +22008,6 @@ aP
 aP
 aP
 aP
-yl
-ym
-yo
-yo
-yo
-yq
-yq
-ym
-yo
-ym
-yE
-yG
-yG
-ym
-ym
-ym
-ym
-ym
-ym
-zk
-zk
-zk
-gw
-gw
-gw
-gw
-gw
-gw
-gw
-hM
-hO
-hX
-gw
-gw
-gw
 aP
 aP
 aP
@@ -22046,12 +22016,47 @@ aP
 aP
 aP
 aP
-yn
-yn
-yn
-yn
 aP
-yl
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 "}
 (54,1,1) = {"
 aa
@@ -22260,41 +22265,6 @@ aP
 aP
 aP
 aP
-yl
-ym
-yo
-yo
-ym
-yq
-yq
-ym
-ym
-ym
-ym
-yt
-yt
-ym
-yq
-yq
-yq
-yq
-yq
-zl
-zn
-zn
-gx
-gy
-gM
-hd
-hq
-hv
-hG
-hG
-hP
-hP
-ie
-ip
-ml
 aP
 aP
 aP
@@ -22303,12 +22273,47 @@ aP
 aP
 aP
 aP
-yn
-yn
 aP
 aP
 aP
-yl
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+mg
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 "}
 (55,1,1) = {"
 aa
@@ -22517,41 +22522,6 @@ aP
 aP
 aP
 aP
-yl
-ym
-ym
-ym
-ym
-yq
-yq
-yt
-yq
-yB
-ym
-yq
-yq
-ym
-yq
-yp
-yq
-yq
-yq
-zl
-zo
-zo
-gx
-gz
-gU
-he
-gw
-hw
-hH
-hH
-hH
-hH
-if
-ip
-ml
 aP
 aP
 aP
@@ -22565,7 +22535,42 @@ aP
 aP
 aP
 aP
-yl
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+mg
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 "}
 (56,1,1) = {"
 aa
@@ -22774,41 +22779,6 @@ aP
 aP
 aP
 aP
-yl
-ym
-yp
-ys
-ym
-yq
-yq
-ym
-yq
-yq
-ym
-yq
-yq
-ym
-yq
-yq
-yq
-ym
-ym
-zm
-zm
-zm
-gw
-gw
-gw
-gw
-gw
-hx
-hH
-hH
-hQ
-hH
-if
-gw
-gw
 aP
 aP
 aP
@@ -22822,7 +22792,42 @@ aP
 aP
 aP
 aP
-yl
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 "}
 (57,1,1) = {"
 aa
@@ -23031,45 +23036,6 @@ aP
 aP
 aP
 aP
-yl
-ym
-yq
-yq
-ym
-yq
-yq
-ym
-ys
-yp
-ym
-yq
-yq
-ym
-yq
-yq
-yq
-zc
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-gw
-hy
-hH
-hH
-hR
-gw
-gw
-gw
-gw
-gw
-gw
-gw
-gw
 aP
 aP
 aP
@@ -23079,7 +23045,46 @@ aP
 aP
 aP
 aP
-yl
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 "}
 (58,1,1) = {"
 aa
@@ -23288,45 +23293,6 @@ aP
 aP
 aP
 aP
-yl
-ym
-yr
-yq
-yt
-yq
-yq
-ym
-ym
-ym
-ym
-yq
-yq
-ym
-yq
-yq
-yq
-zd
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-gw
-hz
-hI
-hH
-hH
-hJ
-hs
-hs
-it
-hs
-hs
-gw
-gw
 aP
 aP
 aP
@@ -23336,7 +23302,46 @@ aP
 aP
 aP
 aP
-yl
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 "}
 (59,1,1) = {"
 aa
@@ -23545,46 +23550,6 @@ aP
 aP
 aP
 aP
-yl
-ym
-ym
-ym
-ym
-yq
-yq
-ym
-yz
-yB
-ym
-yq
-yq
-ym
-yq
-yq
-yq
-ze
-aP
-aP
-aP
-aP
-aP
-aP
-gw
-gw
-gw
-gw
-gw
-hJ
-gw
-gw
-ig
-hs
-iu
-hs
-hs
-iP
-gw
-gw
 aP
 aP
 aP
@@ -23593,7 +23558,47 @@ aP
 aP
 aP
 aP
-yl
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 "}
 (60,1,1) = {"
 aa
@@ -23802,47 +23807,6 @@ aP
 aP
 aP
 aP
-yl
-ym
-yo
-yo
-ym
-yq
-yq
-yt
-yq
-yp
-ym
-yq
-yq
-ym
-ym
-ym
-yt
-ym
-ym
-aP
-aP
-aP
-gw
-gw
-gw
-gw
-hr
-hA
-gA
-hs
-hS
-gw
-hs
-hs
-hs
-hs
-ir
-hs
-gw
-gw
-gw
 aP
 aP
 aP
@@ -23850,7 +23814,48 @@ aP
 aP
 aP
 aP
-yl
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 "}
 (61,1,1) = {"
 aa
@@ -24059,47 +24064,6 @@ aP
 aP
 aP
 aP
-yl
-ym
-yo
-yo
-ym
-yq
-yq
-ym
-ym
-ym
-ym
-yq
-yq
-ym
-yT
-yU
-yU
-yU
-ym
-aP
-aP
-aP
-aP
-gA
-gw
-hf
-hs
-hs
-gB
-hs
-hT
-gw
-hM
-hO
-hX
-gw
-gw
-gw
-gw
-ip
-ml
 aP
 aP
 aP
@@ -24107,7 +24071,48 @@ aP
 aP
 aP
 aP
-yl
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+mg
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 "}
 (62,1,1) = {"
 aa
@@ -24316,47 +24321,6 @@ aP
 aP
 aP
 aP
-yl
-ym
-yo
-yo
-ym
-yq
-yq
-yq
-yq
-yq
-yq
-yq
-yq
-ym
-yU
-yU
-yU
-zf
-zc
-aP
-aP
-aP
-aP
-gB
-gW
-hg
-hs
-hs
-gD
-hs
-hs
-hY
-ih
-ih
-iv
-gw
-iz
-iQ
-iU
-ip
-ml
 aP
 aP
 aP
@@ -24364,7 +24328,48 @@ aP
 aP
 aP
 aP
-yl
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+mg
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 "}
 (63,1,1) = {"
 aa
@@ -24573,47 +24578,6 @@ aP
 aP
 aP
 aP
-yl
-ym
-yo
-yo
-ym
-yq
-yq
-yq
-yq
-yq
-yq
-yq
-yq
-yt
-yU
-yX
-za
-zg
-zd
-aP
-aP
-aP
-aP
-gB
-gX
-hh
-hs
-hs
-hJ
-hs
-hs
-hZ
-ii
-iq
-hs
-hJ
-hs
-hs
-jh
-ip
-ml
 aP
 aP
 aP
@@ -24621,7 +24585,48 @@ aP
 aP
 aP
 aP
-yl
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+mg
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 "}
 (64,1,1) = {"
 az
@@ -24830,47 +24835,6 @@ aP
 aP
 aP
 aP
-yl
-ym
-yo
-yo
-ym
-yq
-yq
-yq
-yq
-yq
-yq
-yq
-yq
-ym
-yU
-yU
-yU
-yU
-ze
-aP
-aP
-aP
-aP
-gB
-gY
-hg
-hs
-hs
-gA
-hs
-hs
-ia
-ij
-ij
-iv
-gw
-iA
-iR
-jj
-ip
-ml
 aP
 aP
 aP
@@ -24878,7 +24842,48 @@ aP
 aP
 aP
 aP
-yl
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+mg
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 "}
 (65,1,1) = {"
 eB
@@ -25087,47 +25092,6 @@ aP
 aP
 aP
 aP
-yl
-ym
-yo
-yo
-ym
-ym
-ym
-yt
-yt
-ym
-ym
-ym
-ym
-ym
-yV
-yU
-yU
-zh
-ym
-aP
-aP
-aP
-aP
-gD
-ha
-hj
-hs
-hs
-gB
-hs
-hs
-gw
-hM
-hO
-hX
-gw
-gw
-gw
-gw
-ip
-ml
 aP
 aP
 aP
@@ -25135,7 +25099,48 @@ aP
 aP
 aP
 aP
-yl
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+mg
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 "}
 (66,1,1) = {"
 eB
@@ -25344,47 +25349,6 @@ aP
 aP
 aP
 aP
-yl
-ym
-yo
-yo
-yo
-yo
-yv
-yx
-yx
-yx
-yx
-yI
-yo
-ym
-ym
-ym
-yt
-ym
-ym
-aP
-aP
-aP
-gw
-gw
-gw
-gw
-ht
-hA
-gD
-hs
-hU
-gw
-ik
-hs
-hs
-ix
-hs
-iS
-gw
-gw
-gw
 aP
 aP
 aP
@@ -25392,7 +25356,48 @@ aP
 aP
 aP
 aP
-yl
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 "}
 (67,1,1) = {"
 eB
@@ -25601,46 +25606,6 @@ aP
 aP
 aP
 aP
-yl
-ym
-yo
-yo
-yo
-yo
-yw
-yy
-yA
-yx
-yx
-yJ
-yo
-ym
-yq
-yq
-yq
-zc
-aP
-aP
-aP
-aP
-aP
-aP
-gw
-gw
-gw
-gw
-gw
-hJ
-gw
-gw
-il
-hs
-hs
-hs
-hs
-iT
-gw
-gw
 aP
 aP
 aP
@@ -25649,7 +25614,47 @@ aP
 aP
 aP
 aP
-yl
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 "}
 (68,1,1) = {"
 eB
@@ -25858,45 +25863,6 @@ aP
 aP
 aP
 aP
-yl
-ym
-yo
-yo
-yo
-yo
-yo
-yo
-yo
-yx
-yx
-yK
-yo
-ym
-yq
-yq
-yq
-zd
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-gw
-hB
-hK
-hH
-hH
-hJ
-hs
-ir
-iw
-iy
-iB
-gw
-gw
 aP
 aP
 aP
@@ -25906,7 +25872,46 @@ aP
 aP
 aP
 aP
-yl
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 "}
 (69,1,1) = {"
 eB
@@ -26115,45 +26120,6 @@ aP
 aP
 aP
 aP
-yl
-ym
-yo
-yo
-yo
-yo
-yo
-yo
-yo
-yC
-yF
-ym
-yo
-ym
-yq
-yq
-yq
-ze
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-gw
-hC
-hH
-hH
-hV
-gw
-gw
-gw
-gw
-gw
-gw
-gw
-gw
 aP
 aP
 aP
@@ -26163,7 +26129,46 @@ aP
 aP
 aP
 aP
-yl
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 "}
 (70,1,1) = {"
 eB
@@ -26372,41 +26377,6 @@ aP
 aP
 aP
 aP
-yl
-ym
-yo
-yo
-yo
-yo
-yo
-yo
-ym
-ym
-ym
-ym
-yo
-ym
-yq
-yq
-yq
-ym
-ym
-zk
-zk
-zk
-gw
-gw
-gw
-gw
-gw
-hD
-hH
-hN
-hH
-ib
-im
-gw
-gw
 aP
 aP
 aP
@@ -26420,7 +26390,42 @@ aP
 aP
 aP
 aP
-yl
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 "}
 (71,1,1) = {"
 eB
@@ -26629,41 +26634,6 @@ aP
 aP
 aP
 aP
-yl
-aQ
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-ym
-yq
-yp
-yq
-yq
-yq
-zl
-zn
-zn
-gx
-gK
-hb
-hm
-gw
-hE
-hL
-hH
-hW
-ic
-in
-ip
-ml
 aP
 aP
 aP
@@ -26677,7 +26647,42 @@ aP
 aP
 aP
 aP
-yl
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+mg
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 "}
 (72,1,1) = {"
 eB
@@ -26886,41 +26891,6 @@ aP
 aP
 aP
 aP
-yl
-aQ
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-ym
-yq
-yq
-yq
-yq
-yq
-zl
-zo
-zo
-gx
-gL
-hc
-hn
-hu
-hF
-hG
-hG
-hG
-id
-io
-ip
-ml
 aP
 aP
 aP
@@ -26934,7 +26904,42 @@ aP
 aP
 aP
 aP
-yl
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+mg
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 "}
 (73,1,1) = {"
 eB
@@ -27143,41 +27148,6 @@ aP
 aP
 aP
 aP
-yl
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-ym
-ym
-ym
-ym
-ym
-ym
-zm
-zm
-zm
-gw
-gw
-gw
-gw
-gw
-gw
-gw
-hM
-hO
-hX
-gw
-gw
-gw
 aP
 aP
 aP
@@ -27191,7 +27161,42 @@ aP
 aP
 aP
 aP
-yl
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 "}
 (74,1,1) = {"
 eB
@@ -27400,23 +27405,6 @@ aP
 aP
 aP
 aP
-yl
-aQ
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
 aP
 aP
 aP
@@ -27432,8 +27420,6 @@ aP
 aP
 aP
 aP
-gw
-gw
 aP
 aP
 aP
@@ -27448,7 +27434,26 @@ aP
 aP
 aP
 aP
-yl
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 "}
 (75,1,1) = {"
 eB
@@ -27657,20 +27662,6 @@ aP
 aP
 aP
 aP
-yl
-aQ
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
 aP
 aP
 aP
@@ -27705,7 +27696,21 @@ aP
 aP
 aP
 aP
-yl
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 "}
 (76,1,1) = {"
 eB
@@ -27914,19 +27919,6 @@ aP
 aP
 aP
 aP
-yl
-aQ
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
-yn
 aP
 aP
 aP
@@ -27962,7 +27954,20 @@ aP
 aP
 aP
 aP
-yl
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 "}
 (77,1,1) = {"
 eB
@@ -28171,15 +28176,6 @@ aP
 aP
 aP
 aP
-yl
-aQ
-yn
-yn
-yn
-yn
-yn
-yn
-yn
 aP
 aP
 aP
@@ -28219,7 +28215,16 @@ aP
 aP
 aP
 aP
-yl
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 "}
 (78,1,1) = {"
 eB
@@ -28428,55 +28433,55 @@ aP
 aP
 aP
 aP
-yl
-yl
-yl
-yl
-yl
-yl
-yl
-yl
-yl
-yl
-yl
-yl
-yl
-yl
-yl
-yl
-yl
-yl
-yl
-yl
-yl
-yl
-yl
-yl
-yl
-yl
-yl
-yl
-yl
-yl
-yl
-yl
-yl
-yl
-yl
-yl
-yl
-yl
-yl
-yl
-yl
-yl
-yl
-yl
-yl
-yl
-yl
-yl
-yl
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 "}
 (79,1,1) = {"
 eB
@@ -31512,55 +31517,55 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+gw
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+gw
 "}
 (91,1,1) = {"
 eB
@@ -31769,55 +31774,55 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+gw
+aQ
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gw
 "}
 (92,1,1) = {"
 eB
@@ -32026,55 +32031,55 @@ aP
 aP
 aP
 aP
+gw
+aQ
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gz
+hr
+ht
+hz
+gz
+gz
+gz
+gz
+gz
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+gw
 "}
 (93,1,1) = {"
 eB
@@ -32283,55 +32288,55 @@ aP
 aP
 aP
 aP
+gw
+aQ
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gM
+gM
+hu
+gM
+gM
+hG
+gz
+gz
+gz
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
 aP
 aP
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+gw
 "}
 (94,1,1) = {"
 eB
@@ -32540,6 +32545,34 @@ aP
 aP
 aP
 aP
+gw
+aQ
+gy
+gy
+gy
+gz
+gz
+gz
+gz
+gz
+gz
+gM
+gM
+hv
+hv
+hv
+gM
+gM
+gz
+gz
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
 aP
 aP
 aP
@@ -32549,46 +32582,18 @@ aP
 aP
 aP
 aP
+gy
+gy
+gy
+gy
+gy
+gy
 aP
 aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+gw
 "}
 (95,1,1) = {"
 eB
@@ -32797,6 +32802,34 @@ aP
 aP
 aP
 aP
+gw
+aQ
+gy
+gy
+gy
+gz
+gz
+gz
+gM
+gM
+gM
+gM
+gM
+gM
+gM
+gM
+gM
+gM
+gz
+gz
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
 aP
 aP
 aP
@@ -32807,45 +32840,17 @@ aP
 aP
 aP
 aP
+gy
+gy
+gy
+gy
+gy
 aP
 aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+gw
 "}
 (96,1,1) = {"
 eB
@@ -33054,6 +33059,29 @@ aP
 aP
 aP
 aP
+gw
+aQ
+gy
+gy
+gy
+gz
+gB
+gM
+gM
+gz
+gM
+gM
+gM
+hw
+hv
+hE
+gM
+gM
+hQ
+gz
+gy
+gy
+gy
 aP
 aP
 aP
@@ -33079,30 +33107,7 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+gw
 "}
 (97,1,1) = {"
 eB
@@ -33311,6 +33316,29 @@ aP
 aP
 aP
 aP
+gw
+aQ
+gy
+gy
+gz
+gz
+gM
+gM
+gz
+gz
+gz
+gz
+gM
+gM
+gM
+gM
+hH
+gM
+hR
+gz
+gy
+gy
+gy
 aP
 aP
 aP
@@ -33336,30 +33364,7 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+gw
 "}
 (98,1,1) = {"
 eB
@@ -33568,6 +33573,42 @@ aP
 aP
 aP
 aP
+gw
+aQ
+gy
+gy
+gz
+gM
+gM
+gM
+gz
+gz
+gy
+gz
+gz
+gM
+gM
+gM
+gM
+gz
+gz
+gy
+gy
+gy
+gy
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+gy
+gy
+gy
 aP
 aP
 aP
@@ -33580,43 +33621,7 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+gw
 "}
 (99,1,1) = {"
 eB
@@ -33825,6 +33830,27 @@ aP
 aP
 aP
 aP
+gw
+aQ
+gy
+gy
+gz
+gB
+gM
+gz
+gz
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+aP
+gy
 aP
 aP
 aP
@@ -33837,6 +33863,9 @@ aP
 aP
 aP
 aP
+gy
+gy
+gy
 aP
 aP
 aP
@@ -33849,31 +33878,7 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+gw
 "}
 (100,1,1) = {"
 eB
@@ -34082,6 +34087,25 @@ aP
 aP
 aP
 aP
+gw
+aQ
+gy
+gy
+gx
+gB
+gB
+gz
+gz
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+hS
 aP
 aP
 aP
@@ -34102,35 +34126,16 @@ aP
 aP
 aP
 aP
+gy
+gy
+gy
 aP
 aP
 aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+gw
 "}
 (101,1,1) = {"
 eB
@@ -34339,6 +34344,25 @@ aP
 aP
 aP
 aP
+gw
+gx
+gz
+gz
+gx
+gB
+gB
+gz
+gz
+gz
+gz
+gz
+gx
+gx
+gz
+aP
+aP
+hJ
+hJ
 aP
 aP
 aP
@@ -34359,35 +34383,16 @@ aP
 aP
 aP
 aP
+gy
+gy
+gy
 aP
 aP
 aP
+gy
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+gw
 "}
 (102,1,1) = {"
 eB
@@ -34596,6 +34601,21 @@ aP
 aP
 aP
 aP
+gw
+gx
+gz
+gz
+gx
+gB
+gB
+gx
+gz
+gx
+he
+hh
+hs
+hs
+gz
 aP
 aP
 aP
@@ -34621,30 +34641,15 @@ aP
 aP
 aP
 aP
+gy
+gy
 aP
 aP
+gy
+gy
+gy
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+gw
 "}
 (103,1,1) = {"
 eB
@@ -34853,6 +34858,23 @@ aP
 aP
 aP
 aP
+gw
+gx
+gz
+gz
+gx
+gB
+gB
+gx
+gz
+gx
+hf
+hj
+hh
+hx
+gz
+gy
+gy
 aP
 aP
 aP
@@ -34868,6 +34890,8 @@ aP
 aP
 aP
 aP
+hY
+hY
 aP
 aP
 aP
@@ -34878,30 +34902,11 @@ aP
 aP
 aP
 aP
+gy
+gy
+gy
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+gw
 "}
 (104,1,1) = {"
 eB
@@ -35110,6 +35115,41 @@ aP
 aP
 aP
 aP
+gw
+gx
+gz
+gz
+gz
+gB
+gB
+gx
+gz
+gx
+hf
+hh
+hh
+gx
+gx
+gx
+gx
+gx
+gx
+hT
+hT
+hT
+hY
+hY
+hY
+hY
+hY
+hY
+hY
+yt
+yv
+yE
+hY
+hY
+hY
 aP
 aP
 aP
@@ -35118,47 +35158,12 @@ aP
 aP
 aP
 aP
+gy
+gy
+gy
+gy
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+gw
 "}
 (105,1,1) = {"
 eB
@@ -35367,6 +35372,41 @@ aP
 aP
 aP
 aP
+gw
+gx
+gz
+gz
+gx
+gB
+gB
+gx
+gx
+gx
+gx
+gL
+gL
+gx
+gB
+gB
+gB
+gB
+gB
+hU
+hW
+hW
+hZ
+ia
+ih
+ip
+iy
+iQ
+yn
+yn
+yw
+yw
+yL
+yW
+yZ
 aP
 aP
 aP
@@ -35375,47 +35415,12 @@ aP
 aP
 aP
 aP
+gy
+gy
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+gw
 "}
 (106,1,1) = {"
 eB
@@ -35624,6 +35629,41 @@ aP
 aP
 aP
 aP
+gw
+gx
+gx
+gx
+gx
+gB
+gB
+gL
+gB
+hc
+gx
+gB
+gB
+gx
+gB
+gA
+gB
+gB
+gB
+hU
+hX
+hX
+hZ
+ib
+ii
+iq
+hY
+iR
+yo
+yo
+yo
+yo
+yM
+yW
+yZ
 aP
 aP
 aP
@@ -35637,42 +35677,7 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+gw
 "}
 (107,1,1) = {"
 eB
@@ -35881,6 +35886,41 @@ aP
 aP
 aP
 aP
+gw
+gx
+gA
+gK
+gx
+gB
+gB
+gx
+gB
+gB
+gx
+gB
+gB
+gx
+gB
+gB
+gB
+gx
+gx
+hV
+hV
+hV
+hY
+hY
+hY
+hY
+hY
+iS
+yo
+yo
+yx
+yo
+yM
+hY
+hY
 aP
 aP
 aP
@@ -35894,42 +35934,7 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+gw
 "}
 (108,1,1) = {"
 eB
@@ -36138,6 +36143,45 @@ aP
 aP
 aP
 aP
+gw
+gx
+gB
+gB
+gx
+gB
+gB
+gx
+gK
+gA
+gx
+gB
+gB
+gx
+gB
+gB
+gB
+hK
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+hY
+iT
+yo
+yo
+yy
+hY
+hY
+hY
+hY
+hY
+hY
+hY
+hY
 aP
 aP
 aP
@@ -36147,46 +36191,7 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+gw
 "}
 (109,1,1) = {"
 eB
@@ -36395,6 +36400,45 @@ aP
 aP
 aP
 aP
+gw
+gx
+gD
+gB
+gL
+gB
+gB
+gx
+gx
+gx
+gx
+gB
+gB
+gx
+gB
+gB
+gB
+hL
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+hY
+iU
+yp
+yo
+yo
+yq
+iA
+iA
+za
+iA
+iA
+hY
+hY
 aP
 aP
 aP
@@ -36404,46 +36448,7 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+gw
 "}
 (110,1,1) = {"
 eB
@@ -36652,6 +36657,46 @@ aP
 aP
 aP
 aP
+gw
+gx
+gx
+gx
+gx
+gB
+gB
+gx
+ha
+hc
+gx
+gB
+gB
+gx
+gB
+gB
+gB
+hM
+aP
+aP
+aP
+aP
+aP
+aP
+hY
+hY
+hY
+hY
+hY
+yq
+hY
+hY
+yN
+iA
+zb
+iA
+iA
+zj
+hY
+hY
 aP
 aP
 aP
@@ -36660,47 +36705,7 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+gw
 "}
 (111,1,1) = {"
 eB
@@ -36909,6 +36914,47 @@ aP
 aP
 aP
 aP
+gw
+gx
+gz
+gz
+gx
+gB
+gB
+gL
+gB
+gA
+gx
+gB
+gB
+gx
+gx
+gx
+gL
+gx
+gx
+aP
+aP
+aP
+hY
+hY
+hY
+hY
+iz
+jh
+ic
+iA
+yz
+hY
+iA
+iA
+iA
+iA
+yY
+iA
+hY
+hY
+hY
 aP
 aP
 aP
@@ -36916,48 +36962,7 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+gw
 "}
 (112,1,1) = {"
 eB
@@ -37166,6 +37171,47 @@ aP
 aP
 aP
 aP
+gw
+gx
+gz
+gz
+gx
+gB
+gB
+gx
+gx
+gx
+gx
+gB
+gB
+gx
+hA
+hB
+hB
+hB
+gx
+aP
+aP
+aP
+aP
+ic
+hY
+ir
+iA
+iA
+id
+iA
+yA
+hY
+yt
+yv
+yE
+hY
+hY
+hY
+hY
+yW
+yZ
 aP
 aP
 aP
@@ -37173,48 +37219,7 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+gw
 "}
 (113,1,1) = {"
 eB
@@ -37423,6 +37428,47 @@ aP
 aP
 aP
 aP
+gw
+gx
+gz
+gz
+gx
+gB
+gB
+gB
+gB
+gB
+gB
+gB
+gB
+gx
+hB
+hB
+hB
+hN
+hK
+aP
+aP
+aP
+aP
+id
+ij
+it
+iA
+iA
+ie
+iA
+iA
+yF
+yO
+yO
+zc
+hY
+zg
+zk
+zo
+yW
+yZ
 aP
 aP
 aP
@@ -37430,48 +37476,7 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+gw
 "}
 (114,1,1) = {"
 eB
@@ -37680,6 +37685,47 @@ aP
 aP
 aP
 aP
+gw
+gx
+gz
+gz
+gx
+gB
+gB
+gB
+gB
+gB
+gB
+gB
+gB
+gL
+hB
+hF
+hI
+hO
+hL
+aP
+aP
+aP
+aP
+id
+ik
+iu
+iA
+iA
+yq
+iA
+iA
+yG
+yP
+yX
+iA
+yq
+iA
+iA
+Ka
+yW
+yZ
 aP
 aP
 aP
@@ -37687,48 +37733,7 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+gw
 "}
 (115,1,1) = {"
 eB
@@ -37937,6 +37942,47 @@ aP
 aP
 aP
 aP
+gw
+gx
+gz
+gz
+gx
+gB
+gB
+gB
+gB
+gB
+gB
+gB
+gB
+gx
+hB
+hB
+hB
+hB
+hM
+aP
+aP
+aP
+aP
+id
+il
+it
+iA
+iA
+ic
+iA
+iA
+yH
+yQ
+yQ
+zc
+hY
+zh
+zl
+pM
+yW
+yZ
 aP
 aP
 aP
@@ -37944,48 +37990,7 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+gw
 "}
 (116,1,1) = {"
 az
@@ -38194,6 +38199,47 @@ aP
 aP
 aP
 aP
+gw
+gx
+gz
+gz
+gx
+gx
+gx
+gL
+gL
+gx
+gx
+gx
+gx
+gx
+hC
+hB
+hB
+hP
+gx
+aP
+aP
+aP
+aP
+ie
+im
+iv
+iA
+iA
+id
+iA
+iA
+hY
+yt
+yv
+yE
+hY
+hY
+hY
+hY
+yW
+yZ
 aP
 aP
 aP
@@ -38201,48 +38247,7 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+gw
 "}
 (117,1,1) = {"
 eB
@@ -38451,6 +38456,47 @@ aP
 aP
 aP
 aP
+gw
+gx
+gz
+gz
+gz
+gz
+gU
+gX
+gX
+gX
+gX
+hm
+gz
+gx
+gx
+gx
+gL
+gx
+gx
+aP
+aP
+aP
+hY
+hY
+hY
+hY
+iB
+jh
+ie
+iA
+yB
+hY
+yR
+iA
+iA
+ze
+iA
+zm
+hY
+hY
+hY
 aP
 aP
 aP
@@ -38458,48 +38504,7 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+gw
 "}
 (118,1,1) = {"
 eB
@@ -38708,6 +38713,46 @@ aP
 aP
 aP
 aP
+gw
+gx
+gz
+gz
+gz
+gz
+gW
+gY
+hb
+gX
+gX
+hn
+gz
+gx
+gB
+gB
+gB
+hK
+aP
+aP
+aP
+aP
+aP
+aP
+hY
+hY
+hY
+hY
+hY
+yq
+hY
+hY
+yS
+iA
+iA
+iA
+iA
+zn
+hY
+hY
 aP
 aP
 aP
@@ -38716,47 +38761,7 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+gw
 "}
 (119,1,1) = {"
 eB
@@ -38965,6 +38970,45 @@ aP
 aP
 aP
 aP
+gw
+gx
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gX
+gX
+hq
+gz
+gx
+gB
+gB
+gB
+hL
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+hY
+jj
+yr
+yo
+yo
+yq
+iA
+yY
+zd
+zf
+zi
+hY
+hY
 aP
 aP
 aP
@@ -38974,46 +39018,7 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+gw
 "}
 (120,1,1) = {"
 eB
@@ -39222,6 +39227,45 @@ aP
 aP
 aP
 aP
+gw
+gx
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+hd
+hg
+gx
+gz
+gx
+gB
+gB
+gB
+hM
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+hY
+ml
+yo
+yo
+yC
+hY
+hY
+hY
+hY
+hY
+hY
+hY
+hY
 aP
 aP
 aP
@@ -39231,46 +39275,7 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+gw
 "}
 (121,1,1) = {"
 eB
@@ -39479,6 +39484,41 @@ aP
 aP
 aP
 aP
+gw
+gx
+gz
+gz
+gz
+gz
+gz
+gz
+gx
+gx
+gx
+gx
+gz
+gx
+gB
+gB
+gB
+gx
+gx
+hT
+hT
+hT
+hY
+hY
+hY
+hY
+hY
+nc
+yo
+yu
+yo
+yI
+yT
+hY
+hY
 aP
 aP
 aP
@@ -39492,42 +39532,7 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+gw
 "}
 (122,1,1) = {"
 eB
@@ -39736,6 +39741,41 @@ aP
 aP
 aP
 aP
+gw
+aQ
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gx
+gB
+gA
+gB
+gB
+gB
+hU
+hW
+hW
+hZ
+if
+in
+iw
+hY
+yl
+ys
+yo
+yD
+yJ
+yU
+yW
+yZ
 aP
 aP
 aP
@@ -39749,42 +39789,7 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+gw
 "}
 (123,1,1) = {"
 eB
@@ -39993,6 +39998,41 @@ aP
 aP
 aP
 aP
+gw
+aQ
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gx
+gB
+gB
+gB
+gB
+gB
+hU
+hX
+hX
+hZ
+ig
+io
+ix
+iP
+ym
+yn
+yn
+yn
+yK
+yV
+yW
+yZ
 aP
 aP
 aP
@@ -40006,42 +40046,7 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+gw
 "}
 (124,1,1) = {"
 eB
@@ -40250,6 +40255,41 @@ aP
 aP
 aP
 aP
+gw
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+gx
+gx
+gx
+gx
+gx
+gx
+hV
+hV
+hV
+hY
+hY
+hY
+hY
+hY
+hY
+hY
+yt
+yv
+yE
+hY
+hY
+hY
 aP
 aP
 aP
@@ -40263,42 +40303,7 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+gw
 "}
 (125,1,1) = {"
 eB
@@ -40507,6 +40512,23 @@ aP
 aP
 aP
 aP
+gw
+aQ
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
 aP
 aP
 aP
@@ -40522,6 +40544,8 @@ aP
 aP
 aP
 aP
+hY
+hY
 aP
 aP
 aP
@@ -40536,26 +40560,7 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+gw
 "}
 (126,1,1) = {"
 eB
@@ -40764,6 +40769,20 @@ aP
 aP
 aP
 aP
+gw
+aQ
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
 aP
 aP
 aP
@@ -40798,21 +40817,7 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+gw
 "}
 (127,1,1) = {"
 eB
@@ -41021,6 +41026,19 @@ aP
 aP
 aP
 aP
+gw
+aQ
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
 aP
 aP
 aP
@@ -41056,20 +41074,7 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+gw
 "}
 (128,1,1) = {"
 eB
@@ -41278,6 +41283,15 @@ aP
 aP
 aP
 aP
+gw
+aQ
+gy
+gy
+gy
+gy
+gy
+gy
+gy
 aP
 aP
 aP
@@ -41317,16 +41331,7 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+gw
 "}
 (129,1,1) = {"
 eB
@@ -41535,55 +41540,55 @@ aP
 aP
 aP
 aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
-aP
+gw
+gw
+gw
+gw
+gw
+gw
+gw
+gw
+gw
+gw
+gw
+gw
+gw
+gw
+gw
+gw
+gw
+gw
+gw
+gw
+gw
+gw
+gw
+gw
+gw
+gw
+gw
+gw
+gw
+gw
+gw
+gw
+gw
+gw
+gw
+gw
+gw
+gw
+gw
+gw
+gw
+gw
+gw
+gw
+gw
+gw
+gw
+gw
+gw
 "}
 (130,1,1) = {"
 eB
