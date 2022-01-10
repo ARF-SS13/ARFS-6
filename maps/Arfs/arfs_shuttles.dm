@@ -6,7 +6,7 @@
 	name = "Excursion Shuttle"
 	warmup_time = 0
 	current_location = "arfs_excursion_hangar"
-	docking_controller_tag = "expshuttle_docker"
+	docking_controller_tag = "expshuttle_dock"
 	shuttle_area = list(/area/shuttle/excursion)
 	fuel_consumption = 3
 	move_time = 20
@@ -26,9 +26,9 @@
 /obj/effect/shuttle_landmark/arfs/deck3/excursion
 	name = "A.R.F.S Dallus - Excursion Hanger"
 	landmark_tag = "arfs_excursion_hangar"
-	docking_controller = "expshuttle_docker"
+	docking_controller = "expshuttle_dock"
 	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	base_area = /area/exploration/excursion_dock
+	base_area = /area/exploration/hanger
 
 
 //////////////////////////////////////////////////////////////
