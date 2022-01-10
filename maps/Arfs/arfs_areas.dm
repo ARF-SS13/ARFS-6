@@ -1,9 +1,13 @@
 // Areas defined via tether used on arfs map
 
+// Explorer shuttle
+/area/shuttle/excursion
+	name = "\improper Excursion Shuttle"
+	icon_state = "shuttle2"
+	base_turf = /turf/space
 
 
 // antag
-
 /area/shuttle/antag_ground/base
 	name = "\improper Syndicate LC - Base"
 	icon_state = "shuttle2"
@@ -16,22 +20,17 @@
 	icon_state = "shuttle2"
 
 // RND
-
 /area/rnd/hallway
 	name = "\improper Research Lower Hallway"
 	icon_state = "research"
 
 // AI
-
 /area/ai/foyer
 	name = "\improper AI Core Access"
 /area/ai/outside
 	name = "/improper AI Core Outside"
 
 // CREWQUARTERS/DORM
-
-
-
 /area/crew_quarters/sauna
 	name = "\improper Sauna"
 	icon_state = "recreation_area"
