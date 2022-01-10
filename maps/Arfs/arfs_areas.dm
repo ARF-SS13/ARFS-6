@@ -215,6 +215,12 @@
 	icon_state = "engineering"
 	icon = 'icons/turf/areas.dmi'
 
+//Engineering Engine Room
+/area/engineering/thrusters
+	name= "\improper Engine Thrusters"
+	icon_state = "engineering"
+	icon = 'icons/turf/areas.dmi'
+
 //Upstairs Kitchen
 /area/crew_quarters/kitchen/upper
 	name= "\improper Upstairs Kitchen"
