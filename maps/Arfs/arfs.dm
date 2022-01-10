@@ -2,6 +2,7 @@
 
 // 1 = Subdeck, 2 = Main Deck, 3 = Centcomm, 4 = Empty, 5 = Hotel, 6 = Mining
 
+	#include "arfs_submaps.dm"
 
 	#include "arfs-1-deckone.dmm"
 	#include "arfs-2-decktwo.dmm"

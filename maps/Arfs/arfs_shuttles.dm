@@ -21,6 +21,8 @@
 	fore_dir = NORTH
 	known = TRUE
 
+	initial_restricted_waypoints = list
+
 // Exclusive landmark for docking *inside* the station
 /obj/effect/shuttle_landmark/arfs/deck3/excursion
 	name = "A.R.F.S Dallus - Excursion Hanger"

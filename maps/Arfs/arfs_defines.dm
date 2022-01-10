@@ -78,7 +78,35 @@
 
 	use_overmap = 1
 	overmap_size = 35
-	overmap_z = Z_LEVEL_CENTCOM_ARFS;
+	overmap_z = Z_LEVEL_CENTCOM_ARFS
+	overmap_event_areas = 365
+	
+	lateload_z_levels = list(
+		list("V3b Asteroid Field"),
+		list("Desert Planet - Z1 Beach","Desert Planet - Z2 Cave"),
+		list("Remmi Aerostat - Z1 Aerostat","Remmi Aerostat - Z2 Surface"),
+		list("Debris Field - Z1 Space"),
+		list("Fuel Depot - Z1 Space"),
+		list("Offmap Ship - Talon V2")
+		)
+
+	lateload_gateway = list(
+		list("Carp Farm"),
+		list("Snow Field"),
+		list("Listening Post"),
+		list(list("Honleth Highlands A", "Honleth Highlands B")),
+		list("Arynthi Lake Underground A","Arynthi Lake A"),
+		list("Arynthi Lake Underground B","Arynthi Lake B"),
+		list("Eggnog Town Underground","Eggnog Town"),
+		list("Wild West")
+		)
+
+	lateload_overmap = list(
+		list("Grass Cave")
+		)
+
+	planet_datums_to_make = list(/datum/planet/virgo3b,
+								/datum/planet/virgo4)
 
 /datum/map/arfs/perform_map_generation()
 	new /datum/random_map/automata/cave_system(null, 1, 1, Z_LEVEL_MINING_ARFS, world.maxx, world.maxy) // Create the mining Z-level.

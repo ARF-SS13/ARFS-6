@@ -5439,6 +5439,7 @@
 /obj/machinery/atmospherics/pipe/zpipe/down/supply{
 	dir = 8
 	},
+/obj/structure/lattice,
 /turf/simulated/open,
 /area/engineering/thrusters)
 "ld" = (
@@ -7684,9 +7685,6 @@
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/excursion)
 "qf" = (
-/obj/machinery/pointdefense_control{
-	id_tag = "dauntless_pd"
-	},
 /turf/simulated/floor,
 /area/engineering/thrusters)
 "qg" = (
@@ -9141,8 +9139,12 @@
 /turf/simulated/floor/tiled/white,
 /area/hallway/primary/deckthree/aft)
 "tm" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
 /obj/structure/catwalk,
 /turf/simulated/floor,
 /area/engineering/thrusters)
@@ -9497,9 +9499,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/ai/outside)
-"tX" = (
-/turf/simulated/wall/r_wall,
-/area/engineering/thrusters)
 "tY" = (
 /obj/machinery/alarm{
 	pixel_y = 22
@@ -10328,9 +10327,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark,
 /area/security/security_cell_hallway)
-"vU" = (
-/turf/simulated/floor/airless/ceiling,
-/area/engineering/thrusters)
 "vV" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/shuttle/floor/black,
@@ -13195,6 +13191,10 @@
 /obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/hallway/primary/deckthree/aft)
+"BP" = (
+/obj/structure/catwalk,
+/turf/simulated/floor,
+/area/engineering/thrusters)
 "BQ" = (
 /obj/effect/floor_decal/rust,
 /obj/random/maintenance/clean,
@@ -14267,13 +14267,11 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/security/security_cell_hallway)
 "DT" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 4
-	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/structure/catwalk,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/floor,
 /area/engineering/thrusters)
 "DU" = (
@@ -15004,11 +15002,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/locker/upper/room2)
-"FN" = (
-/obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/structure/catwalk,
-/turf/simulated/floor,
-/area/engineering/thrusters)
 "FO" = (
 /obj/machinery/status_display,
 /turf/simulated/wall,
@@ -17360,6 +17353,9 @@
 /area/rnd/research_restroom{
 	name = "\improper Research Breakroom"
 	})
+"KO" = (
+/turf/simulated/floor/airless/ceiling,
+/area/engineering/thrusters)
 "KP" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
@@ -20136,18 +20132,8 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/deckthree/fore)
 "Qy" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5
-	},
+/obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/structure/catwalk,
-/obj/machinery/light_switch{
-	dir = 4;
-	on = 0;
-	pixel_x = -24
-	},
 /turf/simulated/floor,
 /area/engineering/thrusters)
 "Qz" = (
@@ -21748,15 +21734,6 @@
 /obj/machinery/door/airlock/multi_tile/metal/mait,
 /turf/simulated/floor/plating,
 /area/maintenance/security_starboard)
-"TX" = (
-/obj/machinery/alarm/angled/hidden{
-	pixel_y = 26
-	},
-/obj/machinery/pointdefense_control{
-	id_tag = "dauntless_pd"
-	},
-/turf/simulated/floor,
-/area/engineering/thrusters)
 "TZ" = (
 /obj/effect/floor_decal/corner/green{
 	dir = 6
@@ -22326,12 +22303,7 @@
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/excursion)
 "Vi" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/structure/catwalk,
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/simulated/floor,
+/turf/simulated/wall/r_wall,
 /area/engineering/thrusters)
 "Vj" = (
 /obj/effect/floor_decal/spline/plain{
@@ -23146,6 +23118,18 @@
 /turf/simulated/floor/reinforced,
 /area/rnd/mixing)
 "WU" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/structure/catwalk,
+/obj/machinery/light_switch{
+	dir = 4;
+	on = 0;
+	pixel_x = -24
+	},
 /turf/simulated/floor,
 /area/engineering/thrusters)
 "WV" = (
@@ -24354,6 +24338,9 @@
 	})
 "ZK" = (
 /obj/structure/catwalk,
+/obj/machinery/alarm/angled/hidden{
+	pixel_y = 26
+	},
 /turf/simulated/floor,
 /area/engineering/thrusters)
 "ZL" = (
@@ -52201,16 +52188,16 @@ oo
 oo
 oo
 oo
-tX
-tX
-tX
-tX
-tX
-tX
-tX
-tX
-tX
-tX
+oo
+Vi
+Vi
+Vi
+Vi
+Vi
+Vi
+Vi
+Vi
+Vi
 oo
 aa
 aa
@@ -52458,17 +52445,17 @@ oo
 oo
 oo
 oo
-tX
-FN
+oo
+Vi
 Qy
 WU
 ws
 AH
 Hj
 wu
-vU
+KO
 Ac
-vU
+KO
 aa
 aa
 aa
@@ -52715,7 +52702,7 @@ oo
 oo
 oo
 oo
-tX
+oo
 Vi
 DT
 tm
@@ -52723,9 +52710,9 @@ XY
 PE
 Qv
 wL
-vU
-vU
-vU
+KO
+KO
+KO
 aa
 aa
 aa
@@ -52972,16 +52959,16 @@ oo
 oo
 oo
 oo
-tX
-TX
+oo
+Vi
 ZK
-ZK
+BP
 Tj
 kE
 Iq
 wu
-vU
-vU
+KO
+KO
 Sv
 aa
 aa
@@ -53229,17 +53216,17 @@ oo
 oo
 oo
 oo
-tX
-tX
+oo
+Vi
 EA
-WU
+qf
 zg
 QN
 HN
 wL
-vU
-vU
-vU
+KO
+KO
+KO
 aa
 aa
 aa
@@ -53487,16 +53474,16 @@ oo
 oo
 oo
 oo
-tX
+Vi
 EA
-WU
+qf
 Or
 kx
 rN
 wL
-vU
-vU
-vU
+KO
+KO
+KO
 aa
 aa
 aa
@@ -53744,16 +53731,16 @@ oo
 oo
 oo
 oo
-tX
-tX
+Vi
+Vi
 ZZ
 po
 Vt
 US
 wu
-vU
+KO
 Ac
-vU
+KO
 aa
 aa
 aa
@@ -54002,15 +53989,15 @@ oo
 oo
 oo
 oo
-tX
+Vi
 ZZ
 AM
 Vt
 wi
 wL
-vU
-vU
-vU
+KO
+KO
+KO
 aa
 aa
 aa
@@ -54259,15 +54246,15 @@ oo
 oo
 oo
 oo
-tX
-tX
+Vi
+Vi
 Je
 WP
-tX
-tX
-tX
-tX
-vU
+Vi
+Vi
+Vi
+Vi
+KO
 aa
 aa
 aa
@@ -54516,15 +54503,15 @@ oo
 oo
 oo
 oo
-tX
+Vi
 qf
 SV
-WU
+qf
 lT
 wu
-vU
+KO
 Ac
-vU
+KO
 aa
 aa
 aa
@@ -54773,15 +54760,15 @@ oo
 oo
 oo
 oo
-tX
-WU
+Vi
+qf
 MF
-ZK
+BP
 Qv
 wL
-vU
-vU
-vU
+KO
+KO
+KO
 aa
 aa
 aa
@@ -55030,14 +55017,14 @@ oo
 oo
 oo
 oo
-tX
-WU
+Vi
+qf
 yS
 kE
 Iq
 wu
-vU
-vU
+KO
+KO
 Sv
 aa
 aa
@@ -55287,15 +55274,15 @@ oo
 oo
 oo
 oo
-tX
-WU
+Vi
+qf
 Ld
 QN
 HN
 wL
-vU
-vU
-vU
+KO
+KO
+KO
 aa
 aa
 aa
@@ -55544,15 +55531,15 @@ oo
 oo
 oo
 oo
-tX
-WU
+Vi
+qf
 Nk
 kx
 rN
 wL
-vU
-vU
-vU
+KO
+KO
+KO
 aa
 aa
 aa
@@ -55801,15 +55788,15 @@ oo
 oo
 oo
 oo
-tX
+Vi
 ZZ
 sG
 Vt
 US
 wu
-vU
+KO
 Ac
-vU
+KO
 aa
 aa
 aa
@@ -56058,15 +56045,15 @@ oo
 oo
 oo
 oo
-tX
+Vi
 ZZ
 EN
 Vt
 wi
 wL
-vU
-vU
-vU
+KO
+KO
+KO
 aa
 aa
 aa
@@ -56315,14 +56302,14 @@ oo
 oo
 oo
 oo
-tX
-WU
+Vi
+qf
 ut
 uU
 Ea
-tX
-tX
-tX
+Vi
+Vi
+Vi
 oo
 aa
 aa
@@ -56572,12 +56559,12 @@ oo
 oo
 oo
 oo
-tX
-WU
-ZK
+Vi
+qf
+BP
 UX
 Dv
-tX
+Vi
 oo
 oo
 oo
@@ -56834,7 +56821,7 @@ Fv
 Fv
 Fv
 LM
-tX
+Vi
 Va
 oo
 oo
@@ -57091,7 +57078,7 @@ Vz
 Nr
 Fv
 Vp
-tX
+Vi
 Va
 oo
 oo
@@ -57348,7 +57335,7 @@ Vz
 Vz
 Fv
 lc
-tX
+Vi
 Va
 oo
 oo
@@ -57604,8 +57591,8 @@ Ko
 Vz
 Vz
 Fv
-tX
-tX
+Vi
+Vi
 Va
 oo
 oo
