@@ -67,8 +67,8 @@
 	max_shells = 30
 	caliber = "7.92x33mm"
 	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 2, TECH_ILLEGAL = 6)
-	magazine_type = /obj/item/ammo_magazine/mtg
-	allowed_magazines = list(/obj/item/ammo_magazine/mtg)
+	magazine_type = /obj/item/ammo_magazine/m792
+	allowed_magazines = list(/obj/item/ammo_magazine/m792)
 	load_method = MAGAZINE
 
 /obj/item/weapon/gun/projectile/automatic/stg/update_icon(var/ignore_inhands)
