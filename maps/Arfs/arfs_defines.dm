@@ -79,7 +79,7 @@
 	use_overmap = 1
 	overmap_size = 35
 	overmap_z = Z_LEVEL_CENTCOM_ARFS
-	overmap_event_areas = 365
+	overmap_event_areas = 75
 	
 	lateload_z_levels = list(
 		list("V3b Asteroid Field"),
