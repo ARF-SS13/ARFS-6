@@ -218,11 +218,11 @@
 	cost = 30
 	allow_duplicates = FALSE
 
-/datum/map_template/debrisfield/tinycarrier
+/*/datum/map_template/debrisfield/tinycarrier // ARFS EDIT Disabled tinycarrier spawning in due to runtime errors
 	name = "Disabled Tiny Carrier"
 	mappath = 'tinycarrier.dmm'
 	cost = 30
-	allow_duplicates = FALSE
+	allow_duplicates = FALSE*/
 
 /datum/map_template/debrisfield/alien_massive_derelict
 	name = "Alien Derelict"
