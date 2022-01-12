@@ -8,6 +8,18 @@
 #define Z_LEVEL_OFFMAP1						20
 #define Z_LEVEL_GATEWAY						21
 #define Z_LEVEL_OM_ADVENTURE				22
+#define Z_LEVEL_CENTCOM						23
+
+
+
+/datum/skybox_settings/stellar_delight
+	icon_state = "space5"
+	use_stars = FALSE
+
+/datum/planet/virgo3b
+	expected_z_levels = list(Z_LEVEL_CENTCOM)
+/datum/planet/virgo4
+	expected_z_levels = list(Z_LEVEL_BEACH)
 
 #include "../submaps/space_rocks/space_rocks.dm"
 /datum/map_template/common_lateload/space_rocks

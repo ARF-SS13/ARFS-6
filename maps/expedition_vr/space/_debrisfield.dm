@@ -142,7 +142,6 @@
 
 /obj/effect/shuttle_landmark/shuttle_initializer/tinycarrier/Initialize()
 	var/obj/effect/overmap/visitable/O = get_overmap_sector(get_z(src)) //make this into general system some other time
-	LAZYINITLIST(O.initial_restricted_waypoints)
 	O.initial_restricted_waypoints["Debris Carrier"] = list(landmark_tag)
 	. = ..()
 
