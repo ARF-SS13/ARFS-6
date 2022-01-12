@@ -75,224 +75,222 @@
         /obj/item/weapon/reagent_containers/food/snacks/meat/chicken = 10)
 
 // Grown Food boxes
-/obj/item/weapon/storage/box/produce
-    chili
-        starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/chili = 10)
-        name = "chili"
+/obj/item/weapon/storage/box/produce/chili
+    starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/chili = 10)
+    name = "chili"
 
-    berries
-        starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/berries = 10)
-        name = "berries"
+/obj/item/weapon/storage/box/produce/berries
+    starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/berries = 10)
+    name = "berries"
 
-    tomato
-        starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/tomato = 10)
-        name = "tomato"
+/obj/item/weapon/storage/box/produce/tomato
+    starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/tomato = 10)
+    name = "tomato"
 
-    eggplant
-        starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/eggplant = 10)
-        name = "eggplant"
+/obj/item/weapon/storage/box/produce/eggplant
+    starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/eggplant = 10)
+    name = "eggplant"
 
-    apple
-        starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/apple = 10)
-        name = "apple"
+/obj/item/weapon/storage/box/produce/apple
+    starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/apple = 10)
+    name = "apple"
 
-    mushrooms
-        starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/mushrooms = 10)
-        name = "mushrooms"
+/obj/item/weapon/storage/box/produce/mushrooms
+    starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/mushrooms = 10)
+    name = "mushrooms"
 
-    plumphelmet
-        starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/plumphelmet = 10)
-        name = "plumphelmet"
+/obj/item/weapon/storage/box/produce/plumphelmet
+    starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/plumphelmet = 10)
+    name = "plumphelmet"
 
-    grapes
-        starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/grapes = 10)
-        name = "grapes"
+/obj/item/weapon/storage/box/produce/grapes
+    starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/grapes = 10)
+    name = "grapes"
 
-    lettuce
-        starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/lettuce = 10)
-        name = "lettuce"
+/obj/item/weapon/storage/box/produce/lettuce
+    starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/lettuce = 10)
+    name = "lettuce"
 
-    peanut
-        starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/peanut = 10)
-        name = "peanut"
+/obj/item/weapon/storage/box/produce/peanut
+    starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/peanut = 10)
+    name = "peanut"
 
-    cabbage
-        starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/cabbage = 10)
-        name = "cabbage"
+/obj/item/weapon/storage/box/produce/cabbage
+    starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/cabbage = 10)
+    name = "cabbage"
 
-    vanilla
-        starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/vanilla = 10)
-        name = "vanilla"
+/obj/item/weapon/storage/box/produce/vanilla
+    starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/vanilla = 10)
+    name = "vanilla"
 
-    banana
-        starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/banana = 10)
-        name = "banana"
+/obj/item/weapon/storage/box/produce/banana
+    starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/banana = 10)
+    name = "banana"
 
-    corn
-        starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/corn = 10)
-        name = "corn"
+/obj/item/weapon/storage/box/produce/corn
+    starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/corn = 10)
+    name = "corn"
 
-    potato
-        starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/potato = 10)
-        name = "potato"
+/obj/item/weapon/storage/box/produce/potato
+    starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/potato = 10)
+    name = "potato"
 
-    onion
-        starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/onion = 10)
-        name = "onion"
+/obj/item/weapon/storage/box/produce/onion
+    starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/onion = 10)
+    name = "onion"
 
-    soybean
-        starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/soybean = 10)
-        name = "soybean"
+/obj/item/weapon/storage/box/produce/soybean
+    starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/soybean = 10)
+    name = "soybean"
 
-    wheat
-        starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/wheat = 10)
-        name = "wheat"
+/obj/item/weapon/storage/box/produce/wheat
+    starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/wheat = 10)
+    name = "wheat"
 
-    rice
-        starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/rice = 10)
-        name = "rice"
+/obj/item/weapon/storage/box/produce/rice
+    starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/rice = 10)
+    name = "rice"
 
-    carrot
-        starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/carrot = 10)
-        name = "carrot"
+/obj/item/weapon/storage/box/produce/carrot
+    starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/carrot = 10)
+    name = "carrot"
 
-    sugarcane
-        starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/sugarcane = 10)
-        name = "sugarcane"
+/obj/item/weapon/storage/box/produce/sugarcane
+    starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/sugarcane = 10)
+    name = "sugarcane"
 
-    watermelon
-        starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/watermelon = 10)
-        name = "watermelon"
+/obj/item/weapon/storage/box/produce/watermelon
+    starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/watermelon = 10)
+    name = "watermelon"
 
-    pumpkin
-        starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/pumpkin = 10)
-        name = "pumpkin"
+/obj/item/weapon/storage/box/produce/pumpkin
+    starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/pumpkin = 10)
+    name = "pumpkin"
 
-    lime
-        starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/lime = 10)
-        name = "lime"
+/obj/item/weapon/storage/box/produce/lime
+    starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/lime = 10)
+    name = "lime"
 
-    lemon
-        starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/lemon = 10)
-        name = "lemon"
+/obj/item/weapon/storage/box/produce/lemon
+    starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/lemon = 10)
+    name = "lemon"
 
-    orange
-        starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/orange = 10)
-        name = "orange"
+/obj/item/weapon/storage/box/produce/orange
+    starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/orange = 10)
+    name = "orange"
 
-    cocoa
-        starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/cocoa = 10)
-        name = "cocoa"
+/obj/item/weapon/storage/box/produce/cocoa
+    starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/cocoa = 10)
+    name = "cocoa"
 
-    cherry
-        starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/cherry = 10)
-        name = "cherry"
+/obj/item/weapon/storage/box/produce/cherry
+    starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/cherry = 10)
+    name = "cherry"
 
-    poppies
-        starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/poppies = 10)
-        name = "poppies"
+/obj/item/weapon/storage/box/produce/poppies
+    starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/poppies = 10)
+    name = "poppies"
 
-    microm
-        starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/microm = 2)
-        plantamount = 2
-        name = "Micro Mushrooms"
+/obj/item/weapon/storage/box/produce/microm
+    starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/microm = 2)
+    plantamount = 2
+    name = "Micro Mushrooms"
 
-    megam
-        starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/megam = 2)
-        plantamount = 2
-        name = "Mega Mushrooms"
+/obj/item/weapon/storage/box/produce/megam
+    starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/grown/megam = 2)
+    plantamount = 2
+    name = "Mega Mushrooms"
 
 // Premade grown food list
-/obj/item/weapon/reagent_containers/food/snacks/grown
-    chili
-        plantname = "chili"
+/obj/item/weapon/reagent_containers/food/snacks/grown/chili
+    plantname = "chili"
 
-    berries
-        plantname = "berries"
+/obj/item/weapon/reagent_containers/food/snacks/grown/berries
+    plantname = "berries"
 
-    tomato
-        plantname = "tomato"
+/obj/item/weapon/reagent_containers/food/snacks/grown/tomato
+    plantname = "tomato"
 
-    eggplant
-        plantname = "eggplant"
+/obj/item/weapon/reagent_containers/food/snacks/grown/eggplant
+    plantname = "eggplant"
 
-    apple
-        plantname = "apple"
+/obj/item/weapon/reagent_containers/food/snacks/grown/apple
+    plantname = "apple"
 
-    mushrooms
-        plantname = "mushrooms"
+/obj/item/weapon/reagent_containers/food/snacks/grown/mushrooms
+    plantname = "mushrooms"
 
-    plumphelmet
-        plantname = "plumphelmet"
+/obj/item/weapon/reagent_containers/food/snacks/grown/plumphelmet
+    plantname = "plumphelmet"
 
-    grapes
-        plantname = "grapes"
+/obj/item/weapon/reagent_containers/food/snacks/grown/grapes
+    plantname = "grapes"
 
-    lettuce
-        plantname = "lettuce"
+/obj/item/weapon/reagent_containers/food/snacks/grown/lettuce
+    plantname = "lettuce"
 
-    peanut
-        plantname = "peanut"
+/obj/item/weapon/reagent_containers/food/snacks/grown/peanut
+    plantname = "peanut"
 
-    cabbage
-        plantname = "cabbage"
+/obj/item/weapon/reagent_containers/food/snacks/grown/cabbage
+    plantname = "cabbage"
 
-    vanilla
-        plantname = "vanilla"
+/obj/item/weapon/reagent_containers/food/snacks/grown/vanilla
+    plantname = "vanilla"
 
-    banana
-        plantname = "banana"
+/obj/item/weapon/reagent_containers/food/snacks/grown/banana
+    plantname = "banana"
 
-    corn
-        plantname = "corn"
+/obj/item/weapon/reagent_containers/food/snacks/grown/corn
+    plantname = "corn"
 
-    potato
-        plantname = "potato"
+/obj/item/weapon/reagent_containers/food/snacks/grown/potato
+    plantname = "potato"
 
-    onion
-        plantname = "onion"
+/obj/item/weapon/reagent_containers/food/snacks/grown/onion
+    plantname = "onion"
 
-    soybean
-        plantname = "soybean"
+/obj/item/weapon/reagent_containers/food/snacks/grown/soybean
+    plantname = "soybean"
 
-    wheat
-        plantname = "wheat"
+/obj/item/weapon/reagent_containers/food/snacks/grown/wheat
+    plantname = "wheat"
 
-    rice
-        plantname = "rice"
+/obj/item/weapon/reagent_containers/food/snacks/grown/rice
+    plantname = "rice"
 
-    carrot
-        plantname = "carrot"
+/obj/item/weapon/reagent_containers/food/snacks/grown/carrot
+    plantname = "carrot"
 
-    sugarcane
-        plantname = "sugarcane"
+/obj/item/weapon/reagent_containers/food/snacks/grown/sugarcane
+    plantname = "sugarcane"
 
-    watermelon
-        plantname = "watermelon"
+/obj/item/weapon/reagent_containers/food/snacks/grown/watermelon
+    plantname = "watermelon"
 
-    pumpkin
-        plantname = "pumpkin"
+/obj/item/weapon/reagent_containers/food/snacks/grown/pumpkin
+    plantname = "pumpkin"
 
-    lime
-        plantname = "lime"
+/obj/item/weapon/reagent_containers/food/snacks/grown/lime
+    plantname = "lime"
 
-    lemon
-        plantname = "lemon"
+/obj/item/weapon/reagent_containers/food/snacks/grown/lemon
+    plantname = "lemon"
 
-    orange
-        plantname = "orange"
+/obj/item/weapon/reagent_containers/food/snacks/grown/orange
+    plantname = "orange"
 
-    cocoa
-        plantname = "cocoa"
+/obj/item/weapon/reagent_containers/food/snacks/grown/cocoa
+    plantname = "cocoa"
 
-    cherry
-        plantname = "cherry"
+/obj/item/weapon/reagent_containers/food/snacks/grown/cherry
+    plantname = "cherry"
 
-    poppies
-        plantname = "poppies"
+/obj/item/weapon/reagent_containers/food/snacks/grown/poppies
+    plantname = "poppies"
 
-    microm
-        plantname = "microm"
+/obj/item/weapon/reagent_containers/food/snacks/grown/microm
+    plantname = "microm"
 
-    megam
-        plantname = "megam"
+/obj/item/weapon/reagent_containers/food/snacks/grown/megam
+    plantname = "megam"

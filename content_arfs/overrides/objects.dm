@@ -53,7 +53,7 @@
 		return
 
 	var/newturf = get_turf(video_source)
-	if(!get_z(newturf) in using_map.get_map_levels(get_z(src), TRUE))
+	if(!(get_z(newturf) in using_map.get_map_levels(get_z(src), TRUE)))
 		show_static()
 		return
 
@@ -78,7 +78,7 @@
 	// We get a new turf in case they've moved in the last half decisecond (it's BYOND, it might happen)
 	last_camera_turf = get_turf(video_source)
 
-	if(!get_z(last_camera_turf) in using_map.get_map_levels(get_z(src), TRUE))
+	if(!(get_z(last_camera_turf) in using_map.get_map_levels(get_z(src), TRUE)))
 		show_static()
 		return
 

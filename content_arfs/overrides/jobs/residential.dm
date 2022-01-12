@@ -1,4 +1,4 @@
-datum/job/residential
+/datum/job/residential
 	title = "Resident"
 	flag = RESIDENTIAL
 	departments = list(DEPARTMENT_CIVILIAN)
@@ -14,10 +14,10 @@ datum/job/residential
 	outfit_type = /decl/hierarchy/outfit/job/resident
 	job_description = "A person living on the Residential Station Serenity."
 	alt_titles = list(
-    	"Tourist",
-    	"Businessman",
-    	"Trader",
-    	"Assistant",
+		"Tourist",
+		"Businessman",
+		"Trader",
+		"Assistant",
 		"Entertainer",
 		"Lifeguard",
 		"Waiter",
