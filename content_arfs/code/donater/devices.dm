@@ -159,28 +159,28 @@
 	wear = 0
 	illegal = TRUE
 
-	activate()
-		if((. = ..()))
-			var/new_size = input("Put the desired size", "Set Size", 300) as num
+/datum/nifsoft/sizechange/andy/activate()
+	if((. = ..()))
+		var/new_size = input("Put the desired size", "Set Size", 300) as num
 
-			if (new_size < 1)
-				to_chat(nif.human,"<span class='notice'>The safety features of the NIF Program prevent you from choosing this size.</span>")
-				return
-			else
-				nif.human.resize(new_size/100, TRUE, TRUE, TRUE)
-				to_chat(nif.human,"<span class='notice'>You set the size to [new_size]%</span>")
+		if (new_size < 1)
+			to_chat(nif.human,"<span class='notice'>The safety features of the NIF Program prevent you from choosing this size.</span>")
+			return
+		else
+			nif.human.resize(new_size/100, TRUE, TRUE, TRUE)
+			to_chat(nif.human,"<span class='notice'>You set the size to [new_size]%</span>")
 
-			nif.human.visible_message("<span class='warning'>Swirling grey mist envelops [nif.human] as they change size!</span>","<span class='notice'>Swirling streams of nanites wrap around you as you change size!</span>")
+		nif.human.visible_message("<span class='warning'>Swirling grey mist envelops [nif.human] as they change size!</span>","<span class='notice'>Swirling streams of nanites wrap around you as you change size!</span>")
 
-			spawn(0)
-				deactivate()
+		spawn(0)
+			deactivate()
 
-	deactivate()
-		if((. = ..()))
-			return TRUE
+/datum/nifsoft/sizechange/andy/deactivate(force = FALSE)
+	if((. = ..()))
+		return TRUE
 
-	stat_text()
-		return "Change Size"
+/datum/nifsoft/sizechange/andy/stat_text()
+	return "Change Size"
 
 /obj/item/weapon/disk/nifsoft/sizechange/andy
 	name = "NIFSoft Uploader - Extreme Mass Alteration"

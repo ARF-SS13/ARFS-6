@@ -1,6 +1,6 @@
 //Dabbing on ckey restricted snowflake accessories
 //EARS
-datum/sprite_accessory/ears/molenar_kitsune
+/datum/sprite_accessory/ears/molenar_kitsune
 	name = "quintail kitsune ears (Molenar)"
 	desc = ""
 	icon_state = "molenar-kitsune"

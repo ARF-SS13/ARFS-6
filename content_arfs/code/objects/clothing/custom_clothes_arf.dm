@@ -14,26 +14,26 @@
 
 	var/unbuttoned = 0
 
-	verb/toggle()
-		set name = "Toggle coat buttons"
-		set category = "Object"
-		set src in usr
+/obj/item/clothing/suit/storage/labcoat/fluff/eioni_1/verb/toggle()
+	set name = "Toggle coat buttons"
+	set category = "Object"
+	set src in usr
 
-		if(!usr.canmove || usr.stat || usr.restrained())
-			return 0
+	if(!usr.canmove || usr.stat || usr.restrained())
+		return 0
 
-		switch(unbuttoned)
-			if(0)
-				icon_state = "[initial(icon_state)]_open"
-				item_state = "[initial(item_state)]_open"
-				unbuttoned = 1
-				usr << "You unbutton the coat."
-			if(1)
-				icon_state = "[initial(icon_state)]"
-				item_state = "[initial(item_state)]"
-				unbuttoned = 0
-				usr << "You button up the coat."
-		usr.update_inv_wear_suit()
+	switch(unbuttoned)
+		if(0)
+			icon_state = "[initial(icon_state)]_open"
+			item_state = "[initial(item_state)]_open"
+			unbuttoned = 1
+			usr << "You unbutton the coat."
+		if(1)
+			icon_state = "[initial(icon_state)]"
+			item_state = "[initial(item_state)]"
+			unbuttoned = 0
+			usr << "You button up the coat."
+	usr.update_inv_wear_suit()
 
 
 /obj/item/clothing/under/fluff/eioni_2
@@ -54,26 +54,26 @@
 	/////////////////////////////TODO//////////////////////
 	var/unbuttoned = 0
 
-	verb/toggle()
-		set name = "Toggle coat buttons"
-		set category = "Object"
-		set src in usr
+/obj/item/clothing/suit/storage/hoodie/fluff/redax_1/verb/toggle()
+	set name = "Toggle coat buttons"
+	set category = "Object"
+	set src in usr
 
-		if(!usr.canmove || usr.stat || usr.restrained())
-			return 0
+	if(!usr.canmove || usr.stat || usr.restrained())
+		return 0
 
-		switch(unbuttoned)
-			if(0)
-				icon_state = "[initial(icon_state)]_open"
-				item_state = "[initial(item_state)]_open"
-				unbuttoned = 1
-				usr << "You unbutton the coat."
-			if(1)
-				icon_state = "[initial(icon_state)]"
-				item_state = "[initial(item_state)]"
-				unbuttoned = 0
-				usr << "You button up the coat."
-		usr.update_inv_wear_suit()
+	switch(unbuttoned)
+		if(0)
+			icon_state = "[initial(icon_state)]_open"
+			item_state = "[initial(item_state)]_open"
+			unbuttoned = 1
+			usr << "You unbutton the coat."
+		if(1)
+			icon_state = "[initial(icon_state)]"
+			item_state = "[initial(item_state)]"
+			unbuttoned = 0
+			usr << "You button up the coat."
+	usr.update_inv_wear_suit()
 
 /obj/item/clothing/under/fluff/redax_2
 	name = "Alarming outfit"
@@ -175,26 +175,26 @@
 
 	var/unbuttoned = 0
 
-	verb/toggle()
-		set name = "Toggle coat buttons"
-		set category = "Object"
-		set src in usr
+/obj/item/clothing/suit/storage/labcoat/fluff/zeke_vincir_3/verb/toggle()
+	set name = "Toggle coat buttons"
+	set category = "Object"
+	set src in usr
 
-		if(!usr.canmove || usr.stat || usr.restrained())
-			return 0
+	if(!usr.canmove || usr.stat || usr.restrained())
+		return 0
 
-		switch(unbuttoned)
-			if(0)
-				icon_state = "[initial(icon_state)]_open"
-				item_state = "[initial(item_state)]_open"
-				unbuttoned = 1
-				usr << "You unbutton the coat."
-			if(1)
-				icon_state = "[initial(icon_state)]"
-				item_state = "[initial(item_state)]"
-				unbuttoned = 0
-				usr << "You button up the coat."
-		usr.update_inv_wear_suit()
+	switch(unbuttoned)
+		if(0)
+			icon_state = "[initial(icon_state)]_open"
+			item_state = "[initial(item_state)]_open"
+			unbuttoned = 1
+			usr << "You unbutton the coat."
+		if(1)
+			icon_state = "[initial(icon_state)]"
+			item_state = "[initial(item_state)]"
+			unbuttoned = 0
+			usr << "You button up the coat."
+	usr.update_inv_wear_suit()
 
 /obj/item/clothing/mask/fluff/lucerna_1 //Doesn't work for some reason
 	name =	"Mysterious mask"
@@ -856,26 +856,26 @@
 	body_parts_covered = UPPER_TORSO
 	var/hoodup = 1
 
-	verb/toggle()
-		set name = "Toggle Hood"
-		set category = "Object"
-		set src in usr
+/obj/item/clothing/suit/storage/fluff/ivy/verb/toggle()
+	set name = "Toggle Hood"
+	set category = "Object"
+	set src in usr
 
-		if(!usr.canmove || usr.stat || usr.restrained())
-			return 0
+	if(!usr.canmove || usr.stat || usr.restrained())
+		return 0
 
-		switch(hoodup)
-			if(0)
-				icon_state = "[initial(icon_state)]"
-				item_state = "[initial(item_state)]"
-				hoodup = 1
-				usr << "You take off the hood."
-			if(1)
-				icon_state = "[initial(icon_state)]_up"
-				item_state = "[initial(item_state)]_up"
-				hoodup= 0
-				usr << "You put on the hood."
-		usr.update_inv_wear_suit()
+	switch(hoodup)
+		if(0)
+			icon_state = "[initial(icon_state)]"
+			item_state = "[initial(item_state)]"
+			hoodup = 1
+			usr << "You take off the hood."
+		if(1)
+			icon_state = "[initial(icon_state)]_up"
+			item_state = "[initial(item_state)]_up"
+			hoodup= 0
+			usr << "You put on the hood."
+	usr.update_inv_wear_suit()
 
 //Kita
 
