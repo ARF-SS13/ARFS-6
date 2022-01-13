@@ -1,8 +1,8 @@
-#define Z_LEVEL_SPACE_ROCKS					13
-#define Z_LEVEL_BEACH						14
-#define Z_LEVEL_BEACH_CAVE					15
-#define Z_LEVEL_AEROSTAT					16
-#define Z_LEVEL_AEROSTAT_SURFACE			17
+#define Z_LEVEL_BEACH						13
+#define Z_LEVEL_BEACH_CAVE					14
+#define Z_LEVEL_AEROSTAT					15
+#define Z_LEVEL_AEROSTAT_SURFACE			16
+#define Z_LEVEL_SPACE_ROCKS					17
 #define Z_LEVEL_DEBRISFIELD					18
 #define Z_LEVEL_FUELDEPOT					19
 #define Z_LEVEL_OFFMAP1						20
