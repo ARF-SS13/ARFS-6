@@ -273,8 +273,8 @@ var/datum/planet/virgo3b/planet_virgo3b = null
 
 /datum/weather/virgo3b/rain/process_effects()
 	..()
-	for(var/mob/living/L as anything in living_mob_list)
-		if(L && L.z && L.z in holder.our_planet.expected_z_levels)
+	for(var/mob/living/L in living_mob_list)
+		if(L.z in holder.our_planet.expected_z_levels)
 			var/turf/T = get_turf(L)
 			if(!T.is_outdoors())
 				continue // They're indoors, so no need to rain on them.
