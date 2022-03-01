@@ -334,7 +334,7 @@
 /datum/gear/fluff/res_key_rm14
 	path = /obj/item/weapon/card/id/residential/rm14
 	display_name = "RM14, level three keys"
-	ckeywhitelist = list("thingpony", "brimcon")
+	ckeywhitelist = list("thingpony", "brimcon", "truedark", "nayriin")
 	character_name = list("Nayelli Webb", "Zeke Webb", "Scryden Sako")
 
 /datum/gear/fluff/res_key_rm15
@@ -435,6 +435,9 @@
 	name = "S8 residential key"
 	access = list(8208)
 
+/obj/item/weapon/card/id/residential/s9
+	name = "S9 residential key"
+	access = list(8208)
 
 //FLUFF SPAWNS
 
@@ -465,6 +468,13 @@
 	description = "residential"
 	ckeywhitelist = list("cebutris", "technicalmagi", "fludd12", "thingpony")
 	character_name = list("Kaibus Wordsmith", "Nia Wordsmith", "Naomi Reids", "Tye Riggle")
+
+/datum/gear/fluff/res_key_s9
+	path = /obj/item/weapon/card/id/residential/s9
+	display_name = "S9 keys"
+	description = "residential"
+	ckeywhitelist = list("thingpony")
+	character_name = list("Haven Faye")
 
 /obj/item/weapon/card/id/residential/rb1
 	name = "Residential Level Four - Room 1 Residential Key"
