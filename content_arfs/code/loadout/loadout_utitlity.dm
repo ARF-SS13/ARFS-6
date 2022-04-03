@@ -39,3 +39,9 @@
 	display_name = "Podzu"
 	path = /obj/item/device/walkpod
 	cost = 1
+
+/datum/gear/utility/vox
+	display_name = "Phoron Tank"
+	path = /obj/item/weapon/tank/vox
+	sort_category = "Utility"
+	whitelisted = "Vox"
