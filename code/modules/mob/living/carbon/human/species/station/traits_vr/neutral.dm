@@ -251,7 +251,7 @@
 	desc = "This trait drastically reduces the effects of allergen reactions. If you don't have any allergens set, it does nothing. It does not apply to special reactions (such as unathi drowsiness from sugars)."
 	cost = 0
 	custom_only = FALSE
-	var_changes = list("allergen_damage_severity" = 2.5, "allergen_disable_severity" = 3)
+	var_changes = list("allergen_damage_severity" = 2, "allergen_disable_severity" = 3)
 	excludes = list(/datum/trait/neutral/allergen_increased_effect)
 
 /datum/trait/neutral/allergen_increased_effect
@@ -259,7 +259,7 @@
 	desc = "This trait drastically increases the effects of allergen reactions, enough that even a small dose can be lethal. If you don't have any allergens set, it does nothing. It does not apply to special reactions (such as unathi drowsiness from sugars)."
 	cost = 0
 	custom_only = FALSE
-	var_changes = list("allergen_damage_severity" = 10, "allergen_disable_severity" = 6)
+	var_changes = list("allergen_damage_severity" = 8, "allergen_disable_severity" = 6)
 	excludes = list(/datum/trait/neutral/allergen_reduced_effect)
 
 // Spicy Food Traits, from negative to positive.
@@ -480,3 +480,33 @@
 /datum/trait/neutral/thinner/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
 	H.update_transform()
+
+/datum/trait/neutral/dominate_predator
+	name = "Dominate Predator"
+	desc = "Allows you to attempt to take control of a predator while inside of their belly."
+	cost = 0
+	custom_only = FALSE
+
+/datum/trait/neutral/dominate_predator/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..(S,H)
+	H.verbs |= /mob/proc/dominate_predator
+
+/datum/trait/neutral/dominate_prey
+	name = "Dominate Prey"
+	desc = "Connect to and dominate the brain of your prey."
+	cost = 0
+	custom_only = FALSE
+
+/datum/trait/neutral/dominate_prey/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..(S,H)
+	H.verbs |= /mob/living/proc/dominate_prey
+
+/datum/trait/neutral/submit_to_prey
+	name = "Submit To Prey"
+	desc = "Allow prey's mind to control your own body."
+	cost = 0
+	custom_only = FALSE
+
+/datum/trait/neutral/submit_to_prey/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..(S,H)
+	H.verbs |= /mob/living/proc/lend_prey_control

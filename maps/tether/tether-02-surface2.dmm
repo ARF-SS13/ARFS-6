@@ -1182,7 +1182,7 @@
 /area/tether/surfacebase/medical/patient_b)
 "abH" = (
 /obj/machinery/camera/network/medbay,
-/turf/simulated/open,
+/turf/simulated/floor/plating,
 /area/tether/surfacebase/medical/centralstairwell)
 "abI" = (
 /obj/structure/catwalk,
@@ -4399,7 +4399,7 @@
 	dir = 1;
 	pixel_y = -25
 	},
-/turf/simulated/open,
+/turf/simulated/floor/plating,
 /area/tether/surfacebase/medical/centralstairwell)
 "agQ" = (
 /obj/structure/disposalpipe/segment{
@@ -4826,19 +4826,19 @@
 /area/tether/surfacebase/security/armory)
 "ahA" = (
 /obj/structure/table/steel,
-/obj/item/weapon/storage/box/shotgunshells{
-	pixel_x = -2;
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/item/ammo_magazine/ammo_box/b12g/pellet{
+	pixel_x = 3;
+	pixel_y = -3
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/pellet{
+	pixel_x = -1;
+	pixel_y = 2
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/pellet{
+	pixel_x = -5;
 	pixel_y = 7
 	},
-/obj/item/weapon/storage/box/shotgunshells{
-	pixel_x = 2;
-	pixel_y = 3
-	},
-/obj/item/weapon/storage/box/shotgunshells{
-	pixel_x = 6;
-	pixel_y = -1
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/security/armory)
 "ahB" = (
@@ -6064,19 +6064,20 @@
 /area/tether/surfacebase/security/outfitting/storage)
 "ajs" = (
 /obj/structure/table/steel,
-/obj/item/weapon/storage/box/stunshells{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/weapon/storage/box/flashshells{
-	pixel_x = 1
-	},
-/obj/item/weapon/storage/box/beanbags{
-	pixel_x = 4;
-	pixel_y = -5
-	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/beanbag{
+	pixel_x = 3;
+	pixel_y = -3
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/flash{
+	pixel_x = -1;
+	pixel_y = 2
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/stunshell{
+	pixel_x = -5;
+	pixel_y = 7
 	},
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/security/armory)
@@ -11663,11 +11664,7 @@
 /area/tether/surfacebase/security/middlehall)
 "asE" = (
 /obj/item/weapon/book/manual/security_space_law,
-/obj/item/weapon/gun/projectile/shotgun/pump/combat{
-	ammo_type = /obj/item/ammo_casing/a12g/beanbag;
-	desc = "Built for close quarters combat, the Hesphaistos Industries KS-40 is widely regarded as a weapon of choice for repelling boarders. This one has 'Property of the Warden' inscribed on the stock.";
-	name = "warden's shotgun"
-	},
+/obj/item/gunbox/warden,
 /obj/structure/closet/secure_closet/warden,
 /obj/machinery/light,
 /obj/effect/floor_decal/borderfloor{
@@ -12309,9 +12306,7 @@
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 6
 	},
-/obj/machinery/smartfridge{
-	dir = 1
-	},
+/obj/machinery/smartfridge/produce,
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/public_garden_two)
 "atJ" = (
@@ -12429,16 +12424,13 @@
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/middlehall)
 "atQ" = (
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/public_garden_two)
+"atR" = (
 /obj/structure/railing{
 	dir = 8
 	},
-/turf/simulated/open,
-/area/tether/surfacebase/security/middlehall)
-"atR" = (
-/obj/structure/railing{
-	dir = 4
-	},
-/turf/simulated/open,
+/turf/simulated/floor/plating,
 /area/tether/surfacebase/security/middlehall)
 "atS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -23665,9 +23657,18 @@
 	},
 /turf/simulated/open,
 /area/rnd/staircase/secondfloor)
+"aPG" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/security/middlehall)
 "aPH" = (
 /turf/simulated/open,
 /area/rnd/staircase/secondfloor)
+"aPI" = (
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/north_staires_two)
 "aPJ" = (
 /turf/simulated/wall,
 /area/rnd/breakroom)
@@ -23715,6 +23716,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
+"aPQ" = (
+/turf/simulated/floor/plating,
+/area/rnd/staircase/secondfloor)
+"aPR" = (
+/turf/simulated/floor/plating,
+/area/engineering/atmos)
 "aPS" = (
 /obj/machinery/alarm{
 	dir = 8;
@@ -24012,6 +24019,18 @@
 	},
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
+"aQC" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/engineering/atmos)
+"aQD" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/engineering/atmos)
 "aQE" = (
 /obj/structure/bed/chair{
 	dir = 4
@@ -24970,6 +24989,9 @@
 /obj/random/maintenance/clean,
 /turf/simulated/floor,
 /area/maintenance/lower/south)
+"aSr" = (
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/east_stairs_two)
 "aSs" = (
 /obj/structure/toilet,
 /obj/machinery/light/small{
@@ -33358,6 +33380,13 @@
 	},
 /turf/simulated/floor/wood,
 /area/tether/surfacebase/reading_room)
+"jSc" = (
+/obj/move_trader_landmark{
+	dir = 8;
+	trader_type = /obj/trader/general
+	},
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/southhall)
 "jUQ" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 8
@@ -33904,6 +33933,13 @@
 /obj/item/weapon/grenade/anti_photon,
 /turf/simulated/floor/plating,
 /area/tether/surfacebase/funny/hideyhole)
+"opK" = (
+/obj/move_trader_landmark{
+	dir = 4;
+	trader_type = /obj/trader/general
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/lower/rnd)
 "oXH" = (
 /obj/structure/cable/cyan{
 	d1 = 1;
@@ -38187,7 +38223,7 @@ adt
 aac
 arl
 asq
-aab
+arl
 aab
 avh
 aac
@@ -40456,7 +40492,7 @@ amd
 ang
 aog
 apr
-aqx
+atQ
 aqx
 asu
 atG
@@ -42731,7 +42767,7 @@ apE
 ahn
 arB
 arB
-atQ
+atR
 aus
 avo
 avT
@@ -42768,7 +42804,7 @@ aNv
 aOk
 aOY
 aOY
-aPH
+aPQ
 aPH
 aRM
 atA
@@ -42873,7 +42909,7 @@ apF
 ahn
 arB
 arB
-atR
+aPG
 aut
 avp
 avT
@@ -42910,7 +42946,7 @@ aIP
 aOl
 aPa
 aqt
-aPH
+aPQ
 aPH
 aRM
 atz
@@ -44735,7 +44771,7 @@ avD
 aBJ
 aCw
 avD
-aEc
+opK
 aED
 aFi
 aFT
@@ -45157,7 +45193,7 @@ ayW
 azz
 azz
 azz
-azz
+aPI
 aBM
 aCz
 ayW
@@ -45191,7 +45227,7 @@ aUv
 aRZ
 aVW
 aWP
-aXB
+aPR
 aXB
 aYK
 aXB
@@ -45299,7 +45335,7 @@ ayW
 azz
 azz
 aAD
-azz
+aPI
 aBN
 aCA
 ayW
@@ -45333,7 +45369,7 @@ aUw
 aRZ
 aVW
 aWP
-aXC
+aQC
 aXC
 aXB
 aXB
@@ -45507,7 +45543,7 @@ baz
 bjs
 bjs
 bjs
-bjs
+baU
 baU
 baW
 baW
@@ -45649,7 +45685,7 @@ baz
 bjs
 bjs
 bjs
-bjs
+baU
 baU
 baW
 baW
@@ -47037,7 +47073,7 @@ aUG
 aSd
 aWg
 aXb
-aXJ
+aQD
 aXJ
 aXB
 aXB
@@ -47179,7 +47215,7 @@ awe
 aSd
 aWg
 aXb
-aXB
+aPR
 aXB
 aXB
 aXB
@@ -48173,7 +48209,7 @@ adt
 aNo
 aWm
 aWm
-aWm
+aSr
 aYv
 aYV
 aZs
@@ -48315,7 +48351,7 @@ aNo
 aNo
 aWm
 aWm
-aWm
+aSr
 aYw
 aYW
 aZt
@@ -51190,7 +51226,7 @@ bkq
 bkG
 bgU
 blk
-blG
+jSc
 blT
 bmb
 abn
