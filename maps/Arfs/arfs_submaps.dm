@@ -2,15 +2,14 @@
 #define Z_LEVEL_OFFMAP1						13
 #define Z_LEVEL_BEACH						14
 #define Z_LEVEL_BEACH_CAVE					15
-#define Z_LEVEL_AEROSTAT					16
-#define Z_LEVEL_AEROSTAT_SURFACE			17
-#define Z_LEVEL_DEBRISFIELD					18
-#define Z_LEVEL_FUELDEPOT					19
-#define Z_LEVEL_SPACE_ROCKS					20
-#define Z_LEVEL_GATEWAY						21
-#define Z_LEVEL_OM_ADVENTURE				22
-#define Z_LEVEL_CENTCOM						23
-
+#define Z_LEVEL_DEBRISFIELD					16
+#define Z_LEVEL_FUELDEPOT					17
+#define Z_LEVEL_SPACE_ROCKS					18
+#define Z_LEVEL_GATEWAY						19
+#define Z_LEVEL_OM_ADVENTURE				20
+#define Z_LEVEL_CENTCOM						21
+#define Z_LEVEL_AEROSTAT					22
+#define Z_LEVEL_AEROSTAT_SURFACE			23
 
 
 /datum/skybox_settings/stellar_delight
