@@ -41,6 +41,9 @@
 	name = "detective wardrobe"
 	closet_appearance = /decl/closet_appearance/cabinet
 
+	open_sound = 'sound/effects/wooden_closet_open.ogg'
+	close_sound = 'sound/effects/wooden_closet_close.ogg'
+
 	starts_with = list(
 		/obj/item/clothing/head/det = 2,
 		/obj/item/clothing/head/det/grey = 2,
@@ -446,6 +449,9 @@
 	name = "site manager's wardrobe"
 	closet_appearance = /decl/closet_appearance/cabinet
 
+	open_sound = 'sound/effects/wooden_closet_open.ogg'
+	close_sound = 'sound/effects/wooden_closet_close.ogg'
+
 	starts_with = list(
 		/obj/item/weapon/storage/backpack/captain,
 		/obj/item/clothing/suit/captunic,
@@ -453,6 +459,7 @@
 		/obj/item/clothing/head/caphat/cap,
 		/obj/item/clothing/head/caphat/beret,
 		/obj/item/clothing/under/rank/captain,
+		/obj/item/clothing/under/dress/dress_cap/femformal,
 		/obj/item/clothing/shoes/brown,
 		/obj/item/clothing/gloves/captain,
 		/obj/item/clothing/under/dress/dress_cap,

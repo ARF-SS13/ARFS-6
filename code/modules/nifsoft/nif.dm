@@ -168,9 +168,10 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 		SC.brainmobs = list()
 	stat = NIF_PREINSTALL
 	vis_update()
-	H.verbs -= /mob/living/carbon/human/proc/set_nif_examine
+	if(H)
+		H.verbs -= /mob/living/carbon/human/proc/set_nif_examine
+		H.nif = null
 	qdel_null(menu)
-	H.nif = null
 	human = null
 	install_done = null
 	update_icon()
@@ -198,6 +199,9 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 	wear *= (rand(85,115) / 100) //Apparently rand() only takes integers.
 	durability -= wear
 
+	if(human)
+		persist_nif_data(human)
+
 	if(durability <= 0)
 		stat = NIF_TEMPFAIL
 		update_icon()
@@ -205,6 +209,13 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 		if(human)
 			notify("Danger! General system insta#^!($",TRUE)
 			to_chat(human,"<span class='danger'>Your NIF vision overlays disappear and your head suddenly seems very quiet...</span>")
+
+//Repair update/check proc
+/obj/item/device/nif/proc/repair(var/repair = 0)
+	durability = min(durability + repair, initial(durability))
+
+	if(human)
+		persist_nif_data(human)
 
 //Attackby proc, for maintenance
 /obj/item/device/nif/attackby(obj/item/weapon/W, mob/user as mob)
@@ -234,7 +245,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 			user.visible_message("[user] closes up \the [src].","<span class='notice'>You re-seal \the [src] for use once more.</span>")
 			playsound(src, 'sound/items/Screwdriver.ogg', 50, 1)
 			open = FALSE
-			durability = initial(durability)
+			repair(initial(durability))
 			stat = NIF_PREINSTALL
 			update_icon()
 
@@ -259,7 +270,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 /obj/item/device/nif/proc/handle_install()
 	if(human.stat || !human.mind) //No stuff while KO or not sleeved
 		return FALSE
-
+	persist_storable = FALSE		//VOREStation edit - I am not sure if polaris has nifs, but just in case.
 	//Firsties
 	if(!install_done)
 		if(human.mind.name == owner)

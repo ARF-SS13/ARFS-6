@@ -335,6 +335,8 @@
 	var/desc_with_canvas
 	var/persistence_id
 	var/loaded = FALSE
+	var/curator = "nobody! Report bug if you see this."
+	var/static/list/art_appreciators = list()
 
 //Presets for art gallery mapping, for paintings to be shared across stations
 /obj/structure/sign/painting/public
@@ -345,10 +347,11 @@
 
 /obj/structure/sign/painting/library_secure
 	name = "\improper Curated Painting Exhibit mounting"
-	desc = "For masterpieces hand-picked by the curator."
-	desc_with_canvas = "A masterpiece hand-picked by the curator, supposedly."
+	desc = "For masterpieces hand-picked by the librarian."
+	desc_with_canvas = "A masterpiece hand-picked by the librarian, supposedly."
 	persistence_id = "library"
 	req_one_access = list(access_library)
+	curator = "Librarian"
 
 /obj/structure/sign/painting/chapel_secure
 	name = "\improper Religious Painting Exhibit mounting"
@@ -356,13 +359,15 @@
 	desc_with_canvas = "A masterpiece hand-picked by the chaplain, supposedly."
 	persistence_id = "chapel"
 	req_one_access = list(access_chapel_office)
+	curator = "Chaplain"
 
 /obj/structure/sign/painting/library_private // keep your smut away from prying eyes, or non-librarians at least
 	name = "\improper Private Painting Exhibit mounting"
-	desc = "For art pieces deemed too subversive or too illegal to be shared outside of curators."
+	desc = "For art pieces deemed too subversive or too illegal to be shared outside of librarians."
 	desc_with_canvas = "A painting hung away from lesser minds."
 	persistence_id = "library_private"
 	req_one_access = list(access_library)
+	curator = "Librarian"
 
 /obj/structure/sign/painting/away_areas // for very hard-to-get-to areas
 	name = "\improper Remote Painting Exhibit mounting"
@@ -402,17 +407,18 @@
 	if(current_canvas)
 		current_canvas.tgui_interact(user)
 		. += "<span class='notice'>Use wirecutters to remove the painting.</span>"
-
+		. += "<span class='notice'>Paintings hung here are curated based on interest. The more often someone EXAMINEs the painting, the longer it will stay in rotation.</span>"
 		// Painting loaded and persistent frame, give a hint about removal safety
 		if(persistence_id)
 			if(loaded)
-				. += "<span class='notice'>Don't worry, the currently framed painting has already been entered into the archives and can be safely removed. It will still be used on future shifts.</span>"
+				. += "<span class='warning'>Don't worry, the currently framed painting has already been entered into the archives and can be safely removed. It will still be used on future shifts.</span>"
+				back_of_the_line(user)
 			else
 				. += "<span class='warning'>This painting has not been entered into the archives yet. Removing it will prevent that from happening.</span>"
 
 /obj/structure/sign/painting/proc/frame_canvas(mob/user,obj/item/canvas/new_canvas)
 	if(!allowed(user))
-		to_chat(user, "<span class='warning'>You're not comfortable framing this canvas in such a prestigious spot!</span>")
+		to_chat(user, "<span class='notice'>Access lock prevents you from putting a painting into this frame. Ask [curator] for help!</span>")
 		return
 	if(user.drop_from_inventory(new_canvas, src))
 		current_canvas = new_canvas
@@ -423,7 +429,7 @@
 
 /obj/structure/sign/painting/proc/unframe_canvas(mob/living/user)
 	if(!allowed(user))
-		to_chat(user, "<span class='warning'>You're not comfortable removing this prestigious canvas!</span>")
+		to_chat(user, "<span class='notice'>Access lock prevents you from removing paintings from this frame. Ask [curator] ((or admins)) for help!</span>")
 		return
 	if(current_canvas)
 		current_canvas.forceMove(drop_location())
@@ -549,6 +555,20 @@
 		"author" = current_canvas.author_name,
 		"ckey" = current_canvas.author_ckey
 	))
+
+/obj/structure/sign/painting/proc/back_of_the_line(mob/user)
+	if(user.ckey in art_appreciators)
+		return
+	if(!persistence_id || !current_canvas || current_canvas.no_save)
+		return
+	var/data = current_canvas.get_data_string()
+	var/md5 = md5(lowertext(data))
+	for(var/list/entry in SSpersistence.all_paintings)
+		if(entry["md5"] == md5 && entry["persistence_id"] == persistence_id)
+			SSpersistence.all_paintings.Remove(list(entry))
+			SSpersistence.all_paintings.Add(list(entry))
+			art_appreciators += user.ckey
+			to_chat(user, "<span class='notice'>Showing interest in this painting renews its position in the curator database.</span>")
 
 /obj/structure/sign/painting/vv_get_dropdown()
 	. = ..()

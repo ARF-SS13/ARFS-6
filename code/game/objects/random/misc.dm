@@ -734,7 +734,7 @@
 				/obj/item/toy/snappop,
 				/obj/item/toy/sword,
 				/obj/item/toy/balloon,
-				/obj/item/toy/crossbow,
+				/obj/item/weapon/gun/projectile/revolver/toy/crossbow,
 				/obj/item/toy/blink,
 				/obj/item/weapon/reagent_containers/spray/waterflower,
 				/obj/item/toy/eight_ball,
@@ -760,7 +760,7 @@
 /obj/random/mouseremains/item_to_spawn()
 	return pick(/obj/item/device/assembly/mousetrap,
 				/obj/item/device/assembly/mousetrap/armed,
-				/obj/effect/decal/cleanable/spiderling_remains,
+				/obj/effect/decal/cleanable/bug_remains,
 				/obj/effect/decal/cleanable/ash,
 				/obj/item/trash/cigbutt,
 				/obj/item/trash/cigbutt/cigarbutt,
@@ -848,7 +848,7 @@
 				/obj/item/weapon/reagent_containers/food/snacks/donut/plain,
 				/obj/item/weapon/reagent_containers/food/snacks/donut/plain/jelly,
 				/obj/item/weapon/reagent_containers/food/snacks/chocolatebar,
-				/obj/item/weapon/reagent_containers/food/snacks/cookiesnack)
+				/obj/item/weapon/reagent_containers/food/snacks/cookie)
 
 /obj/random/mre/dessert/vegan
 	name = "random vegan MRE dessert"
@@ -985,3 +985,40 @@
 		prob(6);/obj/item/device/flashlight/color/yellow,
 		prob(2);/obj/item/device/flashlight/maglight
 	)
+
+/obj/random/mug
+	name = "Random Mug"
+	desc = "This is a random coffee mug."
+	icon = 'icons/obj/drinks_mugs.dmi'
+	icon_state = "coffeecup_spawner"
+
+/obj/random/mug/item_to_spawn()
+	return pick(/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug,
+			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/sol,
+			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/fleet,
+			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/fivearrows,
+			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/psc,
+			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/alma,
+			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/almp,
+			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/nt,
+			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/metal/wulf,
+			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/gilthari,
+			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/zeng,
+			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/wt,
+			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/aether,
+			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/bishop,
+			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/oculum,
+			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/one,
+			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/puni,
+			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/heart,
+			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/pawn,
+			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/diona,
+			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/britcup,
+			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/flame,
+			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/blue,
+			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/black,
+			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/green,
+			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/green/dark,
+			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/rainbow,
+			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/metal,
+			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/talon)
