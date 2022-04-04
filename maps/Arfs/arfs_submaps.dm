@@ -1,23 +1,24 @@
 
-#define Z_LEVEL_OFFMAP1						13
-#define Z_LEVEL_BEACH						14
-#define Z_LEVEL_BEACH_CAVE					15
-#define Z_LEVEL_DEBRISFIELD					16
-#define Z_LEVEL_FUELDEPOT					17
-#define Z_LEVEL_SPACE_ROCKS					18
-#define Z_LEVEL_GATEWAY						19
-#define Z_LEVEL_OM_ADVENTURE				20
-#define Z_LEVEL_CENTCOM						21
-#define Z_LEVEL_AEROSTAT					22
-#define Z_LEVEL_AEROSTAT_SURFACE			23
+#define Z_LEVEL_BEACH						13
+#define Z_LEVEL_BEACH_CAVE					14
+#define Z_LEVEL_AEROSTAT					15
+#define Z_LEVEL_AEROSTAT_SURFACE			16
+#define Z_LEVEL_DEBRISFIELD					17
+#define Z_LEVEL_FUELDEPOT					18
+#define Z_LEVEL_OFFMAP1						19
+#define Z_LEVEL_GATEWAY						20
+#define Z_LEVEL_OM_ADVENTURE				21
+#define Z_LEVEL_SPACE_ROCKS					22
+//#define Z_LEVEL_CENTCOM						23
+
 
 
 /datum/skybox_settings/stellar_delight
 	icon_state = "space5"
 	use_stars = FALSE
 
-/datum/planet/virgo3b
-	expected_z_levels = list(Z_LEVEL_CENTCOM)
+// /datum/planet/virgo3b
+// 	expected_z_levels = list(Z_LEVEL_CENTCOM)
 /datum/planet/virgo4
 	expected_z_levels = list(Z_LEVEL_BEACH)
 
