@@ -9,40 +9,40 @@
 #include "../expedition_vr/space/fueldepot.dmm"
 #endif
 
-#include "../expedition_vr/beach/_beach.dm"
-/datum/map_template/common_lateload/away_beach
-	name = "Desert Planet - Z1 Beach"
-	desc = "The beach away mission."
-	mappath = 'maps/expedition_vr/beach/beach.dmm'
-	associated_map_datum = /datum/map_z_level/common_lateload/away_beach
+// #include "../expedition_vr/beach/_beach.dm"
+// /datum/map_template/common_lateload/away_beach
+// 	name = "Desert Planet - Z1 Beach"
+// 	desc = "The beach away mission."
+// 	mappath = 'maps/expedition_vr/beach/beach.dmm'
+// 	associated_map_datum = /datum/map_z_level/common_lateload/away_beach
 
-/datum/map_z_level/common_lateload/away_beach
-	name = "Away Mission - Desert Beach"
-	z = Z_LEVEL_BEACH
-	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+// /datum/map_z_level/common_lateload/away_beach
+// 	name = "Away Mission - Desert Beach"
+// 	z = Z_LEVEL_BEACH
+// 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 
-/datum/map_template/common_lateload/away_beach_cave
-	name = "Desert Planet - Z2 Cave"
-	desc = "The beach away mission's cave."
-	mappath = 'maps/expedition_vr/beach/cave.dmm'
-	associated_map_datum = /datum/map_z_level/common_lateload/away_beach_cave
+// /datum/map_template/common_lateload/away_beach_cave
+// 	name = "Desert Planet - Z2 Cave"
+// 	desc = "The beach away mission's cave."
+// 	mappath = 'maps/expedition_vr/beach/cave.dmm'
+// 	associated_map_datum = /datum/map_z_level/common_lateload/away_beach_cave
 
-/datum/map_template/common_lateload/away_beach_cave/on_map_loaded(z)
-	. = ..()
-	seed_submaps(list(Z_LEVEL_BEACH_CAVE), 120, /area/tether_away/cave/unexplored/normal, /datum/map_template/surface/mountains/normal)
-	//seed_submaps(list(Z_LEVEL_BEACH_CAVE), 70, /area/tether_away/cave/unexplored/normal, /datum/map_template/surface/mountains/deep)
+// /datum/map_template/common_lateload/away_beach_cave/on_map_loaded(z)
+// 	. = ..()
+// 	seed_submaps(list(Z_LEVEL_BEACH_CAVE), 120, /area/tether_away/cave/unexplored/normal, /datum/map_template/surface/mountains/normal)
+// 	//seed_submaps(list(Z_LEVEL_BEACH_CAVE), 70, /area/tether_away/cave/unexplored/normal, /datum/map_template/surface/mountains/deep)
 
-	// Now for the tunnels.
-	new /datum/random_map/automata/cave_system/no_cracks(null, 3, 3, Z_LEVEL_BEACH_CAVE, world.maxx - 4, world.maxy - 4)
-	new /datum/random_map/noise/ore/beachmine(null, 1, 1, Z_LEVEL_BEACH_CAVE, 64, 64)
+// 	// Now for the tunnels.
+// 	new /datum/random_map/automata/cave_system/no_cracks(null, 3, 3, Z_LEVEL_BEACH_CAVE, world.maxx - 4, world.maxy - 4)
+// 	new /datum/random_map/noise/ore/beachmine(null, 1, 1, Z_LEVEL_BEACH_CAVE, 64, 64)
 
-/datum/map_z_level/common_lateload/away_beach_cave
-	name = "Away Mission - Desert Cave"
-	z = Z_LEVEL_BEACH_CAVE
-	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+// /datum/map_z_level/common_lateload/away_beach_cave
+// 	name = "Away Mission - Desert Cave"
+// 	z = Z_LEVEL_BEACH_CAVE
+// 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 
-/obj/effect/step_trigger/zlevel_fall/beach
-	var/static/target_z
+// /obj/effect/step_trigger/zlevel_fall/beach
+// 	var/static/target_z
 
 
 #include "../expedition_vr/alienship/_alienship.dm"
