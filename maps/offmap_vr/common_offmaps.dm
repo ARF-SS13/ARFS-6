@@ -1,7 +1,7 @@
 /// Away Missions
 #if AWAY_MISSION_TEST
-#include "../expedition_vr/beach/beach.dmm"
-#include "../expedition_vr/beach/cave.dmm"
+//#include "../expedition_vr/beach/beach.dmm"
+//#include "../expedition_vr/beach/cave.dmm"
 #include "../expedition_vr/alienship/alienship.dmm"
 #include "../expedition_vr/aerostat/aerostat.dmm"
 #include "../expedition_vr/aerostat/surface.dmm"

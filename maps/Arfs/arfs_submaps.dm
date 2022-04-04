@@ -1,14 +1,14 @@
 
-#define Z_LEVEL_BEACH						13
-#define Z_LEVEL_BEACH_CAVE					14
-#define Z_LEVEL_AEROSTAT					15
-#define Z_LEVEL_AEROSTAT_SURFACE			16
-#define Z_LEVEL_DEBRISFIELD					17
-#define Z_LEVEL_FUELDEPOT					18
-#define Z_LEVEL_OFFMAP1						19
-#define Z_LEVEL_GATEWAY						20
-#define Z_LEVEL_OM_ADVENTURE				21
-#define Z_LEVEL_SPACE_ROCKS					22
+// #define Z_LEVEL_BEACH						13
+// #define Z_LEVEL_BEACH_CAVE					14
+#define Z_LEVEL_AEROSTAT					13
+#define Z_LEVEL_AEROSTAT_SURFACE			14
+#define Z_LEVEL_DEBRISFIELD					15
+#define Z_LEVEL_FUELDEPOT					16
+#define Z_LEVEL_OFFMAP1						17
+#define Z_LEVEL_GATEWAY						18
+#define Z_LEVEL_OM_ADVENTURE				19
+#define Z_LEVEL_SPACE_ROCKS					20
 //#define Z_LEVEL_CENTCOM						23
 
 
@@ -19,8 +19,8 @@
 
 // /datum/planet/virgo3b
 // 	expected_z_levels = list(Z_LEVEL_CENTCOM)
-/datum/planet/virgo4
-	expected_z_levels = list(Z_LEVEL_BEACH)
+// /datum/planet/virgo4
+// 	expected_z_levels = list(Z_LEVEL_BEACH)
 
 #include "../submaps/space_rocks/space_rocks.dm"
 /datum/map_template/common_lateload/space_rocks
