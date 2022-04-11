@@ -50,6 +50,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
+/obj/item/clothing/accessory/storage/bluespace,
 /turf/simulated/floor/carpet/blue,
 /area/residential/mansion_bed_3)
 "ah" = (
@@ -307,7 +308,7 @@
 /turf/simulated/floor/tiled/eris/cafe,
 /area/residential/mansion)
 "aL" = (
-/turf/simulated/wall/dungeon,
+/turf/simulated/wall/r_wall,
 /area/residential/mansion_bed_3)
 "aM" = (
 /mob/living/simple_mob/vore/leopardmander,
@@ -795,6 +796,10 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/mansion)
+"cd" = (
+/obj/structure/table/wooden_reinforced,
+/turf/simulated/floor/wood,
+/area/residential/mansion_storage)
 "ce" = (
 /obj/structure/table/marble,
 /obj/item/weapon/towel/random,
@@ -873,7 +878,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 9
 	},
-/turf/simulated/wall/dungeon,
+/turf/simulated/wall/r_wall,
 /area/residential/mansion_bed_4)
 "co" = (
 /obj/machinery/door/firedoor/glass,
@@ -902,7 +907,7 @@
 /turf/simulated/floor/beach/sand/desert/outdoors,
 /area/residential/outside)
 "cs" = (
-/turf/simulated/wall/dungeon,
+/turf/simulated/wall/r_wall,
 /area/residential/mansion_bed_2)
 "ct" = (
 /obj/machinery/chemical_dispenser/bar_coffee/full{
@@ -1435,7 +1440,7 @@
 /turf/simulated/floor/tiled/eris/cafe,
 /area/residential/mansion)
 "dE" = (
-/turf/simulated/wall/dungeon,
+/turf/simulated/wall/r_wall,
 /area/residential/mansion)
 "dF" = (
 /turf/simulated/floor/wood/sif,
@@ -1592,6 +1597,14 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/mansion)
+"dZ" = (
+/obj/machinery/light_switch{
+	dir = 1;
+	pixel_x = 4;
+	pixel_y = -24
+	},
+/turf/simulated/floor/wood,
+/area/residential/mansion_holodeck)
 "ea" = (
 /obj/structure/closet/cabinet,
 /obj/item/clothing/under/librarian,
@@ -1614,6 +1627,15 @@
 "ec" = (
 /turf/simulated/floor/tiled/milspec/raised,
 /area/residential/mansion)
+"ed" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/turf/simulated/floor/wood,
+/area/residential/mansion_storage)
 "ee" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/deck/cards{
@@ -2264,9 +2286,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
-/obj/machinery/light{
-	dir = 1
-	},
 /turf/simulated/floor/carpet,
 /area/residential/mansion_bed_1)
 "fO" = (
@@ -2366,6 +2385,15 @@
 /obj/machinery/light,
 /turf/simulated/floor/carpet/purcarpet,
 /area/residential/mroom1bed1)
+"fV" = (
+/obj/machinery/computer/HolodeckControl{
+	projection_area = /area/holodeck/mansion
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/residential/mansion_holodeck)
 "fX" = (
 /obj/effect/floor_decal/milspec/color/red/half{
 	dir = 5
@@ -2559,6 +2587,11 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/mansion)
+"gy" = (
+/turf/simulated/floor/reinforced{
+	name = "Holodeck Projector Floor"
+	},
+/area/holodeck/mansion)
 "gz" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -2669,6 +2702,13 @@
 /mob/living/simple_mob/vore/leopardmander/blue,
 /turf/simulated/floor/carpet/oracarpet,
 /area/residential/outside)
+"gU" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/wood,
+/area/residential/mansion_holodeck)
 "gV" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
@@ -3221,6 +3261,15 @@
 	},
 /turf/simulated/floor/outdoors/dirt/biodome,
 /area/residential/outside)
+"ic" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/turf/simulated/floor/carpet/bcarpet,
+/area/residential/mansion_bed_2)
 "id" = (
 /obj/machinery/door/firedoor/multi_tile{
 	dir = 2
@@ -3398,6 +3447,17 @@
 	},
 /turf/simulated/floor/wood/sif,
 /area/residential/mroom2bed2)
+"iA" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/clothing/under/hyperfiber/bluespace,
+/turf/simulated/floor/wood,
+/area/residential/mansion_storage)
+"iB" = (
+/obj/machinery/light,
+/turf/simulated/floor/reinforced{
+	name = "Holodeck Projector Floor"
+	},
+/area/holodeck/mansion)
 "iC" = (
 /obj/structure/table/alien/blue,
 /obj/structure/closet/walllocker{
@@ -3510,6 +3570,11 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/residential/mansion_ballroom)
+"iP" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/weapon/bluespace_harpoon,
+/turf/simulated/floor/wood,
+/area/residential/mansion_storage)
 "iQ" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock{
@@ -3555,6 +3620,10 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/residential/mroom1)
+"iU" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/wood,
+/area/residential/mansion_storage)
 "iV" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
@@ -4241,6 +4310,12 @@
 	},
 /turf/simulated/floor/tiled/eris/cafe,
 /area/residential/room10)
+"kC" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/residential/mansion_holodeck)
 "kD" = (
 /obj/machinery/atmospherics/pipe/tank/air{
 	start_pressure = 74000.5
@@ -4425,6 +4500,13 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/outside)
+"lc" = (
+/obj/machinery/light,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/residential/mansion_holodeck)
 "le" = (
 /obj/structure/flora/pottedplant{
 	icon_state = "plant-24"
@@ -4645,6 +4727,13 @@
 /obj/machinery/computer/transhuman/resleeving,
 /turf/simulated/floor/wood,
 /area/residential/mansion)
+"lH" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/residential/mansion_storage)
 "lI" = (
 /obj/effect/floor_decal/spline/plain,
 /obj/machinery/light,
@@ -4684,6 +4773,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/mansion)
+"lO" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/residential/mansion_storage)
 "lP" = (
 /turf/simulated/floor/carpet/oracarpet,
 /area/residential/room10)
@@ -4699,7 +4794,7 @@
 	dir = 1;
 	pixel_y = -24
 	},
-/turf/simulated/wall/dungeon,
+/turf/simulated/wall/r_wall,
 /area/residential/mansion)
 "lS" = (
 /obj/structure/table/rack,
@@ -4763,6 +4858,9 @@
 /obj/item/toy/plushie/drake,
 /turf/simulated/floor/carpet/retro,
 /area/residential/mansion)
+"mc" = (
+/turf/simulated/wall/r_wall,
+/area/residential/mansion_storage)
 "md" = (
 /obj/structure/table/standard,
 /obj/item/weapon/reagent_containers/glass/bottle/biomass,
@@ -4861,7 +4959,7 @@
 /turf/simulated/floor/tiled/white,
 /area/residential/mansion_ballroom)
 "mq" = (
-/turf/simulated/wall/dungeon,
+/turf/simulated/wall/r_wall,
 /area/residential/mansion_bed_4)
 "mr" = (
 /obj/structure/table/wooden_reinforced,
@@ -5676,7 +5774,7 @@
 "on" = (
 /obj/structure/table/marble,
 /obj/random/soap,
-/turf/simulated/wall/dungeon,
+/turf/simulated/wall/r_wall,
 /area/residential/mansion)
 "oo" = (
 /turf/simulated/floor/water/arf_hotspring,
@@ -5988,7 +6086,7 @@
 /turf/simulated/floor/carpet/sblucarpet,
 /area/residential/room10)
 "oZ" = (
-/turf/simulated/wall/dungeon,
+/turf/simulated/wall/r_wall,
 /area/residential/mansion_gameroom)
 "pa" = (
 /obj/machinery/light,
@@ -6207,6 +6305,15 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/carpet/retro,
 /area/residential/mansion)
+"pG" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/residential/mansion_storage)
 "pH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -6379,6 +6486,12 @@
 /obj/item/device/flashlight/lamp,
 /turf/simulated/floor/carpet/blue,
 /area/residential/room12)
+"pZ" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/residential/mansion_holodeck)
 "qa" = (
 /obj/effect/floor_decal/corner_kafel/purple{
 	dir = 1
@@ -6661,6 +6774,10 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mansion_club)
+"qK" = (
+/obj/machinery/light,
+/turf/simulated/floor/wood,
+/area/residential/mansion_holodeck)
 "qM" = (
 /obj/effect/floor_decal/spline/fancy,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -6739,6 +6856,11 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/wood,
 /area/residential/mansion_gameroom)
+"qW" = (
+/turf/simulated/wall/r_wall{
+	can_open = 1
+	},
+/area/residential/mansion_storage)
 "qX" = (
 /obj/structure/table/marble,
 /turf/simulated/floor/carpet/purcarpet,
@@ -6798,6 +6920,13 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/mroom1)
+"rf" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/residential/mansion_storage)
 "rh" = (
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner/black/diagonal{
@@ -6857,6 +6986,12 @@
 	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/residential/room12)
+"ri" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/structure/table/wooden_reinforced,
+/obj/item/device/perfect_tele/alien,
+/turf/simulated/floor/wood,
+/area/residential/mansion_storage)
 "rj" = (
 /obj/effect/floor_decal/corner_kafel/blue{
 	dir = 10
@@ -6920,7 +7055,7 @@
 "rn" = (
 /obj/structure/table/marble,
 /obj/item/weapon/reagent_containers/dropper,
-/turf/simulated/wall/dungeon,
+/turf/simulated/wall/r_wall,
 /area/residential/mansion)
 "ro" = (
 /obj/effect/floor_decal/grass_edge{
@@ -7317,7 +7452,7 @@
 /turf/simulated/floor/tiled/white,
 /area/residential/mansion_ballroom)
 "sl" = (
-/turf/simulated/wall/dungeon{
+/turf/simulated/wall/r_wall{
 	can_open = 1
 	},
 /area/residential/mansion)
@@ -7635,6 +7770,13 @@
 /obj/item/weapon/reagent_containers/food/snacks/baguette,
 /turf/simulated/floor/wood,
 /area/residential/mansion)
+"tb" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/glass{
+	name = "Holodeck"
+	},
+/turf/simulated/floor/wood,
+/area/residential/mansion_holodeck)
 "tc" = (
 /obj/structure/closet/cabinet,
 /obj/item/clothing/under/schoolgirl,
@@ -7988,6 +8130,13 @@
 	},
 /turf/simulated/floor/carpet/sblucarpet,
 /area/residential/outside)
+"tZ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/carpet/bcarpet,
+/area/residential/mansion_bed_2)
 "ua" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 1
@@ -8327,7 +8476,7 @@
 /turf/simulated/floor/carpet/sblucarpet,
 /area/residential/mansion)
 "uQ" = (
-/turf/simulated/wall/dungeon,
+/turf/simulated/wall/r_wall,
 /area/residential/mansion_bed_5)
 "uR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -8393,6 +8542,10 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/mroom1)
+"va" = (
+/obj/machinery/light,
+/turf/simulated/floor/wood,
+/area/residential/mansion_storage)
 "vb" = (
 /obj/machinery/appliance/cooker/oven,
 /obj/effect/floor_decal/corner_kafel/yellow{
@@ -8540,6 +8693,17 @@
 	},
 /turf/simulated/floor/carpet/sblucarpet,
 /area/residential/outside)
+"vw" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/obj/machinery/light_switch{
+	dir = 1;
+	pixel_x = 4;
+	pixel_y = -24
+	},
+/turf/simulated/floor/wood,
+/area/residential/mansion_holodeck)
 "vx" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -8933,6 +9097,15 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/mansion)
+"wz" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/residential/mansion_holodeck)
 "wA" = (
 /obj/structure/table/marble,
 /turf/simulated/floor/wood,
@@ -8980,7 +9153,7 @@
 /turf/simulated/floor/carpet/oracarpet,
 /area/residential/room10)
 "wJ" = (
-/turf/simulated/wall/dungeon,
+/turf/simulated/wall/r_wall,
 /area/residential/mansion_ballroom)
 "wK" = (
 /obj/machinery/light{
@@ -9003,6 +9176,14 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/white,
 /area/residential/mansion)
+"wO" = (
+/obj/machinery/alarm{
+	pixel_y = 22
+	},
+/obj/structure/table/wooden_reinforced,
+/obj/item/weapon/bluespace_harpoon,
+/turf/simulated/floor/wood,
+/area/residential/mansion_storage)
 "wP" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
@@ -9115,6 +9296,15 @@
 /obj/machinery/light,
 /turf/simulated/floor/lino,
 /area/residential/mroom2)
+"wZ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/turf/simulated/floor/wood,
+/area/residential/mansion_holodeck)
 "xb" = (
 /obj/structure/bed/chair/sofa/right/blue,
 /turf/simulated/floor/carpet/retro,
@@ -9194,6 +9384,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
+/obj/item/clothing/accessory/storage/bluespace,
 /turf/simulated/floor/carpet/oracarpet,
 /area/residential/mansion_bed_4)
 "xm" = (
@@ -9304,7 +9495,7 @@
 /area/residential/mansion)
 "xD" = (
 /obj/machinery/appliance/cooker/oven,
-/turf/simulated/wall/dungeon,
+/turf/simulated/wall/r_wall,
 /area/residential/mansion)
 "xE" = (
 /obj/machinery/light{
@@ -9586,6 +9777,9 @@
 /obj/machinery/telecomms/relay/preset/mining,
 /turf/simulated/floor/plating,
 /area/residential/outside)
+"yn" = (
+/turf/simulated/wall/r_wall,
+/area/residential/mansion_bed_1)
 "yo" = (
 /obj/structure/railing/grey{
 	dir = 8
@@ -10159,7 +10353,7 @@
 /obj/machinery/chemical_dispenser/bar_soft/full{
 	dir = 1
 	},
-/turf/simulated/wall/dungeon,
+/turf/simulated/wall/r_wall,
 /area/residential/mansion)
 "zO" = (
 /obj/effect/floor_decal/corner_kafel/green/full{
@@ -10582,6 +10776,9 @@
 /obj/item/weapon/storage/box/monkeycubes,
 /obj/item/weapon/storage/box/monkeycubes,
 /obj/item/weapon/storage/box/monkeycubes,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/floor/carpet,
 /area/residential/mansion_bed_1)
 "AJ" = (
@@ -10794,6 +10991,17 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/outside)
+"Bi" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/wall/r_wall{
+	can_open = 1
+	},
+/area/residential/mansion_storage)
 "Bj" = (
 /obj/structure/closet/secure_closet/personal{
 	anchored = 1
@@ -10895,6 +11103,9 @@
 /obj/effect/map_effect/perma_light/brighter,
 /turf/simulated/floor/outdoors/dirt/biodome,
 /area/residential/outside)
+"BA" = (
+/turf/simulated/floor/wood,
+/area/residential/mansion_holodeck)
 "BB" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
@@ -10919,11 +11130,11 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mansion)
 "BD" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 10
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor/wood,
 /area/residential/mansion_bed_2)
@@ -11254,8 +11465,12 @@
 /turf/simulated/wall/golddiamond,
 /area/residential/mansion)
 "Cw" = (
-/turf/simulated/wall/dungeon,
-/area/residential/mansion_bed_1)
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = -28
+	},
+/turf/simulated/floor/wood,
+/area/residential/mansion_storage)
 "Cx" = (
 /obj/machinery/light/flamp,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -11519,6 +11734,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/mansion)
+"Da" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/turf/simulated/floor/wood,
+/area/residential/mansion_holodeck)
 "Dc" = (
 /obj/effect/floor_decal/corner_kafel/red/full,
 /obj/machinery/light/small{
@@ -11733,6 +11954,12 @@
 /obj/machinery/clonepod/transhuman,
 /turf/simulated/floor/bmarble,
 /area/residential/room12)
+"DI" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/turf/simulated/floor/wood,
+/area/residential/mansion_storage)
 "DJ" = (
 /obj/structure/closet/cabinet,
 /obj/item/clothing/accessory/locket,
@@ -11747,6 +11974,11 @@
 /obj/machinery/light,
 /turf/simulated/floor/grass,
 /area/residential/mansion)
+"DK" = (
+/turf/simulated/wall/r_wall{
+	can_open = 1
+	},
+/area/residential/mansion_bed_1)
 "DL" = (
 /obj/effect/floor_decal/spline/plain,
 /turf/simulated/floor/carpet/purcarpet,
@@ -11755,6 +11987,7 @@
 /obj/structure/table/glass,
 /obj/item/weapon/storage/firstaid/regular,
 /obj/item/weapon/storage/firstaid/regular,
+/obj/item/clothing/accessory/storage/bluespace,
 /turf/simulated/floor/carpet,
 /area/residential/mansion_bed_1)
 "DO" = (
@@ -12055,6 +12288,7 @@
 	pixel_x = -4;
 	pixel_y = 2
 	},
+/obj/item/clothing/accessory/storage/bluespace,
 /turf/simulated/floor/wood,
 /area/residential/mansion_bed_2)
 "Ey" = (
@@ -12914,7 +13148,7 @@
 /area/residential/outside)
 "Gy" = (
 /obj/machinery/appliance/cooker/fryer,
-/turf/simulated/wall/dungeon,
+/turf/simulated/wall/r_wall,
 /area/residential/mansion)
 "GA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -13356,7 +13590,7 @@
 /area/residential/mansion_ballroom)
 "HK" = (
 /obj/machinery/appliance/cooker/grill,
-/turf/simulated/wall/dungeon,
+/turf/simulated/wall/r_wall,
 /area/residential/mansion)
 "HL" = (
 /obj/structure/table/marble,
@@ -13723,6 +13957,18 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/mansion)
+"IN" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/residential/mansion_holodeck)
 "IO" = (
 /obj/structure/toilet{
 	dir = 4
@@ -14154,7 +14400,7 @@
 /turf/simulated/floor/carpet/bcarpet,
 /area/residential/mroom1)
 "JX" = (
-/turf/simulated/wall/dungeon,
+/turf/simulated/wall/r_wall,
 /area/residential/mansion_office)
 "JY" = (
 /obj/structure/sink{
@@ -14219,7 +14465,7 @@
 "Kd" = (
 /obj/machinery/appliance/cooker/fryer,
 /obj/machinery/light,
-/turf/simulated/wall/dungeon,
+/turf/simulated/wall/r_wall,
 /area/residential/mansion)
 "Ke" = (
 /obj/effect/alien/weeds,
@@ -14368,6 +14614,12 @@
 /obj/effect/floor_decal/spline/plain,
 /turf/simulated/floor/carpet/oracarpet,
 /area/residential/outside)
+"KB" = (
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/structure/table/wooden_reinforced,
+/obj/item/weapon/gun/energy/sizegun/admin/abductor,
+/turf/simulated/floor/wood,
+/area/residential/mansion_storage)
 "KC" = (
 /obj/structure/table/alien,
 /obj/effect/floor_decal/spline/plain{
@@ -14466,6 +14718,15 @@
 "KO" = (
 /turf/simulated/floor/wood,
 /area/residential/mroom1bed1)
+"KQ" = (
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/table/wooden_reinforced,
+/obj/item/clothing/under/hyperfiber/bluespace,
+/turf/simulated/floor/wood,
+/area/residential/mansion_storage)
 "KR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -14639,6 +14900,9 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/carpet/sblucarpet,
 /area/residential/mansion)
+"Lp" = (
+/turf/simulated/floor/wood,
+/area/residential/mansion_storage)
 "Lq" = (
 /turf/simulated/floor/tiled/freezer,
 /area/residential/room10)
@@ -14913,7 +15177,7 @@
 /obj/item/weapon/reagent_containers/food/condiment/yeast{
 	pixel_x = 6
 	},
-/turf/simulated/wall/dungeon,
+/turf/simulated/wall/r_wall,
 /area/residential/mansion)
 "Mb" = (
 /obj/structure/grille,
@@ -15810,6 +16074,15 @@
 "Oq" = (
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/outside)
+"Or" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/residential/mansion_holodeck)
 "Os" = (
 /turf/space,
 /area/space)
@@ -15897,6 +16170,15 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/mansion)
+"OE" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/residential/mansion_holodeck)
 "OF" = (
 /obj/effect/catwalk_plated/white,
 /obj/structure/curtain/open/shower{
@@ -16362,6 +16644,18 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/mansion)
+"PQ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/alarm{
+	pixel_y = 22
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/residential/mansion_holodeck)
 "PR" = (
 /obj/machinery/door/window/westleft,
 /obj/structure/closet/walllocker{
@@ -17021,6 +17315,14 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/mansion)
+"RB" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/reinforced{
+	name = "Holodeck Projector Floor"
+	},
+/area/holodeck/mansion)
 "RC" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -17107,6 +17409,11 @@
 /area/residential/mroom1bed1{
 	name = "\improper Residential - Medium Room 1 Liz Office"
 	})
+"RM" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/device/perfect_tele/alien,
+/turf/simulated/floor/wood,
+/area/residential/mansion_storage)
 "RN" = (
 /obj/structure/window/reinforced/polarized{
 	id = "office_tint_mansion"
@@ -17426,6 +17733,9 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/residential/mansion_ballroom)
+"Sy" = (
+/turf/simulated/wall/r_wall,
+/area/residential/mansion_holodeck)
 "Sz" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
@@ -17591,6 +17901,15 @@
 /obj/effect/floor_decal/grass_edge,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
+"SU" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/turf/simulated/floor/carpet/bcarpet,
+/area/residential/mansion_bed_2)
 "SV" = (
 /obj/effect/floor_decal/corner/black/diagonal{
 	dir = 4
@@ -17660,6 +17979,15 @@
 /obj/effect/floor_decal/spline/plain,
 /turf/simulated/floor/tiled/freezer,
 /area/residential/mansion)
+"Tg" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/storage/smolebrickcase,
+/obj/item/weapon/storage/smolebrickcase,
+/obj/item/weapon/storage/smolebrickcase,
+/obj/item/weapon/storage/smolebrickcase,
+/obj/item/weapon/storage/smolebrickcase,
+/turf/simulated/floor/wood,
+/area/residential/mansion_holodeck)
 "Th" = (
 /obj/structure/table/marble,
 /obj/item/weapon/folder/blue,
@@ -17922,6 +18250,7 @@
 	dir = 8
 	},
 /obj/machinery/light,
+/obj/item/clothing/accessory/storage/bluespace,
 /turf/simulated/floor/grass,
 /area/residential/mansion)
 "TK" = (
@@ -18616,11 +18945,20 @@
 	},
 /turf/simulated/floor/tiled,
 /area/residential/mansion)
+"Vl" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/table/wooden_reinforced,
+/obj/item/weapon/gun/energy/sizegun/admin/abductor,
+/turf/simulated/floor/wood,
+/area/residential/mansion_storage)
 "Vn" = (
 /obj/machinery/vending/boozeomat{
 	req_access = list()
 	},
-/turf/simulated/wall/dungeon,
+/turf/simulated/wall/r_wall,
 /area/residential/mansion)
 "Vo" = (
 /obj/structure/flora/pottedplant/smalltree,
@@ -19164,7 +19502,7 @@
 /obj/machinery/chemical_dispenser/bar_coffee/full{
 	dir = 1
 	},
-/turf/simulated/wall/dungeon,
+/turf/simulated/wall/r_wall,
 /area/residential/mansion)
 "WJ" = (
 /obj/effect/floor_decal/grass_edge{
@@ -19394,6 +19732,15 @@
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/residential/mansion)
+"Xm" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/wall/r_wall{
+	can_open = 1
+	},
+/area/residential/mansion_bed_2)
 "Xn" = (
 /obj/structure/fireplace,
 /turf/simulated/floor/carpet/oracarpet,
@@ -19407,7 +19754,7 @@
 /turf/simulated/floor/water/arf_hotspring,
 /area/residential/mroom2)
 "Xp" = (
-/turf/simulated/wall/dungeon,
+/turf/simulated/wall/r_wall,
 /area/residential/mansion_club)
 "Xq" = (
 /obj/machinery/disposal,
@@ -19671,6 +20018,12 @@
 	},
 /turf/simulated/floor/tiled/eris/cafe,
 /area/residential/mansion)
+"XW" = (
+/obj/machinery/door/firedoor,
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/plating,
+/area/residential/mansion_holodeck)
 "XX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -20327,6 +20680,15 @@
 	},
 /turf/simulated/floor/lino,
 /area/residential/mroom2)
+"ZK" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/bcarpet,
+/area/residential/mansion_bed_2)
 "ZL" = (
 /obj/structure/table/wooden_reinforced,
 /turf/simulated/floor/wood,
@@ -43065,18 +43427,18 @@ Os
 Os
 Os
 Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
+wJ
+wJ
+wJ
+wJ
+wJ
+wJ
+wJ
+wJ
+wJ
+wJ
+Sy
+Sy
 Os
 Os
 JX
@@ -43317,20 +43679,20 @@ Os
 Os
 Os
 Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
+wJ
+gy
+gy
+RB
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+Sy
+Sy
+Sy
 JX
 JX
 JX
@@ -43569,20 +43931,20 @@ Os
 Os
 Os
 Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
+wJ
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+XW
+Tg
+BA
 cs
 NG
 jy
@@ -43821,20 +44183,20 @@ Os
 Os
 Os
 Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
+wJ
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+XW
+Tg
+BA
 cs
 Ju
 zp
@@ -44074,19 +44436,19 @@ wJ
 wJ
 wJ
 wJ
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+Sy
+fV
+qK
 cs
 Yf
 In
@@ -44326,19 +44688,19 @@ Zf
 Zf
 Qv
 wJ
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+tb
+Da
+kC
 cs
 cs
 cs
@@ -44578,25 +44940,25 @@ KU
 KU
 Rf
 wJ
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+tb
+wZ
+pZ
 cs
 BX
 mW
 mW
 mW
-mW
+SU
 BD
 Lv
 Me
@@ -44830,25 +45192,25 @@ kV
 KC
 Rf
 wJ
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+Sy
+PQ
+BA
 cs
 Um
 mW
 mW
 mW
-mW
+ZK
 Jn
 Jn
 Jn
@@ -45082,25 +45444,25 @@ nB
 WL
 fp
 wJ
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-cs
-mW
-mW
-mW
-mW
-mW
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+XW
+wz
+gU
+Xm
+tZ
+tZ
+tZ
+tZ
+ic
 mW
 Jn
 Jn
@@ -45334,19 +45696,19 @@ eE
 WL
 fp
 wJ
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+XW
+OE
+dZ
 cs
 hh
 mW
@@ -45586,19 +45948,19 @@ TI
 WL
 fp
 wJ
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
-Os
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+iB
+Sy
+OE
+BA
 cs
 rs
 mW
@@ -45847,21 +46209,21 @@ Xp
 Xp
 Xp
 Xp
-Os
-Os
-Os
-Os
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
+Sy
+Sy
+IN
+lc
+yn
+yn
+yn
+yn
+yn
+yn
+yn
+yn
+yn
+yn
+yn
 hs
 Mt
 jB
@@ -46100,10 +46462,10 @@ uO
 nA
 Xp
 Os
-Os
-Os
-Os
-Cw
+Sy
+Or
+vw
+yn
 AH
 xe
 mE
@@ -46113,7 +46475,7 @@ mE
 DD
 Op
 DN
-Cw
+yn
 hs
 Zq
 oA
@@ -46352,10 +46714,10 @@ Hn
 vs
 Xp
 Os
-Os
-Os
-Os
-Cw
+Sy
+OE
+BA
+DK
 fN
 IF
 IF
@@ -46365,7 +46727,7 @@ Ae
 mE
 mE
 kl
-Cw
+yn
 hs
 Mt
 jB
@@ -46603,11 +46965,11 @@ qa
 Vz
 aV
 Xp
-Os
-Os
-Os
-Os
-Cw
+mc
+mc
+Bi
+qW
+yn
 hZ
 mE
 mE
@@ -46617,7 +46979,7 @@ Dy
 mE
 mE
 kU
-Cw
+yn
 hs
 Mt
 jB
@@ -46855,11 +47217,11 @@ qJ
 ZU
 Xp
 Xp
-Os
-Os
-Os
-Os
+iA
 Cw
+pG
+Lp
+yn
 jV
 mE
 zw
@@ -46869,7 +47231,7 @@ Dy
 mE
 mE
 mE
-Cw
+yn
 ER
 Mt
 jB
@@ -47107,11 +47469,11 @@ ja
 Ln
 Tr
 Xp
-Os
-Os
-Os
-Os
-Cw
+KQ
+iU
+rf
+va
+yn
 OP
 mE
 mE
@@ -47359,18 +47721,18 @@ eT
 Tr
 Tr
 Xp
-Os
-Os
-Os
-Os
-Cw
-Cw
-Cw
-Cw
-Cw
+ri
+lO
+lH
+Lp
+yn
+yn
+yn
+yn
+yn
 Mp
 vC
-Cw
+yn
 mE
 mE
 mE
@@ -47611,21 +47973,21 @@ eT
 Tr
 Yy
 Xp
-Os
-Os
-Os
-Os
-Cw
+RM
+Lp
+pG
+Lp
+yn
 UM
 gL
 Dl
 JY
 Dl
 Et
-Cw
+yn
 WU
 PR
-Cw
+yn
 of
 Mt
 jB
@@ -47863,21 +48225,21 @@ Ok
 vq
 vq
 Xp
-Os
-Os
-Os
-Os
-Cw
+wO
+Lp
+pG
+Lp
+yn
 nd
 vG
 Vv
 es
 es
 ub
-Cw
+yn
 Qu
 cO
-Cw
+yn
 hs
 Mt
 jB
@@ -48115,21 +48477,21 @@ UC
 Ab
 Ab
 Xp
-Os
-Os
-Os
-Os
-Cw
+iP
+Lp
+pG
+Lp
+yn
 ms
 Zy
 VE
 bg
 es
 ub
-Cw
+yn
 Qu
 SK
-Cw
+yn
 hs
 Mt
 jB
@@ -48367,21 +48729,21 @@ Ab
 pS
 Ab
 Xp
-Os
-Os
-Os
-Os
-Cw
+KB
+iU
+ed
+Lp
+yn
 hH
 RT
 mo
 NM
 aa
 ak
-Cw
+yn
 Qu
 Rs
-Cw
+yn
 hs
 Mt
 jB
@@ -48619,10 +48981,10 @@ Ab
 Ab
 Ab
 Xp
-Os
-Os
-Os
-Os
+Vl
+lO
+DI
+va
 aL
 aL
 aL
@@ -48871,10 +49233,10 @@ Ab
 Ab
 Cm
 Xp
-Os
-Os
-Os
-Os
+cd
+Lp
+Lp
+Lp
 aL
 kv
 oi

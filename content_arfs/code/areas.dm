@@ -59,3 +59,12 @@
 	icon_state = "bridge"
 	music = null
 	sound_env = MEDIUM_SOFTFLOOR
+
+//mansion holodeck
+/area/holodeck/mansion
+	name = "\improper Holodeck - Mansion"
+	requires_power = 0
+	flags = RAD_SHIELDED
+	icon = 'icons/turf/areas_yw.dmi'
+	icon_state = "mansion"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
