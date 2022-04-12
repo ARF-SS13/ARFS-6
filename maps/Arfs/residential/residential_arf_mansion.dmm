@@ -798,6 +798,11 @@
 /area/residential/mansion)
 "cd" = (
 /obj/structure/table/wooden_reinforced,
+/obj/item/weapon/gun/energy/sizegun/admin/abductor,
+/obj/item/weapon/gun/energy/sizegun/admin/abductor,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/floor/wood,
 /area/residential/mansion_storage)
 "ce" = (
@@ -1634,6 +1639,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
+/obj/structure/bed/chair/sofa/brown{
+	dir = 1
+	},
 /turf/simulated/floor/wood,
 /area/residential/mansion_storage)
 "ee" = (
@@ -2386,9 +2394,6 @@
 /turf/simulated/floor/carpet/purcarpet,
 /area/residential/mroom1bed1)
 "fV" = (
-/obj/machinery/computer/HolodeckControl{
-	projection_area = /area/holodeck/mansion
-	},
 /obj/machinery/light{
 	dir = 1
 	},
@@ -3449,7 +3454,19 @@
 /area/residential/mroom2bed2)
 "iA" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/clothing/under/hyperfiber/bluespace,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/item/stack/material/log{
+	amount = 50;
+	max_amount = 50
+	},
+/obj/item/weapon/flame/lighter/zippo/ironic{
+	pixel_x = 8
+	},
+/obj/item/weapon/extinguisher{
+	pixel_x = -10
+	},
 /turf/simulated/floor/wood,
 /area/residential/mansion_storage)
 "iB" = (
@@ -3570,11 +3587,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/residential/mansion_ballroom)
-"iP" = (
-/obj/structure/table/wooden_reinforced,
-/obj/item/weapon/bluespace_harpoon,
-/turf/simulated/floor/wood,
-/area/residential/mansion_storage)
 "iQ" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock{
@@ -4732,6 +4744,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
 	},
+/obj/structure/bed/chair/sofa/brown{
+	dir = 1
+	},
 /turf/simulated/floor/wood,
 /area/residential/mansion_storage)
 "lI" = (
@@ -4809,6 +4824,16 @@
 /obj/machinery/door/airlock/multi_tile/glass,
 /turf/simulated/floor/carpet/sblucarpet,
 /area/residential/mansion)
+"lU" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/device/perfect_tele/alien,
+/obj/item/device/perfect_tele/alien,
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 22
+	},
+/turf/simulated/floor/wood,
+/area/residential/mansion_storage)
 "lV" = (
 /obj/effect/floor_decal/corner_kafel/green{
 	dir = 10
@@ -6986,12 +7011,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/residential/room12)
-"ri" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/structure/table/wooden_reinforced,
-/obj/item/device/perfect_tele/alien,
-/turf/simulated/floor/wood,
-/area/residential/mansion_storage)
 "rj" = (
 /obj/effect/floor_decal/corner_kafel/blue{
 	dir = 10
@@ -7827,6 +7846,12 @@
 	},
 /turf/simulated/floor/tiled/eris/cafe,
 /area/residential/mansion)
+"tk" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/weapon/bluespace_harpoon,
+/obj/item/weapon/bluespace_harpoon,
+/turf/simulated/floor/wood,
+/area/residential/mansion_storage)
 "tm" = (
 /obj/item/weapon/stool/padded{
 	dir = 4
@@ -9176,14 +9201,6 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/white,
 /area/residential/mansion)
-"wO" = (
-/obj/machinery/alarm{
-	pixel_y = 22
-	},
-/obj/structure/table/wooden_reinforced,
-/obj/item/weapon/bluespace_harpoon,
-/turf/simulated/floor/wood,
-/area/residential/mansion_storage)
 "wP" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
@@ -11469,6 +11486,13 @@
 	dir = 4;
 	pixel_x = -28
 	},
+/obj/structure/table/wooden_reinforced,
+/obj/item/weapon/reagent_containers/food/snacks/popcorn,
+/obj/item/weapon/reagent_containers/food/snacks/popcorn,
+/obj/item/weapon/reagent_containers/food/snacks/popcorn,
+/obj/item/weapon/reagent_containers/food/snacks/popcorn,
+/obj/item/weapon/reagent_containers/food/snacks/popcorn,
+/obj/item/weapon/reagent_containers/food/snacks/popcorn,
 /turf/simulated/floor/wood,
 /area/residential/mansion_storage)
 "Cx" = (
@@ -12433,6 +12457,18 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/wood,
 /area/residential/room12)
+"EV" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/bed/chair/sofa/brown{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/residential/mansion_storage)
 "EW" = (
 /obj/structure/closet/secure_closet/freezer/meat,
 /obj/item/weapon/reagent_containers/food/snacks/meat/chicken,
@@ -14614,12 +14650,6 @@
 /obj/effect/floor_decal/spline/plain,
 /turf/simulated/floor/carpet/oracarpet,
 /area/residential/outside)
-"KB" = (
-/obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/structure/table/wooden_reinforced,
-/obj/item/weapon/gun/energy/sizegun/admin/abductor,
-/turf/simulated/floor/wood,
-/area/residential/mansion_storage)
 "KC" = (
 /obj/structure/table/alien,
 /obj/effect/floor_decal/spline/plain{
@@ -14720,11 +14750,7 @@
 /area/residential/mroom1bed1)
 "KQ" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/structure/table/wooden_reinforced,
-/obj/item/clothing/under/hyperfiber/bluespace,
+/obj/structure/fireplace,
 /turf/simulated/floor/wood,
 /area/residential/mansion_storage)
 "KR" = (
@@ -15641,6 +15667,12 @@
 /obj/structure/flora/tree/jungle_small,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
+"Nk" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/clothing/under/hyperfiber/bluespace,
+/obj/item/clothing/under/hyperfiber/bluespace,
+/turf/simulated/floor/wood,
+/area/residential/mansion_storage)
 "Nl" = (
 /obj/effect/floor_decal/spline/fancy/wood/corner{
 	dir = 8
@@ -17410,8 +17442,10 @@
 	name = "\improper Residential - Medium Room 1 Liz Office"
 	})
 "RM" = (
-/obj/structure/table/wooden_reinforced,
-/obj/item/device/perfect_tele/alien,
+/obj/machinery/computer/security/telescreen/entertainment{
+	icon_state = "frame";
+	pixel_y = 30
+	},
 /turf/simulated/floor/wood,
 /area/residential/mansion_storage)
 "RN" = (
@@ -17981,6 +18015,11 @@
 /area/residential/mansion)
 "Tg" = (
 /obj/structure/table/woodentable,
+/obj/item/weapon/storage/smolebrickcase,
+/obj/item/weapon/storage/smolebrickcase,
+/obj/item/weapon/storage/smolebrickcase,
+/obj/item/weapon/storage/smolebrickcase,
+/obj/item/weapon/storage/smolebrickcase,
 /obj/item/weapon/storage/smolebrickcase,
 /obj/item/weapon/storage/smolebrickcase,
 /obj/item/weapon/storage/smolebrickcase,
@@ -18947,11 +18986,6 @@
 /area/residential/mansion)
 "Vl" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/structure/table/wooden_reinforced,
-/obj/item/weapon/gun/energy/sizegun/admin/abductor,
 /turf/simulated/floor/wood,
 /area/residential/mansion_storage)
 "Vn" = (
@@ -20727,6 +20761,13 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/mansion)
+"ZQ" = (
+/obj/machinery/computer/HolodeckControl{
+	dir = 4;
+	projection_area = /area/holodeck/mansion
+	},
+/turf/simulated/floor/wood,
+/area/residential/mansion_holodeck)
 "ZR" = (
 /obj/effect/floor_decal/corner_kafel/green{
 	dir = 6
@@ -43943,7 +43984,7 @@ gy
 gy
 gy
 XW
-Tg
+ZQ
 BA
 cs
 NG
@@ -44195,7 +44236,7 @@ gy
 gy
 gy
 XW
-Tg
+BA
 BA
 cs
 Ju
@@ -46461,8 +46502,8 @@ yQ
 uO
 nA
 Xp
-Os
 Sy
+Tg
 Or
 vw
 yn
@@ -46713,8 +46754,8 @@ nh
 Hn
 vs
 Xp
-Os
 Sy
+Tg
 OE
 BA
 DK
@@ -47721,7 +47762,7 @@ eT
 Tr
 Tr
 Xp
-ri
+Vl
 lO
 lH
 Lp
@@ -47975,7 +48016,7 @@ Yy
 Xp
 RM
 Lp
-pG
+EV
 Lp
 yn
 UM
@@ -48225,9 +48266,9 @@ Ok
 vq
 vq
 Xp
-wO
+RM
 Lp
-pG
+EV
 Lp
 yn
 nd
@@ -48477,9 +48518,9 @@ UC
 Ab
 Ab
 Xp
-iP
+RM
 Lp
-pG
+EV
 Lp
 yn
 ms
@@ -48729,7 +48770,7 @@ Ab
 pS
 Ab
 Xp
-KB
+KQ
 iU
 ed
 Lp
@@ -49234,9 +49275,9 @@ Ab
 Cm
 Xp
 cd
-Lp
-Lp
-Lp
+tk
+lU
+Nk
 aL
 kv
 oi
