@@ -189,7 +189,8 @@
 	\"Portable NIFSoft Installation Media. \n\
 	Align ocular port with eye socket and depress red plunger.\""
 	icon_state = "engineering"
-	stored = /datum/nifsoft/sizechange/andy
+	stored_organic = /datum/nifsoft/sizechange/andy
+	stored_synthetic = /datum/nifsoft/sizechange/andy
 
 //
 // Size Gun
