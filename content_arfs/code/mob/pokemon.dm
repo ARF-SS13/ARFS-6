@@ -963,6 +963,7 @@
 	icon_living = "purrloin"
 	icon_dead = "purrloin_d"
 	p_types = list(P_TYPE_DARK)
+	additional_moves = list(/mob/living/proc/hide)
 	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/ralts
