@@ -21,7 +21,6 @@
 	response_help = "pets"
 	layer = MOB_LAYER
 	vore_active = TRUE
-	has_hands = FALSE
 	movement_cooldown = 2
 	meat_amount = 3
 	makes_dirt = FALSE
