@@ -136,6 +136,8 @@ var/global/list/pokemon_pods = list()//List of pods that ghosts can spawn at
 	R.forceMove(P)
 	P.mob_radio = R //Implant a mob radio on them so they can communicate over a distance and hear what's going on. Being left in the dark isn't fun.
 
+	P.ai_holder.wander = 0 //Disables wandering if the player ghosts or is otherwise removed from their mob
+
 	log_and_message_admins("used \the [src] and became \an [P.tt_desc] named [P.name].")
 
 	to_chat(P, "<span class='notice'>You are a <b>Pokemon</b>, an artifically designed creature. Exiting the sleeve pod, your memories \
