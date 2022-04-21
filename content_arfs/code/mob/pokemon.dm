@@ -15,6 +15,9 @@
 	health = 100
 	maxHealth = 100
 	max_co2 = 10 //Lets them go outside without dying of co2
+	attacktext = list("attacked") //List of verbs used when attacking something. X has attacked Y.
+	has_hands = FALSE 		//Set to true for pmon who should be able to pick things up.
+	humanoid_hands = FALSE 	//Also set this to true if they should be allowed to use guns and other humanoid-only stuff. Don't turn this on.
 	response_help = "pets"
 	layer = MOB_LAYER
 	vore_active = TRUE
@@ -26,12 +29,15 @@
 	melee_damage_lower = 3
 	melee_damage_upper = 9
 	universal_understand = TRUE //Until we can fix the inability to tell who is talking over radios and similar bugs, this will work
+	var/move_cooldown_time = 100 //Global cooldown used for some moves to avoid spam/lag.
+	var/move_cooldown = 0
+	var/shocking = FALSE	//A toggle used by electric types to shock anyone who touches them.
 	var/list/p_types = list()
 	var/list/additional_moves = list()
 	var/resting_heal_max = 2
 	var/is_ditto_transformed = FALSE
 	var/on_manifest = FALSE
-	var/list/active_moves = list()
+	var/list/active_moves = list() //Moves that are passive or toggles can be found here
 
 /mob/living/simple_mob/animal/passive/pokemon/Initialize()
 	. = ..()
@@ -54,8 +60,10 @@
 /mob/living/simple_mob/animal/passive/pokemon/Life()
 	..()
 	rest_regeneration()//Do healing
+	nutrition = 3000 //Eating is hard. Remove if there's ever an easy source of food that isn't mice
 	updatehealth()//Update health overlay
 	if(stat >= DEAD)
+		active_moves = list() //Clear any active moves on death.
 		return FALSE
 	return TRUE
 
@@ -90,24 +98,31 @@
 		msg += "<span class = 'deptradio'>OOC Notes:</span> <a href='?src=\ref[src];ooc_notes=1'>\[View\]</a>"
 
 	if(src.getBruteLoss())
-		if(src.getBruteLoss() < 40)
+		if(src.getBruteLoss() < (maxHealth/2))
 			msg += "<span class='warning'>[T.He] looks bruised.</span>"
 		else
 			msg += "<span class='warning'><B>[T.He] looks severely bruised and bloodied!</B></span>"
 	if(src.getFireLoss())
-		if(src.getFireLoss() < 40)
+		if(src.getFireLoss() < (maxHealth/2))
 			msg += "<span class='warning'>[T.He] looks burned.</span>"
 		else
 			msg += "<span class='warning'><B>[T.He] looks severely burned.</B></span>"
+	if(r_hand)
+		msg += "[T.He] [T.is] holding [bicon(r_hand)] \a [r_hand] in [T.his] right hand."
+	if(l_hand)
+		msg += "[T.He] [T.is] holding [bicon(l_hand)] \a [l_hand] in [T.his] left hand."
 
 	msg += examine_bellies()
+
+	if(M_SHOCK in active_moves)
+		msg += "<span class='warning'>[T.He] [T.is] bristling with a dangerous amount of electricity!</span>"
+
+	msg += "<span class='deptradio'><a href='?src=\ref[src];vore_prefs=1'>\[Mechanical Vore Preferences\]</a></span>"
 
 	if(client && ((client.inactivity / 10) / 60 > 10)) //10 Minutes
 		msg += "\[Inactive for [round((client.inactivity/10)/60)] minutes\]"
 	else if(disconnect_time)
 		msg += "\[Disconnected/ghosted [round(((world.realtime - disconnect_time)/10)/60)] minutes ago\]"
-
-	msg += "<span class='deptradio'><a href='?src=\ref[src];vore_prefs=1'>\[Mechanical Vore Preferences\]</a></span>"
 
 	msg += "*---------*"
 
@@ -132,7 +147,9 @@
 
 /mob/living/simple_mob/animal/passive/pokemon/update_icon()
 	. = ..()
-	pixel_x = default_pixel_x //If they're somehow reset out of their offset, this will correct them. (grabs do this)
+	pixel_x = default_pixel_x 	//If they're somehow reset out of their offset, this will correct them. (grabs do this)
+	cut_overlay(r_hand_sprite)	//Hand sprites don't line up with the mob, just hide them
+	cut_overlay(l_hand_sprite)
 
 /mob/living/proc/set_ooc_notes()
 	set name = "Set OOC Notes"
@@ -188,7 +205,7 @@
 			src.verbs |= /mob/living/simple_mob/animal/passive/pokemon/proc/move_fly
 			src.verbs |= /mob/living/simple_mob/animal/passive/pokemon/proc/move_hover
 		if(P_TYPE_POISON)
-			src.max_tox += 199 //can survive in phoron up to 200 moles
+			src.max_tox += 9999 //can survive in a lot of phoron
 		if(P_TYPE_DARK)
 			src.see_in_dark += 4
 		if(P_TYPE_PSYCH)
@@ -196,6 +213,8 @@
 		if(P_TYPE_GHOST)
 			src.see_in_dark += 6
 			src.verbs |= /mob/living/simple_mob/animal/passive/pokemon/proc/move_phase
+		if(P_TYPE_ELEC)
+			src.verbs |= /mob/living/simple_mob/animal/passive/pokemon/proc/move_shocking
 		else
 			return FALSE
 
@@ -344,6 +363,18 @@
 		density = FALSE
 		force_max_speed = TRUE
 
+/mob/living/simple_mob/animal/passive/pokemon/proc/move_shocking()
+	set name = "Toggle Shocking"
+	set category = "Abilities"
+	set desc = "Toggle your body's natural ability to discharge electricity into anyone who touches you."
+	if (M_SHOCK in active_moves)
+		active_moves -= M_SHOCK
+		custom_emote(1,"is no longer bristling with electricity.")
+	else
+		active_moves |= M_SHOCK
+		custom_emote(1,"is now bristling with electricity!")
+	update_icon()
+
 //Override to stop attacking while grabbing
 /mob/living/simple_mob/animal/passive/pokemon/UnarmedAttack(var/atom/A, var/proximity)
 	if(is_incorporeal())
@@ -414,7 +445,16 @@
 	icon_living = "articuno"
 	icon_dead = "articuno_d"
 	p_types = list(P_TYPE_ICE, P_TYPE_FLY)
-	movement_cooldown = 1
+	movement_cooldown = 1.5
+
+/mob/living/simple_mob/animal/passive/pokemon/leg/lugia
+	name = "Lugia"
+	icon_state = "lugia"
+	icon_living = "lugia"
+	icon_dead = "lugia_d"
+	p_types = list(P_TYPE_PSYCH, P_TYPE_FLY)
+	movement_cooldown = 1.5
+	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/leg/rayquaza
 	name = "Rayquaza"
@@ -422,15 +462,12 @@
 	icon_living = "rayquaza"
 	icon_dead = "rayquaza_d"
 	p_types = list(P_TYPE_FLY)
-	movement_cooldown = 1
-
-
+	movement_cooldown = 1.5
+	has_hands = TRUE
 
 ///////////////////////
 //ALPHABETICAL PLEASE//
 ///////////////////////
-
-
 
 /mob/living/simple_mob/animal/passive/pokemon/absol
 	name = "absol"
@@ -447,6 +484,7 @@
 	icon_dead = "aggron_d"
 	p_types = list(P_TYPE_STEEL)
 	movement_cooldown = 5
+	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/alolanvulpix
 	name = "alolan vulpix"
@@ -463,6 +501,7 @@
 	icon_living = "ampharos"
 	icon_dead = "ampharos_d"
 	p_types = list(P_TYPE_ELEC)
+	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/braixen
 	name = "braixen"
@@ -471,7 +510,7 @@
 	icon_dead = "braixen_d"
 	p_types = list(P_TYPE_FIRE)
 	additional_moves = list(/mob/living/proc/hide)
-
+	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/celebi
 	name = "celebi"
@@ -479,6 +518,7 @@
 	icon_living = "celebi"
 	icon_dead = "celebi_d"
 	p_types = list(P_TYPE_PSYCH, P_TYPE_GRASS)
+	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/charmander
 	name = "charmander"
@@ -486,6 +526,7 @@
 	icon_living = "charmander"
 	icon_dead = "charmander_d"
 	p_types = list(P_TYPE_FIRE)
+	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/ditto
 	name = "ditto"
@@ -504,6 +545,7 @@
 	p_types = list(P_TYPE_DRAGON)
 	additional_moves = list(/mob/living/simple_mob/animal/passive/pokemon/proc/move_fly,
 							/mob/living/simple_mob/animal/passive/pokemon/proc/move_hover)
+	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/dragonite
 	name = "dragonite"
@@ -512,6 +554,7 @@
 	icon_living = "dragonite"
 	icon_dead = "dragonite_d"
 	p_types = list(P_TYPE_DRAGON, P_TYPE_FLY)
+	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/dratini
 	name = "dratini"
@@ -573,6 +616,7 @@
 	icon_dead = "furret_d"
 	p_types = list(P_TYPE_NORM)
 	additional_moves = list(/mob/living/proc/hide)
+	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/gallade
 	name = "gallade"
@@ -581,6 +625,7 @@
 	icon_dead = "gallade_d"
 	p_types = list(P_TYPE_PSYCH, P_TYPE_FIGHT)
 	additional_moves = list(/mob/living/proc/hide)
+	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/gardevoir
 	name = "gardevoir"
@@ -589,6 +634,7 @@
 	icon_dead = "gardevoir_d"
 	p_types = list(P_TYPE_PSYCH, P_TYPE_FAIRY)
 	additional_moves = list(/mob/living/proc/hide)
+	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/gastly
 	name = "gastly"
@@ -607,6 +653,7 @@
 	icon_dead = "gengar_d"
 	p_types = list(P_TYPE_GHOST, P_TYPE_POISON)
 	additional_moves = list(/mob/living/proc/hide)
+	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/glaceon
 	name = "glaceon"
@@ -625,6 +672,7 @@
 	icon_dead = "haunter_d"
 	p_types = list(P_TYPE_GHOST, P_TYPE_POISON)
 	additional_moves = list(/mob/living/proc/hide)
+	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/jolteon
 	name = "jolteon"
@@ -632,39 +680,39 @@
 	icon_state = "jolteon"
 	icon_living = "jolteon"
 	icon_dead = "jolteon_d"
-	var/charge_cooldown_time = 100
-	var/charge_cooldown = 0
 	p_types = list(P_TYPE_ELEC)
 	additional_moves = list(/mob/living/proc/hide)
 
-/mob/living/simple_mob/animal/passive/pokemon/jolteon/attack_hand(mob/user)
+/mob/living/simple_mob/animal/passive/pokemon/attack_hand(mob/user)
 	..()
-	if(!stat)
+	if(!stat && (M_SHOCK in active_moves))
 		electrocute_mob(user, get_area(src), src, 1)
 
-/mob/living/simple_mob/animal/passive/pokemon/jolteon/attackby(obj/item/weapon/W, mob/user, params)
-	electrocute_mob(user, get_area(src), src, W.siemens_coefficient)
-	if(!stat && istype(W, /obj/item/weapon/cell))
-		var/obj/item/weapon/cell/C = W
-		if(charge_cooldown)
-			to_chat(user,"<span class='red'>\the [src.name] is recharging!</span>")
-			return
-		if(C.charge == C.maxcharge)
-			to_chat(user,"<span class='red'>[C] is already fully charged!</span>")
-			return
+/mob/living/simple_mob/animal/passive/pokemon/attackby(obj/item/weapon/W, mob/user, params)
+	if(M_SHOCK in active_moves)
 		electrocute_mob(user, get_area(src), src, W.siemens_coefficient)
-		to_chat(user,"<span class='green'>You charge [C] using [src].</span>")
-		var/chargetogive = rand(50,250)
-		C.give(chargetogive)
-		C.update_icon()
-		charge_cooldown = 1
-		spawn(charge_cooldown_time)
-			charge_cooldown = 0
-		return
+		if(!stat && istype(W, /obj/item/weapon/cell))
+			var/obj/item/weapon/cell/C = W
+			if(move_cooldown)
+				to_chat(user,"<span class='red'>\the [src.name] is recharging!</span>")
+				return
+			if(C.charge == C.maxcharge)
+				to_chat(user,"<span class='red'>[C] is already fully charged!</span>")
+				return
+			electrocute_mob(user, get_area(src), src, W.siemens_coefficient)
+			to_chat(user,"<span class='green'>You charge [C] using [src].</span>")
+			var/chargetogive = rand(50,250)
+			C.give(chargetogive)
+			C.update_icon()
+			move_cooldown = 1
+			spawn(move_cooldown_time)
+				move_cooldown = 0
+			return
 	..()
 
 /mob/living/simple_mob/animal/passive/pokemon/jolteon/bud
 	name = "Bud"
+	active_moves = list(M_SHOCK) //Shocks you by default
 
 /mob/living/simple_mob/animal/passive/pokemon/kirlia
 	name = "kirlia"
@@ -673,6 +721,7 @@
 	icon_dead = "kirlia_d"
 	p_types = list(P_TYPE_PSYCH, P_TYPE_FAIRY)
 	additional_moves = list(/mob/living/proc/hide)
+	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/larvitar
 	name = "larvitar"
@@ -722,6 +771,7 @@
 	p_types = list(P_TYPE_NORM)
 	var/datum/reagents/udder = null
 	movement_cooldown = 3
+	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/miltank/Initialize()
 	udder = new(50)
@@ -763,6 +813,7 @@
 	response_harm   = "hits"
 	p_types = list(P_TYPE_FAIRY)
 	additional_moves = list(/mob/living/proc/hide)
+	has_hands = TRUE	//Ribbon feelers ew
 
 /mob/living/simple_mob/animal/passive/pokemon/umbreon
 	name = "umbreon"
@@ -787,6 +838,7 @@
 	icon_dead = "tentacruel_d"
 	movement_cooldown = 3
 	p_types = list(P_TYPE_WATER)
+	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/ninetales
 	name = "ninetales"
@@ -817,6 +869,7 @@
 	icon_living = "tangela"
 	icon_dead = "tangela_d"
 	p_types = list(P_TYPE_GRASS, P_TYPE_POISON)
+	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/pinsir
 	name = "pinsir"
@@ -824,6 +877,7 @@
 	icon_living = "pinsir"
 	icon_dead = "pinsir_d"
 	p_types = list(P_TYPE_BUG)
+	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/omanyte
 	name = "omanyte"
@@ -834,13 +888,14 @@
 	p_types = list(P_TYPE_ROCK, P_TYPE_WATER)
 	additional_moves = list(/mob/living/proc/hide)
 
-/mob/living/simple_mob/animal/passive/pokemon/magamar
-	name = "magamar"
-	icon_state = "magamar"
-	icon_living = "magamar"
-	icon_dead = "magamar_d"
+/mob/living/simple_mob/animal/passive/pokemon/magmar
+	name = "magmar"
+	icon_state = "magmar"
+	icon_living = "magmar"
+	icon_dead = "magmar_d"
 	movement_cooldown = 3
 	p_types = list(P_TYPE_FIRE)
+	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/magicarp
 	name = "magicarp"
@@ -873,6 +928,7 @@
 	icon_living = "Aerodactyl"
 	icon_dead = "Aerodactyl_d"
 	p_types = list(P_TYPE_ROCK, P_TYPE_FLY)
+	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/lickitung
 	name = "lickitung"
@@ -880,6 +936,7 @@
 	icon_living = "lickitung"
 	icon_dead = "lickitung_d"
 	p_types = list(P_TYPE_NORM)
+	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/cubone
 	name = "cubone"
@@ -888,6 +945,7 @@
 	icon_dead = "cubone_d"
 	p_types = list(P_TYPE_GROUND)
 	additional_moves = list(/mob/living/proc/hide)
+	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/mewtwo
 	name = "mewtwo"
@@ -897,6 +955,16 @@
 	p_types = list(P_TYPE_PSYCH)
 	additional_moves = list(/mob/living/simple_mob/animal/passive/pokemon/proc/move_fly,
 							/mob/living/simple_mob/animal/passive/pokemon/proc/move_hover)
+	has_hands = TRUE
+
+/mob/living/simple_mob/animal/passive/pokemon/purrloin
+	name = "purrloin"
+	icon_state = "purrloin"
+	icon_living = "purrloin"
+	icon_dead = "purrloin_d"
+	p_types = list(P_TYPE_DARK)
+	additional_moves = list(/mob/living/proc/hide)
+	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/ralts
 	name = "ralts"
@@ -904,6 +972,7 @@
 	icon_living = "ralts"
 	icon_dead = "ralts_d"
 	p_types = list(P_TYPE_PSYCH, P_TYPE_FAIRY)
+	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/snorlax
 	name = "snorlax"
