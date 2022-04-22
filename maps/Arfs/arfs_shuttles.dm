@@ -1,4 +1,35 @@
 //////////////////////////////////////////////////////////////
+// Explore shuttle
+
+// The 'shuttle' of the excursion shuttle
+/datum/shuttle/autodock/overmap/excursion
+	name = "Excursion Shuttle"
+	warmup_time = 0
+	current_location = "arfs_excursion_hangar"
+	docking_controller_tag = "expshuttle_dock"
+	shuttle_area = list(/area/shuttle/excursion)
+	fuel_consumption = 3
+	move_time = 20
+
+// The 'ship' of the excursion shuttle
+/obj/effect/overmap/visitable/ship/landable/excursion
+	name = "Excursion Shuttle"
+	desc = "The traditional Excursion Shuttle. NT Approved!"
+	vessel_mass = 10000
+	vessel_size = SHIP_SIZE_SMALL
+	shuttle = "Excursion Shuttle"
+	fore_dir = NORTH
+	known = TRUE
+
+// Exclusive landmark for docking *inside* the station
+/obj/effect/shuttle_landmark/arfs/deck3/excursion
+	name = "A.R.F.S Dallus - Excursion Hanger"
+	landmark_tag = "arfs_excursion_hangar"
+	docking_controller = "expshuttle_dock"
+	base_turf = /turf/simulated/floor/tiled/techfloor/grid
+	base_area = /area/exploration/hanger
+
+//////////////////////////////////////////////////////////////
 // Escape shuttle
 /datum/shuttle/autodock/ferry/emergency/escape
 	name = "Escape"

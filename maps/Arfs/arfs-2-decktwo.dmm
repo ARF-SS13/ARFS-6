@@ -54,24 +54,23 @@
 	tag = "icon-corner_white_full (EAST)"
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/structure/table/reinforced,
+/obj/machinery/computer/ship/engines/adv,
 /turf/simulated/floor/wood,
 /area/bridge)
 "aai" = (
 /obj/effect/floor_decal/corner/black{
 	dir = 10
 	},
-/obj/structure/table/reinforced,
 /obj/item/device/radio/intercom{
-	dir = 8;
+	dir = 1;
 	name = "Captain's Intercom";
-	pixel_x = -21
+	pixel_x = -26;
+	pixel_y = 20
 	},
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen,
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/machinery/computer/ship/helm/adv,
 /turf/simulated/floor/wood,
 /area/bridge)
 "aaj" = (
@@ -81,8 +80,7 @@
 	tag = "icon-corner_white_full (SOUTHWEST)"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/structure/table/reinforced,
-/obj/item/weapon/storage/toolbox,
+/obj/machinery/computer/ship/sensors/adv,
 /turf/simulated/floor/wood,
 /area/bridge)
 "aak" = (
@@ -138,13 +136,7 @@
 	dir = 6;
 	tag = "icon-corner_white (SOUTHEAST)"
 	},
-/obj/machinery/button/remote/blast_door{
-	desc = "A remote control-switch for shutters.";
-	id = "B";
-	name = "Bridge Privacy Shutter";
-	pixel_x = 16;
-	pixel_y = 28
-	},
+/obj/effect/overmap/visitable/ship/arfs,
 /turf/simulated/floor/wood,
 /area/bridge)
 "aaq" = (
@@ -157,6 +149,13 @@
 	tag = "icon-corner_white (NORTHWEST)"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/button/remote/blast_door{
+	desc = "A remote control-switch for shutters.";
+	id = "B";
+	name = "Bridge Privacy Shutter";
+	pixel_x = -5;
+	pixel_y = 6
+	},
 /turf/simulated/floor/wood,
 /area/bridge)
 "aar" = (
@@ -39006,10 +39005,9 @@
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 8
 	},
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_x = -30;
-	tag = "icon-extinguisher_closed (EAST)"
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -26
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/aft_hallway)
@@ -40703,15 +40701,22 @@
 /turf/simulated/floor/plating,
 /area/maintenance/central)
 "caQ" = (
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -26
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/corner/yellow/border{
-	dir = 8
+	dir = 1
 	},
+/obj/machinery/camera/autoname,
 /turf/simulated/floor/tiled/dark,
-/area/engineering/aft_hallway)
+/area/engineering)
 "ccj" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -40954,6 +40959,12 @@
 	},
 /turf/simulated/floor/lino,
 /area/crew_quarters/bar)
+"csB" = (
+/obj/machinery/shipsensors{
+	dir = 1
+	},
+/turf/simulated/floor/airless,
+/area/bridge)
 "ctr" = (
 /obj/structure/table/rack{
 	dir = 8;
@@ -41257,12 +41268,9 @@
 /turf/simulated/floor/tiled/dark,
 /area/engineering/atmos)
 "cPE" = (
-/obj/effect/floor_decal/corner/yellow/border,
-/obj/machinery/camera/autoname{
-	dir = 1
-	},
+/obj/structure/stairs/spawner/west,
 /turf/simulated/floor/tiled/dark,
-/area/engineering)
+/area/crew_quarters/heads/chief)
 "cRw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -41458,6 +41466,8 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
 "dgu" = (
@@ -43614,6 +43624,7 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
+/obj/machinery/camera/autoname,
 /turf/simulated/floor/tiled/dark,
 /area/engineering)
 "gjt" = (
@@ -44095,6 +44106,8 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
 "gVw" = (
@@ -44439,9 +44452,9 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
@@ -44640,6 +44653,8 @@
 	tag = "icon-term (WEST)"
 	},
 /obj/structure/cable/yellow,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
 "hCd" = (
@@ -46636,10 +46651,10 @@
 /turf/simulated/floor/tiled/dark,
 /area/engineering/engine_monitoring)
 "kbe" = (
-/obj/machinery/vending/fitness,
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 1
 	},
+/obj/machinery/vending/fitness,
 /turf/simulated/floor/tiled/dark,
 /area/engineering)
 "kbG" = (
@@ -48818,13 +48833,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
-	},
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/engine_gas)
@@ -49454,6 +49469,21 @@
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8"
+	},
+/obj/machinery/atmospherics/pipe/zpipe/up/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/zpipe/up/scrubbers{
+	dir = 8
+	},
+/obj/structure/cable{
+	d1 = 16;
+	d2 = 0;
+	icon_state = "16-0"
+	},
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
@@ -50615,6 +50645,20 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
+"pEf" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/turf/simulated/floor/plating,
+/area/engineering/engine_room)
 "pEZ" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 4
@@ -50656,6 +50700,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
+"pGh" = (
+/obj/machinery/door/airlock/glass_engineering{
+	name = "Engine"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crew_quarters/heads/chief)
 "pGF" = (
 /obj/structure/table/standard,
 /obj/item/stack/medical/advanced/bruise_pack,
@@ -54915,6 +54965,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/brig)
+"vbu" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crew_quarters/heads/chief)
 "vbG" = (
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 1
@@ -55398,9 +55454,6 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/yellow/border,
-/obj/machinery/camera/autoname{
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -56901,8 +56954,8 @@
 	requires_power = 0
 	})
 "yeI" = (
-/obj/machinery/vending/coffee,
 /obj/effect/floor_decal/corner/yellow/border,
+/obj/machinery/vending/coffee,
 /turf/simulated/floor/tiled/dark,
 /area/engineering)
 "yeT" = (
@@ -84249,7 +84302,7 @@ bCE
 joZ
 sen
 bBK
-cPE
+bCa
 bGs
 cmn
 rHn
@@ -85019,7 +85072,7 @@ iQK
 wBD
 gOK
 sen
-bBL
+caQ
 egQ
 wfZ
 vmn
@@ -85799,7 +85852,7 @@ olb
 nnV
 lMw
 bGs
-bGs
+cPE
 fhF
 rCt
 cAn
@@ -86056,7 +86109,7 @@ dgf
 mPC
 uqk
 bGs
-bGs
+vbu
 fhF
 xnc
 pfg
@@ -86313,7 +86366,7 @@ bGs
 bGs
 bGs
 bGs
-bGs
+pGh
 fhF
 fhF
 fhF
@@ -86570,7 +86623,7 @@ bCk
 ssa
 fhR
 bDh
-caQ
+bCk
 oXT
 bXu
 bmP
@@ -87159,7 +87212,7 @@ aal
 aaa
 aaa
 aaa
-aaa
+csB
 abQ
 abR
 acj
@@ -89658,7 +89711,7 @@ hnc
 gVc
 dgn
 hzv
-vvr
+pEf
 xUs
 gCf
 vZd
