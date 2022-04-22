@@ -118,6 +118,9 @@
 	if(l_hand)
 		msg += "[T.He] [T.is] holding [bicon(l_hand)] \a [l_hand] in [T.his] left hand."
 
+	if(M_TF in active_moves) //Ditto transformed
+		msg += "<span class='alien'><i>They don't look quite right...</i></span>"
+
 	msg += examine_bellies()
 
 	if(M_SHOCK in active_moves)
@@ -406,7 +409,6 @@
 		custom_emote(1,"is now bristling with electricity!")
 	update_icon()
 
-//mob/living/carbon/human/proc/regenerate_other()
 /mob/living/simple_mob/animal/passive/pokemon/proc/move_floral_healing()
 	set name = "Floral Healing"
 	set desc = "Heal a nearby creature."
@@ -462,6 +464,54 @@
 	holder.adjustOxyLoss(-3)
 	holder.adjustCloneLoss(-3)
 
+//Ditto special move
+/mob/living/simple_mob/animal/passive/pokemon/proc/move_imposter()
+	set name = "Transform"
+	set desc = "Transform your body into the shape of another pokemon. Does not transfer special abilities."
+	set category = "Abilities"
+	if(!LAZYLEN(pokemon_choices_list))
+		to_chat(src, "<span class='warning'>WARNING: No pokemon list found! This may be due to there being no pokemon teleporter anywhere on the map. Tell a developer!</span>")
+		return
+	if(move_cooldown)
+		to_chat(src, "<span class='warning'>You need to wait before using another ability!</span>")
+		return
+	var/p_choice = input(src, "Choose your new form.", "[src.name]") as null|anything in pokemon_choices_list
+	if(!p_choice || isnull(p_choice))
+		to_chat(src, "<span class='notice'>Transformation aborted.</span>")
+		return
+	var/new_gender = input(src, "Choose your new form's gender appearance:", "gender selection", "neuter") as null|anything in list("neuter", "male", "female")
+	if(isnull(new_gender))
+		to_chat(src, "<span class='notice'>Transformation aborted.</span>")
+		return
+
+	p_choice = pokemon_choices_list["[p_choice]"]
+	var/mob/living/simple_mob/animal/passive/pokemon/NP = new p_choice()
+	gender 			= 	new_gender
+	icon 			= 	NP.icon
+	icon_state 		= 	NP.icon_state
+	icon_living		=	NP.icon_living
+	icon_dead		= 	"[NP.icon_state]_d"
+	icon_rest		= 	"[NP.icon_state]_rest"
+	tt_desc			=	NP.tt_desc
+	if(islegendary(NP))
+		pixel_x = -32
+		default_pixel_x = -32
+		old_x = -32
+	else
+		pixel_x = -16
+		default_pixel_x = -16
+		old_x = -16
+	visible_message("<span class='notice'>[src] slowly transforms until they look just like a [NP.name]!</span>")
+	to_chat(src,"<span class='green'><i>You've transformed to look like a [NP.name]! You can set your flavor text by using the Set Flavortext verb to match your new appearance.</i></span>")
+	if(NP.type != src.type)//Did we transform into a non-ditto?
+		active_moves |= M_TF //Add the transformed active move
+	else
+		active_moves -= M_TF //Otherwise remove it
+	del(NP)
+	move_cooldown = 1
+	spawn(move_cooldown_time*6)//60s
+		move_cooldown = 0
+		to_chat(src,"<span class='green'>You're ready to use an ability again.</span>")
 
 //Override to stop attacking while grabbing
 /mob/living/simple_mob/animal/passive/pokemon/UnarmedAttack(var/atom/A, var/proximity)
@@ -522,6 +572,7 @@
 	icon = 'content_arfs/icons/mob/mobs/legendary.dmi'
 	pixel_x = -32
 	default_pixel_x = -32
+	old_x = -32
 	health = 200
 	maxHealth = 200
 	meat_amount = 6
@@ -631,7 +682,8 @@
 	icon_living = "ditto"
 	icon_dead = "ditto_d"
 	p_types = list(P_TYPE_NORM)
-	additional_moves = list(/mob/living/proc/hide)
+	additional_moves = list(/mob/living/proc/hide, /mob/living/simple_mob/animal/passive/pokemon/proc/move_imposter)//amogus
+	has_hands = TRUE //Can probably form a hand from its body, plus a lot of its tfs have them
 
 /mob/living/simple_mob/animal/passive/pokemon/dragonair
 	name = "dragonair"
