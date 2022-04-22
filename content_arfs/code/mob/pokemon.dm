@@ -12,6 +12,7 @@
 	icon = 'content_arfs/icons/mob/mobs/pokemon.dmi'
 	pixel_x = -16
 	default_pixel_x = -16
+	old_x = -16
 	health = 100
 	maxHealth = 100
 	max_co2 = 10 //Lets them go outside without dying of co2
@@ -27,22 +28,24 @@
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
 	melee_damage_lower = 3
 	melee_damage_upper = 9
-	universal_understand = TRUE //Until we can fix the inability to tell who is talking over radios and similar bugs, this will work
-	var/move_cooldown_time = 100 //Global cooldown used for some moves to avoid spam/lag.
+	universal_understand = TRUE 	//Until we can fix the inability to tell who is talking over radios and similar bugs, this will work
+	var/image/heal_layer			//Used for resting and some abilities.
+	var/move_cooldown_time = 100 	//Global cooldown used for some moves to avoid spam/lag.
 	var/move_cooldown = 0
-	var/shocking = FALSE	//A toggle used by electric types to shock anyone who touches them.
 	var/list/p_types = list()
 	var/list/additional_moves = list()
 	var/resting_heal_max = 2
 	var/is_ditto_transformed = FALSE
 	var/on_manifest = FALSE
-	var/list/active_moves = list() //Moves that are passive or toggles can be found here
+	var/list/active_moves = list() 	//Moves that are passive or toggles can be found here
 
 /mob/living/simple_mob/animal/passive/pokemon/Initialize()
 	. = ..()
 	verbs |= /mob/living/simple_mob/animal/passive/pokemon/proc/move_rest
 	verbs |= /mob/living/proc/set_flavor_text
 	verbs |= /mob/living/proc/set_ooc_notes
+	heal_layer = image("icon" = 'content_arfs/icons/mob/mobs/pokemon_effects.dmi', "icon_state" = "green_sparkles")
+	heal_layer.appearance_flags = RESET_COLOR
 	icon_rest = "[icon_state]_rest"
 	if(!tt_desc)
 		tt_desc = "[capitalize(initial(icon_state))]"//icon_state will be the species if tt_desc isn't set
@@ -58,6 +61,7 @@
 
 /mob/living/simple_mob/animal/passive/pokemon/Life()
 	..()
+	cut_overlay(heal_layer)
 	rest_regeneration()//Do healing
 	nutrition = 3000 //Eating is hard. Remove if there's ever an easy source of food that isn't mice
 	updatehealth()//Update health overlay
@@ -68,11 +72,15 @@
 
 /mob/living/simple_mob/animal/passive/pokemon/proc/rest_regeneration()
 	if(resting && stat < DEAD && health < maxHealth)
+		//Add a healing effect
+		add_overlay(heal_layer)
+		//Actually heal the mob
 		var/heal_amt = rand(0,resting_heal_max)//Average of 1 health per second for normal pmon. 2 for legendaries.
 		adjustBruteLoss(-heal_amt)
 		adjustOxyLoss(-heal_amt)
 		adjustFireLoss(-heal_amt)
-		if(health > maxHealth)
+		adjustToxLoss(-heal_amt)
+		if(health >= maxHealth)
 			health = maxHealth
 		return TRUE
 	return FALSE
@@ -82,7 +90,6 @@
 		src.Examine_OOC()
 		return 1
 	return ..()
-
 
 /mob/living/simple_mob/animal/passive/pokemon/examine(mob/user)
 	if(alpha <= EFFECTIVE_INVIS)
@@ -127,8 +134,8 @@
 
 	return msg
 
-/mob/living/simple_mob/animal/passive/pokemon/proc/move_rest()
-	set name = "Rest"
+/mob/living/simple_mob/animal/passive/pokemon/proc/move_rest()	//Global move that every pokemon knows. Allows them to heal
+	set name = "Rest"											//without needing complex medical code.
 	set category = "Abilities"
 	set desc = "Lie down and rest in order to slowly heal or just relax."
 	if(src.flying)
@@ -189,14 +196,16 @@
 				src.verbs |= movetogive
 	switch(typetogive)
 		if(P_TYPE_ICE)
-			src.minbodytemp = 100
-			src.heat_damage_per_tick = max(0, (heat_damage_per_tick + 3))
+			src.minbodytemp = minbodytemp/4
+			src.heat_damage_per_tick = max(0, (heat_damage_per_tick*2))
+		if(P_TYPE_GRASS)
+			src.heat_damage_per_tick = max(0, (heat_damage_per_tick*2))
 		if(P_TYPE_FIRE)
-			src.maxbodytemp = 1000
-			src.cold_damage_per_tick = max(0, (heat_damage_per_tick - 3))
+			src.maxbodytemp = maxbodytemp*4
+			src.cold_damage_per_tick = max(0, (heat_damage_per_tick/2))
 		if(P_TYPE_WATER)
 			src.aquatic_movement = 1
-			src.heat_damage_per_tick = max(0, (heat_damage_per_tick - 3))
+			src.heat_damage_per_tick = max(0, (heat_damage_per_tick/2))
 		if(P_TYPE_FIGHT)
 			src.melee_damage_lower += 3
 			src.melee_damage_upper += 3
@@ -214,6 +223,15 @@
 			src.verbs |= /mob/living/simple_mob/animal/passive/pokemon/proc/move_phase
 		if(P_TYPE_ELEC)
 			src.verbs |= /mob/living/simple_mob/animal/passive/pokemon/proc/move_shocking
+		if(P_TYPE_FAIRY)
+			src.verbs |= /mob/living/simple_mob/animal/passive/pokemon/proc/move_floral_healing
+		if(P_TYPE_STEEL)
+			src.max_tox += 99
+			src.maxbodytemp = maxbodytemp*2
+			src.minbodytemp = minbodytemp/2
+			src.maxHealth = maxHealth*1.5 //50% more health
+			src.health = health*1.5
+			src.heat_damage_per_tick = max(0, (heat_damage_per_tick*2))//melty
 		else
 			return FALSE
 
@@ -281,8 +299,15 @@
 	if(get_dist(P, T) > world.view)
 		to_chat(P,"<span class='alien'>You focus on your telepathy, but your target has moved too far away for them to hear you.</span>")
 		return
-	visible_message("[P]'s head glows with telepathic energy.", "<span class='alien'><b>You telepathically say to [T]:</b> <i>[message]</i></span>", "<span class='notice'>You hear a quiet humming sound.</span>")
+	custom_emote(1,"briefly glows with telepathic energy.")
+	to_chat(src,"<span class='alien'><b>You telepathically say to [T]:</b> <i>[message]</i></span>")
 	to_chat(T,"<span class='alien'><b>You hear [P]'s voice in your head:</b> <i>[message]</i></span>")
+	for (var/mob/G in player_list)
+		if (istype(G, /mob/new_player))
+			continue
+		else if(isobserver(G) && G.is_preference_enabled(/datum/client_preference/ghost_ears))
+			if(is_preference_enabled(/datum/client_preference/whisubtle_vis) || G.client.holder)
+				to_chat(G, "<span class='alien'><b>[src] telepathically says to [T]:</b> <i>[message]</i></span>")
 	log_say("(POKETELEPATHY to [key_name(T)]) [message]", src)
 
 /mob/living/simple_mob/animal/passive/pokemon/proc/move_phase()
@@ -366,6 +391,13 @@
 	set name = "Toggle Shocking"
 	set category = "Abilities"
 	set desc = "Toggle your body's natural ability to discharge electricity into anyone who touches you."
+	if(move_cooldown)
+		to_chat(src, "<span class='warning'>You need to wait before using another ability!</span>")
+		return FALSE
+	move_cooldown = 1
+	spawn(move_cooldown_time)
+		move_cooldown = 0
+		to_chat(src,"<span class='green'>You're ready to use an ability again.</span>")
 	if (M_SHOCK in active_moves)
 		active_moves -= M_SHOCK
 		custom_emote(1,"is no longer bristling with electricity.")
@@ -373,6 +405,63 @@
 		active_moves |= M_SHOCK
 		custom_emote(1,"is now bristling with electricity!")
 	update_icon()
+
+//mob/living/carbon/human/proc/regenerate_other()
+/mob/living/simple_mob/animal/passive/pokemon/proc/move_floral_healing()
+	set name = "Floral Healing"
+	set desc = "Heal a nearby creature."
+	set category = "Abilities"
+
+	if(stat)
+		to_chat(src, "<span class='warning'>Can't use that ability in your state!</span>")
+		return FALSE
+	else if(M_GHOSTED in active_moves)
+		to_chat(src, "<span class='warning'>You can't use that while phase shifted!</span>")
+		return FALSE
+	else if(move_cooldown)
+		to_chat(src, "<span class='warning'>You need to wait before using another ability!</span>")
+		return FALSE
+
+	var/list/viewed = oview(1)
+	var/list/targets = list()
+	for(var/mob/living/L in viewed)
+		targets += L
+	if(!targets.len)
+		to_chat(src,"<span class='warning'>Nobody nearby to mend!</span>")
+		return FALSE
+
+	var/mob/living/target = tgui_input_list(src,"Pick someone to mend:","Mend Other", targets)
+	if(!target)
+		return FALSE
+	move_cooldown = 1
+	spawn(move_cooldown_time*2)//Longer cooldown
+		move_cooldown = 0
+		to_chat(src,"<span class='green'>You're ready to use an ability again.</span>")
+	target.add_modifier(/datum/modifier/pokemon/floral_healing,10 SECONDS)
+	playsound(target, 'sound/effects/weather/wind/wind_5_1.ogg', 100, 1)
+	visible_message("<span class='notice'>[src] and [target] briefly glow with pink fairy power before a swirling cloud of flower petals surrounds [target]...</span>")
+	face_atom(target)
+	return TRUE
+
+/datum/modifier/pokemon/floral_healing
+	name = "Floral Healing"
+	desc = "Refreshing flower petals surround you."
+	mob_overlay_state = "green_sparkles"
+
+	on_created_text = "<span class='notice'>Flower petals sudenly swirl around you, filling you with reinvigorating energy.</span>"
+	on_expired_text = "<span class='notice'>The flower petals suddenly fade away, leaving you feeling much better than before.</span>"
+	stacks = MODIFIER_STACK_EXTEND
+
+/datum/modifier/pokemon/floral_healing/tick()
+	if(!holder.getBruteLoss() && !holder.getFireLoss() && !holder.getToxLoss() && !holder.getOxyLoss() && !holder.getCloneLoss()) // No point existing if the spell can't heal.
+		expire()
+		return
+	holder.adjustBruteLoss(-3)
+	holder.adjustFireLoss(-3)
+	holder.adjustToxLoss(-3)
+	holder.adjustOxyLoss(-3)
+	holder.adjustCloneLoss(-3)
+
 
 //Override to stop attacking while grabbing
 /mob/living/simple_mob/animal/passive/pokemon/UnarmedAttack(var/atom/A, var/proximity)
