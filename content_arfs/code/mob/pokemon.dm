@@ -889,6 +889,15 @@
 	icon_dead = "leafeon_d"
 	p_types = list(P_TYPE_GRASS)
 
+/mob/living/simple_mob/animal/passive/pokemon/linoone
+	name = "linoone"
+	icon_state = "linoone"
+	icon_living = "linoone"
+	icon_dead = "linoone_d"
+	p_types = list(P_TYPE_NORM)
+	additional_moves = list(/mob/living/proc/hide)
+	has_hands = TRUE
+
 /mob/living/simple_mob/animal/passive/pokemon/growlithe
 	name = "growlithe"
 	icon_state = "growlithe"
@@ -1136,6 +1145,15 @@
 	icon_living = "vaporeon"
 	icon_dead = "vaporeon_d"
 	p_types = list(P_TYPE_WATER)
+
+/mob/living/simple_mob/animal/passive/pokemon/zigzagoon
+	name = "zigzagoon"
+	icon_state = "zigzagoon"
+	icon_living = "zigzagoon"
+	icon_dead = "zigzagoon_d"
+	p_types = list(P_TYPE_NORM)
+	additional_moves = list(/mob/living/proc/hide)
+	has_hands = TRUE
 
 ///////////////////////
 //ALPHABETICAL PLEASE//
