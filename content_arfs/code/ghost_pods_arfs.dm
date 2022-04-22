@@ -15,7 +15,8 @@ var/global/list/pokemon_pods = list()//List of pods that ghosts can spawn at
 	var/do_announcement = TRUE //FALSE won't give them a choice of announcing
 	var/list/remove_paths = list(/mob/living/simple_mob/animal/passive/pokemon/leg, 		//Can tailor this list for different types of
 						    /mob/living/simple_mob/animal/passive/pokemon,					//spawners down the line
-						    /mob/living/simple_mob/animal/passive/pokemon/jolteon/bud)
+						    /mob/living/simple_mob/animal/passive/pokemon/jolteon/bud,
+							/mob/living/simple_mob/animal/passive/pokemon/leg/lugia/andy)
 
 /obj/structure/ghost_pod/ghost_activated/pokemon/Initialize()
 	. = ..()
