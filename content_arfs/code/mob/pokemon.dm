@@ -456,6 +456,15 @@
 	movement_cooldown = 1.5
 	has_hands = TRUE
 
+/mob/living/simple_mob/animal/passive/pokemon/leg/lugia/andy
+	health = 500
+	maxHealth = 500
+	vore_capacity = 2
+	size_multiplier = 2
+	default_pixel_y = 16
+	pixel_y = 16
+	old_y = 16
+
 /mob/living/simple_mob/animal/passive/pokemon/leg/rayquaza
 	name = "Rayquaza"
 	icon_state = "rayquaza"
@@ -549,7 +558,7 @@
 
 /mob/living/simple_mob/animal/passive/pokemon/dragonite
 	name = "dragonite"
-	desc = "It can circle the globe in just 16 hours. It is a kindhearted Pokémon that leads lost and foundering ships in a storm to the safety of land."
+	desc = "It can circle the globe in just 16 hours. It is a kindhearted Pokï¿½mon that leads lost and foundering ships in a storm to the safety of land."
 	icon_state = "dragonite"
 	icon_living = "dragonite"
 	icon_dead = "dragonite_d"
@@ -568,7 +577,7 @@
 
 /mob/living/simple_mob/animal/passive/pokemon/eevee
 	name = "eevee"
-	desc = "Eevee has an unstable genetic makeup that suddenly mutates due to its environment. Radiation from various stones causes this Pokémon to evolve."
+	desc = "Eevee has an unstable genetic makeup that suddenly mutates due to its environment. Radiation from various stones causes this Pokï¿½mon to evolve."
 	icon_state = "eevee"
 	icon_living = "eevee"
 	icon_dead = "eevee_d"
@@ -638,7 +647,7 @@
 
 /mob/living/simple_mob/animal/passive/pokemon/gastly
 	name = "gastly"
-	desc = "Almost invisible, this gaseous Pokémon cloaks the target and puts it to sleep without notice."
+	desc = "Almost invisible, this gaseous Pokï¿½mon cloaks the target and puts it to sleep without notice."
 	icon_state = "gastly"
 	icon_living = "gastly"
 	icon_dead = "gastly_d"
@@ -805,7 +814,7 @@
 
 /mob/living/simple_mob/animal/passive/pokemon/sylveon
 	name = "sylveon"
-	desc = "Sylveon, the Intertwining Pokémon. Sylveon affectionately wraps its ribbon-like feelers around its Trainer's arm as they walk together."
+	desc = "Sylveon, the Intertwining Pokï¿½mon. Sylveon affectionately wraps its ribbon-like feelers around its Trainer's arm as they walk together."
 	icon_state = "sylveon"
 	icon_living = "sylveon"
 	icon_dead = "sylveon_d"
