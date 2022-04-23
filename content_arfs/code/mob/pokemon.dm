@@ -35,7 +35,6 @@
 	var/list/p_types = list()
 	var/list/additional_moves = list()
 	var/resting_heal_max = 2
-	var/is_ditto_transformed = FALSE
 	var/on_manifest = FALSE
 	var/list/active_moves = list() 	//Moves that are passive or toggles can be found here
 
@@ -1105,6 +1104,17 @@
 	additional_moves = list(/mob/living/proc/hide)
 	has_hands = TRUE
 
+/mob/living/simple_mob/animal/passive/pokemon/mew
+	name = "mew"
+	icon_state = "mew"
+	icon_living = "mew"
+	icon_dead = "mew_d"
+	p_types = list(P_TYPE_PSYCH)
+	additional_moves = list(/mob/living/simple_mob/animal/passive/pokemon/proc/move_fly,
+							/mob/living/simple_mob/animal/passive/pokemon/proc/move_hover,
+							/mob/living/simple_mob/animal/passive/pokemon/proc/move_imposter)
+	has_hands = TRUE
+
 /mob/living/simple_mob/animal/passive/pokemon/mewtwo
 	name = "mewtwo"
 	icon_state = "mewtwo"
@@ -1154,6 +1164,32 @@
 	p_types = list(P_TYPE_NORM)
 	additional_moves = list(/mob/living/proc/hide)
 	has_hands = TRUE
+
+/mob/living/simple_mob/animal/passive/pokemon/zoroark
+	name = "zoroark"
+	icon_state = "zoroark"
+	icon_living = "zoroark"
+	icon_dead = "zoroark_d"
+	p_types = list(P_TYPE_DARK)
+	additional_moves = list(/mob/living/proc/hide, /mob/living/simple_mob/animal/passive/pokemon/proc/move_imposter)
+	has_hands = TRUE
+
+/mob/living/simple_mob/animal/passive/pokemon/zorua
+	name = "zorua"
+	icon_state = "zorua"
+	icon_living = "zorua"
+	icon_dead = "zorua_d"
+	p_types = list(P_TYPE_DARK)
+	additional_moves = list(/mob/living/proc/hide, /mob/living/simple_mob/animal/passive/pokemon/proc/move_imposter)
+/* have sprites, will import them later
+/mob/living/simple_mob/animal/passive/pokemon/zorua_hisuian
+	name = "hisuian zorua"
+	icon_state = "zorua_hisuian"
+	icon_living = "zorua_hisuian"
+	icon_dead = "zorua_hisuian_d"
+	p_types = list(P_TYPE_NORM, P_TYPE_GHOST)
+	additional_moves = list(/mob/living/proc/hide, /mob/living/simple_mob/animal/passive/pokemon/proc/move_imposter)
+*/
 
 ///////////////////////
 //ALPHABETICAL PLEASE//
