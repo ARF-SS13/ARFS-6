@@ -1,28 +1,23 @@
 
-// #define Z_LEVEL_BEACH						13
-// #define Z_LEVEL_BEACH_CAVE					14
-#define Z_LEVEL_AEROSTAT					13
-#define Z_LEVEL_AEROSTAT_SURFACE			14
-#define Z_LEVEL_DEBRISFIELD					15
-#define Z_LEVEL_FUELDEPOT					16
-#define Z_LEVEL_OFFMAP1						17
-#define Z_LEVEL_GATEWAY						18
-#define Z_LEVEL_OM_ADVENTURE				19
-#define Z_LEVEL_SPACE_ROCKS					20
-//#define Z_LEVEL_CENTCOM						23
-
-
+#define Z_LEVEL_BEACH						14
+#define Z_LEVEL_BEACH_CAVE					15
+#define Z_LEVEL_AEROSTAT					16
+#define Z_LEVEL_AEROSTAT_SURFACE			17
+#define Z_LEVEL_DEBRISFIELD					18
+#define Z_LEVEL_FUELDEPOT					19
+#define Z_LEVEL_OFFMAP1						20
+#define Z_LEVEL_GATEWAY						21
+#define Z_LEVEL_OM_ADVENTURE				22
+#define Z_LEVEL_SPACE_ROCKS					23
 
 /datum/skybox_settings/stellar_delight
 	icon_state = "space5"
 	use_stars = FALSE
 
-// /datum/planet/virgo3b
-// 	expected_z_levels = list(Z_LEVEL_CENTCOM)
-// /datum/planet/virgo4
-// 	expected_z_levels = list(Z_LEVEL_BEACH)
+/datum/planet/virgo4
+	expected_z_levels = list(Z_LEVEL_BEACH)
 
-#include "../submaps/space_rocks/space_rocks.dm"
+#include "submaps/space_rocks/space_rocks.dm"
 /datum/map_template/common_lateload/space_rocks
 	name = "V3b Asteroid Field"
 	desc = "Space debris is common in V3b's orbit due to the proximity of Virgo 3"
@@ -43,7 +38,7 @@
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES
 
 
-#include "../expedition_vr/aerostat/_aerostat_science_outpost.dm"
+#include "submaps/aerostat/_aerostat_science_outpost.dm"
 
 /obj/effect/overmap/visitable/sector/virgo2/Initialize()
 	for(var/obj/effect/overmap/visitable/ship/landable/excursion/sd in world)
@@ -57,4 +52,4 @@
 	associated_map_datum = /datum/map_z_level/common_lateload/away_aerostat
 
 
-#include "../offmap_vr/common_offmaps.dm"
+//#include "../offmap_vr/common_offmaps.dm"

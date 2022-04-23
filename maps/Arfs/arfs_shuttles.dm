@@ -7,19 +7,25 @@
 	warmup_time = 0
 	current_location = "arfs_excursion_hangar"
 	docking_controller_tag = "expshuttle_dock"
-	shuttle_area = list(/area/shuttle/excursion)
+	shuttle_area = list(/area/shuttle/excursion/cockpit, /area/shuttle/excursion/general, /area/shuttle/excursion/cargo, /area/shuttle/excursion/power)
 	fuel_consumption = 3
+	move_direction = NORTH
 	move_time = 20
 
 // The 'ship' of the excursion shuttle
 /obj/effect/overmap/visitable/ship/landable/excursion
 	name = "Excursion Shuttle"
-	desc = "The traditional Excursion Shuttle. NT Approved!"
-	vessel_mass = 10000
+	desc = "The traditional Excursion Shuttle. ARF Approved!"
+	vessel_mass = 8000
 	vessel_size = SHIP_SIZE_SMALL
 	shuttle = "Excursion Shuttle"
 	fore_dir = NORTH
 	known = TRUE
+
+/obj/machinery/computer/shuttle_control/explore/excursion
+	name = "short jump console"
+	shuttle_tag = "Excursion Shuttle"
+	req_one_access = list(access_pilot)
 
 // Exclusive landmark for docking *inside* the station
 /obj/effect/shuttle_landmark/arfs/deck3/excursion
