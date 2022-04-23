@@ -24,5 +24,6 @@
 
 #define M_GHOSTED		"ghosted" //A ghost is using their phase move
 #define M_SHOCK			"shocking" //Electric types shocking people who touch them
+#define	M_TF			"transformed" //A ditto or something has transformed
 
 #define MAP_LEVEL_VORESPAWN	0x100 // Z-levels players are allowed to late join to via vorish means. Usually non-dangerous locations.
