@@ -9,6 +9,9 @@
 /area/shuttle/excursion/general
 	name = "\improper Excursion Shuttle"
 
+/area/shuttle/excursion/medical
+	name = "\improper Excursion Shuttle Medical"
+
 /area/shuttle/excursion/cockpit
 	name = "\improper Excursion Shuttle Cockpit"
 

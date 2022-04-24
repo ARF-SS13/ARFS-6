@@ -5149,6 +5149,9 @@
 	dir = 8
 	},
 /obj/effect/landmark/vermin,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/exploration/hanger)
 "akx" = (
@@ -7422,6 +7425,12 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/aux{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor/reinforced,
 /area/exploration/hanger)
@@ -10022,14 +10031,12 @@
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
 "aub" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "explo"
 	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/fuel,
 /turf/simulated/floor/tiled/steel,
 /area/shuttle/excursion/general)
 "auc" = (
@@ -10043,6 +10050,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/universal,
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "explo"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel,
 /area/shuttle/excursion/general)
@@ -10077,6 +10087,9 @@
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "explo"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/steel,
 /area/shuttle/excursion/general)
 "aug" = (
@@ -10095,6 +10108,12 @@
 	},
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "explo"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 10
 	},
 /turf/simulated/floor/tiled/steel,
 /area/shuttle/excursion/general)
@@ -10204,11 +10223,14 @@
 /turf/simulated/floor/lino,
 /area/security/detectives_office)
 "aut" = (
-/obj/machinery/atmospherics/pipe/tank/phoron/full{
-	dir = 4
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
 	},
-/turf/simulated/floor/plating,
-/area/engineering/thrusters)
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/exploration/hanger)
 "auu" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -10236,9 +10258,6 @@
 /turf/simulated/floor/plating,
 /area/ai/outside)
 "auw" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/aux{
-	dir = 8
-	},
 /obj/structure/cable/cyan{
 	d1 = 4;
 	d2 = 8;
@@ -10250,6 +10269,9 @@
 	},
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "explo"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/universal{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel,
 /area/shuttle/excursion/general)
@@ -10325,9 +10347,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/deckthree/aft)
 "auE" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/aux{
-	dir = 10
-	},
 /obj/structure/cable/cyan{
 	d1 = 4;
 	d2 = 8;
@@ -10335,6 +10354,9 @@
 	},
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "explo"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/aux{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/steel,
 /area/shuttle/excursion/power)
@@ -10387,6 +10409,9 @@
 	},
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "explo"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/aux{
+	dir = 10
 	},
 /turf/simulated/floor/tiled/steel,
 /area/shuttle/excursion/power)
@@ -10457,10 +10482,12 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/universal,
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "explo"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/aux,
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
 /turf/simulated/floor/tiled/steel,
 /area/shuttle/excursion/general)
 "auN" = (
@@ -10496,7 +10523,13 @@
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "explo"
 	},
-/obj/machinery/recharge_station,
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "explo"
+	},
+/obj/machinery/atmospherics/portables_connector/aux{
+	dir = 1
+	},
+/obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/tiled/steel,
 /area/shuttle/excursion/power)
 "auQ" = (
@@ -10548,9 +10581,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/evidence_storage)
 "auU" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
@@ -10629,6 +10659,7 @@
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "explo"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
 /turf/simulated/floor/tiled/steel,
 /area/shuttle/excursion/general)
 "avb" = (
@@ -10942,6 +10973,9 @@
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "explo"
 	},
+/obj/machinery/atmospherics/binary/pump/fuel{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/steel,
 /area/shuttle/excursion/cargo)
 "avI" = (
@@ -11209,9 +11243,6 @@
 /turf/simulated/floor/plating,
 /area/ai/outside)
 "awi" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -11308,9 +11339,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/security_port)
 "aws" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -11318,6 +11346,9 @@
 	dir = 4
 	},
 /obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/engineering/thrusters)
 "awt" = (
@@ -11581,20 +11612,18 @@
 /turf/simulated/floor/tiled/dark,
 /area/exploration/gear)
 "awV" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 8
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 5
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 10
-	},
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "explo"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/fuel,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/steel,
 /area/shuttle/excursion/cargo)
@@ -11713,6 +11742,9 @@
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "explo"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/steel,
 /area/shuttle/excursion/cargo)
 "axh" = (
@@ -11802,6 +11834,9 @@
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "explo"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/steel,
 /area/shuttle/excursion/cargo)
 "axn" = (
@@ -11853,6 +11888,12 @@
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "explo"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/steel,
 /area/shuttle/excursion/cargo)
@@ -11927,6 +11968,9 @@
 	},
 /obj/effect/shuttle_landmark/arfs/deck3/excursion,
 /obj/effect/overmap/visitable/ship/landable/excursion,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
 /turf/simulated/floor/tiled/steel,
 /area/shuttle/excursion/cargo)
 "axw" = (
@@ -11954,6 +11998,9 @@
 	},
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "explo"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel,
 /area/shuttle/excursion/cargo)
@@ -12693,9 +12740,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
 "ayS" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
 	},
@@ -12703,6 +12747,7 @@
 	dir = 4
 	},
 /obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/manifold/hidden/fuel,
 /turf/simulated/floor/plating,
 /area/engineering/thrusters)
 "ayT" = (
@@ -12920,6 +12965,9 @@
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "explo"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
 /turf/simulated/floor/tiled/steel,
 /area/shuttle/excursion/cargo)
 "azp" = (
@@ -12935,6 +12983,9 @@
 	},
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "explo"
+	},
+/obj/machinery/atmospherics/binary/pump/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel,
 /area/shuttle/excursion/cargo)
@@ -12968,6 +13019,9 @@
 /obj/effect/map_helper/airlock/atmos/pump_out_internal,
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "explo"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
 	},
 /turf/simulated/floor/tiled/steel,
 /area/shuttle/excursion/cargo)
@@ -14236,24 +14290,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/mixing)
-"aBK" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/catwalk,
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/plating,
-/area/engineering/thrusters)
 "aBL" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
@@ -14267,15 +14303,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 4
-	},
 /obj/structure/catwalk,
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/fuel,
 /turf/simulated/floor/plating,
 /area/engineering/thrusters)
 "aBN" = (
@@ -14315,9 +14349,6 @@
 /turf/simulated/floor/plating,
 /area/hallway/primary/deckthree/aft)
 "aBP" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -14330,6 +14361,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/fuel,
 /turf/simulated/floor/plating,
 /area/engineering/thrusters)
 "aBQ" = (
@@ -14436,9 +14468,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/security_cell_hallway)
 "aBZ" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -14451,6 +14480,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/fuel,
 /turf/simulated/floor/plating,
 /area/engineering/thrusters)
 "aCa" = (
@@ -14652,9 +14682,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
 "aCp" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
 	},
@@ -14667,6 +14694,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/fuel,
 /turf/simulated/floor/plating,
 /area/engineering/thrusters)
 "aCq" = (
@@ -14886,12 +14914,10 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/deckthree/central)
 "aCL" = (
-/obj/machinery/atmospherics/pipe/tank/phoron/full{
-	dir = 4
-	},
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/engineering/thrusters)
 "aCM" = (
@@ -14990,12 +15016,12 @@
 /turf/simulated/floor/reinforced,
 /area/rnd/mixing)
 "aCT" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 9
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
 	},
-/obj/structure/catwalk,
-/turf/simulated/floor/plating,
-/area/engineering/thrusters)
+/turf/simulated/floor/tiled/dark,
+/area/exploration/hanger)
 "aCU" = (
 /obj/random/maintenance/security,
 /obj/effect/decal/cleanable/dirt,
@@ -17468,15 +17494,13 @@
 /turf/simulated/floor/tiled/white,
 /area/security/detectives_office)
 "aIP" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
-/obj/effect/floor_decal/industrial/danger{
-	dir = 8
-	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 4
-	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark,
 /area/exploration/hanger)
 "aIQ" = (
@@ -18165,6 +18189,9 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/exploration/hanger)
 "aKp" = (
@@ -19652,9 +19679,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/exploration/hallway)
 "aNJ" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
-	dir = 4
-	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/yellow,
 /turf/simulated/floor/plating,
 /area/exploration/hanger)
 "aNK" = (
@@ -19685,6 +19710,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark,
 /area/exploration/hanger)
 "aNP" = (
@@ -19728,6 +19754,12 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/aux{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/exploration/hanger)
@@ -21597,6 +21629,9 @@
 /obj/machinery/camera/autoname{
 	dir = 8
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 9
+	},
 /turf/simulated/floor/plating,
 /area/exploration/hanger)
 "aSx" = (
@@ -22939,6 +22974,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/exploration/hanger)
 "aVH" = (
@@ -24204,6 +24242,9 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/exploration/hanger)
 "aYP" = (
@@ -24692,10 +24733,14 @@
 	dir = 6
 	},
 /obj/machinery/hologram/holopad,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
 /turf/simulated/floor/tiled/dark,
 /area/exploration/hanger)
 "bae" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark,
 /area/exploration/hanger)
 "bai" = (
@@ -24705,6 +24750,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark,
 /area/exploration/hanger)
 "baj" = (
@@ -24717,6 +24763,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark,
 /area/exploration/hanger)
 "bal" = (
@@ -24728,6 +24775,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark,
 /area/exploration/hanger)
 "bam" = (
@@ -24737,21 +24785,29 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/exploration/hanger)
 "ban" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/hologram/holopad,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark,
 /area/exploration/hanger)
 "bao" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark,
 /area/exploration/hanger)
 "bap" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
 /turf/simulated/floor/tiled/dark,
@@ -24766,6 +24822,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/exploration/hanger)
 "bar" = (
@@ -24777,6 +24836,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/exploration/hanger)
@@ -24796,10 +24858,16 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/exploration/hanger)
 "bau" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
 /turf/simulated/floor/tiled/dark,
@@ -24844,6 +24912,9 @@
 	dir = 10
 	},
 /obj/machinery/hologram/holopad,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
 /turf/simulated/floor/tiled/dark,
 /area/exploration/hanger)
 "baD" = (
@@ -24861,6 +24932,7 @@
 "baF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/hologram/holopad,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark,
 /area/exploration/hanger)
 "baG" = (
@@ -24871,6 +24943,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/hologram/holopad,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark,
 /area/exploration/hanger)
 "baH" = (
@@ -24881,6 +24954,12 @@
 	icon_state = "1-8"
 	},
 /obj/machinery/hologram/holopad,
+/obj/machinery/atmospherics/pipe/simple/hidden/aux{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/exploration/hanger)
 "baI" = (
@@ -24894,6 +24973,54 @@
 	pixel_y = 24
 	},
 /turf/simulated/floor/tiled/dark,
+/area/exploration/hanger)
+"bcx" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/dark,
+/area/exploration/hanger)
+"dVW" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/aux{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/dark,
+/area/exploration/hanger)
+"feL" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/universal,
+/turf/simulated/floor/tiled/dark,
+/area/exploration/hanger)
+"gHQ" = (
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "explo"
+	},
+/obj/machinery/recharge_station,
+/turf/simulated/floor/tiled/steel,
+/area/shuttle/excursion/general)
+"iWt" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 8
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/exploration/hanger)
+"uie" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/exploration/hanger)
+"unD" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow,
+/turf/simulated/floor/plating,
 /area/exploration/hanger)
 
 (1,1,1) = {"
@@ -52867,7 +52994,7 @@ aoo
 aVi
 akx
 apo
-aut
+arN
 aCL
 aDI
 awu
@@ -53125,7 +53252,7 @@ aVi
 akE
 aqf
 auU
-aCT
+arN
 aDJ
 awL
 aKO
@@ -53637,7 +53764,7 @@ aoo
 aoo
 aVi
 aEA
-asG
+atm
 aws
 aCZ
 aDN
@@ -53894,7 +54021,7 @@ aoo
 aoo
 aVi
 aEA
-asG
+atm
 ayS
 aDk
 aDT
@@ -54922,8 +55049,8 @@ aoo
 aoo
 aoo
 aVi
-asG
-aBK
+atm
+aBM
 asG
 aEj
 awu
@@ -55179,7 +55306,7 @@ aoo
 aoo
 aoo
 aVi
-asG
+atm
 aBM
 arN
 aDJ
@@ -55436,7 +55563,7 @@ aoo
 aoo
 aoo
 aVi
-asG
+atm
 aBP
 aCW
 aDM
@@ -55693,7 +55820,7 @@ aoo
 aoo
 aoo
 aVi
-asG
+atm
 aBZ
 aCZ
 aDN
@@ -55950,7 +56077,7 @@ aoo
 aoo
 aoo
 aVi
-asG
+atm
 aCp
 aDk
 aDT
@@ -58003,8 +58130,8 @@ aoo
 aoo
 aoo
 aFv
-aKe
-aKe
+aGj
+unD
 bas
 aKe
 aKe
@@ -58260,8 +58387,8 @@ aoo
 aoo
 aoo
 aFv
-aKe
-aKe
+aGj
+unD
 aEG
 aKe
 aKe
@@ -58517,7 +58644,7 @@ aoo
 aoo
 aoo
 aFv
-aKe
+aGj
 aSw
 baB
 aKe
@@ -59270,7 +59397,7 @@ aVz
 bab
 bae
 bak
-bae
+aCT
 bae
 bae
 bae
@@ -59278,7 +59405,7 @@ baF
 bae
 bae
 bae
-bae
+aCT
 bae
 bak
 bae
@@ -59286,7 +59413,7 @@ bae
 bae
 baF
 bae
-bae
+aCT
 bak
 bap
 aVz
@@ -61837,7 +61964,7 @@ aTl
 axd
 atZ
 aPQ
-aVG
+aut
 aBT
 akr
 akr
@@ -62614,7 +62741,7 @@ aLa
 akr
 aks
 alO
-anW
+gHQ
 aps
 aps
 arJ
@@ -63649,9 +63776,9 @@ arV
 arV
 aoM
 arV
+iWt
 arV
 arV
-aIP
 arV
 aNS
 arV
@@ -63897,22 +64024,22 @@ baC
 bai
 bal
 bam
-bam
-bam
-bam
+aIP
+aIP
+aIP
 baG
-bam
-bam
-bam
+aIP
+aIP
+aIP
 bal
+aIP
 bam
-bam
-bam
-bam
-bam
+aIP
+aIP
+aIP
 baH
 bae
-bae
+uie
 bao
 bau
 aVz
@@ -64167,9 +64294,9 @@ baE
 aVz
 aVz
 aVz
-aVz
-aVz
-aVz
+dVW
+feL
+bcx
 baE
 baj
 aVz
