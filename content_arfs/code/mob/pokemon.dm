@@ -31,11 +31,10 @@
 	universal_understand = TRUE 	//Until we can fix the inability to tell who is talking over radios and similar bugs, this will work
 	var/image/heal_layer			//Used for resting and some abilities.
 	var/move_cooldown_time = 100 	//Global cooldown used for some moves to avoid spam/lag.
-	var/move_cooldown = 0
+	var/move_cooldown = FALSE
 	var/list/p_types = list()
 	var/list/additional_moves = list()
 	var/resting_heal_max = 2
-	var/is_ditto_transformed = FALSE
 	var/on_manifest = FALSE
 	var/list/active_moves = list() 	//Moves that are passive or toggles can be found here
 
@@ -65,10 +64,41 @@
 	rest_regeneration()//Do healing
 	nutrition = 3000 //Eating is hard. Remove if there's ever an easy source of food that isn't mice
 	updatehealth()//Update health overlay
-	if(stat >= DEAD)
-		active_moves = list() //Clear any active moves on death.
-		return FALSE
 	return TRUE
+
+/mob/living/simple_mob/animal/passive/pokemon/death(gibbed,deathmessage="seizes up and falls limp...")
+	//Clean up active moves
+	if(M_GHOSTED in active_moves)
+		active_moves -= M_GHOSTED
+		mouse_opacity = 1
+		name = real_name
+		for(var/belly in vore_organs)
+			var/obj/belly/B = belly
+			B.escapable = initial(B.escapable)
+		invisibility = initial(invisibility)
+		see_invisible = initial(see_invisible)
+		incorporeal_move = initial(incorporeal_move)
+		density = initial(density)
+		force_max_speed = initial(force_max_speed)
+		update_icon()
+		alpha = 0
+		canmove = initial(canmove)
+		alpha = initial(alpha)
+
+	if(M_INVIS in active_moves)
+		active_moves -= M_INVIS
+		mouse_opacity = 1
+		name = real_name
+		//overlays.Cut()
+		invisibility = initial(invisibility)
+		see_invisible = initial(see_invisible)
+		incorporeal_move = initial(incorporeal_move)
+		update_icon()
+		alpha = 0
+		alpha = initial(alpha)
+	if (M_SHOCK in active_moves)
+		active_moves -= M_SHOCK
+	. = ..()
 
 /mob/living/simple_mob/animal/passive/pokemon/proc/rest_regeneration()
 	if(resting && stat < DEAD && health < maxHealth)
@@ -313,18 +343,66 @@
 				to_chat(G, "<span class='alien'><b>[src] telepathically says to [T]:</b> <i>[message]</i></span>")
 	log_say("(POKETELEPATHY to [key_name(T)]) [message]", src)
 
-/mob/living/simple_mob/animal/passive/pokemon/proc/move_phase()
-	set name = "Phase Shift"
-	set desc = "Shift your body into an incorporeal state to pass through walls and other obstacles. Spooky!"
+/mob/living/simple_mob/animal/passive/pokemon/proc/move_invisibility()
+	set name = "Invisibility (10s)"
+	set desc = "Instantly mask your presence or reappear at will!"
 	set category = "Abilities"
 
+	if(move_cooldown)
+		to_chat(src, "<span class='warning'>You need to wait before using another ability!</span>")
+		return FALSE
+	if((M_GHOSTED in active_moves) || stat || resting)
+		to_chat(src, "<span class='warning'>You can't use this ability right now!</span>")
+		return FALSE
+
+	if(M_INVIS in active_moves)
+		active_moves -= M_INVIS
+		mouse_opacity = 1
+		name = real_name
+		//overlays.Cut()
+		invisibility = initial(invisibility)
+		see_invisible = initial(see_invisible)
+		incorporeal_move = initial(incorporeal_move)
+		update_icon()
+		alpha = 0
+		custom_emote(1,"suddenly appears!")
+		alpha = initial(alpha)
+		move_cooldown = TRUE //Start the cooldown after they shift back in
+		spawn(move_cooldown_time)
+			move_cooldown = FALSE
+			to_chat(src,"<span class='green'>You're ready to use an ability again.</span>")
+	else
+		active_moves |= M_INVIS
+		mouse_opacity = 0
+		custom_emote(1,"suddenly disappears.")
+		name = "Something"
+		alpha = 0
+		invisibility = INVISIBILITY_LEVEL_TWO
+		see_invisible = INVISIBILITY_LEVEL_TWO
+		//overlays.Cut()
+		update_icon()
+		alpha = 127
+
+/mob/living/simple_mob/animal/passive/pokemon/proc/move_phase()
+	set name = "Phase Shift (10s)"
+	set desc = "Shift your body into an incorporeal state to pass through walls and other obstacles. Spooky!"
+	set category = "Abilities"
+	if(move_cooldown)
+		to_chat(src, "<span class='warning'>You need to wait before using another ability!</span>")
+		return FALSE
 	var/turf/T = get_turf(src)
 	if(!T.CanPass(src,T) || loc != T)
 		to_chat(src,"<span class='warning'>You can't use that here!</span>")
 		return FALSE
-	if(resting)
+	if(resting && !(M_GHOSTED in active_moves))//Let them un-ghost if they're stuck resting and ghosted somehow
 		to_chat(src,"<span class='warning'>You can't do that while resting!</span>")
-		return
+		return FALSE
+	if(stat)
+		to_chat(src,"<span class='warning'>You can't do that in your condition!</span>")
+		return FALSE
+	if(M_INVIS in active_moves)
+		to_chat(src,"<span class='warning'>You can't do that while invisible!</span>")
+		return FALSE
 	forceMove(T)
 	var/original_canmove = canmove
 	SetStunned(0)
@@ -367,6 +445,13 @@
 				if(istype(target) && vore_selected)
 					target.forceMove(vore_selected)
 					to_chat(target,"<span class='warning'>\The [src] suddenly appears around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!</span>")
+
+		//Start the cooldown after they shift back in
+		move_cooldown = TRUE
+		spawn(move_cooldown_time)
+			move_cooldown = FALSE
+			to_chat(src,"<span class='green'>You're ready to use an ability again.</span>")
+
 	//Shifting out
 	else
 		active_moves |= M_GHOSTED
@@ -391,15 +476,15 @@
 		force_max_speed = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/proc/move_shocking()
-	set name = "Toggle Shocking"
+	set name = "Toggle Shocking (10s)"
 	set category = "Abilities"
 	set desc = "Toggle your body's natural ability to discharge electricity into anyone who touches you."
 	if(move_cooldown)
 		to_chat(src, "<span class='warning'>You need to wait before using another ability!</span>")
 		return FALSE
-	move_cooldown = 1
+	move_cooldown = TRUE
 	spawn(move_cooldown_time)
-		move_cooldown = 0
+		move_cooldown = FALSE
 		to_chat(src,"<span class='green'>You're ready to use an ability again.</span>")
 	if (M_SHOCK in active_moves)
 		active_moves -= M_SHOCK
@@ -410,7 +495,7 @@
 	update_icon()
 
 /mob/living/simple_mob/animal/passive/pokemon/proc/move_floral_healing()
-	set name = "Floral Healing"
+	set name = "Floral Healing (20s)"
 	set desc = "Heal a nearby creature."
 	set category = "Abilities"
 
@@ -435,9 +520,9 @@
 	var/mob/living/target = tgui_input_list(src,"Pick someone to mend:","Mend Other", targets)
 	if(!target)
 		return FALSE
-	move_cooldown = 1
+	move_cooldown = TRUE
 	spawn(move_cooldown_time*2)//Longer cooldown
-		move_cooldown = 0
+		move_cooldown = FALSE
 		to_chat(src,"<span class='green'>You're ready to use an ability again.</span>")
 	target.add_modifier(/datum/modifier/pokemon/floral_healing,10 SECONDS)
 	playsound(target, 'sound/effects/weather/wind/wind_5_1.ogg', 100, 1)
@@ -466,7 +551,7 @@
 
 //Ditto special move
 /mob/living/simple_mob/animal/passive/pokemon/proc/move_imposter()
-	set name = "Transform"
+	set name = "Transform (60s)"
 	set desc = "Transform your body into the shape of another pokemon. Does not transfer special abilities."
 	set category = "Abilities"
 	if(!LAZYLEN(pokemon_choices_list))
@@ -508,9 +593,9 @@
 	else
 		active_moves -= M_TF //Otherwise remove it
 	del(NP)
-	move_cooldown = 1
+	move_cooldown = TRUE
 	spawn(move_cooldown_time*6)//60s
-		move_cooldown = 0
+		move_cooldown = FALSE
 		to_chat(src,"<span class='green'>You're ready to use an ability again.</span>")
 
 //Override to stop attacking while grabbing
@@ -853,9 +938,9 @@
 			var/chargetogive = rand(50,250)
 			C.give(chargetogive)
 			C.update_icon()
-			move_cooldown = 1
+			move_cooldown = TRUE
 			spawn(move_cooldown_time)
-				move_cooldown = 0
+				move_cooldown = FALSE
 			return
 	..()
 
@@ -998,6 +1083,15 @@
 	p_types = list(P_TYPE_WATER)
 	has_hands = TRUE
 
+/mob/living/simple_mob/animal/passive/pokemon/thievul
+	name = "thievul"
+	icon_state = "thievul"
+	icon_living = "thievul"
+	icon_dead = "thievul_d"
+	p_types = list(P_TYPE_DARK)
+	additional_moves = list(/mob/living/proc/hide)
+	has_hands = TRUE
+
 /mob/living/simple_mob/animal/passive/pokemon/ninetales
 	name = "ninetales"
 	icon_state = "ninetales"
@@ -1105,6 +1199,18 @@
 	additional_moves = list(/mob/living/proc/hide)
 	has_hands = TRUE
 
+/mob/living/simple_mob/animal/passive/pokemon/mew
+	name = "mew"
+	icon_state = "mew"
+	icon_living = "mew"
+	icon_dead = "mew_d"
+	p_types = list(P_TYPE_PSYCH)
+	additional_moves = list(/mob/living/simple_mob/animal/passive/pokemon/proc/move_fly,
+							/mob/living/simple_mob/animal/passive/pokemon/proc/move_hover,
+							/mob/living/simple_mob/animal/passive/pokemon/proc/move_imposter,
+							/mob/living/simple_mob/animal/passive/pokemon/proc/move_invisibility)
+	has_hands = TRUE
+
 /mob/living/simple_mob/animal/passive/pokemon/mewtwo
 	name = "mewtwo"
 	icon_state = "mewtwo"
@@ -1154,6 +1260,32 @@
 	p_types = list(P_TYPE_NORM)
 	additional_moves = list(/mob/living/proc/hide)
 	has_hands = TRUE
+
+/mob/living/simple_mob/animal/passive/pokemon/zoroark
+	name = "zoroark"
+	icon_state = "zoroark"
+	icon_living = "zoroark"
+	icon_dead = "zoroark_d"
+	p_types = list(P_TYPE_DARK)
+	additional_moves = list(/mob/living/proc/hide, /mob/living/simple_mob/animal/passive/pokemon/proc/move_imposter)
+	has_hands = TRUE
+
+/mob/living/simple_mob/animal/passive/pokemon/zorua
+	name = "zorua"
+	icon_state = "zorua"
+	icon_living = "zorua"
+	icon_dead = "zorua_d"
+	p_types = list(P_TYPE_DARK)
+	additional_moves = list(/mob/living/proc/hide, /mob/living/simple_mob/animal/passive/pokemon/proc/move_imposter)
+
+/mob/living/simple_mob/animal/passive/pokemon/zorua_hisuian
+	name = "hisuian zorua"
+	icon_state = "zorua_hisuian"
+	icon_living = "zorua_hisuian"
+	icon_dead = "zorua_hisuian_d"
+	p_types = list(P_TYPE_NORM, P_TYPE_GHOST)
+	additional_moves = list(/mob/living/proc/hide, /mob/living/simple_mob/animal/passive/pokemon/proc/move_imposter)
+
 
 ///////////////////////
 //ALPHABETICAL PLEASE//
