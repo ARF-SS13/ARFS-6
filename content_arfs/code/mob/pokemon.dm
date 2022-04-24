@@ -997,6 +997,15 @@
 	p_types = list(P_TYPE_WATER)
 	has_hands = TRUE
 
+/mob/living/simple_mob/animal/passive/pokemon/thievul
+	name = "thievul"
+	icon_state = "thievul"
+	icon_living = "thievul"
+	icon_dead = "thievul_d"
+	p_types = list(P_TYPE_DARK)
+	additional_moves = list(/mob/living/proc/hide)
+	has_hands = TRUE
+
 /mob/living/simple_mob/animal/passive/pokemon/ninetales
 	name = "ninetales"
 	icon_state = "ninetales"
