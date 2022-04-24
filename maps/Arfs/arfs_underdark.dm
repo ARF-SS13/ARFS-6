@@ -10,6 +10,10 @@
 	density = 0
 	anchored = 1
 
+	var/guard				//# will set the mobs to remain nearby their spawn point within this dist
+
+	// By implementing submaps, we don't have to have a define of this really, just commenting out the duplicated vars..
+	/*
 	//Weighted with values (not %chance, but relative weight)
 	//Can be left value-less for all equally likely
 	var/list/mobs_to_pick_from
@@ -21,11 +25,11 @@
 	//Settings to help mappers/coders have their mobs do what they want in this case
 	var/faction				//To prevent infighting if it spawns various mobs, set a faction
 	var/atmos_comp			//TRUE will set all their survivability to be within 20% of the current air
-	var/guard				//# will set the mobs to remain nearby their spawn point within this dist
 
 	//Internal use only
 	var/mob/living/simple_mob/my_mob
 	var/depleted = FALSE
+	*/
 
 /obj/tether_away_spawner/Initialize()
 	. = ..()

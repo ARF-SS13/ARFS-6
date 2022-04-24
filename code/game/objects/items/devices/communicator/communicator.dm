@@ -131,7 +131,7 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 	
 	for(var/mob/living/voice/voice in contents)
 		. += "<span class='notice'>On the screen, you can see a image feed of [voice].</span>"
-
+		
 		if(voice && voice.key)
 			switch(voice.stat)
 				if(CONSCIOUS)

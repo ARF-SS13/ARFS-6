@@ -1,7 +1,8 @@
+/* don't need these
 #include "boss_mob.dmm"
 #include "hard_mob.dmm"
 #include "normal_mob.dmm"
-
+*/
 /datum/map_template/underdark/normal_mob
 	name = "Underdark Normal Mob Spawn"
 	mappath = 'normal_mob.dmm'

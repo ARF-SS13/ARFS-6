@@ -1,9 +1,25 @@
 // Areas defined via tether used on arfs map
 
+// Explorer shuttle
+/area/shuttle/excursion
+	requires_power = 1
+	icon_state = "shuttle2"
+	base_turf = /turf/simulated/floor/reinforced
+
+/area/shuttle/excursion/general
+	name = "\improper Excursion Shuttle"
+
+/area/shuttle/excursion/cockpit
+	name = "\improper Excursion Shuttle Cockpit"
+
+/area/shuttle/excursion/cargo
+	name = "\improper Excursion Shuttle Cargo"
+
+/area/shuttle/excursion/power
+	name = "\improper Excursion Shuttle Power"
 
 
 // antag
-
 /area/shuttle/antag_ground/base
 	name = "\improper Syndicate LC - Base"
 	icon_state = "shuttle2"
@@ -16,22 +32,17 @@
 	icon_state = "shuttle2"
 
 // RND
-
 /area/rnd/hallway
 	name = "\improper Research Lower Hallway"
 	icon_state = "research"
 
 // AI
-
 /area/ai/foyer
 	name = "\improper AI Core Access"
 /area/ai/outside
 	name = "/improper AI Core Outside"
 
 // CREWQUARTERS/DORM
-
-
-
 /area/crew_quarters/sauna
 	name = "\improper Sauna"
 	icon_state = "recreation_area"
@@ -213,6 +224,12 @@
 //Engineering Gravity
 /area/engineering/gravity
 	name= "\improper Gravity Generator"
+	icon_state = "engineering"
+	icon = 'icons/turf/areas.dmi'
+
+//Engineering Engine Room
+/area/engineering/thrusters
+	name= "\improper Engine Thrusters"
 	icon_state = "engineering"
 	icon = 'icons/turf/areas.dmi'
 
