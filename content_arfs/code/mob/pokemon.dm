@@ -64,10 +64,41 @@
 	rest_regeneration()//Do healing
 	nutrition = 3000 //Eating is hard. Remove if there's ever an easy source of food that isn't mice
 	updatehealth()//Update health overlay
-	if(stat >= DEAD)
-		active_moves = list() //Clear any active moves on death.
-		return FALSE
 	return TRUE
+
+/mob/living/simple_mob/animal/passive/pokemon/death(gibbed,deathmessage="seizes up and falls limp...")
+	//Clean up active moves
+	if(M_GHOSTED in active_moves)
+		active_moves -= M_GHOSTED
+		mouse_opacity = 1
+		name = real_name
+		for(var/belly in vore_organs)
+			var/obj/belly/B = belly
+			B.escapable = initial(B.escapable)
+		invisibility = initial(invisibility)
+		see_invisible = initial(see_invisible)
+		incorporeal_move = initial(incorporeal_move)
+		density = initial(density)
+		force_max_speed = initial(force_max_speed)
+		update_icon()
+		alpha = 0
+		canmove = initial(canmove)
+		alpha = initial(alpha)
+
+	if(M_INVIS in active_moves)
+		active_moves -= M_INVIS
+		mouse_opacity = 1
+		name = real_name
+		//overlays.Cut()
+		invisibility = initial(invisibility)
+		see_invisible = initial(see_invisible)
+		incorporeal_move = initial(incorporeal_move)
+		update_icon()
+		alpha = 0
+		alpha = initial(alpha)
+	if (M_SHOCK in active_moves)
+		active_moves -= M_SHOCK
+	. = ..()
 
 /mob/living/simple_mob/animal/passive/pokemon/proc/rest_regeneration()
 	if(resting && stat < DEAD && health < maxHealth)
@@ -312,6 +343,46 @@
 				to_chat(G, "<span class='alien'><b>[src] telepathically says to [T]:</b> <i>[message]</i></span>")
 	log_say("(POKETELEPATHY to [key_name(T)]) [message]", src)
 
+/mob/living/simple_mob/animal/passive/pokemon/proc/move_invisibility()
+	set name = "Invisibility (10s)"
+	set desc = "Instantly mask your presence or reappear at will!"
+	set category = "Abilities"
+
+	if(move_cooldown)
+		to_chat(src, "<span class='warning'>You need to wait before using another ability!</span>")
+		return FALSE
+	if((M_GHOSTED in active_moves) || stat || resting)
+		to_chat(src, "<span class='warning'>You can't use this ability right now!</span>")
+		return FALSE
+
+	if(M_INVIS in active_moves)
+		active_moves -= M_INVIS
+		mouse_opacity = 1
+		name = real_name
+		//overlays.Cut()
+		invisibility = initial(invisibility)
+		see_invisible = initial(see_invisible)
+		incorporeal_move = initial(incorporeal_move)
+		update_icon()
+		alpha = 0
+		custom_emote(1,"suddenly appears!")
+		alpha = initial(alpha)
+		move_cooldown = TRUE //Start the cooldown after they shift back in
+		spawn(move_cooldown_time)
+			move_cooldown = FALSE
+			to_chat(src,"<span class='green'>You're ready to use an ability again.</span>")
+	else
+		active_moves |= M_INVIS
+		mouse_opacity = 0
+		custom_emote(1,"suddenly disappears.")
+		name = "Something"
+		alpha = 0
+		invisibility = INVISIBILITY_LEVEL_TWO
+		see_invisible = INVISIBILITY_LEVEL_TWO
+		//overlays.Cut()
+		update_icon()
+		alpha = 127
+
 /mob/living/simple_mob/animal/passive/pokemon/proc/move_phase()
 	set name = "Phase Shift (10s)"
 	set desc = "Shift your body into an incorporeal state to pass through walls and other obstacles. Spooky!"
@@ -328,6 +399,9 @@
 		return FALSE
 	if(stat)
 		to_chat(src,"<span class='warning'>You can't do that in your condition!</span>")
+		return FALSE
+	if(M_INVIS in active_moves)
+		to_chat(src,"<span class='warning'>You can't do that while invisible!</span>")
 		return FALSE
 	forceMove(T)
 	var/original_canmove = canmove
@@ -1133,7 +1207,8 @@
 	p_types = list(P_TYPE_PSYCH)
 	additional_moves = list(/mob/living/simple_mob/animal/passive/pokemon/proc/move_fly,
 							/mob/living/simple_mob/animal/passive/pokemon/proc/move_hover,
-							/mob/living/simple_mob/animal/passive/pokemon/proc/move_imposter)
+							/mob/living/simple_mob/animal/passive/pokemon/proc/move_imposter,
+							/mob/living/simple_mob/animal/passive/pokemon/proc/move_invisibility)
 	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/mewtwo
