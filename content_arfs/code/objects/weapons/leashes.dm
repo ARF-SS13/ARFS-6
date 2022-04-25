@@ -75,6 +75,8 @@
 				// Very dumbass way to check for a collar being equipped, fuck off, I tried almost everything ; _;
 				for(var/obj/item/clothing/accessory/collar/C in VC.contents)
 					canLeash = 1
+			if(istype(HV.wear_suit, /obj/item/clothing/accessory/collar))
+				canLeash = 1
 			
 			if(canLeash)
 				leashthatboi(HV,user)
