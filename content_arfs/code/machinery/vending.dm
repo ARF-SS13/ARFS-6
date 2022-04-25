@@ -761,6 +761,25 @@
 	has_logs = 1
 	can_rotate = 0
 
+/obj/machinery/vending/bloodarfs
+	name = "Blood-Onator++"
+	desc = "A wall-mounted version of the Blood-Onator. Freezer-vendor for storage and quick dispensing of blood packs"
+	description_fluff = "A compacted Bluespace Storage vendor"
+	product_ads = "The true life juice!;Vampire's choice!;Home-grown blood only!;Donate today, be saved tomorrow!;Approved by Zeng-Hu Pharmaceuticals Incorporated!; Curse you, Vey-Med artificial blood!"
+	layer = ABOVE_WINDOW_LAYER
+	icon_state = "wallmed"
+	vend_delay = 7
+	density = 0 //It is wall-mounted, and thus, not dense. --Superxpdude
+	idle_power_usage = 211
+	req_access = list(access_medical)
+	products = list(/obj/item/weapon/reagent_containers/blood/prelabeled/APlus = 3,/obj/item/weapon/reagent_containers/blood/prelabeled/AMinus = 3,
+					/obj/item/weapon/reagent_containers/blood/prelabeled/BPlus = 3,/obj/item/weapon/reagent_containers/blood/prelabeled/BMinus = 3,
+					/obj/item/weapon/reagent_containers/blood/prelabeled/OPlus = 2,/obj/item/weapon/reagent_containers/blood/prelabeled/OMinus = 5,
+					/obj/item/weapon/reagent_containers/blood/empty = 5)
+	contraband = list(/obj/item/weapon/reagent_containers/glass/bottle/stoxin = 2)
+	req_log_access = access_cmo
+	has_logs = 1
+
 /obj/machinery/vending/food/autochef
 	name = "AutoChef"
 	desc = "A kitchen appliance which, when supplied with reagent capsules, can fabricate almost any pre-programmed foods the user desires. Can also dispense some kitchenware."

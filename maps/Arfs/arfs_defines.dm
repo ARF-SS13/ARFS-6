@@ -63,7 +63,6 @@
 	)
 
 	allowed_spawns = list("Arrivals Shuttle","Gateway","Cryogenic Storage","Cyborg Storage","NCS Serenity Residential")
-	planet_datums_to_make = list(/datum/planet/biodome)
 	map_levels = list(
 		Z_LEVEL_ARFS_ONE,
 		Z_LEVEL_ARFS_TWO,
@@ -105,7 +104,8 @@
 		list("Grass Cave")
 		)
 
-	planet_datums_to_make = list(/datum/planet/virgo3b,
+	planet_datums_to_make = list(/datum/planet/biodome,
+								/datum/planet/virgo3b,
 								/datum/planet/virgo4)
 
 /datum/map/arfs/perform_map_generation()
