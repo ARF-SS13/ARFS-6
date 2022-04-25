@@ -21,7 +21,7 @@
 /datum/map_template/common_lateload/space_rocks
 	name = "V3b Asteroid Field"
 	desc = "Space debris is common in V3b's orbit due to the proximity of Virgo 3"
-	mappath = 'maps/submaps/space_rocks/space_rocks.dmm'
+	mappath = 'maps/Arfs/submaps/space_rocks/space_rocks.dmm'
 
 	associated_map_datum = /datum/map_z_level/common_lateload/space_rocks
 
@@ -48,7 +48,7 @@
 /datum/map_template/common_lateload/away_aerostat
 	name = "Remmi Aerostat - Z1 Aerostat"
 	desc = "The Virgo 2 Aerostat away mission."
-	mappath = 'maps/expedition_vr/aerostat/aerostat_science_outpost.dmm'
+	mappath = 'maps/Arfs/submaps/aerostat/aerostat_science_outpost.dmm'
 	associated_map_datum = /datum/map_z_level/common_lateload/away_aerostat
 
 
