@@ -771,7 +771,6 @@
 	vend_delay = 7
 	density = 0 //It is wall-mounted, and thus, not dense. --Superxpdude
 	idle_power_usage = 211
-	req_access = list(access_medical)
 	products = list(/obj/item/weapon/reagent_containers/blood/prelabeled/APlus = 3,/obj/item/weapon/reagent_containers/blood/prelabeled/AMinus = 3,
 					/obj/item/weapon/reagent_containers/blood/prelabeled/BPlus = 3,/obj/item/weapon/reagent_containers/blood/prelabeled/BMinus = 3,
 					/obj/item/weapon/reagent_containers/blood/prelabeled/OPlus = 2,/obj/item/weapon/reagent_containers/blood/prelabeled/OMinus = 5,
