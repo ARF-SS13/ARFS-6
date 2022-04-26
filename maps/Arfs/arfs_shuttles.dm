@@ -318,27 +318,25 @@
 	dock_target_station = "admin_shuttle_dock_airlock"
 	dock_target_offsite = "admin_shuttle_bay"
 
-// Heist
-/datum/shuttle/autodock/multi/skipjack
+// Heist / Skipjack
+/datum/shuttle/autodock/multi/heist
 	name = "Skipjack"
-	warmup_time = 0
-	origin = /area/skipjack_station/start
-	interim = /area/skipjack_station/transit
+	warmup_time = 8
+	move_time = 60
 	can_cloak = TRUE
 	cloaked = TRUE
-	destinations = list(
-		"Fore Starboard Solars" = /area/skipjack_station/northeast_solars,
-		"Fore Port Solars" = /area/skipjack_station/northwest_solars,
-		"Aft Starboard Solars" = /area/skipjack_station/southeast_solars,
-		"Aft Port Solars" = /area/skipjack_station/southwest_solars,
-		"Mining Station" = /area/skipjack_station/mining
+	current_location = "skipjack_base"
+	landmark_transition = "skipjack_transit"
+	shuttle_area = /area/shuttle/skipjack
+	destination_tags = list(
+		"dallus_space_nw"
 		)
+	//docking_controller_tag = ??? doesn't have one?
 	announcer = "Automated Traffic Control"
-
-/datum/shuttle/autodock/multi/skipjack/New()
-	arrival_message = "Attention.  Unidentified object approaching the colony."
-	departure_message = "Attention.  Unidentified object exiting local space.  Unidentified object expected to escape Kara gravity well with current velocity."
-	..()
+	arrival_message = "Attention. An unregistered vessel is approaching Virgo-3B."
+	departure_message = "Attention. A unregistered vessel is now leaving Virgo-3B."
+	defer_initialisation = TRUE
+	move_direction = NORTH
 
 /datum/shuttle/autodock/multi/specops/ert
 	name = "Special Operations"
