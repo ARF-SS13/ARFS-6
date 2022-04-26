@@ -2787,24 +2787,8 @@
 	name = "\improper Foreward Command Hallwayy"
 	})
 "afo" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	health = 1e+006
-	},
-/obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
-	},
-/obj/structure/sign/securearea{
-	desc = "A warning sign which reads 'EXTERNAL AIRLOCK'";
-	icon_state = "space";
-	layer = 4;
-	name = "EXTERNAL AIRLOCK"
-	},
-/turf/simulated/floor/plating,
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/turf/simulated/floor/tiled,
 /area/security/security_cell_hallway)
 "afu" = (
 /obj/effect/floor_decal/corner/blue{
@@ -2997,13 +2981,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/armoury)
 "agc" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	health = 1e+006
-	},
+/obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
 /area/security/security_cell_hallway)
 "age" = (
@@ -3065,23 +3043,27 @@
 /turf/simulated/wall,
 /area/maintenance/security_starboard)
 "agj" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 1
+/obj/machinery/access_button{
+	command = "cycle_interior";
+	frequency = 1380;
+	master_tag = "centcom_shuttle_dock_airlock";
+	name = "interior access button";
+	pixel_x = -25;
+	req_one_access = list(13)
 	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	health = 1e+006
-	},
-/turf/simulated/floor/plating,
-/area/security/security_cell_hallway)
-"agl" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
 	},
-/obj/machinery/portable_atmospherics/canister/oxygen,
+/turf/simulated/floor/tiled,
+/area/security/security_cell_hallway)
+"agl" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4;
+	tag = "icon-intact (EAST)"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/security/security_cell_hallway)
 "agm" = (
@@ -8038,8 +8020,7 @@
 /turf/simulated/floor/airless/ceiling,
 /area/exterior/decktwo)
 "apZ" = (
-/obj/structure/closet/firecloset,
-/turf/simulated/floor/plating,
+/turf/simulated/wall/r_wall,
 /area/maintenance/security_port)
 "aqa" = (
 /obj/effect/decal/cleanable/dirt,
@@ -45112,8 +45093,18 @@
 /turf/simulated/floor/tiled/dark,
 /area/engineering/foyer)
 "ieJ" = (
-/turf/simulated/wall,
-/area/exterior/decktwo)
+/obj/item/weapon/rig/pmc/security/green/equipped{
+	req_access = list(1)
+	},
+/obj/item/weapon/rig/pmc/security/green/equipped{
+	req_access = list(1)
+	},
+/obj/item/weapon/rig/pmc/security/green/equipped{
+	req_access = list(1)
+	},
+/obj/structure/table/rack,
+/turf/simulated/floor/tiled,
+/area/security/security_cell_hallway)
 "ieX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -48068,10 +48059,6 @@
 	},
 /turf/simulated/floor/airless/ceiling,
 /area/space)
-"mlj" = (
-/obj/machinery/suit_cycler/security,
-/turf/simulated/floor/tiled,
-/area/security/security_cell_hallway)
 "mme" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging/junction{
 	dir = 4
@@ -52668,18 +52655,10 @@
 /turf/simulated/floor/plating,
 /area/maintenance/central)
 "sbK" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced{
+/obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
 	},
-/obj/structure/window/reinforced{
-	health = 1e+006
-	},
-/obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
-	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled,
 /area/security/security_cell_hallway)
 "sca" = (
 /obj/effect/floor_decal/corner/grey{
@@ -53537,21 +53516,9 @@
 /turf/simulated/floor/tiled/dark,
 /area/storage/eva)
 "tkp" = (
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 1
-	},
-/obj/item/weapon/rig/pmc/security/green/equipped{
-	req_access = list(1)
-	},
-/obj/item/weapon/rig/pmc/security/green/equipped{
-	req_access = list(1)
-	},
-/obj/item/weapon/rig/pmc/security/green/equipped{
-	req_access = list(1)
-	},
-/obj/structure/table/rack,
+/obj/machinery/suit_cycler/security,
 /turf/simulated/floor/tiled,
-/area/security/security_cell_hallway)
+/area/maintenance/security_port)
 "tlA" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -54690,23 +54657,13 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/security/range)
 "uEJ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4;
-	tag = "icon-intact (EAST)"
+/obj/structure/sign/securearea{
+	desc = "A warning sign which reads 'EXTERNAL AIRLOCK'";
+	icon_state = "space";
+	layer = 4;
+	name = "EXTERNAL AIRLOCK"
 	},
-/obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1380;
-	master_tag = "centcom_shuttle_dock_airlock";
-	name = "interior access button";
-	pixel_x = -28;
-	pixel_y = 26;
-	req_one_access = list(13)
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
+/turf/simulated/wall/r_wall,
 /area/security/security_cell_hallway)
 "uEM" = (
 /obj/structure/cable/green{
@@ -74298,7 +74255,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aab
 aaa
 aaa
 aaa
@@ -78104,7 +78061,7 @@ aaa
 aaa
 aaa
 aaa
-aab
+aaa
 aaa
 aaa
 aaa
@@ -79890,7 +79847,7 @@ aaa
 aaa
 aaa
 aaa
-aab
+aaa
 aaa
 aaa
 aaa
@@ -80919,9 +80876,9 @@ apX
 apX
 apX
 apX
-apX
-apX
-apX
+uEJ
+gxh
+bSe
 apX
 apX
 apX
@@ -81176,9 +81133,9 @@ apX
 apX
 apX
 apX
-afo
-gxh
-sbK
+agc
+bOu
+agc
 apX
 apX
 apX
@@ -81434,7 +81391,7 @@ apX
 apX
 apX
 agc
-bOu
+jJW
 agc
 apX
 apX
@@ -81688,13 +81645,13 @@ apX
 apX
 apX
 apX
-apX
-apX
-agc
-jJW
-agc
-apX
-apX
+bSe
+bSe
+bSe
+rmF
+bSe
+bSe
+bSe
 apX
 apX
 apX
@@ -81945,13 +81902,13 @@ apX
 apX
 apX
 apX
-apX
-aeZ
+bSe
+agm
 agj
-rmF
-agj
+agl
+sbK
 ieJ
-apX
+bSe
 apX
 apX
 apX
@@ -82204,11 +82161,11 @@ bSe
 bSe
 bSe
 bSe
-agl
-uEJ
+amk
+fVI
+amk
 tkp
-arq
-arq
+apZ
 arq
 arq
 arq
@@ -82461,10 +82418,10 @@ alA
 amk
 amO
 bSe
-agm
+afo
 fVI
-mlj
-arq
+amk
+apZ
 apZ
 aqD
 aqe
@@ -82978,7 +82935,7 @@ bSe
 ahm
 aoy
 nrL
-arq
+apZ
 fGq
 aqF
 aro
@@ -83235,7 +83192,7 @@ bSe
 ahF
 aoy
 tgD
-arq
+apZ
 aqE
 aqG
 arq
@@ -83492,7 +83449,7 @@ anr
 ahK
 aoA
 tCR
-arq
+apZ
 aqd
 aqG
 iEH
