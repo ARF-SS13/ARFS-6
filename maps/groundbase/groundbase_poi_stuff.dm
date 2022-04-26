@@ -885,7 +885,7 @@
 	name = "Cave 49"
 	mappath = 'pois/cave49c.dmm'
 
-/datum/map_template/groundbase/maintcaves/cavething 
+/datum/map_template/groundbase/maintcaves/cavething
 	name = "Cavething 1"
 	mappath = 'pois/cavething1.dmm'
 	cost = 10
@@ -939,11 +939,32 @@
 	cost = 3
 	allow_duplicates = FALSE
 
+
+/obj/effect/landmark/poi_loader/gb_square
+	name = "Square House Loader"
+	size_x = 12
+	size_y = 12
+	poi_type = /datum/map_template/groundbase/wildvillage/square
+
+/obj/effect/landmark/poi_loader/gb_wide
+	name = "Wide House Loader"
+	size_x = 17
+	size_y = 12
+	poi_type = /datum/map_template/groundbase/wildvillage/wide
+
+/obj/effect/landmark/poi_loader/gb_long
+	name = "Long House Loader"
+	size_x = 17
+	size_y = 24
+	poi_type = /datum/map_template/groundbase/wildvillage/long
+
+
 /area/submap/groundbase/poi/wildvillage
 	name = "POI - Wilderness Village"
 	icon = 'icons/turf/areas_vr.dmi'
 	ambience = AMBIENCE_OUTPOST
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
+	requires_power = 0
 
 /area/submap/groundbase/poi/wildvillage/plot
 	icon_state = "grewhisqu"
@@ -951,12 +972,15 @@
 /area/submap/groundbase/poi/wildvillage/plot/wide
 /area/submap/groundbase/poi/wildvillage/plot/long
 
-/area/submap/groundbase/poi/wildvillage/building
-	name = "Building"
+/area/submap/groundbase/poi/wildvillage/square
+	name = "square building"
 	icon_state = "grewhisqu"
-
-/area/submap/groundbase/poi/wildvillage/building/building1
-
+/area/submap/groundbase/poi/wildvillage/wide
+	name = "wide building"
+	icon_state = "grewhisqu"
+/area/submap/groundbase/poi/wildvillage/long
+	name = "long building"
+	icon_state = "grewhisqu"
 
 /datum/map_template/groundbase/wildvillage
 	name = "building"
@@ -996,7 +1020,6 @@
 	name = "square building 8"
 	mappath = 'southwilds/villagepois/square8.dmm'
 /area/submap/groundbase/poi/wildvillage/square/square8
-/*
 /datum/map_template/groundbase/wildvillage/square/square9
 	name = "square building 9"
 	mappath = 'southwilds/villagepois/square9.dmm'
@@ -1013,7 +1036,7 @@
 	name = "square building 12"
 	mappath = 'southwilds/villagepois/square12.dmm'
 /area/submap/groundbase/poi/wildvillage/square/square12
-*/
+
 
 /datum/map_template/groundbase/wildvillage/wide/wide1
 	name = "wide building 1"
@@ -1023,7 +1046,6 @@
 	name = "wide building 2"
 	mappath = 'southwilds/villagepois/wide2.dmm'
 /area/submap/groundbase/poi/wildvillage/wide/wide2
-/*
 /datum/map_template/groundbase/wildvillage/wide/wide3
 	name = "wide building 3"
 	mappath = 'southwilds/villagepois/wide3.dmm'
@@ -1040,7 +1062,7 @@
 	name = "wide building 6"
 	mappath = 'southwilds/villagepois/wide6.dmm'
 /area/submap/groundbase/poi/wildvillage/wide/wide6
-*/
+
 
 /datum/map_template/groundbase/wildvillage/long/long1
 	name = "long building 1"
@@ -1050,7 +1072,6 @@
 	name = "long building 2"
 	mappath = 'southwilds/villagepois/long2.dmm'
 /area/submap/groundbase/poi/wildvillage/long/long2
-/*
 /datum/map_template/groundbase/wildvillage/wide/long3
 	name = "wide building 3"
 	mappath = 'southwilds/villagepois/long3.dmm'
@@ -1059,4 +1080,3 @@
 	name = "wide building 4"
 	mappath = 'southwilds/villagepois/long4.dmm'
 /area/submap/groundbase/poi/wildvillage/long/long4
-*/
