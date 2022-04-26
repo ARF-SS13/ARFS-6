@@ -245,7 +245,11 @@
 		"arfs_excursion_hangar",
 		"arfs_dock_south", //Deck 3, Port Arm, South Dock
 		"arfs_dock_north", //Deck 3, Port Arm, North Dock
-		"arfs_dock_west"   //Deck 3, Port Arm, West Dock
+		"arfs_dock_west",   //Deck 3, Port Arm, West Dock
+		"arfs_space_nw", //Deck 3, NW space
+		"arfs_space_ne", //Deck 3, NE space
+		"arfs_space_sw", //Deck 3, SW space
+		"arfs_space_se"  //Deck 3, SE space
 		)
 
 	initial_restricted_waypoints = list(

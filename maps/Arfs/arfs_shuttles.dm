@@ -59,15 +59,19 @@
 	base_area = /area/space
 
 /obj/effect/shuttle_landmark/arfs/deck3/space/sw
+	name = "South West of ARFS Dallus"
 	landmark_tag = "dallus_space_sw"
 
 /obj/effect/shuttle_landmark/arfs/deck3/space/ne
+	name = "North East of ARFS Dallus"
 	landmark_tag = "dallus_space_ne"
 
 /obj/effect/shuttle_landmark/arfs/deck3/space/se
+	name = "South East of ARFS Dallus"
 	landmark_tag = "dallus_space_se"
 
 /obj/effect/shuttle_landmark/arfs/deck3/space/nw
+	name = "North West of ARFS Dallus"
 	landmark_tag = "dallus_space_nw"
 
 //////////////////////////////////////////////////////////////
