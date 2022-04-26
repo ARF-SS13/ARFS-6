@@ -29,11 +29,46 @@
 
 // Exclusive landmark for docking *inside* the station
 /obj/effect/shuttle_landmark/arfs/deck3/excursion
-	name = "A.R.F.S Dallus - Excursion Hanger"
+	name = "A.R.F.S. Dallus - Excursion Hanger"
 	landmark_tag = "arfs_excursion_hangar"
 	docking_controller = "expshuttle_dock"
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
+	base_turf = /turf/simulated/floor/reinforced
 	base_area = /area/exploration/hanger
+
+/obj/effect/shuttle_landmark/arfs/deck3/dockarm
+	base_turf = /turf/space
+	base_area = /area/space
+
+/obj/effect/shuttle_landmark/arfs/deck3/dockarm/north
+	name = "ARFS Dallus - Docking Arm North"
+	landmark_tag = "arfs_dock_north"
+	docking_controller = "dallus_port_arm_n"
+
+/obj/effect/shuttle_landmark/arfs/deck3/dockarm/south
+	name = "ARFS Dallus - Docking Arm South"
+	landmark_tag = "arfs_dock_south"
+	docking_controller = "dallus_port_arm_s"
+
+/obj/effect/shuttle_landmark/arfs/deck3/dockarm/west
+	name = "ARFS Dallus - Docking Arm West"
+	landmark_tag = "arfs_dock_west"
+	docking_controller = "dallus_port_arm_w"
+
+/obj/effect/shuttle_landmark/arfs/deck3/space
+	base_turf = /turf/space
+	base_area = /area/space
+
+/obj/effect/shuttle_landmark/arfs/deck3/space/sw
+	landmark_tag = "dallus_space_sw"
+
+/obj/effect/shuttle_landmark/arfs/deck3/space/ne
+	landmark_tag = "dallus_space_ne"
+
+/obj/effect/shuttle_landmark/arfs/deck3/space/se
+	landmark_tag = "dallus_space_se"
+
+/obj/effect/shuttle_landmark/arfs/deck3/space/nw
+	landmark_tag = "dallus_space_nw"
 
 //////////////////////////////////////////////////////////////
 // Escape shuttle
