@@ -7,7 +7,7 @@
 	warmup_time = 0
 	current_location = "arfs_excursion_hangar"
 	docking_controller_tag = "expshuttle_dock"
-	shuttle_area = list(/area/shuttle/excursion/cockpit, /area/shuttle/excursion/general, /area/shuttle/excursion/cargo, /area/shuttle/excursion/power)
+	shuttle_area = list(/area/shuttle/excursion/cockpit, /area/shuttle/excursion/general, /area/shuttle/excursion/cargo, /area/shuttle/excursion/power, /area/shuttle/excursion/medical)
 	fuel_consumption = 3
 	move_direction = NORTH
 	move_time = 20
