@@ -341,6 +341,17 @@ var/global/list/latejoin_residential = list()
 /area/residential/mroom16
 	name = "\improper Residential - Medium Room 16"
 
+/area/residential/mroom17/living_room
+	name = "\improper Residential - Medium Room 17 Living Space"
+/area/residential/mroom17/bedroom
+	name = "\improper Residential - Medium Room 17 Bedroom"
+/area/residential/mroom17/bathroom
+	name = "\improper Residential - Medium Room 17 Bathroom"
+/area/residential/mroom17/recording_studio
+	name = "\improper Residential - Medium Room 17 Recording Studio"
+/area/residential/mroom17/gaming_room
+	name = "\improper Residential - Medium Room 17 Gameroom"
+
 /area/residential/mroom42
 	name = "\improper Residential - Medium Room 42 Living Room"
 	icon_state = "mediumroom42"
