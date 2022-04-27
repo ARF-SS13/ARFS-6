@@ -5,22 +5,42 @@
 	requires_power = 1
 	icon_state = "shuttle2"
 	base_turf = /turf/simulated/floor/reinforced
-
 /area/shuttle/excursion/general
 	name = "\improper Excursion Shuttle"
-
 /area/shuttle/excursion/medical
 	name = "\improper Excursion Shuttle Medical"
-
 /area/shuttle/excursion/cockpit
 	name = "\improper Excursion Shuttle Cockpit"
-
 /area/shuttle/excursion/cargo
 	name = "\improper Excursion Shuttle Cargo"
-
 /area/shuttle/excursion/power
 	name = "\improper Excursion Shuttle Power"
 
+// Andy shuttle
+/area/shuttle/drake
+	name = "\improper Drake Cabin"
+	icon = 'icons/turf/areas_vr_talon.dmi'
+	icon_state = "gray"
+	requires_power = 1
+	has_gravity = 1
+/area/shuttle/drake/engineering
+	name = "\improper Drake Engineering"
+	icon_state = "yellow"
+/area/shuttle/drake/cockpit
+	name = "\improper Drake Cockpit"
+	icon_state = "blue"
+/area/shuttle/drake/quarters1
+	name = "\improper Drake Quarters 1"
+	icon_state = "gray-p"
+/area/shuttle/drake/quarters2
+	name = "\improper Drake Quarters 2"
+	icon_state = "gray-s"
+/area/shuttle/drake/galley	
+	name = "\improper Drake Galley"
+	icon_state = "dark-s"
+/area/shuttle/drake/head	
+	name = "\improper Drake Head"
+	icon_state = "dark-p"
 
 // antag
 /area/shuttle/antag_ground/base
