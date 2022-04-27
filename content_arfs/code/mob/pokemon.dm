@@ -17,7 +17,7 @@
 	maxHealth = 100
 	max_co2 = 10 //Lets them go outside without dying of co2
 	attacktext = list("attacked") //List of verbs used when attacking something. X has attacked Y.
-	has_hands = FALSE 		//Set to true for pmon who should be able to pick things up.
+	has_hands = TRUE 		//Set to true for pmon who should be able to pick things up.
 	humanoid_hands = FALSE 	//Also set this to true if they should be allowed to use guns and other humanoid-only stuff. Don't turn this on.
 	response_help = "pets"
 	layer = MOB_LAYER
