@@ -17,7 +17,7 @@
 	maxHealth = 100
 	max_co2 = 10 //Lets them go outside without dying of co2
 	attacktext = list("attacked") //List of verbs used when attacking something. X has attacked Y.
-	has_hands = TRUE 		//Set to true for pmon who should be able to pick things up.
+	has_hands = TRUE	 		//Makes gameplay more enjoyable, even if it doesn't make sense for a lot of them.
 	humanoid_hands = FALSE 	//Also set this to true if they should be allowed to use guns and other humanoid-only stuff. Don't turn this on.
 	response_help = "pets"
 	layer = MOB_LAYER
@@ -268,7 +268,6 @@
 	icon_dead = "lugia_d"
 	p_types = list(P_TYPE_PSYCH, P_TYPE_FLY)
 	movement_cooldown = 1.5
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/leg/lugia/andy
 	health = 500
@@ -286,7 +285,7 @@
 	icon_dead = "rayquaza_d"
 	p_types = list(P_TYPE_FLY)
 	movement_cooldown = 1.5
-	has_hands = TRUE
+
 
 ///////////////////////////////
 //////ALPHABETICAL PLEASE//////
@@ -307,7 +306,6 @@
 	icon_dead = "aggron_d"
 	p_types = list(P_TYPE_STEEL)
 	movement_cooldown = 5
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/alolanvulpix
 	name = "alolan vulpix"
@@ -324,7 +322,6 @@
 	icon_living = "ampharos"
 	icon_dead = "ampharos_d"
 	p_types = list(P_TYPE_ELEC)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/braixen
 	name = "braixen"
@@ -333,7 +330,6 @@
 	icon_dead = "braixen_d"
 	p_types = list(P_TYPE_FIRE)
 	additional_moves = list(/mob/living/proc/hide)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/celebi
 	name = "celebi"
@@ -341,7 +337,6 @@
 	icon_living = "celebi"
 	icon_dead = "celebi_d"
 	p_types = list(P_TYPE_PSYCH, P_TYPE_GRASS)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/charmander
 	name = "charmander"
@@ -349,7 +344,6 @@
 	icon_living = "charmander"
 	icon_dead = "charmander_d"
 	p_types = list(P_TYPE_FIRE)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/ditto
 	name = "ditto"
@@ -358,7 +352,7 @@
 	icon_dead = "ditto_d"
 	p_types = list(P_TYPE_NORM)
 	additional_moves = list(/mob/living/proc/hide, /mob/living/simple_mob/animal/passive/pokemon/proc/move_imposter)//amogus
-	has_hands = TRUE //Can probably form a hand from its body, plus a lot of its tfs have them
+	 //Can probably form a hand from its body, plus a lot of its tfs have them
 
 /mob/living/simple_mob/animal/passive/pokemon/dragonair
 	name = "dragonair"
@@ -369,7 +363,7 @@
 	p_types = list(P_TYPE_DRAGON)
 	additional_moves = list(/mob/living/simple_mob/animal/passive/pokemon/proc/move_fly,
 							/mob/living/simple_mob/animal/passive/pokemon/proc/move_hover)
-	has_hands = TRUE
+
 
 /mob/living/simple_mob/animal/passive/pokemon/dragonite
 	name = "dragonite"
@@ -378,7 +372,6 @@
 	icon_living = "dragonite"
 	icon_dead = "dragonite_d"
 	p_types = list(P_TYPE_DRAGON, P_TYPE_FLY)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/dratini
 	name = "dratini"
@@ -440,7 +433,6 @@
 	icon_dead = "furret_d"
 	p_types = list(P_TYPE_NORM)
 	additional_moves = list(/mob/living/proc/hide)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/gallade
 	name = "gallade"
@@ -449,7 +441,6 @@
 	icon_dead = "gallade_d"
 	p_types = list(P_TYPE_PSYCH, P_TYPE_FIGHT)
 	additional_moves = list(/mob/living/proc/hide)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/gardevoir
 	name = "gardevoir"
@@ -458,7 +449,6 @@
 	icon_dead = "gardevoir_d"
 	p_types = list(P_TYPE_PSYCH, P_TYPE_FAIRY)
 	additional_moves = list(/mob/living/proc/hide)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/gastly
 	name = "gastly"
@@ -477,7 +467,7 @@
 	icon_dead = "gengar_d"
 	p_types = list(P_TYPE_GHOST, P_TYPE_POISON)
 	additional_moves = list(/mob/living/proc/hide)
-	has_hands = TRUE
+
 
 /mob/living/simple_mob/animal/passive/pokemon/glaceon
 	name = "glaceon"
@@ -496,7 +486,6 @@
 	icon_dead = "haunter_d"
 	p_types = list(P_TYPE_GHOST, P_TYPE_POISON)
 	additional_moves = list(/mob/living/proc/hide)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/jolteon
 	name = "jolteon"
@@ -545,7 +534,6 @@
 	icon_dead = "kirlia_d"
 	p_types = list(P_TYPE_PSYCH, P_TYPE_FAIRY)
 	additional_moves = list(/mob/living/proc/hide)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/larvitar
 	name = "larvitar"
@@ -571,7 +559,6 @@
 	icon_dead = "linoone_d"
 	p_types = list(P_TYPE_NORM)
 	additional_moves = list(/mob/living/proc/hide)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/growlithe
 	name = "growlithe"
@@ -604,7 +591,6 @@
 	p_types = list(P_TYPE_NORM)
 	var/datum/reagents/udder = null
 	movement_cooldown = 3
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/miltank/Initialize()
 	udder = new(50)
@@ -646,7 +632,6 @@
 	response_harm   = "hits"
 	p_types = list(P_TYPE_FAIRY)
 	additional_moves = list(/mob/living/proc/hide)
-	has_hands = TRUE	//Ribbon feelers ew
 
 /mob/living/simple_mob/animal/passive/pokemon/umbreon
 	name = "umbreon"
@@ -671,7 +656,6 @@
 	icon_dead = "tentacruel_d"
 	movement_cooldown = 3
 	p_types = list(P_TYPE_WATER)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/thievul
 	name = "thievul"
@@ -680,7 +664,6 @@
 	icon_dead = "thievul_d"
 	p_types = list(P_TYPE_DARK)
 	additional_moves = list(/mob/living/proc/hide)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/ninetales
 	name = "ninetales"
@@ -711,7 +694,6 @@
 	icon_living = "tangela"
 	icon_dead = "tangela_d"
 	p_types = list(P_TYPE_GRASS, P_TYPE_POISON)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/pinsir
 	name = "pinsir"
@@ -719,7 +701,6 @@
 	icon_living = "pinsir"
 	icon_dead = "pinsir_d"
 	p_types = list(P_TYPE_BUG)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/omanyte
 	name = "omanyte"
@@ -737,7 +718,6 @@
 	icon_dead = "magmar_d"
 	movement_cooldown = 3
 	p_types = list(P_TYPE_FIRE)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/magicarp
 	name = "magicarp"
@@ -770,7 +750,6 @@
 	icon_living = "Aerodactyl"
 	icon_dead = "Aerodactyl_d"
 	p_types = list(P_TYPE_ROCK, P_TYPE_FLY)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/lickitung
 	name = "lickitung"
@@ -778,7 +757,6 @@
 	icon_living = "lickitung"
 	icon_dead = "lickitung_d"
 	p_types = list(P_TYPE_NORM)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/cubone
 	name = "cubone"
@@ -787,7 +765,6 @@
 	icon_dead = "cubone_d"
 	p_types = list(P_TYPE_GROUND)
 	additional_moves = list(/mob/living/proc/hide)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/mew
 	name = "mew"
@@ -799,7 +776,6 @@
 							/mob/living/simple_mob/animal/passive/pokemon/proc/move_hover,
 							/mob/living/simple_mob/animal/passive/pokemon/proc/move_imposter,
 							/mob/living/simple_mob/animal/passive/pokemon/proc/move_invisibility)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/mewtwo
 	name = "mewtwo"
@@ -809,7 +785,6 @@
 	p_types = list(P_TYPE_PSYCH)
 	additional_moves = list(/mob/living/simple_mob/animal/passive/pokemon/proc/move_fly,
 							/mob/living/simple_mob/animal/passive/pokemon/proc/move_hover)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/purrloin
 	name = "purrloin"
@@ -818,7 +793,6 @@
 	icon_dead = "purrloin_d"
 	p_types = list(P_TYPE_DARK)
 	additional_moves = list(/mob/living/proc/hide)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/ralts
 	name = "ralts"
@@ -826,7 +800,6 @@
 	icon_living = "ralts"
 	icon_dead = "ralts_d"
 	p_types = list(P_TYPE_PSYCH, P_TYPE_FAIRY)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/snorlax
 	name = "snorlax"
@@ -849,7 +822,6 @@
 	icon_dead = "zigzagoon_d"
 	p_types = list(P_TYPE_NORM)
 	additional_moves = list(/mob/living/proc/hide)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/zoroark
 	name = "zoroark"
@@ -858,7 +830,6 @@
 	icon_dead = "zoroark_d"
 	p_types = list(P_TYPE_DARK)
 	additional_moves = list(/mob/living/proc/hide, /mob/living/simple_mob/animal/passive/pokemon/proc/move_imposter)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/zorua
 	name = "zorua"
@@ -875,7 +846,6 @@
 	icon_dead = "zorua_hisuian_d"
 	p_types = list(P_TYPE_NORM, P_TYPE_GHOST)
 	additional_moves = list(/mob/living/proc/hide, /mob/living/simple_mob/animal/passive/pokemon/proc/move_imposter)
-
 
 ///////////////////////
 //ALPHABETICAL PLEASE//
