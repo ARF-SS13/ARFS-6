@@ -7,7 +7,7 @@
 	warmup_time = 0
 	current_location = "arfs_excursion_hangar"
 	docking_controller_tag = "expshuttle_dock"
-	shuttle_area = list(/area/shuttle/excursion/cockpit, /area/shuttle/excursion/general, /area/shuttle/excursion/cargo, /area/shuttle/excursion/power)
+	shuttle_area = list(/area/shuttle/excursion/cockpit, /area/shuttle/excursion/general, /area/shuttle/excursion/cargo, /area/shuttle/excursion/power, /area/shuttle/excursion/medical)
 	fuel_consumption = 3
 	move_direction = NORTH
 	move_time = 20
@@ -29,11 +29,50 @@
 
 // Exclusive landmark for docking *inside* the station
 /obj/effect/shuttle_landmark/arfs/deck3/excursion
-	name = "A.R.F.S Dallus - Excursion Hanger"
+	name = "A.R.F.S. Dallus - Excursion Hanger"
 	landmark_tag = "arfs_excursion_hangar"
 	docking_controller = "expshuttle_dock"
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
+	base_turf = /turf/simulated/floor/reinforced
 	base_area = /area/exploration/hanger
+
+/obj/effect/shuttle_landmark/arfs/deck3/dockarm
+	base_turf = /turf/space
+	base_area = /area/space
+
+/obj/effect/shuttle_landmark/arfs/deck3/dockarm/north
+	name = "ARFS Dallus - Docking Arm North"
+	landmark_tag = "arfs_dock_north"
+	docking_controller = "dallus_port_arm_n"
+
+/obj/effect/shuttle_landmark/arfs/deck3/dockarm/south
+	name = "ARFS Dallus - Docking Arm South"
+	landmark_tag = "arfs_dock_south"
+	docking_controller = "dallus_port_arm_s"
+
+/obj/effect/shuttle_landmark/arfs/deck3/dockarm/west
+	name = "ARFS Dallus - Docking Arm West"
+	landmark_tag = "arfs_dock_west"
+	docking_controller = "dallus_port_arm_w"
+
+/obj/effect/shuttle_landmark/arfs/deck3/space
+	base_turf = /turf/space
+	base_area = /area/space
+
+/obj/effect/shuttle_landmark/arfs/deck3/space/sw
+	name = "South West of ARFS Dallus"
+	landmark_tag = "dallus_space_sw"
+
+/obj/effect/shuttle_landmark/arfs/deck3/space/ne
+	name = "North East of ARFS Dallus"
+	landmark_tag = "dallus_space_ne"
+
+/obj/effect/shuttle_landmark/arfs/deck3/space/se
+	name = "South East of ARFS Dallus"
+	landmark_tag = "dallus_space_se"
+
+/obj/effect/shuttle_landmark/arfs/deck3/space/nw
+	name = "North West of ARFS Dallus"
+	landmark_tag = "dallus_space_nw"
 
 //////////////////////////////////////////////////////////////
 // Escape shuttle
@@ -279,27 +318,25 @@
 	dock_target_station = "admin_shuttle_dock_airlock"
 	dock_target_offsite = "admin_shuttle_bay"
 
-// Heist
-/datum/shuttle/autodock/multi/skipjack
+// Heist / Skipjack
+/datum/shuttle/autodock/multi/heist
 	name = "Skipjack"
-	warmup_time = 0
-	origin = /area/skipjack_station/start
-	interim = /area/skipjack_station/transit
+	warmup_time = 8
+	move_time = 60
 	can_cloak = TRUE
 	cloaked = TRUE
-	destinations = list(
-		"Fore Starboard Solars" = /area/skipjack_station/northeast_solars,
-		"Fore Port Solars" = /area/skipjack_station/northwest_solars,
-		"Aft Starboard Solars" = /area/skipjack_station/southeast_solars,
-		"Aft Port Solars" = /area/skipjack_station/southwest_solars,
-		"Mining Station" = /area/skipjack_station/mining
+	current_location = "skipjack_base"
+	landmark_transition = "skipjack_transit"
+	shuttle_area = /area/shuttle/skipjack
+	destination_tags = list(
+		"dallus_space_nw"
 		)
+	//docking_controller_tag = ??? doesn't have one?
 	announcer = "Automated Traffic Control"
-
-/datum/shuttle/autodock/multi/skipjack/New()
-	arrival_message = "Attention.  Unidentified object approaching the colony."
-	departure_message = "Attention.  Unidentified object exiting local space.  Unidentified object expected to escape Kara gravity well with current velocity."
-	..()
+	arrival_message = "Attention. An unregistered vessel is approaching Virgo-3B."
+	departure_message = "Attention. A unregistered vessel is now leaving Virgo-3B."
+	defer_initialisation = TRUE
+	move_direction = NORTH
 
 /datum/shuttle/autodock/multi/specops/ert
 	name = "Special Operations"

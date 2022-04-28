@@ -9,6 +9,9 @@
 /area/shuttle/excursion/general
 	name = "\improper Excursion Shuttle"
 
+/area/shuttle/excursion/medical
+	name = "\improper Excursion Shuttle Medical"
+
 /area/shuttle/excursion/cockpit
 	name = "\improper Excursion Shuttle Cockpit"
 
@@ -112,6 +115,14 @@
 	name = "\improper Residential Dock"
 	icon_state = "gutsdorms"
 	icon = 'maps/Arfs/arfs_areas.dmi'
+/area/hallway/station/docking_hall
+	name = "\improper Deck Three - Port Docking Arm Hallway"
+/area/hallway/station/docking_hall_airlock_n
+	name = "\improper Deck Three - Port Docking Arm, Fore Airlock"
+/area/hallway/station/docking_hall_airlock_s
+	name = "\improper Deck Three - Port Docking Arm, Aft Airlock"
+/area/hallway/station/docking_hall_airlock_w
+	name = "\improper Deck Three - Port Docking Arm, Port Airlock"
 
 //MAINT
 
@@ -140,6 +151,8 @@
 /area/maintenance/game_room
 	name = "Game Room"
 	icon_state = "amaint"
+/area/maintenance/station/deck_three/port_docking_arm
+	name = "\improper Deck Three - Port Docking Arm Maintenance"
 
 //Underbelly Maintenance
 
@@ -289,3 +302,5 @@
 	name = "\improper Explorationn Waiting Room"
 	icon_state = "exploration"
 	icon = 'maps/arfs/arfs_areas.dmi'
+
+//airlocks

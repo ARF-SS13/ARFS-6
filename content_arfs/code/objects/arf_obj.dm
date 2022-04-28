@@ -26,3 +26,44 @@
     icon = 'content_arfs/icons/obj/clothing/backpack.dmi'
     icon_override = 'content_arfs/icons/mob/clothing/custom_clothing_arf.dmi'
     icon_state = "satchel-holding_alt"
+
+//For mobs who don't have a pocket to store one in
+/obj/item/device/communicator/simple_mob
+	name = "bio-integrated communicator"
+	desc = "A device used for long-range communications, able to be implanted into certain non-human animals."
+
+// Proc: open_connection_to_ghost()
+// Parameters: 2 (refer to base definition for arguments)
+// Description: Synths don't use languages properly, so this is a bandaid fix until that can be resolved..
+/obj/item/device/communicator/simple_mob/open_connection_to_ghost(user, candidate)
+	..(user, candidate)
+	spawn(1)
+		for(var/mob/living/voice/V in contents)
+			V.universal_speak = 1
+			V.universal_understand = 1
+
+// Verb: activate()
+// Parameters: None
+// Description: Lets synths use their communicators without hands.
+/obj/item/device/communicator/simple_mob/verb/activate()
+	set category = "Abilities"
+	set name = "Use Communicator"
+	set desc = "Utilizes your implanted bio-communicator."
+	set src in usr
+
+	if(usr.stat == 2)
+		to_chat(usr, "You can't do that because you are dead!")
+		return
+
+	src.attack_self(usr)
+
+//Arfs overwrite from loadout_utility.dm
+/datum/gear/utility/communicator/New()
+	..()
+	var/list/communicators = list()
+	for(var/obj/item/device/communicator_type as anything in typesof(/obj/item/device/communicator) - list(	/obj/item/device/communicator/integrated,
+																											/obj/item/device/communicator/commlink,
+																											/obj/item/device/communicator/simple_mob))
+																											//VOREStation Edit - Remove Commlink
+		communicators[initial(communicator_type.name)] = communicator_type
+	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(communicators))

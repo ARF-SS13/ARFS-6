@@ -17,7 +17,7 @@
 	maxHealth = 100
 	max_co2 = 10 //Lets them go outside without dying of co2
 	attacktext = list("attacked") //List of verbs used when attacking something. X has attacked Y.
-	has_hands = FALSE 		//Set to true for pmon who should be able to pick things up.
+	has_hands = TRUE	 		//Makes gameplay more enjoyable, even if it doesn't make sense for a lot of them.
 	humanoid_hands = FALSE 	//Also set this to true if they should be allowed to use guns and other humanoid-only stuff. Don't turn this on.
 	response_help = "pets"
 	layer = MOB_LAYER
@@ -37,6 +37,7 @@
 	var/resting_heal_max = 2
 	var/on_manifest = FALSE
 	var/list/active_moves = list() 	//Moves that are passive or toggles can be found here
+	var/obj/item/device/communicator/simple_mob/communicator //This is created when using a pokemon teleporter or adminbuse
 
 /mob/living/simple_mob/animal/passive/pokemon/Initialize()
 	. = ..()
@@ -100,21 +101,6 @@
 		active_moves -= M_SHOCK
 	. = ..()
 
-/mob/living/simple_mob/animal/passive/pokemon/proc/rest_regeneration()
-	if(resting && stat < DEAD && health < maxHealth)
-		//Add a healing effect
-		add_overlay(heal_layer)
-		//Actually heal the mob
-		var/heal_amt = rand(0,resting_heal_max)//Average of 1 health per second for normal pmon. 2 for legendaries.
-		adjustBruteLoss(-heal_amt)
-		adjustOxyLoss(-heal_amt)
-		adjustFireLoss(-heal_amt)
-		adjustToxLoss(-heal_amt)
-		if(health >= maxHealth)
-			health = maxHealth
-		return TRUE
-	return FALSE
-
 /mob/living/simple_mob/animal/passive/pokemon/Topic(href, href_list)
 	if(href_list["ooc_notes"])
 		src.Examine_OOC()
@@ -167,23 +153,6 @@
 
 	return msg
 
-/mob/living/simple_mob/animal/passive/pokemon/proc/move_rest()	//Global move that every pokemon knows. Allows them to heal
-	set name = "Rest"											//without needing complex medical code.
-	set category = "Abilities"
-	set desc = "Lie down and rest in order to slowly heal or just relax."
-	if(src.flying)
-		to_chat(src,"<span class='warning'>You need to land if you want to rest.</span>")
-		return
-	if(M_GHOSTED in active_moves)
-		to_chat(src,"<span class='warning'>You need to rematerialize to benefit from resting.</span>")
-		return
-	resting = !resting
-	to_chat(src,"<span class='notice'>You are now [resting ? "resting" : "getting up"].</span>")
-	if(resting && health < maxHealth)
-		to_chat(src,"<span class='green'>You feel your wounds mending as you rest.</span>")
-	update_canmove()
-	update_icon()
-
 /mob/living/simple_mob/animal/passive/pokemon/update_icon()
 	. = ..()
 	pixel_x = default_pixel_x 	//If they're somehow reset out of their offset, this will correct them. (grabs do this)
@@ -219,384 +188,6 @@
 	if(M_GHOSTED in active_moves)
 		return TRUE
 	return ..()
-
-/mob/living/simple_mob/animal/passive/pokemon/proc/give_moves(var/typetogive)
-	if(!typetogive)
-		if(!LAZYLEN(additional_moves))
-			return FALSE
-		else
-			for(var/movetogive in additional_moves)//Give pokemon abilities not connected to their type
-				src.verbs |= movetogive
-	switch(typetogive)
-		if(P_TYPE_ICE)
-			src.minbodytemp = minbodytemp/4
-			src.heat_damage_per_tick = max(0, (heat_damage_per_tick*2))
-		if(P_TYPE_GRASS)
-			src.heat_damage_per_tick = max(0, (heat_damage_per_tick*2))
-		if(P_TYPE_FIRE)
-			src.maxbodytemp = maxbodytemp*4
-			src.cold_damage_per_tick = max(0, (heat_damage_per_tick/2))
-		if(P_TYPE_WATER)
-			src.aquatic_movement = 1
-			src.heat_damage_per_tick = max(0, (heat_damage_per_tick/2))
-		if(P_TYPE_FIGHT)
-			src.melee_damage_lower += 3
-			src.melee_damage_upper += 3
-		if(P_TYPE_FLY)
-			src.verbs |= /mob/living/simple_mob/animal/passive/pokemon/proc/move_fly
-			src.verbs |= /mob/living/simple_mob/animal/passive/pokemon/proc/move_hover
-		if(P_TYPE_POISON)
-			src.max_tox += 9999 //can survive in a lot of phoron
-		if(P_TYPE_DARK)
-			src.see_in_dark += 4
-		if(P_TYPE_PSYCH)
-			src.verbs |= /mob/living/simple_mob/animal/passive/pokemon/proc/move_telepathy
-		if(P_TYPE_GHOST)
-			src.see_in_dark += 6
-			src.verbs |= /mob/living/simple_mob/animal/passive/pokemon/proc/move_phase
-		if(P_TYPE_ELEC)
-			src.verbs |= /mob/living/simple_mob/animal/passive/pokemon/proc/move_shocking
-		if(P_TYPE_FAIRY)
-			src.verbs |= /mob/living/simple_mob/animal/passive/pokemon/proc/move_floral_healing
-		if(P_TYPE_STEEL)
-			src.max_tox += 99
-			src.maxbodytemp = maxbodytemp*2
-			src.minbodytemp = minbodytemp/2
-			src.maxHealth = maxHealth*1.5 //50% more health
-			src.health = health*1.5
-			src.heat_damage_per_tick = max(0, (heat_damage_per_tick*2))//melty
-		else
-			return FALSE
-
-/mob/living/simple_mob/animal/passive/pokemon/proc/move_fly()
-	set name = "Toggle Flight"
-	set desc = "Start or stop flying."
-	set category = "Abilities"
-
-	var/mob/living/simple_mob/animal/passive/pokemon/P = src
-	if(P.stat || P.resting)
-		to_chat(src, "You cannot fly in this state!")
-		return
-
-	P.flying = !P.flying
-	update_floating()
-	to_chat(P, "<span class='notice'>You have [P.flying?"started":"stopped"] flying.</span>")
-
-/mob/living/simple_mob/animal/passive/pokemon/proc/move_hover()
-	set name = "Hover"
-	set desc = "Allows you to stop gliding and hover."
-	set category = "Abilities"
-
-	var/mob/living/simple_mob/animal/passive/pokemon/P = src
-	if(!P.flying)
-		to_chat(P, "You must be flying to hover!")
-		return
-	if(P.stat || P.resting)
-		to_chat(P, "You cannot hover in your current state!")
-		return
-	if(P.anchored)
-		to_chat(P, "<span class='notice'>You are already hovering and/or anchored in place!</span>")
-		return
-
-	if(!P.anchored && !P.pulledby) //Not currently anchored, and not pulled by anyone.
-		P.anchored = 1 //This is the only way to stop the inertial_drift.
-		update_floating()
-		to_chat(P, "<span class='notice'>You hover in place.</span>")
-		spawn(6) //.6 seconds.
-			P.anchored = 0
-	else
-		return
-
-/mob/living/simple_mob/animal/passive/pokemon/proc/move_telepathy()
-	set name = "Telepathy"
-	set desc = "Speak directly to someone you can see, through their mind."
-	set category = "Abilities"
-
-	var/mob/living/simple_mob/animal/passive/pokemon/P = src
-	if(P.stat)
-		to_chat(src, "You can't do that right now!")
-		return
-	var/list/nearby_mobs = list()
-	for(var/mob/living/M in view(P.loc))
-		if(isliving(M) && M != P && M.alpha > EFFECTIVE_INVIS)//Living mobs nearby who aren't cloaked/invisible.
-			nearby_mobs |= M
-	if(!LAZYLEN(nearby_mobs))
-		to_chat(P,"<span class='alien'>You focus on your telepathy, but there's nobody nearby to speak to.</span>")
-		return
-	var/mob/living/T = input(P, "Who would you like to speak telepathically to?", "Choose Target") as null|anything in nearby_mobs
-	if(isnull(T) || !isliving(T))
-		return
-	var/message = sanitize(input(P,"What would you like to say to [T]?", "Telepathic Message") as message|null)
-	if(!message)
-		return
-	if(get_dist(P, T) > world.view)
-		to_chat(P,"<span class='alien'>You focus on your telepathy, but your target has moved too far away for them to hear you.</span>")
-		return
-	custom_emote(1,"briefly glows with telepathic energy.")
-	to_chat(src,"<span class='alien'><b>You telepathically say to [T]:</b> <i>[message]</i></span>")
-	to_chat(T,"<span class='alien'><b>You hear [P]'s voice in your head:</b> <i>[message]</i></span>")
-	for (var/mob/G in player_list)
-		if (istype(G, /mob/new_player))
-			continue
-		else if(isobserver(G) && G.is_preference_enabled(/datum/client_preference/ghost_ears))
-			if(is_preference_enabled(/datum/client_preference/whisubtle_vis) || G.client.holder)
-				to_chat(G, "<span class='alien'><b>[src] telepathically says to [T]:</b> <i>[message]</i></span>")
-	log_say("(POKETELEPATHY to [key_name(T)]) [message]", src)
-
-/mob/living/simple_mob/animal/passive/pokemon/proc/move_invisibility()
-	set name = "Invisibility (10s)"
-	set desc = "Instantly mask your presence or reappear at will!"
-	set category = "Abilities"
-
-	if(move_cooldown)
-		to_chat(src, "<span class='warning'>You need to wait before using another ability!</span>")
-		return FALSE
-	if((M_GHOSTED in active_moves) || stat || resting)
-		to_chat(src, "<span class='warning'>You can't use this ability right now!</span>")
-		return FALSE
-
-	if(M_INVIS in active_moves)
-		active_moves -= M_INVIS
-		mouse_opacity = 1
-		name = real_name
-		//overlays.Cut()
-		invisibility = initial(invisibility)
-		see_invisible = initial(see_invisible)
-		incorporeal_move = initial(incorporeal_move)
-		update_icon()
-		alpha = 0
-		custom_emote(1,"suddenly appears!")
-		alpha = initial(alpha)
-		move_cooldown = TRUE //Start the cooldown after they shift back in
-		spawn(move_cooldown_time)
-			move_cooldown = FALSE
-			to_chat(src,"<span class='green'>You're ready to use an ability again.</span>")
-	else
-		active_moves |= M_INVIS
-		mouse_opacity = 0
-		custom_emote(1,"suddenly disappears.")
-		name = "Something"
-		alpha = 0
-		invisibility = INVISIBILITY_LEVEL_TWO
-		see_invisible = INVISIBILITY_LEVEL_TWO
-		//overlays.Cut()
-		update_icon()
-		alpha = 127
-
-/mob/living/simple_mob/animal/passive/pokemon/proc/move_phase()
-	set name = "Phase Shift (10s)"
-	set desc = "Shift your body into an incorporeal state to pass through walls and other obstacles. Spooky!"
-	set category = "Abilities"
-	if(move_cooldown)
-		to_chat(src, "<span class='warning'>You need to wait before using another ability!</span>")
-		return FALSE
-	var/turf/T = get_turf(src)
-	if(!T.CanPass(src,T) || loc != T)
-		to_chat(src,"<span class='warning'>You can't use that here!</span>")
-		return FALSE
-	if(resting && !(M_GHOSTED in active_moves))//Let them un-ghost if they're stuck resting and ghosted somehow
-		to_chat(src,"<span class='warning'>You can't do that while resting!</span>")
-		return FALSE
-	if(stat)
-		to_chat(src,"<span class='warning'>You can't do that in your condition!</span>")
-		return FALSE
-	if(M_INVIS in active_moves)
-		to_chat(src,"<span class='warning'>You can't do that while invisible!</span>")
-		return FALSE
-	forceMove(T)
-	var/original_canmove = canmove
-	SetStunned(0)
-	SetWeakened(0)
-	if(buckled)
-		buckled.unbuckle_mob()
-	if(pulledby)
-		pulledby.stop_pulling()
-	stop_pulling()
-	canmove = FALSE
-
-	//Shifting in
-	if(M_GHOSTED in active_moves)
-		active_moves -= M_GHOSTED
-		mouse_opacity = 1
-		name = real_name
-		for(var/belly in vore_organs)
-			var/obj/belly/B = belly
-			B.escapable = initial(B.escapable)
-
-		//overlays.Cut()
-		invisibility = initial(invisibility)
-		see_invisible = initial(see_invisible)
-		incorporeal_move = initial(incorporeal_move)
-		density = initial(density)
-		force_max_speed = initial(force_max_speed)
-		update_icon()
-
-		//Cosmetics mostly
-		alpha = 0
-		custom_emote(1,"suddenly materializes.")
-		canmove = original_canmove
-		alpha = initial(alpha)
-
-		//Potential phase-in vore
-		if(can_be_drop_pred) //Toggleable in vore panel
-			var/list/potentials = living_mobs(0)
-			if(potentials.len)
-				var/mob/living/target = pick(potentials)
-				if(istype(target) && vore_selected)
-					target.forceMove(vore_selected)
-					to_chat(target,"<span class='warning'>\The [src] suddenly appears around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!</span>")
-
-		//Start the cooldown after they shift back in
-		move_cooldown = TRUE
-		spawn(move_cooldown_time)
-			move_cooldown = FALSE
-			to_chat(src,"<span class='green'>You're ready to use an ability again.</span>")
-
-	//Shifting out
-	else
-		active_moves |= M_GHOSTED
-		mouse_opacity = 0
-		custom_emote(1,"suddenly dematerializes.")
-		name = "Something"
-
-		for(var/belly in vore_organs)
-			var/obj/belly/B = belly
-			B.escapable = FALSE
-
-		alpha = 0
-		invisibility = INVISIBILITY_LEVEL_TWO
-		see_invisible = INVISIBILITY_LEVEL_TWO
-		//overlays.Cut()
-		update_icon()
-		alpha = 127
-
-		canmove = original_canmove
-		incorporeal_move = TRUE
-		density = FALSE
-		force_max_speed = TRUE
-
-/mob/living/simple_mob/animal/passive/pokemon/proc/move_shocking()
-	set name = "Toggle Shocking (10s)"
-	set category = "Abilities"
-	set desc = "Toggle your body's natural ability to discharge electricity into anyone who touches you."
-	if(move_cooldown)
-		to_chat(src, "<span class='warning'>You need to wait before using another ability!</span>")
-		return FALSE
-	move_cooldown = TRUE
-	spawn(move_cooldown_time)
-		move_cooldown = FALSE
-		to_chat(src,"<span class='green'>You're ready to use an ability again.</span>")
-	if (M_SHOCK in active_moves)
-		active_moves -= M_SHOCK
-		custom_emote(1,"is no longer bristling with electricity.")
-	else
-		active_moves |= M_SHOCK
-		custom_emote(1,"is now bristling with electricity!")
-	update_icon()
-
-/mob/living/simple_mob/animal/passive/pokemon/proc/move_floral_healing()
-	set name = "Floral Healing (20s)"
-	set desc = "Heal a nearby creature."
-	set category = "Abilities"
-
-	if(stat)
-		to_chat(src, "<span class='warning'>Can't use that ability in your state!</span>")
-		return FALSE
-	else if(M_GHOSTED in active_moves)
-		to_chat(src, "<span class='warning'>You can't use that while phase shifted!</span>")
-		return FALSE
-	else if(move_cooldown)
-		to_chat(src, "<span class='warning'>You need to wait before using another ability!</span>")
-		return FALSE
-
-	var/list/viewed = oview(1)
-	var/list/targets = list()
-	for(var/mob/living/L in viewed)
-		targets += L
-	if(!targets.len)
-		to_chat(src,"<span class='warning'>Nobody nearby to mend!</span>")
-		return FALSE
-
-	var/mob/living/target = tgui_input_list(src,"Pick someone to mend:","Mend Other", targets)
-	if(!target)
-		return FALSE
-	move_cooldown = TRUE
-	spawn(move_cooldown_time*2)//Longer cooldown
-		move_cooldown = FALSE
-		to_chat(src,"<span class='green'>You're ready to use an ability again.</span>")
-	target.add_modifier(/datum/modifier/pokemon/floral_healing,10 SECONDS)
-	playsound(target, 'sound/effects/weather/wind/wind_5_1.ogg', 100, 1)
-	visible_message("<span class='notice'>[src] and [target] briefly glow with pink fairy power before a swirling cloud of flower petals surrounds [target]...</span>")
-	face_atom(target)
-	return TRUE
-
-/datum/modifier/pokemon/floral_healing
-	name = "Floral Healing"
-	desc = "Refreshing flower petals surround you."
-	mob_overlay_state = "green_sparkles"
-
-	on_created_text = "<span class='notice'>Flower petals sudenly swirl around you, filling you with reinvigorating energy.</span>"
-	on_expired_text = "<span class='notice'>The flower petals suddenly fade away, leaving you feeling much better than before.</span>"
-	stacks = MODIFIER_STACK_EXTEND
-
-/datum/modifier/pokemon/floral_healing/tick()
-	if(!holder.getBruteLoss() && !holder.getFireLoss() && !holder.getToxLoss() && !holder.getOxyLoss() && !holder.getCloneLoss()) // No point existing if the spell can't heal.
-		expire()
-		return
-	holder.adjustBruteLoss(-3)
-	holder.adjustFireLoss(-3)
-	holder.adjustToxLoss(-3)
-	holder.adjustOxyLoss(-3)
-	holder.adjustCloneLoss(-3)
-
-//Ditto special move
-/mob/living/simple_mob/animal/passive/pokemon/proc/move_imposter()
-	set name = "Transform (60s)"
-	set desc = "Transform your body into the shape of another pokemon. Does not transfer special abilities."
-	set category = "Abilities"
-	if(!LAZYLEN(pokemon_choices_list))
-		to_chat(src, "<span class='warning'>WARNING: No pokemon list found! This may be due to there being no pokemon teleporter anywhere on the map. Tell a developer!</span>")
-		return
-	if(move_cooldown)
-		to_chat(src, "<span class='warning'>You need to wait before using another ability!</span>")
-		return
-	var/p_choice = input(src, "Choose your new form.", "[src.name]") as null|anything in pokemon_choices_list
-	if(!p_choice || isnull(p_choice))
-		to_chat(src, "<span class='notice'>Transformation aborted.</span>")
-		return
-	var/new_gender = input(src, "Choose your new form's gender appearance:", "gender selection", "neuter") as null|anything in list("neuter", "male", "female")
-	if(isnull(new_gender))
-		to_chat(src, "<span class='notice'>Transformation aborted.</span>")
-		return
-
-	p_choice = pokemon_choices_list["[p_choice]"]
-	var/mob/living/simple_mob/animal/passive/pokemon/NP = new p_choice()
-	gender 			= 	new_gender
-	icon 			= 	NP.icon
-	icon_state 		= 	NP.icon_state
-	icon_living		=	NP.icon_living
-	icon_dead		= 	"[NP.icon_state]_d"
-	icon_rest		= 	"[NP.icon_state]_rest"
-	tt_desc			=	NP.tt_desc
-	if(islegendary(NP))
-		pixel_x = -32
-		default_pixel_x = -32
-		old_x = -32
-	else
-		pixel_x = -16
-		default_pixel_x = -16
-		old_x = -16
-	visible_message("<span class='notice'>[src] slowly transforms until they look just like a [NP.name]!</span>")
-	to_chat(src,"<span class='green'><i>You've transformed to look like a [NP.name]! You can set your flavor text by using the Set Flavortext verb to match your new appearance.</i></span>")
-	if(NP.type != src.type)//Did we transform into a non-ditto?
-		active_moves |= M_TF //Add the transformed active move
-	else
-		active_moves -= M_TF //Otherwise remove it
-	del(NP)
-	move_cooldown = TRUE
-	spawn(move_cooldown_time*6)//60s
-		move_cooldown = FALSE
-		to_chat(src,"<span class='green'>You're ready to use an ability again.</span>")
 
 //Override to stop attacking while grabbing
 /mob/living/simple_mob/animal/passive/pokemon/UnarmedAttack(var/atom/A, var/proximity)
@@ -678,7 +269,6 @@
 	icon_dead = "lugia_d"
 	p_types = list(P_TYPE_PSYCH, P_TYPE_FLY)
 	movement_cooldown = 1.5
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/leg/lugia/andy
 	health = 500
@@ -696,11 +286,11 @@
 	icon_dead = "rayquaza_d"
 	p_types = list(P_TYPE_FLY)
 	movement_cooldown = 1.5
-	has_hands = TRUE
 
-///////////////////////
-//ALPHABETICAL PLEASE//
-///////////////////////
+
+///////////////////////////////
+//////ALPHABETICAL PLEASE//////
+///////////////////////////////
 
 /mob/living/simple_mob/animal/passive/pokemon/absol
 	name = "absol"
@@ -717,7 +307,6 @@
 	icon_dead = "aggron_d"
 	p_types = list(P_TYPE_STEEL)
 	movement_cooldown = 5
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/alolanvulpix
 	name = "alolan vulpix"
@@ -734,7 +323,6 @@
 	icon_living = "ampharos"
 	icon_dead = "ampharos_d"
 	p_types = list(P_TYPE_ELEC)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/braixen
 	name = "braixen"
@@ -743,7 +331,6 @@
 	icon_dead = "braixen_d"
 	p_types = list(P_TYPE_FIRE)
 	additional_moves = list(/mob/living/proc/hide)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/celebi
 	name = "celebi"
@@ -751,7 +338,6 @@
 	icon_living = "celebi"
 	icon_dead = "celebi_d"
 	p_types = list(P_TYPE_PSYCH, P_TYPE_GRASS)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/charmander
 	name = "charmander"
@@ -759,7 +345,6 @@
 	icon_living = "charmander"
 	icon_dead = "charmander_d"
 	p_types = list(P_TYPE_FIRE)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/ditto
 	name = "ditto"
@@ -768,7 +353,7 @@
 	icon_dead = "ditto_d"
 	p_types = list(P_TYPE_NORM)
 	additional_moves = list(/mob/living/proc/hide, /mob/living/simple_mob/animal/passive/pokemon/proc/move_imposter)//amogus
-	has_hands = TRUE //Can probably form a hand from its body, plus a lot of its tfs have them
+	 //Can probably form a hand from its body, plus a lot of its tfs have them
 
 /mob/living/simple_mob/animal/passive/pokemon/dragonair
 	name = "dragonair"
@@ -779,7 +364,7 @@
 	p_types = list(P_TYPE_DRAGON)
 	additional_moves = list(/mob/living/simple_mob/animal/passive/pokemon/proc/move_fly,
 							/mob/living/simple_mob/animal/passive/pokemon/proc/move_hover)
-	has_hands = TRUE
+
 
 /mob/living/simple_mob/animal/passive/pokemon/dragonite
 	name = "dragonite"
@@ -788,7 +373,6 @@
 	icon_living = "dragonite"
 	icon_dead = "dragonite_d"
 	p_types = list(P_TYPE_DRAGON, P_TYPE_FLY)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/dratini
 	name = "dratini"
@@ -850,7 +434,6 @@
 	icon_dead = "furret_d"
 	p_types = list(P_TYPE_NORM)
 	additional_moves = list(/mob/living/proc/hide)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/gallade
 	name = "gallade"
@@ -859,7 +442,6 @@
 	icon_dead = "gallade_d"
 	p_types = list(P_TYPE_PSYCH, P_TYPE_FIGHT)
 	additional_moves = list(/mob/living/proc/hide)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/gardevoir
 	name = "gardevoir"
@@ -868,7 +450,6 @@
 	icon_dead = "gardevoir_d"
 	p_types = list(P_TYPE_PSYCH, P_TYPE_FAIRY)
 	additional_moves = list(/mob/living/proc/hide)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/gastly
 	name = "gastly"
@@ -887,7 +468,7 @@
 	icon_dead = "gengar_d"
 	p_types = list(P_TYPE_GHOST, P_TYPE_POISON)
 	additional_moves = list(/mob/living/proc/hide)
-	has_hands = TRUE
+
 
 /mob/living/simple_mob/animal/passive/pokemon/glaceon
 	name = "glaceon"
@@ -906,7 +487,6 @@
 	icon_dead = "haunter_d"
 	p_types = list(P_TYPE_GHOST, P_TYPE_POISON)
 	additional_moves = list(/mob/living/proc/hide)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/jolteon
 	name = "jolteon"
@@ -955,7 +535,6 @@
 	icon_dead = "kirlia_d"
 	p_types = list(P_TYPE_PSYCH, P_TYPE_FAIRY)
 	additional_moves = list(/mob/living/proc/hide)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/larvitar
 	name = "larvitar"
@@ -981,7 +560,6 @@
 	icon_dead = "linoone_d"
 	p_types = list(P_TYPE_NORM)
 	additional_moves = list(/mob/living/proc/hide)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/growlithe
 	name = "growlithe"
@@ -1014,7 +592,6 @@
 	p_types = list(P_TYPE_NORM)
 	var/datum/reagents/udder = null
 	movement_cooldown = 3
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/miltank/Initialize()
 	udder = new(50)
@@ -1056,7 +633,6 @@
 	response_harm   = "hits"
 	p_types = list(P_TYPE_FAIRY)
 	additional_moves = list(/mob/living/proc/hide)
-	has_hands = TRUE	//Ribbon feelers ew
 
 /mob/living/simple_mob/animal/passive/pokemon/umbreon
 	name = "umbreon"
@@ -1081,7 +657,6 @@
 	icon_dead = "tentacruel_d"
 	movement_cooldown = 3
 	p_types = list(P_TYPE_WATER)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/thievul
 	name = "thievul"
@@ -1090,7 +665,6 @@
 	icon_dead = "thievul_d"
 	p_types = list(P_TYPE_DARK)
 	additional_moves = list(/mob/living/proc/hide)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/ninetales
 	name = "ninetales"
@@ -1121,7 +695,6 @@
 	icon_living = "tangela"
 	icon_dead = "tangela_d"
 	p_types = list(P_TYPE_GRASS, P_TYPE_POISON)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/pinsir
 	name = "pinsir"
@@ -1129,7 +702,6 @@
 	icon_living = "pinsir"
 	icon_dead = "pinsir_d"
 	p_types = list(P_TYPE_BUG)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/omanyte
 	name = "omanyte"
@@ -1147,7 +719,6 @@
 	icon_dead = "magmar_d"
 	movement_cooldown = 3
 	p_types = list(P_TYPE_FIRE)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/magicarp
 	name = "magicarp"
@@ -1180,7 +751,6 @@
 	icon_living = "Aerodactyl"
 	icon_dead = "Aerodactyl_d"
 	p_types = list(P_TYPE_ROCK, P_TYPE_FLY)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/lickitung
 	name = "lickitung"
@@ -1188,7 +758,6 @@
 	icon_living = "lickitung"
 	icon_dead = "lickitung_d"
 	p_types = list(P_TYPE_NORM)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/cubone
 	name = "cubone"
@@ -1197,7 +766,6 @@
 	icon_dead = "cubone_d"
 	p_types = list(P_TYPE_GROUND)
 	additional_moves = list(/mob/living/proc/hide)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/mew
 	name = "mew"
@@ -1209,7 +777,6 @@
 							/mob/living/simple_mob/animal/passive/pokemon/proc/move_hover,
 							/mob/living/simple_mob/animal/passive/pokemon/proc/move_imposter,
 							/mob/living/simple_mob/animal/passive/pokemon/proc/move_invisibility)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/mewtwo
 	name = "mewtwo"
@@ -1219,7 +786,6 @@
 	p_types = list(P_TYPE_PSYCH)
 	additional_moves = list(/mob/living/simple_mob/animal/passive/pokemon/proc/move_fly,
 							/mob/living/simple_mob/animal/passive/pokemon/proc/move_hover)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/purrloin
 	name = "purrloin"
@@ -1228,7 +794,6 @@
 	icon_dead = "purrloin_d"
 	p_types = list(P_TYPE_DARK)
 	additional_moves = list(/mob/living/proc/hide)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/ralts
 	name = "ralts"
@@ -1236,7 +801,6 @@
 	icon_living = "ralts"
 	icon_dead = "ralts_d"
 	p_types = list(P_TYPE_PSYCH, P_TYPE_FAIRY)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/snorlax
 	name = "snorlax"
@@ -1259,7 +823,6 @@
 	icon_dead = "zigzagoon_d"
 	p_types = list(P_TYPE_NORM)
 	additional_moves = list(/mob/living/proc/hide)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/zoroark
 	name = "zoroark"
@@ -1268,7 +831,6 @@
 	icon_dead = "zoroark_d"
 	p_types = list(P_TYPE_DARK)
 	additional_moves = list(/mob/living/proc/hide, /mob/living/simple_mob/animal/passive/pokemon/proc/move_imposter)
-	has_hands = TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/zorua
 	name = "zorua"
@@ -1285,7 +847,6 @@
 	icon_dead = "zorua_hisuian_d"
 	p_types = list(P_TYPE_NORM, P_TYPE_GHOST)
 	additional_moves = list(/mob/living/proc/hide, /mob/living/simple_mob/animal/passive/pokemon/proc/move_imposter)
-
 
 ///////////////////////
 //ALPHABETICAL PLEASE//

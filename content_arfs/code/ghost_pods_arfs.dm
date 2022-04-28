@@ -133,16 +133,16 @@ var/global/list/pokemon_pods = list()//List of pods that ghosts can spawn at
 	if(data_core)
 		data_core.ResetPDAManifest() //Reset the manifest
 
-	var/obj/item/device/radio/headset/mob_headset/R = new
-	R.forceMove(P)
+	var/obj/item/device/radio/headset/mob_headset/R = new(P)
 	P.mob_radio = R //Implant a mob radio on them so they can communicate over a distance and hear what's going on. Being left in the dark isn't fun.
+
+	var/obj/item/device/communicator/simple_mob/COM = new(P)
+	P.communicator = COM //Give them an implanted communicator so they can see the crew manifest, text chats, weather, etc
 
 	P.ai_holder.wander = 0 //Disables wandering if the player ghosts or is otherwise removed from their mob
 
 	log_and_message_admins("used \the [src] and became \an [P.tt_desc] named [P.name].")
 
-	to_chat(P, "<span class='notice'>You are a <b>Pokemon</b>, an artifically designed creature. Exiting the sleeve pod, your memories \
-	slowly start to come back to you as your mind adapts to this new body.</span>")
 	to_chat(P, "<span class='warning'>(OOC: Please remember to roleplay correctly. If you used this pod to respawn, you may not have all of \
 				the same memories as before you died. If you spawned at the incorrect location, or just want to traverse between the different \
 				parts of the map which may be inaccessible to you as a non-humanoid, you may click on any of these pods (non-help intent) to teleport between them. \

@@ -63,7 +63,6 @@
 	)
 
 	allowed_spawns = list("Arrivals Shuttle","Gateway","Cryogenic Storage","Cyborg Storage","NCS Serenity Residential")
-	planet_datums_to_make = list(/datum/planet/biodome)
 	map_levels = list(
 		Z_LEVEL_ARFS_ONE,
 		Z_LEVEL_ARFS_TWO,
@@ -80,7 +79,7 @@
 	overmap_size = 35
 	overmap_z = Z_LEVEL_CENTCOM_ARFS
 	overmap_event_areas = 75
-	
+
 	lateload_z_levels = list(
 		list("V3b Asteroid Field"),
 		list("Desert Planet - Z1 Beach","Desert Planet - Z2 Cave"),
@@ -105,7 +104,8 @@
 		list("Grass Cave")
 		)
 
-	planet_datums_to_make = list(/datum/planet/virgo3b,
+	planet_datums_to_make = list(/datum/planet/biodome,
+								/datum/planet/virgo3b,
 								/datum/planet/virgo4)
 
 /datum/map/arfs/perform_map_generation()
@@ -118,7 +118,7 @@
 	seed_submaps(list(Z_LEVEL_MINING_DANGER_ARFS), 300, /area/mine/unexplored, /datum/map_template/underdark)
 	new /datum/random_map/automata/cave_system(null, 1, 1, Z_LEVEL_MINING_DANGER_ARFS, world.maxx, world.maxy) // Create the mining Z-level.
 	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_MINING_DANGER_ARFS, world.maxx, world.maxy)         // Create the mining ore distribution map.
-	
+
 	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, Z_LEVEL_SPACE_ROCKS, world.maxx, world.maxy) // Create the mining Z-level.
 	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_SPACE_ROCKS, 64, 64)         // Create the mining ore distribution map.
 
@@ -228,12 +228,12 @@
 
 /obj/effect/overmap/visitable/ship/arfs
 	name = "ARFS Dallus"	// Name of the location on the overmap.
-	desc = "Placeholder desc"
+	desc = "A three-deck research and civilian vessel controlled by the Alliance of Racial Federations."
 
 	scanner_desc = @{"[i]Registration[/i]: ARFS Dallus
-[i]Class[/i]: Placeholder
-[i]Transponder[/i]: Transmitting (CIV), NanoTrasen IFF
-[b]Notice[/b]: NanoTrasen Vessel, authorized personnel only"}
+[i]Class[/i]: Research Frigate, Dallus Class
+[i]Transponder[/i]: Transmitting (CIV), ARF IFF
+[b]Notice[/b]: ARF Vessel, authorized personnel only"}
 
 	icon_state = "ship"
 	vessel_mass = 100000
@@ -241,7 +241,16 @@
 	fore_dir = NORTH	// Which direction the ship/z-level is facing.  It will move dust particles from that direction when moving.
 	base = TRUE		// Honestly unsure what this does but it seems the main sector or "Map" we're at has this so here it stays
 	// The waypoints that are avaliable once you are at this Navpoint
-	initial_generic_waypoints = list("arfs_excursion_hangar")
+	initial_generic_waypoints = list(
+		"arfs_excursion_hangar",
+		"arfs_dock_south", 		//Deck 3, Port Arm, South Dock
+		"arfs_dock_north", 		//Deck 3, Port Arm, North Dock
+		"arfs_dock_west",   	//Deck 3, Port Arm, West Dock
+		"arfs_space_nw", 		//Deck 3, NW space
+		"arfs_space_ne", 		//Deck 3, NE space
+		"arfs_space_sw", 		//Deck 3, SW space
+		"arfs_space_se"  		//Deck 3, SE space
+		)
 
 	initial_restricted_waypoints = list(
 		"Excursion Shuttle" = list("arfs_excursion_hangar"),
