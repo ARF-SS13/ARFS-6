@@ -54,6 +54,16 @@
 	landmark_tag = "arfs_dock_west"
 	docking_controller = "dallus_port_arm_w"
 
+/obj/effect/shuttle_landmark/arfs/deck3/dockarm/north/starboard
+	name = "ARFS Dallus - Docking Arm North - Starboard"
+	landmark_tag = "arfs_dock_north_starboard"
+	docking_controller = "dallus_port_arm_n_s"
+
+/obj/effect/shuttle_landmark/arfs/deck3/dockarm/south/starboard
+	name = "ARFS Dallus - Docking Arm South - Starboard"
+	landmark_tag = "arfs_dock_south_starboard"
+	docking_controller = "dallus_port_arm_s_s"
+
 /obj/effect/shuttle_landmark/arfs/deck3/space
 	base_turf = /turf/space
 	base_area = /area/space
@@ -82,7 +92,7 @@
 [i]Class[/i]: Corvette
 [i]Transponder[/i]: Transmitting (CIV), non-hostile
 [b]Notice[/b]: Multirole independent vessel"}
-	vessel_mass = 8000
+	vessel_mass = 10000
 	vessel_size = SHIP_SIZE_LARGE
 	fore_dir = EAST
 	known = TRUE
@@ -99,7 +109,21 @@
 	name = "Drake"
 	current_location = "arfs_mansion_hanger"
 	docking_controller_tag = "mansionshuttle_dock"
-	shuttle_area = list(/area/shuttle/drake,/area/shuttle/drake/engineering,/area/shuttle/drake/cockpit,/area/shuttle/drake/quarters1,/area/shuttle/drake/quarters2,/area/shuttle/drake/galley,/area/shuttle/drake/head)
+	shuttle_area = list(
+		/area/shuttle/drake/cabin,
+		/area/shuttle/drake/engineering,
+		/area/shuttle/drake/cockpit,
+		/area/shuttle/drake/quarters1,
+		/area/shuttle/drake/quarters2,
+		/area/shuttle/drake/galley,
+		/area/shuttle/drake/storage,
+		/area/shuttle/drake/head,
+		/area/shuttle/drake/medbay,
+		/area/shuttle/drake/office,
+		/area/shuttle/drake/dorm,
+		/area/shuttle/drake/port_hold,
+		/area/shuttle/drake/star_hold
+	)
 	fuel_consumption = 5
 
 // The shuttle's 'shuttle' computer
