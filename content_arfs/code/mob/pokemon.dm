@@ -37,6 +37,7 @@
 	var/resting_heal_max = 2
 	var/on_manifest = FALSE
 	var/list/active_moves = list() 	//Moves that are passive or toggles can be found here
+	var/obj/item/device/communicator/simple_mob/communicator //This is created when using a pokemon teleporter or adminbuse
 
 /mob/living/simple_mob/animal/passive/pokemon/Initialize()
 	. = ..()
