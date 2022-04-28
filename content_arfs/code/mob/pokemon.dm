@@ -64,6 +64,12 @@
 	rest_regeneration()//Do healing
 	nutrition = 3000 //Eating is hard. Remove if there's ever an easy source of food that isn't mice
 	updatehealth()//Update health overlay
+	if(sleeping)
+		sleeping--
+		if(sleeping <= 0)
+			sleeping == 0
+		update_canmove()
+		update_icon()
 	return TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/death(gibbed,deathmessage="seizes up and falls limp...")
@@ -844,6 +850,7 @@
 	icon_state = "zorua_hisuian"
 	icon_living = "zorua_hisuian"
 	icon_dead = "zorua_hisuian_d"
+	tt_desc = "hisuian zorua"
 	p_types = list(P_TYPE_NORM, P_TYPE_GHOST)
 	additional_moves = list(/mob/living/proc/hide, /mob/living/simple_mob/animal/passive/pokemon/proc/move_imposter)
 
