@@ -447,7 +447,11 @@
 
 /obj/item/weapon/card/id/residential/s9
 	name = "S9 residential key"
-	access = list(8208)
+	access = list(8209)
+
+/obj/item/weapon/card/id/residential/s10
+	name = "S10 residnetial key"
+	access = list(8210)
 
 //FLUFF SPAWNS
 
@@ -485,6 +489,13 @@
 	description = "residential"
 	ckeywhitelist = list("thingpony")
 	character_name = list("Haven Faye")
+
+/datum/gear/fluff/res_key_s10
+	path = /obj/item/weapon/card/id/residential/s10
+	display_name = "S10 keys"
+	description = "residential"
+	ckeywhitelist = list("evandarksky")
+	character_name = list("Evan Darksky","Dark-SKY")
 
 /obj/item/weapon/card/id/residential/rb1
 	name = "Residential Level Four - Room 1 Residential Key"
