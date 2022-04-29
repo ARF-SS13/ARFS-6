@@ -69,13 +69,14 @@ var/global/list/pokemon_pods = list()//List of pods that ghosts can spawn at
 	var/new_gender
 	var/new_flavor_text
 	var/new_ooc_notes
+	var/new_size_mult
 	var/p_choice = input(M, "What would you like to spawn in as?", "[src.name]") as null|anything in pokemon_choices_list
 	if(!p_choice || isnull(p_choice))
 		to_chat(M, "<span class='notice'>Spawning aborted.</span>")
 		return
 	p_choice = pokemon_choices_list["[p_choice]"]
 	//Ask if they have a character slot set up for this.
-	var/import_from_slot = input(M, "Would you like to import your currently selected character slot's information for this mob? This will apply their name, gender, vore preferences, flavor text, and OOC notes to your Pokemon character (Limb-based flavor text not supported). Select no to configure them manually. Select cancel to abort spawning process.", "[src.name]") as null|anything in list("Yes","No")
+	var/import_from_slot = input(M, "Would you like to import your currently selected character slot's information for this mob? This will apply their name, gender, vore preferences, flavor text, size, and OOC notes to your Pokemon character (Limb-based flavor text not supported). Select no to configure them manually. Select cancel to abort spawning process.", "[src.name]") as null|anything in list("Yes","No")
 	if(isnull(import_from_slot))
 		to_chat(M, "<span class='notice'>Spawning aborted.</span>")
 		return
@@ -89,6 +90,11 @@ var/global/list/pokemon_pods = list()//List of pods that ghosts can spawn at
 		if(isnull(new_gender))
 			to_chat(M, "<span class='notice'>Spawning aborted.</span>")
 			return
+		new_size_mult = input(usr, "Input size multiplier. Default = 1", "Resize", 1) as num|null
+		if(isnull(new_size_mult))
+			to_chat(M, "<span class='notice'>Spawning aborted.</span>")
+			return
+		new_size_mult = clamp(new_size_mult, RESIZE_MINIMUM, RESIZE_MAXIMUM)
 		new_flavor_text = sanitize(input(M,"Set your character's flavortext; a detailed description of their physical appearance.","Flavortext", null) as message|null, extra = 0)
 		new_ooc_notes = sanitize(input(M,"Set your OOC notes. This should contain your roleplaying preferences.","OOC Notes", null) as message|null, extra = 0)
 		//End mob configuration
@@ -110,6 +116,7 @@ var/global/list/pokemon_pods = list()//List of pods that ghosts can spawn at
 		new_gender = Prefs.identifying_gender
 		new_ooc_notes = Prefs.metadata
 		new_flavor_text = Prefs.flavor_texts["general"] //Limb flavor text not supported
+		new_size_mult = Prefs.size_multiplier
 
 	if(newname)//Still not empty after sanitization
 		P.name = newname
@@ -117,6 +124,8 @@ var/global/list/pokemon_pods = list()//List of pods that ghosts can spawn at
 	P.real_name = P.name
 	if(new_gender)
 		P.gender = new_gender
+	if(new_size_mult)
+		P.resize(new_size_mult)
 	if(new_flavor_text)
 		P.flavor_text = new_flavor_text
 	if(new_ooc_notes)

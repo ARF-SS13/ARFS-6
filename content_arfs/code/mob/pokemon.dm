@@ -38,6 +38,7 @@
 	var/on_manifest = FALSE
 	var/list/active_moves = list() 	//Moves that are passive or toggles can be found here
 	var/obj/item/device/communicator/simple_mob/communicator //This is created when using a pokemon teleporter or adminbuse
+	var/y_offset_mult = 16 // y_offset_mult(size_mult - 1) is the amount we need to offset the mob when resizing with a size gun. Bigger icon file needs a bigger number
 
 /mob/living/simple_mob/animal/passive/pokemon/Initialize()
 	. = ..()
@@ -162,8 +163,17 @@
 /mob/living/simple_mob/animal/passive/pokemon/update_icon()
 	. = ..()
 	pixel_x = default_pixel_x 	//If they're somehow reset out of their offset, this will correct them. (grabs do this)
+	pixel_y = old_y
 	cut_overlay(r_hand_sprite)	//Hand sprites don't line up with the mob, just hide them
 	cut_overlay(l_hand_sprite)
+
+/mob/living/simple_mob/animal/passive/pokemon/resize(new_size, animate = TRUE, uncapped = FALSE, ignore_prefs = FALSE, aura_animation = TRUE)
+	. = ..()
+	//Handle pixel y offsetting large sprite mobs
+	var/pixy = ((new_size - 1)*y_offset_mult)
+	pixel_y = pixy
+	default_pixel_y = pixy
+	old_y = pixy
 
 /mob/living/proc/set_ooc_notes()
 	set name = "Set OOC Notes"
@@ -267,6 +277,7 @@
 	icon_dead = "articuno_d"
 	p_types = list(P_TYPE_ICE, P_TYPE_FLY)
 	movement_cooldown = 1.5
+	y_offset_mult = 32
 
 /mob/living/simple_mob/animal/passive/pokemon/leg/lugia
 	name = "Lugia"
