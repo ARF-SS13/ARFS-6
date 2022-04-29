@@ -37,6 +37,7 @@
 	var/resting_heal_max = 2
 	var/on_manifest = FALSE
 	var/list/active_moves = list() 	//Moves that are passive or toggles can be found here
+	var/obj/item/device/communicator/simple_mob/communicator //This is created when using a pokemon teleporter or adminbuse
 
 /mob/living/simple_mob/animal/passive/pokemon/Initialize()
 	. = ..()
@@ -64,6 +65,12 @@
 	rest_regeneration()//Do healing
 	nutrition = 3000 //Eating is hard. Remove if there's ever an easy source of food that isn't mice
 	updatehealth()//Update health overlay
+	if(sleeping)
+		sleeping--
+		if(sleeping <= 0)
+			sleeping = 0
+		update_canmove()
+		update_icon()
 	return TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/death(gibbed,deathmessage="seizes up and falls limp...")
@@ -361,6 +368,7 @@
 	icon_living = "dragonair"
 	icon_dead = "dragonair_d"
 	p_types = list(P_TYPE_DRAGON)
+	aquatic_movement = 1
 	additional_moves = list(/mob/living/simple_mob/animal/passive/pokemon/proc/move_fly,
 							/mob/living/simple_mob/animal/passive/pokemon/proc/move_hover)
 
@@ -372,6 +380,7 @@
 	icon_living = "dragonite"
 	icon_dead = "dragonite_d"
 	p_types = list(P_TYPE_DRAGON, P_TYPE_FLY)
+	aquatic_movement = 1
 
 /mob/living/simple_mob/animal/passive/pokemon/dratini
 	name = "dratini"
@@ -380,6 +389,7 @@
 	icon_living = "dratini"
 	icon_dead = "dratini_d"
 	movement_cooldown = 3
+	aquatic_movement = 1
 	p_types = list(P_TYPE_DRAGON)
 	additional_moves = list(/mob/living/proc/hide)
 
@@ -844,6 +854,7 @@
 	icon_state = "zorua_hisuian"
 	icon_living = "zorua_hisuian"
 	icon_dead = "zorua_hisuian_d"
+	tt_desc = "hisuian zorua"
 	p_types = list(P_TYPE_NORM, P_TYPE_GHOST)
 	additional_moves = list(/mob/living/proc/hide, /mob/living/simple_mob/animal/passive/pokemon/proc/move_imposter)
 

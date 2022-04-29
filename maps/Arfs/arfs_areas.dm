@@ -291,6 +291,12 @@
 	icon_state = "engineering"
 	icon = 'icons/turf/areas.dmi'
 
+//Engineering Shuttle Dock
+/area/engineering/shuttle_dock
+	name= "\improper Engineering - Shuttle Dock"
+	icon_state = "engineering"
+	icon = 'icons/turf/areas.dmi'
+
 //Upstairs Kitchen
 /area/crew_quarters/kitchen/upper
 	name= "\improper Upstairs Kitchen"
