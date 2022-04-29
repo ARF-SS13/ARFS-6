@@ -54,6 +54,16 @@
 	landmark_tag = "arfs_dock_west"
 	docking_controller = "dallus_port_arm_w"
 
+/obj/effect/shuttle_landmark/arfs/deck3/dockarm/north/starboard
+	name = "ARFS Dallus - Docking Arm North - Starboard"
+	landmark_tag = "arfs_dock_north_starboard"
+	docking_controller = "dallus_port_arm_n_s"
+
+/obj/effect/shuttle_landmark/arfs/deck3/dockarm/south/starboard
+	name = "ARFS Dallus - Docking Arm South - Starboard"
+	landmark_tag = "arfs_dock_south_starboard"
+	docking_controller = "dallus_port_arm_s_s"
+
 /obj/effect/shuttle_landmark/arfs/deck3/space
 	base_turf = /turf/space
 	base_area = /area/space
@@ -73,6 +83,77 @@
 /obj/effect/shuttle_landmark/arfs/deck3/space/nw
 	name = "North West of ARFS Dallus"
 	landmark_tag = "dallus_space_nw"
+
+//////////////////////////////////////////////////////////////
+// Andy's shuttle
+/obj/effect/overmap/visitable/ship/landable/drake
+	name = "Salamander-class Corvette"
+	scanner_desc = @{"[i]Registration[/i]: ARF Drake
+[i]Class[/i]: Corvette
+[i]Transponder[/i]: Transmitting (CIV), non-hostile
+[b]Notice[/b]: Multirole independent vessel"}
+	vessel_mass = 10000
+	vessel_size = SHIP_SIZE_LARGE
+	fore_dir = EAST
+	known = TRUE
+	shuttle = "Drake"
+
+/obj/effect/shuttle_landmark/arfs/serenity/drake
+	name = "Mansion Hanger"
+	landmark_tag = "arfs_mansion_hanger"
+	docking_controller = "mansionshuttle_dock"
+	base_turf = /turf/simulated/floor/reinforced
+	base_area = /area/residential/mansion
+
+/datum/shuttle/autodock/overmap/drake
+	name = "Drake"
+	current_location = "arfs_mansion_hanger"
+	docking_controller_tag = "mansionshuttle_dock"
+	shuttle_area = list(
+		/area/shuttle/drake/cabin,
+		/area/shuttle/drake/engineering,
+		/area/shuttle/drake/cockpit,
+		/area/shuttle/drake/quarters1,
+		/area/shuttle/drake/quarters2,
+		/area/shuttle/drake/galley,
+		/area/shuttle/drake/storage,
+		/area/shuttle/drake/head,
+		/area/shuttle/drake/medbay,
+		/area/shuttle/drake/office,
+		/area/shuttle/drake/dorm,
+		/area/shuttle/drake/port_hold,
+		/area/shuttle/drake/star_hold
+	)
+	fuel_consumption = 5
+	flags = SHUTTLE_FLAGS_PROCESS
+
+// The shuttle's 'shuttle' computer
+/obj/machinery/computer/shuttle_control/explore/drake
+	name = "short jump console"
+	shuttle_tag = "Drake"
+	req_one_access = list()
+
+//////////////////////////////////////////////////////////////
+// Serenity
+
+/obj/effect/overmap/visitable/sector/serenity
+	name = "ARFS Serenity"
+	desc = "The A.R.F.S. Serenity Biodome and all levels."
+	scanner_desc = @{"[i]Stellar Body[/i]: A.R.F.S. Serenity
+[i]Class[/i]: Biodome
+[i]Habitability[/i]: High"}
+	icon_state = "globe"
+	in_space = 0
+	initial_generic_waypoints = list("arfs_mansion_hanger")
+	extra_z_levels = list(Z_LEVEL_RESIDENTIAL_ARFS, Z_LEVEL_RESIDENTIAL_TWO_ARFS, Z_LEVEL_RESIDENTIAL_MANSION_ARFS)
+	known = TRUE
+
+	skybox_icon = 'icons/skybox/virgo4.dmi'
+	skybox_icon_state = "v2"
+	skybox_pixel_x = 0
+	skybox_pixel_y = 0
+
+	initial_restricted_waypoints = list("Drake" = list("arfs_mansion_hanger"),)
 
 //////////////////////////////////////////////////////////////
 // Escape shuttle

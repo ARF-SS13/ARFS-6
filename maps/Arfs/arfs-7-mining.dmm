@@ -11684,7 +11684,6 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/south_hall)
 "rg" = (
@@ -11696,7 +11695,6 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/south_hall)
 "rh" = (
@@ -11985,7 +11983,6 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/south_hall)
 "rK" = (
@@ -11998,7 +11995,6 @@
 	dir = 1;
 	health = 1e+006
 	},
-/obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/south_hall)
 "rL" = (
@@ -15131,9 +15127,9 @@
 	},
 /obj/machinery/airlock_sensor{
 	dir = 1;
-	pixel_y = -25;
+	frequency = 1380;
 	id_tag = "engi_mine_dock_sens";
-	frequency = 1380
+	pixel_y = -25
 	},
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
@@ -15226,12 +15222,12 @@
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
 	frequency = 1380;
 	id_tag = "engi_mine_dock";
-	req_one_access = list(11,24);
 	pixel_y = 25;
+	req_one_access = list(11,24);
 	tag_airpump = "engi_mine_dock_pump";
+	tag_chamber_sensor = "engi_mine_dock_sens";
 	tag_exterior_door = "engi_mine_dock_ext_door";
-	tag_interior_door = "engi_mine_dock_int_door";
-	tag_chamber_sensor = "engi_mine_dock_sens"
+	tag_interior_door = "engi_mine_dock_int_door"
 	},
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
@@ -15291,8 +15287,8 @@
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
 	frequency = 1380;
 	id_tag = "engi_mine_dock";
-	req_one_access = list(11,24);
-	pixel_y = -25
+	pixel_y = -25;
+	req_one_access = list(11,24)
 	},
 /turf/simulated/mineral,
 /area/mine/unexplored)
@@ -15523,10 +15519,10 @@
 "SH" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_external/public{
-	name = "Engineering Shuttle Dock";
-	id_tag = "engi_mine_dock_ext_door";
 	frequency = 1380;
-	locked = 1
+	id_tag = "engi_mine_dock_ext_door";
+	locked = 1;
+	name = "Engineering Shuttle Dock"
 	},
 /obj/item/tape/engineering,
 /turf/simulated/floor/plating,
@@ -15538,10 +15534,10 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_external/public{
-	name = "Engineering Shuttle Dock";
-	id_tag = "engi_mine_dock_int_door";
 	frequency = 1380;
-	locked = 1
+	id_tag = "engi_mine_dock_int_door";
+	locked = 1;
+	name = "Engineering Shuttle Dock"
 	},
 /obj/item/tape/engineering,
 /turf/simulated/floor/plating,

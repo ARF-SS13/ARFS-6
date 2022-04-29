@@ -3198,11 +3198,6 @@
 /obj/structure/lattice,
 /turf/space,
 /area/space)
-"agH" = (
-/obj/structure/lattice,
-/obj/structure/lattice,
-/turf/space,
-/area/space)
 "agI" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -6206,9 +6201,9 @@
 	opacity = 0
 	},
 /obj/machinery/door/window/brigdoor/southright{
+	dir = 1;
 	name = "Secure Door";
-	req_access = list(57);
-	dir = 1
+	req_access = list(57)
 	},
 /obj/machinery/door/window/brigdoor/southright,
 /turf/simulated/floor/tiled/dark,
@@ -43160,9 +43155,9 @@
 	},
 /obj/machinery/airlock_sensor{
 	dir = 1;
-	pixel_y = -25;
+	frequency = 1380;
 	id_tag = "engi_dallus_dock_sensor";
-	frequency = 1380
+	pixel_y = -25
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/shuttle_dock)
@@ -50330,6 +50325,17 @@
 /obj/structure/closet/secure_closet/freezer/meat,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
+"oSc" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crew_quarters/kitchen)
 "oSx" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/machinery/atmospherics/pipe/manifold/visible/blue{
@@ -50905,10 +50911,10 @@
 "pFj" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_external/public{
-	name = "Engineering Shuttle Dock";
-	id_tag = "engi_dallus_dock_ext_door";
 	frequency = 1380;
-	locked = 1
+	id_tag = "engi_dallus_dock_ext_door";
+	locked = 1;
+	name = "Engineering Shuttle Dock"
 	},
 /obj/item/tape/engineering,
 /turf/simulated/floor/tiled/dark,
@@ -51328,8 +51334,8 @@
 	pixel_x = 25
 	},
 /obj/item/clothing/mask/breath{
-	pixel_y = 5;
-	pixel_x = -3
+	pixel_x = -3;
+	pixel_y = 5
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/constructionsite)
@@ -52802,8 +52808,8 @@
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
 	frequency = 1380;
 	id_tag = "engi_dallus_dock";
-	req_one_access = list(11,24);
 	pixel_y = 25;
+	req_one_access = list(11,24);
 	tag_airpump = "engi_dallus_dock_pump";
 	tag_chamber_sensor = "engi_dallus_dock_sensor";
 	tag_exterior_door = "engi_dallus_dock_ext_door";
@@ -53592,10 +53598,10 @@
 /area/engineering)
 "sZb" = (
 /obj/machinery/door/airlock/glass_external/public{
-	name = "Engineering Shuttle Dock";
+	frequency = 1380;
 	id_tag = "engi_shuttle_hatch";
 	locked = 1;
-	frequency = 1380
+	name = "Engineering Shuttle Dock"
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/item/tape/engineering,
@@ -56544,10 +56550,10 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/glass_external/public{
-	name = "Engineering Shuttle Dock";
-	id_tag = "engi_dallus_dock_int_door";
 	frequency = 1380;
-	locked = 1
+	id_tag = "engi_dallus_dock_int_door";
+	locked = 1;
+	name = "Engineering Shuttle Dock"
 	},
 /obj/item/tape/engineering,
 /turf/simulated/floor/tiled/dark,
@@ -83953,7 +83959,7 @@ aov
 aaa
 aaa
 aaa
-agH
+aov
 aaa
 aaa
 aaa
@@ -86781,13 +86787,13 @@ fhF
 fhF
 fhF
 bvT
-agH
 aov
 aov
-agH
 aov
 aov
-agH
+aov
+aov
+aov
 aov
 aov
 bDU
@@ -93209,7 +93215,7 @@ bEy
 aaa
 aaa
 aaa
-agH
+aov
 aaa
 aaa
 aov
@@ -94300,7 +94306,7 @@ aaa
 aaa
 aaa
 aaa
-agH
+aov
 aaa
 aaa
 aaa
@@ -96688,7 +96694,7 @@ bRD
 bRD
 bvm
 vit
-bRD
+oSc
 aNY
 bRD
 bIS

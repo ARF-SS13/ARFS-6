@@ -5,22 +5,61 @@
 	requires_power = 1
 	icon_state = "shuttle2"
 	base_turf = /turf/simulated/floor/reinforced
-
 /area/shuttle/excursion/general
 	name = "\improper Excursion Shuttle"
-
 /area/shuttle/excursion/medical
 	name = "\improper Excursion Shuttle Medical"
-
 /area/shuttle/excursion/cockpit
 	name = "\improper Excursion Shuttle Cockpit"
-
 /area/shuttle/excursion/cargo
 	name = "\improper Excursion Shuttle Cargo"
-
 /area/shuttle/excursion/power
 	name = "\improper Excursion Shuttle Power"
 
+// Andy shuttle
+/area/shuttle/drake
+	icon = 'icons/turf/areas_vr_talon.dmi'
+	icon_state = "gray"
+	requires_power = 1
+	has_gravity = 1
+/area/shuttle/drake/cabin
+	name = "\improper Drake Cabin"
+/area/shuttle/drake/engineering
+	name = "\improper Drake Engineering"
+	icon_state = "yellow"
+/area/shuttle/drake/cockpit
+	name = "\improper Drake Cockpit"
+	icon_state = "blue"
+/area/shuttle/drake/quarters1
+	name = "\improper Drake Quarters 1"
+	icon_state = "gray-p"
+/area/shuttle/drake/quarters2
+	name = "\improper Drake Quarters 2"
+	icon_state = "gray-s"
+/area/shuttle/drake/galley	
+	name = "\improper Drake Galley"
+	icon_state = "dark-p"
+/area/shuttle/drake/storage
+	name = "\improper Drake Storage"
+	icon_state = "dark-s"
+/area/shuttle/drake/head
+	name = "\improper Drake Bathroom"
+	icon_state = "dark-p"
+/area/shuttle/drake/medbay
+	name = "\improper Drake Medbay"
+	icon_state = "dark-p"
+/area/shuttle/drake/office
+	name = "\improper Drake Office"
+	icon_state = "dark-s"
+/area/shuttle/drake/dorm
+	name = "\improper Drake Dorms"
+	icon_state = "dark-s"
+/area/shuttle/drake/port_hold
+	name = "\improper Drake Port Hold"
+	icon_state = "dark-p"
+/area/shuttle/drake/star_hold
+	name = "\improper Drake Starboard Hold"
+	icon_state = "dark-s"
 
 // antag
 /area/shuttle/antag_ground/base
@@ -123,6 +162,12 @@
 	name = "\improper Deck Three - Port Docking Arm, Aft Airlock"
 /area/hallway/station/docking_hall_airlock_w
 	name = "\improper Deck Three - Port Docking Arm, Port Airlock"
+/area/hallway/station/docking_hall_starboard
+	name = "\improper Deck Three - Starboard Docking Arm Hallway"
+/area/hallway/station/docking_hall_starboard_airlock_n
+	name = "\improper Deck Three - Starboard Docking Arm, Fore Airlock"
+/area/hallway/station/docking_hall_starboard_airlock_s
+	name = "\improper Deck Three - Starboard Docking Arm, Aft Airlock"
 
 //MAINT
 
@@ -309,4 +354,5 @@
 	icon_state = "exploration"
 	icon = 'maps/arfs/arfs_areas.dmi'
 
-//airlocks
+//checkpoints
+/area/security/checkpoint/starboard
