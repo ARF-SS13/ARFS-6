@@ -67,7 +67,7 @@
 	if(sleeping)
 		sleeping--
 		if(sleeping <= 0)
-			sleeping == 0
+			sleeping = 0
 		update_canmove()
 		update_icon()
 	return TRUE
@@ -367,6 +367,7 @@
 	icon_living = "dragonair"
 	icon_dead = "dragonair_d"
 	p_types = list(P_TYPE_DRAGON)
+	aquatic_movement = 1
 	additional_moves = list(/mob/living/simple_mob/animal/passive/pokemon/proc/move_fly,
 							/mob/living/simple_mob/animal/passive/pokemon/proc/move_hover)
 
@@ -378,6 +379,7 @@
 	icon_living = "dragonite"
 	icon_dead = "dragonite_d"
 	p_types = list(P_TYPE_DRAGON, P_TYPE_FLY)
+	aquatic_movement = 1
 
 /mob/living/simple_mob/animal/passive/pokemon/dratini
 	name = "dratini"
@@ -386,6 +388,7 @@
 	icon_living = "dratini"
 	icon_dead = "dratini_d"
 	movement_cooldown = 3
+	aquatic_movement = 1
 	p_types = list(P_TYPE_DRAGON)
 	additional_moves = list(/mob/living/proc/hide)
 

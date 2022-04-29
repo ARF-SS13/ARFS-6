@@ -228,25 +228,26 @@
 	shuttle_area = /area/shuttle/constructionsite
 	landmark_station = "engineering_station"
 	landmark_offsite = "engineering_asteroid"
-	landmark_transition = "engineering_transit"
-	docking_controller_tag = "engineering_shuttle"
+	docking_controller_tag = "engi_shuttle"
 	move_direction = NORTH
 
 /obj/effect/shuttle_landmark/premade/engineering/asteroid
 	name = "Outpost - Engineering Dock"
 	landmark_tag = "engineering_asteroid"
-	docking_controller = "edock_airlock"
+	docking_controller = "engi_mine_dock"
 	base_area = /area/space
 	base_turf = /turf/space
 
 /obj/effect/shuttle_landmark/premade/engineering/station
 	name = "ARFS Dallus - Engineering Dock"
 	landmark_tag = "engineering_station"
-	docking_controller = "engineering_dock_airlock"
+	docking_controller = "engi_dallus_dock"
 	base_area = /area/space
 	base_turf = /turf/space
 
-
+/obj/machinery/computer/shuttle_control/engineering
+	name = "\improper Engineering Shuttle Console"
+	req_one_access = list(access_engine, access_construction, access_atmospherics)
 
 /* OLD SHUTTLES BELOW HERE. THEY'RE HERE TEMPORARILY SO THEY CAN BE RE-ADDED WITH LANDMARK SHUTTLE CODE
 //Medivac

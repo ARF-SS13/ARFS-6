@@ -5042,8 +5042,7 @@
 /area/outpost/research/eva)
 "gK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 10;
-	tag = "icon-intact (SOUTHWEST)"
+	dir = 10
 	},
 /obj/effect/floor_decal/corner_kafel/purple{
 	dir = 5;
@@ -5752,8 +5751,7 @@
 /area/outpost/research/eva)
 "hG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 9;
-	tag = "icon-intact-f (NORTHWEST)"
+	dir = 9
 	},
 /obj/structure/cable/green{
 	d1 = 1;
@@ -5980,8 +5978,7 @@
 "ia" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4;
-	tag = "icon-intact (EAST)"
+	dir = 4
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -5999,8 +5996,7 @@
 /area/outpost/research/eva)
 "ib" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 9;
-	tag = "icon-intact-f (NORTHWEST)"
+	dir = 9
 	},
 /obj/effect/floor_decal/corner_kafel/purple{
 	dir = 9;
@@ -9532,13 +9528,11 @@
 /turf/simulated/floor/reinforced,
 /area/outpost/research/xenobiology)
 "mS" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
+/obj/machinery/atmospherics/portables_connector{
+	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/turf/simulated/floor/tiled,
+/obj/machinery/portable_atmospherics/canister/air/airlock,
+/turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
 "mT" = (
 /obj/structure/cable{
@@ -9546,7 +9540,7 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/solar_control/autostart,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
 "mU" = (
 /obj/effect/shuttle_landmark/premade/mining/asteroid,
@@ -9564,7 +9558,7 @@
 	output_level = 195000
 	},
 /obj/structure/cable/green,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
 "mW" = (
 /turf/simulated/mineral/floor/ignore_mapgen,
@@ -10271,13 +10265,13 @@
 	icon_state = "pipe-c"
 	},
 /turf/simulated/mineral,
-/area/mine/unexplored)
+/area/mine/explored)
 "oo" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/mineral,
-/area/mine/unexplored)
+/area/mine/explored)
 "op" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -10423,7 +10417,7 @@
 "oE" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/mineral,
-/area/space)
+/area/mine/explored)
 "oF" = (
 /turf/simulated/wall,
 /area/outpost/mining_main/break_room)
@@ -10511,7 +10505,7 @@
 	master_tag = "mcontrol";
 	pixel_x = 26;
 	pixel_y = 26;
-	req_access = list(48)
+	req_access = list(13,48)
 	},
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
@@ -10682,8 +10676,7 @@
 /area/outpost/mining_main/south_hall)
 "pg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 9;
-	tag = "icon-intact-f (NORTHWEST)"
+	dir = 9
 	},
 /obj/effect/floor_decal/corner/orange{
 	dir = 4;
@@ -11603,9 +11596,14 @@
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/south_hall)
 "qX" = (
-/obj/effect/shuttle_landmark/premade/engineering/asteroid,
-/turf/space,
-/area/shuttle/constructionsite/site)
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/computer/shuttle_control/engineering{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/outpost/mining_main/maintenance)
 "qY" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 9
@@ -11866,8 +11864,7 @@
 	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 10;
-	tag = "icon-intact (SOUTHWEST)"
+	dir = 10
 	},
 /turf/simulated/floor/tiled/dark,
 /area/outpost/mining_main/south_hall)
@@ -12255,8 +12252,7 @@
 	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 9;
-	tag = "icon-intact-f (NORTHWEST)"
+	dir = 9
 	},
 /turf/simulated/floor/tiled/dark,
 /area/outpost/mining_main/south_hall)
@@ -12358,7 +12354,7 @@
 /area/outpost/research/power)
 "sy" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
 "sz" = (
 /obj/machinery/alarm{
@@ -12366,7 +12362,7 @@
 	pixel_y = 22
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
 "sA" = (
 /obj/machinery/light{
@@ -12377,7 +12373,7 @@
 	pixel_x = 26
 	},
 /obj/machinery/telecomms/relay/preset/mining,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
 "sB" = (
 /obj/effect/floor_decal/corner/orange{
@@ -12512,29 +12508,17 @@
 	},
 /area/mine/explored)
 "sQ" = (
-/turf/space,
-/area/shuttle/constructionsite/site)
+/obj/effect/wingrille_spawn/reinforced,
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/plating,
+/area/outpost/mining_main/maintenance)
 "sR" = (
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	health = 1e+006
-	},
-/obj/structure/grille,
-/obj/machinery/door/firedoor/border_only,
+/obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
 "sS" = (
@@ -12544,7 +12528,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
 "sT" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -12553,7 +12537,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
 "sU" = (
 /obj/structure/cable/green{
@@ -12567,7 +12551,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
 "sV" = (
 /obj/structure/cable/green{
@@ -12582,10 +12566,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/door/airlock/maintenance{
-	name = "Mining Outpost Maintenance";
-	req_one_access = newlist()
-	},
+/obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/tiled/dark,
 /area/outpost/mining_main/maintenance)
 "sW" = (
@@ -12667,21 +12648,13 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
 "td" = (
-/obj/structure/grille,
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/structure/window/reinforced,
+/obj/effect/wingrille_spawn/reinforced,
+/obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
 "te" = (
@@ -12695,21 +12668,11 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/obj/machinery/computer/shuttle_control/engineering,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
 "tf" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 6;
-	frequency = 1380;
-	id_tag = "engi_outpost_pump"
-	},
-/turf/simulated/floor/tiled,
+/obj/machinery/atmospherics/portables_connector,
+/turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
 "tg" = (
 /obj/structure/cable/green{
@@ -12717,7 +12680,13 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/turf/simulated/floor/tiled,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
 "th" = (
 /obj/structure/cable/green{
@@ -12730,7 +12699,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
 "ti" = (
 /obj/effect/floor_decal/corner/orange{
@@ -12884,7 +12853,7 @@
 	dir = 8
 	},
 /obj/structure/cable,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
 "ty" = (
 /obj/machinery/camera/network/mining{
@@ -12897,7 +12866,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
 "tz" = (
 /obj/machinery/power/apc{
@@ -12912,7 +12881,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
 "tA" = (
 /obj/effect/floor_decal/corner/orange{
@@ -13012,8 +12981,10 @@
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/outpost/mining_main/refinery)
 "tJ" = (
-/obj/structure/sign/nosmoking_1,
-/turf/simulated/wall,
+/obj/machinery/atmospherics/portables_connector{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
 "tK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -13027,11 +12998,8 @@
 	dir = 9
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
-	name = "Mining Outpost Maintenance";
-	req_one_access = newlist()
-	},
-/turf/simulated/floor/tiled,
+/obj/machinery/door/airlock/maintenance/engi,
+/turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
 "tM" = (
 /turf/simulated/wall,
@@ -13092,7 +13060,9 @@
 /area/mine/explored)
 "tT" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
-/turf/simulated/wall,
+/obj/effect/wingrille_spawn/reinforced,
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
 "tU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -13110,6 +13080,9 @@
 "tW" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/universal{
 	dir = 4
+	},
+/obj/machinery/light{
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
@@ -13783,7 +13756,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 4
 	},
-/obj/machinery/light/small,
+/obj/machinery/light,
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
 "uN" = (
@@ -13797,7 +13770,13 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
 "uO" = (
 /obj/machinery/atmospherics/pipe/tank/air{
@@ -13806,10 +13785,14 @@
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
 "uP" = (
-/obj/machinery/atmospherics/pipe/tank/air{
-	dir = 1
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
-/obj/machinery/light/small,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9
+	},
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
 "uQ" = (
@@ -15133,88 +15116,57 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled,
-/area/outpost/mining_main/maintenance)
-"wI" = (
-/obj/structure/grille,
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/window/reinforced{
-	health = 1e+006
-	},
-/obj/structure/window/reinforced{
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
-/obj/structure/window/reinforced{
-	dir = 8
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
 	},
-/obj/structure/window/reinforced{
-	dir = 1
+/turf/simulated/floor/plating,
+/area/outpost/mining_main/maintenance)
+"wI" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5;
+	tag = "icon-intact-f (NORTHEAST)"
+	},
+/obj/machinery/airlock_sensor{
+	dir = 1;
+	pixel_y = -25;
+	id_tag = "engi_mine_dock_sens";
+	frequency = 1380
 	},
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
 "wK" = (
 /obj/structure/cable{
-	icon_state = "2-4"
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled,
-/area/outpost/mining_main/maintenance)
-"wL" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled,
-/area/outpost/mining_main/maintenance)
-"wM" = (
-/turf/simulated/floor/airless{
-	icon_state = "asteroidplating2"
-	},
-/area/space)
-"wN" = (
-/obj/structure/grille,
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/window/reinforced{
-	health = 1e+006
-	},
-/obj/structure/window/reinforced{
+/obj/machinery/atmospherics/portables_connector{
 	dir = 4
 	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
+"wL" = (
+/obj/machinery/atmospherics/trinary/atmos_filter,
+/turf/simulated/floor/plating,
+/area/outpost/mining_main/maintenance)
+"wM" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden,
+/turf/simulated/floor/plating,
+/area/outpost/mining_main/maintenance)
+"wN" = (
+/obj/effect/shuttle_landmark/premade/engineering/asteroid{
+	docking_controller = "engi_mine_dock"
+	},
+/turf/space,
+/area/space)
 "wO" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
 	},
-/obj/machinery/airlock_sensor{
-	frequency = 1380;
-	id_tag = "engi_outpost_sensor";
-	pixel_y = -28
-	},
-/obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
-	id_tag = "edock_airlock";
-	pixel_y = -32;
-	tag_airpump = "engi_outpost_pump";
-	tag_chamber_sensor = "engi_outpost_sensor";
-	tag_exterior_door = "engi_outpost_outer";
-	tag_interior_door = null
-	},
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
 "wP" = (
 /obj/structure/cable{
@@ -15222,7 +15174,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
 "wQ" = (
 /obj/structure/cable{
@@ -15230,26 +15182,18 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/structure/grille,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 4
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 10
 	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
-	},
-/obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
 "wR" = (
-/obj/machinery/atmospherics/portables_connector{
-	dir = 1
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
-/obj/machinery/portable_atmospherics/canister/air/airlock,
+/obj/machinery/portable_atmospherics/canister/empty,
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
 "wS" = (
@@ -15258,27 +15202,46 @@
 	dir = 1;
 	tag = "icon-camera (NORTH)"
 	},
-/obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
 "wT" = (
-/obj/machinery/door/airlock/external{
-	frequency = 1380;
-	icon_state = "door_locked";
-	id_tag = "engi_outpost_outer";
-	locked = 1;
-	name = "Engineering Dock Airlock"
-	},
 /obj/machinery/door/firedoor/border_only,
-/obj/item/tape/engineering,
-/turf/simulated/floor/tiled,
+/obj/machinery/door/airlock/maintenance/engi,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
 "wU" = (
-/turf/space,
-/area/mine/unexplored)
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1380;
+	id_tag = "engi_mine_dock_pump"
+	},
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
+	frequency = 1380;
+	id_tag = "engi_mine_dock";
+	req_one_access = list(11,24);
+	pixel_y = 25;
+	tag_airpump = "engi_mine_dock_pump";
+	tag_exterior_door = "engi_mine_dock_ext_door";
+	tag_interior_door = "engi_mine_dock_int_door";
+	tag_chamber_sensor = "engi_mine_dock_sens"
+	},
+/turf/simulated/floor/plating,
+/area/outpost/mining_main/maintenance)
 "wV" = (
-/turf/simulated/mineral/floor/ignore_mapgen,
-/area/space)
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1380;
+	id_tag = "engi_mine_dock_pump"
+	},
+/turf/simulated/floor/plating,
+/area/outpost/mining_main/maintenance)
 "yM" = (
 /obj/effect/floor_decal/corner_kafel/purple{
 	dir = 5;
@@ -15301,6 +15264,38 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/outpost/mining_main/south_hall)
+"AT" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/portable_atmospherics/canister/air,
+/turf/simulated/floor/plating,
+/area/outpost/mining_main/maintenance)
+"BP" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/machinery/portable_atmospherics/canister/air,
+/turf/simulated/floor/plating,
+/area/outpost/mining_main/maintenance)
+"DX" = (
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
+	frequency = 1380;
+	id_tag = "engi_mine_dock";
+	req_one_access = list(11,24);
+	pixel_y = -25
+	},
+/turf/simulated/mineral,
+/area/mine/unexplored)
 "Er" = (
 /obj/effect/floor_decal/corner_kafel/green{
 	dir = 10;
@@ -15342,6 +15337,35 @@
 	},
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/mine/explored)
+"Gz" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/turf/simulated/floor/plating,
+/area/outpost/mining_main/maintenance)
+"JB" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/outpost/mining_main/maintenance)
+"Ks" = (
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/obj/structure/disposaloutlet,
+/turf/space,
+/area/mine/explored)
+"Nu" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/pipedispenser,
+/turf/simulated/floor/plating,
+/area/outpost/mining_main/maintenance)
 "NR" = (
 /obj/structure/extinguisher_cabinet{
 	dir = 4;
@@ -15457,6 +15481,17 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
+"Qy" = (
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/turf/simulated/floor/plating,
+/area/outpost/mining_main/maintenance)
+"QC" = (
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 25
+	},
+/turf/simulated/floor/plating,
+/area/outpost/mining_main/maintenance)
 "QP" = (
 /obj/effect/floor_decal/corner_kafel/blue{
 	dir = 5;
@@ -15485,6 +15520,54 @@
 	},
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/mine/unexplored)
+"SH" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/glass_external/public{
+	name = "Engineering Shuttle Dock";
+	id_tag = "engi_mine_dock_ext_door";
+	frequency = 1380;
+	locked = 1
+	},
+/obj/item/tape/engineering,
+/turf/simulated/floor/plating,
+/area/outpost/mining_main/maintenance)
+"Tn" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4;
+	tag = "icon-intact (EAST)"
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/glass_external/public{
+	name = "Engineering Shuttle Dock";
+	id_tag = "engi_mine_dock_int_door";
+	frequency = 1380;
+	locked = 1
+	},
+/obj/item/tape/engineering,
+/turf/simulated/floor/plating,
+/area/outpost/mining_main/maintenance)
+"Ua" = (
+/obj/effect/wingrille_spawn/reinforced,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
+/area/outpost/mining_main/maintenance)
+"Vb" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/machinery/portable_atmospherics/canister/empty,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/outpost/mining_main/maintenance)
 "Vx" = (
 /obj/effect/floor_decal/corner_kafel/purple{
 	dir = 9;
@@ -15512,6 +15595,16 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
+"WB" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/wingrille_spawn/reinforced,
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/plating,
+/area/outpost/mining_main/maintenance)
 "WE" = (
 /obj/effect/floor_decal/corner_kafel/purple{
 	dir = 10;
@@ -15551,6 +15644,15 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/medical)
+"Yf" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/turf/simulated/floor/plating,
+/area/outpost/mining_main/maintenance)
 
 (1,1,1) = {"
 aa
@@ -37703,7 +37805,7 @@ ab
 ab
 ab
 ab
-ab
+DX
 ab
 ab
 ab
@@ -54294,7 +54396,7 @@ oE
 oE
 oE
 oE
-kq
+Ks
 aa
 aa
 aa
@@ -54306,15 +54408,15 @@ aa
 aa
 aa
 aa
-wU
 aa
 aa
 aa
 aa
-wU
 aa
-wU
-wU
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -54546,31 +54648,31 @@ ab
 ab
 ab
 oo
-ab
-ab
-ab
-ab
-ab
-ab
-wV
-wV
-wV
-wU
-wU
+kZ
+kZ
+kZ
+kZ
+kZ
+kZ
+la
+la
+la
 aa
 aa
 aa
 aa
 aa
-wU
-wU
-wU
-wU
 aa
-wU
-wU
-wU
-wU
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -54803,31 +54905,31 @@ ab
 ab
 ab
 oo
-nl
-nl
-nl
-nl
-nl
-nl
-wM
-nl
-mW
-mW
-wU
-wU
+nk
+nk
+nk
+nk
+nk
+nk
+nk
+nk
+la
+la
 aa
 aa
 aa
 aa
-wU
-wU
-wU
-wU
-wU
-wU
-wU
-wU
-wU
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -55068,8 +55170,8 @@ wE
 wE
 wE
 lr
-wV
-wV
+la
+la
 aa
 aa
 aa
@@ -55079,12 +55181,12 @@ aa
 aa
 aa
 aa
+wN
 aa
 aa
 aa
 aa
 aa
-wU
 aa
 aa
 aa
@@ -55325,9 +55427,9 @@ pX
 qs
 oF
 iH
-wV
-wV
-wV
+la
+la
+la
 aa
 aa
 aa
@@ -55341,7 +55443,7 @@ aa
 aa
 aa
 aa
-wU
+aa
 aa
 aa
 aa
@@ -55582,24 +55684,24 @@ pY
 qt
 oF
 iH
-wV
-wV
-wV
-aa
-aa
-sQ
-sQ
-sQ
-sQ
-sQ
-sQ
-sQ
+la
+la
+la
 aa
 aa
 aa
 aa
-wU
-wU
+aa
+aa
+sw
+sQ
+SH
+sw
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -55840,22 +55942,22 @@ qu
 oF
 iI
 lr
+la
+la
+la
+aa
+aa
+aa
+aa
+aa
+sw
 wV
-wV
-wV
-aa
-sQ
-sQ
-sQ
-sQ
-sQ
-sQ
-sQ
+wI
+sw
 aa
 aa
 aa
 aa
-wU
 aa
 aa
 aa
@@ -56101,14 +56203,14 @@ sP
 sP
 sP
 lr
-sQ
-sQ
-sQ
-sQ
-sQ
-sQ
-sQ
 aa
+aa
+aa
+aa
+sw
+wU
+wM
+sQ
 aa
 aa
 aa
@@ -56358,14 +56460,14 @@ oF
 oF
 oF
 iH
-sQ
-sQ
-sQ
-qX
-sQ
-sQ
-sQ
 aa
+aa
+aa
+aa
+sw
+wV
+wM
+sw
 aa
 aa
 aa
@@ -56614,16 +56716,16 @@ rl
 rG
 rS
 oF
-iH
+Ua
 sQ
 sQ
 sQ
 sQ
+sw
 sQ
-sQ
-sQ
-aa
-aa
+Tn
+sw
+sw
 aa
 aa
 aa
@@ -56871,19 +56973,19 @@ rm
 rH
 rT
 oF
-iH
-wV
-sw
-wI
-wT
-sw
-aa
-aa
+AT
+un
+un
+un
+un
+qX
+un
+wO
+mS
+sQ
 ab
 ab
 ab
-ab
-ac
 aa
 aa
 aa
@@ -57128,20 +57230,20 @@ rn
 rI
 rU
 oF
-iH
-wV
-sw
+BP
+wP
+wP
 wK
 wP
+wP
+wP
 wQ
-sP
-sP
-sP
-sP
+uP
+WB
 lr
 ab
-ac
-ac
+ab
+ab
 aa
 aa
 aa
@@ -57385,21 +57487,21 @@ oF
 oF
 oF
 oF
-iH
-wV
-sw
+Nu
+un
+tf
 wL
 tJ
-sw
-sw
-sw
-sw
+un
+un
+un
+un
 sw
 ve
 ab
-ac
-ac
-ac
+ab
+ab
+ab
 aa
 aa
 aa
@@ -57642,11 +57744,11 @@ ro
 rG
 rS
 oF
-iH
-sw
-sw
-wO
-sw
+wR
+Qy
+Yf
+JB
+un
 un
 ul
 uA
@@ -57654,8 +57756,8 @@ uL
 sw
 ve
 ab
-ac
-ac
+ab
+ab
 aa
 aa
 aa
@@ -57899,20 +58001,20 @@ rm
 rH
 rT
 oF
-vf
+Vb
 sR
-tf
-mS
-wN
-wR
+Gz
+JB
+QC
+un
 um
 um
 uM
 sw
 ve
 ab
-ac
-ac
+ab
+ab
 aa
 aa
 aa
@@ -58168,8 +58270,8 @@ mY
 tT
 tv
 ab
-wV
-wV
+mW
+mW
 aa
 aa
 aa
@@ -58425,7 +58527,7 @@ wS
 sw
 ve
 mW
-wV
+mW
 aa
 aa
 aa
@@ -58682,7 +58784,7 @@ uO
 sw
 ve
 mW
-wV
+mW
 aa
 aa
 aa
@@ -58935,12 +59037,12 @@ tK
 tX
 un
 uC
-uP
+uO
 sw
 ve
 ab
-wV
-wV
+mW
+mW
 aa
 aa
 aa
@@ -59196,8 +59298,8 @@ uO
 sw
 ve
 ab
-ac
-wV
+ab
+mW
 aa
 aa
 aa
@@ -59447,14 +59549,14 @@ sw
 sw
 sw
 sw
-tM
+sw
 sw
 sw
 sw
 ve
 ab
-ac
-ac
+ab
+ab
 aa
 aa
 aa
@@ -59710,8 +59812,8 @@ uQ
 tM
 ve
 ab
-ac
-ac
+ab
+ab
 aa
 aa
 aa
@@ -59967,8 +60069,8 @@ uz
 tM
 ve
 ab
-ac
-ac
+ab
+ab
 aa
 aa
 aa
@@ -60224,8 +60326,8 @@ uS
 tM
 ve
 ab
-ac
-ac
+ab
+ab
 aa
 aa
 aa
@@ -60481,9 +60583,9 @@ uT
 tM
 ve
 ab
-ac
-ac
-ac
+ab
+ab
+ab
 aa
 aa
 aa
@@ -60738,9 +60840,9 @@ uU
 tM
 ve
 ab
-ac
-ac
-ac
+ab
+ab
+ab
 aa
 aa
 aa
@@ -60995,9 +61097,9 @@ uV
 tM
 ve
 ab
-ac
-ac
-ac
+ab
+ab
+ab
 aa
 aa
 aa
@@ -61252,10 +61354,10 @@ uW
 tM
 ve
 ab
-ac
-ac
-ac
-ac
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -61509,10 +61611,10 @@ uX
 tM
 ve
 ab
-ac
-ac
-ac
-ac
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -61766,10 +61868,10 @@ tM
 tM
 ve
 ab
-ac
-ac
-ac
-ac
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -62023,10 +62125,10 @@ uY
 tM
 ve
 ab
-ac
-ac
-ac
-ac
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -62280,9 +62382,9 @@ uZ
 tM
 ve
 ab
-ac
-ac
-ac
+ab
+ab
+ab
 aa
 aa
 aa
@@ -62537,9 +62639,9 @@ va
 tM
 ve
 ab
-ac
-ac
-ac
+ab
+ab
+ab
 aa
 aa
 aa
@@ -62794,8 +62896,8 @@ vb
 tM
 ve
 ab
-ac
-ac
+ab
+ab
 aa
 aa
 aa
@@ -63051,9 +63153,9 @@ vc
 tM
 ve
 ab
-ac
-ac
-ac
+ab
+ab
+ab
 aa
 aa
 aa
@@ -63309,9 +63411,9 @@ tM
 ve
 ab
 ab
-ac
-ac
-ac
+ab
+ab
+ab
 aa
 aa
 aa
@@ -63567,8 +63669,8 @@ iI
 lr
 ab
 ab
-ac
-ac
+ab
+ab
 aa
 aa
 aa
@@ -63825,7 +63927,7 @@ iI
 lr
 ab
 ab
-ac
+ab
 aa
 aa
 aa
@@ -64082,9 +64184,9 @@ kZ
 iI
 lr
 ab
-ac
-ac
-ac
+ab
+ab
+ab
 aa
 aa
 aa
@@ -64339,9 +64441,9 @@ kZ
 kZ
 ve
 ab
-ac
-ac
-ac
+ab
+ab
+ab
 aa
 aa
 aa
@@ -64596,9 +64698,9 @@ kZ
 kZ
 ve
 ab
-ac
-ac
-ac
+ab
+ab
+ab
 aa
 aa
 aa
@@ -64853,8 +64955,8 @@ kZ
 kZ
 ve
 ab
-ac
-ac
+ab
+ab
 aa
 aa
 aa
@@ -65110,7 +65212,7 @@ kZ
 kZ
 ve
 ab
-ac
+ab
 vy
 vA
 vy
