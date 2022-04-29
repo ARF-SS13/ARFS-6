@@ -395,7 +395,11 @@
 	if(isnull(new_gender))
 		to_chat(src, "<span class='notice'>Transformation aborted.</span>")
 		return
-
+	var/new_size_mult = input(usr, "Input size multiplier. Default = 1, Previous size = [size_multiplier]", "Resize", size_multiplier) as num|null
+	if(isnull(new_size_mult))
+		to_chat(src, "<span class='notice'>Transformation aborted.</span>")
+		return
+	new_size_mult = clamp(new_size_mult, RESIZE_MINIMUM, RESIZE_MAXIMUM)
 	p_choice = pokemon_choices_list["[p_choice]"]
 	var/mob/living/simple_mob/animal/passive/pokemon/NP = new p_choice()
 	gender 			= 	new_gender
@@ -405,6 +409,7 @@
 	icon_dead		= 	"[NP.icon_state]_d"
 	icon_rest		= 	"[NP.icon_state]_rest"
 	tt_desc			=	NP.tt_desc
+	resize(new_size_mult)
 	if(islegendary(NP))
 		pixel_x = -32
 		default_pixel_x = -32
