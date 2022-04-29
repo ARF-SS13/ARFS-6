@@ -173,7 +173,7 @@
 	ckeywhitelist = list("thingpony", "theilluminated1")
 	character_name = list ("Noel Winters", "ARES V3 Mk2", "ARES V3 Mk3")
 
-/datum/gear/fluff/res_key_rs13
+/datum/gear/fluff/res_key_rs12
 	path = /obj/item/weapon/card/id/residential/rs13
 	display_name = "RS13, level two keys"
 	description = "residential"
@@ -244,6 +244,10 @@
 /obj/item/weapon/card/id/residential/rm16
 	name = "RM16, level three residential key"
 	access = list(8116)
+
+/obj/item/weapon/card/id/residential/rm17
+	name = "RM17, level three residential key"
+	access = list(8117)
 
 //medium key fluff spawn
 /datum/gear/fluff/res_key_rm1
@@ -349,6 +353,12 @@
 	ckeywhitelist = list("1ceres", "liujr")
 	character_name = list("Garnet Steele", "Bismuth Steele")
 
+/datum/gear/fluff/res_key_rm17
+	path = /obj/item/weapon/card/id/residential/rm17
+	display_name = "RM17, level three keys."
+	ckeywhitelist = list("zugor", "theamazingdaito")
+	character_name = list("Jazmina Wryght", "Jasmine Moon", "Kitsuno Harume")
+
 /obj/item/weapon/card/id/residential/rm42/laria
 	name = "Laria's Key"
 	desc = "A special keycard for residentals RM42 Laria Darlos is written on it."
@@ -437,7 +447,11 @@
 
 /obj/item/weapon/card/id/residential/s9
 	name = "S9 residential key"
-	access = list(8208)
+	access = list(8209)
+
+/obj/item/weapon/card/id/residential/s10
+	name = "S10 residnetial key"
+	access = list(8210)
 
 //FLUFF SPAWNS
 
@@ -475,6 +489,13 @@
 	description = "residential"
 	ckeywhitelist = list("thingpony")
 	character_name = list("Haven Faye")
+
+/datum/gear/fluff/res_key_s10
+	path = /obj/item/weapon/card/id/residential/s10
+	display_name = "S10 keys"
+	description = "residential"
+	ckeywhitelist = list("evandarksky")
+	character_name = list("Evan Darksky","Dark-SKY")
 
 /obj/item/weapon/card/id/residential/rb1
 	name = "Residential Level Four - Room 1 Residential Key"
