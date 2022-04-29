@@ -409,6 +409,7 @@
 	icon_dead		= 	"[NP.icon_state]_d"
 	icon_rest		= 	"[NP.icon_state]_rest"
 	tt_desc			=	NP.tt_desc
+	y_offset_mult	=	NP.y_offset_mult
 	resize(new_size_mult)
 	if(islegendary(NP))
 		pixel_x = -32
