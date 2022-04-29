@@ -125,6 +125,7 @@
 		/area/shuttle/drake/star_hold
 	)
 	fuel_consumption = 5
+	flags = SHUTTLE_FLAGS_PROCESS
 
 // The shuttle's 'shuttle' computer
 /obj/machinery/computer/shuttle_control/explore/drake

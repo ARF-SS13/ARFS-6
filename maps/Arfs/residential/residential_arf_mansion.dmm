@@ -61,9 +61,6 @@
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
 "agz" = (
-/obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	dir = 10
-	},
 /obj/machinery/power/rtg/fake_gen{
 	icon_state = "rtg"
 	},
@@ -71,6 +68,7 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
+/obj/machinery/light/floortube,
 /turf/simulated/floor/tiled/techfloor,
 /area/residential/mansion)
 "agW" = (
@@ -112,13 +110,6 @@
 /turf/simulated/floor/wood,
 /area/residential/mroom1bed1)
 "aiY" = (
-/obj/machinery/power/rtg/fake_gen{
-	icon_state = "rtg"
-	},
-/obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2"
-	},
 /turf/simulated/floor/tiled/techfloor,
 /area/residential/mansion)
 "ajl" = (
@@ -164,16 +155,23 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/mansion)
+"alq" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/residential/mansion)
 "alA" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 6
 	},
-/obj/machinery/power/rtg/fake_gen{
-	icon_state = "rtg"
-	},
 /obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2"
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/residential/mansion)
@@ -261,6 +259,12 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/wood,
 /area/residential/mansion_storage)
+"apq" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/drake/office)
 "are" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
@@ -305,13 +309,12 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/residential/mansion)
 "atu" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/yellow{
-	dir = 4
+/obj/machinery/power/rtg/fake_gen{
+	icon_state = "rtg"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
+	d2 = 2;
+	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/residential/mansion)
@@ -326,31 +329,7 @@
 /obj/item/weapon/reagent_containers/food/snacks/crab_legs,
 /turf/simulated/floor/outdoors/dirt/biodome,
 /area/residential/outside)
-"auu" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/light/floortube,
-/turf/simulated/floor/tiled/techfloor,
-/area/residential/mansion)
 "auG" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
 /obj/machinery/light/floortube,
 /turf/simulated/floor/tiled/techfloor,
 /area/residential/mansion)
@@ -436,18 +415,8 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "ayv" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/cyan{
-	dir = 8
-	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/residential/mansion)
@@ -889,6 +858,15 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/residential/mansion)
+"aWc" = (
+/obj/structure/bed/chair/bay/comfy{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/drake/star_hold)
 "aWI" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -968,6 +946,12 @@
 /obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/steel_grid,
 /area/residential/mroom2)
+"bbN" = (
+/obj/machinery/atmospherics/pipe/manifold/visible{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/drake/engineering)
 "bch" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 2;
@@ -1099,6 +1083,18 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/residential/mansion_ballroom)
+"bmm" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/firedoor/glass{
+	req_one_access = list()
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/drake/port_hold)
 "bmw" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 9
@@ -2332,7 +2328,6 @@
 /turf/simulated/floor/wood/sif,
 /area/residential/mroom2bed2)
 "cqA" = (
-/obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
@@ -2349,6 +2344,9 @@
 /obj/structure/window/reinforced{
 	dir = 8;
 	health = 1e+006
+	},
+/obj/machinery/door/firedoor/glass{
+	req_one_access = list()
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/drake/quarters1)
@@ -2563,7 +2561,6 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mansion)
 "czU" = (
-/obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
@@ -2580,6 +2577,9 @@
 /obj/structure/window/reinforced{
 	dir = 8;
 	health = 1e+006
+	},
+/obj/machinery/door/firedoor/glass{
+	req_one_access = list()
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/drake/galley)
@@ -3074,9 +3074,7 @@
 /turf/simulated/floor/wood,
 /area/residential/mansion)
 "daH" = (
-/obj/structure/handrail{
-	dir = 4
-	},
+/obj/machinery/recharge_station,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/quarters1)
 "daT" = (
@@ -3086,7 +3084,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
-/obj/structure/handrail,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/quarters1)
 "daU" = (
@@ -3127,9 +3124,9 @@
 	dir = 4
 	},
 /obj/machinery/alarm{
-	pixel_y = 22
+	pixel_y = 22;
+	req_one_access = list()
 	},
-/obj/structure/handrail,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/quarters1)
 "deZ" = (
@@ -3236,7 +3233,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/structure/handrail,
+/obj/item/modular_computer/telescreen/preset{
+	pixel_y = 26
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/quarters1)
 "dks" = (
@@ -3248,13 +3247,6 @@
 	},
 /turf/simulated/floor/wmarble,
 /area/residential/mroom2bed2)
-"dkt" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 8
-	},
-/obj/structure/handrail,
-/turf/simulated/floor/tiled/techmaint,
-/area/shuttle/drake/quarters1)
 "dkM" = (
 /obj/effect/catwalk_plated/white,
 /obj/machinery/shower{
@@ -3818,6 +3810,27 @@
 /obj/item/weapon/spacecash/c10,
 /turf/simulated/floor/wood,
 /area/residential/mansion_gameroom)
+"dKa" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/universal,
+/obj/structure/table/steel,
+/obj/item/stack/material/glass/reinforced{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/plasteel{
+	amount = 10
+	},
+/obj/item/stack/cable_coil{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/drake/engineering)
 "dKg" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/effect/floor_decal/grass_edge/corner{
@@ -3860,7 +3873,7 @@
 /area/residential/mansion)
 "dME" = (
 /obj/structure/sink{
-	pixel_y = 16
+	pixel_y = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/galley)
@@ -4289,9 +4302,6 @@
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
 "ekV" = (
-/obj/machinery/light{
-	dir = 4
-	},
 /obj/machinery/appliance/cooker/oven,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/galley)
@@ -4359,19 +4369,6 @@
 	},
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
-"eop" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/shuttle/drake/engineering)
 "epO" = (
 /obj/machinery/light,
 /obj/machinery/vending/kink,
@@ -4395,9 +4392,6 @@
 /obj/structure/closet/walllocker/emerglocker/east,
 /obj/machinery/atmospherics/binary/pump/scrubbers{
 	dir = 1
-	},
-/obj/structure/handrail{
-	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/cabin)
@@ -4519,6 +4513,9 @@
 /obj/item/device/communicator,
 /obj/item/clothing/accessory/collar/spike,
 /obj/item/clothing/under/permit,
+/obj/machinery/light/small{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/quarters1)
 "eBh" = (
@@ -4671,11 +4668,14 @@
 /turf/simulated/wall/skipjack,
 /area/residential/outside)
 "eMw" = (
-/obj/structure/handrail{
-	dir = 1
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 6
 	},
-/turf/simulated/floor/tiled/techmaint,
-/area/shuttle/drake/galley)
+/obj/machinery/computer/ship/navigation/telescreen{
+	pixel_y = 26
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/drake/engineering)
 "eMD" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock,
@@ -4750,6 +4750,18 @@
 	},
 /turf/simulated/floor/tiled/eris/cafe,
 /area/residential/mansion)
+"eSw" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/firedoor/glass{
+	req_one_access = list()
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/drake/star_hold)
 "eSB" = (
 /obj/effect/floor_decal/grass_edge{
 	dir = 1
@@ -4779,9 +4791,6 @@
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -26
-	},
-/obj/structure/handrail{
-	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/galley)
@@ -4825,11 +4834,10 @@
 "eWB" = (
 /obj/machinery/alarm{
 	dir = 8;
-	pixel_x = 24
+	pixel_x = 24;
+	req_one_access = list()
 	},
-/obj/structure/handrail{
-	dir = 1
-	},
+/obj/machinery/light,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/galley)
 "eWF" = (
@@ -4957,9 +4965,6 @@
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/structure/closet/walllocker/emerglocker/east,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/handrail{
-	dir = 8
-	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/cabin)
 "fcU" = (
@@ -5248,12 +5253,14 @@
 /turf/simulated/floor/carpet/sblucarpet,
 /area/residential/outside)
 "fqS" = (
-/obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
 	dir = 1
+	},
+/obj/machinery/door/firedoor/glass{
+	req_one_access = list()
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/drake/medbay)
@@ -5280,15 +5287,10 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/obj/machinery/portable_atmospherics/canister/air,
-/obj/machinery/atmospherics/portables_connector,
 /obj/effect/floor_decal/industrial/outline/blue,
-/turf/simulated/floor/plating,
-/area/shuttle/drake/engineering)
-"frj" = (
-/obj/machinery/portable_atmospherics/canister/air,
-/obj/machinery/atmospherics/portables_connector,
-/obj/effect/floor_decal/industrial/outline/blue,
+/obj/machinery/atmospherics/pipe/tank/air{
+	start_pressure = 74000.5
+	},
 /turf/simulated/floor/plating,
 /area/shuttle/drake/engineering)
 "frE" = (
@@ -5332,9 +5334,10 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mansion)
 "fvl" = (
-/obj/machinery/atmospherics/portables_connector,
 /obj/effect/floor_decal/industrial/outline/blue,
-/obj/machinery/portable_atmospherics/canister/air,
+/obj/machinery/atmospherics/pipe/tank/air{
+	start_pressure = 74000.5
+	},
 /turf/simulated/floor/plating,
 /area/shuttle/drake/engineering)
 "fvz" = (
@@ -5387,6 +5390,13 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/structure/window/reinforced{
+	dir = 8;
+	health = 1e+006
+	},
+/obj/machinery/door/window/brigdoor/southright{
+	req_access = list()
+	},
 /turf/simulated/floor/plating,
 /area/shuttle/drake/engineering)
 "fwM" = (
@@ -5401,9 +5411,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 1
-	},
-/obj/structure/handrail{
-	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/quarters1)
@@ -5555,9 +5562,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
-/obj/structure/handrail{
-	dir = 8
-	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/galley)
 "fHN" = (
@@ -5670,6 +5674,15 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/mansion)
+"fNh" = (
+/obj/structure/bed/chair/bay/comfy{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/drake/port_hold)
 "fNN" = (
 /obj/structure/curtain/black,
 /turf/simulated/floor/wood,
@@ -5808,9 +5821,6 @@
 /obj/machinery/vending/bloodarfs{
 	pixel_x = 10;
 	pixel_y = 31
-	},
-/obj/structure/handrail{
-	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/drake/medbay)
@@ -6016,7 +6026,6 @@
 /turf/simulated/floor/carpet/sblucarpet,
 /area/residential/mroom2bed2)
 "gfH" = (
-/obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
@@ -6033,6 +6042,9 @@
 /obj/structure/window/reinforced{
 	dir = 8;
 	health = 1e+006
+	},
+/obj/machinery/door/firedoor/glass{
+	req_one_access = list()
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/drake/storage)
@@ -6150,7 +6162,6 @@
 /turf/simulated/floor/carpet/sblucarpet,
 /area/residential/mansion)
 "gjx" = (
-/obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
@@ -6161,6 +6172,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 4
+	},
+/obj/machinery/door/firedoor/glass{
+	req_one_access = list()
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/drake/engineering)
@@ -6206,7 +6220,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 10
 	},
-/obj/machinery/atmospherics/pipe/manifold/visible/cyan,
+/obj/machinery/atmospherics/pipe/manifold4w/visible/cyan,
 /turf/simulated/floor/plating,
 /area/shuttle/drake/engineering)
 "gmG" = (
@@ -6336,8 +6350,11 @@
 	dir = 8
 	},
 /obj/machinery/portable_atmospherics/canister/air,
-/obj/machinery/portable_atmospherics/canister/air,
 /obj/effect/floor_decal/industrial/outline,
+/obj/machinery/door/window/brigdoor/westright{
+	req_access = list();
+	req_one_access = list()
+	},
 /turf/simulated/floor/plating,
 /area/shuttle/drake/engineering)
 "guh" = (
@@ -6676,7 +6693,9 @@
 	layer = 3.3;
 	name = "Kitchen Shutters"
 	},
-/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/firedoor/glass{
+	req_one_access = list()
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/galley)
 "gHY" = (
@@ -6701,6 +6720,9 @@
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
+	},
+/obj/machinery/computer/ship/navigation/telescreen{
+	pixel_y = 26
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/galley)
@@ -6766,7 +6788,11 @@
 	dir = 10
 	},
 /obj/machinery/alarm{
-	pixel_y = 22
+	pixel_y = 22;
+	req_one_access = list()
+	},
+/obj/machinery/light{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/galley)
@@ -6930,6 +6956,13 @@
 /obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor/tiled/techfloor,
 /area/residential/mansion)
+"gQJ" = (
+/obj/structure/table/alien,
+/obj/item/device/radio/off{
+	pixel_y = 6
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/drake/cockpit)
 "gRe" = (
 /obj/structure/table/alien,
 /obj/item/weapon/reagent_containers/food/drinks/bottle/peppermintschnapps{
@@ -7095,8 +7128,8 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/residential/mansion_bed_1)
 "gWI" = (
-/obj/structure/handrail{
-	dir = 4
+/obj/machinery/computer/ship/navigation/telescreen{
+	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/drake/medbay)
@@ -7412,9 +7445,6 @@
 /turf/simulated/floor/carpet/bcarpet,
 /area/residential/mroom2)
 "hqs" = (
-/obj/structure/handrail{
-	dir = 8
-	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/drake/port_hold)
 "hqN" = (
@@ -7424,11 +7454,13 @@
 /turf/simulated/floor/wood/sif,
 /area/residential/mansion_club)
 "hra" = (
-/obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
 	dir = 1
+	},
+/obj/machinery/door/firedoor/glass{
+	req_one_access = list()
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/drake/cockpit)
@@ -7494,7 +7526,6 @@
 /turf/simulated/floor/tiled/white,
 /area/residential/mansion_ballroom)
 "hrS" = (
-/obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
@@ -7502,6 +7533,9 @@
 	},
 /obj/structure/window/reinforced{
 	dir = 4
+	},
+/obj/machinery/door/firedoor/glass{
+	req_one_access = list()
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/drake/cockpit)
@@ -7833,7 +7867,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 4
 	},
-/obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
@@ -7841,6 +7874,9 @@
 	},
 /obj/structure/window/reinforced{
 	dir = 8
+	},
+/obj/machinery/door/firedoor/glass{
+	req_one_access = list()
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/drake/engineering)
@@ -7878,6 +7914,9 @@
 "hJG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 9
+	},
+/obj/structure/closet/secure_closet/engineering_welding{
+	req_access = list()
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/drake/engineering)
@@ -7965,6 +8004,10 @@
 "hMu" = (
 /obj/machinery/atmospherics/pipe/manifold/visible,
 /obj/machinery/meter,
+/obj/structure/closet/autolok_wall{
+	dir = 1;
+	pixel_y = -32
+	},
 /turf/simulated/floor/plating,
 /area/shuttle/drake/engineering)
 "hMN" = (
@@ -8047,7 +8090,8 @@
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
-	pixel_x = 24
+	pixel_x = 24;
+	req_access = list()
 	},
 /obj/structure/cable{
 	d2 = 2;
@@ -8121,9 +8165,6 @@
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
-	},
-/obj/structure/handrail{
-	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/techmaint,
@@ -8205,10 +8246,6 @@
 /area/residential/room10)
 "iah" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/universal,
-/obj/structure/handrail{
-	desc = "A safety railing.";
-	dir = 8
-	},
 /obj/machinery/firealarm{
 	dir = 4;
 	layer = 3.3;
@@ -8347,8 +8384,10 @@
 /obj/structure/toilet{
 	dir = 4
 	},
-/obj/structure/handrail{
-	dir = 4
+/obj/machinery/alarm/alarms_hidden{
+	dir = 4;
+	pixel_x = -26;
+	req_one_access = list()
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/drake/head)
@@ -8403,6 +8442,14 @@
 	dir = 4;
 	pixel_x = 22;
 	pixel_y = -10
+	},
+/obj/machinery/button/remote/airlock{
+	dir = 8;
+	id = "drake_head";
+	name = "Bathroom Lock";
+	pixel_x = 24;
+	pixel_y = 10;
+	specialfunctions = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/drake/head)
@@ -8552,9 +8599,6 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "ioW" = (
-/obj/structure/handrail{
-	dir = 4
-	},
 /obj/machinery/firealarm{
 	dir = 8;
 	pixel_x = -24
@@ -8684,8 +8728,8 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/structure/handrail{
-	dir = 8
+/obj/machinery/computer/ship/navigation/telescreen{
+	pixel_x = 32
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/drake/port_hold)
@@ -8736,24 +8780,24 @@
 /obj/machinery/power/apc{
 	dir = 8;
 	name = "west bump";
-	pixel_x = -28
+	pixel_x = -28;
+	req_access = list()
 	},
 /obj/structure/cable{
 	d2 = 2;
 	icon_state = "0-2"
 	},
-/obj/structure/handrail,
 /obj/machinery/light{
 	dir = 8
-	},
-/obj/structure/closet/autolok_wall{
-	pixel_y = 32
 	},
 /obj/structure/railing/grey{
 	dir = 4
 	},
 /obj/structure/bed/chair/bay/comfy{
 	dir = 4
+	},
+/obj/structure/panic_button{
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/cockpit)
@@ -8795,9 +8839,11 @@
 /turf/simulated/floor/wood,
 /area/residential/mansion)
 "iAu" = (
-/obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
+/obj/machinery/door/firedoor/glass{
+	req_one_access = list()
+	},
 /turf/simulated/floor/plating,
 /area/shuttle/drake/cockpit)
 "iAX" = (
@@ -8860,22 +8906,6 @@
 /obj/random/soap,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mansion)
-"iDv" = (
-/obj/structure/closet/crate,
-/obj/machinery/light/small{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
-/area/shuttle/drake/engineering)
-"iDx" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 9
-	},
-/obj/structure/railing/grey{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/shuttle/drake/engineering)
 "iDM" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
@@ -8896,16 +8926,6 @@
 /obj/item/weapon/storage/firstaid/toxin,
 /turf/simulated/floor/wood,
 /area/residential/room12)
-"iFb" = (
-/obj/machinery/door/firedoor/glass,
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/turf/simulated/floor/plating,
-/area/shuttle/drake/star_hold)
 "iFJ" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -8926,10 +8946,6 @@
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/residential/mansion)
-"iGW" = (
-/obj/machinery/atmospherics/pipe/simple/visible,
-/turf/simulated/floor/plating,
-/area/shuttle/drake/engineering)
 "iHj" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock{
@@ -8965,7 +8981,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/cyan,
+/obj/machinery/atmospherics/valve/digital/open,
 /turf/simulated/floor/plating,
 /area/shuttle/drake/engineering)
 "iJY" = (
@@ -9012,9 +9028,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 1
-	},
-/obj/structure/handrail{
-	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/quarters1)
@@ -9291,9 +9304,6 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
-/obj/structure/handrail{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/cabin)
@@ -9370,13 +9380,10 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
-/obj/structure/handrail{
-	desc = "A safety railing.";
-	dir = 8
-	},
 /obj/machinery/alarm{
 	dir = 8;
-	pixel_x = 25
+	pixel_x = 25;
+	req_one_access = list()
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/cabin)
@@ -9427,12 +9434,10 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "jld" = (
-/obj/structure/handrail{
-	dir = 1
-	},
 /obj/machinery/power/apc{
 	name = "south bump";
-	pixel_y = -24
+	pixel_y = -24;
+	req_access = list()
 	},
 /obj/structure/cable{
 	d2 = 4;
@@ -9574,6 +9579,16 @@
 /obj/effect/mist/mapped,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
+"jtr" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 1
+	},
+/obj/structure/closet/autolok_wall{
+	dir = 8;
+	pixel_x = -32
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/shuttle/drake/cockpit)
 "jtE" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -9609,17 +9624,13 @@
 /turf/simulated/floor/tiled/eris/cafe,
 /area/residential/mansion)
 "jww" = (
-/obj/machinery/alarm/alarms_hidden{
-	dir = 8;
-	pixel_x = 26
-	},
 /obj/machinery/light,
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -25
 	},
-/obj/structure/handrail{
-	dir = 8
+/obj/machinery/computer/ship/navigation/telescreen{
+	pixel_x = 32
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/drake/head)
@@ -9675,12 +9686,10 @@
 /turf/simulated/floor/wood,
 /area/residential/mansion)
 "jyn" = (
-/obj/structure/handrail{
-	dir = 4
-	},
 /obj/machinery/alarm/alarms_hidden{
 	dir = 4;
-	pixel_x = -26
+	pixel_x = -26;
+	req_one_access = list()
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/drake/medbay)
@@ -9985,9 +9994,6 @@
 	dir = 4;
 	pixel_x = 22
 	},
-/obj/structure/handrail{
-	dir = 8
-	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/drake/port_hold)
 "jOa" = (
@@ -10002,8 +10008,9 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/structure/handrail{
-	dir = 4
+/obj/item/modular_computer/telescreen/preset{
+	pixel_x = -32;
+	pixel_y = 0
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/cockpit)
@@ -10112,6 +10119,7 @@
 /area/residential/mansion_gameroom)
 "jWg" = (
 /obj/structure/table/alien,
+/obj/machinery/recharger,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/drake/cockpit)
 "jWA" = (
@@ -10306,11 +10314,13 @@
 /turf/simulated/floor/carpet/sblucarpet,
 /area/residential/mansion)
 "kio" = (
-/obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
 	dir = 4
+	},
+/obj/machinery/door/firedoor/glass{
+	req_one_access = list()
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/drake/cockpit)
@@ -10325,6 +10335,18 @@
 /obj/structure/flora/ausbushes/ywflowers,
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
+"kiQ" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	frequency = 1380;
+	id_tag = "mansionshuttle_dock";
+	pixel_x = -24;
+	pixel_y = 0
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/residential/mansion)
 "kjp" = (
 /obj/structure/bed/chair/office/light,
 /turf/simulated/floor/wmarble,
@@ -10384,6 +10406,12 @@
 /area/space)
 "knU" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
+/obj/structure/closet/secure_closet/engineering_personal{
+	req_access = list()
+	},
+/obj/item/device/radio/off{
+	pixel_y = 6
+	},
 /turf/simulated/floor/plating,
 /area/shuttle/drake/engineering)
 "kor" = (
@@ -10392,17 +10420,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/mansion_bed_4)
-"koL" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 1
-	},
-/obj/structure/railing/grey{
-	dir = 8
-	},
-/obj/machinery/power/smes/batteryrack/shuttle/mapped,
-/obj/structure/cable,
-/turf/simulated/floor/tiled/techfloor,
-/area/shuttle/drake/engineering)
 "koY" = (
 /obj/machinery/light{
 	dir = 8
@@ -10451,7 +10468,8 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/alarm/alarms_hidden{
-	pixel_y = 26
+	pixel_y = 26;
+	req_one_access = list()
 	},
 /obj/machinery/light_switch{
 	dir = 4;
@@ -10513,9 +10531,6 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
-	},
-/obj/structure/handrail{
-	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/quarters1)
@@ -10688,9 +10703,6 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/structure/handrail{
-	dir = 1
-	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/quarters1)
 "kAp" = (
@@ -10757,13 +10769,11 @@
 	},
 /obj/machinery/power/apc{
 	name = "south bump";
-	pixel_y = -24
+	pixel_y = -24;
+	req_access = list()
 	},
 /obj/structure/cable{
 	icon_state = "0-8"
-	},
-/obj/structure/handrail{
-	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/quarters1)
@@ -10874,9 +10884,6 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
-/obj/structure/handrail{
-	dir = 1
-	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/quarters1)
 "kJG" = (
@@ -10919,14 +10926,17 @@
 /turf/simulated/floor,
 /area/residential/mansion_office)
 "kNc" = (
-/obj/machinery/light{
-	dir = 4
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
-/obj/structure/handrail{
-	dir = 1
+/obj/structure/closet/autolok_wall{
+	dir = 8;
+	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/shuttle/drake/quarters1)
+/area/shuttle/drake/cockpit)
 "kNH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -10969,9 +10979,6 @@
 	name = "Kitchen Shutters";
 	pixel_x = -28;
 	pixel_y = 0
-	},
-/obj/structure/handrail{
-	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/galley)
@@ -11083,7 +11090,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/galley)
 "kUQ" = (
@@ -11405,10 +11411,10 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
 	},
-/obj/structure/handrail{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/machinery/computer/ship/navigation/telescreen{
+	pixel_x = -32
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/cabin)
 "lmk" = (
@@ -11627,10 +11633,6 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
-/obj/structure/handrail{
-	desc = "A safety railing.";
-	dir = 8
-	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/cabin)
 "ltN" = (
@@ -11729,15 +11731,6 @@
 	},
 /turf/simulated/floor/lino,
 /area/residential/mroom2)
-"lwF" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 10
-	},
-/obj/structure/railing/grey{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/shuttle/drake/engineering)
 "lwG" = (
 /obj/machinery/light{
 	dir = 8
@@ -11781,7 +11774,6 @@
 /turf/simulated/floor/wood,
 /area/residential/mansion_storage)
 "lyq" = (
-/obj/machinery/door/firedoor/glass,
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
@@ -11791,7 +11783,12 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/door/airlock/voidcraft{
+/obj/machinery/door/airlock/hatch{
+	id_tag = "drake_head";
+	name = "Restroom";
+	req_one_access = list()
+	},
+/obj/machinery/door/firedoor/glass{
 	req_one_access = list()
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -11883,16 +11880,14 @@
 "lCD" = (
 /obj/machinery/power/apc{
 	name = "south bump";
-	pixel_y = -24
+	pixel_y = -24;
+	req_access = list()
 	},
 /obj/structure/cable{
 	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 4
-	},
-/obj/structure/handrail{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -12048,7 +12043,8 @@
 	},
 /obj/machinery/power/apc{
 	name = "south bump";
-	pixel_y = -24
+	pixel_y = -24;
+	req_access = list()
 	},
 /obj/structure/cable{
 	d2 = 4;
@@ -12069,26 +12065,14 @@
 "lNa" = (
 /obj/machinery/alarm/alarms_hidden{
 	dir = 8;
-	pixel_x = 26
+	pixel_x = 26;
+	req_one_access = list()
 	},
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -26
 	},
-/obj/structure/handrail{
-	dir = 8
-	},
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/drake/port_hold)
-"lOG" = (
-/obj/machinery/door/firedoor/glass,
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/turf/simulated/floor/plating,
 /area/shuttle/drake/port_hold)
 "lPa" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -12308,6 +12292,12 @@
 /obj/machinery/atmospherics/binary/pump/fuel{
 	dir = 1
 	},
+/obj/structure/railing/grey{
+	dir = 4
+	},
+/obj/structure/railing/grey{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/shuttle/drake/engineering)
 "mbQ" = (
@@ -12404,9 +12394,6 @@
 "mej" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/machinery/atmospherics/pipe/simple/visible,
-/obj/structure/railing/grey{
-	dir = 8
-	},
 /turf/simulated/floor/plating,
 /area/shuttle/drake/engineering)
 "mev" = (
@@ -12532,10 +12519,8 @@
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
-	pixel_x = 24
-	},
-/obj/structure/handrail{
-	dir = 8
+	pixel_x = 24;
+	req_access = list()
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/drake/engineering)
@@ -12574,13 +12559,15 @@
 	name = "Quarters";
 	req_one_access = list()
 	},
-/obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 1
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
+	},
+/obj/machinery/door/firedoor/glass{
+	req_one_access = list()
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/quarters1)
@@ -12605,6 +12592,18 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/mansion)
+"mmQ" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 8
+	},
+/obj/machinery/portable_atmospherics/canister/empty,
+/obj/effect/floor_decal/industrial/outline/red,
+/obj/machinery/door/window/brigdoor/westleft{
+	req_access = list();
+	req_one_access = list()
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/drake/engineering)
 "mnd" = (
 /turf/simulated/wall/r_wall,
 /area/residential/mansion_holodeck)
@@ -12695,7 +12694,9 @@
 	name = "Kitchen Shutters"
 	},
 /obj/structure/table/alien,
-/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/firedoor/glass{
+	req_one_access = list()
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/galley)
 "mqi" = (
@@ -12760,17 +12761,19 @@
 /turf/simulated/floor/carpet/oracarpet,
 /area/residential/mansion_bed_4)
 "mtA" = (
-/obj/machinery/door/airlock/hatch{
-	name = "Galley";
-	req_one_access = list()
-	},
-/obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 1
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/voidcraft{
+	name = "Galley";
+	req_one_access = list()
+	},
+/obj/machinery/door/firedoor/glass{
+	req_one_access = list()
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/galley)
@@ -12919,8 +12922,10 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/machinery/door/firedoor/glass{
+	req_one_access = list()
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/cabin)
 "mBQ" = (
@@ -12979,7 +12984,9 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/firedoor/glass{
+	req_one_access = list()
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/cabin)
 "mFa" = (
@@ -13053,7 +13060,6 @@
 /obj/structure/railing/grey{
 	dir = 8
 	},
-/obj/structure/handrail,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -13079,7 +13085,6 @@
 /obj/item/weapon/tank/air,
 /obj/item/clothing/suit/space/void/refurb,
 /obj/item/clothing/head/helmet/space/void/refurb,
-/obj/structure/handrail,
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/structure/closet/walllocker_double/north{
 	name = "Voidsuit Locker"
@@ -13228,7 +13233,6 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "mQx" = (
-/obj/machinery/door/firedoor/glass,
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
@@ -13240,6 +13244,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/airlock/voidcraft{
 	name = "Medbay";
+	req_one_access = list()
+	},
+/obj/machinery/door/firedoor/glass{
 	req_one_access = list()
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -13260,7 +13267,6 @@
 /turf/simulated/floor/wood,
 /area/residential/mansion_ballroom)
 "mTx" = (
-/obj/machinery/door/firedoor/glass,
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
@@ -13274,6 +13280,9 @@
 	name = "Port Hold";
 	req_one_access = list()
 	},
+/obj/machinery/door/firedoor/glass{
+	req_one_access = list()
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/port_hold)
 "mUf" = (
@@ -13282,6 +13291,18 @@
 	},
 /turf/simulated/floor/carpet,
 /area/residential/mansion)
+"mUl" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 8
+	},
+/obj/machinery/portable_atmospherics/canister/air,
+/obj/effect/floor_decal/industrial/outline,
+/obj/machinery/door/window/brigdoor/westleft{
+	req_access = list();
+	req_one_access = list()
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/drake/engineering)
 "mUL" = (
 /obj/effect/floor_decal/grass_edge{
 	dir = 4
@@ -13439,8 +13460,16 @@
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/residential/room12)
 "ndq" = (
-/obj/structure/railing/grey{
-	dir = 1
+/obj/machinery/portable_atmospherics/canister/phoron{
+	start_pressure = 8000.25
+	},
+/obj/machinery/door/window/brigdoor/eastleft{
+	req_access = list();
+	req_one_access = list()
+	},
+/obj/structure/window/reinforced{
+	dir = 1;
+	health = 1e+006
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/drake/engineering)
@@ -13775,7 +13804,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
-/obj/structure/handrail,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/cabin)
 "nsp" = (
@@ -13932,6 +13960,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/eris/cafe,
 /area/residential/mansion)
+"nyz" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 9
+	},
+/obj/structure/reagent_dispensers/fueltank,
+/turf/simulated/floor/plating,
+/area/shuttle/drake/engineering)
 "nyT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -13971,7 +14006,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
-/obj/structure/handrail,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/cabin)
 "nzv" = (
@@ -14001,18 +14035,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 4
+/obj/machinery/light{
+	dir = 1
 	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
+/obj/item/modular_computer/telescreen/preset{
+	pixel_y = 26
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
-/obj/structure/handrail,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/cabin)
 "nBi" = (
@@ -14061,7 +14089,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
-/obj/structure/handrail,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/cabin)
 "nDv" = (
@@ -14081,12 +14108,12 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/alarm{
-	pixel_y = 22
+	pixel_y = 22;
+	req_one_access = list()
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
-/obj/structure/handrail,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/cabin)
 "nEC" = (
@@ -14542,25 +14569,18 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/cabin)
 "nXO" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 4
-	},
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/machinery/atmospherics/pipe/simple/hidden{
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/structure/handrail,
+/obj/machinery/light,
+/obj/item/modular_computer/telescreen/preset{
+	pixel_y = -32
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/cabin)
 "nXS" = (
@@ -14625,9 +14645,11 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
 	},
-/obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
+	},
+/obj/machinery/door/firedoor/glass{
+	req_one_access = list()
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/cabin)
@@ -14676,6 +14698,9 @@
 	},
 /obj/machinery/door/window/brigdoor/westright{
 	req_access = list();
+	req_one_access = list()
+	},
+/obj/machinery/door/firedoor/glass{
 	req_one_access = list()
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -14868,7 +14893,6 @@
 /turf/simulated/floor/wood,
 /area/residential/mroom2)
 "ome" = (
-/obj/structure/handrail,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
 	},
@@ -15043,12 +15067,14 @@
 /turf/simulated/floor/wood,
 /area/residential/mroom1)
 "otI" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 1
 	},
-/obj/structure/handrail,
+/obj/machinery/computer/ship/navigation/telescreen{
+	pixel_x = -32
+	},
 /turf/simulated/floor/tiled/techmaint,
-/area/shuttle/drake/cabin)
+/area/shuttle/drake/cockpit)
 "otJ" = (
 /obj/machinery/vending/medical{
 	req_access = list()
@@ -15056,9 +15082,12 @@
 /turf/simulated/floor/tiled/white,
 /area/residential/mansion)
 "otQ" = (
-/obj/structure/handrail,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
+	},
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = 26
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/cabin)
@@ -15151,6 +15180,18 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/carpet/sblucarpet,
 /area/residential/mansion)
+"oya" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 1
+	},
+/obj/structure/closet/secure_closet/engineering_personal{
+	req_access = list()
+	},
+/obj/item/device/radio/off{
+	pixel_y = 6
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/drake/engineering)
 "oyf" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -15334,7 +15375,19 @@
 /turf/simulated/floor/wood/sif,
 /area/residential/mroom2bed2)
 "oIs" = (
-/obj/structure/railing/grey,
+/obj/machinery/portable_atmospherics/canister/phoron{
+	start_pressure = 8000.25
+	},
+/obj/machinery/door/window/brigdoor/eastright{
+	req_access = list();
+	req_one_access = list()
+	},
+/obj/structure/window/reinforced{
+	health = 1e+006
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/shuttle/drake/engineering)
 "oIu" = (
@@ -15346,12 +15399,12 @@
 "oJo" = (
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/shuttle/drake/engineering)
 "oJJ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 6
-	},
 /obj/structure/catwalk,
 /obj/structure/railing/grey,
 /obj/machinery/computer/ship/engines{
@@ -15359,6 +15412,9 @@
 	req_one_access = list()
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/shuttle/drake/engineering)
 "oKb" = (
@@ -15414,6 +15470,7 @@
 	dir = 1
 	},
 /obj/structure/catwalk,
+/obj/structure/railing/grey,
 /turf/simulated/floor/plating,
 /area/shuttle/drake/engineering)
 "oLD" = (
@@ -15595,13 +15652,29 @@
 	name = "Drake Engineering Bay";
 	req_one_access = list()
 	},
-/obj/machinery/door/firedoor/multi_tile{
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/machinery/door/firedoor/multi_tile{
+	dir = 1;
+	req_one_access = list()
+	},
 /turf/simulated/floor/tiled/techmaint,
+/area/shuttle/drake/engineering)
+"oSH" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable,
+/obj/machinery/power/terminal{
+	dir = 4
+	},
+/obj/structure/railing/grey{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/shuttle/drake/engineering)
 "oUl" = (
 /obj/machinery/washing_machine,
@@ -15715,9 +15788,6 @@
 	dir = 1
 	},
 /obj/machinery/light,
-/obj/structure/handrail{
-	dir = 1
-	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/cabin)
 "oXq" = (
@@ -15733,9 +15803,6 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
-/obj/structure/handrail{
-	dir = 1
-	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/cabin)
 "oXG" = (
@@ -15799,20 +15866,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/residential/mansion)
-"paG" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/handrail{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/shuttle/drake/cabin)
 "pbn" = (
 /obj/structure/flora/tree/jungle,
 /obj/effect/floor_decal/grass_edge{
@@ -15833,9 +15886,6 @@
 	},
 /obj/machinery/light,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
-/obj/structure/handrail{
-	dir = 1
-	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/cabin)
 "pdD" = (
@@ -15889,9 +15939,6 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1
-	},
-/obj/structure/handrail{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -15962,7 +16009,9 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
-/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/firedoor/glass{
+	req_one_access = list()
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/cabin)
 "phX" = (
@@ -16215,6 +16264,9 @@
 	req_access = list();
 	req_one_access = list()
 	},
+/obj/machinery/door/firedoor/glass{
+	req_one_access = list()
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/cabin)
 "prJ" = (
@@ -16239,6 +16291,12 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/cabin)
+"prZ" = (
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/residential/mansion)
 "psp" = (
 /obj/effect/floor_decal/grass_edge{
 	dir = 4
@@ -16387,9 +16445,6 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/structure/handrail{
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -16483,7 +16538,8 @@
 	req_one_access = list()
 	},
 /obj/machinery/door/firedoor/multi_tile{
-	dir = 1
+	dir = 1;
+	req_one_access = list()
 	},
 /obj/structure/cable{
 	d1 = 4;
@@ -16610,6 +16666,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 10
 	},
+/obj/structure/closet/secure_closet/engineering_welding{
+	req_access = list()
+	},
 /turf/simulated/floor/plating,
 /area/shuttle/drake/engineering)
 "pFx" = (
@@ -16685,6 +16744,12 @@
 /area/residential/outside)
 "pKH" = (
 /obj/machinery/atmospherics/binary/pump/fuel,
+/obj/structure/railing/grey{
+	dir = 4
+	},
+/obj/structure/railing/grey{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/shuttle/drake/engineering)
 "pLB" = (
@@ -16767,9 +16832,6 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
-/obj/structure/railing/grey{
-	dir = 8
-	},
 /turf/simulated/floor/plating,
 /area/shuttle/drake/engineering)
 "pPx" = (
@@ -16834,13 +16896,24 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 1
 	},
-/obj/structure/railing/grey{
-	dir = 8
+/obj/structure/table/steel,
+/obj/item/stack/material/glass/reinforced{
+	amount = 50
 	},
-/obj/structure/cable{
-	icon_state = "2-4"
+/obj/item/stack/material/steel{
+	amount = 50
 	},
-/turf/simulated/floor/tiled/techfloor,
+/obj/item/stack/material/plasteel{
+	amount = 10
+	},
+/obj/item/stack/cable_coil{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/turf/simulated/floor/plating,
 /area/shuttle/drake/engineering)
 "pTk" = (
 /obj/structure/table/alien/blue,
@@ -16943,20 +17016,8 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/structure/handrail{
-	dir = 8
-	},
-/obj/structure/closet/autolok_wall{
-	dir = 4;
-	pixel_x = 32
-	},
-/obj/structure/panic_button{
-	pixel_x = 32;
-	pixel_y = -32
-	},
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
+/obj/machinery/power/smes/batteryrack/shuttle/mapped,
+/obj/structure/cable,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/drake/engineering)
 "pZP" = (
@@ -17129,13 +17190,15 @@
 	name = "Quarters";
 	req_one_access = list()
 	},
-/obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 1
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
+	},
+/obj/machinery/door/firedoor/glass{
+	req_one_access = list()
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/quarters2)
@@ -17233,11 +17296,6 @@
 /turf/simulated/floor/wood/sif,
 /area/residential/mansion_club)
 "qms" = (
-/obj/machinery/door/airlock/hatch{
-	name = "Storage";
-	req_one_access = list()
-	},
-/obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 1
@@ -17246,6 +17304,13 @@
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/voidcraft{
+	name = "Storage";
+	req_one_access = list()
+	},
+/obj/machinery/door/firedoor/glass{
+	req_one_access = list()
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/storage)
@@ -17292,8 +17357,10 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/machinery/door/firedoor/glass{
+	req_one_access = list()
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/cabin)
 "qnA" = (
@@ -17318,7 +17385,9 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/firedoor/glass{
+	req_one_access = list()
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/cabin)
 "qnU" = (
@@ -17336,9 +17405,6 @@
 /obj/item/clothing/head/helmet/space/void/refurb,
 /obj/structure/railing/grey{
 	dir = 8
-	},
-/obj/structure/handrail{
-	dir = 1
 	},
 /obj/structure/window/reinforced{
 	dir = 8
@@ -17363,9 +17429,6 @@
 /obj/item/weapon/tank/air,
 /obj/item/clothing/suit/space/void/refurb,
 /obj/item/clothing/head/helmet/space/void/refurb,
-/obj/structure/handrail{
-	dir = 1
-	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
@@ -17386,7 +17449,8 @@
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
-	pixel_x = 24
+	pixel_x = 24;
+	req_access = list()
 	},
 /obj/structure/cable,
 /obj/machinery/light,
@@ -17603,7 +17667,6 @@
 /turf/simulated/wall/shull,
 /area/shuttle/drake/dorm)
 "qCc" = (
-/obj/machinery/door/firedoor/glass,
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
@@ -17615,6 +17678,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/airlock/voidcraft{
 	name = "Dorms";
+	req_one_access = list()
+	},
+/obj/machinery/door/firedoor/glass{
 	req_one_access = list()
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -17968,7 +18034,6 @@
 /turf/simulated/floor/wood,
 /area/residential/outside)
 "qSf" = (
-/obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 1
 	},
@@ -17979,6 +18044,9 @@
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
+	},
+/obj/machinery/door/firedoor/glass{
+	req_one_access = list()
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/star_hold)
@@ -18009,8 +18077,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 1
 	},
-/obj/structure/handrail{
-	dir = 4
+/obj/item/modular_computer/telescreen/preset{
+	pixel_x = -32;
+	pixel_y = 0
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/cockpit)
@@ -18148,11 +18217,20 @@
 	},
 /obj/item/weapon/tool/crowbar/red,
 /obj/item/stack/material/tritium{
-	amount = 25
+	amount = 50
 	},
 /obj/machinery/light,
-/obj/machinery/power/terminal{
+/obj/structure/railing/grey{
 	dir = 8
+	},
+/obj/item/stack/material/tritium{
+	amount = 50
+	},
+/obj/item/stack/material/tritium{
+	amount = 50
+	},
+/obj/item/stack/material/tritium{
+	amount = 50
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/drake/engineering)
@@ -18254,7 +18332,6 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/structure/handrail,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/quarters2)
 "rgd" = (
@@ -18328,7 +18405,6 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/structure/handrail,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/quarters2)
 "rjB" = (
@@ -18338,12 +18414,12 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	pixel_y = 24
+	pixel_y = 24;
+	req_access = list()
 	},
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
-/obj/structure/handrail,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/quarters2)
 "rjJ" = (
@@ -18408,7 +18484,9 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
-/obj/structure/handrail,
+/obj/item/modular_computer/telescreen/preset{
+	pixel_y = 26
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/quarters2)
 "rlP" = (
@@ -18441,12 +18519,14 @@
 /turf/simulated/floor/wood,
 /area/residential/mansion)
 "rpY" = (
-/obj/machinery/light{
-	dir = 4
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 5
 	},
-/obj/structure/handrail,
-/turf/simulated/floor/tiled/techmaint,
-/area/shuttle/drake/quarters2)
+/obj/machinery/computer/ship/navigation/telescreen{
+	pixel_y = -32
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/drake/engineering)
 "rqL" = (
 /obj/effect/floor_decal/corner_kafel/blue,
 /obj/effect/floor_decal/corner_kafel/red/full{
@@ -18855,9 +18935,6 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/structure/handrail{
-	dir = 8
-	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/storage)
 "rHN" = (
@@ -18902,10 +18979,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
-/obj/structure/handrail{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/machinery/computer/ship/navigation/telescreen{
+	pixel_x = -32
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/cabin)
 "rJw" = (
@@ -18987,9 +19064,6 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/handrail{
-	dir = 8
-	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/cabin)
 "rNL" = (
@@ -19121,7 +19195,6 @@
 /turf/simulated/floor/wood,
 /area/residential/mansion_gameroom)
 "rXm" = (
-/obj/machinery/door/firedoor/glass,
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
@@ -19131,9 +19204,12 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/door/airlock/voidcraft{
+/obj/machinery/door/airlock/hatch{
 	id_tag = "drake_office";
 	name = "Office";
+	req_one_access = list()
+	},
+/obj/machinery/door/firedoor/glass{
 	req_one_access = list()
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -19160,11 +19236,11 @@
 /area/residential/outside)
 "rYd" = (
 /obj/structure/bed/chair/bay/chair,
-/obj/structure/handrail,
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	pixel_y = 24
+	pixel_y = 24;
+	req_access = list()
 	},
 /obj/structure/cable{
 	d2 = 4;
@@ -19323,7 +19399,8 @@
 /obj/item/weapon/bedsheet/blue,
 /obj/machinery/alarm/alarms_hidden{
 	dir = 8;
-	pixel_x = 26
+	pixel_x = 26;
+	req_one_access = list()
 	},
 /obj/machinery/firealarm{
 	dir = 1;
@@ -19473,7 +19550,8 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	pixel_y = 24
+	pixel_y = 24;
+	req_access = list()
 	},
 /obj/structure/cable{
 	d2 = 4;
@@ -19642,14 +19720,12 @@
 "ssM" = (
 /obj/machinery/alarm/alarms_hidden{
 	dir = 8;
-	pixel_x = 26
+	pixel_x = 26;
+	req_one_access = list()
 	},
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = 26
-	},
-/obj/structure/handrail{
-	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/drake/star_hold)
@@ -19666,7 +19742,8 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/obj/structure/closet/crate,
+/obj/structure/closet/secure_closet/engineering_electrical,
+/obj/item/clothing/gloves/yellow,
 /turf/simulated/floor/plating,
 /area/shuttle/drake/engineering)
 "suF" = (
@@ -19836,9 +19913,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 1
-	},
-/obj/structure/handrail{
-	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/quarters2)
@@ -20251,9 +20325,6 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/structure/handrail{
-	dir = 8
-	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/storage)
 "sUr" = (
@@ -20429,6 +20500,18 @@
 /obj/item/weapon/reagent_containers/glass/rag,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mansion_club)
+"tbD" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/residential/mansion)
 "tbH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -20446,9 +20529,6 @@
 /area/residential/mansion_bed_3)
 "tcW" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 4
-	},
-/obj/structure/handrail{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -20477,12 +20557,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
-/obj/structure/handrail{
-	dir = 8
-	},
 /obj/machinery/alarm{
 	dir = 8;
-	pixel_x = 25
+	pixel_x = 25;
+	req_one_access = list()
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/cabin)
@@ -20506,7 +20584,8 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	pixel_y = 24
+	pixel_y = 24;
+	req_access = list()
 	},
 /obj/structure/cable{
 	d2 = 4;
@@ -20518,9 +20597,6 @@
 /obj/structure/closet/autolok_wall{
 	dir = 8;
 	pixel_x = -32
-	},
-/obj/structure/handrail{
-	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/drake/office)
@@ -20681,6 +20757,13 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mansion)
 "toc" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/item/modular_computer/telescreen/preset{
+	pixel_x = -32;
+	pixel_y = 0
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/drake/dorm)
 "toh" = (
@@ -20757,8 +20840,9 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/structure/handrail{
-	dir = 8
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = 22
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/drake/star_hold)
@@ -20778,7 +20862,7 @@
 /turf/simulated/floor/carpet/bcarpet,
 /area/residential/mansion_bed_5)
 "ttR" = (
-/obj/machinery/atmospherics/pipe/simple/visible/yellow,
+/obj/machinery/atmospherics/valve/digital/open,
 /turf/simulated/floor/plating,
 /area/shuttle/drake/engineering)
 "ttU" = (
@@ -20840,6 +20924,9 @@
 	dir = 1
 	},
 /obj/machinery/meter,
+/obj/structure/closet/autolok_wall{
+	pixel_y = 32
+	},
 /turf/simulated/floor/plating,
 /area/shuttle/drake/engineering)
 "twP" = (
@@ -20855,6 +20942,10 @@
 	},
 /obj/machinery/portable_atmospherics/canister/empty,
 /obj/effect/floor_decal/industrial/outline/red,
+/obj/machinery/door/window/brigdoor/westright{
+	req_access = list();
+	req_one_access = list()
+	},
 /turf/simulated/floor/plating,
 /area/shuttle/drake/engineering)
 "txI" = (
@@ -20900,9 +20991,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 1
-	},
-/obj/structure/handrail{
-	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/quarters2)
@@ -20988,12 +21076,10 @@
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
-	pixel_x = 24
+	pixel_x = 24;
+	req_access = list()
 	},
 /obj/structure/cable,
-/obj/structure/handrail{
-	dir = 8
-	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/storage)
 "tGj" = (
@@ -21056,9 +21142,6 @@
 /turf/simulated/floor/wood,
 /area/residential/mansion)
 "tKr" = (
-/obj/structure/handrail{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/cabin)
@@ -21072,9 +21155,6 @@
 /turf/simulated/floor/tiled/white,
 /area/residential/mansion_ballroom)
 "tKU" = (
-/obj/structure/handrail{
-	dir = 8
-	},
 /obj/machinery/firealarm{
 	dir = 4;
 	layer = 3.3;
@@ -21108,9 +21188,6 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "tLv" = (
-/obj/structure/handrail{
-	dir = 4
-	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/drake/office)
 "tLH" = (
@@ -21288,7 +21365,8 @@
 	dir = 8;
 	id = "drake_office";
 	name = "Office Lock";
-	pixel_x = 24
+	pixel_x = 24;
+	specialfunctions = 4
 	},
 /obj/structure/table/steel,
 /obj/item/weapon/pen/fountain,
@@ -21526,12 +21604,8 @@
 /turf/simulated/floor/wood,
 /area/residential/mansion)
 "ujb" = (
-/obj/machinery/light_switch{
-	dir = 4;
-	pixel_x = 22
-	},
-/obj/structure/handrail{
-	dir = 8
+/obj/machinery/computer/ship/navigation/telescreen{
+	pixel_x = 32
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/drake/star_hold)
@@ -21545,22 +21619,16 @@
 /turf/simulated/floor/wood,
 /area/residential/mansion_office)
 "ujF" = (
-/obj/structure/handrail{
-	dir = 1
-	},
 /obj/machinery/alarm/alarms_hidden{
 	dir = 4;
-	pixel_x = -26
+	pixel_x = -26;
+	req_one_access = list()
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
 /obj/machinery/light{
 	dir = 8
-	},
-/obj/structure/closet/autolok_wall{
-	dir = 1;
-	pixel_y = -32
 	},
 /obj/structure/railing/grey{
 	dir = 4
@@ -21605,8 +21673,7 @@
 /turf/simulated/floor/tiled/eris/cafe,
 /area/residential/mansion)
 "umu" = (
-/obj/structure/table/alien,
-/obj/machinery/recharger,
+/obj/machinery/ntnet_relay,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/drake/cockpit)
 "umz" = (
@@ -21732,12 +21799,14 @@
 /turf/simulated/floor/beach/sand/desert/outdoors,
 /area/residential/outside)
 "usv" = (
-/obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
 	dir = 4
+	},
+/obj/machinery/door/firedoor/glass{
+	req_one_access = list()
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/drake/cockpit)
@@ -22158,9 +22227,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 1
 	},
-/obj/structure/handrail{
-	dir = 8
-	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/storage)
 "uSf" = (
@@ -22358,6 +22424,13 @@
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating,
 /area/residential/mroom1)
+"vbV" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 5
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/drake/engineering)
 "vcE" = (
 /turf/simulated/floor/wood,
 /area/residential/mansion_ballroom)
@@ -22453,6 +22526,9 @@
 "vfl" = (
 /obj/structure/table/steel,
 /obj/item/modular_computer/laptop/preset/custom_loadout/elite,
+/obj/item/modular_computer/telescreen/preset{
+	pixel_x = 32
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/drake/office)
 "vga" = (
@@ -22517,9 +22593,6 @@
 /turf/simulated/floor/wood,
 /area/residential/mansion)
 "vkj" = (
-/obj/structure/handrail{
-	dir = 8
-	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/drake/star_hold)
 "vko" = (
@@ -22765,10 +22838,12 @@
 /turf/simulated/floor/wood/sif,
 /area/residential/mroom2bed2)
 "vva" = (
-/obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced,
+/obj/machinery/door/firedoor/glass{
+	req_one_access = list()
+	},
 /turf/simulated/floor/plating,
 /area/shuttle/drake/cockpit)
 "vvR" = (
@@ -22862,6 +22937,15 @@
 "vzp" = (
 /turf/simulated/floor/carpet/bcarpet,
 /area/residential/mansion_gameroom)
+"vzs" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/alarm{
+	pixel_y = 22
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/shuttle/drake/cabin)
 "vzu" = (
 /obj/structure/table/woodentable,
 /turf/simulated/floor/carpet,
@@ -22910,6 +22994,14 @@
 /obj/machinery/atmospherics/portables_connector{
 	dir = 1
 	},
+/obj/machinery/door/window/brigdoor/northright{
+	req_access = list()
+	},
+/obj/structure/window/reinforced{
+	dir = 8;
+	health = 1e+006
+	},
+/obj/machinery/light/small,
 /turf/simulated/floor/plating,
 /area/shuttle/drake/engineering)
 "vCy" = (
@@ -22968,9 +23060,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 1
 	},
-/obj/structure/handrail{
-	dir = 8
-	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/storage)
 "vGe" = (
@@ -23007,6 +23096,17 @@
 /obj/effect/alien/weeds,
 /turf/simulated/floor/wood,
 /area/residential/mansion)
+"vJx" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/computer/ship/navigation/telescreen{
+	pixel_x = -32
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/shuttle/drake/cockpit)
 "vJP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -23266,7 +23366,9 @@
 /area/residential/mroom2)
 "vRf" = (
 /obj/structure/table/steel,
-/obj/machinery/light,
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/drake/dorm)
 "vRn" = (
@@ -23587,6 +23689,9 @@
 /obj/item/device/flashlight/maglight,
 /obj/item/device/communicator/andy,
 /obj/item/weapon/disk/nifsoft/sizechange/andy,
+/obj/machinery/light/small{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/quarters2)
 "wfx" = (
@@ -23750,9 +23855,6 @@
 	dir = 9
 	},
 /obj/item/clothing/gloves/boxing,
-/obj/structure/handrail{
-	dir = 8
-	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/storage)
 "wsP" = (
@@ -23916,9 +24018,6 @@
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/structure/closet/walllocker/emerglocker/east,
-/obj/structure/handrail{
-	dir = 8
-	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/cabin)
 "wAF" = (
@@ -23976,7 +24075,6 @@
 /turf/simulated/floor/carpet/bcarpet,
 /area/residential/mroom2)
 "wEB" = (
-/obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
@@ -23993,6 +24091,9 @@
 /obj/structure/window/reinforced{
 	dir = 8;
 	health = 1e+006
+	},
+/obj/machinery/door/firedoor/glass{
+	req_one_access = list()
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/drake/quarters2)
@@ -24134,9 +24235,14 @@
 /obj/structure/table/steel,
 /obj/machinery/alarm/alarms_hidden{
 	dir = 8;
-	pixel_x = 26
+	pixel_x = 26;
+	req_one_access = list()
 	},
-/obj/machinery/light,
+/obj/item/weapon/card/id/centcom/station{
+	assignment = "Joint Chief";
+	name = "Dameon Owen's CentCom ID";
+	registered_name = "Dameon Owen"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/drake/office)
 "wJc" = (
@@ -24394,6 +24500,14 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/residential/mansion)
+"wVx" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/obj/machinery/atmospherics/binary/passive_gate{
+	set_flow_rate = 1;
+	target_pressure = 500
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/drake/engineering)
 "wVO" = (
 /mob/living/simple_mob/vore/bigdragon/friendly/andy,
 /turf/simulated/floor/wood,
@@ -24442,12 +24556,14 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/outside)
 "wXt" = (
-/obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
 	dir = 1
+	},
+/obj/machinery/door/firedoor/glass{
+	req_one_access = list()
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/drake/dorm)
@@ -24481,18 +24597,13 @@
 /turf/simulated/floor/outdoors/grass/forest/biodome,
 /area/residential/outside)
 "wZj" = (
-/obj/structure/handrail{
-	dir = 4
-	},
+/obj/machinery/recharge_station,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/quarters2)
 "xbF" = (
 /obj/machinery/light,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
-	},
-/obj/structure/handrail{
-	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/quarters2)
@@ -24599,10 +24710,8 @@
 	},
 /obj/machinery/alarm{
 	dir = 1;
-	pixel_y = -24
-	},
-/obj/structure/handrail{
-	dir = 1
+	pixel_y = -24;
+	req_one_access = list()
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/quarters2)
@@ -24727,6 +24836,13 @@
 /obj/machinery/papershredder,
 /turf/simulated/floor/carpet/blue,
 /area/residential/room12)
+"xqB" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 10
+	},
+/obj/structure/reagent_dispensers/watertank,
+/turf/simulated/floor/plating,
+/area/shuttle/drake/engineering)
 "xrv" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
@@ -24781,21 +24897,9 @@
 /obj/item/device/flashlight/lamp/green,
 /turf/simulated/floor/wood/sif,
 /area/residential/mroom2bed2)
-"xtL" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/handrail{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/shuttle/drake/quarters2)
 "xup" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
-	},
-/obj/structure/handrail{
-	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/quarters2)
@@ -25249,8 +25353,14 @@
 "xUl" = (
 /obj/machinery/alarm{
 	dir = 1;
-	pixel_y = -24
+	pixel_y = -24;
+	req_one_access = list()
 	},
+/obj/structure/table/steel,
+/obj/item/weapon/storage/box/lights/mixed,
+/obj/item/weapon/storage/box/lights/mixed,
+/obj/item/weapon/storage/box/lights/mixed,
+/obj/item/weapon/storage/box/lights/mixed,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/storage)
 "xUA" = (
@@ -25317,9 +25427,6 @@
 	dir = 4
 	},
 /obj/structure/fitness/punchingbag,
-/obj/structure/handrail{
-	dir = 8
-	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/storage)
 "xZM" = (
@@ -25483,12 +25590,14 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/mroom2)
 "ygS" = (
-/obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
 	dir = 1
+	},
+/obj/machinery/door/firedoor/glass{
+	req_one_access = list()
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/drake/office)
@@ -25571,6 +25680,17 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/mansion_bed_2)
+"ymd" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/residential/mansion)
 
 (1,1,1) = {"
 knR
@@ -54760,7 +54880,7 @@ hac
 hac
 hac
 hac
-hac
+kiQ
 vkO
 wWP
 hac
@@ -56018,12 +56138,12 @@ eww
 fri
 glT
 hJG
-iDv
+stf
 kiH
-iDx
+nyz
 ndq
 oIs
-lwF
+xqB
 qWb
 stf
 pFg
@@ -56267,10 +56387,10 @@ ccS
 xpP
 xpP
 eww
-frj
+fvl
 gmE
-hLc
-hLc
+wVx
+vbV
 klj
 maM
 nig
@@ -56522,8 +56642,8 @@ eww
 fvl
 grg
 grH
-iGW
-iGW
+bbN
+ttR
 mej
 nkp
 oJJ
@@ -56776,11 +56896,11 @@ gro
 hLZ
 iJi
 knU
-meQ
+dKa
 nlM
 oLy
 pSP
-koL
+oya
 svA
 tuj
 uxO
@@ -57024,18 +57144,18 @@ cpb
 cpw
 cpw
 eww
-grH
+eMw
 hMu
 eww
 kpC
 mfW
 nnh
 oPP
-eop
+oSH
 rau
 eww
 twq
-tuj
+rpY
 eww
 qhN
 qhN
@@ -57277,7 +57397,7 @@ cpw
 eAj
 eww
 gtV
-gtV
+mUl
 eww
 krd
 mjf
@@ -57287,7 +57407,7 @@ pYw
 reX
 eww
 txb
-txb
+mmQ
 eww
 wfs
 qhN
@@ -58541,8 +58661,8 @@ eCu
 eDp
 kDG
 cpw
-nzU
-paG
+nXE
+pxh
 qhN
 rjB
 sLX
@@ -58550,7 +58670,7 @@ tCC
 tCC
 tCC
 sLX
-xtL
+xlN
 qhN
 rVX
 bLX
@@ -58785,7 +58905,7 @@ vIi
 peY
 ccS
 cpw
-dkt
+kJa
 eGg
 eCu
 gvd
@@ -58794,7 +58914,7 @@ eGg
 kJa
 cpw
 nCU
-paG
+pxh
 qhN
 rly
 sMs
@@ -59043,12 +59163,12 @@ eCu
 eCu
 eCu
 eCu
-kNc
+dur
 cpw
 nDR
-paG
+pxh
 qhN
-rpY
+xzV
 sMX
 tCC
 tCC
@@ -59802,7 +59922,7 @@ eKR
 eKR
 mqf
 nXE
-paG
+pxh
 qhV
 rup
 sNN
@@ -60054,7 +60174,7 @@ iUu
 kQh
 mqf
 nXE
-paG
+pxh
 qhV
 rwL
 sNN
@@ -60298,15 +60418,15 @@ hSW
 iJY
 cxS
 eaW
-eMw
+eKR
 cxS
 gHS
 gHS
 gHS
 kUt
 cxS
-nzU
-paG
+nXE
+pxh
 qhV
 rDT
 sTf
@@ -60557,7 +60677,7 @@ hRr
 iUT
 kXy
 cxS
-nXO
+nSt
 pdA
 qhV
 rFh
@@ -61797,10 +61917,10 @@ knR
 knR
 knR
 knR
-knR
-knR
-knR
-knR
+vIi
+vIi
+vIi
+vIi
 knR
 knR
 knR
@@ -62049,10 +62169,10 @@ knR
 knR
 knR
 knR
-knR
-knR
-knR
-knR
+vIi
+agz
+ayv
+vIi
 knR
 knR
 knR
@@ -62074,9 +62194,9 @@ prX
 qoX
 qvB
 teF
+apq
 tLv
-tLv
-tLv
+apq
 wBM
 qvB
 mcx
@@ -62301,9 +62421,9 @@ knR
 knR
 knR
 knR
-knR
-knR
 vIi
+atu
+alq
 vIi
 vIi
 vIi
@@ -62553,9 +62673,9 @@ knR
 knR
 knR
 knR
-knR
-knR
 vIi
+atu
+alq
 abo
 abo
 abo
@@ -62805,11 +62925,11 @@ knR
 knR
 knR
 knR
-knR
-knR
 vIi
-agz
 atu
+alq
+aEc
+aIs
 aCs
 aIs
 aIs
@@ -63057,11 +63177,11 @@ knR
 knR
 knR
 knR
-knR
-knR
 vIi
+agz
+alq
 aiY
-auu
+auG
 aEc
 aNK
 aZL
@@ -63309,9 +63429,9 @@ knR
 knR
 knR
 knR
-knR
-knR
 vIi
+agz
+alq
 aiY
 auG
 aGi
@@ -63561,11 +63681,11 @@ knR
 knR
 knR
 knR
-knR
-knR
 vIi
+atu
+tbD
 alA
-ayv
+aVx
 aHp
 aVx
 aVx
@@ -63581,8 +63701,8 @@ iqh
 jzv
 lKd
 fqf
-otI
-paG
+vzs
+pxh
 qAC
 sdK
 tot
@@ -63813,9 +63933,9 @@ knR
 knR
 knR
 knR
-knR
-knR
 vIi
+atu
+ymd
 asT
 asT
 asT
@@ -64065,9 +64185,9 @@ knR
 knR
 knR
 knR
-knR
-knR
 vIi
+atu
+ymd
 vIi
 vIi
 vIi
@@ -64079,20 +64199,20 @@ ccS
 xpP
 xpP
 xpP
-lOG
+bmm
 hfT
-hfT
+fNh
 hfT
 lLY
 kKS
-ooU
-pxE
+nzU
+nXO
 qGx
 slp
+aWc
 trX
 trX
-trX
-iFb
+eSw
 xpP
 xpP
 xpP
@@ -64317,10 +64437,10 @@ knR
 knR
 knR
 knR
-knR
-knR
-knR
-knR
+vIi
+agz
+prZ
+vIi
 knR
 knR
 knR
@@ -64331,7 +64451,7 @@ ccS
 xpP
 xpP
 xpP
-lOG
+bmm
 hiL
 isU
 isU
@@ -64344,7 +64464,7 @@ sqw
 tsr
 tsr
 viN
-iFb
+eSw
 xpP
 xpP
 xpP
@@ -64569,10 +64689,10 @@ knR
 knR
 knR
 knR
-knR
-knR
-knR
-knR
+vIi
+vIi
+vIi
+vIi
 knR
 knR
 knR
@@ -64583,20 +64703,20 @@ bWl
 xpP
 xpP
 xpP
-lOG
+bmm
 hqs
 ivq
 jMp
 lNa
 kKS
-otI
-paG
+okC
+pxh
 qGx
 ssM
 tsw
 ujb
 vkj
-iFb
+eSw
 xpP
 xpP
 xpP
@@ -65091,12 +65211,12 @@ gbT
 hqN
 ixg
 jOk
-jOk
-jOk
+vJx
+kNc
 oEF
 pAy
-qTG
-qTG
+jtr
+otI
 qTG
 ujF
 hqN
@@ -65847,12 +65967,12 @@ xpP
 hrS
 iAu
 jWg
-jWg
+gQJ
 mZj
 oHh
 pBg
 mZj
-jWg
+gQJ
 jWg
 iAu
 usv
