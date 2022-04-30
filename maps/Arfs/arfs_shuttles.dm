@@ -87,11 +87,11 @@
 //////////////////////////////////////////////////////////////
 // Andy's shuttle
 /obj/effect/overmap/visitable/ship/landable/drake
-	name = "Salamander-class Corvette"
-	scanner_desc = @{"[i]Registration[/i]: ARF Drake
+	name = "A.R.F.S. Drake"
+	scanner_desc = @{"[i]Registration[/i]: A.R.F.S. Drake
 [i]Class[/i]: Corvette
 [i]Transponder[/i]: Transmitting (CIV), non-hostile
-[b]Notice[/b]: Multirole independent vessel"}
+[b]Notice[/b]: Multirole independent vessel, owned by A.R.F.S. Joint Chief Dameon Owen"}
 	vessel_mass = 10000
 	vessel_size = SHIP_SIZE_LARGE
 	fore_dir = EAST
