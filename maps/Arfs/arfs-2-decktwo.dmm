@@ -444,9 +444,11 @@
 /area/bridge)
 "abe" = (
 /obj/machinery/conveyor{
-	dir = 10;
-	id = "garbage"
+	id = "garbage";
+	movedir = 2;
+	dir = 1
 	},
+/obj/structure/plasticflaps,
 /turf/simulated/floor/plating,
 /area/maintenance/disposal)
 "abf" = (
@@ -9502,10 +9504,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/fore)
 "atT" = (
-/obj/machinery/door/firedoor/border_only{
-	req_one_access = list()
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/light/small{
+	dir = 4
 	},
-/obj/machinery/door/airlock/maintenance/int,
 /turf/simulated/floor/plating,
 /area/maintenance/disposal)
 "atU" = (
@@ -9905,16 +9908,16 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/recreation_area)
 "avc" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/disposal)
@@ -11404,9 +11407,17 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/security/range)
 "axG" = (
-/obj/machinery/camera/autoname{
-	dir = 8
+/obj/effect/landmark{
+	name = "morphspawn"
 	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/machinery/alarm{
+	frequency = 1441;
+	pixel_y = 22
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/plating,
 /area/maintenance/disposal)
 "axJ" = (
@@ -11743,16 +11754,16 @@
 "ayv" = (
 /obj/machinery/conveyor{
 	dir = 4;
-	id = "garbage"
+	id = "garbage";
+	movedir = 8
 	},
-/obj/structure/window/reinforced,
-/obj/structure/plasticflaps/mining,
+/obj/random/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/disposal)
 "ayw" = (
-/obj/machinery/conveyor{
-	dir = 4;
-	id = "garbage"
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/disposal)
@@ -11763,7 +11774,6 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 4
 	},
-/obj/structure/window/reinforced,
 /turf/simulated/floor/plating,
 /area/maintenance/disposal)
 "ayz" = (
@@ -11771,6 +11781,8 @@
 	dir = 8;
 	pixel_x = 25
 	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/emcloset,
 /turf/simulated/floor/plating,
 /area/maintenance/disposal)
 "ayA" = (
@@ -12023,9 +12035,10 @@
 /area/crew_quarters/pool)
 "aza" = (
 /obj/machinery/conveyor{
-	id = "garbage"
+	id = "garbage";
+	movedir = 2;
+	dir = 1
 	},
-/obj/structure/plasticflaps/mining,
 /turf/simulated/floor/plating,
 /area/maintenance/disposal)
 "azb" = (
@@ -12079,12 +12092,11 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/random/maintenance,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/plating,
 /area/maintenance/disposal)
 "azg" = (
@@ -12099,14 +12111,10 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/effect/floor_decal/corner/purple{
-	dir = 8;
-	tag = "icon-corner_white (WEST)"
-	},
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/maintenance{
-	name = "Disposal Access";
-	req_access = list(12)
+	name = "Custodial Maintenance";
+	req_access = list(26)
 	},
 /turf/simulated/floor/tiled,
 /area/janitor)
@@ -12114,7 +12122,7 @@
 /obj/machinery/door/airlock/maintenance/cargo,
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/tiled,
-/area/maintenance/disposal)
+/area/quartermaster/warehouse)
 "azi" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -12405,25 +12413,23 @@
 /turf/simulated/floor/plating,
 /area/maintenance/substation/civilian_east)
 "azz" = (
-/obj/machinery/door/blast/regular{
-	id = "trash";
-	name = "disposal mass driver"
-	},
-/obj/machinery/shield_diffuser,
-/turf/simulated/floor/plating,
-/area/maintenance/disposal)
-"azA" = (
 /obj/machinery/mass_driver{
 	dir = 8;
 	id = "trash"
 	},
+/turf/simulated/floor/tiled/techmaint/airless,
+/area/maintenance/disposal)
+"azA" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
 /area/maintenance/disposal)
 "azB" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/effect/wingrille_spawn,
+/obj/effect/wingrille_spawn/reinforced,
+/obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
 /area/maintenance/disposal)
 "azC" = (
@@ -12439,10 +12445,10 @@
 "azD" = (
 /obj/machinery/conveyor{
 	dir = 4;
-	id = "garbage"
+	id = "garbage";
+	movedir = 8
 	},
-/obj/structure/plasticflaps/mining,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/techmaint/airless,
 /area/maintenance/disposal)
 "azE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -12464,22 +12470,31 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/security_lockerroom)
 "azF" = (
-/obj/structure/window/reinforced{
+/obj/effect/floor_decal/industrial/warning{
+	dir = 9
+	},
+/obj/machinery/door/window/northright{
+	name = "Disposal Belt Access"
+	},
+/obj/structure/railing{
 	dir = 8
 	},
-/obj/item/weapon/stool/padded,
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/random/trash,
+/obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/plating,
 /area/maintenance/disposal)
 "azG" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/conveyor_switch/oneway{
+	convdir = -1;
+	id = "garbage";
+	name = "disposal coveyor"
+	},
+/obj/structure/railing{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/disposal)
 "azH" = (
@@ -12488,7 +12503,7 @@
 /area/quartermaster/warehouse)
 "azJ" = (
 /turf/simulated/floor/plating,
-/area/maintenance/cargo)
+/area/maintenance/disposal)
 "azK" = (
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
@@ -12625,8 +12640,12 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/fore)
 "azX" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 10
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/structure/railing{
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/disposal)
@@ -12858,21 +12877,26 @@
 	},
 /obj/machinery/button/remote/driver{
 	id = "trash";
-	pixel_y = -24
+	pixel_y = -24;
+	name = "Gargabe Disposal"
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/window/reinforced{
+/obj/effect/floor_decal/industrial/warning{
 	dir = 8
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/disposal)
 "aAv" = (
-/obj/machinery/conveyor_switch/oneway{
-	convdir = -1;
-	id = "garbage";
-	name = "disposal coveyor"
-	},
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/disposal)
 "aAw" = (
@@ -12880,11 +12904,7 @@
 	c_tag = "CIV - Waste Disposal";
 	dir = 1
 	},
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/random/maintenance,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor/plating,
 /area/maintenance/disposal)
 "aAx" = (
@@ -12949,8 +12969,10 @@
 /turf/simulated/floor/plating,
 /area/quartermaster/warehouse)
 "aAC" = (
-/obj/machinery/door/airlock/maintenance/common,
 /obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/airlock/maintenance/int{
+	name = "Disposals"
+	},
 /turf/simulated/floor/plating,
 /area/hallway/primary/fore)
 "aAD" = (
@@ -13196,7 +13218,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
-/obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/green{
 	d2 = 4;
 	icon_state = "0-4"
@@ -23731,7 +23752,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/techmaint/airless,
 /area/maintenance/disposal)
 "aUF" = (
 /obj/machinery/alarm{
@@ -36607,7 +36628,7 @@
 "bxu" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
-/area/maintenance/cargo)
+/area/maintenance/disposal)
 "bxx" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
@@ -40421,7 +40442,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/random/junk,
 /turf/simulated/floor/plating,
-/area/maintenance/cargo)
+/area/maintenance/disposal)
 "bSO" = (
 /obj/structure/loot_pile/maint/junk,
 /turf/simulated/floor/plating,
@@ -40451,7 +40472,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/plating,
-/area/maintenance/cargo)
+/area/maintenance/disposal)
 "bSY" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -43416,6 +43437,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_emt_bay)
+"fTB" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/disposal)
 "fVI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4;
@@ -44965,6 +44993,13 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/kitchen)
+"hON" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/disposal)
 "hPB" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -45161,6 +45196,14 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/atmos)
+"iaJ" = (
+/obj/machinery/door/blast/regular{
+	id = "trash";
+	name = "disposal mass driver"
+	},
+/obj/machinery/shield_diffuser,
+/turf/simulated/floor/tiled/techmaint/airless,
+/area/maintenance/disposal)
 "ibh" = (
 /obj/machinery/camera/network/engineering{
 	c_tag = "ENG - Atmospherics 5";
@@ -46373,8 +46416,9 @@
 "jEq" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/random/maintenance/cargo,
+/obj/machinery/light/small,
 /turf/simulated/floor/plating,
-/area/maintenance/cargo)
+/area/maintenance/disposal)
 "jEB" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/hologram/holopad,
@@ -47228,6 +47272,17 @@
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/kitchen)
+"kJY" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -25
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/disposal)
 "kLz" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/simulated/floor/tiled/dark,
@@ -51897,13 +51952,13 @@
 /turf/simulated/wall,
 /area/storage/tools)
 "qYk" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
 	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark{
-	name = "morphspawn"
+/obj/structure/railing{
+	dir = 1
 	},
+/obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/plating,
 /area/maintenance/disposal)
 "qYs" = (
@@ -53264,11 +53319,12 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "szl" = (
+/obj/effect/landmark/teleplumb_exit,
 /obj/machinery/conveyor{
 	dir = 4;
-	id = "garbage"
+	id = "garbage";
+	movedir = 8
 	},
-/obj/effect/landmark/teleplumb_exit,
 /turf/simulated/floor/plating,
 /area/maintenance/disposal)
 "szF" = (
@@ -56559,7 +56615,7 @@
 /obj/random/maintenance/cargo,
 /obj/random/soap,
 /turf/simulated/floor/plating,
-/area/maintenance/cargo)
+/area/maintenance/disposal)
 "wSM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -83564,9 +83620,9 @@ arq
 arq
 arq
 arq
-aaa
-aaa
-aaa
+ayb
+iaJ
+ayb
 aaa
 aaa
 aaa
@@ -83820,10 +83876,10 @@ arn
 aqG
 lNe
 aqG
-arq
+aqe
 ayb
 azz
-ayb
+azA
 aaa
 aaa
 aaa
@@ -84076,11 +84132,11 @@ ijI
 aqG
 mmS
 aqd
+aqG
 eaP
-aqe
 ayb
-azA
-ayb
+azD
+aAd
 aAd
 aAd
 aAd
@@ -84337,7 +84393,7 @@ aqG
 rkV
 ayb
 azD
-ayb
+aAd
 axJ
 auH
 bts
@@ -84594,7 +84650,7 @@ giz
 aqe
 ayb
 aUE
-ayb
+aAd
 bsA
 auI
 bts
@@ -84847,11 +84903,11 @@ avj
 avj
 fcE
 aqa
-arq
+ayb
 ayb
 ayb
 azB
-ayb
+aAd
 bQW
 auI
 bts
@@ -85104,11 +85160,11 @@ avj
 avj
 aqG
 eJG
-arq
+ayb
 abe
 aza
 azC
-ayb
+aAd
 bfy
 auI
 bts
@@ -85361,11 +85417,11 @@ avj
 avj
 aqF
 qcE
-arq
-ayw
+ayb
+ayv
 azF
 aAu
-ayb
+aAd
 bsA
 aAz
 azH
@@ -85618,7 +85674,7 @@ avj
 avj
 qvv
 jVo
-arq
+ayb
 szl
 azG
 aAv
@@ -85875,7 +85931,7 @@ avj
 avj
 rxC
 kBz
-arq
+ayb
 ayv
 qYk
 aAw
@@ -86132,11 +86188,11 @@ avj
 avj
 aqG
 aoZ
-arq
+ayb
 ayx
 azX
 aAU
-ayb
+aAd
 atU
 aAd
 aAd
@@ -86389,12 +86445,12 @@ avj
 avj
 jyY
 arq
-arq
+ayb
 axE
 axG
 azf
-ayb
-bxu
+azJ
+fTB
 wRl
 auB
 aCz
@@ -86651,8 +86707,8 @@ axE
 ayz
 avc
 atT
-azJ
-bxu
+hON
+kJY
 auB
 asS
 aAA
@@ -86909,7 +86965,7 @@ ayA
 azg
 ayc
 ayc
-bxu
+ayw
 auB
 avs
 aAA
@@ -87161,7 +87217,7 @@ jAc
 jAc
 mNM
 avk
-oDc
+ayc
 ayB
 azi
 azK
