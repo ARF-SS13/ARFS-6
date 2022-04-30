@@ -10292,7 +10292,7 @@
 /turf/simulated/floor/airless{
 	icon_state = "asteroidplating2"
 	},
-/area/outpost/mining_main/refinery)
+/area/mine/explored)
 "os" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -10413,7 +10413,7 @@
 /obj/structure/cable/green,
 /obj/machinery/mech_recharger,
 /turf/simulated/floor/tiled,
-/area/mine/explored)
+/area/outpost/mining_main/storage)
 "oE" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/mineral,
@@ -10505,7 +10505,6 @@
 	master_tag = "mcontrol";
 	pixel_x = 26;
 	pixel_y = 26;
-	req_access = null;
 	req_one_access = list(13,48)
 	},
 /obj/effect/floor_decal/corner/orange{
@@ -11877,7 +11876,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/outpost/mining_main/south_hall)
 "rw" = (
-/obj/structure/closet/crate,
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
@@ -11887,19 +11885,21 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
+	},
 /turf/simulated/floor/tiled/dark,
 /area/outpost/mining_main/refinery)
 "rx" = (
 /obj/machinery/mineral/input,
-/obj/effect/floor_decal/industrial/loading{
-	dir = 4
+/obj/machinery/light{
+	dir = 1
 	},
-/obj/structure/sign/securearea{
-	desc = "A warning sign which reads 'MOVING PARTS'.";
-	name = "\improper MOVING PARTS";
-	pixel_y = 32
+/obj/machinery/alarm{
+	pixel_y = 22
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/dark,
 /area/outpost/mining_main/refinery)
 "ry" = (
 /obj/machinery/mineral/unloading_machine,
@@ -11918,12 +11918,14 @@
 	dir = 4;
 	id = "mining_internal"
 	},
+/obj/machinery/mineral/input,
 /turf/simulated/floor/tiled/dark,
 /area/outpost/mining_main/refinery)
 "rB" = (
 /obj/machinery/conveyor{
+	id = "mining_internal";
 	dir = 9;
-	id = "mining_internal"
+	movedir = 2
 	},
 /obj/machinery/mineral/output,
 /turf/simulated/floor/tiled/dark,
@@ -11947,7 +11949,6 @@
 	dir = 4;
 	id = "mining_external"
 	},
-/obj/structure/plasticflaps/mining,
 /turf/simulated/floor/tiled/dark,
 /area/outpost/mining_main/refinery)
 "rF" = (
@@ -12006,63 +12007,50 @@
 /turf/simulated/floor/tiled/dark,
 /area/outpost/mining_main/south_hall)
 "rM" = (
-/obj/effect/floor_decal/corner/orange{
-	dir = 9
-	},
-/obj/effect/floor_decal/corner/orange{
-	dir = 5
+/obj/machinery/mineral/processing_unit_console{
+	pixel_x = -30;
+	pixel_y = -4;
+	density = 0
 	},
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/camera/network/mining{
+	c_tag = "Mining Outpost - Central 6";
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/outpost/mining_main/refinery)
 "rN" = (
-/obj/effect/floor_decal/corner/orange{
-	dir = 5
-	},
-/obj/effect/floor_decal/corner/orange{
-	dir = 6
+/turf/simulated/mineral,
+/area/outpost/mining_main/refinery)
+"rO" = (
+/obj/machinery/conveyor_switch/oneway{
+	id = "mining_internal";
+	name = "mining conveyor"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/outpost/mining_main/refinery)
-"rO" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
-	},
-/obj/structure/window/reinforced,
-/turf/simulated/floor/plating,
-/area/outpost/mining_main/refinery)
 "rP" = (
-/obj/machinery/door/firedoor/border_only,
 /obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 1;
 	health = 1e+006
 	},
-/obj/structure/window/reinforced,
-/turf/simulated/floor/plating,
-/area/outpost/mining_main/refinery)
-"rQ" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 4;
 	health = 1e+006
 	},
-/obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
-	},
 /turf/simulated/floor/plating,
+/area/outpost/mining_main/refinery)
+"rQ" = (
+/obj/machinery/conveyor{
+	id = "mining_internal"
+	},
+/obj/machinery/mineral/input,
+/turf/simulated/floor/tiled/dark,
 /area/outpost/mining_main/refinery)
 "rR" = (
 /obj/machinery/conveyor{
@@ -12164,9 +12152,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/outpost/mining_main/refinery)
 "sb" = (
-/obj/effect/floor_decal/corner/orange{
-	dir = 9
-	},
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 8;
@@ -12174,64 +12159,39 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/outpost/mining_main/refinery)
-"sc" = (
-/obj/effect/floor_decal/corner/orange{
-	dir = 4;
-	tag = "icon-corner_white (EAST)"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/outpost/mining_main/refinery)
-"sd" = (
-/obj/effect/floor_decal/corner/orange{
-	dir = 5
-	},
-/obj/machinery/atmospherics/unary/vent_pump/on,
-/turf/simulated/floor/tiled/dark,
-/area/outpost/mining_main/refinery)
 "se" = (
-/obj/effect/floor_decal/corner/orange{
-	dir = 5
-	},
-/obj/machinery/conveyor_switch/oneway{
-	id = "mining_internal";
-	name = "mining conveyor"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/outpost/mining_main/refinery)
-"sf" = (
-/obj/machinery/camera/network/mining{
-	c_tag = "Mining Outpost - Mining Production Room";
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/orange{
-	dir = 5
-	},
-/obj/effect/floor_decal/corner/orange{
-	dir = 6
-	},
-/turf/simulated/floor/tiled/dark,
-/area/outpost/mining_main/refinery)
-"sg" = (
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 8
+/obj/machinery/door/airlock/glass_mining{
+	name = "Crate Storage";
+	req_access = list(48)
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled,
+/area/outpost/mining_main/south_hall)
+"sf" = (
+/obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 4;
 	health = 1e+006
 	},
-/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 8;
+	health = 1e+006
+	},
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/refinery)
-"sh" = (
-/obj/machinery/mineral/input,
+"sg" = (
+/obj/machinery/mineral/processing_unit,
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/outpost/mining_main/refinery)
 "si" = (
-/obj/structure/ore_box,
-/turf/simulated/floor/tiled/asteroid_steel/airless,
-/area/outpost/mining_main/refinery)
+/obj/effect/floor_decal/industrial/outline,
+/turf/simulated/floor/tiled,
+/area/outpost/mining_main/south_hall)
 "sj" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -12293,52 +12253,30 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/outpost/mining_main/refinery)
-"sp" = (
-/obj/effect/floor_decal/corner/orange{
-	dir = 9
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/dark,
-/area/outpost/mining_main/refinery)
 "sq" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/outpost/mining_main/refinery)
 "sr" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 10
-	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/dark,
 /area/outpost/mining_main/refinery)
 "ss" = (
 /turf/simulated/floor/tiled/dark,
 /area/outpost/mining_main/refinery)
 "st" = (
-/obj/effect/floor_decal/corner/orange{
-	dir = 6
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8;
+	health = 1e+006
 	},
-/turf/simulated/floor/tiled/dark,
-/area/outpost/mining_main/refinery)
-"su" = (
-/obj/machinery/mineral/processing_unit_console,
-/turf/simulated/wall,
-/area/outpost/mining_main/refinery)
-"sv" = (
-/obj/machinery/mineral/processing_unit,
-/turf/simulated/floor/tiled/dark,
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 1e+006
+	},
+/turf/simulated/floor/plating,
 /area/outpost/mining_main/refinery)
 "sw" = (
 /turf/simulated/wall,
@@ -12414,61 +12352,40 @@
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/south_hall)
 "sF" = (
-/obj/effect/floor_decal/corner/orange{
-	dir = 9
-	},
-/obj/machinery/alarm{
-	dir = 4;
-	icon_state = "alarm0";
-	pixel_x = -22
+/obj/machinery/mineral/stacking_unit_console{
+	pixel_x = -31;
+	density = 0
 	},
 /turf/simulated/floor/tiled/dark,
 /area/outpost/mining_main/refinery)
 "sG" = (
-/obj/effect/floor_decal/corner/orange,
-/turf/simulated/floor/tiled/dark,
-/area/outpost/mining_main/refinery)
-"sH" = (
-/obj/effect/floor_decal/corner/orange{
-	dir = 10
-	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
+/obj/effect/floor_decal/industrial/outline,
+/obj/structure/closet/crate,
+/obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/dark,
-/area/outpost/mining_main/refinery)
+/turf/simulated/floor/tiled,
+/area/outpost/mining_main/south_hall)
 "sI" = (
-/obj/effect/floor_decal/corner/orange{
-	dir = 10
-	},
-/turf/simulated/floor/tiled/dark,
-/area/outpost/mining_main/refinery)
-"sJ" = (
-/obj/machinery/light{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/orange{
-	dir = 10
-	},
-/obj/effect/floor_decal/corner/orange{
-	dir = 6
-	},
-/turf/simulated/floor/tiled/dark,
-/area/outpost/mining_main/refinery)
-"sK" = (
-/obj/machinery/door/firedoor/border_only,
 /obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
-	},
 /obj/structure/window/reinforced{
 	dir = 1;
 	health = 1e+006
 	},
+/obj/structure/window/reinforced{
+	dir = 8;
+	health = 1e+006
+	},
+/obj/structure/window/reinforced,
+/turf/simulated/floor/plating,
+/area/outpost/mining_main/refinery)
+"sJ" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 1e+006
+	},
+/obj/structure/window/reinforced,
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/refinery)
 "sL" = (
@@ -12592,46 +12509,25 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/outpost/mining_main/south_hall)
-"sY" = (
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -24
-	},
-/obj/effect/floor_decal/corner/orange{
-	dir = 10
-	},
-/obj/effect/floor_decal/corner/orange{
-	dir = 9
-	},
-/turf/simulated/floor/tiled/dark,
-/area/outpost/mining_main/refinery)
 "sZ" = (
-/obj/effect/floor_decal/corner/orange{
-	dir = 10
+/obj/effect/floor_decal/industrial/loading{
+	dir = 8;
+	tag = "icon-loadingarea (WEST)"
 	},
-/obj/effect/floor_decal/corner/orange{
-	dir = 6
-	},
-/turf/simulated/floor/tiled/dark,
+/obj/machinery/light,
+/turf/simulated/floor/tiled,
 /area/outpost/mining_main/refinery)
 "ta" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
+/obj/machinery/mineral/output,
+/obj/machinery/conveyor{
+	dir = 8;
+	id = "mining_internal"
 	},
-/obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
-	},
-/obj/structure/window/reinforced,
-/turf/simulated/floor/plating,
-/area/outpost/mining_main/refinery)
-"tb" = (
-/obj/machinery/mineral/stacking_unit_console,
 /turf/simulated/wall,
 /area/outpost/mining_main/refinery)
+"tb" = (
+/turf/simulated/floor/tiled,
+/area/outpost/mining_main/south_hall)
 "tc" = (
 /obj/effect/floor_decal/corner_kafel/green{
 	dir = 10;
@@ -12761,29 +12657,17 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8"
 	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark,
 /area/outpost/mining_main/south_hall)
 "tn" = (
 /obj/structure/closet/crate,
 /turf/simulated/floor/tiled/dark,
-/area/outpost/mining_main/refinery)
-"to" = (
-/obj/effect/floor_decal/industrial/loading{
-	dir = 8;
-	tag = "icon-loadingarea (WEST)"
-	},
-/obj/structure/sign/securearea{
-	desc = "A warning sign which reads 'MOVING PARTS'.";
-	name = "\improper MOVING PARTS";
-	pixel_y = -32
-	},
-/turf/simulated/floor/tiled,
 /area/outpost/mining_main/refinery)
 "tp" = (
 /obj/structure/plasticflaps,
@@ -12794,19 +12678,8 @@
 /turf/simulated/floor/tiled/dark,
 /area/outpost/mining_main/refinery)
 "tq" = (
-/obj/machinery/conveyor{
-	dir = 8;
-	id = "mining_internal"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/outpost/mining_main/refinery)
-"tr" = (
-/obj/machinery/conveyor{
-	dir = 8;
-	id = "mining_internal"
-	},
-/obj/machinery/mineral/output,
-/turf/simulated/floor/tiled/dark,
+/obj/machinery/smartfridge/sheets/persistent,
+/turf/simulated/wall,
 /area/outpost/mining_main/refinery)
 "ts" = (
 /obj/machinery/mineral/stacking_machine,
@@ -12946,10 +12819,10 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
 	},
-/obj/machinery/light,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark,
 /area/outpost/mining_main/south_hall)
 "tH" = (
@@ -15239,6 +15112,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
+"xk" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/outpost/mining_main/south_hall)
 "yM" = (
 /obj/effect/floor_decal/corner_kafel/purple{
 	dir = 5;
@@ -15284,6 +15163,10 @@
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
+"CB" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled,
+/area/outpost/mining_main/south_hall)
 "DX" = (
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
 	frequency = 1380;
@@ -15293,6 +15176,15 @@
 	},
 /turf/simulated/mineral,
 /area/mine/unexplored)
+"Ef" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/outpost/mining_main/refinery)
 "Er" = (
 /obj/effect/floor_decal/corner_kafel/green{
 	dir = 10;
@@ -15323,6 +15215,12 @@
 /obj/item/weapon/hand_labeler,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
+"EA" = (
+/obj/effect/floor_decal/industrial/outline,
+/obj/structure/closet/crate,
+/obj/machinery/light,
+/turf/simulated/floor/tiled,
+/area/outpost/mining_main/south_hall)
 "Fy" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 8;
@@ -15334,6 +15232,14 @@
 	},
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/mine/explored)
+"Ga" = (
+/obj/structure/plasticflaps/mining,
+/obj/machinery/conveyor{
+	dir = 4;
+	id = "mining_external"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/outpost/mining_main/refinery)
 "Gz" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
@@ -15341,12 +15247,25 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
+"GL" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled,
+/area/outpost/mining_main/south_hall)
 "JB" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
+"JW" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/outpost/mining_main/south_hall)
 "Ks" = (
 /obj/structure/disposalpipe/trunk{
 	dir = 1
@@ -15354,6 +15273,28 @@
 /obj/structure/disposaloutlet,
 /turf/space,
 /area/mine/explored)
+"LZ" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 1e+006
+	},
+/obj/structure/window/reinforced{
+	dir = 8;
+	health = 1e+006
+	},
+/obj/structure/window/reinforced,
+/turf/simulated/floor/plating,
+/area/outpost/mining_main/refinery)
+"Ng" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/dark,
+/area/outpost/mining_main/refinery)
 "Nu" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -15443,6 +15384,26 @@
 /obj/structure/flora/pottedplant/minitree,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
+"Op" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled,
+/area/outpost/mining_main/south_hall)
+"OV" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 1e+006
+	},
+/obj/structure/window/reinforced{
+	dir = 8;
+	health = 1e+006
+	},
+/obj/structure/window/reinforced{
+	dir = 1;
+	health = 1e+006
+	},
+/turf/simulated/floor/plating,
+/area/outpost/mining_main/refinery)
 "Pa" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 4
@@ -15517,6 +15478,11 @@
 	},
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/mine/unexplored)
+"SF" = (
+/obj/effect/floor_decal/industrial/outline,
+/obj/structure/closet/crate,
+/turf/simulated/floor/tiled,
+/area/outpost/mining_main/south_hall)
 "SH" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_external/public{
@@ -15528,6 +15494,10 @@
 /obj/item/tape/engineering,
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
+"Tm" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/dark,
+/area/outpost/mining_main/refinery)
 "Tn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4;
@@ -15576,6 +15546,12 @@
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/hallway)
+"VI" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/turf/simulated/floor/tiled,
+/area/outpost/mining_main/south_hall)
 "Wt" = (
 /obj/effect/floor_decal/corner_kafel/green{
 	dir = 10;
@@ -15650,6 +15626,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
+"ZT" = (
+/obj/item/device/radio/intercom{
+	name = "Common Channel";
+	pixel_y = -21
+	},
+/turf/simulated/floor/tiled/dark,
+/area/outpost/mining_main/refinery)
 
 (1,1,1) = {"
 aa
@@ -63655,13 +63638,13 @@ rW
 sE
 oN
 py
-pP
+vI
 ny
-kZ
-kZ
-kZ
-kZ
-kZ
+si
+si
+SF
+EA
+ny
 iI
 lr
 ab
@@ -63912,13 +63895,13 @@ sl
 qh
 sX
 py
-vI
+tE
 ny
-kZ
-kZ
-kZ
-kZ
-kZ
+VI
+CB
+CB
+JW
+ny
 kZ
 iI
 lr
@@ -64170,12 +64153,12 @@ qn
 qn
 tm
 tG
+se
+GL
+Op
+xk
+tb
 ny
-kZ
-kZ
-kZ
-kZ
-kZ
 kZ
 kZ
 iI
@@ -64428,11 +64411,11 @@ qo
 pT
 pF
 ny
-kZ
-kZ
-kZ
-kZ
-kZ
+sG
+SF
+si
+SF
+ny
 kZ
 kZ
 kZ
@@ -64681,15 +64664,15 @@ rj
 sa
 so
 rj
-rj
+tq
 rj
 rj
 ny
-kZ
-kZ
-kZ
-kZ
-kZ
+ny
+ny
+ny
+ny
+ny
 kZ
 kZ
 kZ
@@ -64936,11 +64919,11 @@ rj
 rw
 rM
 sb
-sp
+Ef
 sF
-sY
-tn
+ZT
 rj
+rN
 kZ
 kZ
 kZ
@@ -65191,13 +65174,13 @@ qM
 qZ
 rj
 rx
-rN
-sc
+sr
+Tm
+Ng
 sq
-sG
 sZ
-to
 rj
+kZ
 kZ
 kZ
 kZ
@@ -65449,12 +65432,12 @@ ra
 rj
 ry
 rO
-sd
-sr
-sH
-rO
+ss
+ss
+tn
 tp
 rj
+kZ
 kZ
 kZ
 kZ
@@ -65705,13 +65688,13 @@ qN
 rb
 rj
 rz
-rP
-se
+sI
+ss
 ss
 sI
 ta
-tq
 rj
+kZ
 kZ
 kZ
 kZ
@@ -65966,9 +65949,9 @@ rP
 sf
 st
 sJ
-tb
-tr
+ts
 rj
+kZ
 kZ
 la
 la
@@ -66218,14 +66201,14 @@ nj
 nj
 nj
 rj
-rA
+rB
 rQ
 sg
-su
-sK
-sg
-ts
+sL
+rR
+tt
 rj
+kZ
 kZ
 la
 la
@@ -66475,14 +66458,14 @@ ad
 ad
 ad
 rj
-rB
-rR
-sh
-sv
-sL
-rR
-tt
+rC
 rj
+rj
+OV
+LZ
+rj
+rj
+kZ
 kZ
 la
 la
@@ -66732,14 +66715,14 @@ ad
 ad
 nf
 rj
-rC
+rD
 rj
-rj
-rj
-nw
-rj
-rj
-rj
+nu
+nu
+nu
+tu
+tI
+tQ
 or
 nk
 nk
@@ -66989,15 +66972,15 @@ ad
 ad
 ad
 rj
-rD
+Ga
 rj
-si
-si
-si
-si
-tu
-tI
-tQ
+nu
+nu
+nu
+ad
+ad
+ad
+ad
 nk
 nk
 vL
@@ -67503,7 +67486,7 @@ af
 ad
 ad
 rk
-rF
+rE
 rk
 rk
 ad
