@@ -9,8 +9,8 @@
 [b]Notice[/b]: Request authorization from planetary authorities before attempting to construct settlements"}
 	icon_state = "globe"
 	in_space = 0
-	initial_generic_waypoints = list("beach_e", "beach_c", "beach_nw")
-	extra_z_levels = list(Z_LEVEL_BEACH_CAVE)
+	initial_generic_waypoints = list("pokemon_e", "pokemon_c", "pokemon_nw")
+	extra_z_levels = list(Z_LEVEL_pokemon_CAVE)
 	known = TRUE
 	icon_state = "desert"
 
@@ -67,8 +67,8 @@
 	seed_submaps(list(z), 50, /area/tether_away/cave/unexplored/deep, /datum/map_template/surface/mountains/deep)
 
 	// Now for the tunnels.
-	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, Z_LEVEL_BEACH_CAVE, world.maxx, world.maxy)
-	new /datum/random_map/noise/ore/pokemon_planet(null, 1, 1, Z_LEVEL_BEACH_CAVE, 64, 64)*/
+	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, Z_LEVEL_pokemon_CAVE, world.maxx, world.maxy)
+	new /datum/random_map/noise/ore/pokemon_planet(null, 1, 1, Z_LEVEL_pokemon_CAVE, 64, 64)*/
 
 	initialized = TRUE
 	return INITIALIZE_HINT_QDEL
@@ -76,9 +76,9 @@
 // Two mob spawners that are placed on the map that spawn some mobs!
 // They keep track of their mob, and when it's dead, spawn another (only if nobody is looking)
 // Note that if your map has step teleports, mobs may wander through them accidentally and not know how to get back
-/obj/arfs_away_spawner/beach_outside
+/obj/arfs_away_spawner/pokemon_outside
 	name = "Beach Outside Spawner" //Just a name
-	faction = "beach_out" //Sets all the mobs to this faction so they don't infight
+	faction = "pokemon_out" //Sets all the mobs to this faction so they don't infight
 	atmos_comp = TRUE //Sets up their atmos tolerances to work in this setting, even if they don't normally (20% up/down tolerance for each gas, and heat)
 	prob_spawn = 100 //Chance of this spawner spawning a mob (once this is missed, the spawner is 'depleted' and won't spawn anymore)
 	prob_fall = 25 //Chance goes down by this much each time it spawns one (not defining and prob_spawn 100 means they spawn as soon as one dies)
@@ -90,20 +90,20 @@
 		/mob/living/simple_mob/vore/alienanimals/teppi/baby = 1
 	)
 
-/obj/arfs_away_spawner/beach_outside_friendly
-	name = "Fennec Spawner"
-	faction = "fennec"
+/obj/arfs_away_spawner/pokemon_outside_friendly
+	name = "Pokemon Spawner - All"
+	faction = "neutral"
 	atmos_comp = TRUE
 	prob_spawn = 100
 	prob_fall = 25
-	//guard = 40
+	guard = 30
 	mobs_to_pick_from = list(
 		/mob/living/simple_mob/vore/fennec
 	)
 
-/obj/arfs_away_spawner/beach_cave
+/obj/arfs_away_spawner/pokemon_cave
 	name = "Beach Cave Spawner"
-	faction = "beach_cave"
+	faction = "pokemon_cave"
 	atmos_comp = TRUE
 	prob_spawn = 100
 	prob_fall = 40
@@ -119,14 +119,14 @@
 
 // These are step-teleporters, for map edge transitions
 // This top one goes INTO the cave
-/obj/effect/step_trigger/teleporter/away_beach_tocave/New()
+/obj/effect/step_trigger/teleporter/away_pokemon_tocave/New()
 	..()
 	teleport_x = src.x //X is horizontal. This is a top of map transition, so you want the same horizontal alignment in the cave as you have on the beach
 	teleport_y = 2 //2 is because it's putting you on row 2 of the map to the north
 	teleport_z = z+1 //The cave is always our Z-level plus 1, because it's loaded after us
 
 //This one goes OUT OF the cave
-/obj/effect/step_trigger/teleporter/away_beach_tobeach/New()
+/obj/effect/step_trigger/teleporter/away_pokemon_tobeach/New()
 	..()
 	teleport_x = src.x //Same reason as bove
 	teleport_y = world.maxy - 1 //This means "1 space from the top of the map"

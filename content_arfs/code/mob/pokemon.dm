@@ -34,6 +34,7 @@
 	var/move_cooldown = FALSE
 	var/list/p_types = list()
 	var/list/additional_moves = list()
+	var/list/p_traits = list() //List of passive traits/flags.
 	var/resting_heal_max = 2
 	var/on_manifest = FALSE
 	var/list/active_moves = list() 	//Moves that are passive or toggles can be found here
@@ -295,6 +296,7 @@
 	default_pixel_y = 16
 	pixel_y = 16
 	old_y = 16
+	p_traits = list(P_TRAIT_BLACKLIST)
 
 /mob/living/simple_mob/animal/passive/pokemon/leg/rayquaza
 	name = "Rayquaza"
@@ -547,6 +549,7 @@
 /mob/living/simple_mob/animal/passive/pokemon/jolteon/bud
 	name = "Bud"
 	active_moves = list(M_SHOCK) //Shocks you by default
+	p_traits = list(P_TRAIT_BLACKLIST)
 
 /mob/living/simple_mob/animal/passive/pokemon/kirlia
 	name = "kirlia"
