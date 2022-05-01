@@ -123,7 +123,7 @@
 					GM.adjustBruteLoss(5)
 			else
 				to_chat(user, "<span class='notice'>You need a tighter grip.</span>")
-	
+
 
 /obj/structure/urinal
 	name = "urinal"
@@ -253,7 +253,11 @@
 			var/remove_amount = M.touching.maximum_volume * M.reagent_permeability() //take off your suit first
 			M.touching.remove_any(remove_amount)
 
+/*ARFS Edit
 		M.clean_blood()
+*/
+		M.clean_blood(washshoes=TRUE)
+//End ARFS Edit
 
 	if(isturf(loc))
 		var/turf/tile = loc
