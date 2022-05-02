@@ -29,7 +29,7 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 
 /datum/character_directory/tgui_data(mob/user, datum/tgui/ui, datum/tgui_state/state)
 	var/list/data = ..()
-	
+
 	data["personalVisibility"] = user?.client?.prefs?.show_in_directory
 	data["personalTag"] = user?.client?.prefs?.directory_tag || "Unset"
 	data["personalErpTag"] = user?.client?.prefs?.directory_erptag || "Unset"
@@ -44,7 +44,7 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 		// Allow opt-out.
 		if(!C?.prefs?.show_in_directory)
 			continue
-		
+
 		// These are the three vars we're trying to find
 		// The approach differs based on the mob the client is controlling
 		var/name = null
@@ -82,11 +82,22 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			ooc_notes = R.ooc_notes
 			flavor_text = R.flavor_text
 
+		//ARFS Add
+		if(ispokemon(C.mob))
+			var/mob/living/simple_mob/animal/passive/pokemon/P = C.mob
+			if(!P.on_manifest)
+				continue
+			name = P.name
+			species = "Pokemon ([P.tt_desc])"
+			ooc_notes = P.ooc_notes
+			flavor_text = P.flavor_text
+		//End ARFS Add
+
 		// It's okay if we fail to find OOC notes and flavor text
 		// But if we can't find the name, they must be using a non-compatible mob type currently.
 		if(!name)
 			continue
-		
+
 		directory_mobs.Add(list(list(
 			"name" = name,
 			"species" = species,
