@@ -256,7 +256,7 @@
 /*ARFS Edit
 		M.clean_blood()
 */
-		M.clean_blood(washshoes=TRUE)
+		M.clean_blood(1)
 //End ARFS Edit
 
 	if(isturf(loc))
