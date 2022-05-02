@@ -36,7 +36,7 @@
 /area/shuttle/drake/quarters2
 	name = "\improper Drake Quarters 2"
 	icon_state = "gray-s"
-/area/shuttle/drake/galley	
+/area/shuttle/drake/galley
 	name = "\improper Drake Galley"
 	icon_state = "dark-p"
 /area/shuttle/drake/storage
@@ -356,3 +356,11 @@
 
 //checkpoints
 /area/security/checkpoint/starboard
+	name = "\improper Security Checkpoint - Starboard Docking Arm"
+
+/area/security/checkpoint/port
+	name = "\improper Security Checkpoint - Port Docking Arm"
+
+//Medbay
+/area/medical/medbay/autoresleever
+	name = "\improper Auto-resleeving Lab"
