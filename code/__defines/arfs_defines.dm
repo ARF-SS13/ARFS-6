@@ -27,4 +27,7 @@
 #define	M_TF			"transformed" //A ditto or something has transformed
 #define M_INVIS			"invisible" //Mew can turn invisible, but not ethereal like M_GHOSTED
 
+#define P_TRAIT_BLACKLIST	"blacklist" //Don't spawn this pokemon or show it in lists.
+#define P_TRAIT_RIDEABLE	"rideable"  //This pokemon can be buckled to, ridden, and steered like a vehicle
+
 #define MAP_LEVEL_VORESPAWN	0x100 // Z-levels players are allowed to late join to via vorish means. Usually non-dangerous locations.
