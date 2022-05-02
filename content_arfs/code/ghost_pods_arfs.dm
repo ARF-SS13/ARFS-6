@@ -1,7 +1,6 @@
 //globals so the lists dont get generated more than once
 var/global/list/pokemon_choices_list = list()//Referenced list for use in input()
 var/global/list/pokemon_pods = list()//List of pods that ghosts can spawn at
-
 //Pod to spawn in as pokemon or other mobs.
 /obj/structure/ghost_pod/ghost_activated/pokemon
 	name = "\improper Pokemon teleporter"

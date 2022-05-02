@@ -7,6 +7,7 @@
 #include "aerostat/surface.dmm"
 #include "space/debrisfield.dmm"
 #include "space/fueldepot.dmm"
+#include "pokemon/pokemon_planet.dmm"
 #endif
 
 #include "beach/_beach.dm"
@@ -524,3 +525,38 @@
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_PERSIST|MAP_LEVEL_MAPPABLE
 	base_turf = /turf/space
 	z = Z_LEVEL_OFFMAP1
+
+#include "pokemon/_pokemon_planet.dm"
+/datum/map_template/common_lateload/away_pokemon_planet
+	name = "Pokemon Planet"
+	desc = "The pokemon planet away mission."
+	mappath = 'maps/Arfs/submaps/pokemon/pokemon_planet.dmm'
+	associated_map_datum = /datum/map_z_level/common_lateload/away_pokemon_planet
+
+/datum/map_z_level/common_lateload/away_pokemon_planet
+	name = "Away Mission - Desert Beach"
+	z = Z_LEVEL_BEACH
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+
+/datum/map_template/common_lateload/away_pokemon_planet
+	name = "Desert Planet - Z2 Cave"
+	desc = "The beach away mission's cave."
+	mappath = 'maps/Arfs/submaps/beach/cave.dmm'
+	associated_map_datum = /datum/map_z_level/common_lateload/away_pokemon_planet_cave
+
+/datum/map_template/common_lateload/away_pokemon_planet/on_map_loaded(z)
+	. = ..()
+	seed_submaps(list(Z_LEVEL_BEACH_CAVE), 120, /area/tether_away/cave/unexplored/normal, /datum/map_template/surface/mountains/normal)
+	//seed_submaps(list(Z_LEVEL_BEACH_CAVE), 70, /area/tether_away/cave/unexplored/normal, /datum/map_template/surface/mountains/deep)
+
+	// Now for the tunnels.
+	new /datum/random_map/automata/cave_system/no_cracks(null, 3, 3, Z_LEVEL_BEACH_CAVE, world.maxx - 4, world.maxy - 4)
+//	new /datum/random_map/noise/ore/beachmine(null, 1, 1, Z_LEVEL_BEACH_CAVE, 64, 64)
+
+/datum/map_z_level/common_lateload/away_pokemon_planet_cave
+	name = "Away Mission - Desert Cave"
+	z = Z_LEVEL_BEACH_CAVE
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+
+/obj/effect/step_trigger/zlevel_fall/beach
+	var/static/target_z
