@@ -312,6 +312,7 @@
 	icon_dead = "lugia_d"
 	p_types = list(P_TYPE_PSYCH, P_TYPE_FLY)
 	movement_cooldown = 1.5
+	mob_size = MOB_HUGE
 
 /mob/living/simple_mob/animal/passive/pokemon/leg/lugia/andy
 	health = 500
@@ -329,6 +330,7 @@
 	icon_dead = "rayquaza_d"
 	p_types = list(P_TYPE_FLY)
 	movement_cooldown = 1.5
+	mob_size = MOB_HUGE
 
 
 ///////////////////////////////
@@ -351,6 +353,8 @@
 	icon_dead = "aggron_d"
 	p_types = list(P_TYPE_STEEL)
 	movement_cooldown = 5
+	mob_size = MOB_LARGE
+	p_traits = list(P_TRAIT_RIDEABLE)
 
 /mob/living/simple_mob/animal/passive/pokemon/alolanvulpix
 	name = "alolan vulpix"
@@ -361,6 +365,7 @@
 	p_types = list(P_TYPE_ICE)
 	additional_moves = list(/mob/living/proc/hide)
 	mob_size = MOB_SMALL
+	p_traits = list(P_TRAIT_RIDEABLE)
 
 /mob/living/simple_mob/animal/passive/pokemon/ampharos
 	name = "ampharos"
@@ -368,6 +373,7 @@
 	icon_living = "ampharos"
 	icon_dead = "ampharos_d"
 	p_types = list(P_TYPE_ELEC)
+	mob_size = MOB_LARGE
 
 /mob/living/simple_mob/animal/passive/pokemon/braixen
 	name = "braixen"
@@ -392,6 +398,7 @@
 	icon_dead = "charmander_d"
 	p_types = list(P_TYPE_FIRE)
 	mob_size = MOB_SMALL
+	p_traits = list(P_TRAIT_RIDEABLE)
 
 /mob/living/simple_mob/animal/passive/pokemon/ditto
 	name = "ditto"
@@ -413,6 +420,7 @@
 	additional_moves = list(/mob/living/simple_mob/animal/passive/pokemon/proc/move_fly,
 							/mob/living/simple_mob/animal/passive/pokemon/proc/move_hover)
 	p_traits = list(P_TRAIT_RIDEABLE)
+	mob_size = MOB_LARGE
 
 /mob/living/simple_mob/animal/passive/pokemon/dragonite
 	name = "dragonite"
@@ -423,6 +431,7 @@
 	p_types = list(P_TYPE_DRAGON, P_TYPE_FLY)
 	aquatic_movement = 1
 	p_traits = list(P_TRAIT_RIDEABLE)
+	mob_size = MOB_LARGE
 
 /mob/living/simple_mob/animal/passive/pokemon/dratini
 	name = "dratini"
@@ -434,6 +443,7 @@
 	aquatic_movement = 1
 	p_types = list(P_TYPE_DRAGON)
 	additional_moves = list(/mob/living/proc/hide)
+	p_traits = list(P_TRAIT_RIDEABLE)
 
 /mob/living/simple_mob/animal/passive/pokemon/eevee
 	name = "eevee"
@@ -444,6 +454,7 @@
 	p_types = list(P_TYPE_NORM)
 	additional_moves = list(/mob/living/proc/hide)
 	mob_size = MOB_SMALL
+	p_traits = list(P_TRAIT_RIDEABLE)
 
 /mob/living/simple_mob/animal/passive/pokemon/espeon
 	name = "espeon"
@@ -463,6 +474,7 @@
 	p_types = list(P_TYPE_FIRE)
 	additional_moves = list(/mob/living/proc/hide)
 	mob_size = MOB_SMALL
+	p_traits = list(P_TRAIT_RIDEABLE)
 
 /mob/living/simple_mob/animal/passive/pokemon/flaaffy
 	name = "flaaffy"
@@ -652,6 +664,7 @@
 	additional_moves = list(/mob/living/proc/hide)
 	p_traits = list(P_TRAIT_RIDEABLE)
 	mob_size = MOB_SMALL
+	p_traits = list(P_TRAIT_RIDEABLE)
 
 /mob/living/simple_mob/animal/passive/pokemon/mightyena
 	name = "mightyena"
@@ -700,6 +713,7 @@
 	p_types = list(P_TYPE_DARK)
 	additional_moves = list(/mob/living/proc/hide)
 	mob_size = MOB_SMALL
+	p_traits = list(P_TRAIT_RIDEABLE)
 
 /mob/living/simple_mob/animal/passive/pokemon/sylveon
 	name = "sylveon"
@@ -730,6 +744,7 @@
 	p_types = list(P_TYPE_FIRE)
 	additional_moves = list(/mob/living/proc/hide)
 	mob_size = MOB_SMALL
+	p_traits = list(P_TRAIT_RIDEABLE)
 
 /mob/living/simple_mob/animal/passive/pokemon/tentacruel
 	name = "tentacruel"
@@ -764,6 +779,8 @@
 	icon_living = "ponyta"
 	icon_dead = "ponyta_d"
 	p_types = list(P_TYPE_FIRE)
+	p_traits = list(P_TRAIT_RIDEABLE)
+	mob_size = MOB_SMALL
 	p_traits = list(P_TRAIT_RIDEABLE)
 
 /mob/living/simple_mob/animal/passive/pokemon/zubat

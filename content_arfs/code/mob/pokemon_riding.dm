@@ -27,7 +27,7 @@
 		return FALSE
 	if(M in buckled_mobs)
 		return FALSE
-	if((M.size_multiplier * M.mob_size) > ((size_multiplier * mob_size) * 1.2))//Account for mob size
+	if((M.size_multiplier * M.mob_size) > ((size_multiplier * mob_size) * 1.4))//Account for mob size
 		to_chat(src, "<span class='warning'>This isn't a pony show! You need to be bigger for them to ride.</span>")
 		return FALSE
 	if(ishuman(M))
