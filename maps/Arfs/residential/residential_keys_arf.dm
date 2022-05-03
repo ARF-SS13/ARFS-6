@@ -299,7 +299,7 @@
 	display_name = "RM8, level three keys"
 	description = "residential"
 	ckeywhitelist = list("secondattemps")
-	character_name = list("Alexandria Marlow")
+	character_name = list("Alexandria Marlow", "Sheyss Snow")
 
 /datum/gear/fluff/res_key_rm9
 	path = /obj/item/weapon/card/id/residential/rm9
@@ -543,7 +543,7 @@
 	display_name = "Res level four, room four keys"
 	description = "residential"
 	ckeywhitelist = list("thingpony","brimcon","truedark")
-	character_name = list("Willow Snow", "Scryden Sako", "Sheyss Brauror")
+	character_name = list("Willow Snow", "Scryden Sako", "Sheyss Snow")
 
 //Mansion
 
