@@ -74,8 +74,8 @@
 		sleeping--
 		if(sleeping <= 0)
 			sleeping = 0
-		update_canmove()
-		update_icon()
+	update_canmove()
+	update_icon()
 	return TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/death(gibbed,deathmessage="seizes up and falls limp...")
@@ -170,6 +170,13 @@
 	pixel_y = old_y
 	cut_overlay(r_hand_sprite)	//Hand sprites don't line up with the mob, just hide them
 	cut_overlay(l_hand_sprite)
+	//update_icon is called when you pick something up or drop it anyways, so this goes here
+	if(istype(r_hand,/obj/item/weapon/card/id))
+		myid = r_hand
+	else if(istype(l_hand,/obj/item/weapon/card/id))
+		myid = l_hand
+	else
+		myid = null
 
 /mob/living/simple_mob/animal/passive/pokemon/resize(new_size, animate = TRUE, uncapped = FALSE, ignore_prefs = FALSE, aura_animation = TRUE)
 	. = ..()
