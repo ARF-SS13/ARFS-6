@@ -27,8 +27,8 @@
     name = "Antacid"
     id = "antacid"
     result = "antacid"
-    required_reagents = list("oxygen" = 1, "hydrogen" = 1, "aluminum" = 1)
-    result_amount = 3
+    required_reagents = list("oxygen" = 3, "water" = 3, "aluminum" = 2)
+    result_amount = 2
 
 /obj/item/weapon/reagent_containers/glass/bottle/antacid
     name = "antacid bottle"
