@@ -97,6 +97,13 @@
 	ckeywhitelist = list("andyman105", "dameonowen", "dwagin")
 	character_name = null
 
+/datum/gear/fluff/dameon_13
+	path = /obj/item/weapon/storage/pill_bottle/antacid
+	display_name = "Antacid Bottle"
+	description = "A bottle of antacid tablets."
+	ckeywhitelist = list("andyman105", "dameonowen", "dwagin")
+	character_name = null
+
 /datum/gear/fluff/thing_1
 	path = /obj/item/weapon/implanter/blindsight
 	display_name = "Blindsight Implant"
