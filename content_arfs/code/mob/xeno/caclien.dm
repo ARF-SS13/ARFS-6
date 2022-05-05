@@ -4,6 +4,8 @@
 	icon_state = "aliendrone"
 	tt_desc = "xenomorph XX121"
 	hud_used = /datum/hud_data/caclien
+	health = 100
+	maxHealth = 100
 	movement_cooldown = 2
 	var/base_icon_state = "alien" //Can make different colored aliens in the future. Or a single recolorable icon.
 	var/xeno_species = "drone"
@@ -16,24 +18,36 @@
 /mob/living/simple_mob/caclien/wild
 	faction = "xenomorph"
 /mob/living/simple_mob/caclien/wild/drone
+	species_datum = /datum/xeno_species/drone
 /mob/living/simple_mob/caclien/wild/hunter
+	species_datum = /datum/xeno_species/hunter
 /mob/living/simple_mob/caclien/wild/sentinel
+	species_datum = /datum/xeno_species/sentinel
 /mob/living/simple_mob/caclien/wild/runner
+	species_datum = /datum/xeno_species/runner
 /mob/living/simple_mob/caclien/wild/queen
+	species_datum = /datum/xeno_species/queen
 
 //Friendly or otherwise docile aliens
 /mob/living/simple_mob/caclien/tamed
 	faction = "neutral"
 /mob/living/simple_mob/caclien/tamed/drone
+	species_datum = /datum/xeno_species/drone
 /mob/living/simple_mob/caclien/tamed/hunter
+	species_datum = /datum/xeno_species/hunter
 /mob/living/simple_mob/caclien/tamed/sentinel
+	species_datum = /datum/xeno_species/sentinel
 /mob/living/simple_mob/caclien/tamed/runner
+	species_datum = /datum/xeno_species/runner
 /mob/living/simple_mob/caclien/tamed/queen
+	species_datum = /datum/xeno_species/queen
 
 /mob/living/simple_mob/caclien/Initialize()
 	UpdateSpeciesIcons() //Set living/dead/resting icons for its species
 	if(!species_datum)
 		species_datum = new /datum/xeno_species/drone(src)
+	else
+		species_datum = new(src)
 	mob_size = species_datum.size//Calculate mob size
 	. = ..()
 
@@ -85,21 +99,46 @@
 	var/species_name = "xenomorph"
 	var/species_sub_name = "drone"
 	var/size = MOB_MEDIUM
+	var/maxHealth = 100
+	var/move_delay = 2 //Higher is slower. 2 is normal speed
 	var/growth_max = 100 //Number of Life() procs before they can evolve
 	var/evolves_into = list() //List of things this species can evolve into
 	var/plasma_max = 100 //Amount of plasma (mana) they have for abilities
 	var/plasma_regen = 10 //Amount of plasma regenerated per Life()
 	var/move_sounds = list('content_arfs/sound/alien/effects/step1.ogg','content_arfs/sound/alien/effects/step2.ogg','content_arfs/sound/alien/effects/step3.ogg','content_arfs/sound/alien/effects/step4.ogg','content_arfs/sound/alien/effects/step5.ogg','content_arfs/sound/alien/effects/step6.ogg','content_arfs/sound/alien/effects/step7.ogg','content_arfs/sound/alien/effects/step8.ogg','content_arfs/sound/alien/effects/step9.ogg')
 	var/move_sounds_vol = 33
-	var/move_sounds_range = 0 // How much farther away or closer than 7 this sound can be heard
+	var/move_sounds_range = 3 // How much farther away or closer than 7 this sound can be heard
 	var/death_sounds = list('sound/voice/hiss6.ogg')
 	var/talk_sounds = list()
 	var/attack_sounds = list()
 	var/breath_sounds = list('content_arfs/sound/alien/voice/lowHiss1.ogg','content_arfs/sound/alien/voice/lowHiss2.ogg','content_arfs/sound/alien/voice/lowHiss3.ogg','content_arfs/sound/alien/voice/lowHiss4.ogg')
 	var/breath_sounds_vol = 33
 	var/breath_sounds_range = -3
+	var/sneak_effectiveness = 2 //Divides sound range and volume by this much while walking/sneaking. Less than 1 will invert this effect. Don't do that.
 
 /datum/xeno_species/drone
+	species_sub_name = "drone"
+	sneak_effectiveness = 1.5
+
+/datum/xeno_species/hunter
+	species_sub_name = "hunter"
+	maxHealth = 150
+	sneak_effectiveness = 2.5
+
+/datum/xeno_species/sentinel
+	species_sub_name = "sentinel"
+	maxHealth = 125
+	sneak_effectiveness = 1.75
+
+/datum/xeno_species/runner
+	species_sub_name = "runner"
+	maxHealth = 75
+	sneak_effectiveness = 2.25
+
+/datum/xeno_species/queen
+	species_sub_name = "queen"
+	maxHealth = 200
+	sneak_effectiveness = 1.25
 
 /datum/hud_data/caclien
 	icon = 'icons/mob/screen1_alien.dmi'
