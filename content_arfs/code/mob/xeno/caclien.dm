@@ -4,6 +4,7 @@
 	icon_state = "aliendrone"
 	tt_desc = "xenomorph XX121"
 	hud_used = /datum/hud_data/caclien
+	movement_cooldown = 2
 	var/base_icon_state = "alien" //Can make different colored aliens in the future. Or a single recolorable icon.
 	var/xeno_species = "drone"
 	var/datum/xeno_species/species_datum = null
@@ -43,14 +44,15 @@
 	if(species_datum)
 		var/datum/xeno_species/SD = species_datum
 		if(stat != DEAD)
-			var/breathsound = rand(SD.breath_sounds)
-			if(breathsound)
-				playsound(src, breathsound, SD.breath_sounds_vol, vary = 0, SD.breath_sounds_range, falloff = 1, is_global = FALSE)
-		//Handle regenerating plasma and health while on weeds and not
-//		var/turf/T = get_turf(src)
-//		if(T)
-		if(plasma < SD.plasma_max)
-			plasma = clamp(plasma+SD.plasma_regen,0,SD.plasma_max)
+			if(prob(33))
+				var/breathsound = pick(SD.breath_sounds)
+				if(breathsound)
+					playsound(src, breathsound, SD.breath_sounds_vol, 0, SD.breath_sounds_range, 1)
+			//Handle regenerating plasma and health while on weeds and not
+//			var/turf/T = get_turf(src)
+//			if(T)
+			if(plasma < SD.plasma_max)
+				plasma = clamp(plasma+SD.plasma_regen,0,SD.plasma_max)
 	. = ..()
 
 /mob/living/simple_mob/caclien/Moved(atom/old_loc, direction, forced = FALSE)
@@ -58,9 +60,9 @@
 	step_tracker++
 	if(step_tracker%2 && !stat && species_datum)
 		var/datum/xeno_species/SD = species_datum
-		var/stepsound = rand(SD.move_sounds)
+		var/stepsound = pick(SD.move_sounds)
 		if(stepsound)
-			playsound(src, stepsound, SD.move_sounds_vol, vary = 0, SD.move_sounds_range, falloff = 1, is_global = FALSE)
+			playsound(src, stepsound, SD.move_sounds_vol, 0, SD.move_sounds_range, 1)
 	else
 		step_tracker = 0
 
@@ -88,13 +90,13 @@
 	var/plasma_max = 100 //Amount of plasma (mana) they have for abilities
 	var/plasma_regen = 10 //Amount of plasma regenerated per Life()
 	var/move_sounds = list('content_arfs/sound/alien/effects/step1.ogg','content_arfs/sound/alien/effects/step2.ogg','content_arfs/sound/alien/effects/step3.ogg','content_arfs/sound/alien/effects/step4.ogg','content_arfs/sound/alien/effects/step5.ogg','content_arfs/sound/alien/effects/step6.ogg','content_arfs/sound/alien/effects/step7.ogg','content_arfs/sound/alien/effects/step8.ogg','content_arfs/sound/alien/effects/step9.ogg')
-	var/move_sounds_vol = 50
+	var/move_sounds_vol = 33
 	var/move_sounds_range = 0 // How much farther away or closer than 7 this sound can be heard
 	var/death_sounds = list('sound/voice/hiss6.ogg')
 	var/talk_sounds = list()
 	var/attack_sounds = list()
 	var/breath_sounds = list('content_arfs/sound/alien/voice/lowHiss1.ogg','content_arfs/sound/alien/voice/lowHiss2.ogg','content_arfs/sound/alien/voice/lowHiss3.ogg','content_arfs/sound/alien/voice/lowHiss4.ogg')
-	var/breath_sounds_vol = 50
+	var/breath_sounds_vol = 33
 	var/breath_sounds_range = -3
 
 /datum/xeno_species/drone
