@@ -1,7 +1,7 @@
 /obj/machinery/button/retally
     name = "Engine Purge Button"
     desc = "Purges the engines of exhaust gasses to decrease their power consumption"
-    var/area = null
+    var/area/area = null
 
 /obj/machinery/button/retally/Initialize()
     . = ..()
