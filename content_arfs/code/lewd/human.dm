@@ -1,8 +1,8 @@
-/datum/preferences
+/mob/living/carbon/human
 	var/disable_erp_preferences = 0 // the almighty toggle.
 
 	// The weiner part.
-	var/penis		// penis ref 		// var/datum/sprite_accessory/genital/penis/none/default = /datum/sprite_accessory/genital/penis/none
+	var/datum/sprite_accessory/genital/penis/penis
 	var/r_penis = 179					// Genital color
 	var/g_penis = 148					// Genital color
 	var/b_penis = 116					// Genital color
@@ -26,8 +26,8 @@
 	var/g_penis_sheath = 0 // int 0 - 255
 	var/b_penis_sheath = 0 // int 0 - 255
 
-	// it it spelt like testicles, or testicals 🤔
-	var/testicles
+	// is it spelt like testicles, or testicals 🤔
+	var/datum/sprite_accessory/genital/testicles/testicles
 	var/r_testicles = 179 // int 0 - 255
 	var/g_testicles = 148 // int 0 - 255
 	var/b_testicles = 116 // int 0 - 255
@@ -44,7 +44,7 @@
 	var/balls_size = 2 // int, idk why it aint a macro, what the fuck does 2 mean, 2 miles? 2 kilometers? yeah, huge difference bud.
 
 	// gimme da poosy b0ss
-	var/vagina
+	var/datum/sprite_accessory/genital/vagina/vagina
 	var/r_vagina = 179 // int 0 - 255
 	var/g_vagina = 148 // int 0 - 255
 	var/b_vagina = 116 // int 0 - 255
@@ -58,10 +58,10 @@
 	var/g_vagina_emissive = 0 // int 0 - 255
 	var/b_vagina_emissive = 0 // int 0 - 255
 
-	var/womb // ..if you thought vagina was enough, wait till you see there's a womb included too!
+	var/sprite_accessory/genital/womb/womb // ..if you thought vagina was enough, wait till you see there's a womb included too!
 
 	// succulent, moist, wait- moist? wtf? no???
-	var/breasts
+	var/sprite_accessory/genital/breasts/breasts
 	var/r_breasts = 179 // int 0 - 255
 	var/g_breasts = 148 // int 0 - 255
 	var/b_breasts = 116 // int 0 - 255
@@ -83,6 +83,3 @@
 
 	// The forbidden gay 🍑, if you eat it you become gay. Or straight, whatever rocks your boat.
 	var/anus
-
-
-	// :fuckingdead:

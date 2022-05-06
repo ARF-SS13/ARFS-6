@@ -307,6 +307,8 @@
 	msg += vorestrings
 	//VOREStation Add End
 
+	msg += GetGenitalExamine(T) // ARFS ADD: Genital examination message.
+
 	if(mSmallsize in mutations)
 		msg += "[T.He] [T.is] very short!"
 

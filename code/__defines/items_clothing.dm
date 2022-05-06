@@ -129,6 +129,12 @@
 #define HAND_LEFT   0x800
 #define HAND_RIGHT  0x1000
 #define HANDS       0x1800 // HAND_LEFT | HAND_RIGHT
+#define PENIS		0x2000 // ARFS ADD: ERP MECHANICS
+#define WOMB		0x2200 // ARFS ADD: ERP MECHANICS
+#define VAGINA		0x2400 // ARFS ADD: ERP MECHANICS
+#define TESTICLES	0x2600 // ARFS ADD: ERP MECHANICS
+#define BREASTS		0x2800 // ARFS ADD: ERP MECHANICS
+#define ANUS		0x2800 // ARFS ADD: ERP MECHANICS
 #define FULL_BODY   0xFFFF
 
 // Bitflags for the percentual amount of protection a piece of clothing which covers the body part offers.
