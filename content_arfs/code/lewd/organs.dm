@@ -91,7 +91,7 @@
 	parent_organ = BP_GROIN
 
 	organ_tag = O_PENIS
-	body_part = LOWER_TORSO
+	body_part = PENIS
 
 	cannot_break = 1
 
@@ -190,7 +190,7 @@
 	genital_location = LOWER_TORSO
 
 	organ_tag = O_TESTICLES
-	body_part = LOWER_TORSO
+	body_part = TESTICLES
 
 	cannot_break = 1
 
@@ -235,7 +235,7 @@
 	genital_location = LOWER_TORSO
 
 	organ_tag = O_VAGINA
-	body_part = LOWER_TORSO
+	body_part = VAGINA
 
 	cannot_break = 1
 
@@ -276,7 +276,7 @@
 	genital_location = LOWER_TORSO
 
 	organ_tag = O_WOMB
-	body_part = LOWER_TORSO
+	body_part = WOMB
 
 	cannot_break = 1
 
@@ -289,20 +289,14 @@
 	desc = "What do you want me to tell you?"
 	icon = 'modular_skyrat/master_files/icons/obj/genitals/anus.dmi'
 	icon_state = "anus"
-	mutantpart_key = "anus"
 
 	genital_location = LOWER_TORSO
 	parent_organ = BP_GROIN
 
 	organ_tag = O_ANUS
-	body_part = LOWER_TORSO
+	body_part = ANUS
 
 	cannot_break = 1
-	mutantpart_info = list(MUTANT_INDEX_NAME = "Normal", MUTANT_INDEX_COLOR_LIST = list("FEB"))
-	zone = BODY_ZONE_PRECISE_GROIN
-	slot = ORGAN_SLOT_ANUS
-	genital_location = GROIN
-	drop_when_organ_spilling = FALSE
 
 /obj/item/organ/external/genital/anus/get_description_string(datum/sprite_accessory/genital/gas)
 	var/returned_string = "You see an [lowertext(genital_name)]."
@@ -318,21 +312,15 @@
 	icon_state = "breasts"
 	icon = 'modular_skyrat/master_files/icons/obj/genitals/breasts.dmi'
 
-	genital_location = LOWER_TORSO
-	parent_organ = BP_GROIN
+	genital_location = UPPER_TORSO
+	parent_organ = BP_TORSO
 
-	organ_tag = O_PENIS
-	body_part = LOWER_TORSO
+	organ_tag = O_BREASTS
+	body_part = BREASTS
 
 	cannot_break = 1
 	genital_type = "pair"
 
-	mutantpart_key = "breasts"
-	mutantpart_info = list(MUTANT_INDEX_NAME = "Pair", MUTANT_INDEX_COLOR_LIST = list("#FFEEBB"))
-	zone = BODY_ZONE_CHEST
-	slot = ORGAN_SLOT_BREASTS
-	genital_location = CHEST
-	drop_when_organ_spilling = FALSE
 	var/lactates = FALSE
 
 /obj/item/organ/external/genital/breasts/get_description_string(datum/sprite_accessory/genital/gas)
@@ -382,12 +370,12 @@
 
 /obj/item/organ/external/genital/breasts/build_from_dna(datum/dna/DNA, associated_key)
 	..()
-	lactates = DNA.features["breasts_lactation"]
-	uses_skin_color = DNA.features["breasts_uses_skincolor"]
-	set_size(DNA.features["breasts_size"])
+	lactates = owner.breasts_lactation
+	uses_skin_color = owner.breasts_uses_skincolor
+	set_size(owner.breasts_size)
 
 /obj/item/organ/external/genital/breasts/build_from_accessory(datum/sprite_accessory/genital/accessory, datum/dna/DNA)
-	if(DNA.features["breasts_uses_skintones"])
+	if(owner.breasts_uses_skintones)
 		uses_skintones = accessory.has_skintone_shading
 
 /proc/breasts_size_to_cup(number)
@@ -444,14 +432,15 @@
 		var/picked_visibility = input(src, "Choose visibility setting", "Expose/Hide genitals") as null|anything in gen_vis_trans
 		if(picked_visibility && picked_organ && (picked_organ in internal_organs))
 			picked_organ.visibility_preference = gen_vis_trans[picked_visibility]
-			update_body()
+			update_icons_body()
 	return
 
 //Removing ERP IC verb depending on config
 /mob/living/carbon/human/Initialize()
 	. = ..()
-	if(CONFIG_GET(flag/disable_erp_preferences))
+	if(client?.prefs.disable_erp_preferences)
 		verbs -= /mob/living/carbon/human/verb/toggle_genitals
+		verbs -= /mob/living/carbon/human/verb/toggle_arousal
 
 /mob/living/carbon/human/verb/toggle_arousal()
 	set category = "IC"
@@ -480,14 +469,7 @@
 		if(picked_arousal && picked_organ && (picked_organ in internal_organs))
 			picked_organ.aroused = gen_arous_trans[picked_arousal]
 			picked_organ.update_sprite_suffix()
-			update_body()
+			update_icons_body()
 	return
-
-//Removing ERP IC verb depending on config
-/mob/living/carbon/human/Initialize()
-	. = ..()
-	if(CONFIG_GET(flag/disable_erp_preferences))
-		verbs -= /mob/living/carbon/human/verb/toggle_arousal
-
 
 
