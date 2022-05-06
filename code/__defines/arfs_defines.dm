@@ -31,3 +31,8 @@
 #define P_TRAIT_RIDEABLE	"rideable"  //This pokemon can be buckled to, ridden, and steered like a vehicle
 
 #define MAP_LEVEL_VORESPAWN	0x100 // Z-levels players are allowed to late join to via vorish means. Usually non-dangerous locations.
+
+#define X_SOUND_STEP 				list('content_arfs/sound/alien/effects/step1.ogg','content_arfs/sound/alien/effects/step2.ogg','content_arfs/sound/alien/effects/step3.ogg','content_arfs/sound/alien/effects/step4.ogg','content_arfs/sound/alien/effects/step5.ogg','content_arfs/sound/alien/effects/step6.ogg','content_arfs/sound/alien/effects/step7.ogg','content_arfs/sound/alien/effects/step8.ogg','content_arfs/sound/alien/effects/step9.ogg')
+#define X_SOUND_STEP_VENT			list('content_arfs/sound/alien/effects/stepVent1.ogg','content_arfs/sound/alien/effects/stepVent2.ogg','content_arfs/sound/alien/effects/stepVent3.ogg','content_arfs/sound/alien/effects/stepVent4.ogg')
+#define X_SOUND_BREATHE				list('content_arfs/sound/alien/voice/lowHiss1.ogg','content_arfs/sound/alien/voice/lowHiss2.ogg','content_arfs/sound/alien/voice/lowHiss3.ogg','content_arfs/sound/alien/voice/lowHiss4.ogg')
+#define X_SOUND_STEP_WATER			list('content_arfs/sound/alien/effects/stepWater1.ogg','content_arfs/sound/alien/effects/stepWater2.ogg','content_arfs/sound/alien/effects/stepWater3.ogg','content_arfs/sound/alien/effects/stepWater4.ogg','content_arfs/sound/alien/effects/stepWater5.ogg','content_arfs/sound/alien/effects/stepWater6.ogg',)
