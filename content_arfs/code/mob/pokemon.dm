@@ -75,7 +75,6 @@
 		if(sleeping <= 0)
 			sleeping = 0
 	update_canmove()
-	update_icon()
 	return TRUE
 
 /mob/living/simple_mob/animal/passive/pokemon/death(gibbed,deathmessage="seizes up and falls limp...")
