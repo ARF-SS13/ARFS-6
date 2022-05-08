@@ -62,3 +62,42 @@
 	if(M.mind)
 		M.mind.reset()
 	return
+
+//Picking up items with the right click menu verb
+/obj/item/verb_pickup()
+	set src in oview(1)
+	set category = "Object"
+	set name = "Pick up"
+
+	if(!(usr)) //BS12 EDIT
+		return
+	if(!usr.canmove || usr.stat || usr.restrained() || !Adjacent(usr))
+		return
+	if(istype(usr, /mob/living/carbon))//Is carbon
+		var/mob/living/carbon/C = usr
+		if(istype(usr, /mob/living/carbon/brain))//is not a brain
+			to_chat(usr, "<span class='warning'>You can't pick things up!</span>")
+			return
+		if(usr.stat || usr.restrained())//Is not asleep/dead and is not restrained
+			to_chat(usr, "<span class='warning'>You can't pick things up!</span>")
+			return
+		if(src.anchored) //Object isn't anchored
+			to_chat(usr, "<span class='warning'>You can't pick that up!</span>")
+			return
+		if(C.get_active_hand()) //Hand is not full
+			to_chat(usr, "<span class='warning'>Your hand is full.</span>")
+			return
+		if(!istype(src.loc, /turf)) //Object is on a turf
+			to_chat(usr, "<span class='warning'>You can't pick that up!</span>")
+			return
+	else if(istype(usr, /mob/living/simple_mob))
+		var/mob/living/simple_mob/SM = usr
+		if(!SM.has_hands)
+			to_chat(usr, "<span class='warning'>You can't pick things up!</span>")
+			return
+		if((SM.hand == 0 && SM.r_hand) || (SM.hand == 1 && SM.l_hand))
+			to_chat(usr, "<span class='warning'>Your hand is full.</span>")
+			return
+	//All checks are done, time to pick it up!
+	usr.UnarmedAttack(src)
+	return
