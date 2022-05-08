@@ -394,11 +394,10 @@
 
 	if(needs_foundation)
 		var/turf/T = get_turf(src)
-		var/has_foundation
+		var/has_foundation = TRUE
 		if(T)
-			//TODO: Work out the actual conditions this needs.
-			if(!(istype(T,/turf/space)))
-				has_foundation = 1
+			if((istype(T,/turf/space) || (istype(T,/turf/simulated/floor/water)))
+				has_foundation = FALSE
 		if(!has_foundation)
 			to_chat(src, "<span class='danger'>You need a solid foundation to do that on.</span>")
 			return 0
