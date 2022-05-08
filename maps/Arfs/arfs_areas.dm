@@ -344,13 +344,13 @@
 	icon = 'maps/arfs/arfs_areas.dmi'
 
 /area/exploration/hanger
-	name = "\improper Explorationn Hanger"
+	name = "\improper Exploration Hanger"
 	icon_state = "exploration"
 	icon = 'maps/arfs/arfs_areas.dmi'
 
 
 /area/exploration/waiting_room
-	name = "\improper Explorationn Waiting Room"
+	name = "\improper Exploration Waiting Room"
 	icon_state = "exploration"
 	icon = 'maps/arfs/arfs_areas.dmi'
 
