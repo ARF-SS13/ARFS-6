@@ -689,7 +689,7 @@ var/global/list/obj/machinery/telecomms/telecomms_list = list()
 	var/garbage_collector = 1 // if set to 0, will not be garbage collected
 	var/input_type = "Speech File"
 
-//ARFS EDIT - Change to add exonet relay
+//ARFS EDIT - Commented out to add exonet relay
 //Generic telecomm connectivity test proc
 // /proc/can_telecomm(var/atom/A, var/atom/B, var/ad_hoc = FALSE)
 // 	if(!A || !B)
@@ -713,3 +713,4 @@ var/global/list/obj/machinery/telecomms/telecomms_list = list()
 // 		return TRUE
 
 // 	return src_z in using_map.get_map_levels(dst_z, TRUE, om_range = DEFAULT_OVERMAP_RANGE)
+// END ARFS EDIT

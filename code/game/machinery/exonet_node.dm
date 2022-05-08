@@ -161,7 +161,7 @@
 	update_icon()
 	add_fingerprint(usr)
 
-// ARFS EDIT - Change to add exonet relays
+// ARFS EDIT - Commented out to add exonet relays
 // Proc: get_exonet_node()
 // Parameters: None
 // Description: Helper proc to get a reference to an Exonet node.
@@ -169,6 +169,7 @@
 // 	for(var/obj/machinery/exonet_node/E in machines)
 // 		if(E.on)
 // 			return E
+// END ARFS EDIT
 
 // Proc: write_log()
 // Parameters: 4 (origin_address - Where the message is from, target_address - Where the message is going, data_type - Instructions on how to interpet content,
