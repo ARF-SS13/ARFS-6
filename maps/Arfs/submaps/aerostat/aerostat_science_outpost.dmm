@@ -275,7 +275,9 @@
 /area/offmap/aerostat/inside/toxins)
 "aJ" = (
 /obj/effect/decal/cleanable/cobweb,
-/obj/machinery/telecomms/relay/preset/station,
+/obj/machinery/telecomms/relay/preset/station{
+	toggled = 0
+	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/bluegrid,
 /area/offmap/aerostat/inside/powercontrol)
@@ -3612,6 +3614,9 @@
 	},
 /obj/machinery/camera/network/research_outpost{
 	dir = 1
+	},
+/obj/machinery/ntnet_relay{
+	enabled = 0
 	},
 /turf/simulated/floor/bluegrid,
 /area/offmap/aerostat/inside/powercontrol)
@@ -8929,6 +8934,9 @@
 "Hz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 1
+	},
+/obj/machinery/exonet_node/relay{
+	toggle = 0
 	},
 /turf/simulated/floor/bluegrid,
 /area/offmap/aerostat/inside/powercontrol)
