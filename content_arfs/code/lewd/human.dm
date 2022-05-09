@@ -58,10 +58,10 @@
 	var/g_vagina_emissive = 0 // int 0 - 255
 	var/b_vagina_emissive = 0 // int 0 - 255
 
-	var/sprite_accessory/genital/womb/womb // ..if you thought vagina was enough, wait till you see there's a womb included too!
+	var/datum/sprite_accessory/genital/womb/womb // ..if you thought vagina was enough, wait till you see there's a womb included too!
 
 	// succulent, moist, wait- moist? wtf? no???
-	var/sprite_accessory/genital/breasts/breasts
+	var/datum/sprite_accessory/genital/breasts/breasts
 	var/r_breasts = 179 // int 0 - 255
 	var/g_breasts = 148 // int 0 - 255
 	var/b_breasts = 116 // int 0 - 255
