@@ -16,8 +16,8 @@
 	var/move_sounds_vol = 25
 	var/move_sounds_range = 0 // How much farther away or closer than 7 this sound can be heard
 	var/death_sounds = list('sound/voice/hiss6.ogg')
-	var/talk_sounds = list()
-	var/attack_sounds = list()
+	var/talk_sounds = X_SOUND_TALK
+	var/attack_sounds = X_SOUND_ATTACK_CLAW
 	var/breath_sounds = X_SOUND_BREATHE
 	var/breath_sounds_vol = 25
 	var/breath_sounds_range = -3
@@ -27,10 +27,12 @@
 	var/construct_color = "#39373D" //Color of weeds, walls, etc
 	var/light_color = "#000000" //Color of the light that nodes give off
 	var/body_color = "#000000" //Color of the xeno's bodies. Unused
+	var/resin_sounds = X_SOUND_RESINBUILD
 
 /datum/xeno_species/drone
 	sub_name = "drone"
 	sneak_effectiveness = 1.5
+	growth_max = 250
 
 /datum/xeno_species/hunter
 	sub_name = "hunter"
@@ -38,11 +40,13 @@
 	sneak_effectiveness = 2.5
 	move_sounds_range = -2
 	move_delay = 1.75
+	growth_max = 0
 
 /datum/xeno_species/sentinel
 	sub_name = "sentinel"
 	maxHealth = 125
 	sneak_effectiveness = 1.75
+	growth_max = 0
 
 /datum/xeno_species/runner
 	sub_name = "runner"
@@ -50,6 +54,7 @@
 	sneak_effectiveness = 2.25
 	move_sounds_range = -1
 	move_delay = 1.5
+	growth_max = 0
 
 /datum/xeno_species/queen
 	sub_name = "queen"
@@ -59,3 +64,15 @@
 	move_sounds_range = 7
 	default_size_mult = 2
 	move_delay = 3
+	growth_max = 0
+
+/datum/xeno_species/hugger
+	sub_name = "facehugger"
+	maxHealth = 15
+	death_sounds = list('sound/voice/hiss6.ogg')
+	growth_max = 0
+
+/datum/xeno_species/larva
+	sub_name = "larva"
+	maxHealth = 30
+	growth_max = 100
