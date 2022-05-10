@@ -4,12 +4,12 @@
 #define Z_LEVEL_CENTCOM_ARFS				4
 #define Z_LEVEL_EMPTY_ARFS					5
 #define Z_LEVEL_ABANDONED_ASTEROID_ARFS		6
-#define Z_LEVEL_MINING_ARFS					7
-#define Z_LEVEL_MINING_DANGER_ARFS			8
-#define Z_LEVEL_RESIDENTIAL_STATION_ARFS	9
-#define Z_LEVEL_RESIDENTIAL_ARFS			10
-#define Z_LEVEL_RESIDENTIAL_TWO_ARFS		11
-#define Z_LEVEL_RESIDENTIAL_MANSION_ARFS	12
+#define Z_LEVEL_MINING_DANGER_ARFS			7
+#define Z_LEVEL_MINING_ARFS					8
+#define Z_LEVEL_RESIDENTIAL_MANSION_ARFS	9
+#define Z_LEVEL_RESIDENTIAL_TWO_ARFS		10
+#define Z_LEVEL_RESIDENTIAL_ARFS			11
+#define Z_LEVEL_RESIDENTIAL_STATION_ARFS	12
 
 #define Z_LEVEL_BOTTOM_DECK				Z_LEVEL_ARFS_ONE
 #define Z_LEVEL_TOP_DECK				Z_LEVEL_ARFS_THREE
@@ -63,17 +63,24 @@
 	)
 
 	allowed_spawns = list("Arrivals Shuttle","Gateway","Cryogenic Storage","Cyborg Storage","NCS Serenity Residential")
-	map_levels = list(
-		Z_LEVEL_ARFS_ONE,
-		Z_LEVEL_ARFS_TWO,
-		Z_LEVEL_ARFS_THREE,
-		Z_LEVEL_CENTCOM_ARFS,
-		Z_LEVEL_MINING_ARFS,
-		Z_LEVEL_MINING_DANGER_ARFS,
-		Z_LEVEL_RESIDENTIAL_STATION_ARFS,
-		Z_LEVEL_RESIDENTIAL_ARFS,
-		Z_LEVEL_RESIDENTIAL_TWO_ARFS,
-		Z_LEVEL_RESIDENTIAL_MANSION_ARFS)
+	// station_levels = list(
+	// 	Z_LEVEL_ARFS_ONE,
+	// 	Z_LEVEL_ARFS_TWO,
+	// 	Z_LEVEL_ARFS_THREE
+	// )
+	// player_levels = list(
+	// 	Z_LEVEL_ARFS_ONE,
+	// 	Z_LEVEL_ARFS_TWO,
+	// 	Z_LEVEL_ARFS_THREE,
+	// 	Z_LEVEL_CENTCOM_ARFS,
+	// 	Z_LEVEL_MINING_ARFS,
+	// 	Z_LEVEL_MINING_DANGER_ARFS,
+	// 	Z_LEVEL_RESIDENTIAL_STATION_ARFS,
+	// 	Z_LEVEL_RESIDENTIAL_ARFS,
+	// 	Z_LEVEL_RESIDENTIAL_TWO_ARFS,
+	// 	Z_LEVEL_RESIDENTIAL_MANSION_ARFS
+	// )
+	// empty_levels = list(Z_LEVEL_EMPTY_ARFS)
 
 	use_overmap = 1
 	overmap_size = 35
@@ -125,26 +132,54 @@
 
 	return 1
 
-/datum/map/arfs/get_map_levels(var/srcz, var/long_range = TRUE, var/om_range = DEFAULT_OVERMAP_RANGE)
-	if (long_range && (srcz in map_levels))
-		return map_levels
-	else if (srcz >= Z_LEVEL_MINING_ARFS && srcz <= Z_LEVEL_MINING_DANGER_ARFS)
-		return list(
-			Z_LEVEL_MINING_ARFS,
-			Z_LEVEL_MINING_DANGER_ARFS)
-	else if (srcz >= Z_LEVEL_BOTTOM_DECK && srcz <= Z_LEVEL_TOP_DECK)
-		return list(
-			Z_LEVEL_ARFS_ONE,
-			Z_LEVEL_ARFS_TWO,
-			Z_LEVEL_ARFS_THREE)
-	else if (srcz >= Z_LEVEL_RESIDENTIAL_STATION_ARFS && srcz <= Z_LEVEL_RESIDENTIAL_MANSION_ARFS)
-		return list(
-			Z_LEVEL_RESIDENTIAL_STATION_ARFS,
-			Z_LEVEL_RESIDENTIAL_ARFS,
-			Z_LEVEL_RESIDENTIAL_TWO_ARFS,
-			Z_LEVEL_RESIDENTIAL_MANSION_ARFS,)
+// /datum/map/arfs/get_map_levels(var/srcz, var/long_range = TRUE, var/om_range = DEFAULT_OVERMAP_RANGE)
+// 	if (long_range && (srcz in map_levels))
+// 		return map_levels
+// 	else if (srcz >= Z_LEVEL_MINING_ARFS && srcz <= Z_LEVEL_MINING_DANGER_ARFS)
+// 		return list(
+// 			Z_LEVEL_MINING_ARFS,
+// 			Z_LEVEL_MINING_DANGER_ARFS)
+// 	else if (srcz >= Z_LEVEL_BOTTOM_DECK && srcz <= Z_LEVEL_TOP_DECK)
+// 		return list(
+// 			Z_LEVEL_ARFS_ONE,
+// 			Z_LEVEL_ARFS_TWO,
+// 			Z_LEVEL_ARFS_THREE)
+// 	else if (srcz >= Z_LEVEL_RESIDENTIAL_STATION_ARFS && srcz <= Z_LEVEL_RESIDENTIAL_MANSION_ARFS)
+// 		return list(
+// 			Z_LEVEL_RESIDENTIAL_STATION_ARFS,
+// 			Z_LEVEL_RESIDENTIAL_ARFS,
+// 			Z_LEVEL_RESIDENTIAL_TWO_ARFS,
+// 			Z_LEVEL_RESIDENTIAL_MANSION_ARFS,)
+// 	else
+// 		return ..()
+
+/datum/map/arfs/get_map_levels(var/srcz, var/long_range = FALSE, var/om_range = -1)
+	//Get what sector we're in
+	var/obj/effect/overmap/visitable/O = get_overmap_sector(srcz)
+	if(istype(O) && O.type != /obj/effect/overmap/visitable/ship/arfs)
+		//Just the sector we're in
+		if(om_range == -1)
+			return O.map_z.Copy()
+
+		//Otherwise every sector we're on top of
+		var/list/connections = list()
+		var/turf/T = get_turf(O)
+		var/turfrange = long_range ? max(0, om_range) : om_range
+		for(var/obj/effect/overmap/visitable/V in range(turfrange, T))
+			connections += V.map_z // Adding list to list adds contents
+		return connections
+
+	//Traditional behavior, if not in an overmap sector
 	else
-		return ..()
+		//If long range, and they're at least in contact levels, return contact levels.
+		if (long_range && (srcz in contact_levels))
+			return contact_levels.Copy()
+		//If in station levels, return station levels
+		else if (srcz in station_levels)
+			return station_levels.Copy()
+		//Anything in multiz then (or just themselves)
+		else
+			return GetConnectedZlevels(srcz)
 
 /datum/map_z_level/arfs/ship
 	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_VORESPAWN
@@ -186,39 +221,39 @@
 
 /datum/map_z_level/arfs/mine
 	name = "Asteroid"
-	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_VORESPAWN
+	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_VORESPAWN
 	base_turf = /turf/simulated/mineral/floor
 
 /datum/map_z_level/arfs/mine/top
 	z = Z_LEVEL_MINING_ARFS
 	name = "Asteroid Topside"
 	transit_chance = 30
-	flags = MAP_LEVEL_VORESPAWN
+	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_VORESPAWN
 
 /datum/map_z_level/arfs/mine/bottom
 	z = Z_LEVEL_MINING_DANGER_ARFS
 	name = "Asteroid Underdark"
-	flags = MAP_LEVEL_VORESPAWN
+	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_VORESPAWN
 
 /datum/map_z_level/arfs/residential
 	z = Z_LEVEL_RESIDENTIAL_ARFS
 	name = "ARFS Residential level two"
-	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_VORESPAWN
+	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_VORESPAWN
 
 /datum/map_z_level/arfs/residential_station
 	z = Z_LEVEL_RESIDENTIAL_STATION_ARFS
 	name = "ARFS Residential Station"
-	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_VORESPAWN
+	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_VORESPAWN
 
 /datum/map_z_level/arfs/residential_arf_two
 	z = Z_LEVEL_RESIDENTIAL_TWO_ARFS
 	name = "ARFS Residential level three"
-	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_VORESPAWN
+	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_VORESPAWN
 
 /datum/map_z_level/arfs/residential_arf_mansion
 	z = Z_LEVEL_RESIDENTIAL_MANSION_ARFS
 	name = "ARFS Residential level four"
-	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_VORESPAWN
+	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_VORESPAWN
 
 /datum/planet/biodome
 	expected_z_levels = list(
@@ -259,5 +294,5 @@
 		)
 
 	known = TRUE;
-
 	unowned_areas = list(/area/shuttle/excursion)
+
