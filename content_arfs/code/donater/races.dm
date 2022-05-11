@@ -196,3 +196,57 @@
 /obj/item/organ/external/head/grey
 	eye_icon_location = 'content_arfs/icons/mob/player/human_face_yw.dmi'
 	eye_icon = "eyes_grey"
+
+#define SPECIES_GHOST_ARF
+
+/datum/species/ghost
+
+	name = "Ghost"
+	name_plural = "Ghosties"
+	icobase = 'icons/mob/human_races/r_human.dmi'
+	deform = 'icons/mob/human_races/r_human.dmi'
+	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/punch)
+	blurb = "Something goes here."
+	num_alternate_languages = 6
+	species_language = LANGUAGE_SOL_COMMON
+	name_language = null // Use the first-name last-name generator rather than a language scrambler
+	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_SKRELLIAN, LANGUAGE_SKRELLIANFAR, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)
+	spawn_flags		 = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED
+	flesh_color = "#a598ad"
+	blood_color = "#A200FF"
+	brute_mod = 1.25
+	flash_mod = 6
+	darksight = 10
+	min_age = 18
+	max_age = 5000
+	remains_type = /obj/effect/decal/cleanable/ash
+	death_message = "dissolves into ash..."
+	has_organ = list()
+	breath_type = null
+	poison_type = null
+	inherent_verbs = list(
+		/mob/living/carbon/human/proc/shapeshifter_select_shape,
+		/mob/living/carbon/human/proc/shapeshifter_select_colour,
+		/mob/living/carbon/human/proc/shapeshifter_select_hair,
+		/mob/living/carbon/human/proc/shapeshifter_select_eye_colour,
+		/mob/living/carbon/human/proc/shapeshifter_select_hair_colors,
+		/mob/living/carbon/human/proc/shapeshifter_select_gender,
+		/mob/living/carbon/human/proc/regenerate,
+		/mob/living/simple_mob/animal/passive/pokemon/proc/move_phase
+		)
+	cold_level_1 = -1	//Immune to cold
+	cold_level_2 = -1
+	cold_level_3 = -1
+
+	heat_level_1 = 9000	//Immune to heat
+	heat_level_2 = 9000
+	heat_level_3 = 9000
+	speech_bubble_appearance = "ghost"
+	water_breather = TRUE
+/*	var/list/ghost_abilities = list(/datum/power/shadekin/phase_shift,
+									   /datum/power/shadekin/regenerate_other,
+									   /datum/power/shadekin/create_shade)
+	var/list/shadekin_ability_datums = list()
+	var/kin_type
+	var/energy_light = 0.25
+	var/energy_dark = 0.75 */
