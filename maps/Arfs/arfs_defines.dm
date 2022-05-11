@@ -62,7 +62,7 @@
 		NETWORK_INTERROGATION
 	)
 
-	allowed_spawns = list("Arrivals Shuttle","Gateway","Cryogenic Storage","Cyborg Storage","NCS Serenity Residential")
+	allowed_spawns = list("Arrivals Shuttle","Gateway","Cryogenic Storage","Cyborg Storage","NCS Serenity Residential","ITV Talon Cryo")
 	map_levels = list(
 		Z_LEVEL_ARFS_ONE,
 		Z_LEVEL_ARFS_TWO,
