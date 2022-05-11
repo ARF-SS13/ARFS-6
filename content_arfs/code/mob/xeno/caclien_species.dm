@@ -15,7 +15,7 @@
 	var/move_sounds_water = X_SOUND_STEP_WATER
 	var/move_sounds_vol = 25
 	var/move_sounds_range = 0 // How much farther away or closer than 7 this sound can be heard
-	var/death_sounds = list('sound/voice/hiss6.ogg')
+	var/death_sounds = X_SOUND_DEATH
 	var/talk_sounds = X_SOUND_TALK
 	var/attack_sounds = X_SOUND_ATTACK_CLAW
 	var/breath_sounds = X_SOUND_BREATHE
@@ -60,7 +60,7 @@
 	sub_name = "queen"
 	maxHealth = 200
 	sneak_effectiveness = 1.25
-	list/abilities = list()
+	abilities = list()
 	move_sounds_range = 7
 	default_size_mult = 2
 	move_delay = 3
@@ -71,8 +71,10 @@
 	maxHealth = 15
 	death_sounds = list('sound/voice/hiss6.ogg')
 	growth_max = 0
+	death_sounds = X_SOUND_DEATH_HUGGER
 
 /datum/xeno_species/larva
 	sub_name = "larva"
 	maxHealth = 30
 	growth_max = 100
+	death_sounds = X_SOUND_DEATH_LARVA

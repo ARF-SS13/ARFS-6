@@ -166,12 +166,13 @@
 				if(on_weeds)
 					phoron_mod = 1
 					health_mod = 1
-				if(ourair.gas[phoron] >= 1)
+				if(ourair.gas[phoron] >= 0.5)
 					phoron_mod = phoron_mod*2
 				if(resting || sleeping)
 					health_mod = health_mod*2
 				phoron_stored = clamp(phoron_stored+(SD.phoron_regen*phoron_mod),0,SD.phoron_max)
-				health = clamp(health+(SD.healthRegen*health_mod),-maxHealth, maxHealth)
+				if(bodytemperature < maxbodytemp*1.5)//Don't heal if we're burning alive
+					health = clamp(health+(SD.healthRegen*health_mod),-maxHealth, maxHealth)
 	. = ..()
 
 /mob/living/simple_mob/caclien/Moved(atom/old_loc, direction, forced = FALSE)
