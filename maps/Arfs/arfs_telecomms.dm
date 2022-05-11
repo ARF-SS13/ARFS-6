@@ -84,5 +84,3 @@
 	. = ..()
 	buffer = locate(/obj/machinery/telecomms/hub/preset/arfs)
 
-/obj/machinery/exonet_node/relay
-	name = "exonet relay"

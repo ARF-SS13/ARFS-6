@@ -1,3 +1,6 @@
+/obj/machinery/exonet_node/relay
+	name = "exonet relay"
+
 /proc/can_telecomm(var/atom/A, var/atom/B, var/ad_hoc = FALSE)
 	if(!A || !B)
 		log_debug("can_telecomm(): Undefined endpoints!")
