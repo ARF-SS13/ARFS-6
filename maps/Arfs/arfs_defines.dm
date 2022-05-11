@@ -22,7 +22,7 @@
 	zlevel_datum_type = /datum/map_z_level/arfs
 
 	lobby_icon = 'content_arfs/icons/misc/arfs_dallus.dmi'
-	lobby_screens = list("arfs_dallus")
+	lobby_screens = list("arfs_dallus_new_anim")
 
 	station_name  = "ARFS Dallus"
 	station_short = "Dallus"
