@@ -203,8 +203,8 @@
 
 	name = "Ghost"
 	name_plural = "Ghosties"
-	icobase = 'icons/mob/human_races/r_human.dmi'
-	deform = 'icons/mob/human_races/r_human.dmi'
+	icobase = 'content_arfs/icons/mob/player/r_ghost_arf.dmi'
+	deform = 'content_arfs/icons/mob/player/r_ghost_arf.dmi'
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/punch)
 	blurb = "Something goes here."
 	num_alternate_languages = 6
@@ -212,6 +212,7 @@
 	name_language = null // Use the first-name last-name generator rather than a language scrambler
 	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_SKRELLIAN, LANGUAGE_SKRELLIANFAR, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)
 	spawn_flags		 = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED
+	flags =            NO_SCAN | NO_SLIP | NO_HALLUCINATION | NO_INFECT | NO_DEFIB
 	flesh_color = "#a598ad"
 	blood_color = "#A200FF"
 	brute_mod = 1.25
@@ -219,6 +220,7 @@
 	darksight = 10
 	min_age = 18
 	max_age = 5000
+	genders = list(MALE, FEMALE, NEUTER, PLURAL)
 	remains_type = /obj/effect/decal/cleanable/ash
 	death_message = "dissolves into ash..."
 	has_organ = list()
@@ -243,6 +245,9 @@
 	heat_level_3 = 9000
 	speech_bubble_appearance = "ghost"
 	water_breather = TRUE
+	soft_landing = TRUE
+	economic_modifier = 0
+	pass_flags = 1
 /*	var/list/ghost_abilities = list(/datum/power/shadekin/phase_shift,
 									   /datum/power/shadekin/regenerate_other,
 									   /datum/power/shadekin/create_shade)
