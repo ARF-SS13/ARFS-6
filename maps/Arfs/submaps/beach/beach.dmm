@@ -17,23 +17,18 @@
 /turf/simulated/floor/outdoors/grass,
 /area/tether_away/beach/jungle)
 "af" = (
-/obj/structure/grille,
-/obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+/obj/effect/overlay/palmtree_r,
+/turf/simulated/floor/tiled/asteroid_steel{
+	outdoors = 1
 	},
-/turf/simulated/floor,
-/area/tether_away/beach/powershed)
+/area/tether_away/beach/resort)
 "ag" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/cell/apc,
 /turf/simulated/floor/wood,
 /area/tether_away/beach/resort/janibar)
 "ah" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/turf/simulated/floor,
+/turf/simulated/floor/outdoors/grass,
 /area/tether_away/beach/resort/kitchen)
 "ai" = (
 /obj/effect/overlay/palmtree_r,
@@ -75,9 +70,11 @@
 	},
 /area/tether_away/beach/resort)
 "as" = (
-/obj/structure/table/bench/sifwooden/padded,
-/turf/simulated/floor/wood,
-/area/tether_away/beach/resort/kitchen)
+/obj/fiftyspawner/log,
+/obj/fiftyspawner/log,
+/obj/fiftyspawner/log,
+/turf/simulated/floor/beach/sand/outdoors,
+/area/tether_away/beach/resort)
 "at" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -127,6 +124,7 @@
 /area/tether_away/beach/resort/kitchen)
 "aE" = (
 /obj/machinery/media/jukebox,
+/obj/machinery/light,
 /turf/simulated/floor/wood,
 /area/tether_away/beach/resort/kitchen)
 "aF" = (
@@ -134,28 +132,25 @@
 /turf/simulated/floor/tiled/eris/cafe,
 /area/tether_away/beach/resort/kitchen)
 "aG" = (
-/obj/structure/bedsheetbin{
-	pixel_y = -6
+/obj/machinery/vending/boozeomat{
+	emagged = 1;
+	req_access = newlist()
 	},
-/turf/simulated/floor/tiled/asteroid_steel{
-	outdoors = 1
+/obj/machinery/light{
+	dir = 1
 	},
-/area/tether_away/beach/resort)
+/turf/simulated/floor/lino,
+/area/tether_away/beach/resort/kitchen)
 "aH" = (
-/obj/item/clothing/shoes/sandal,
-/obj/item/clothing/shoes/sandal,
-/obj/item/clothing/shoes/sandal,
-/obj/structure/closet/crate,
-/turf/simulated/floor/tiled/asteroid_steel{
-	outdoors = 1
-	},
+/obj/structure/bed/chair/hammock_kbraid_n,
+/turf/simulated/floor/beach/sand/outdoors,
 /area/tether_away/beach/resort)
 "aI" = (
-/obj/structure/closet/athletic_mixed,
-/turf/simulated/floor/tiled/asteroid_steel{
-	outdoors = 1
+/obj/item/weapon/stool/baystool/padded{
+	dir = 4
 	},
-/area/tether_away/beach/resort)
+/turf/simulated/floor/wood,
+/area/tether_away/beach/resort/kitchen)
 "aJ" = (
 /obj/structure/sign/double/barsign,
 /turf/simulated/wall/sandstone,
@@ -376,6 +371,12 @@
 	outdoors = 1
 	},
 /area/tether_away/beach/resort)
+"df" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass,
+/area/tether_away/beach/resort/kitchen)
 "di" = (
 /obj/item/weapon/stool/padded{
 	dir = 8
@@ -389,14 +390,14 @@
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/tether_away/beach/resort/lockermed)
 "dt" = (
-/obj/item/weapon/bedsheet/pirate,
 /obj/machinery/button/remote/airlock{
 	id = "LoveShack4";
 	name = "Door Bolt Control";
 	pixel_x = -25;
 	specialfunctions = 4
 	},
-/obj/structure/bed/padded,
+/obj/structure/table/woodentable,
+/obj/random/drinkbottle,
 /turf/simulated/floor/wood,
 /area/tether_away/beach/resort/dorm4)
 "dP" = (
@@ -410,10 +411,11 @@
 	},
 /area/tether_away/beach)
 "ef" = (
-/obj/structure/table/steel_reinforced,
-/obj/machinery/microwave,
-/turf/simulated/floor/tiled/eris/cafe,
-/area/tether_away/beach/resort/kitchen)
+/obj/structure/grille,
+/turf/simulated/floor/tiled/asteroid_steel{
+	outdoors = 1
+	},
+/area/tether_away/beach/resort)
 "et" = (
 /obj/machinery/shower{
 	dir = 8;
@@ -444,20 +446,10 @@
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/tether_away/beach/resort/lockermed)
 "eV" = (
-/obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/turf/simulated/floor/tiled/asteroid_steel{
-	outdoors = 1
-	},
-/area/tether_away/beach/resort)
+/obj/structure/table/steel_reinforced,
+/obj/item/weapon/material/kitchen/rollingpin,
+/turf/simulated/floor/tiled/eris/cafe,
+/area/tether_away/beach/resort/kitchen)
 "eW" = (
 /obj/structure/table/glass,
 /obj/item/weapon/backup_implanter{
@@ -478,33 +470,26 @@
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/tether_away/beach/resort/lockermed)
 "fl" = (
-/obj/structure/closet/secure_closet/freezer/fridge,
-/obj/random/meat,
-/obj/random/meat,
-/obj/random/meat,
-/obj/random/meat,
-/obj/random/meat,
-/obj/random/meat,
-/obj/random/meat,
-/obj/random/meat,
-/obj/random/meat,
-/obj/random/meat,
-/obj/random/meat,
-/obj/random/meat,
-/obj/random/meat,
-/obj/random/meat,
-/obj/random/meat,
-/turf/simulated/floor/tiled/eris/cafe,
+/obj/structure/table/bench/wooden,
+/turf/simulated/floor/outdoors/grass,
 /area/tether_away/beach/resort/kitchen)
+"fm" = (
+/mob/living/simple_mob/animal/passive/crab,
+/turf/simulated/floor/beach/sand/desert/outdoors,
+/area/tether_away/beach/water)
+"fw" = (
+/mob/living/simple_mob/animal/passive/crab,
+/turf/simulated/floor/water/beach,
+/area/tether_away/beach)
 "fJ" = (
-/obj/item/weapon/bedsheet/ian,
 /obj/machinery/button/remote/airlock{
 	id = "LoveShack3";
 	name = "Door Bolt Control";
 	pixel_x = -25;
 	specialfunctions = 4
 	},
-/obj/structure/bed/padded,
+/obj/structure/table/woodentable,
+/obj/random/drinkbottle,
 /turf/simulated/floor/wood,
 /area/tether_away/beach/resort/dorm3)
 "fQ" = (
@@ -578,10 +563,25 @@
 /obj/effect/overmap/visitable/sector/virgo4,
 /turf/simulated/floor/water/deep/ocean,
 /area/tether_away/beach/water)
+"hK" = (
+/obj/structure/flora/ausbushes/ywflowers,
+/turf/simulated/floor/outdoors/grass,
+/area/tether_away/beach/jungle)
 "hL" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/reagentgrinder,
 /turf/simulated/floor/tiled/eris/cafe,
+/area/tether_away/beach/resort/kitchen)
+"hM" = (
+/obj/machinery/door/airlock/angled_bay/double/glass{
+	dir = 8
+	},
+/obj/structure/cable/cyan{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/wood,
 /area/tether_away/beach/resort/kitchen)
 "hQ" = (
 /obj/structure/flora/sif/subterranean,
@@ -590,15 +590,25 @@
 	},
 /area/tether_away/beach/cavebase)
 "hR" = (
-/obj/machinery/power/terminal{
-	dir = 8
-	},
-/obj/structure/cable{
+/obj/structure/cable/cyan{
+	d1 = 1;
 	d2 = 2;
-	icon_state = "0-2"
+	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
-/area/tether_away/beach/powershed)
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	outdoors = 1
+	},
+/area/tether_away/beach/resort)
 "hS" = (
 /obj/structure/table/woodentable,
 /obj/random/drinkbottle,
@@ -642,12 +652,23 @@
 	outdoors = 1
 	},
 /area/tether_away/beach/resort)
+"jv" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/flora/ausbushes/ywflowers,
+/turf/simulated/floor/outdoors/grass,
+/area/tether_away/beach/resort/kitchen)
 "jH" = (
 /obj/effect/floor_decal/spline/plain,
 /turf/simulated/floor/water/pool{
 	outdoors = 1
 	},
 /area/tether_away/beach/resort)
+"jJ" = (
+/obj/structure/railing,
+/turf/simulated/floor/outdoors/grass,
+/area/tether_away/beach/resort/kitchen)
 "jN" = (
 /obj/tether_away_spawner/beach_outside,
 /turf/simulated/floor/beach/sand/outdoors,
@@ -667,9 +688,10 @@
 /turf/simulated/floor/water/ocean,
 /area/tether_away/beach/cavebase)
 "kd" = (
-/obj/machinery/light/small,
-/turf/simulated/floor/outdoors/grass,
-/area/tether_away/beach/resort/kitchen)
+/turf/simulated/floor/tiled/asteroid_steel{
+	outdoors = 1
+	},
+/area/tether_away/beach/jungle)
 "kg" = (
 /obj/machinery/vending/loadout/clothing,
 /turf/simulated/floor/tiled/asteroid_steel,
@@ -686,13 +708,9 @@
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/tether_away/beach/resort/lockermed)
 "ku" = (
-/obj/structure/cable/cyan{
-	d2 = 2;
-	icon_state = "0-2"
-	},
-/obj/machinery/power/smes/buildable/offmap_spawn/empty,
-/turf/simulated/floor/tiled/asteroid_steel,
-/area/tether_away/beach/powershed)
+/obj/structure/table/steel_reinforced,
+/turf/simulated/floor/lino,
+/area/tether_away/beach/resort/kitchen)
 "kK" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
@@ -707,14 +725,16 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	outdoors = 1
+	},
 /area/tether_away/beach/powershed)
 "kP" = (
-/obj/structure/table/woodentable,
-/obj/random/drinkbottle,
 /obj/machinery/light/small{
 	dir = 4
 	},
+/obj/structure/bed/double/padded,
+/obj/item/weapon/bedsheet/iandouble,
 /turf/simulated/floor/wood,
 /area/tether_away/beach/resort/dorm3)
 "kR" = (
@@ -793,38 +813,50 @@
 "lI" = (
 /turf/simulated/floor/beach/sand/desert/outdoors,
 /area/tether_away/beach/resort)
+"lJ" = (
+/obj/structure/railing,
+/obj/structure/flora/ausbushes/ywflowers,
+/turf/simulated/floor/outdoors/grass,
+/area/tether_away/beach/resort/kitchen)
+"lL" = (
+/obj/structure/dancepole{
+	pixel_y = 16
+	},
+/obj/structure/table/alien,
+/obj/structure/cable/cyan{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/wood,
+/area/tether_away/beach/resort/kitchen)
 "lR" = (
 /obj/random/mob/semirandom_mob_spawner/fish,
 /turf/simulated/floor/water/deep/ocean,
 /area/tether_away/beach/water)
 "mb" = (
-/obj/machinery/power/apc/alarms_hidden{
-	dir = 1;
-	pixel_y = 26
-	},
-/obj/structure/cable/cyan{
-	d2 = 2;
-	icon_state = "0-2"
-	},
-/turf/simulated/floor/wood,
+/obj/machinery/appliance/cooker/grill,
+/turf/simulated/floor/tiled/eris/cafe,
 /area/tether_away/beach/resort/kitchen)
 "me" = (
 /turf/simulated/floor/wood,
 /area/tether_away/beach/resort/janibar)
 "mi" = (
-/obj/machinery/light/small{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/asteroid_steel{
-	outdoors = 1
-	},
-/area/tether_away/beach/powershed)
+/obj/structure/hammock_kbraid_s,
+/turf/simulated/floor/beach/sand/desert/outdoors,
+/area/tether_away/beach)
 "mu" = (
-/obj/structure/table/steel_reinforced,
-/obj/machinery/chemical_dispenser/bar_soft/full{
-	dir = 8
+/obj/structure/table/woodentable,
+/obj/item/weapon/flame/candle/everburn,
+/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+	pixel_x = 5;
+	pixel_y = 4
 	},
-/turf/simulated/floor/lino,
+/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+	pixel_x = -8;
+	pixel_y = 4
+	},
+/turf/simulated/floor/wood,
 /area/tether_away/beach/resort/kitchen)
 "mC" = (
 /turf/simulated/floor/beach/sand/desert/outdoors,
@@ -837,16 +869,9 @@
 /turf/simulated/floor/tiled/eris/cafe,
 /area/tether_away/beach/resort/kitchen)
 "mM" = (
-/obj/machinery/power/solar_control,
-/obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2"
-	},
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/asteroid_steel,
-/area/tether_away/beach/powershed)
+/obj/structure/flora/ausbushes/ppflowers,
+/turf/simulated/floor/outdoors/grass,
+/area/tether_away/beach/jungle)
 "mS" = (
 /obj/structure/cable{
 	d1 = 2;
@@ -896,14 +921,14 @@
 /turf/simulated/floor/wood,
 /area/tether_away/beach/resort/dorm1)
 "oq" = (
-/obj/item/weapon/bedsheet/rainbow,
 /obj/machinery/button/remote/airlock{
 	id = "LoveShack1";
 	name = "Door Bolt Control";
 	pixel_x = 25;
 	specialfunctions = 4
 	},
-/obj/structure/bed/padded,
+/obj/structure/bed/double/padded,
+/obj/item/weapon/bedsheet/clowndouble,
 /turf/simulated/floor/wood,
 /area/tether_away/beach/resort/dorm1)
 "oC" = (
@@ -924,6 +949,13 @@
 	outdoors = 1
 	},
 /area/tether_away/beach/resort)
+"oL" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/weapon/reagent_containers/food/condiment/enzyme{
+	layer = 5
+	},
+/turf/simulated/floor/tiled/eris/cafe,
+/area/tether_away/beach/resort/kitchen)
 "pd" = (
 /obj/structure/table/rack,
 /obj/item/weapon/material/fishing_rod/modern/cheap,
@@ -961,7 +993,9 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	outdoors = 1
+	},
 /area/tether_away/beach/powershed)
 "pA" = (
 /obj/effect/floor_decal/spline/plain{
@@ -1017,6 +1051,10 @@
 /obj/effect/overlay/palmtree_l,
 /turf/simulated/floor/beach/sand/desert/outdoors,
 /area/tether_away/beach/resort)
+"pQ" = (
+/obj/structure/bed/chair/wood/wings,
+/turf/simulated/floor/wood,
+/area/tether_away/beach/resort/kitchen)
 "pS" = (
 /turf/simulated/floor/water/beach{
 	dir = 1
@@ -1037,6 +1075,22 @@
 	outdoors = 1
 	},
 /area/tether_away/beach/resort)
+"qo" = (
+/obj/structure/table/steel_reinforced,
+/obj/machinery/chemical_dispenser/kitchen/full{
+	pixel_y = 33
+	},
+/obj/item/weapon/reagent_containers/glass/beaker/large,
+/obj/item/weapon/reagent_containers/glass/beaker/large,
+/turf/simulated/floor/tiled/eris/cafe,
+/area/tether_away/beach/resort/kitchen)
+"qB" = (
+/obj/structure/table/steel_reinforced,
+/obj/machinery/microwave{
+	pixel_y = 12
+	},
+/turf/simulated/floor/tiled/eris/cafe,
+/area/tether_away/beach/resort/kitchen)
 "qI" = (
 /obj/machinery/power/port_gen/pacman/mrs,
 /turf/simulated/floor/tiled/asteroid_steel,
@@ -1067,12 +1121,16 @@
 /turf/simulated/floor/wood,
 /area/tether_away/beach/resort/dorm1)
 "rQ" = (
-/obj/machinery/light/small{
-	dir = 8
+/obj/structure/bed/chair/wood/wings{
+	dir = 1
 	},
-/turf/simulated/floor/tiled/asteroid_steel{
-	outdoors = 1
-	},
+/obj/machinery/light,
+/turf/simulated/floor/wood,
+/area/tether_away/beach/resort/kitchen)
+"rZ" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor,
 /area/tether_away/beach/resort/kitchen)
 "ss" = (
 /obj/machinery/light/small{
@@ -1142,9 +1200,13 @@
 	outdoors = 1
 	},
 /area/tether_away/beach/resort)
-"tG" = (
-/obj/machinery/appliance/cooker/fryer,
+"tz" = (
+/obj/machinery/appliance/mixer/cereal,
 /turf/simulated/floor/tiled/eris/cafe,
+/area/tether_away/beach/resort/kitchen)
+"tG" = (
+/obj/structure/flora/ausbushes/sparsegrass,
+/turf/simulated/floor/outdoors/grass,
 /area/tether_away/beach/resort/kitchen)
 "uh" = (
 /obj/effect/floor_decal/spline/plain{
@@ -1155,7 +1217,7 @@
 	},
 /area/tether_away/beach/resort)
 "uk" = (
-/obj/structure/table/steel_reinforced,
+/obj/machinery/door/airlock/sandstone,
 /turf/simulated/floor/tiled/eris/cafe,
 /area/tether_away/beach/resort/kitchen)
 "ul" = (
@@ -1185,8 +1247,12 @@
 	},
 /area/tether_away/beach/resort)
 "uQ" = (
-/obj/machinery/chem_master/condimaster,
-/turf/simulated/floor/tiled/eris/cafe,
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/wood,
 /area/tether_away/beach/resort/kitchen)
 "uT" = (
 /obj/structure/mirror{
@@ -1195,15 +1261,27 @@
 	},
 /turf/simulated/floor/wood,
 /area/tether_away/beach/resort/dorm1)
+"uW" = (
+/obj/machinery/door/airlock/angled_bay/double/glass,
+/turf/simulated/floor/wood,
+/area/tether_away/beach/resort/kitchen)
 "vg" = (
 /obj/structure/flora/sif/subterranean,
 /turf/simulated/mineral/floor/cave{
 	name = "dirt"
 	},
 /area/tether_away/beach/cavebase)
+"vz" = (
+/obj/machinery/vending/blue_lotus,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/eris/cafe,
+/area/tether_away/beach/resort/kitchen)
 "vU" = (
 /obj/structure/table/woodentable,
 /obj/item/device/flashlight/lamp/green,
+/obj/item/weapon/sextoy/dildo/analbeads,
 /turf/simulated/floor/wood,
 /area/tether_away/beach)
 "wv" = (
@@ -1228,12 +1306,8 @@
 	},
 /area/tether_away/beach/resort/lockermed)
 "wT" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/asteroid_steel{
-	outdoors = 1
-	},
+/obj/machinery/vending/dinnerware,
+/turf/simulated/floor/tiled/eris/cafe,
 /area/tether_away/beach/resort/kitchen)
 "xb" = (
 /obj/structure/flora/ausbushes/fernybush,
@@ -1250,6 +1324,13 @@
 	name = "dirt"
 	},
 /area/tether_away/beach/cavebase)
+"xD" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/flora/ausbushes/grassybush,
+/turf/simulated/floor/outdoors/grass,
+/area/tether_away/beach/resort/kitchen)
 "xT" = (
 /obj/tether_away_spawner/beach_outside,
 /turf/simulated/floor/outdoors/grass/forest,
@@ -1258,9 +1339,18 @@
 /obj/structure/flora/tree/jungle_small,
 /turf/simulated/floor/outdoors/grass,
 /area/tether_away/beach/jungle)
+"xX" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/grass,
+/area/tether_away/beach/resort/kitchen)
 "yf" = (
-/obj/structure/table/reinforced,
-/turf/simulated/floor/wood,
+/obj/machinery/appliance/cooker/fryer,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/eris/cafe,
 /area/tether_away/beach/resort/kitchen)
 "yg" = (
 /obj/machinery/light/small{
@@ -1286,6 +1376,20 @@
 	name = "dirt"
 	},
 /area/tether_away/beach/cavebase)
+"yR" = (
+/obj/structure/table/steel_reinforced,
+/obj/effect/map_effect/perma_light/brighter,
+/turf/simulated/floor/tiled/eris/cafe,
+/area/tether_away/beach/resort/kitchen)
+"yW" = (
+/obj/structure/closet/crate/bin,
+/obj/structure/cable/cyan{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/wood,
+/area/tether_away/beach/resort/kitchen)
 "zb" = (
 /obj/structure/table/woodentable,
 /obj/structure/cable/cyan{
@@ -1322,19 +1426,29 @@
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/tether_away/beach/powershed)
 "zV" = (
-/obj/structure/table/bench/sifwooden/padded,
-/obj/machinery/light{
-	dir = 8
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 4;
+	pixel_x = 22
+	},
+/obj/structure/cable/cyan{
+	d2 = 8;
+	icon_state = "0-8"
 	},
 /turf/simulated/floor/wood,
 /area/tether_away/beach/resort/kitchen)
+"zW" = (
+/obj/effect/overlay/palmtree_r,
+/turf/simulated/floor/beach/sand/outdoors,
+/area/tether_away/beach/jungle)
 "zZ" = (
 /obj/structure/cable/cyan{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	outdoors = 1
+	},
 /area/tether_away/beach/powershed)
 "Ar" = (
 /obj/structure/flora/tree/jungle_small,
@@ -1351,13 +1465,21 @@
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/tether_away/beach/resort/lockermed)
 "AS" = (
-/obj/machinery/door/airlock/sandstone,
-/turf/simulated/floor/tiled/asteroid_steel,
+/obj/structure/cable/cyan{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/wood,
 /area/tether_away/beach/resort/kitchen)
 "AV" = (
 /obj/structure/bonfire,
 /turf/simulated/floor/beach/sand/outdoors,
 /area/tether_away/beach/resort)
+"Bf" = (
+/obj/structure/table/woodentable,
+/turf/simulated/floor/outdoors/grass,
+/area/tether_away/beach/resort/kitchen)
 "Bk" = (
 /obj/item/weapon/reagent_containers/food/condiment/flour,
 /obj/item/weapon/reagent_containers/food/condiment/flour,
@@ -1406,18 +1528,16 @@
 /turf/simulated/floor/tiled/eris/cafe,
 /area/tether_away/beach/resort/kitchen)
 "By" = (
-/obj/item/weapon/stool/baystool/padded{
-	dir = 4
-	},
-/turf/simulated/floor/lino,
+/obj/structure/table/woodentable,
+/obj/effect/map_effect/perma_light/brighter,
+/turf/simulated/floor/outdoors/grass,
 /area/tether_away/beach/resort/kitchen)
 "BC" = (
-/obj/structure/table/bench/sifwooden/padded,
-/obj/move_trader_landmark{
-	dir = 4;
-	trader_type = /obj/trader/general
+/obj/structure/railing{
+	dir = 4
 	},
-/turf/simulated/floor/wood,
+/obj/structure/flora/ausbushes/sparsegrass,
+/turf/simulated/floor/outdoors/grass,
 /area/tether_away/beach/resort/kitchen)
 "BF" = (
 /turf/simulated/wall/sandstone,
@@ -1436,9 +1556,24 @@
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/tether_away/beach/resort/lockermed)
 "BR" = (
-/obj/structure/table/rack/shelf/steel,
-/obj/machinery/light,
-/turf/simulated/floor/wood,
+/obj/machinery/power/solar_control,
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	outdoors = 1
+	},
+/area/tether_away/beach/resort)
+"BX" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/weapon/reagent_containers/glass/beaker/measuring_cup,
+/obj/item/weapon/reagent_containers/glass/beaker/measuring_cup,
+/obj/item/weapon/reagent_containers/glass/beaker/measuring_cup,
+/turf/simulated/floor/tiled/eris/cafe,
 /area/tether_away/beach/resort/kitchen)
 "Ce" = (
 /obj/machinery/light/small{
@@ -1465,9 +1600,17 @@
 	},
 /area/tether_away/beach/resort)
 "CM" = (
-/obj/structure/table/rack/shelf/steel,
-/turf/simulated/floor/wood,
-/area/tether_away/beach/resort/kitchen)
+/obj/machinery/power/terminal{
+	dir = 8
+	},
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	outdoors = 1
+	},
+/area/tether_away/beach/resort)
 "CP" = (
 /turf/simulated/floor/water/beach{
 	dir = 10
@@ -1501,6 +1644,12 @@
 	outdoors = 1
 	},
 /area/tether_away/beach/resort)
+"DI" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/beach/sand/outdoors,
+/area/tether_away/beach/resort)
 "DK" = (
 /obj/machinery/door/airlock/sandstone{
 	id_tag = "LoveShack2";
@@ -1518,6 +1667,11 @@
 	dir = 8
 	},
 /area/tether_away/beach/water)
+"DZ" = (
+/turf/simulated/floor/tiled/asteroid_steel{
+	outdoors = 1
+	},
+/area/tether_away/beach/resort/kitchen)
 "Ed" = (
 /obj/structure/bed,
 /turf/simulated/mineral/floor/cave{
@@ -1584,6 +1738,12 @@
 	outdoors = 0
 	},
 /area/tether_away/beach/cavebase)
+"FC" = (
+/obj/structure/sink{
+	pixel_y = 8
+	},
+/turf/simulated/floor/lino,
+/area/tether_away/beach/resort/kitchen)
 "Gi" = (
 /obj/machinery/door/airlock/sandstone{
 	id_tag = "LoveShack3";
@@ -1608,15 +1768,20 @@
 /obj/effect/overlay/coconut,
 /turf/simulated/floor/beach/sand/outdoors,
 /area/tether_away/beach/jungle)
+"Hs" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/weapon/material/minihoe,
+/obj/item/weapon/reagent_containers/glass/bucket/wood,
+/obj/item/weapon/material/knife/machete/hatchet,
+/turf/simulated/floor/tiled/eris/cafe,
+/area/tether_away/beach/resort/kitchen)
 "Hv" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/material/kitchen/rollingpin,
-/obj/item/weapon/book/manual/chef_recipes,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme{
-	layer = 5
+/obj/machinery/chemical_dispenser/bar_alc/full{
+	dir = 8;
+	pixel_x = 23
 	},
-/obj/item/weapon/reagent_containers/glass/bucket,
-/turf/simulated/floor/tiled/eris/cafe,
+/turf/simulated/floor/lino,
 /area/tether_away/beach/resort/kitchen)
 "HO" = (
 /obj/structure/mirror{
@@ -1625,6 +1790,10 @@
 	},
 /turf/simulated/floor/wood,
 /area/tether_away/beach/resort/dorm3)
+"HY" = (
+/obj/structure/bed/chair/hammock_kbraid_n,
+/turf/simulated/floor/beach/sand/desert/outdoors,
+/area/tether_away/beach/resort)
 "Ij" = (
 /turf/simulated/floor/water/beach/corner{
 	dir = 4
@@ -1660,29 +1829,27 @@
 /turf/simulated/floor/beach/sand/outdoors,
 /area/tether_away/beach/resort)
 "Ja" = (
-/obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/turf/simulated/floor/wood,
+/obj/structure/railing,
+/obj/structure/flora/ausbushes/grassybush,
+/turf/simulated/floor/outdoors/grass,
 /area/tether_away/beach/resort/kitchen)
 "Je" = (
 /obj/machinery/recharge_station,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/tether_away/beach/resort/lockermed)
 "Jm" = (
-/obj/machinery/biogenerator,
-/turf/simulated/floor/tiled/eris/cafe,
+/obj/structure/table/steel_reinforced,
+/obj/machinery/chemical_dispenser/bar_coffee/full{
+	dir = 8;
+	pixel_y = 3;
+	pixel_x = 23
+	},
+/obj/item/weapon/reagent_containers/food/drinks/shaker,
+/turf/simulated/floor/lino,
 /area/tether_away/beach/resort/kitchen)
 "Jn" = (
-/obj/machinery/door/airlock/sandstone,
-/obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/obj/structure/flora/ausbushes/brflowers,
+/turf/simulated/floor/outdoors/grass,
 /area/tether_away/beach/resort/kitchen)
 "JG" = (
 /obj/effect/step_trigger/zlevel_fall/beach,
@@ -1708,8 +1875,8 @@
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/tether_away/beach/resort/lockermed)
 "Kq" = (
-/obj/structure/table/steel_reinforced,
-/turf/simulated/floor/lino,
+/obj/machinery/seed_extractor,
+/turf/simulated/floor/tiled/eris/cafe,
 /area/tether_away/beach/resort/kitchen)
 "Ks" = (
 /obj/structure/flora/ausbushes/ppflowers,
@@ -1732,6 +1899,18 @@
 	name = "dirt"
 	},
 /area/tether_away/beach/cavebase)
+"Lj" = (
+/obj/effect/map_effect/perma_light/brighter,
+/turf/simulated/floor/wood,
+/area/tether_away/beach/resort/kitchen)
+"Lk" = (
+/obj/structure/railing,
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/flora/ausbushes/brflowers,
+/turf/simulated/floor/outdoors/grass,
+/area/tether_away/beach/resort/kitchen)
 "Lp" = (
 /obj/structure/closet/secure_closet/personal,
 /obj/item/clothing/shoes/sandal,
@@ -1754,8 +1933,12 @@
 /turf/simulated/wall/sandstone,
 /area/tether_away/beach/resort/kitchen)
 "LJ" = (
-/turf/simulated/floor/water/ocean,
-/area/tether_away/beach/resort)
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/eris/cafe,
+/area/tether_away/beach/resort/kitchen)
 "LO" = (
 /obj/machinery/shower{
 	dir = 4;
@@ -1777,10 +1960,16 @@
 /turf/simulated/floor/outdoors/grass,
 /area/tether_away/beach/cavebase)
 "LT" = (
-/obj/machinery/seed_extractor,
-/obj/machinery/light,
-/turf/simulated/floor/tiled/eris/cafe,
-/area/tether_away/beach/resort/kitchen)
+/obj/structure/grille,
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	outdoors = 1
+	},
+/area/tether_away/beach/powershed)
 "LZ" = (
 /turf/simulated/floor/wood{
 	outdoors = 1
@@ -1822,14 +2011,14 @@
 	},
 /area/tether_away/beach/resort)
 "MZ" = (
-/obj/item/weapon/bedsheet/brown,
 /obj/machinery/button/remote/airlock{
 	id = "LoveShack2";
 	name = "Door Bolt Control";
 	pixel_x = 25;
 	specialfunctions = 4
 	},
-/obj/structure/bed/padded,
+/obj/item/weapon/bedsheet/browndouble,
+/obj/structure/bed/double/padded,
 /turf/simulated/floor/wood,
 /area/tether_away/beach/resort/dorm2)
 "Nt" = (
@@ -1855,11 +2044,20 @@
 	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/tether_away/beach/resort/lockermed)
-"Of" = (
-/obj/machinery/vending/dinnerware{
-	dir = 8
+"NE" = (
+/obj/structure/cable/cyan{
+	d2 = 2;
+	icon_state = "0-2"
 	},
-/turf/simulated/floor/lino,
+/obj/machinery/power/smes/buildable/offmap_spawn/empty,
+/turf/simulated/floor/tiled/asteroid_steel{
+	outdoors = 1
+	},
+/area/tether_away/beach/resort)
+"Of" = (
+/obj/machinery/chem_master/condimaster,
+/obj/machinery/light,
+/turf/simulated/floor/tiled/eris/cafe,
 /area/tether_away/beach/resort/kitchen)
 "Ow" = (
 /turf/simulated/floor/outdoors/newdirt,
@@ -1868,6 +2066,12 @@
 /obj/effect/overlay/palmtree_l,
 /turf/simulated/floor/beach/sand/outdoors,
 /area/tether_away/beach/resort)
+"Ps" = (
+/obj/structure/bed/chair/wood/wings{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/tether_away/beach/resort/kitchen)
 "PG" = (
 /obj/machinery/shower{
 	dir = 8;
@@ -1920,6 +2124,11 @@
 /obj/item/weapon/reagent_containers/glass/bucket,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/tether_away/beach/resort/janibar)
+"QM" = (
+/obj/machinery/biogenerator,
+/obj/machinery/light,
+/turf/simulated/floor/tiled/eris/cafe,
+/area/tether_away/beach/resort/kitchen)
 "QY" = (
 /obj/structure/mirror{
 	dir = 4;
@@ -1927,6 +2136,23 @@
 	},
 /turf/simulated/floor/wood,
 /area/tether_away/beach/resort/dorm2)
+"Ra" = (
+/obj/structure/closet/secure_closet/freezer/fridge,
+/obj/random/meat,
+/obj/random/meat,
+/obj/random/meat,
+/obj/random/meat,
+/obj/random/meat,
+/obj/random/meat,
+/obj/random/meat,
+/obj/random/meat,
+/obj/random/meat,
+/obj/random/meat,
+/obj/random/meat,
+/obj/random/meat,
+/obj/machinery/light,
+/turf/simulated/floor/tiled/eris/cafe,
+/area/tether_away/beach/resort/kitchen)
 "Rh" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -1955,11 +2181,11 @@
 /turf/simulated/floor/wood,
 /area/tether_away/beach/resort/janibar)
 "Rv" = (
-/obj/structure/table/woodentable,
-/obj/random/drinkbottle,
 /obj/machinery/light/small{
 	dir = 4
 	},
+/obj/structure/bed/double/padded,
+/obj/item/weapon/bedsheet/piratedouble,
 /turf/simulated/floor/wood,
 /area/tether_away/beach/resort/dorm4)
 "Rx" = (
@@ -2000,6 +2226,10 @@
 	},
 /turf/simulated/floor/wood,
 /area/tether_away/beach/resort/dorm3)
+"RP" = (
+/obj/machinery/appliance/mixer/candy,
+/turf/simulated/floor/tiled/eris/cafe,
+/area/tether_away/beach/resort/kitchen)
 "RQ" = (
 /turf/simulated/floor/water/beach{
 	dir = 8
@@ -2037,6 +2267,10 @@
 /obj/structure/table/rack/steel,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/tether_away/beach/resort/janibar)
+"SM" = (
+/obj/structure/table/darkglass,
+/turf/simulated/floor/tiled/eris/cafe,
+/area/tether_away/beach/resort/kitchen)
 "SQ" = (
 /obj/structure/flora/ausbushes/fernybush,
 /turf/simulated/floor/outdoors/grass,
@@ -2053,6 +2287,16 @@
 	},
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/tether_away/beach/resort/lockermed)
+"Tb" = (
+/obj/structure/table/steel_reinforced,
+/obj/machinery/chemical_dispenser/bar_soft/full{
+	dir = 8;
+	pixel_y = 1;
+	pixel_x = 22
+	},
+/obj/item/weapon/reagent_containers/glass/rag,
+/turf/simulated/floor/lino,
+/area/tether_away/beach/resort/kitchen)
 "Tg" = (
 /obj/random/mob/semirandom_mob_spawner/fish/b,
 /turf/simulated/floor/water/ocean,
@@ -2090,7 +2334,9 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	outdoors = 1
+	},
 /area/tether_away/beach/powershed)
 "Um" = (
 /turf/simulated/wall/sandstone,
@@ -2102,6 +2348,10 @@
 	outdoors = 1
 	},
 /area/tether_away/beach/resort)
+"UF" = (
+/mob/living/simple_mob/animal/passive/crab,
+/turf/simulated/floor/beach/sand/desert/outdoors,
+/area/tether_away/beach/jungle)
 "UN" = (
 /turf/simulated/wall/sandstone,
 /area/tether_away/beach/resort/janibar)
@@ -2133,22 +2383,29 @@
 /obj/structure/sink/puddle,
 /turf/simulated/floor/outdoors/grass/forest,
 /area/tether_away/beach/jungle)
+"VQ" = (
+/turf/simulated/floor/beach/sand/outdoors,
+/area/space)
 "VS" = (
 /turf/simulated/floor/water/beach/corner{
 	dir = 1
 	},
 /area/tether_away/beach/jungle)
+"VV" = (
+/obj/structure/flora/pottedplant/tropical,
+/turf/simulated/floor/lino,
+/area/tether_away/beach/resort/kitchen)
 "Wc" = (
 /turf/simulated/floor/wood{
 	outdoors = 1
 	},
 /area/tether_away/beach/coast)
 "Wd" = (
-/obj/machinery/appliance/cooker/grill,
-/obj/machinery/light{
-	dir = 1
+/obj/structure/railing{
+	dir = 8
 	},
-/turf/simulated/floor/tiled/eris/cafe,
+/obj/structure/flora/ausbushes/ywflowers,
+/turf/simulated/floor/outdoors/grass,
 /area/tether_away/beach/resort/kitchen)
 "Wf" = (
 /turf/simulated/floor/outdoors/grass,
@@ -2157,6 +2414,18 @@
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/tether_away/beach/resort/lockermed)
+"Wn" = (
+/obj/structure/closet/crate/bin,
+/turf/simulated/floor/tiled/eris/cafe,
+/area/tether_away/beach/resort/kitchen)
+"Ws" = (
+/obj/structure/railing,
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/flora/ausbushes/brflowers,
+/turf/simulated/floor/outdoors/grass,
+/area/tether_away/beach/resort/kitchen)
 "Wu" = (
 /turf/simulated/floor/wood{
 	outdoors = 1
@@ -2292,6 +2561,19 @@
 "ZC" = (
 /turf/simulated/mineral/ignore_mapgen,
 /area/tether_away/beach/cavebase)
+"ZH" = (
+/obj/structure/bed/chair/wood/wings,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/tether_away/beach/resort/kitchen)
+"ZP" = (
+/obj/structure/grille,
+/turf/simulated/floor/tiled/asteroid_steel{
+	outdoors = 1
+	},
+/area/tether_away/beach/powershed)
 "ZX" = (
 /obj/structure/cable/cyan{
 	d1 = 1;
@@ -4097,7 +4379,7 @@ bj
 bj
 Sv
 Ee
-aa
+UF
 VS
 CP
 bj
@@ -6156,7 +6438,7 @@ aw
 aq
 Wu
 tr
-aa
+UF
 Yv
 bj
 am
@@ -6647,7 +6929,7 @@ bq
 bq
 aa
 tr
-aj
+fw
 ak
 am
 am
@@ -9183,12 +9465,12 @@ aa
 aa
 ac
 aa
-aa
-aa
-aa
-aa
-aa
-aa
+bp
+bp
+bp
+bp
+bp
+bp
 aa
 aa
 aa
@@ -9438,14 +9720,14 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+bp
+bp
+bp
+hK
+hK
+ae
+ae
+bp
 ab
 aa
 aa
@@ -9695,14 +9977,14 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+bp
+ae
+ae
+hK
+hK
+ae
+hK
+bp
 bh
 aa
 aa
@@ -9951,15 +10233,15 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+bp
+bp
+ae
+bj
+bj
+ae
+ae
+ae
+bp
 aa
 aa
 aa
@@ -10207,16 +10489,16 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+bp
+bp
+ae
+mM
+bj
+bj
+bj
+mM
+mM
+bp
 Dq
 aa
 aa
@@ -10464,16 +10746,16 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+bp
+ae
+ae
+bj
+bj
+bj
+bj
+mM
+ae
+bp
 aa
 aa
 aa
@@ -10721,16 +11003,16 @@ aa
 aa
 aa
 aa
-aa
-aa
-ab
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+zW
+ae
+ai
+bj
+bj
+bj
+bj
+ae
+ae
+zW
 aa
 aa
 aa
@@ -10978,16 +11260,16 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+bp
+ae
+hK
+bj
+bj
+bj
+bj
+hK
+ae
+bp
 aa
 aa
 aa
@@ -11235,16 +11517,16 @@ bh
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+bp
+mM
+ae
+bj
+bj
+bj
+ae
+hK
+ae
+bp
 aa
 aa
 aa
@@ -11492,16 +11774,16 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+bp
+bp
+ae
+ae
+bj
+bj
+ae
+hK
+ae
+bp
 aa
 aa
 aa
@@ -11750,15 +12032,15 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+bp
+bp
+ae
+ae
+hK
+ae
+ae
+bp
+bp
 aa
 aa
 aa
@@ -12008,13 +12290,13 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+bp
+bp
+ae
+ae
+ae
+bp
+bp
 aa
 aa
 aa
@@ -12266,11 +12548,11 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
+bp
+bp
+zW
+bp
+bp
 aa
 aa
 aa
@@ -12522,11 +12804,11 @@ aa
 aa
 aa
 aa
-ac
 aa
 aa
 aa
-aa
+bp
+bp
 aa
 aa
 aa
@@ -13293,7 +13575,7 @@ aa
 aa
 aa
 aa
-aa
+ac
 aa
 aa
 aa
@@ -14318,6 +14600,7 @@ aa
 aa
 aa
 aa
+ac
 aa
 aa
 aa
@@ -14330,21 +14613,20 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-lI
+kd
+kd
+kd
+kd
+zw
+zw
+zw
+zw
+zw
+zw
+zw
+zw
+zw
+zw
 lI
 lI
 lI
@@ -14588,20 +14870,20 @@ aa
 aa
 aa
 aa
-aa
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-lI
+kd
+Cr
+kT
+kT
+kT
+kT
+kT
+kT
+kT
+kT
+kT
+kT
+Yq
+zw
 lI
 lI
 lI
@@ -14839,26 +15121,26 @@ aa
 aa
 aa
 aa
-ab
 aa
 aa
 aa
 aa
+aa
 lI
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-lI
+zw
+jQ
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+jQ
+zw
 lI
 lI
 Nv
@@ -15092,30 +15374,30 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-lI
+LB
+LB
+rZ
+rZ
+rZ
+LB
+LB
+LB
+rZ
+LB
+ad
+hM
+LB
+rZ
+LB
+LB
+DI
+Nv
+Nv
+Nv
+Nv
+Nv
+jQ
+zw
 lI
 Nv
 Nv
@@ -15349,30 +15631,30 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-hg
-lI
-lI
-hg
-lI
-lI
-lI
-lI
-hg
+LB
+yf
+aD
+Bk
+hL
+Of
+LB
+ZH
+mu
+Ps
+ad
+AS
+pQ
+mu
+rQ
+LB
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+jQ
+af
 Nv
 Nv
 sD
@@ -15606,30 +15888,30 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-lI
+rZ
+SG
+aD
+aD
+aD
+aD
+SM
+ad
+ad
+ad
+ad
+AS
+ad
+ad
+ad
+rZ
+Wd
+df
+xD
+df
+Ws
 Nv
+jQ
+zw
 Nv
 Nv
 sD
@@ -15863,30 +16145,30 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-hg
-lI
-lI
-lI
-lI
+rZ
+mb
+aD
+BX
+aD
+aD
+SM
+ad
+ad
+ad
+ad
+AS
+ad
+ad
+ad
+rZ
+tG
+fl
+By
+fl
+jJ
 Nv
-Nv
-Nv
+jQ
+zw
 Nv
 Nv
 sD
@@ -16120,30 +16402,30 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-hg
-lI
-lI
+rZ
+qB
+aD
+oL
+aD
+aD
+SM
+ad
+ad
+ad
+ad
+lL
+uQ
+ad
+ad
+rZ
+Jn
+fl
+Bf
+fl
+lJ
 Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
+jQ
+zw
 li
 Nv
 sD
@@ -16377,30 +16659,30 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-lI
-lI
-lI
-lI
-lI
-lI
-lI
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
+rZ
+tz
+aD
+yR
+aD
+aD
+SM
+ad
+ad
+ad
+Lj
+ad
+AS
+ad
+ad
+uW
+DZ
+DZ
+DZ
+DZ
+DZ
+zw
+jQ
+zw
 Nv
 Nv
 sD
@@ -16634,29 +16916,29 @@ aa
 aa
 aa
 aa
-aa
-aa
-lI
-lI
-lI
-lI
-lI
-lI
-Nv
-Nv
-Nv
+rZ
+RP
+aD
+eV
+aD
+aD
+SM
+aI
+aI
+aI
+aI
+ad
+AS
+ad
+ad
+ad
+DZ
+DZ
+DZ
+DZ
+DZ
 zw
-zw
-zw
-zw
-zw
-zw
-zw
-zw
-zw
-zw
-zw
-zw
+jQ
 zw
 Nv
 Nv
@@ -16891,42 +17173,42 @@ aa
 aa
 aa
 aa
-aa
-lI
-lI
-lI
-lI
-lI
-lI
+LB
+qo
+aD
+aD
+aD
+Wn
+LB
+ku
+ku
+ku
+ku
+ku
+yW
+ad
+ad
+rZ
+Jn
+fl
+Bf
+fl
+lJ
+Nv
+jQ
+zw
+zw
+zw
+zw
+zw
+zw
+zw
+zw
+zw
 Nv
 Nv
-Nv
-zw
-zw
-zw
-zw
-zw
-zw
-zw
-zw
-zw
-zw
-zw
-zw
-zw
-zw
-zw
-zw
-zw
-zw
-zw
-zw
-zw
-Nv
-Nv
-Nv
-Nv
-tr
+aH
+mi
 aj
 ak
 bf
@@ -17148,38 +17430,38 @@ aa
 aa
 aa
 aa
-aa
-lI
-lI
-lI
-lI
-lI
-Nv
-OK
-Nv
-Wf
-zw
 LB
-LB
-ah
-ah
-ah
-ah
-ah
-LB
+wT
+aD
+aD
+aD
+aD
+uk
+io
+io
+io
+io
+ku
 AS
-LB
-LB
+ad
+ad
+rZ
+ah
+fl
+By
+fl
+Ja
+Nv
+jQ
 zw
-aG
+VQ
+VQ
 UN
 UN
 UN
 ao
 UN
 zw
-zw
-Nv
 Nv
 Nv
 Nv
@@ -17405,38 +17687,38 @@ aa
 aa
 aa
 aa
-aa
-lI
-lI
-lI
-lI
-Nv
-Nv
-Nv
-Wf
-Wf
-kd
 LB
-zV
-yf
-as
+vz
+aD
+aD
+aD
+Ra
+LB
+FC
+io
+io
+io
+io
+AS
 ad
+ad
+rZ
+jv
+xX
 BC
-yf
-as
-ad
-CM
-LB
-wT
-aH
+xX
+Lk
+Nv
+jQ
+zw
+VQ
+VQ
 UN
 aK
 me
 me
 aU
 aX
-zw
-Nv
 Nv
 Nv
 Nv
@@ -17662,38 +17944,38 @@ aa
 aa
 aa
 aa
-aa
-lI
-lI
-lI
-Nv
-Nv
-Wf
-Wf
-Wf
-Wf
-Ks
-ah
-as
-yf
-as
-ad
-as
-yf
-as
-ad
-BR
 LB
+LB
+LB
+aD
+LB
+LB
+LB
+aG
+Jm
+Tb
+Hv
+VV
+zV
+ad
+aE
+LB
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+jQ
 zw
-aI
+VQ
+VQ
 UN
 aL
 me
 me
 aU
 aX
-zw
-Nv
 Nv
 Nv
 Nv
@@ -17920,37 +18202,37 @@ aa
 aa
 aa
 aa
-lI
-lI
-Nv
-Nv
-Nv
-Wf
-EU
-LJ
-Wf
-Wf
-ah
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-aE
 LB
+aF
+aD
+aD
+QM
+LB
+LB
+LB
+LB
+LB
+LB
+LB
+LB
+LB
+LB
+DI
+Nv
+Nv
+Nv
+Nv
+Nv
+jQ
 zw
-aH
+VQ
+VQ
 UN
 aM
 me
 me
 aV
 aX
-zw
-Nv
 Nv
 Nv
 Nv
@@ -18177,37 +18459,37 @@ aa
 aa
 aa
 aa
-lI
-lI
+rZ
+aF
+aD
+aD
+XB
+rZ
 Nv
-OK
-Wf
-Wf
-LJ
-LJ
-LJ
-Wf
-ah
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-AS
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+jQ
 zw
-aI
+VQ
+VQ
 aJ
 aN
 me
 me
 aW
 aX
-zw
-Nv
 Nv
 Nv
 Nv
@@ -18434,37 +18716,37 @@ aa
 aa
 aa
 aa
-lI
-lI
+rZ
+aF
+aD
+aD
+Kq
+rZ
 Nv
 Nv
-Wf
-Wf
-LJ
-LJ
-LJ
-Wf
-ah
-ad
-ad
-By
-By
-By
-By
-By
-io
-Of
-LB
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+jQ
 zw
-aH
+VQ
+VQ
 UN
 aO
 me
 me
 aW
 aX
-zw
-Nv
 Nv
 Nv
 Nv
@@ -18691,37 +18973,37 @@ aa
 aa
 aa
 aa
-lI
-lI
-Nv
-Nv
-Nv
-Wf
-Wf
-LJ
-wJ
-Wf
-ah
-ad
-ad
-Kq
-Kq
-Kq
-Kq
-Kq
-io
-Kq
 LB
+LJ
+mF
+aD
+Hs
+LB
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+jQ
 zw
-aI
+VQ
+VQ
 UN
 aP
 me
 me
 aV
 aX
-zw
-Nv
 Nv
 Nv
 Nv
@@ -18948,37 +19230,37 @@ aa
 aa
 aa
 aa
-lI
-lI
-lI
-Nv
-Nv
-Nv
-Wf
-Wf
-Wf
-Wf
 LB
-mb
-Ja
-mu
-aD
-aD
-aD
-aD
-aD
-Bk
 LB
+LB
+LB
+LB
+LB
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+jQ
 zw
-aH
+VQ
+VQ
 UN
 Rm
 gU
 gU
 zb
 hq
-zw
-Nv
 Nv
 Nv
 Nv
@@ -19209,33 +19491,33 @@ lI
 lI
 lI
 lI
+lI
+lI
 Nv
 Nv
 Nv
-Wf
-Wf
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+jQ
 zw
-LB
-LB
-Jn
-LB
-fl
-aD
-ef
-uk
-aD
-XB
-LB
-zw
-aI
+VQ
+VQ
 UN
 aQ
 me
 me
 ag
 oF
-zw
-Nv
 Nv
 Nv
 Nv
@@ -19467,32 +19749,32 @@ lI
 lI
 lI
 lI
-OK
+lI
 Nv
 Nv
-Wf
-zw
-zw
-rQ
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
 jQ
-LB
-Wd
-aD
-uQ
-Jm
-aD
-LT
-LB
 zw
-aH
+VQ
+VQ
 UN
 aR
 me
 me
 aV
 oF
-zw
-Nv
 Nv
 Nv
 Nv
@@ -19727,29 +20009,29 @@ lI
 Nv
 Nv
 Nv
-zw
-zw
-zw
-zw
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
 jQ
-ah
-tG
-aD
-aD
-aD
-aD
-aF
-ah
 zw
-aI
+VQ
+VQ
 UN
 aS
 me
 me
 aV
 oF
-zw
-Nv
 Nv
 Nv
 Nv
@@ -19980,33 +20262,33 @@ lI
 lI
 lI
 lI
-lI
+ef
+ef
+ZP
+Um
+Um
+zw
 Nv
-Um
-Um
-zD
-Um
-Um
-zw
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
 jQ
-LB
-SG
-aD
-hL
-Hv
-mF
-aF
-LB
 zw
-aH
+VQ
+VQ
 UN
 aT
 me
 me
 aV
 oF
-zw
-Nv
 Nv
 Nv
 Nv
@@ -20237,33 +20519,33 @@ lI
 lI
 lI
 lI
-lI
-Nv
-zD
-ku
+ef
+NE
 zZ
 zP
-af
+LT
 Yq
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
 jQ
-LB
-LB
-LB
-ah
-ah
-LB
-LB
-LB
 zw
-aI
+VQ
+VQ
 UN
 UN
 UN
 ao
 UN
 jQ
-zw
-Nv
 Nv
 Nv
 Nv
@@ -20494,15 +20776,12 @@ lI
 lI
 hg
 lI
-lI
-Nv
-zD
-hR
+ef
+CM
 Uk
 qI
 zD
 bT
-eV
 kT
 kT
 kT
@@ -20511,7 +20790,12 @@ kT
 kT
 kT
 kT
-Rx
+kT
+kT
+kT
+hR
+kT
+kT
 kT
 kT
 kT
@@ -20519,8 +20803,6 @@ kT
 kT
 kT
 JU
-zw
-Nv
 Nv
 Nv
 Nv
@@ -20751,13 +21033,13 @@ lI
 lI
 lI
 lI
-lI
-Nv
-zD
-mM
+ef
+BR
 py
 Tp
 zD
+zw
+zw
 zw
 zw
 zw
@@ -20782,7 +21064,7 @@ Nv
 Nv
 Nv
 tr
-aj
+fw
 ak
 bf
 bf
@@ -21008,13 +21290,13 @@ lI
 lI
 lI
 lI
-lI
-Nv
-Um
-Um
+ef
+ef
 kO
 Um
 Um
+zw
+zw
 zw
 zw
 Nv
@@ -21032,7 +21314,7 @@ UN
 UN
 UN
 zw
-Nv
+as
 Nv
 Nv
 Nv
@@ -21267,10 +21549,10 @@ Nv
 lI
 lI
 Nv
-zw
-zw
 Fm
-mi
+Nv
+Nv
+zw
 zw
 zw
 zw
@@ -21289,7 +21571,7 @@ SK
 QL
 UN
 zw
-Nv
+as
 Nv
 AV
 Nv
@@ -21524,9 +21806,9 @@ lI
 Nv
 lI
 lI
-Nv
-Nv
 Fm
+Nv
+Nv
 Nv
 Nv
 Nv
@@ -21781,9 +22063,9 @@ lI
 lI
 lI
 lI
-lI
-Nv
 Fm
+Nv
+Nv
 Nv
 pP
 lI
@@ -22038,9 +22320,9 @@ lI
 lI
 lI
 lI
-lI
-Nv
 Fm
+Nv
+Nv
 Nv
 lI
 lI
@@ -22065,8 +22347,8 @@ Nv
 Nv
 Nv
 Nv
-Nv
-tr
+aH
+mi
 aj
 ak
 bf
@@ -22295,9 +22577,9 @@ hg
 lI
 lI
 lI
-lI
-Nv
 Fm
+Nv
+Nv
 Nv
 lI
 lI
@@ -22552,9 +22834,9 @@ lI
 lI
 lI
 lI
-lI
-Nv
 Fm
+Nv
+Nv
 Nv
 lI
 lI
@@ -22809,9 +23091,9 @@ Nv
 Nv
 Nv
 Nv
-Nv
-Nv
 Fm
+Nv
+Nv
 Nv
 lI
 lI
@@ -23066,9 +23348,9 @@ RX
 RX
 RX
 RX
-RX
-RX
 Rh
+Nv
+Nv
 Nv
 lI
 pP
@@ -28233,8 +28515,8 @@ lI
 lI
 lI
 lI
-lI
-tr
+HY
+mi
 aj
 ak
 bf
@@ -29520,7 +29802,7 @@ aa
 aa
 aa
 tr
-aj
+fw
 ak
 bf
 bf
@@ -31845,7 +32127,7 @@ bf
 bf
 bk
 mC
-mC
+fm
 mC
 mC
 fQ
@@ -33375,7 +33657,7 @@ aa
 aa
 aa
 tr
-aj
+fw
 ak
 bf
 bf
