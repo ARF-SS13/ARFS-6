@@ -19,6 +19,7 @@
 	skybox_icon_state = "v2"
 	skybox_pixel_x = 0
 	skybox_pixel_y = 0
+	docking_codes = "AERO"
 
 /* // ARFS EDIT: Overrided in arfs_submaps.dm
 /obj/effect/overmap/visitable/sector/virgo2/Initialize()

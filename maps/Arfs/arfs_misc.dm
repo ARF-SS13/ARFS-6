@@ -184,3 +184,10 @@
 // 		item_records = attached.item_records
 // 	else
 // 		to_chat(world,"<span class='danger'>[src] at [x],[y],[z] cannot find the unit above it!</span>")
+
+/obj/item/weapon/paper/known_docking_codes
+	name = "Docking Codes"
+	info = {"<b>A.R.F.S. Dallus</b> - <i>ARFD</i><br>\
+		 <b>A.R.F.S. Serenity</b> - <i>ARFS</i><br>\
+		 <b>Virgo 2</b> - <i>AERO</i><br>\
+		 <b>Virgo 4</b> - <i>2HOT</i><br>"}

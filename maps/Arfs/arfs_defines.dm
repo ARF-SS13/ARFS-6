@@ -260,39 +260,3 @@
 		Z_LEVEL_RESIDENTIAL_STATION_ARFS,
 		Z_LEVEL_RESIDENTIAL_MANSION_ARFS
 	)
-
-/obj/effect/overmap/visitable/ship/arfs
-	name = "ARFS Dallus"	// Name of the location on the overmap.
-	desc = "A three-deck research and civilian vessel controlled by the Alliance of Racial Federations."
-
-	scanner_desc = @{"[i]Registration[/i]: ARFS Dallus
-[i]Class[/i]: Research Frigate, Dallus Class
-[i]Transponder[/i]: Transmitting (CIV), ARF IFF
-[b]Notice[/b]: ARF Vessel, authorized personnel only"}
-
-	icon_state = "ship"
-	vessel_mass = 100000
-	burn_delay = 2 SECONDS
-	fore_dir = NORTH	// Which direction the ship/z-level is facing.  It will move dust particles from that direction when moving.
-	base = TRUE		// Honestly unsure what this does but it seems the main sector or "Map" we're at has this so here it stays
-	// The waypoints that are avaliable once you are at this Navpoint
-	initial_generic_waypoints = list(
-		"arfs_excursion_hangar",
-		"arfs_dock_south", 				//Deck 3, Port Arm, South Dock
-		"arfs_dock_north", 				//Deck 3, Port Arm, North Dock
-		"arfs_dock_west",   			//Deck 3, Port Arm, West Dock
-		"arfs_dock_south_starboard", 	//Deck 3, Port Arm, South Dock
-		"arfs_dock_north_starboard",	//Deck 3, Port Arm, North Dock
-		"arfs_space_nw", 				//Deck 3, NW space
-		"arfs_space_ne", 				//Deck 3, NE space
-		"arfs_space_sw", 				//Deck 3, SW space
-		"arfs_space_se"  				//Deck 3, SE space
-		)
-
-	initial_restricted_waypoints = list(
-		"Excursion Shuttle" = list("arfs_excursion_hangar"),
-		)
-
-	known = TRUE;
-	unowned_areas = list(/area/shuttle/excursion)
-
