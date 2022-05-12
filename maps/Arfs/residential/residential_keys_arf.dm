@@ -103,6 +103,10 @@
 	name = "RS16, level two residential key"
 	access = list(8016)
 
+/obj/item/weapon/card/id/residential/rs14
+	name = "RS18, level two residential Key"
+	access = list(8017)
+
 // Small apartment fluff spawns
 /datum/gear/fluff/res_key_rs1
 	path = /obj/item/weapon/card/id/residential/rs1
@@ -173,12 +177,19 @@
 	ckeywhitelist = list("thingpony", "theilluminated1")
 	character_name = list ("Noel Winters", "ARES V3 Mk2", "ARES V3 Mk3")
 
-/datum/gear/fluff/res_key_rs12
+/datum/gear/fluff/res_key_rs13
 	path = /obj/item/weapon/card/id/residential/rs13
 	display_name = "RS13, level two keys"
 	description = "residential"
 	ckeywhitelist = list("thingpony", "truedark")
 	character_name = list ("River Mae", "Mimi")
+
+/datum/gear/fluff/res_key_rs14
+	path = /obj/item/weapon/card/id/residential/rs14
+	display_name = "RS14, level two keys"
+	description = "residential"
+	ckeywhitelist = list("talkingcactus")
+	character_name = list("Haley Dupont")
 
 // Medium Keys
 /obj/item/weapon/card/id/residential/rm1
