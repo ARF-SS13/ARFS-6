@@ -103,10 +103,6 @@
 	name = "RS16, level two residential key"
 	access = list(8016)
 
-/obj/item/weapon/card/id/residential/rs14
-	name = "RS18, level two residential Key"
-	access = list(8017)
-
 // Small apartment fluff spawns
 /datum/gear/fluff/res_key_rs1
 	path = /obj/item/weapon/card/id/residential/rs1

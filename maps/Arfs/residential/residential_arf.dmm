@@ -620,6 +620,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/residential/ship_bay)
+"agx" = (
+/obj/structure/railing/grey{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/residential/room14_armory)
 "agA" = (
 /turf/simulated/shuttle/wall/alien,
 /area/residential/ship_bay)
@@ -8750,6 +8756,10 @@
 /obj/item/clothing/gloves/fingerless{
 	pixel_y = 12
 	},
+/obj/item/clothing/under/corp/pcrc{
+	pixel_x = -6
+	},
+/obj/item/weapon/storage/backpack/security,
 /turf/simulated/floor/tiled/techmaint,
 /area/residential/room14_armory)
 "bpw" = (
@@ -9003,6 +9013,9 @@
 "cVj" = (
 /obj/structure/table/steel,
 /obj/machinery/microwave,
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_x = -32
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/residential/room14)
 "daB" = (
@@ -9152,6 +9165,18 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/residential/ship_bay)
+"eiI" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass/hidden{
+	dir = 2
+	},
+/turf/simulated/floor/tiled,
+/area/residential/corridors)
 "ejq" = (
 /obj/machinery/computer/shuttle_control{
 	dir = 8
@@ -9175,9 +9200,20 @@
 /turf/simulated/floor/water/deep/ocean,
 /area/space)
 "eoy" = (
-/obj/item/device/assembly/prox_sensor,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/table/steel,
+/obj/item/device/flashlight/maglight{
+	pixel_x = -7
+	},
+/obj/item/weapon/handcuffs{
+	pixel_x = 4;
+	pixel_y = 7
+	},
+/obj/item/weapon/gun/energy/taser{
+	pixel_x = 7;
+	pixel_y = -3
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/residential/room14_armory)
 "eqL" = (
@@ -9245,10 +9281,6 @@
 	},
 /obj/machinery/light{
 	dir = 4
-	},
-/obj/machinery/alarm/alarms_hidden{
-	dir = 8;
-	pixel_x = 25
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/residential/room14_armory)
@@ -9545,6 +9577,11 @@
 	pixel_y = -1;
 	pixel_x = 2
 	},
+/obj/machinery/firealarm{
+	dir = 4;
+	layer = 3.3;
+	pixel_x = -26
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/residential/room14)
 "gRd" = (
@@ -9672,12 +9709,6 @@
 /obj/item/weapon/towel/random,
 /turf/simulated/shuttle/floor/skipjack,
 /area/space)
-"hnp" = (
-/obj/machinery/door/airlock/freezer{
-	name = "Restroom"
-	},
-/turf/simulated/floor/tiled/freezer,
-/area/residential/room14)
 "hoE" = (
 /obj/effect/floor_decal/corner/black/diagonal,
 /obj/machinery/chemical_dispenser/bar_soft/full{
@@ -9887,7 +9918,8 @@
 /area/residential/room12)
 "ike" = (
 /obj/machinery/door/airlock/highsecurity{
-	req_one_access = null
+	req_one_access = null;
+	req_access = list(8014)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -10072,6 +10104,10 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced,
+/obj/machinery/alarm/alarms_hidden{
+	dir = 8;
+	pixel_x = 25
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/residential/room14_armory)
 "jIH" = (
@@ -10115,6 +10151,11 @@
 	dir = 4
 	},
 /obj/structure/window/reinforced,
+/obj/machinery/firealarm{
+	dir = 4;
+	layer = 3.3;
+	pixel_x = -26
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/residential/room14_armory)
 "jPh" = (
@@ -10284,6 +10325,9 @@
 	dir = 1;
 	pixel_y = -27;
 	pixel_x = -5
+	},
+/obj/machinery/light/small{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/residential/room14)
@@ -10469,9 +10513,6 @@
 /obj/machinery/recharger/wallcharger{
 	pixel_y = 22
 	},
-/obj/machinery/light{
-	dir = 1
-	},
 /turf/simulated/floor/tiled/techmaint,
 /area/residential/room14_armory)
 "mXV" = (
@@ -10590,6 +10631,9 @@
 /obj/structure/mirror{
 	dir = 4;
 	pixel_x = 28
+	},
+/obj/machinery/light/small{
+	pixel_x = -9
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/residential/room14)
@@ -10900,6 +10944,10 @@
 /obj/item/clothing/suit/armor/pcarrier/navy{
 	name = "\improper PCRC plate carrier"
 	},
+/obj/machinery/alarm/alarms_hidden{
+	dir = 8;
+	pixel_x = 25
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/residential/room14_armory)
 "qwS" = (
@@ -11017,6 +11065,9 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
+	},
+/obj/structure/railing/grey{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/residential/room14_armory)
@@ -11155,6 +11206,24 @@
 	pixel_x = 6
 	},
 /obj/item/clothing/shoes/boots/jungle{
+	pixel_y = -7;
+	pixel_x = 3
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	layer = 3.3;
+	pixel_x = -26
+	},
+/obj/item/device/radio/headset/headset_sec{
+	pixel_y = 10;
+	pixel_x = -5
+	},
+/obj/item/device/radio/headset/headset_sec/alt{
+	pixel_y = 10;
+	pixel_x = 5
+	},
+/obj/item/clothing/accessory/holster/leg/black{
+	pixel_x = -6;
 	pixel_y = -7
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -11320,6 +11389,9 @@
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
 "ueS" = (
+/obj/structure/railing/grey{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/residential/room14_armory)
 "uki" = (
@@ -11951,10 +12023,12 @@
 /area/residential/room1)
 "yau" = (
 /obj/machinery/door/window/northleft{
-	name = "Lethals"
+	name = "Lethals";
+	req_access = list(8014)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/railing/grey,
 /turf/simulated/floor/tiled/techmaint,
 /area/residential/room14_armory)
 "yby" = (
@@ -11962,6 +12036,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
+"yjT" = (
+/obj/machinery/door/airlock/freezer{
+	name = "Restroom"
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/residential/room14)
 
 (1,1,1) = {"
 aaa
@@ -38607,9 +38687,9 @@ aeP
 aeP
 aeP
 aeP
-aeR
-anv
-aeR
+ahP
+eiI
+ahP
 aeP
 aeP
 aeP
@@ -39365,7 +39445,7 @@ gOC
 cgL
 aeR
 anv
-aeR
+aiI
 aeP
 aaa
 aaa
@@ -39608,7 +39688,7 @@ aaa
 eKK
 jOZ
 gWo
-ueS
+agx
 oOf
 eKK
 cFt
@@ -40117,7 +40197,7 @@ bvR
 eKK
 mDs
 cgL
-hnp
+yjT
 cgL
 aeR
 anv
@@ -40875,7 +40955,7 @@ aaa
 aaa
 aaa
 aeP
-aeR
+ahO
 anv
 aeR
 aeP
