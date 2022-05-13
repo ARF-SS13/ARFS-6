@@ -8457,8 +8457,9 @@
 	d2 = 0;
 	icon_state = "16-0"
 	},
-/obj/structure/cable/green{
-	dir = 4
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/station/cargo)
@@ -8632,11 +8633,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/station/cargo)
 "aDQ" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/machinery/light/small{
 	dir = 1
 	},
@@ -8645,6 +8641,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/station/cargo)
@@ -34164,6 +34165,12 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/plating,
 /area/engineering/storage)
+"eLN" = (
+/obj/effect/landmark{
+	name = "Observer-Start"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/sleep/cryo)
 "eOI" = (
 /obj/machinery/floodlight,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -36179,6 +36186,18 @@
 /obj/effect/floor_decal/industrial/outline,
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
+"hJw" = (
+/obj/effect/floor_decal/corner/brown{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 9
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/storage)
 "hJM" = (
 /obj/item/device/radio/intercom{
 	name = "Station Intercom (General)";
@@ -37617,10 +37636,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
-"jDs" = (
-/mob/observer/dead,
-/turf/simulated/floor/wood,
-/area/crew_quarters/sleep/cryo)
 "jEq" = (
 /obj/structure/bed/padded,
 /obj/item/weapon/bedsheet/orange,
@@ -38951,6 +38966,26 @@
 /obj/machinery/atmospherics/pipe/manifold/visible/blue,
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
+"lBC" = (
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	frequency = 1380;
+	id_tag = "cargo_bay";
+	name = "cargo bay hatch controller";
+	pixel_x = -30;
+	req_one_access = list(13,31);
+	tag_door = "supply_shuttle_hatch"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/machinery/camera/network/cargo{
+	c_tag = "CRG - Cargo Bay 2";
+	dir = 4;
+	name = "security camera"
+	},
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled,
+/area/quartermaster/storage)
 "lCG" = (
 /obj/structure/table/woodentable,
 /obj/item/device/flashlight/lamp,
@@ -39036,6 +39071,9 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/medbay)
+"lFM" = (
+/turf/simulated/wall,
+/area/crew_quarters/longue_area)
 "lGl" = (
 /turf/simulated/floor/carpet,
 /area/hallway/station/residentialdock{
@@ -40537,6 +40575,12 @@
 /area/hallway/station/residentialdock{
 	requires_power = 0
 	})
+"nLm" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 9
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/storage)
 "nOD" = (
 /obj/machinery/light{
 	dir = 4
@@ -44054,9 +44098,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/fore)
-"sEi" = (
-/turf/simulated/wall,
-/area/crew_quarters/longue_area)
 "sFe" = (
 /obj/machinery/navbeacon/patrol{
 	location = "HALL_CENTRAL_EVAC_1";
@@ -46413,6 +46454,12 @@
 	},
 /turf/simulated/floor/carpet/oracarpet,
 /area/engineering/break_room)
+"wbL" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 10
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/storage)
 "wcP" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/alarm{
@@ -47049,6 +47096,12 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering)
+"xdq" = (
+/obj/effect/floor_decal/corner/brown{
+	dir = 9
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/storage)
 "xdF" = (
 /obj/structure/toilet{
 	dir = 8
@@ -73443,7 +73496,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aBd
 aaa
 aaa
 aaa
@@ -73700,7 +73753,7 @@ aaa
 aaa
 aaa
 aaa
-aBd
+aaa
 aaa
 aaa
 aaa
@@ -73955,11 +74008,11 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+auB
+aBN
+aCB
+aCZ
+auB
 aaa
 aaa
 aaa
@@ -74213,9 +74266,9 @@ aaa
 aaa
 aaa
 auB
-aBN
-aCB
-aCZ
+aBO
+aCC
+aBO
 auB
 aaa
 aaa
@@ -74468,13 +74521,13 @@ aaa
 aaa
 aaa
 aaa
-aaa
 auB
-aBO
-aCC
-aBO
 auB
-aaa
+aBN
+aCD
+aBN
+auB
+auB
 aaa
 aaa
 aaa
@@ -74726,11 +74779,11 @@ aaa
 aaa
 aaa
 aAd
-auB
-aBN
-aCD
-aBN
-auB
+hJw
+nLm
+lBC
+wbL
+xdq
 auB
 auB
 aaa
@@ -80399,7 +80452,7 @@ aPY
 aQA
 aTm
 aTm
-jDs
+eLN
 aSG
 aTm
 aTm
@@ -81930,7 +81983,7 @@ wOf
 aIg
 aIN
 bID
-sEi
+lFM
 dzF
 aKX
 aLu

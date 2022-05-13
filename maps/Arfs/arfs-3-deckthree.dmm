@@ -859,11 +859,6 @@
 /turf/simulated/floor/plating,
 /area/ai/outside)
 "acv" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -872,6 +867,9 @@
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/station/sec_upper)
@@ -1892,14 +1890,13 @@
 /turf/simulated/floor/tiled/white,
 /area/ai)
 "aeO" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
 	},
-/obj/structure/bed/chair{
-	dir = 1
-	},
-/turf/simulated/shuttle/floor,
-/area/shuttle/mining)
+/turf/simulated/floor/plating,
+/area/maintenance/pool)
 "aeP" = (
 /obj/machinery/light{
 	dir = 1
@@ -1921,11 +1918,7 @@
 	name = "\improper Telecomms"
 	})
 "aeT" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 5;
-	tag = "icon-intact-f (NORTHEAST)"
-	},
-/turf/simulated/floor/tiled/steel,
+/turf/simulated/wall/r_wall,
 /area/quartermaster/miningdock)
 "aeU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -3490,6 +3483,10 @@
 /turf/simulated/floor/tiled/dark,
 /area/gateway)
 "ajs" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5;
+	tag = "icon-intact-f (NORTHEAST)"
+	},
 /obj/structure/closet/crate,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
@@ -4325,9 +4322,14 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/pool)
 "alA" = (
-/obj/structure/table/reinforced,
-/turf/simulated/shuttle/floor,
-/area/shuttle/mining)
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/plating,
+/area/quartermaster/miningdock)
 "alB" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
@@ -5355,11 +5357,6 @@
 	dir = 8;
 	tag = "icon-pipe-y (WEST)"
 	},
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
 /turf/simulated/floor/tiled/dark,
 /area/security/brig{
 	name = "\improper Security - Brig Upper"
@@ -6029,9 +6026,6 @@
 "apv" = (
 /obj/machinery/camera/network/mining{
 	c_tag = "OPM - Shuttle";
-	dir = 1
-	},
-/obj/structure/bed/chair{
 	dir = 1
 	},
 /turf/simulated/shuttle/floor,
@@ -8343,9 +8337,16 @@
 /area/rnd/rdoffice)
 "aun" = (
 /obj/structure/grille,
-/obj/structure/shuttle/window,
-/turf/simulated/shuttle/plating,
-/area/shuttle/mining)
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/miningdock)
 "auo" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -9100,9 +9101,6 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/deckthree/central{
 	name = "\improper Deck 2 - Central Primary Hallway"
@@ -9338,6 +9336,7 @@
 	frequency = 1380;
 	id_tag = "mining_dock_pump"
 	},
+/obj/structure/closet/walllocker/emerglocker/east,
 /turf/simulated/floor/tiled/steel,
 /area/quartermaster/miningdock)
 "awp" = (
@@ -9566,6 +9565,10 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
 "awR" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9;
+	tag = "icon-intact-f (NORTHWEST)"
+	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
 	},
@@ -10143,11 +10146,9 @@
 /turf/simulated/floor/tiled/steel,
 /area/shuttle/excursion/cargo)
 "axQ" = (
+/obj/structure/table/reinforced,
 /obj/machinery/light{
-	dir = 1
-	},
-/obj/machinery/computer/shuttle_control/mining{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/mining)
@@ -10895,6 +10896,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/medbay_aft)
@@ -14645,11 +14651,19 @@
 /turf/simulated/floor/tiled/dark,
 /area/exploration/pathfinder_office)
 "aIl" = (
-/obj/structure/bed/chair{
+/obj/structure/grille,
+/obj/structure/window/reinforced{
 	dir = 4
 	},
-/turf/simulated/shuttle/floor,
-/area/shuttle/mining)
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/miningdock)
 "aIm" = (
 /turf/simulated/floor/plating,
 /area/space)
@@ -15039,8 +15053,9 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	d2 = 8;
-	icon_state = "32-8"
+	d1 = 32;
+	d2 = 2;
+	icon_state = "32-2"
 	},
 /turf/simulated/open,
 /area/maintenance/pool)
@@ -17432,17 +17447,18 @@
 /obj/machinery/atmospherics/pipe/zpipe/down/supply{
 	dir = 4
 	},
-/obj/structure/cable{
-	d1 = 32;
-	dir = 8;
-	icon_state = "32-1"
-	},
 /obj/structure/railing{
 	dir = 1
 	},
 /obj/structure/railing{
 	dir = 4
 	},
+/obj/structure/cable{
+	d1 = 32;
+	d2 = 2;
+	icon_state = "32-2"
+	},
+/obj/structure/railing,
 /turf/simulated/open,
 /area/maintenance/station/sec_upper)
 "aPt" = (
@@ -18153,10 +18169,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/exploration/hallway)
 "aRr" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4;
-	tag = "icon-intact (EAST)"
-	},
 /turf/simulated/floor/tiled/steel,
 /area/quartermaster/miningdock)
 "aRt" = (
@@ -18631,6 +18643,10 @@
 /turf/simulated/floor/tiled/dark,
 /area/exploration/gear)
 "aSD" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 1;
+	tag = "icon-manifold-f (NORTH)"
+	},
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
 	frequency = 1380;
@@ -18765,7 +18781,7 @@
 /turf/simulated/floor/plating,
 /area/crew_quarters/medbreak)
 "aSZ" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden,
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/steel,
 /area/quartermaster/miningdock)
 "aTb" = (
@@ -20054,6 +20070,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/detectives_office)
 "aWw" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/external{
 	frequency = 1380;
@@ -20062,10 +20079,6 @@
 	locked = 1;
 	name = "Mining Dock Airlock";
 	req_access = list(13)
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4;
-	tag = "icon-intact (EAST)"
 	},
 /turf/simulated/floor/tiled/steel,
 /area/quartermaster/miningdock)
@@ -20878,8 +20891,17 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/locker)
 "aYJ" = (
-/obj/structure/table/reinforced,
-/obj/machinery/light,
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	frequency = 1380;
+	id_tag = "mining_shuttle";
+	pixel_x = 25;
+	pixel_y = -8;
+	req_one_access = list(13,48);
+	tag_door = "mining_shuttle_hatch"
+	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/mining)
 "aYM" = (
@@ -22128,6 +22150,14 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating,
 /area/maintenance/engineering)
+"cHl" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/medbay_aft)
 "cMy" = (
 /obj/structure/bed/chair/office/light{
 	dir = 4
@@ -22268,6 +22298,15 @@
 /obj/effect/floor_decal/corner/paleblue/border,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay/autoresleever)
+"dgM" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/plating,
+/area/quartermaster/miningdock)
 "dhb" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 1
@@ -24180,7 +24219,9 @@
 	})
 "jud" = (
 /obj/structure/ore_box,
-/obj/machinery/light,
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/simulated/shuttle/floor{
 	icon_state = "floor_yellow";
 	tag = "icon-floor_yellow"
@@ -24274,28 +24315,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/construction)
-"jGX" = (
-/obj/structure/disposalpipe/segment,
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/hallway/primary/deckthree/central{
-	name = "\improper Deck 2 - Central Primary Hallway"
-	})
 "jJG" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/machinery/firealarm{
@@ -24794,6 +24813,19 @@
 	},
 /turf/simulated/floor/plating,
 /area/construction)
+"lQs" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/miningdock)
 "lSR" = (
 /obj/effect/floor_decal/corner_kafel/blue/full{
 	dir = 1
@@ -25128,6 +25160,14 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/station/docking_hall_starboard)
+"mIL" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/station/sec_upper)
 "mJl" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -25597,20 +25637,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/station/docking_hall_starboard)
-"otC" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/red/border{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/security/brig{
-	name = "\improper Security - Brig Upper"
-	})
 "oua" = (
 /obj/random/trash,
 /turf/simulated/floor/plating,
@@ -25713,6 +25739,14 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/exploration/hanger)
+"oQH" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/pool)
 "oTX" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -26062,9 +26096,6 @@
 "pNS" = (
 /obj/structure/closet/crate,
 /obj/random/maintenance/cargo,
-/obj/machinery/light{
-	dir = 1
-	},
 /turf/simulated/shuttle/floor{
 	icon_state = "floor_yellow";
 	tag = "icon-floor_yellow"
@@ -26253,6 +26284,10 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/station/docking_hall_starboard)
+"qsi" = (
+/obj/machinery/computer/shuttle_control/mining,
+/turf/simulated/shuttle/floor,
+/area/shuttle/mining)
 "qsL" = (
 /turf/simulated/wall/r_wall,
 /area/maintenance/engineering)
@@ -26286,6 +26321,15 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/shuttle/excursion/general)
+"qvd" = (
+/obj/effect/decal/cleanable/blood,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/station/sec_upper)
 "qxb" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -26641,20 +26685,6 @@
 /obj/random/junk,
 /turf/simulated/floor/plating,
 /area/maintenance/medbay_aft)
-"roB" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/red/border{
-	dir = 8
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/hallway/primary/deckthree/central{
-	name = "\improper Deck 2 - Central Primary Hallway"
-	})
 "roZ" = (
 /obj/random/junk,
 /turf/simulated/floor/plating,
@@ -26760,6 +26790,14 @@
 /obj/effect/floor_decal/borderfloorblack,
 /turf/simulated/floor/tiled/dark,
 /area/hallway/station/docking_hall_starboard)
+"rPe" = (
+/obj/structure/cable{
+	d1 = 32;
+	d2 = 2;
+	icon_state = "32-2"
+	},
+/turf/simulated/open,
+/area/maintenance/medbay_aft)
 "rSR" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -26809,6 +26847,17 @@
 /obj/effect/floor_decal/corner/paleblue/border,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay/autoresleever)
+"rZb" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/plating,
+/area/quartermaster/miningdock)
 "rZO" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -27582,16 +27631,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningdock)
-"vlL" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/glass_security,
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/security/brig{
-	name = "\improper Security - Brig Upper"
-	})
 "vrt" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 5
@@ -27732,10 +27771,7 @@
 /turf/simulated/floor/plating,
 /area/exploration/hanger)
 "vWN" = (
-/turf/simulated/shuttle/wall{
-	color = "#ff6700";
-	hard_corner = 1
-	},
+/turf/simulated/shuttle/wall,
 /area/shuttle/mining)
 "vXl" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -27901,6 +27937,20 @@
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/qm)
+"wvX" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/pool)
 "wzR" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -28069,14 +28119,6 @@
 /obj/machinery/mineral/equipment_vendor/survey,
 /turf/simulated/floor/tiled/steel,
 /area/shuttle/excursion/cargo)
-"xqj" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/security/brig{
-	name = "\improper Security - Brig Upper"
-	})
 "xts" = (
 /obj/structure/cable/cyan,
 /obj/structure/table/steel,
@@ -28247,6 +28289,18 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/exploration/hanger)
+"xUC" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced,
+/turf/simulated/floor/plating,
+/area/quartermaster/miningdock)
 "xXw" = (
 /obj/effect/landmark{
 	name = "lightsout"
@@ -28266,6 +28320,11 @@
 /obj/random/maintenance/engineering,
 /turf/simulated/floor/plating,
 /area/maintenance/engineering)
+"xZB" = (
+/turf/simulated/shuttle/wall{
+	hard_corner = 1
+	},
+/area/shuttle/mining)
 "yaF" = (
 /obj/effect/floor_decal/corner_oldtile/purple{
 	dir = 9
@@ -53643,7 +53702,7 @@ aaa
 aiw
 agR
 agz
-aeO
+agz
 aiw
 aaa
 aaa
@@ -53898,7 +53957,7 @@ aaa
 aaa
 aaa
 vWN
-alr
+qsi
 abI
 apv
 vWN
@@ -54155,9 +54214,9 @@ aaa
 aaa
 aaa
 aiw
-aIl
+alr
 abI
-alA
+abI
 aiw
 aaa
 aaa
@@ -54668,11 +54727,11 @@ aaa
 aaa
 aaa
 aaa
+xZB
 vWN
-aun
 ajP
 vWN
-vWN
+xZB
 aaa
 aaa
 aaa
@@ -54925,11 +54984,11 @@ aaa
 aaa
 aaa
 aaa
-lVr
-lVr
+rZb
+xUC
 aaE
-lVr
-lVr
+aIl
+dgM
 aaa
 aaa
 aaa
@@ -54965,13 +55024,13 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+aqa
+aqa
+aqa
+aqa
+aqa
+aqa
+aqa
 aqa
 uSA
 aZu
@@ -55182,11 +55241,11 @@ aaa
 aaa
 aaa
 aaa
-lVr
+alA
 aPN
-aeT
+aSZ
 ajs
-lVr
+alA
 aaa
 aaa
 aaa
@@ -55222,14 +55281,14 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
 aqa
+rPe
+cHl
+cHl
+cHl
+cHl
+cHl
+cHl
 azy
 aVD
 aVD
@@ -55439,11 +55498,11 @@ aaa
 aaa
 aaa
 aaa
-lVr
+alA
 aOF
 aRr
 aSD
-lVr
+lQs
 aaa
 aaa
 aaa
@@ -55479,13 +55538,13 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+aqa
+aqa
+aqa
+aqa
+aqa
+aqa
+aqa
 aqa
 bDh
 uby
@@ -55673,7 +55732,7 @@ qzf
 qzf
 qzf
 qzf
-aaa
+qzf
 aaa
 aaa
 aaa
@@ -55696,11 +55755,11 @@ aaa
 aaa
 aaa
 aaa
-lVr
+aun
 awo
 aSZ
 awR
-lVr
+ubH
 aaa
 aaa
 aaa
@@ -55929,7 +55988,7 @@ qzf
 qzf
 xIH
 aPs
-qzf
+mIL
 qzf
 qzf
 qzf
@@ -55953,11 +56012,11 @@ afS
 afS
 ubH
 ubH
-lVr
-lVr
+aeT
+aeT
 aWw
-lVr
-lVr
+aeT
+aeT
 ubH
 ubH
 aaa
@@ -56186,7 +56245,7 @@ aDA
 aFI
 aFI
 acv
-aBq
+qvd
 aFx
 als
 eAz
@@ -56260,7 +56319,7 @@ aaa
 aqa
 aCQ
 aOh
-atH
+aqa
 aJl
 mpv
 aTk
@@ -59268,7 +59327,7 @@ aAC
 nMm
 nMm
 nMm
-xqj
+nMm
 nMm
 nMm
 aAC
@@ -59525,7 +59584,7 @@ ahE
 aSW
 aSW
 aSW
-otC
+aSW
 aSW
 aSW
 alu
@@ -59782,7 +59841,7 @@ aye
 avy
 avy
 axn
-vlL
+axn
 avy
 avy
 ngC
@@ -60039,7 +60098,7 @@ avy
 avy
 aMz
 hUc
-roB
+hUc
 aeo
 avy
 abu
@@ -60553,7 +60612,7 @@ alX
 aEM
 aVy
 aVy
-jGX
+aFn
 aVy
 aCH
 aVy
@@ -65454,8 +65513,8 @@ aaa
 aaa
 aaa
 azd
-asY
-azd
+wvX
+aeO
 azd
 azd
 azd
@@ -65712,7 +65771,7 @@ aaa
 aaa
 azd
 aJq
-azd
+oQH
 azd
 aaa
 aaa
