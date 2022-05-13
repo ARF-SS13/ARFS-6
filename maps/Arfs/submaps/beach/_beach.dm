@@ -18,7 +18,6 @@
 	skybox_icon_state = "v4"
 	skybox_pixel_x = 0
 	skybox_pixel_y = 0
-	docking_codes = "2HOT"
 
 //This is a special subtype of the thing that generates ores on a map
 //It will generate more rich ores because of the lower numbers than the normal one

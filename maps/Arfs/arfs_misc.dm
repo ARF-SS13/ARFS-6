@@ -189,5 +189,4 @@
 	name = "Docking Codes"
 	info = {"<b>A.R.F.S. Dallus</b> - <i>ARFD</i><br>\
 		 <b>A.R.F.S. Serenity</b> - <i>ARFS</i><br>\
-		 <b>Virgo 2</b> - <i>AERO</i><br>\
-		 <b>Virgo 4</b> - <i>2HOT</i><br>"}
+		 <b>Virgo 2</b> - <i>AERO</i><br>"}

@@ -1,6 +1,7 @@
-var/global/list/custom_special_dock_targets = list(
-	"Drake" = "drake_docking",
-);
+// var/global/list/custom_special_dock_targets = list(
+// 	"Drake" = "drake_docking",
+// 	"Excursion Shuttle" = "expshuttle"
+// );
 
 //////////////////////////////////////////////////////////////
 // Explore shuttle
@@ -10,7 +11,7 @@ var/global/list/custom_special_dock_targets = list(
 	name = "Excursion Shuttle"
 	warmup_time = 0
 	current_location = "arfs_excursion_hangar"
-	docking_controller_tag = "expshuttle_dock"
+	docking_controller_tag = "expshuttle"
 	shuttle_area = list(/area/shuttle/excursion/cockpit, /area/shuttle/excursion/general, /area/shuttle/excursion/cargo, /area/shuttle/excursion/power, /area/shuttle/excursion/medical)
 	fuel_consumption = 3
 	move_direction = NORTH
@@ -42,10 +43,6 @@ var/global/list/custom_special_dock_targets = list(
 /obj/effect/shuttle_landmark/arfs/deck3/dockarm
 	base_turf = /turf/space
 	base_area = /area/space
-
-/obj/effect/shuttle_landmark/arfs/deck3/dockarm/Initialize()
-	. = ..()
-	special_dock_targets = custom_special_dock_targets
 
 /obj/effect/shuttle_landmark/arfs/deck3/dockarm/north
 	name = "ARFS Dallus - Docking Arm North"
@@ -111,15 +108,8 @@ var/global/list/custom_special_dock_targets = list(
 	base_turf = /turf/simulated/floor/reinforced
 	base_area = /area/residential/mansion
 	landmark_tag = "arfs_mansion_hanger"
-	docking_controller = "drake_docking"
+	docking_controller = "drake_dock"
 	shuttle_type = /datum/shuttle/autodock/overmap/drake
-
-// /obj/effect/shuttle_landmark/arfs/serenity/drake
-// 	name = "Mansion Hanger"
-// 	landmark_tag = "arfs_mansion_hanger"
-// 	docking_controller = "drake_docking"
-// 	base_turf = /turf/simulated/floor/reinforced
-// 	base_area = /area/residential/mansion
 
 /datum/shuttle/autodock/overmap/drake
 	name = "Drake"
@@ -492,10 +482,6 @@ var/global/list/custom_special_dock_targets = list(
 /obj/effect/shuttle_landmark/aerostat
 	base_area = /area/offmap/aerostat;
 	base_turf = /turf/unsimulated/floor/sky/virgo2_sky;
-
-/obj/effect/shuttle_landmark/aerostat/Initialize()
-	. = ..()
-	special_dock_targets = custom_special_dock_targets
 
 /obj/effect/shuttle_landmark/aerostat/west
 	docking_controller = "aerostat_west_airlock";
