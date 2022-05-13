@@ -23,11 +23,19 @@
 	set name = "Plant Weeds (50)"
 	set desc = "Plants down a node which spreads alien weeds."
 	set category = "Abilities"
-	if(!species_datum)
+
+	var/datum/xeno_species/SD = species_datum
+	if(!SD)
 		return
+
 	if(check_alien_ability(50,1))
+		var/obj/O
+		var/build_sound = pick(SD.resin_sounds)
+		if(build_sound)
+			playsound(src, build_sound, 40, 1)
 		visible_message("<span class='alium'><B>[src] excretes a glowing node of weeds!</B></span>")
-		new /obj/effect/alien/weeds/node(get_turf(src), null, species_datum.construct_color)
+		O = new /obj/effect/alien/weeds/node(get_turf(src), null, species_datum.construct_color)
+		O.color = SD.construct_color
 	return
 
 /mob/living/simple_mob/caclien/proc/Spit(var/atom/A)
@@ -93,3 +101,63 @@
 		spit_projectile = /obj/item/projectile/energy/acid
 		spit_name = "acid"
 		to_chat(src, "<span class='alium'>You prepare to spit acid.</span>")
+
+/mob/living/simple_mob/caclien/proc/Resin()
+	set name = "Secrete Resin (75)"
+	set desc = "Secrete tough malleable resin."
+	set category = "Abilities"
+
+	var/datum/xeno_species/SD = species_datum
+	if(!SD)
+		return
+//	var/list/options = list("resin door","resin wall","resin membrane","nest","resin blob") //Old options
+	var/list/options = list("resin wall","resin membrane","nest")
+	for(var/option in options)
+		LAZYSET(options, option, new /image('icons/mob/alien.dmi', option))
+
+	var/choice = show_radial_menu(src, src, options, radius = 42, require_near = TRUE)
+
+	if(!choice || QDELETED(src) || src.incapacitated())
+		return FALSE
+
+	var/turf/targetLoc = get_step(src, dir)
+
+	if(iswall(targetLoc))
+		targetLoc = get_turf(src)
+
+	if(targetLoc.contents.Find(/obj/structure/alien) || targetLoc.contents.Find(/obj/structure/bed/nest))
+		to_chat(src, "<span class='warning'>There is already something built there!</span>")
+		return FALSE
+
+	var/obj/O
+
+	switch(choice)
+		if("resin door")
+			if(!check_alien_ability(75,1))
+				return
+			else O = new /obj/structure/simple_door/resin(targetLoc)
+		if("resin wall")
+			if(!check_alien_ability(75,1))
+				return
+			else O = new /obj/structure/alien/wall(targetLoc)
+		if("resin membrane")
+			if(!check_alien_ability(75,1))
+				return
+			else O = new /obj/structure/alien/membrane(targetLoc)
+		if("nest")
+			if(!check_alien_ability(75,1))
+				return
+			else O = new /obj/structure/bed/nest(targetLoc)
+		if("resin blob")
+			if(!check_alien_ability(75,1))
+				return
+			else O = new /obj/item/stack/material/resin(targetLoc)
+
+	if(O)
+		visible_message("<span class='warning'><B>[src] vomits up a thick substance and begins to shape it!</B></span>", "<span class='alium'>You shape a [choice].</span>")
+		O.color = SD.construct_color
+		var/build_sound = pick(SD.resin_sounds)
+		if(build_sound)
+			playsound(src, build_sound, 40, 1)
+
+	return

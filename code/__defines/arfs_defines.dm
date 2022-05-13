@@ -51,3 +51,4 @@
 #define X_SOUND_DEATH_HUGGER		list('content_arfs/sound/alien/voice/deathHugger.ogg')
 #define X_SOUND_DEATH_LARVA			list('content_arfs/sound/alien/voice/deathHugger.ogg')
 #define X_SOUND_ATTACK_CLAW			list('sound/weapons/rapidslice.ogg')
+#define X_SOUND_WEED_GROW			list('content_arfs/sound/alien/effects/weeds1.ogg','content_arfs/sound/alien/effects/weeds2.ogg')

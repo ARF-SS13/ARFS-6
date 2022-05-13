@@ -28,11 +28,15 @@
 	var/light_color = "#000000" //Color of the light that nodes give off
 	var/body_color = "#000000" //Color of the xeno's bodies. Unused
 	var/resin_sounds = X_SOUND_RESINBUILD
+	var/ai_type = /datum/ai_holder/simple_mob/guard/give_chase
 
 /datum/xeno_species/drone
 	sub_name = "drone"
 	sneak_effectiveness = 1.5
-	growth_max = 250
+	growth_max = 500
+	abilities = list(/mob/living/proc/ventcrawl,/mob/living/simple_mob/caclien/proc/Plant,/mob/living/simple_mob/caclien/proc/Resin)
+	evolves_into = list(/datum/xeno_species/queen)
+	phoron_max = 250
 
 /datum/xeno_species/hunter
 	sub_name = "hunter"
@@ -47,6 +51,8 @@
 	maxHealth = 125
 	sneak_effectiveness = 1.75
 	growth_max = 0
+	phoron_max = 200
+	ai_type = /datum/ai_holder/simple_mob/ranged/kiting
 
 /datum/xeno_species/runner
 	sub_name = "runner"
@@ -55,16 +61,19 @@
 	move_sounds_range = -1
 	move_delay = 1.5
 	growth_max = 0
+	phoron_max = 50
+	ai_type = /datum/ai_holder/simple_mob/melee/hit_and_run
 
 /datum/xeno_species/queen
 	sub_name = "queen"
-	maxHealth = 200
+	maxHealth = 300
 	sneak_effectiveness = 1.25
-	abilities = list()
+	abilities = list(/mob/living/simple_mob/caclien/proc/Plant,/mob/living/simple_mob/caclien/proc/Resin)
 	move_sounds_range = 7
 	default_size_mult = 2
 	move_delay = 3
 	growth_max = 0
+	phoron_max = 500
 
 /datum/xeno_species/hugger
 	sub_name = "facehugger"
@@ -72,9 +81,13 @@
 	death_sounds = list('sound/voice/hiss6.ogg')
 	growth_max = 0
 	death_sounds = X_SOUND_DEATH_HUGGER
+	phoron_max = 25
+	move_sounds = X_SOUND_STEP_HUGGER
 
 /datum/xeno_species/larva
 	sub_name = "larva"
 	maxHealth = 30
 	growth_max = 100
 	death_sounds = X_SOUND_DEATH_LARVA
+	phoron_max = 25
+	move_sounds = X_SOUND_SLIDE

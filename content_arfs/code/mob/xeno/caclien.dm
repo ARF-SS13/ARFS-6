@@ -138,6 +138,7 @@
 
 /mob/living/simple_mob/caclien/Life()
 	if(stat != DEAD)
+		nutrition = 3000
 		if(sleeping > 0)
 			sleeping = max(0, sleeping--)
 
@@ -327,3 +328,59 @@
 		"storage1" =     list("loc" = ui_storage1,  "name" = "Left Pocket",  "slot" = slot_l_store,   "state" = "pocket"),
 		"storage2" =     list("loc" = ui_storage2,  "name" = "Right Pocket", "slot" = slot_r_store,   "state" = "pocket"),
 		) //Removed hat and outer slots, it caused too many problems that required admin intervention.
+
+//Adjusts the weird purple color to a more black/blue one
+/obj/structure/alien
+	color = "#39373d"
+/obj/structure/bed/nest
+	color = "#39373d"
+/obj/structure/alien/membrane
+	color = "#39373d"
+/obj/structure/alien/wall
+	color = "#39373d"
+/obj/effect/alien/weeds/node
+	color = "#39373d"
+/obj/effect/alien/weeds
+	color = "#39373d"
+
+/obj/effect/alien/weeds/node/Initialize(var/mapload, var/node, var/newcolor)
+	. = ..()
+	if(isspace(loc))
+		return INITIALIZE_HINT_QDEL
+
+	linked_node = node
+	if(newcolor)
+		color = newcolor
+
+	if(icon_state == "weeds")
+		icon_state = pick("weeds", "weeds1", "weeds2")
+	playsound(src, pick(X_SOUND_WEED_GROW), 50, 1)
+	fullUpdateWeedOverlays()
+
+/obj/effect/alien/weeds/Initialize(var/mapload, var/node, var/newcolor)
+	. = ..()
+	if(isspace(loc))
+		return INITIALIZE_HINT_QDEL
+
+	linked_node = node
+	if(newcolor)
+		color = newcolor
+
+	if(icon_state == "weeds")
+		icon_state = pick("weeds", "weeds1", "weeds2")
+
+	playsound(src, pick(X_SOUND_WEED_GROW), 50, 1)
+	fullUpdateWeedOverlays()
+
+/obj/effect/alien/weeds/Destroy()
+	var/turf/T = get_turf(src)
+	loc = null
+	for (var/obj/effect/alien/weeds/W in range(1,T))
+		W.updateWeedOverlays()
+	linked_node = null
+	playsound(src, pick(X_SOUND_RESINHIT), 50, 1)
+	return ..()
+
+/obj/structure/alien/Destroy()
+	playsound(src, pick(X_SOUND_RESINHIT), 50, 1)
+	..()

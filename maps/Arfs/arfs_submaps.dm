@@ -9,6 +9,8 @@
 #define Z_LEVEL_GATEWAY						21
 #define Z_LEVEL_OM_ADVENTURE				22
 #define Z_LEVEL_SPACE_ROCKS					23
+#define Z_LEVEL_XENOPRIME					24
+
 
 /datum/skybox_settings/stellar_delight
 	icon_state = "space5"
@@ -50,6 +52,7 @@
 	desc = "The Virgo 2 Aerostat away mission."
 	mappath = 'maps/Arfs/submaps/aerostat/aerostat_science_outpost.dmm'
 	associated_map_datum = /datum/map_z_level/common_lateload/away_aerostat
+
 
 
 //#include "../offmap_vr/common_offmaps.dm"
