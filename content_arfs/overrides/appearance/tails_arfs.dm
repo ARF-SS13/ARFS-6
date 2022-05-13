@@ -544,6 +544,14 @@
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "eeveetail_tips"
 
+/datum/sprite_accessory/tail/lizard_tail_spiked
+	name = "Spiked Lizard Tail"
+	desc = ""
+	icon = 'content_arfs/icons/mob/player/tails_arfs.dmi'
+	icon_state = "lizard_tail_spiked"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
 ///datum/sprite_accessory/tail/cyberdragon
 //	name = "cyberdragon tail"
 //	desc = ""

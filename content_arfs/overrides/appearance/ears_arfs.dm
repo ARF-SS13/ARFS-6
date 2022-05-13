@@ -286,7 +286,7 @@
 	desc = ""
 	icon = 'content_arfs/icons/mob/player/ears_arfs.dmi'
 	icon_state = "vap"
-
+/*
 /datum/sprite_accessory/ears/deathclaw
 	name = "Deathclaw"
 	desc = ""
@@ -298,3 +298,11 @@
 	desc = ""
 	icon = 'content_arfs/icons/mob/player/ears_arfs.dmi'
 	icon_state = "big_liz_colorable"
+*/
+/datum/sprite_accessory/ears/deathclaw_better
+	name = "Deathclaw - New"
+	desc = ""
+	icon = 'content_arfs/icons/mob/player/ears_arfs.dmi'
+	icon_state = "big_liz_better"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY

@@ -90,8 +90,21 @@
 	cam_screen.vis_contents = visible_turfs
 	cam_background.icon_state = "clear"
 	cam_background.fill_rect(1, 1, (video_range * 2), (video_range * 2))
-	
+
 	local_skybox.cut_overlays()
 	local_skybox.add_overlay(SSskybox.get_skybox(get_z(last_camera_turf)))
 	local_skybox.scale_to_view(video_range * 2)
 	local_skybox.set_position("CENTER", "CENTER", (world.maxx>>1) - last_camera_turf.x, (world.maxy>>1) - last_camera_turf.y)
+
+/obj/item/weapon/rig/pathfinder
+	allowed = list(
+		/obj/item/device/flashlight,
+		/obj/item/weapon/tank,
+		/obj/item/device/suit_cooling_unit,
+		/obj/item/device/t_scanner,
+		/obj/item/weapon/pickaxe,
+		/obj/item/weapon/rcd,
+		/obj/item/weapon/storage/backpack,
+		/obj/item/device/bluespaceradio,
+		/obj/item/device/defib_kit
+		)
