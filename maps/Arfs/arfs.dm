@@ -9,6 +9,7 @@
 	#include "arfs_shuttles.dm"
 	#include "arfs_underdark.dm"
 	#include "arfs_telecomms.dm"
+	#include "arfs_jobs.dm"
 
 	#include "submaps/arfs_common_offmaps.dm"
 

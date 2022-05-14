@@ -3937,6 +3937,7 @@
 /obj/machinery/light/floortube{
 	dir = 8
 	},
+/obj/item/weapon/paper/known_docking_codes,
 /turf/simulated/floor/tiled/steel,
 /area/shuttle/excursion/cockpit)
 "akG" = (
@@ -9145,8 +9146,8 @@
 /obj/structure/handrail,
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
 	cycle_to_external_air = 1;
-	frequency = 1380;
-	id_tag = "expshuttle_docker";
+	frequency = 1379;
+	id_tag = "expshuttle";
 	pixel_y = 28
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden,
@@ -9171,6 +9172,8 @@
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "explo"
 	},
+/obj/effect/shuttle_landmark/arfs/deck3/excursion,
+/obj/effect/overmap/visitable/ship/landable/excursion,
 /turf/simulated/floor/tiled/steel,
 /area/shuttle/excursion/cargo)
 "avX" = (
@@ -9939,7 +9942,6 @@
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "explo"
 	},
-/obj/effect/overmap/visitable/ship/landable/excursion,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
@@ -11520,8 +11522,8 @@
 "aAV" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
-	frequency = 1380;
-	id_tag = "expshuttle_docker_pump_out_external";
+	frequency = 1379;
+	id_tag = "expshuttle_dock_pump_out_external";
 	pixel_x = -10;
 	pixel_y = 6
 	},
@@ -11639,8 +11641,8 @@
 "aBk" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
-	frequency = 1380;
-	id_tag = "expshuttle_docker_pump_out_external";
+	frequency = 1379;
+	id_tag = "expshuttle_dock_pump_out_external";
 	pixel_x = 10;
 	pixel_y = 6
 	},
@@ -11680,9 +11682,8 @@
 "aBo" = (
 /obj/machinery/airlock_sensor/airlock_exterior/shuttle{
 	dir = 6;
-	frequency = 1380;
-	id_tag = "expshuttle_exterior_sensor";
-	master_tag = "expshuttle_docker";
+	frequency = 1379;
+	master_tag = "expshuttle_dock";
 	pixel_x = 4;
 	pixel_y = 28
 	},
@@ -21603,7 +21604,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1379;
 	id_tag = "expshuttle_dock";
 	pixel_x = -4;
 	pixel_y = 24
@@ -21702,7 +21703,6 @@
 "bkl" = (
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
 	cycle_to_external_air = 1;
-	frequency = 1380;
 	id_tag = "dallus_port_arm_n_s";
 	pixel_x = -25
 	},
@@ -22425,7 +22425,6 @@
 "dPJ" = (
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
 	cycle_to_external_air = 1;
-	frequency = 1380;
 	id_tag = "dallus_port_arm_w";
 	pixel_y = 24
 	},
@@ -23686,7 +23685,6 @@
 "hKx" = (
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
 	cycle_to_external_air = 1;
-	frequency = 1380;
 	id_tag = "dallus_port_arm_n";
 	pixel_x = -25
 	},
@@ -26912,7 +26910,6 @@
 "skg" = (
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
 	cycle_to_external_air = 1;
-	frequency = 1380;
 	id_tag = "dallus_port_arm_s";
 	pixel_x = -25
 	},
@@ -27843,7 +27840,6 @@
 "wda" = (
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
 	cycle_to_external_air = 1;
-	frequency = 1380;
 	id_tag = "dallus_port_arm_s_s";
 	pixel_x = -25
 	},

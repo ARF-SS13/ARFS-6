@@ -40,10 +40,11 @@
 
 #include "submaps/aerostat/_aerostat_science_outpost.dm"
 
-/obj/effect/overmap/visitable/sector/virgo2/Initialize()
-	for(var/obj/effect/overmap/visitable/ship/landable/excursion/sd in world)
-		docking_codes = sd.docking_codes
-	. = ..()
+// I broke this - Andy
+// /obj/effect/overmap/visitable/sector/virgo2/Initialize()
+// 	   for(var/obj/effect/overmap/visitable/ship/landable/excursion/sd in world)
+// 	   	docking_codes = sd.docking_codes
+// 	. = ..()
 
 /datum/map_template/common_lateload/away_aerostat
 	name = "Remmi Aerostat - Z1 Aerostat"

@@ -4418,13 +4418,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 6
 	},
-/obj/machinery/embedded_controller/radio/airlock/docking_port_multi{
-	dir = 4;
-	id_tag = "drake_docking_port";
-	name = "Port Airlock Control";
-	pixel_x = -22;
-	req_one_access = list()
-	},
 /obj/machinery/light{
 	dir = 8
 	},
@@ -4436,7 +4429,13 @@
 	icon_state = "1-2"
 	},
 /obj/effect/overmap/visitable/ship/landable/drake,
-/obj/effect/shuttle_landmark/arfs/serenity/drake,
+/obj/effect/shuttle_landmark/shuttle_initializer/drake,
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
+	pixel_x = -22;
+	dir = 4;
+	id_tag = "drake_docking";
+	name = "Port Airlock Control"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/cabin)
 "enx" = (
@@ -10469,9 +10468,8 @@
 	dir = 4
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
-	id_tag = "mansionshuttle_dock";
-	pixel_x = -24;
+	id_tag = "drake_dock";
+	pixel_x = -22;
 	pixel_y = 0
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -15138,6 +15136,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/wood,
 /area/residential/outside)
+"ooW" = (
+/obj/structure/table/alien,
+/obj/item/device/radio/off{
+	pixel_y = 6
+	},
+/obj/item/weapon/paper/known_docking_codes,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/drake/cockpit)
 "opd" = (
 /obj/structure/flora/ausbushes/lavendergrass,
 /obj/structure/flora/tree/jungle,
@@ -17606,14 +17612,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/drake/cabin)
 "qpi" = (
-/obj/machinery/embedded_controller/radio/docking_port_multi{
-	child_names_txt = "Port Airlock Control;Starboard Airlock Control";
-	child_tags_txt = "drake_docking_port;drake_docking_star";
-	dir = 1;
-	id_tag = "drake_docking";
-	name = "Drake Master Docking Controller";
-	pixel_y = -22
-	},
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
@@ -25652,15 +25650,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 5
 	},
-/obj/machinery/embedded_controller/radio/airlock/docking_port_multi{
-	dir = 4;
-	id_tag = "drake_docking_star";
-	name = "Starboard Airlock Control";
-	pixel_x = -22;
-	req_one_access = list()
-	},
 /obj/machinery/light{
 	dir = 8
+	},
+/obj/machinery/embedded_controller/radio/airlock/advanced_airlock_controller{
+	dir = 4;
+	pixel_x = -22;
+	id_tag = "drake_docking_star";
+	name = "Starboard Airlock Control"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/drake/cabin)
@@ -66174,7 +66171,7 @@ hrS
 iAu
 umu
 jWg
-gQJ
+ooW
 oHh
 pBg
 gQJ
