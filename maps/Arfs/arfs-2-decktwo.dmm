@@ -43317,9 +43317,9 @@
 /obj/machinery/airlock_sensor{
 	dir = 1;
 	frequency = 1380;
-	id_tag = "engi_dallus_dock_sensor";
 	pixel_y = -25
 	},
+/obj/effect/map_helper/airlock/sensor/chamber_sensor,
 /turf/simulated/floor/tiled/dark,
 /area/engineering/shuttle_dock)
 "fBI" = (
@@ -46035,8 +46035,7 @@
 	frequency = 1380;
 	id_tag = "engi_shuttle";
 	pixel_x = 25;
-	req_one_access = list(11,24);
-	tag_door = "engi_shuttle_hatch"
+	req_one_access = list(11,24)
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/constructionsite)
@@ -51325,12 +51324,16 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_external/public{
 	frequency = 1380;
-	id_tag = "engi_dallus_dock_ext_door";
-	locked = 1;
 	name = "Engineering Shuttle Dock"
 	},
-/obj/item/tape/engineering,
-/turf/simulated/floor/tiled/dark,
+/obj/machinery/airlock_sensor{
+	frequency = 1380;
+	pixel_y = 30;
+	pixel_x = -6
+	},
+/obj/effect/map_helper/airlock/door/ext_door,
+/obj/effect/map_helper/airlock/sensor/ext_sensor,
+/turf/simulated/floor/plating,
 /area/engineering/shuttle_dock)
 "pFL" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
@@ -53169,6 +53172,7 @@
 	frequency = 1380;
 	id_tag = "engi_dallus_dock_pump"
 	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/dark,
 /area/engineering/shuttle_dock)
 "rSG" = (
@@ -53234,14 +53238,9 @@
 	frequency = 1380;
 	id_tag = "engi_dallus_dock";
 	pixel_y = 25;
-	req_one_access = list(11,24);
-	tag_airpump = "engi_dallus_dock_pump";
-	tag_chamber_sensor = "engi_dallus_dock_sensor";
-	tag_exterior_door = "engi_dallus_dock_ext_door";
-	tag_exterior_sensor = "engi_dallus_dock_ext_sens";
-	tag_interior_door = "engi_dallus_dock_int_door";
-	tag_interior_sensor = "engi_dallus_dock_int_sens"
+	req_one_access = list(11,24)
 	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/dark,
 /area/engineering/shuttle_dock)
 "rVz" = (
@@ -53901,6 +53900,11 @@
 	tag = "icon-bordercolor (NORTHWEST)"
 	},
 /obj/machinery/computer/shuttle_control/engineering,
+/obj/machinery/airlock_sensor{
+	frequency = 1380;
+	pixel_x = -25
+	},
+/obj/effect/map_helper/airlock/sensor/int_sensor,
 /turf/simulated/floor/tiled/dark,
 /area/engineering/engine_eva)
 "sLS" = (
@@ -54042,12 +54046,10 @@
 "sZb" = (
 /obj/machinery/door/airlock/glass_external/public{
 	frequency = 1380;
-	id_tag = "engi_shuttle_hatch";
-	locked = 1;
 	name = "Engineering Shuttle Dock"
 	},
 /obj/machinery/door/firedoor/glass,
-/obj/item/tape/engineering,
+/obj/effect/map_helper/airlock/door/simple,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/constructionsite)
 "sZK" = (
@@ -57065,11 +57067,9 @@
 	},
 /obj/machinery/door/airlock/glass_external/public{
 	frequency = 1380;
-	id_tag = "engi_dallus_dock_int_door";
-	locked = 1;
 	name = "Engineering Shuttle Dock"
 	},
-/obj/item/tape/engineering,
+/obj/effect/map_helper/airlock/door/int_door,
 /turf/simulated/floor/tiled/dark,
 /area/engineering/shuttle_dock)
 "wRl" = (
