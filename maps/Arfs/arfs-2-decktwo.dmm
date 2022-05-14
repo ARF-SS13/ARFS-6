@@ -518,9 +518,6 @@
 /turf/simulated/floor/wood,
 /area/bridge/meeting_room)
 "ack" = (
-/obj/structure/bed/chair/comfy/black{
-	dir = 1
-	},
 /obj/effect/floor_decal/corner_kafel/blue/diagonal{
 	dir = 8
 	},
@@ -531,6 +528,9 @@
 	pixel_x = -21
 	},
 /obj/effect/overmap/visitable/ship/arfs,
+/obj/structure/bed/chair/bay/comfy/captain{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge)
 "acm" = (
@@ -801,7 +801,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/security_equiptment_storage)
 "ado" = (
-/obj/machinery/computer/communications,
 /obj/effect/floor_decal/corner_kafel/blue/diagonal,
 /obj/effect/floor_decal/corner_kafel/blue/diagonal{
 	dir = 8
@@ -809,6 +808,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/machinery/computer/ship/helm/adv,
 /turf/simulated/floor/tiled/dark,
 /area/bridge)
 "adr" = (
@@ -2740,11 +2740,11 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
 "akM" = (
-/obj/machinery/computer/card,
 /obj/effect/floor_decal/corner_kafel/blue/diagonal,
 /obj/effect/floor_decal/corner_kafel/blue/diagonal{
 	dir = 8
 	},
+/obj/machinery/computer/ship/sensors/adv,
 /turf/simulated/floor/tiled/dark,
 /area/bridge)
 "akN" = (
@@ -39422,11 +39422,11 @@
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
 "mmS" = (
-/obj/machinery/computer/message_monitor,
 /obj/effect/floor_decal/corner_kafel/blue/diagonal,
 /obj/effect/floor_decal/corner_kafel/blue/diagonal{
 	dir = 8
 	},
+/obj/machinery/computer/ship/engines/adv,
 /turf/simulated/floor/tiled/dark,
 /area/bridge)
 "mnx" = (
@@ -43231,6 +43231,16 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery2)
+"rBu" = (
+/obj/effect/floor_decal/corner_kafel/blue/diagonal,
+/obj/effect/floor_decal/corner_kafel/blue/diagonal{
+	dir = 8
+	},
+/obj/structure/bed/chair/comfy/black{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/bridge)
 "rBv" = (
 /obj/structure/bed/chair/comfy/brown{
 	dir = 4
@@ -44414,6 +44424,17 @@
 /obj/machinery/atmospherics/pipe/simple/visible/blue,
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
+"tiR" = (
+/obj/effect/floor_decal/corner_kafel/blue/diagonal{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner_kafel/blue/diagonal,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/computer/communications,
+/turf/simulated/floor/tiled/dark,
+/area/bridge)
 "tjh" = (
 /obj/structure/table/steel,
 /obj/item/weapon/autopsy_scanner,
@@ -80117,8 +80138,8 @@ ada
 ado
 ack
 adO
-aea
-ael
+tiR
+rBu
 aeD
 aba
 afw
@@ -80374,7 +80395,7 @@ ada
 akM
 adA
 adN
-adZ
+aea
 ael
 aOd
 aeY
