@@ -125,6 +125,12 @@
 /obj/effect/landmark/map_data/arfs
 	height = 3
 
+/obj/effect/landmark/map_data/serenity
+    height = 4
+
+/obj/effect/landmark/map_data/mining
+    height = 2
+
 //Mist like on the Endeavour
 /obj/effect/mist/mapped
 	name = "mist"

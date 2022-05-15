@@ -3,7 +3,7 @@
 	hub = "Exadv1.spacestation13"
 	//hub_password = "SORRYNOPASSWORD"
 	hub_password = "kMZy3U5jJHSiBQjr"
-	name = "Nova Station" //ARFS Edit
+	name = "ARFS Dallus" //ARFS Edit
 	visibility = 0 //VOREStation Edit
 
 /* This is for any host that would like their server to appear on the main SS13 hub.

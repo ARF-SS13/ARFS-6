@@ -13,6 +13,28 @@
 	listening_level = Z_LEVEL_ARFS_THREE
 	autolinkers = list("arfs_3_relay")
 
+/obj/machinery/telecomms/relay/preset/arfs/serenity
+
+/obj/machinery/telecomms/relay/preset/arfs/serenity/one
+	id = "ARFS Serenity Deck 1 Relay"
+	listening_level = Z_LEVEL_RESIDENTIAL_STATION_ARFS
+	autolinkers = list("arfs_serenity_1_relay")
+
+/obj/machinery/telecomms/relay/preset/arfs/serenity/two
+	id = "ARFS Serenity Deck 2 Relay"
+	listening_level = Z_LEVEL_RESIDENTIAL_ARFS
+	autolinkers = list("arfs_serenity_2_relay")
+
+/obj/machinery/telecomms/relay/preset/arfs/serenity/three
+	id = "ARFS Serenity Deck 3 Relay"
+	listening_level = Z_LEVEL_RESIDENTIAL_TWO_ARFS
+	autolinkers = list("arfs_serenity_3_relay")
+
+/obj/machinery/telecomms/relay/preset/arfs/serenity/four
+	id = "ARFS Serenity Deck 4 Relay"
+	listening_level = Z_LEVEL_RESIDENTIAL_MANSION_ARFS
+	autolinkers = list("arfs_serenity_4_relay")
+
 /obj/machinery/telecomms/relay/preset/arfs/mining_high
 	id = "Asteroid Surface Relay"
 	listening_level = Z_LEVEL_MINING_ARFS
@@ -34,9 +56,9 @@
 	network = "tcommsat"
 	autolinkers = list("hub",
 		"arfs_1_relay", "arfs_2_relay", "arfs_3_relay", "mining_high", "mining_low", "residential",
-		"c_relay", "m_relay", "r_relay", "sci_o_relay", "ud_relay",
+		"c_relay", "m_relay", "r_relay", "sci_o_relay", "ud_relay", "shuttle_relay", "drake_relay", "s_relay",
 		"science", "medical", "supply", "service", "common", "command", "engineering", "security", "explorer", "unused",
-		"hb_relay", "receiverA", "broadcasterA"
+		"hb_relay", "receiverA", "broadcasterA", "arfs_serenity_1_relay", "arfs_serenity_2_relay", "arfs_serenity_3_relay", "arfs_serenity_4_relay"
 	)
 
 /obj/machinery/telecomms/receiver/preset_right/arfs
@@ -71,6 +93,16 @@
 	name = "pre-linked multitool (Endeavor hub)"
 	desc = "This multitool has already been linked to the Endeavor telecomms hub and can be used to configure one (1) relay."
 
+/obj/machinery/telecomms/relay/preset/shuttle
+	autolinkers = list("shuttle_relay")
+	toggled = 0
+
+/obj/machinery/telecomms/relay/preset/shuttle/drake
+	id = "A.R.F.S. Drake Long Range Relay"
+	produces_heat = 0
+	autolinkers = list("drake_relay")
+
 /obj/item/device/multitool/arfs_buffered/Initialize()
 	. = ..()
 	buffer = locate(/obj/machinery/telecomms/hub/preset/arfs)
+

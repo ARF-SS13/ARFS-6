@@ -52,3 +52,49 @@
 		slot_r_hand_str ='content_arfs/icons/mob/items/clothing_righthand.dmi',
 		)
 //	species_restricted = list("Tajara")
+
+/obj/item/clothing/under/hyperfiber/bluespace/admin
+
+/obj/item/clothing/under/hyperfiber/bluespace/admin/bluespace_size(mob/usr as mob)
+	if (!ishuman(usr))
+		return
+
+	var/mob/living/carbon/human/H = usr
+
+	if (H.stat || H.restrained())
+		return
+
+	if (src != H.w_uniform)
+		to_chat(H,"<span class='warning'>You must be WEARING the uniform to change your size.</span>")
+		return
+
+	var/new_size = input(usr, "Put the desired size.", "Set Size", 200) as num|null
+	if(!new_size)
+		return //cancelled
+
+	//Check AGAIN because we accepted user input which is blocking.
+	if (src != H.w_uniform)
+		to_chat(H,"<span class='warning'>You must be WEARING the uniform to change your size.</span>")
+		return
+
+	if (H.stat || H.restrained())
+		return
+
+	if (isnull(H.size_multiplier)) // Why would this ever be the case?
+		to_chat(H,"<span class='warning'>The uniform panics and corrects your apparently microscopic size.</span>")
+		H.resize(RESIZE_NORMAL, ignore_prefs = TRUE)
+		H.update_icons() //Just want the matrix transform
+		return
+
+	if (new_size < 1)
+		to_chat(H,"<span class='notice'>The safety features of the uniform prevent you from choosing this size.</span>")
+		return
+
+	else if(new_size)
+		if(new_size != H.size_multiplier)
+			if(!original_size)
+				original_size = H.size_multiplier
+			H.resize(new_size/100, TRUE, TRUE, TRUE) // Ignores prefs because you can only resize yourself
+			H.visible_message("<span class='warning'>The space around [H] distorts as they change size!</span>","<span class='notice'>The space around you distorts as you change size!</span>")
+		else //They chose their current size.
+			return

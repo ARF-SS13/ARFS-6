@@ -97,6 +97,20 @@
 	ckeywhitelist = list("andyman105", "dameonowen", "dwagin")
 	character_name = null
 
+/datum/gear/fluff/dameon_13
+	path = /obj/item/weapon/storage/pill_bottle/antacid
+	display_name = "Antacid Bottle"
+	description = "A bottle of antacid tablets."
+	ckeywhitelist = list("andyman105", "dameonowen", "dwagin")
+	character_name = null
+
+/datum/gear/fluff/dameon_14
+	path = /obj/item/clothing/under/hyperfiber/bluespace/admin
+	display_name = "Bluespace Jumpsuit"
+	description = "Allows one to resize themselves at will, and conceals their true weight as well as any bulges or protrusions on their body."
+	ckeywhitelist = list("andyman105", "dameonowen", "dwagin")
+	character_name = null
+
 /datum/gear/fluff/thing_1
 	path = /obj/item/weapon/implanter/blindsight
 	display_name = "Blindsight Implant"

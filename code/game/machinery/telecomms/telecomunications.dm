@@ -689,26 +689,28 @@ var/global/list/obj/machinery/telecomms/telecomms_list = list()
 	var/garbage_collector = 1 // if set to 0, will not be garbage collected
 	var/input_type = "Speech File"
 
+//ARFS EDIT - Commented out to add exonet relay
 //Generic telecomm connectivity test proc
-/proc/can_telecomm(var/atom/A, var/atom/B, var/ad_hoc = FALSE)
-	if(!A || !B)
-		log_debug("can_telecomm(): Undefined endpoints!")
-		return FALSE
+// /proc/can_telecomm(var/atom/A, var/atom/B, var/ad_hoc = FALSE)
+// 	if(!A || !B)
+// 		log_debug("can_telecomm(): Undefined endpoints!")
+// 		return FALSE
 
-	//Can't in this case, obviously!
-	if(is_jammed(A) || is_jammed(B))
-		return FALSE
+// 	//Can't in this case, obviously!
+// 	if(is_jammed(A) || is_jammed(B))
+// 		return FALSE
 
-	//Items don't have a Z when inside an object or mob
-	var/turf/src_z = get_z(A)
-	var/turf/dst_z = get_z(B)
+// 	//Items don't have a Z when inside an object or mob
+// 	var/turf/src_z = get_z(A)
+// 	var/turf/dst_z = get_z(B)
 
-	//Nullspace, probably.
-	if(!src_z || !dst_z)
-		return FALSE
+// 	//Nullspace, probably.
+// 	if(!src_z || !dst_z)
+// 		return FALSE
 
-	//We can do the simple check first, if you have ad_hoc radios.
-	if(ad_hoc && src_z == dst_z)
-		return TRUE
+// 	//We can do the simple check first, if you have ad_hoc radios.
+// 	if(ad_hoc && src_z == dst_z)
+// 		return TRUE
 
-	return src_z in using_map.get_map_levels(dst_z, TRUE, om_range = DEFAULT_OVERMAP_RANGE)
+// 	return src_z in using_map.get_map_levels(dst_z, TRUE, om_range = DEFAULT_OVERMAP_RANGE)
+// END ARFS EDIT
