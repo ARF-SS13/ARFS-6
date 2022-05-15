@@ -250,6 +250,23 @@
 	new /datum/random_map/automata/cave_system/no_cracks(null, 3, 3, z, world.maxx - 4, world.maxy - 4)
 	new /datum/random_map/noise/ore/grasscave(null, 1, 1, z, 64, 64)
 
+#include "xenoprime/_xenoprime.dm"
+/datum/map_template/common_lateload/xenoprime
+	name = "Xenomorph Prime - Z1 Surface"
+	desc = "The away mission with spooky space lizards."
+	mappath = 'maps/Arfs/submaps/xenoprime/xenoprime.dmm'
+	associated_map_datum = /datum/map_z_level/common_lateload/xenoprime
+
+/datum/map_z_level/common_lateload/xenoprime
+	name = "Away Mission - Xenomorph Prime - Z1 Surface"
+	z = Z_LEVEL_XENOPRIME
+	base_turf = /turf/simulated/floor/outdoors/mud
+
+/datum/map_template/common_lateload/xenoprime/on_map_loaded(z)
+	. = ..()
+	seed_submaps(list(z), 120, /area/tether_away/xenoprime/unexplored, /area/tether_away/xenoprime/unexplored/deep)
+	new /datum/random_map/automata/cave_system/no_cracks(null, 3, 3, z, world.maxx - 4, world.maxy - 4)
+
 //////////////////////////////////////////////////////////////////////////////////////
 // Admin-use z-levels for loading whenever an admin feels like
 #if AWAY_MISSION_TEST
@@ -525,20 +542,3 @@
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_PERSIST|MAP_LEVEL_MAPPABLE
 	base_turf = /turf/space
 	z = Z_LEVEL_OFFMAP1
-
-#include "xenoprime/_xenoprime.dm"
-/datum/map_template/common_lateload/xenoprime
-	name = "Xenomorph Prime - Z1 Surface"
-	desc = "The away mission with spooky space lizards."
-	mappath = 'maps/Arfs/submaps/xenoprime/xenoprime.dmm'
-	associated_map_datum = /datum/map_z_level/common_lateload/xenoprime
-
-/datum/map_z_level/common_lateload/xenoprime
-	name = "Away Mission - Xenomorph Prime - Z1 Surface"
-	z = Z_LEVEL_XENOPRIME
-	base_turf = /turf/simulated/floor/outdoors/mud
-
-/datum/map_template/common_lateload/xenoprime/on_map_loaded(z)
-	. = ..()
-	seed_submaps(list(Z_LEVEL_XENOPRIME), 120, /area/tether_away/cave/unexplored/normal, /datum/map_template/surface/mountains/normal)
-	new /datum/random_map/automata/cave_system/no_cracks(null, 3, 3, Z_LEVEL_XENOPRIME, world.maxx - 4, world.maxy - 4)

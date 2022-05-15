@@ -11,8 +11,8 @@
 	destructible = 1
 	health = 50
 	anchored = TRUE
-	icon = 'icons/mob/actions.dmi'
-	icon_state = "alien_egg"
+	icon = 'content_arfs/icons/mob/mobs/alien.dmi'
+	icon_state = "alien_nest"
 	spawn_types = list(
 	/mob/living/simple_mob/caclien/wild/drone = 20,
 	/mob/living/simple_mob/caclien/wild/hunter = 10,

@@ -94,7 +94,7 @@
 
 //Turfmakers
 #define XENOPRIME_SET_ATMOS	nitrogen=XENOPRIME_MOL_N2;oxygen=XENOPRIME_MOL_O2;carbon_dioxide=XENOPRIME_MOL_CO2;phoron=XENOPRIME_MOL_PHORON;temperature=XENOPRIME_AVG_TEMP
-#define XENOPRIME_TURF_CREATE(x)	x/xenoprime/nitrogen=XENOPRIME_MOL_N2;x/xenoprime/oxygen=XENOPRIME_MOL_O2;x/xenoprime/carbon_dioxide=XENOPRIME_MOL_CO2;x/xenoprime/phoron=XENOPRIME_MOL_PHORON;x/xenoprime/temperature=XENOPRIME_AVG_TEMP;x/xenoprime/color="#eacd7c"
+#define XENOPRIME_TURF_CREATE(x)	x/xenoprime/nitrogen=XENOPRIME_MOL_N2;x/xenoprime/oxygen=XENOPRIME_MOL_O2;x/xenoprime/carbon_dioxide=XENOPRIME_MOL_CO2;x/xenoprime/phoron=XENOPRIME_MOL_PHORON;x/xenoprime/temperature=XENOPRIME_AVG_TEMP;x/xenoprime
 
 /turf/simulated/shuttle/wall/voidcraft/green/xenoprime
 	XENOPRIME_SET_ATMOS
@@ -106,10 +106,13 @@
 XENOPRIME_TURF_CREATE(/turf/unsimulated/wall/planetary)
 
 XENOPRIME_TURF_CREATE(/turf/simulated/wall)
+XENOPRIME_TURF_CREATE(/turf/simulated/wall/r_wall)
 XENOPRIME_TURF_CREATE(/turf/simulated/floor/plating)
+XENOPRIME_TURF_CREATE(/turf/simulated/floor/tiled/steel)
 XENOPRIME_TURF_CREATE(/turf/simulated/floor/bluegrid)
 XENOPRIME_TURF_CREATE(/turf/simulated/floor/tiled/techfloor)
-
+XENOPRIME_TURF_CREATE(/turf/simulated/floor/outdoors/newdirt)
+XENOPRIME_TURF_CREATE(/turf/simulated/floor/outdoors/mud)
 XENOPRIME_TURF_CREATE(/turf/simulated/mineral)
 
 // -- Areas -- //
@@ -122,7 +125,7 @@ XENOPRIME_TURF_CREATE(/turf/simulated/mineral)
 	requires_power = 1
 
 /area/tether_away/xenoprime/water
-	name = "\improper Away Mission - Xenomorph Prime Water"
+	name = "\improper Away Mission - Xenomorph Prime G-435"
 	icon_state = "bluenew"
 	base_turf = /turf/simulated/floor/outdoors/mud
 
@@ -135,3 +138,6 @@ XENOPRIME_TURF_CREATE(/turf/simulated/mineral)
 	name = "\improper Away Mission - Xenomorph Prime G-435"
 	icon_state = "unexplored"
 	flags = RAD_SHIELDED
+
+/area/tether_away/xenoprime/unexplored/deep
+	icon_state = "unexplored_deep"
