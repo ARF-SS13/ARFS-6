@@ -87,12 +87,22 @@
 /turf/simulated/floor/grass,
 /area/crew_quarters/longue_area)
 "au" = (
-/obj/machinery/alarm{
-	dir = 1;
-	pixel_y = -22
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
 	},
-/turf/simulated/floor/tiled/dark,
-/area/crew_quarters/wedding_chapel_changing_room)
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/carpet,
+/area/chapel/main)
 "av" = (
 /obj/structure/bed/chair/comfy/teal{
 	dir = 1
@@ -150,21 +160,24 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/deckthree/central)
 "aA" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 1
+/mob/living/simple_mob/animal/passive/pokemon/umbreon{
+	name = "Nightshade"
 	},
-/turf/simulated/floor/wood,
-/area/holodeck_control)
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/blue,
+/area/chapel/office)
 "aG" = (
 /turf/simulated/floor/water/shoreline,
 /area/crew_quarters/longue_area)
 "aI" = (
-/obj/machinery/computer/HolodeckControl,
-/obj/machinery/light/floortube{
+/obj/structure/bed/chair/sofa/black{
 	dir = 1
 	},
+/obj/machinery/light/floortube,
 /turf/simulated/floor/wood,
-/area/holodeck_control)
+/area/space)
 "aJ" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -207,11 +220,6 @@
 "aM" = (
 /turf/simulated/floor/grass,
 /area/crew_quarters/longue_area)
-"aN" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/glass,
-/turf/simulated/floor/tiled/dark,
-/area/holodeck_control)
 "aQ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -231,12 +239,11 @@
 /turf/simulated/floor/grass,
 /area/hydroponics/garden)
 "aU" = (
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/flora/pottedplant/orientaltree,
-/turf/simulated/floor/wood,
-/area/space)
+/obj/structure/table/woodentable,
+/obj/item/weapon/paper_bin,
+/obj/item/weapon/pen/blade/fountain,
+/turf/simulated/floor/carpet/blue,
+/area/chapel/office)
 "aV" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/grass,
@@ -246,16 +253,15 @@
 /turf/simulated/floor/grass,
 /area/hydroponics/garden)
 "ba" = (
-/turf/simulated/floor/bmarble,
-/area/crew_quarters/wedding_chapel)
-"bd" = (
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock{
-	name = "Chapel Office";
-	req_access = list(27)
+/obj/structure/bed/chair/comfy/black{
+	dir = 8
 	},
-/turf/simulated/floor/tiled/dark,
-/area/crew_quarters/wedding_chapel)
+/obj/machinery/camera/autoname{
+	dir = 8;
+	c_tag = "holodeck"
+	},
+/turf/simulated/floor/wood,
+/area/holodeck_control)
 "bg" = (
 /obj/structure/flora/ausbushes/pointybush,
 /mob/living/simple_mob/animal/passive/armadillo,
@@ -294,15 +300,18 @@
 	},
 /area/library)
 "bs" = (
-/obj/item/toy/bouquet,
-/obj/item/toy/bouquet,
-/obj/item/toy/bouquet,
-/obj/item/toy/bouquet{
-	pixel_y = 6
+/obj/effect/floor_decal/chapel{
+	dir = 1
 	},
-/obj/structure/table/fancyblack,
-/turf/simulated/floor/bmarble,
-/area/crew_quarters/wedding_chapel)
+/obj/structure/bed/chair/sofa/pew/right{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
 "bu" = (
 /obj/structure/flora/log1,
 /obj/effect/floor_decal/grass_edge{
@@ -324,23 +333,6 @@
 	},
 /turf/simulated/floor/carpet,
 /area/library)
-"by" = (
-/obj/machinery/door/firedoor/glass,
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/obj/machinery/door/airlock{
-	name = "Chapel Backroom Access";
-	req_access = newlist()
-	},
-/turf/simulated/floor/wood,
-/area/chapel/office)
 "bz" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
@@ -353,15 +345,24 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/deckthree/central)
 "bD" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
-/turf/simulated/floor/carpet,
-/area/chapel/main)
+/turf/simulated/floor/tiled/dark,
+/area/space)
 "bF" = (
 /obj/machinery/vending/fishing,
 /obj/machinery/light{
@@ -414,11 +415,6 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/kitchen)
-"bP" = (
-/obj/machinery/door/firedoor/glass,
-/obj/effect/wingrille_spawn,
-/turf/simulated/wall,
-/area/chapel/main)
 "bQ" = (
 /obj/machinery/alarm{
 	dir = 4;
@@ -441,9 +437,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
-"cb" = (
-/turf/simulated/floor/carpet,
-/area/crew_quarters/wedding_chapel)
 "cg" = (
 /obj/item/weapon/material/minihoe,
 /turf/simulated/floor/grass,
@@ -520,10 +513,6 @@
 	},
 /turf/simulated/floor/grass,
 /area/hydroponics/garden)
-"cx" = (
-/obj/structure/table/bench/sifwooden/padded,
-/turf/simulated/floor/bmarble,
-/area/crew_quarters/wedding_chapel)
 "cz" = (
 /obj/structure/table/standard{
 	name = "plastic table frame"
@@ -537,17 +526,15 @@
 /turf/simulated/floor/plating,
 /area/library)
 "cB" = (
-/obj/effect/floor_decal/chapel{
+/obj/machinery/mass_driver{
+	id = "chap";
 	dir = 4
 	},
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 24
+/obj/structure/window/reinforced{
+	dir = 8
 	},
-/obj/structure/cable/green{
-	d2 = 2;
-	icon_state = "0-2"
+/obj/machinery/door/window{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
@@ -558,20 +545,23 @@
 /turf/simulated/floor/grass,
 /area/hydroponics/garden)
 "cG" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+/obj/effect/floor_decal/chapel,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/chapel/main)
 "cI" = (
 /obj/structure/flora/ausbushes/grassybush,
 /turf/simulated/floor/grass,
 /area/hydroponics/garden)
 "cJ" = (
-/obj/effect/floor_decal/spline/plain,
-/obj/structure/railing,
-/turf/simulated/floor/wmarble,
-/area/crew_quarters/wedding_chapel)
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/carpet/blue,
+/area/chapel/office)
 "cL" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -591,18 +581,27 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/deckthree/central)
 "cN" = (
-/obj/machinery/mass_driver{
-	id = "chap";
+/obj/effect/floor_decal/chapel{
 	dir = 4
 	},
-/obj/structure/window/reinforced{
-	dir = 8
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24
 	},
-/obj/machinery/door/window{
-	dir = 2
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
+"cO" = (
+/obj/structure/bed/chair/wood,
+/obj/machinery/newscaster{
+	pixel_y = 32
+	},
+/turf/simulated/floor/carpet/blue,
+/area/chapel/office)
 "cT" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -641,10 +640,25 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/longue_area)
 "df" = (
-/obj/structure/bed/chair/sofa/black,
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/obj/item/device/radio/intercom{
+	dir = 1;
+	frequency = 6669;
+	name = "Private Channel";
+	pixel_x = 32
+	},
 /obj/machinery/light/floortube{
 	dir = 1
 	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
+"do" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/table/woodentable,
 /turf/simulated/floor/wood,
 /area/space)
 "dp" = (
@@ -652,11 +666,18 @@
 /turf/simulated/floor/grass,
 /area/hydroponics/garden)
 "dt" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
+/obj/machinery/mass_driver{
+	id = "chap";
 	dir = 4
 	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/window{
+	dir = 2
+	},
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/chapel/main)
 "du" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -676,6 +697,14 @@
 	color = "#C04000"
 	},
 /area/library)
+"dx" = (
+/obj/structure/musician/piano{
+	dir = 4;
+	icon_state = "piano"
+	},
+/obj/machinery/light/floortube,
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
 "dB" = (
 /obj/structure/flora/tree/jungle_small,
 /turf/simulated/floor/grass,
@@ -695,15 +724,6 @@
 /obj/effect/floor_decal/borderfloorblack,
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/deckthree/central)
-"dF" = (
-/obj/structure/table/woodentable,
-/obj/item/clothing/gloves/ring/engagement,
-/obj/item/clothing/gloves/ring/engagement,
-/obj/item/clothing/gloves/ring/fluff,
-/obj/item/clothing/gloves/ring/fluff/basir,
-/obj/item/clothing/gloves/ring/mariner,
-/turf/simulated/floor/tiled/dark,
-/area/crew_quarters/wedding_chapel_changing_room)
 "dH" = (
 /obj/effect/floor_decal/corner_oldtile/green,
 /obj/effect/floor_decal/corner_oldtile/green{
@@ -751,11 +771,19 @@
 /turf/simulated/floor/grass,
 /area/hydroponics)
 "dU" = (
-/obj/machinery/light{
-	dir = 4
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/glass,
 /turf/simulated/floor/tiled/dark,
-/area/crew_quarters/wedding_chapel_changing_room)
+/area/holodeck_control)
 "dV" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -788,57 +816,34 @@
 /turf/simulated/floor/grass,
 /area/hydroponics/garden)
 "ec" = (
-/obj/structure/flora/pottedplant/unusual,
-/obj/machinery/light/floortube{
-	dir = 4
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
 	},
-/obj/machinery/power/apc{
-	dir = 4;
-	name = "east bump";
-	pixel_x = 24
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
 	},
 /obj/structure/cable/green{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/turf/simulated/floor/wood,
-/area/chapel/office)
-"ed" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/carpet,
-/area/crew_quarters/wedding_chapel)
-"eg" = (
-/obj/effect/floor_decal/chapel{
-	dir = 1
-	},
-/obj/structure/bed/chair/sofa/pew/right{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	d2 = 2;
-	icon_state = "0-2"
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/chapel/main)
-"ei" = (
-/turf/simulated/floor/wood,
 /area/space)
 "ej" = (
-/obj/structure/disposalpipe/segment{
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
-/turf/simulated/floor/wood,
-/area/chapel/office)
+/turf/simulated/floor/tiled/dark,
+/area/space)
 "ek" = (
-/obj/machinery/hologram/holopad,
-/turf/simulated/floor/bmarble,
-/area/crew_quarters/wedding_chapel)
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/wood,
+/area/holodeck_control)
+"ep" = (
+/obj/effect/floor_decal/chapel{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
 "eq" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/dark,
@@ -867,43 +872,46 @@
 /area/hallway/primary/deckthree/central)
 "ey" = (
 /obj/effect/floor_decal/chapel{
-	dir = 8;
-	tag = "icon-chapel (WEST)"
+	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/bed/chair/sofa/pew/right{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
 "eA" = (
-/obj/structure/curtain,
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/airlock/glass,
 /turf/simulated/floor/tiled/dark,
-/area/crew_quarters/wedding_chapel_changing_room)
+/area/holodeck_control)
 "eB" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 1
-	},
-/turf/simulated/floor/carpet,
-/area/chapel/main)
+/obj/structure/bed/chair/sofa/right/black,
+/turf/simulated/floor/wood,
+/area/space)
 "eH" = (
 /mob/living/simple_mob/animal/passive/fish/bass,
 /turf/simulated/floor/water,
 /area/crew_quarters/longue_area)
 "eK" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+/obj/structure/table/woodentable,
+/obj/item/weapon/storage/smolebrickcase,
+/obj/item/weapon/storage/smolebrickcase,
+/obj/item/weapon/storage/smolebrickcase,
+/obj/item/weapon/storage/smolebrickcase,
+/obj/item/weapon/storage/smolebrickcase,
+/obj/item/weapon/storage/smolebrickcase,
+/obj/item/weapon/storage/smolebrickcase,
+/obj/item/weapon/storage/smolebrickcase,
+/obj/item/weapon/storage/smolebrickcase,
+/obj/item/weapon/storage/smolebrickcase,
+/obj/item/weapon/storage/smolebrickcase,
+/obj/item/weapon/storage/smolebrickcase,
+/obj/machinery/alarm{
+	frequency = 1441;
+	pixel_y = 22
 	},
-/turf/simulated/floor/tiled/dark,
-/area/space)
+/turf/simulated/floor/wood,
+/area/holodeck_control)
 "eM" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -921,12 +929,6 @@
 /obj/item/device/multitool,
 /turf/simulated/floor/tiled/dark,
 /area/hydroponics)
-"eO" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 4
-	},
-/turf/simulated/floor/bmarble,
-/area/crew_quarters/wedding_chapel)
 "eP" = (
 /mob/living/simple_mob/animal/passive/fish/perch,
 /turf/simulated/floor/water/deep,
@@ -935,21 +937,11 @@
 /turf/simulated/floor/water,
 /area/crew_quarters/longue_area)
 "eT" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/disposalpipe/segment,
-/obj/machinery/door/airlock{
-	name = "Chapel Office";
-	req_access = list(27)
+/obj/structure/bed/chair/comfy/black{
+	dir = 8
 	},
 /turf/simulated/floor/wood,
-/area/chapel/office)
+/area/holodeck_control)
 "eW" = (
 /obj/effect/floor_decal/corner/lightgrey/diagonal{
 	dir = 8
@@ -973,19 +965,9 @@
 /turf/simulated/floor/grass,
 /area/hydroponics/garden)
 "fe" = (
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/door/airlock/glass{
-	name = "Lounge"
-	},
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
+/obj/structure/closet/coffin,
 /turf/simulated/floor/tiled/dark,
-/area/crew_quarters/wedding_chapel_changing_room)
+/area/chapel/main)
 "ff" = (
 /obj/structure/sink/kitchen{
 	pixel_y = 21
@@ -1002,18 +984,6 @@
 	},
 /turf/simulated/floor/grass,
 /area/hydroponics/garden)
-"fh" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/space)
 "fr" = (
 /obj/effect/floor_decal/corner/lightgrey/diagonal{
 	dir = 8
@@ -1090,14 +1060,10 @@
 /turf/simulated/floor/grass,
 /area/crew_quarters/longue_area)
 "fD" = (
-/obj/machinery/light{
-	dir = 4
-	},
-/obj/structure/musician/piano{
-	dir = 8
-	},
-/turf/simulated/floor/bmarble,
-/area/crew_quarters/wedding_chapel)
+/obj/effect/floor_decal/chapel,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
 "fG" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -1108,6 +1074,17 @@
 	color = "#C04000"
 	},
 /area/library)
+"fH" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/light/floortube{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/holodeck_control)
 "fM" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -1118,6 +1095,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/longue_area)
+"fN" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/nullrod,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/holywater,
+/turf/simulated/floor/carpet/blue,
+/area/chapel/office)
 "fT" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
 /obj/effect/floor_decal/grass_edge{
@@ -1145,24 +1128,24 @@
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/hydroponics)
 "gb" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/simulated/floor/carpet,
-/area/crew_quarters/wedding_chapel)
-"ge" = (
-/obj/structure/bed/chair{
-	dir = 1
-	},
-/obj/item/device/radio/intercom{
-	frequency = 6669;
-	name = "Private Channel";
-	pixel_x = -32
-	},
-/obj/machinery/light/floortube{
-	dir = 1
+/obj/item/weapon/stool/padded{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
+/area/chapel/main)
+"ge" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/tinted{
+	dir = 8
+	},
+/obj/structure/window/reinforced/tinted{
+	dir = 1
+	},
+/obj/structure/window/reinforced/tinted{
+	dir = 4
+	},
+/obj/structure/window/reinforced/tinted,
+/turf/simulated/floor/plating,
 /area/chapel/main)
 "gg" = (
 /obj/machinery/papershredder/arfs{
@@ -1197,12 +1180,12 @@
 /turf/simulated/floor/tiled/dark,
 /area/space)
 "gi" = (
-/obj/machinery/camera/autoname{
-	dir = 8;
-	c_tag = "holodeck"
+/obj/structure/fans/hardlight,
+/obj/structure/window/reinforced{
+	dir = 1
 	},
-/turf/simulated/floor/bmarble,
-/area/crew_quarters/wedding_chapel)
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
 "gk" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -1245,51 +1228,28 @@
 /turf/simulated/floor/carpet/bcarpet,
 /area/library)
 "gw" = (
-/obj/structure/table/woodentable,
-/obj/item/weapon/storage/smolebrickcase,
-/obj/item/weapon/storage/smolebrickcase,
-/obj/item/weapon/storage/smolebrickcase,
-/obj/item/weapon/storage/smolebrickcase,
-/obj/item/weapon/storage/smolebrickcase,
-/obj/item/weapon/storage/smolebrickcase,
-/obj/item/weapon/storage/smolebrickcase,
-/obj/item/weapon/storage/smolebrickcase,
-/obj/item/weapon/storage/smolebrickcase,
-/obj/item/weapon/storage/smolebrickcase,
-/obj/item/weapon/storage/smolebrickcase,
-/obj/item/weapon/storage/smolebrickcase,
-/obj/machinery/alarm{
-	frequency = 1441;
-	pixel_y = 22
+/obj/machinery/light/floortube{
+	dir = 1
 	},
-/turf/simulated/floor/wood,
-/area/holodeck_control)
-"gy" = (
-/turf/simulated/wall,
-/area/chapel/main)
-"gA" = (
-/obj/effect/floor_decal/chapel,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
+"gy" = (
+/obj/structure/bed/chair/sofa/black,
+/obj/machinery/light/floortube{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/space)
 "gB" = (
 /obj/structure/reagent_dispensers/watertank/high,
 /obj/machinery/light/floortube,
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/hydroponics)
 "gD" = (
-/obj/structure/closet/wardrobe/chaplain_black,
-/obj/item/weapon/storage/fancy/crayons,
-/obj/item/weapon/reagent_containers/spray/cleaner,
-/obj/machinery/light/floortube{
-	dir = 4
-	},
-/obj/machinery/firealarm{
-	layer = 3.3;
-	pixel_y = 26
-	},
-/turf/simulated/floor/carpet/blue,
-/area/chapel/office)
+/obj/structure/fans/hardlight,
+/obj/structure/window/reinforced,
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
 "gE" = (
 /obj/structure/flora/lily2,
 /turf/simulated/floor/grass,
@@ -1312,18 +1272,6 @@
 /mob/living/simple_mob/animal/sif/sakimm/racoon,
 /turf/simulated/floor/grass,
 /area/hydroponics/garden)
-"gK" = (
-/obj/machinery/power/apc{
-	dir = 4;
-	name = "east bump";
-	pixel_x = 24
-	},
-/obj/structure/cable/green{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/turf/simulated/floor/bmarble,
-/area/crew_quarters/wedding_chapel)
 "gP" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -1342,12 +1290,45 @@
 	},
 /turf/simulated/floor/water/deep,
 /area/crew_quarters/longue_area)
+"gT" = (
+/obj/structure/bed/chair/sofa/left/black{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"gU" = (
+/obj/structure/table/fancyblack,
+/obj/item/weapon/flame/candle/candelabra/everburn{
+	pixel_y = 20
+	},
+/obj/item/weapon/storage/bible/booze,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
 "gV" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
 /turf/simulated/floor/grass,
 /area/crew_quarters/longue_area)
+"gY" = (
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -25
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/tiled/dark,
+/area/chapel/chapel_morgue)
 "gZ" = (
 /obj/effect/floor_decal/corner/lightgrey/diagonal{
 	dir = 8
@@ -1357,34 +1338,6 @@
 	},
 /turf/simulated/floor/tiled/eris/cafe,
 /area/crew_quarters/kitchen)
-"ha" = (
-/obj/machinery/door/blast/regular{
-	id = "chap"
-	},
-/turf/simulated/floor/plating,
-/area/chapel/main)
-"hc" = (
-/obj/machinery/light{
-	dir = 8
-	},
-/obj/structure/table/fancyblack,
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/cheesecake{
-	pixel_y = -4
-	},
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/cheesecake,
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/cheesecake{
-	pixel_y = 4
-	},
-/turf/simulated/floor/bmarble,
-/area/crew_quarters/wedding_chapel)
-"hd" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/crew_quarters/wedding_chapel_changing_room)
 "he" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/structure/kitchenspike,
@@ -1395,25 +1348,24 @@
 /turf/simulated/floor/water/deep,
 /area/crew_quarters/longue_area)
 "hm" = (
-/obj/effect/floor_decal/chapel{
-	dir = 1
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
-/obj/structure/bed/chair/sofa/pew/right{
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/light/floortube{
-	dir = 1
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/space)
+"hp" = (
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -25
 	},
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
-"hp" = (
-/obj/machinery/alarm{
-	pixel_y = 22;
-	target_temperature = 273.15
-	},
-/obj/machinery/atmospherics/unary/vent_pump/on,
-/turf/simulated/floor/carpet/blue,
-/area/chapel/office)
 "hs" = (
 /obj/machinery/honey_extractor,
 /obj/machinery/light/floortube,
@@ -1438,12 +1390,6 @@
 "hv" = (
 /turf/simulated/floor/water/deep,
 /area/crew_quarters/longue_area)
-"hw" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/dark,
-/area/space)
 "hz" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -1473,24 +1419,12 @@
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
 "hN" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Library, Fore";
 	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/chapel/main)
 "hR" = (
 /obj/machinery/light/flamp,
 /turf/simulated/floor/carpet/bcarpet,
@@ -1518,6 +1452,14 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
+"hV" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/storage/fancy/markers,
+/obj/item/weapon/flame/lighter/zippo/moff,
+/obj/item/weapon/storage/fancy/whitecandle_box,
+/obj/item/weapon/storage/fancy/crayons,
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
 "hW" = (
 /obj/structure/table/standard{
 	name = "plastic table frame"
@@ -1533,9 +1475,17 @@
 /turf/simulated/floor/grass,
 /area/hydroponics/garden)
 "ia" = (
-/obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
 /turf/simulated/floor/wood,
-/area/holodeck_control)
+/area/chapel/office)
 "id" = (
 /turf/simulated/floor/airless/ceiling,
 /area/space)
@@ -1667,12 +1617,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hydroponics/garden)
-"iB" = (
-/obj/machinery/light/floortube{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/dark,
-/area/chapel/main)
 "iC" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -1712,49 +1656,37 @@
 /turf/simulated/floor/grass,
 /area/hydroponics/garden)
 "iG" = (
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/door/airlock/glass{
-	name = "Lounge"
-	},
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/wood,
-/area/crew_quarters/wedding_chapel)
-"iH" = (
-/obj/machinery/mass_driver{
-	id = "chap";
-	dir = 4
-	},
-/obj/structure/window/reinforced{
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
 	},
-/obj/machinery/door/window{
-	dir = 1
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
-/area/chapel/main)
+/area/space)
 "iL" = (
 /obj/machinery/light{
 	dir = 1
 	},
 /turf/simulated/floor/grass,
 /area/crew_quarters/longue_area)
-"iN" = (
-/turf/simulated/wall,
-/area/crew_quarters/wedding_chapel_changing_room)
 "iO" = (
-/obj/item/weapon/stool/padded,
-/turf/simulated/floor/bmarble,
-/area/crew_quarters/wedding_chapel)
+/obj/effect/floor_decal/chapel{
+	dir = 8;
+	tag = "icon-chapel (WEST)"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
 "iQ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/wood,
-/area/holodeck_control)
+/obj/machinery/button/crematorium{
+	pixel_y = -26
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/chapel_morgue)
 "iS" = (
 /obj/structure/flora/ausbushes/pointybush,
 /obj/effect/floor_decal/grass_edge,
@@ -1768,12 +1700,6 @@
 	color = "#C04000"
 	},
 /area/library)
-"iZ" = (
-/obj/structure/table/woodentable,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen/blade/fountain,
-/turf/simulated/floor/carpet/blue,
-/area/chapel/office)
 "je" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -1850,6 +1776,11 @@
 /obj/machinery/light/floortube,
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/hydroponics)
+"ju" = (
+/obj/machinery/door/firedoor/glass,
+/obj/effect/wingrille_spawn,
+/turf/simulated/floor/plating,
+/area/chapel/main)
 "jv" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/machinery/camera/autoname{
@@ -1858,19 +1789,22 @@
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/hydroponics)
 "jw" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 8
-	},
-/turf/simulated/floor/bmarble,
-/area/crew_quarters/wedding_chapel)
-"jA" = (
+/obj/machinery/door/firedoor/glass,
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/carpet,
-/area/crew_quarters/wedding_chapel)
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/door/airlock{
+	name = "Chapel Backroom Access";
+	req_access = newlist()
+	},
+/turf/simulated/floor/wood,
+/area/chapel/office)
 "jB" = (
 /obj/structure/closet/crate/freezer,
 /obj/item/weapon/reagent_containers/food/snacks/meat/chicken,
@@ -1955,19 +1889,12 @@
 /turf/simulated/floor/grass,
 /area/crew_quarters/longue_area)
 "jX" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 10
+/obj/structure/window/reinforced{
+	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
-	},
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/crew_quarters/wedding_chapel_changing_room)
+/obj/structure/flora/pottedplant/orientaltree,
+/turf/simulated/floor/wood,
+/area/space)
 "jY" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/effect/floor_decal/borderfloorblack{
@@ -1976,24 +1903,32 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/deckthree/central)
 "kb" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+/obj/structure/closet/wardrobe/chaplain_black,
+/obj/item/weapon/storage/fancy/crayons,
+/obj/item/weapon/reagent_containers/spray/cleaner,
+/obj/machinery/light/floortube{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+/obj/machinery/firealarm{
+	layer = 3.3;
+	pixel_y = 26
+	},
+/turf/simulated/floor/carpet/blue,
+/area/chapel/office)
+"ke" = (
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
 	},
 /turf/simulated/floor/wood,
 /area/chapel/office)
-"ke" = (
-/obj/structure/bed/chair/sofa/black{
-	dir = 1
-	},
-/obj/machinery/light/floortube,
-/turf/simulated/floor/wood,
-/area/space)
 "kf" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -2012,25 +1947,12 @@
 /obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/hallway/primary/deckthree/central)
-"kh" = (
-/obj/effect/wingrille_spawn,
-/turf/simulated/floor/plating,
-/area/chapel/main)
 "ki" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
-"kj" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/dark,
-/area/space)
 "kk" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
 /obj/machinery/light/floortube,
@@ -2072,17 +1994,6 @@
 /mob/living/simple_mob/animal/passive/fish/trout,
 /turf/simulated/floor/water,
 /area/crew_quarters/longue_area)
-"ky" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/light/floortube{
-	dir = 4
-	},
-/turf/simulated/floor/wood,
-/area/holodeck_control)
 "kB" = (
 /obj/machinery/camera/autoname{
 	dir = 4
@@ -2092,26 +2003,10 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/deckthree/central)
-"kE" = (
-/obj/structure/closet/coffin,
-/turf/simulated/floor/tiled/dark,
-/area/chapel/main)
-"kF" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/effect/wingrille_spawn,
-/turf/simulated/floor/plating,
-/area/holodeck_control)
 "kI" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/hydroponics)
-"kN" = (
-/obj/machinery/alarm{
-	dir = 4;
-	pixel_x = -25
-	},
-/turf/simulated/floor/tiled/dark,
-/area/chapel/main)
 "kO" = (
 /obj/effect/floor_decal/corner/lightgrey/diagonal{
 	dir = 8
@@ -2127,16 +2022,12 @@
 /turf/simulated/floor/grass,
 /area/hydroponics/garden)
 "kT" = (
-/obj/structure/table/bench/sifwooden/padded,
-/obj/machinery/light{
-	dir = 4
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/airlock/glass{
+	name = "Holodeck"
 	},
-/obj/machinery/alarm{
-	dir = 1;
-	pixel_y = -22
-	},
-/turf/simulated/floor/bmarble,
-/area/crew_quarters/wedding_chapel)
+/turf/simulated/floor/tiled/dark,
+/area/holodeck_control)
 "kV" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -2183,14 +2074,9 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/deckthree/central)
 "la" = (
-/obj/machinery/hologram/holopad,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
+/obj/machinery/light/floortube,
 /turf/simulated/floor/tiled/dark,
-/area/crew_quarters/wedding_chapel_changing_room)
+/area/chapel/main)
 "lb" = (
 /turf/simulated/floor/carpet/bcarpet,
 /area/crew_quarters/bar)
@@ -2208,6 +2094,16 @@
 	color = "#C04000"
 	},
 /area/library)
+"lg" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/space)
 "lj" = (
 /obj/effect/floor_decal/corner/lightgrey/diagonal{
 	dir = 8
@@ -2265,37 +2161,29 @@
 /turf/simulated/floor/tiled/eris/cafe,
 /area/crew_quarters/kitchen)
 "lp" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/wood,
-/area/holodeck_control)
-"ls" = (
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+/obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
-/turf/simulated/floor/wood,
-/area/chapel/office)
+/turf/simulated/floor/tiled/dark,
+/area/space)
 "lu" = (
 /obj/structure/flora/ausbushes/fernybush,
 /turf/simulated/floor/grass,
 /area/hydroponics/garden)
 "lv" = (
-/obj/structure/morgue{
-	dir = 2
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
-/obj/machinery/firealarm{
-	layer = 3.3;
-	pixel_y = 26
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/door/airlock/glass,
 /turf/simulated/floor/tiled/dark,
-/area/chapel/chapel_morgue)
+/area/chapel/main)
 "lw" = (
 /turf/simulated/floor/carpet/bcarpet,
 /area/library)
@@ -2442,49 +2330,32 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
 "lZ" = (
-/obj/effect/floor_decal/spline/plain,
-/obj/structure/railing,
-/obj/structure/flora/pottedplant/flower,
-/turf/simulated/floor/bmarble,
-/area/crew_quarters/wedding_chapel)
-"mg" = (
-/turf/simulated/wall/silvergold,
-/area/crew_quarters/wedding_chapel_changing_room)
-"mi" = (
-/obj/structure/table/woodentable,
-/obj/item/clothing/gloves/ring/wedding/silver{
-	pixel_x = -6
+/obj/effect/floor_decal/chapel{
+	dir = 4
 	},
-/obj/item/clothing/gloves/ring/wedding/silver{
-	pixel_x = -6
-	},
-/obj/item/clothing/gloves/ring/wedding/silver{
-	pixel_x = -6
-	},
-/obj/item/clothing/gloves/ring/wedding/silver{
-	pixel_x = -6
-	},
-/obj/item/clothing/gloves/ring/wedding{
-	pixel_x = -1;
-	pixel_y = -2
-	},
-/obj/item/clothing/gloves/ring/wedding{
-	pixel_x = -1;
-	pixel_y = -2
-	},
-/obj/item/clothing/gloves/ring/wedding{
-	pixel_x = -1;
-	pixel_y = -2
-	},
-/obj/item/clothing/gloves/ring/wedding{
-	pixel_x = -1;
-	pixel_y = -2
-	},
-/obj/item/weapon/lipstick/black,
-/obj/item/weapon/lipstick/jade,
-/obj/item/weapon/lipstick/purple,
+/obj/structure/closet/coffin,
 /turf/simulated/floor/tiled/dark,
-/area/crew_quarters/wedding_chapel_changing_room)
+/area/chapel/main)
+"mg" = (
+/obj/structure/morgue{
+	dir = 2
+	},
+/obj/machinery/light_switch{
+	pixel_x = 1;
+	pixel_y = 33
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/chapel_morgue)
+"mh" = (
+/obj/effect/floor_decal/chapel{
+	dir = 8;
+	tag = "icon-chapel (WEST)"
+	},
+/obj/structure/bed/chair/sofa/pew/left{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
 "mk" = (
 /obj/machinery/light,
 /mob/living/simple_mob/animal/passive/fish/javelin,
@@ -2587,13 +2458,11 @@
 /turf/simulated/floor/glass/reinforced/virgo3c,
 /area/crew_quarters/bar)
 "mN" = (
-/obj/structure/filingcabinet,
-/obj/machinery/camera/autoname{
-	dir = 8;
-	c_tag = "chapel office"
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/reinforced{
+	name = "Holodeck Projector Floor"
 	},
-/turf/simulated/floor/carpet/blue,
-/area/chapel/office)
+/area/holodeck/alphadeck)
 "mO" = (
 /obj/structure/flora/grass/green,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -2606,14 +2475,6 @@
 "mP" = (
 /turf/simulated/wall,
 /area/hydroponics/garden)
-"mW" = (
-/obj/effect/floor_decal/chapel{
-	dir = 1
-	},
-/obj/structure/flora/pottedplant/decorative,
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
-/turf/simulated/floor/tiled/dark,
-/area/chapel/main)
 "mX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -2712,44 +2573,36 @@
 	},
 /area/library)
 "nt" = (
-/obj/effect/floor_decal/chapel{
-	dir = 8;
-	tag = "icon-chapel (WEST)"
+/obj/machinery/light/floortube{
+	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 1
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 4
 	},
-/turf/simulated/floor/tiled/dark,
-/area/chapel/main)
-"nu" = (
-/obj/structure/morgue{
-	dir = 2
-	},
-/obj/machinery/light_switch{
-	pixel_x = 1;
-	pixel_y = 33
-	},
-/turf/simulated/floor/tiled/dark,
-/area/chapel/chapel_morgue)
+/turf/simulated/floor/wood,
+/area/chapel/office)
 "nv" = (
-/obj/effect/floor_decal/chapel{
-	dir = 1
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled/dark,
-/area/chapel/main)
-"ny" = (
+/obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/carpet,
-/area/crew_quarters/wedding_chapel)
+/obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock{
+	name = "Chapel Office";
+	req_access = list(27)
+	},
+/turf/simulated/floor/wood,
+/area/chapel/office)
 "nB" = (
-/turf/simulated/floor/tiled/dark,
-/area/crew_quarters/wedding_chapel_changing_room)
-"nD" = (
-/obj/structure/flora/pottedplant/orientaltree,
-/turf/simulated/floor/bmarble,
-/area/crew_quarters/wedding_chapel)
+/obj/machinery/hologram/holopad,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/wood,
+/area/holodeck_control)
 "nE" = (
 /obj/structure/bed/chair/comfy/teal,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -2783,9 +2636,17 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/deckthree/central)
 "nP" = (
-/obj/structure/bed/chair/comfy/black{
-	dir = 8
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
 	},
+/turf/simulated/floor/wood,
+/area/holodeck_control)
+"nR" = (
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
+	},
+/obj/machinery/light/floortube,
 /turf/simulated/floor/wood,
 /area/holodeck_control)
 "nV" = (
@@ -2837,17 +2698,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/hydroponics)
-"og" = (
-/turf/simulated/floor/wmarble,
-/area/crew_quarters/wedding_chapel)
-"oh" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/bmarble,
-/area/crew_quarters/wedding_chapel)
 "ok" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
 /obj/effect/floor_decal/grass_edge{
@@ -2913,14 +2763,6 @@
 /mob/living/simple_mob/animal/passive/fish/measelshark,
 /turf/simulated/floor/water/deep,
 /area/crew_quarters/longue_area)
-"oy" = (
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -26
-	},
-/obj/machinery/light/floortube,
-/turf/simulated/floor/wood,
-/area/holodeck_control)
 "oz" = (
 /obj/structure/flora/grass/green,
 /obj/effect/floor_decal/grass_edge{
@@ -2960,15 +2802,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/dark,
 /area/hydroponics/garden)
-"oF" = (
-/mob/living/simple_mob/animal/passive/pokemon/umbreon{
-	name = "Nightshade"
-	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 4
-	},
-/turf/simulated/floor/carpet/blue,
-/area/chapel/office)
 "oG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
@@ -2977,11 +2810,6 @@
 	color = "#C04000"
 	},
 /area/library)
-"oH" = (
-/obj/machinery/door/firedoor/glass,
-/obj/effect/wingrille_spawn,
-/turf/simulated/floor/plating,
-/area/chapel/main)
 "oI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -2990,21 +2818,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
-"oJ" = (
-/obj/machinery/light/floortube{
-	dir = 8
-	},
-/obj/machinery/disposal,
-/obj/structure/disposalpipe/trunk{
-	dir = 4
-	},
-/turf/simulated/floor/wood,
-/area/chapel/office)
-"oK" = (
-/obj/effect/floor_decal/chapel,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled/dark,
-/area/chapel/main)
 "oM" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
 /obj/effect/floor_decal/grass_edge{
@@ -3013,41 +2826,41 @@
 /turf/simulated/floor/grass,
 /area/hydroponics/garden)
 "oO" = (
-/obj/structure/bed/chair/sofa/right/black,
-/turf/simulated/floor/wood,
-/area/space)
+/obj/machinery/alarm{
+	pixel_y = 22;
+	target_temperature = 273.15
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/turf/simulated/floor/carpet/blue,
+/area/chapel/office)
 "oP" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
-"oQ" = (
-/obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Library, Fore";
-	dir = 4
-	},
-/turf/simulated/floor/tiled/dark,
-/area/chapel/main)
 "oR" = (
 /obj/structure/cable/green{
-	icon_state = "4-8"
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/turf/simulated/floor/carpet,
-/area/chapel/main)
-"oS" = (
-/obj/effect/floor_decal/chapel{
-	dir = 4
-	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled/dark,
-/area/chapel/main)
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/wood,
+/area/chapel/office)
+"oS" = (
+/turf/simulated/floor/wood,
+/area/space)
 "oV" = (
 /turf/simulated/wall,
 /area/hallway/primary/deckthree/central)
@@ -3074,6 +2887,12 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/deckthree/central)
+"pa" = (
+/obj/machinery/door/blast/regular{
+	id = "chap"
+	},
+/turf/simulated/floor/plating,
+/area/chapel/main)
 "pb" = (
 /obj/machinery/hologram/holopad,
 /obj/effect/floor_decal/borderfloorblack{
@@ -3082,11 +2901,31 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/deckthree/central)
 "pd" = (
-/obj/structure/bed/chair/wood{
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/wood,
+/area/holodeck_control)
+"pe" = (
+/obj/structure/table/woodentable,
+/obj/item/device/flashlight/lamp{
+	pixel_x = -4;
+	pixel_y = 10
+	},
+/obj/machinery/light/floortube{
+	dir = 8
+	},
+/obj/machinery/light_switch{
+	pixel_x = 1;
+	pixel_y = 33
 	},
 /turf/simulated/floor/carpet/blue,
 /area/chapel/office)
@@ -3095,60 +2934,33 @@
 /obj/random/instrument,
 /turf/simulated/floor/glass/reinforced/virgo3c,
 /area/crew_quarters/bar)
-"pg" = (
+"ph" = (
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/turf/simulated/floor/wood,
+/area/holodeck_control)
+"pl" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/carpet,
+/area/chapel/main)
+"po" = (
 /obj/effect/floor_decal/chapel,
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
-"pk" = (
-/obj/structure/fans/hardlight,
-/obj/structure/window/reinforced,
-/turf/simulated/floor/tiled/dark,
-/area/chapel/main)
-"pl" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/tinted{
-	dir = 8
-	},
-/obj/structure/window/reinforced/tinted{
-	dir = 1
-	},
-/obj/structure/window/reinforced/tinted{
-	dir = 4
-	},
-/obj/structure/window/reinforced/tinted,
-/turf/simulated/floor/plating,
-/area/chapel/main)
-"pm" = (
-/obj/machinery/alarm{
-	dir = 4;
-	pixel_x = -25
-	},
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
-/turf/simulated/floor/tiled/dark,
-/area/chapel/chapel_morgue)
-"po" = (
-/obj/machinery/light/floortube,
-/turf/simulated/floor/tiled/dark,
-/area/chapel/main)
-"pr" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 6
-	},
-/turf/simulated/floor/carpet,
-/area/crew_quarters/wedding_chapel)
 "pt" = (
 /obj/machinery/portable_atmospherics/hydroponics,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -3159,12 +2971,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/hydroponics)
-"pw" = (
-/obj/machinery/hologram/holopad,
-/turf/simulated/floor/reinforced{
-	name = "Holodeck Projector Floor"
-	},
-/area/holodeck/alphadeck)
 "px" = (
 /obj/structure/flora/pottedplant/orientaltree,
 /turf/simulated/floor/wood{
@@ -3182,13 +2988,6 @@
 	color = "#C04000"
 	},
 /area/library)
-"pz" = (
-/obj/structure/bed/chair/wood,
-/obj/machinery/newscaster{
-	pixel_y = 32
-	},
-/turf/simulated/floor/carpet/blue,
-/area/chapel/office)
 "pA" = (
 /obj/machinery/portable_atmospherics/hydroponics,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -3201,18 +3000,34 @@
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/hydroponics)
 "pB" = (
-/obj/effect/floor_decal/chapel{
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
-/turf/simulated/floor/tiled/dark,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/turf/simulated/floor/carpet,
 /area/chapel/main)
 "pF" = (
-/obj/machinery/door/firedoor/glass,
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/turf/simulated/floor/plating,
-/area/crew_quarters/wedding_chapel)
+/obj/structure/flora/pottedplant/unusual,
+/obj/machinery/light/floortube{
+	dir = 4
+	},
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+	},
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/wood,
+/area/chapel/office)
 "pG" = (
 /obj/structure/flora/ausbushes/genericbush,
 /turf/simulated/floor/grass,
@@ -3249,11 +3064,6 @@
 	color = "#C04000"
 	},
 /area/library)
-"pK" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/hologram/holopad,
-/turf/simulated/floor/carpet/blue,
-/area/chapel/office)
 "pQ" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
 /obj/item/seeds/appleseed,
@@ -3332,13 +3142,6 @@
 	},
 /turf/simulated/floor/grass,
 /area/hydroponics/garden)
-"qf" = (
-/obj/machinery/camera/autoname{
-	dir = 1;
-	c_tag = "Library - Reading Nook"
-	},
-/turf/simulated/floor/carpet/bcarpet,
-/area/library)
 "qg" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -3351,10 +3154,6 @@
 	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/library)
-"qk" = (
-/obj/structure/bed/chair/sofa/left/black,
-/turf/simulated/floor/wood,
-/area/space)
 "ql" = (
 /obj/structure/morgue/crematorium{
 	dir = 8
@@ -3423,21 +3222,15 @@
 	},
 /area/library)
 "qD" = (
-/obj/item/weapon/stool/padded{
-	dir = 8
+/obj/structure/morgue{
+	dir = 2
+	},
+/obj/machinery/firealarm{
+	layer = 3.3;
+	pixel_y = 26
 	},
 /turf/simulated/floor/tiled/dark,
-/area/chapel/main)
-"qE" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/crew_quarters/wedding_chapel_changing_room)
+/area/chapel/chapel_morgue)
 "qH" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
@@ -3476,24 +3269,21 @@
 /turf/simulated/floor/carpet,
 /area/library)
 "qL" = (
-/turf/space,
-/area/maintenance/medbay_aft)
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/wingrille_spawn,
+/turf/simulated/floor/plating,
+/area/holodeck_control)
 "qM" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/hydroponics)
 "qP" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+/obj/effect/floor_decal/chapel{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/chapel/main)
 "qU" = (
 /obj/machinery/portable_atmospherics/hydroponics,
 /turf/simulated/floor/tiled/kafel_full/green,
@@ -3570,6 +3360,15 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
+"rf" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/turf/simulated/floor/wood,
+/area/holodeck_control)
 "rg" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -3593,12 +3392,6 @@
 	color = "#C04000"
 	},
 /area/library)
-"rk" = (
-/obj/structure/table/woodentable,
-/obj/item/weapon/nullrod,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/holywater,
-/turf/simulated/floor/carpet/blue,
-/area/chapel/office)
 "rl" = (
 /obj/structure/closet/walllocker{
 	pixel_y = 6;
@@ -3632,21 +3425,16 @@
 	},
 /area/library)
 "ro" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 8
+/obj/effect/floor_decal/chapel{
+	dir = 1
 	},
+/obj/structure/flora/pottedplant/decorative,
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/dark,
-/area/crew_quarters/wedding_chapel_changing_room)
+/area/chapel/main)
 "rp" = (
-/obj/structure/bed/chair/comfy/black{
-	dir = 8
-	},
-/obj/machinery/camera/autoname{
-	dir = 8;
-	c_tag = "holodeck"
-	},
-/turf/simulated/floor/wood,
-/area/holodeck_control)
+/turf/simulated/wall,
+/area/chapel/main)
 "rt" = (
 /obj/effect/floor_decal/corner_oldtile/green,
 /obj/effect/floor_decal/corner_oldtile/green{
@@ -3680,18 +3468,16 @@
 	},
 /area/library)
 "rx" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
 	},
 /obj/structure/cable/green{
-	icon_state = "4-8"
+	d2 = 2;
+	icon_state = "0-2"
 	},
-/obj/machinery/door/airlock/glass,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/wood,
 /area/holodeck_control)
 "rB" = (
 /turf/simulated/floor/wood,
@@ -3709,7 +3495,9 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/deckthree/central)
 "rI" = (
-/obj/effect/floor_decal/chapel,
+/obj/effect/floor_decal/chapel{
+	dir = 4
+	},
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
@@ -3720,8 +3508,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
 "rJ" = (
-/obj/machinery/hologram/holopad,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/wood,
 /area/holodeck_control)
 "rM" = (
@@ -3729,28 +3516,6 @@
 /obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/medbay_aft)
-"rN" = (
-/obj/structure/fans/hardlight,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/dark,
-/area/chapel/main)
-"rP" = (
-/obj/structure/bed/chair{
-	dir = 1
-	},
-/obj/item/device/radio/intercom{
-	dir = 1;
-	frequency = 6669;
-	name = "Private Channel";
-	pixel_x = 32
-	},
-/obj/machinery/light/floortube{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/dark,
-/area/chapel/main)
 "rS" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -3767,12 +3532,18 @@
 /turf/simulated/floor/grass,
 /area/hydroponics/garden)
 "rV" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/glass{
-	name = "Holodeck"
+/obj/structure/table/woodentable,
+/obj/item/weapon/storage/box/bodybags,
+/obj/item/weapon/storage/box/bodybags,
+/obj/machinery/light/floortube{
+	dir = 4
+	},
+/obj/machinery/camera/autoname{
+	dir = 8;
+	c_tag = "chapel office - backroom"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/holodeck_control)
+/area/chapel/chapel_morgue)
 "rW" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/effect/floor_decal/grass_edge{
@@ -3790,52 +3561,16 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hydroponics/garden)
-"rY" = (
-/obj/structure/musician/piano{
-	dir = 4;
-	icon_state = "piano"
-	},
-/obj/machinery/light/floortube,
-/turf/simulated/floor/tiled/dark,
-/area/chapel/main)
 "sa" = (
-/obj/structure/bed/chair/sofa/left/black{
-	dir = 1
-	},
-/turf/simulated/floor/wood,
-/area/space)
-"sd" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 9
-	},
-/turf/simulated/floor/tiled/dark,
-/area/chapel/chapel_morgue)
+/turf/space,
+/area/maintenance/medbay_aft)
 "se" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+/obj/structure/filingcabinet,
+/obj/machinery/camera/autoname{
+	dir = 8;
+	c_tag = "chapel office"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
-	},
-/turf/simulated/floor/wood,
+/turf/simulated/floor/carpet/blue,
 /area/chapel/office)
 "sf" = (
 /obj/effect/landmark{
@@ -3843,12 +3578,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hydroponics)
-"sg" = (
-/obj/structure/bed/chair/sofa/right/black{
-	dir = 1
-	},
-/turf/simulated/floor/wood,
-/area/space)
 "sj" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
@@ -3873,6 +3602,12 @@
 "sm" = (
 /turf/simulated/floor/plating,
 /area/maintenance/medbay_aft)
+"sn" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/space)
 "sq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -3954,19 +3689,19 @@
 /turf/simulated/floor/plating,
 /area/crew_quarters/bar)
 "sW" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
 /obj/structure/cable/green{
 	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
+	d2 = 8;
+	icon_state = "1-8"
 	},
-/turf/simulated/floor/wood,
-/area/holodeck_control)
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/chapel_morgue)
 "sZ" = (
 /obj/effect/floor_decal/corner_oldtile/green,
 /obj/effect/floor_decal/corner_oldtile/green{
@@ -3980,9 +3715,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hydroponics/garden)
-"tc" = (
-/turf/simulated/wall/silvergold,
-/area/chapel/office)
 "tg" = (
 /mob/living/simple_mob/animal/goat,
 /turf/simulated/floor/grass,
@@ -4042,16 +3774,18 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/deckthree/central)
-"tA" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+"tz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/dark,
+/area/space)
+"tA" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
 	},
-/turf/simulated/floor/carpet,
-/area/crew_quarters/wedding_chapel)
+/turf/simulated/floor/tiled/dark,
+/area/space)
 "tE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/green{
@@ -4064,17 +3798,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/longue_area)
-"tG" = (
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 24
-	},
-/obj/structure/cable/green{
-	icon_state = "0-2"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/crew_quarters/wedding_chapel_changing_room)
 "tK" = (
 /obj/structure/flora/lily2,
 /obj/effect/floor_decal/grass_edge,
@@ -4087,12 +3810,17 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
 "tM" = (
-/obj/structure/window/reinforced{
-	dir = 8
+/obj/effect/floor_decal/chapel{
+	dir = 1
 	},
-/obj/structure/table/woodentable,
-/turf/simulated/floor/wood,
-/area/space)
+/obj/structure/bed/chair/sofa/pew/right{
+	dir = 4
+	},
+/obj/machinery/light/floortube{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
 "tQ" = (
 /obj/effect/floor_decal/chapel{
 	dir = 1
@@ -4141,17 +3869,11 @@
 /turf/simulated/wall,
 /area/chapel/office)
 "uh" = (
-/obj/machinery/power/apc{
-	dir = 4;
-	name = "east bump";
-	pixel_x = 24
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
 	},
-/obj/structure/cable/green{
-	d2 = 2;
-	icon_state = "0-2"
-	},
-/turf/simulated/floor/wood,
-/area/holodeck_control)
+/turf/simulated/floor/tiled/dark,
+/area/space)
 "uj" = (
 /obj/structure/flora/ausbushes/brflowers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -4159,19 +3881,6 @@
 	},
 /turf/simulated/floor/grass,
 /area/crew_quarters/longue_area)
-"up" = (
-/obj/effect/floor_decal/chapel{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled/dark,
-/area/chapel/main)
 "uq" = (
 /obj/structure/closet/secure_closet/bar,
 /obj/item/clothing/accessory/permit/gun/bar,
@@ -4227,69 +3936,9 @@
 /turf/simulated/floor/carpet/bcarpet,
 /area/library)
 "uJ" = (
-/obj/structure/table/fancyblack,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/wine{
-	pixel_x = -5;
-	pixel_y = 15
-	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/champagne{
-	pixel_x = 5;
-	pixel_y = 16
-	},
-/obj/item/weapon/reagent_containers/food/drinks/metaglass,
-/obj/item/weapon/reagent_containers/food/drinks/metaglass{
-	pixel_x = -8
-	},
-/obj/item/weapon/reagent_containers/food/drinks/metaglass{
-	pixel_x = 8
-	},
-/obj/item/weapon/reagent_containers/food/drinks/metaglass{
-	pixel_x = -8
-	},
-/obj/item/weapon/reagent_containers/food/drinks/metaglass{
-	pixel_x = -8
-	},
-/obj/item/weapon/reagent_containers/food/drinks/metaglass{
-	pixel_x = -8
-	},
-/obj/item/weapon/reagent_containers/food/drinks/metaglass,
-/obj/item/weapon/reagent_containers/food/drinks/metaglass,
-/obj/item/weapon/reagent_containers/food/drinks/metaglass,
-/obj/item/weapon/reagent_containers/food/drinks/metaglass{
-	pixel_x = 8
-	},
-/obj/item/weapon/reagent_containers/food/drinks/metaglass{
-	pixel_x = 8
-	},
-/obj/item/weapon/reagent_containers/food/drinks/metaglass{
-	pixel_x = 8
-	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/wine{
-	pixel_x = -5;
-	pixel_y = 15
-	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/wine{
-	pixel_x = -5;
-	pixel_y = 15
-	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/wine{
-	pixel_x = -5;
-	pixel_y = 15
-	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/champagne{
-	pixel_x = 5;
-	pixel_y = 16
-	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/champagne{
-	pixel_x = 5;
-	pixel_y = 16
-	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/champagne{
-	pixel_x = 5;
-	pixel_y = 16
-	},
-/turf/simulated/floor/bmarble,
-/area/crew_quarters/wedding_chapel)
+/obj/structure/bed/chair/sofa/left/black,
+/turf/simulated/floor/wood,
+/area/space)
 "uK" = (
 /obj/effect/floor_decal/chapel,
 /turf/simulated/floor/tiled/dark,
@@ -4309,15 +3958,6 @@
 	},
 /turf/simulated/floor/grass,
 /area/hydroponics/garden)
-"uN" = (
-/obj/machinery/button/crematorium{
-	pixel_y = -26
-	},
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/dark,
-/area/chapel/chapel_morgue)
 "uR" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -4352,12 +3992,13 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/deckthree/central)
 "vc" = (
-/obj/effect/floor_decal/chapel{
-	dir = 8;
-	tag = "icon-chapel (WEST)"
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Chapel Back";
+	dir = 10
 	},
-/obj/structure/bed/chair/sofa/pew/left{
-	dir = 4
+/obj/structure/flora/pottedplant/decorative,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
@@ -4368,17 +4009,11 @@
 /turf/simulated/floor/water/deep,
 /area/crew_quarters/longue_area)
 "ve" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 8
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/space)
+/turf/simulated/floor/wood,
+/area/chapel/office)
 "vf" = (
 /obj/structure/flora/lily2,
 /obj/effect/floor_decal/grass_edge{
@@ -4408,12 +4043,12 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/longue_area)
 "vi" = (
-/obj/structure/table/bench/sifwooden/padded,
-/obj/machinery/light{
-	dir = 8
+/obj/machinery/camera/autoname{
+	dir = 1;
+	c_tag = "Library - Reading Nook"
 	},
-/turf/simulated/floor/bmarble,
-/area/crew_quarters/wedding_chapel)
+/turf/simulated/floor/carpet/bcarpet,
+/area/library)
 "vl" = (
 /obj/machinery/seed_extractor,
 /obj/effect/floor_decal/corner_oldtile/green,
@@ -4422,20 +4057,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hydroponics/garden)
-"vo" = (
-/obj/structure/table/fancyblack,
-/obj/item/weapon/flame/candle/candelabra/everburn{
-	pixel_y = 20
-	},
-/obj/item/weapon/storage/bible/booze,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 9
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
-	},
-/turf/simulated/floor/tiled/dark,
-/area/chapel/main)
 "vr" = (
 /obj/structure/railing,
 /turf/simulated/floor/grass,
@@ -4564,13 +4185,6 @@
 	},
 /turf/simulated/floor/tiled/eris/cafe,
 /area/crew_quarters/kitchen)
-"wg" = (
-/obj/effect/floor_decal/chapel{
-	dir = 4
-	},
-/obj/structure/closet/coffin,
-/turf/simulated/floor/tiled/dark,
-/area/chapel/main)
 "wh" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -4582,6 +4196,13 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/deckthree/central)
+"wi" = (
+/obj/machinery/computer/HolodeckControl,
+/obj/machinery/light/floortube{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/holodeck_control)
 "wl" = (
 /obj/structure/table/marble,
 /obj/machinery/chemical_dispenser/bar_alc/full{
@@ -4592,8 +4213,15 @@
 /turf/simulated/floor/glass/reinforced/virgo3c,
 /area/crew_quarters/bar)
 "wq" = (
-/turf/simulated/floor/ramptop,
-/area/crew_quarters/wedding_chapel)
+/obj/effect/floor_decal/chapel{
+	dir = 8;
+	tag = "icon-chapel (WEST)"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
 "ws" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
 /obj/item/seeds/berryseed,
@@ -4685,65 +4313,17 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
 "wZ" = (
-/obj/structure/table/rack/shelf,
-/obj/item/clothing/suit/chameleon,
-/obj/item/clothing/suit/chameleon,
-/obj/item/clothing/suit/greatcoat,
-/obj/item/clothing/suit/leathercoat,
-/obj/item/clothing/suit/storage/fluff/ivy,
-/obj/item/clothing/suit/storage/fluff/zara_coat,
-/obj/item/clothing/under/lawyer/bluesuit,
-/obj/item/clothing/under/lawyer/purpsuit,
-/obj/item/clothing/under/psysuit,
-/obj/item/clothing/under/gentlesuit,
-/obj/item/clothing/under/fluff/kilanosuit,
-/obj/item/clothing/under/fluff/kilanosuit/purple,
-/obj/item/clothing/under/suit_jacket,
-/obj/item/clothing/under/suit_jacket/burgundy,
-/obj/item/clothing/under/suit_jacket/charcoal,
-/obj/item/clothing/under/suit_jacket/checkered,
-/obj/item/clothing/under/suit_jacket/navy,
-/obj/item/clothing/under/suit_jacket/really_black,
-/obj/item/clothing/under/suit_jacket/red,
-/obj/item/clothing/under/suit_jacket/tan,
-/turf/simulated/floor/tiled/dark,
-/area/crew_quarters/wedding_chapel_changing_room)
-"xc" = (
-/obj/structure/table/woodentable,
-/obj/item/weapon/storage/box/bodybags,
-/obj/item/weapon/storage/box/bodybags,
-/obj/machinery/light/floortube{
-	dir = 4
+/obj/structure/bed/chair/sofa/right/black{
+	dir = 1
 	},
-/obj/machinery/camera/autoname{
-	dir = 8;
-	c_tag = "chapel office - backroom"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/chapel/chapel_morgue)
+/turf/simulated/floor/wood,
+/area/space)
 "xd" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
-"xf" = (
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/crew_quarters/wedding_chapel_changing_room)
-"xj" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 6
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5
-	},
-/turf/simulated/floor/wood,
-/area/holodeck_control)
 "xk" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -4757,26 +4337,26 @@
 	},
 /area/library)
 "xp" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
 	},
-/turf/simulated/floor/carpet,
-/area/crew_quarters/wedding_chapel)
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/space)
 "xr" = (
-/obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Chapel Back";
-	dir = 10
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
 	},
-/obj/structure/flora/pottedplant/decorative,
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/dark,
-/area/chapel/main)
-"xw" = (
-/obj/structure/closet/coffin,
-/obj/machinery/light/floortube,
-/turf/simulated/floor/tiled/dark,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/turf/simulated/floor/carpet,
 /area/chapel/main)
 "xA" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
@@ -4827,6 +4407,20 @@
 	color = "#C04000"
 	},
 /area/library)
+"xV" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/obj/item/device/radio/intercom{
+	frequency = 6669;
+	name = "Private Channel";
+	pixel_x = -32
+	},
+/obj/machinery/light/floortube{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
 "xW" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
@@ -4852,6 +4446,18 @@
 	},
 /turf/simulated/floor/tiled/eris/cafe,
 /area/crew_quarters/kitchen)
+"yi" = (
+/obj/machinery/button/remote/driver{
+	id = "chap";
+	pixel_x = -1;
+	pixel_y = 27
+	},
+/obj/structure/closet/coffin,
+/obj/machinery/light/floortube{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
 "yl" = (
 /obj/effect/floor_decal/corner/lightgrey/diagonal{
 	dir = 8
@@ -4867,6 +4473,13 @@
 /mob/living/simple_mob/animal/passive/fish/icebass,
 /turf/simulated/floor/water/deep,
 /area/crew_quarters/longue_area)
+"yn" = (
+/obj/effect/floor_decal/chapel{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
 "yo" = (
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
@@ -4875,12 +4488,18 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
 "yt" = (
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -26
+/obj/machinery/hologram/holopad,
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+	},
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/crew_quarters/wedding_chapel_changing_room)
+/area/chapel/chapel_morgue)
 "yv" = (
 /obj/structure/flora/ausbushes/grassybush,
 /obj/effect/floor_decal/grass_edge{
@@ -4900,17 +4519,14 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
+"yy" = (
+/obj/machinery/door/firedoor/glass,
+/obj/effect/wingrille_spawn,
+/turf/simulated/wall,
+/area/chapel/main)
 "yA" = (
-/obj/machinery/button/remote/driver{
-	id = "chap";
-	pixel_x = -1;
-	pixel_y = 27
-	},
-/obj/structure/closet/coffin,
-/obj/machinery/light/floortube{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/dark,
+/obj/effect/wingrille_spawn,
+/turf/simulated/floor/plating,
 /area/chapel/main)
 "yB" = (
 /obj/machinery/light{
@@ -4922,19 +4538,18 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/deckthree/central)
-"yD" = (
-/obj/machinery/hologram/holopad,
-/obj/machinery/power/apc{
-	dir = 4;
-	name = "east bump";
-	pixel_x = 24
+"yF" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/green{
-	d2 = 8;
-	icon_state = "0-8"
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/chapel/chapel_morgue)
+/area/space)
 "yG" = (
 /obj/structure/flora/ausbushes/ppflowers,
 /mob/living/simple_mob/vore/rabbit/brown,
@@ -4959,21 +4574,9 @@
 /turf/simulated/floor/plating,
 /area/crew_quarters/bar)
 "yK" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/turf/simulated/floor/carpet,
+/obj/structure/closet/coffin,
+/obj/machinery/light/floortube,
+/turf/simulated/floor/tiled/dark,
 /area/chapel/main)
 "yL" = (
 /turf/simulated/floor/tiled/dark,
@@ -5016,29 +4619,14 @@
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/hydroponics)
 "yX" = (
-/obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp{
-	pixel_x = -4;
-	pixel_y = 10
+/obj/structure/bed/chair/wood{
+	dir = 1
 	},
-/obj/machinery/light/floortube{
-	dir = 8
-	},
-/obj/machinery/light_switch{
-	pixel_x = 1;
-	pixel_y = 33
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor/carpet/blue,
 /area/chapel/office)
-"za" = (
-/obj/effect/floor_decal/chapel{
-	dir = 1
-	},
-/obj/structure/bed/chair/sofa/pew/right{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/dark,
-/area/chapel/main)
 "zd" = (
 /obj/structure/flora/log1,
 /obj/effect/floor_decal/grass_edge{
@@ -5058,22 +4646,11 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/longue_area)
-"zi" = (
-/obj/machinery/gear_painter,
-/turf/simulated/floor/tiled/dark,
-/area/crew_quarters/wedding_chapel_changing_room)
-"zn" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 4
-	},
+"zo" = (
+/obj/effect/floor_decal/chapel,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/chapel/main)
 "zr" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -5131,9 +4708,6 @@
 /obj/effect/floor_decal/borderfloorblack,
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/deckthree/central)
-"zN" = (
-/turf/simulated/wall/silvergold,
-/area/crew_quarters/wedding_chapel)
 "zQ" = (
 /obj/machinery/seed_storage/garden,
 /obj/effect/floor_decal/corner_oldtile/green,
@@ -5208,12 +4782,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/longue_area)
-"Ay" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/dark,
-/area/crew_quarters/wedding_chapel_changing_room)
 "AA" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/effect/floor_decal/grass_edge{
@@ -5235,20 +4803,6 @@
 /obj/machinery/light/floortube,
 /turf/simulated/floor/tiled/eris/cafe,
 /area/crew_quarters/kitchen)
-"AL" = (
-/obj/machinery/door/firedoor/glass,
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/door/airlock/glass,
-/turf/simulated/floor/tiled/dark,
-/area/chapel/main)
 "AV" = (
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
@@ -5630,14 +5184,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/hydroponics)
-"KV" = (
-/obj/structure/table/woodentable,
-/obj/item/weapon/storage/fancy/markers,
-/obj/item/weapon/flame/lighter/zippo/moff,
-/obj/item/weapon/storage/fancy/whitecandle_box,
-/obj/item/weapon/storage/fancy/crayons,
-/turf/simulated/floor/tiled/dark,
-/area/chapel/main)
 "Lb" = (
 /obj/machinery/hologram/holopad,
 /obj/machinery/atm{
@@ -27758,18 +27304,18 @@ aa
 aa
 aa
 aa
-zN
-zN
-zN
-zN
-zN
-zN
-zN
-zN
-tc
-bd
-zN
-zN
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -28015,18 +27561,18 @@ aa
 aa
 aa
 aa
-zN
-nD
-ba
-lZ
-hc
-ek
-cx
-ba
-cx
-ba
-vi
-zN
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -28272,18 +27818,18 @@ aa
 aa
 aa
 aa
-zN
-ba
-og
-cJ
-uJ
-ba
-cx
-ba
-cx
-ba
-cx
-pF
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -28529,18 +28075,18 @@ aa
 aa
 aa
 aa
-zN
-ba
-og
-cJ
-bs
-ba
-cx
-eO
-cx
-ba
-cx
-pF
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -28786,18 +28332,18 @@ aa
 aa
 aa
 aa
-zN
-ba
-og
-og
-wq
-cb
-cb
-xp
-cb
-cb
-cb
-pF
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -29043,18 +28589,18 @@ aa
 aa
 aa
 aa
-zN
-ba
-og
-og
-wq
-cb
-cb
-pr
-ny
-ed
-tA
-iG
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -29300,18 +28846,18 @@ aa
 aa
 aa
 aa
-zN
-ba
-og
-og
-wq
-cb
-cb
-gb
-cb
-jA
-cb
-pF
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -29557,18 +29103,18 @@ aa
 aa
 aa
 aa
-zN
-ba
-og
-cJ
-ba
-ba
-cx
-jw
-cx
-oh
-cx
-pF
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -29814,18 +29360,18 @@ aa
 aa
 aa
 aa
-zN
-ba
-og
-cJ
-iO
-ba
-cx
-ba
-cx
-oh
-cx
-pF
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -30071,18 +29617,18 @@ aa
 aa
 aa
 aa
-zN
-nD
-ba
-lZ
-fD
-ba
-cx
-gi
-cx
-gK
-kT
-zN
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -30328,18 +29874,18 @@ aa
 aa
 aa
 aa
-zN
-zN
-zN
-zN
-zN
-zN
-zN
-zN
-zN
-zN
-zN
-zN
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -30588,15 +30134,15 @@ aa
 aa
 aa
 aa
-mg
-dU
-eA
-nB
-yt
-mi
-dF
-zi
-iN
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -30845,15 +30391,15 @@ aa
 aa
 aa
 aa
-mg
-iN
-iN
-tG
-hd
-la
-Ay
-nB
-iN
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -31102,15 +30648,15 @@ aa
 aa
 aa
 aa
-mg
-dU
-eA
-nB
-nB
-xf
-jX
-qE
-fe
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -31359,15 +30905,15 @@ aa
 aa
 aa
 aa
-mg
-iN
-iN
-dU
-wZ
-nB
-ro
-au
-iN
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -31680,9 +31226,9 @@ rv
 rv
 aa
 aa
-qL
-qL
-qL
+sa
+sa
+sa
 aa
 aa
 aa
@@ -36036,14 +35582,14 @@ aa
 aa
 ac
 ac
-kF
-kF
-kF
+qL
+qL
+qL
 ac
 ac
-kF
-kF
-kF
+qL
+qL
+qL
 ac
 ac
 aa
@@ -37323,7 +36869,7 @@ GK
 xM
 xM
 xM
-pw
+mN
 xM
 xM
 xM
@@ -38863,14 +38409,14 @@ nk
 hW
 GK
 ac
-kF
-kF
+qL
+qL
 ac
-rV
-rV
+kT
+kT
 ac
-kF
-kF
+qL
+qL
 ac
 ac
 aa
@@ -39119,16 +38665,16 @@ tp
 nk
 Le
 GK
-aI
-ia
-lp
+wi
+ph
+ek
+nB
+ek
+rf
 rJ
-lp
-xj
-iQ
-iQ
-aA
-oy
+rJ
+nP
+nR
 ac
 aa
 aa
@@ -39376,16 +38922,16 @@ kI
 Jk
 gB
 GK
-gw
+eK
 rB
 rB
-uh
-ky
-sW
-rp
-nP
-nP
-nP
+rx
+fH
+pd
+ba
+eT
+eT
+eT
 ac
 aa
 aa
@@ -39634,14 +39180,14 @@ vv
 GK
 GK
 ac
-kF
-kF
+qL
+qL
 ac
-aN
-rx
+eA
+dU
 ac
-kF
-kF
+qL
+qL
 ac
 ac
 ll
@@ -39886,7 +39432,7 @@ mx
 mx
 mx
 mx
-dt
+ej
 mx
 mx
 mx
@@ -39895,13 +39441,13 @@ mx
 mx
 mx
 mx
-fh
+ec
 mx
 mx
 mx
 mx
 mx
-mx
+ej
 mx
 mx
 mx
@@ -40143,7 +39689,7 @@ mx
 mx
 mx
 mx
-cG
+sn
 mx
 mx
 mx
@@ -40152,13 +39698,13 @@ mx
 mx
 mx
 mx
-fh
+ec
 mx
 mx
 mx
 mx
 mx
-mx
+sn
 mx
 mx
 mx
@@ -40398,26 +39944,26 @@ SD
 nb
 nb
 gh
-eK
-eK
-zn
-eK
-eK
-eK
-ve
-eK
-eK
-eK
-eK
-hN
-mx
-mx
-mx
-mx
-mx
-mx
-mx
-kj
+lg
+lg
+yF
+lg
+lg
+lg
+xp
+lg
+lg
+lg
+lg
+bD
+tz
+tz
+tz
+uh
+tz
+tA
+tz
+iG
 mx
 mx
 mx
@@ -40661,7 +40207,7 @@ mx
 mx
 mx
 mx
-hw
+lp
 mx
 mx
 mx
@@ -40670,11 +40216,11 @@ mx
 mx
 mx
 mx
+lp
 mx
 mx
 mx
-mx
-qP
+hm
 mx
 mx
 mx
@@ -40922,20 +40468,20 @@ rG
 rG
 rG
 rG
-aU
-ei
-tM
-gy
-gy
-gy
-gy
-kh
-gy
-AL
-gy
-kh
-gy
-gy
+jX
+oS
+do
+rp
+rp
+rp
+rp
+yA
+rp
+lv
+rp
+yA
+rp
+rp
 aa
 aa
 aa
@@ -41179,20 +40725,20 @@ rG
 gg
 bv
 rG
-oO
-ei
-sa
-gy
-ge
+eB
+oS
+gT
+rp
+xV
 hH
 vI
-iB
-oQ
-oR
-kN
-KV
-rY
-gy
+gw
+hN
+pl
+hp
+hV
+dx
+rp
 aa
 aa
 aa
@@ -41436,20 +40982,20 @@ pI
 vU
 Zk
 rG
-df
-ei
-ke
 gy
+oS
+aI
+rp
+ge
+rp
+rp
+tQ
+wW
 pl
-gy
-gy
 tQ
 wW
-oR
-tQ
-wW
-qD
-gy
+gb
+rp
 aa
 aa
 aa
@@ -41693,20 +41239,20 @@ rG
 qK
 tw
 rG
-qk
-ei
-sg
-gy
-rP
+uJ
+oS
+wZ
+rp
+df
 hH
 vI
+qP
+fD
 pB
-gA
-eB
-oS
-oK
+ep
+zo
 xd
-gy
+rp
 aa
 aa
 aa
@@ -41957,13 +41503,13 @@ ue
 ue
 ue
 ue
-eg
-vc
-oR
-za
-vc
+bs
+mh
+pl
+ey
+mh
 vI
-gy
+rp
 aa
 aa
 aa
@@ -42209,18 +41755,18 @@ Iy
 qh
 hR
 rG
-yX
-rk
-oF
-oJ
+pe
+fN
+aA
+nt
 ue
-cB
-pg
-yK
+cN
+cG
+au
 oa
 uK
 vI
-gy
+rp
 aa
 aa
 aa
@@ -42466,18 +42012,18 @@ nE
 lw
 av
 rG
-pz
-iZ
-pd
-ej
+cO
+aU
+yX
+ve
 ue
-hm
-vc
-oR
-za
-vc
-po
-gy
+tM
+mh
+pl
+ey
+mh
+la
+rp
 aa
 aa
 aa
@@ -42721,20 +42267,20 @@ rn
 rn
 qr
 zZ
-qf
+vi
 rG
-hp
-pK
-ls
-se
-eT
-up
+oO
+cJ
+ke
+oR
+nv
 rI
-bD
+po
+xr
 oa
 uK
 vI
-gy
+rp
 aa
 aa
 aa
@@ -42980,18 +42526,18 @@ uI
 lw
 av
 rG
-gD
-mN
 kb
-ec
+se
+ia
+pF
 ue
-mW
-nt
-vo
-nv
-ey
-xr
-gy
+ro
+wq
+gU
+yn
+iO
+vc
+rp
 aa
 aa
 aa
@@ -43239,16 +42785,16 @@ hR
 rG
 ue
 ue
-by
+jw
 ue
 ue
-wg
+lZ
 uK
 vI
 oa
 uK
-kE
-gy
+fe
+rp
 aa
 aa
 aa
@@ -43494,18 +43040,18 @@ cA
 cA
 cA
 rG
-lv
-pm
-sd
-uN
+qD
+gY
+sW
+iQ
 jJ
-yA
+yi
 vI
-iH
-cN
+cB
+dt
 vI
-xw
-gy
+yK
+rp
 aa
 aa
 aa
@@ -43751,18 +43297,18 @@ aa
 aa
 aa
 jJ
-nu
-yD
-xc
+mg
+yt
+rV
 ql
 jJ
-bP
-oH
-rN
-pk
-oH
-bP
-gy
+yy
+ju
+gi
+gD
+ju
+yy
+rp
 aa
 aa
 aa
@@ -44014,10 +43560,10 @@ jJ
 jJ
 jJ
 aa
-oH
-ha
-ha
-oH
+ju
+pa
+pa
+ju
 aa
 aa
 aa
