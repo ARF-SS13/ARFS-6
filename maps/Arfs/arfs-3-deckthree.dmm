@@ -468,9 +468,6 @@
 	name = "north bump";
 	pixel_y = 24
 	},
-/obj/structure/cable/green{
-	dir = 1
-	},
 /obj/structure/table/standard{
 	name = "plastic table frame"
 	},
@@ -479,6 +476,10 @@
 	},
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 1
+	},
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningdock)
@@ -637,6 +638,9 @@
 	},
 /obj/machinery/light{
 	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/deckthree/fore{
@@ -979,15 +983,16 @@
 	name = "\improper Security - Brig Upper"
 	})
 "acF" = (
-/obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/door/firedoor/glass/hidden{
-	dir = 1
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/primary/deckthree/central{
-	name = "\improper Deck 2 - Central Primary Hallway"
+/area/hallway/primary/deckthree/fore{
+	name = "\improper Deck 2 - Fore Primary Hallway"
 	})
 "acG" = (
 /obj/structure/disposalpipe/segment{
@@ -1075,10 +1080,6 @@
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/green/border,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 5;
-	pixel_y = -32
-	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/deckthree/central{
 	name = "\improper Deck 2 - Central Primary Hallway"
@@ -1457,9 +1458,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/ai)
-"adV" = (
-/turf/simulated/floor/bluegrid,
-/area/space)
 "adW" = (
 /turf/simulated/wall/r_wall,
 /area/tcomfoyer)
@@ -1561,7 +1559,6 @@
 /turf/simulated/floor/bluegrid,
 /area/ai_upload)
 "aei" = (
-/obj/machinery/porta_turret,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -2719,14 +2716,15 @@
 	name = "north bump";
 	pixel_y = 24
 	},
-/obj/structure/cable/green{
-	icon_state = "0-4"
-	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 1
+	},
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/deckthree/fore{
@@ -2859,6 +2857,11 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/deckthree/fore{
@@ -3051,13 +3054,6 @@
 	name = "\improper Telecomms"
 	})
 "aih" = (
-/obj/machinery/power/terminal{
-	dir = 4
-	},
-/obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2"
-	},
 /obj/effect/floor_decal/spline/plain,
 /turf/simulated/floor/tiled/white,
 /area/ai)
@@ -3670,7 +3666,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/bluegrid,
-/area/space)
+/area/ai)
 "ake" = (
 /obj/machinery/vending/snack,
 /turf/simulated/floor/wood,
@@ -4478,13 +4474,16 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/mixing)
 "alX" = (
-/obj/structure/disposalpipe/segment,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled/dark,
-/area/hallway/primary/deckthree/central{
-	name = "\improper Deck 2 - Central Primary Hallway"
-	})
+/obj/effect/floor_decal/spline/plain{
+	dir = 6
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/white,
+/area/ai)
 "alY" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -5008,13 +5007,16 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/pool)
 "anl" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 4
 	},
-/turf/simulated/floor/bluegrid,
-/area/ai)
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/hallway/primary/deckthree/fore)
 "anm" = (
 /obj/effect/floor_decal/corner_oldtile/purple{
 	dir = 6
@@ -5275,6 +5277,9 @@
 	},
 /obj/machinery/camera/network/telecom{
 	c_tag = "Upper Command Hallway 3"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/deckthree/fore{
@@ -7978,7 +7983,8 @@
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
-	dir = 1
+	d2 = 2;
+	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/deckthree/central{
@@ -8144,19 +8150,6 @@
 /obj/item/device/taperecorder,
 /turf/simulated/floor/tiled/dark,
 /area/exploration/hallway)
-"atS" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/bluegrid,
-/area/ai)
 "atU" = (
 /obj/machinery/firealarm{
 	layer = 3.3;
@@ -8348,14 +8341,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/miningdock)
-"auo" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/bluegrid,
-/area/ai)
 "aup" = (
 /obj/structure/table/woodentable,
 /turf/simulated/floor/wood,
@@ -9491,6 +9476,9 @@
 	id_tag = "HoSdoor";
 	name = "Head of Security";
 	req_access = list(58)
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/hos)
@@ -11671,6 +11659,11 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 4
 	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/deckthree/central{
 	name = "\improper Deck 2 - Central Primary Hallway"
@@ -12215,7 +12208,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/reinforced,
@@ -12418,7 +12410,7 @@
 "aCB" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/bluegrid,
-/area/space)
+/area/ai)
 "aCC" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -13039,7 +13031,8 @@
 	pixel_y = 28
 	},
 /obj/structure/cable/green{
-	dir = 1
+	d2 = 2;
+	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/pool)
@@ -13389,11 +13382,6 @@
 /area/exploration/hanger)
 "aEJ" = (
 /obj/machinery/hologram/holopad,
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/bluegrid,
 /area/ai)
 "aEK" = (
@@ -13418,6 +13406,11 @@
 	d1 = 2;
 	d2 = 4;
 	icon_state = "2-4"
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/deckthree/central{
@@ -13624,7 +13617,7 @@
 	pixel_y = 28
 	},
 /obj/structure/cable/green{
-	dir = 8
+	icon_state = "0-4"
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/locker)
@@ -13658,14 +13651,13 @@
 	name = "\improper Deck 2 - Fore Primary Hallway"
 	})
 "aFF" = (
-/obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2"
-	},
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
 	pixel_y = 28
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/white,
 /area/ai)
@@ -14154,6 +14146,9 @@
 /obj/effect/floor_decal/corner/blue/bordercorner{
 	dir = 4
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/deckthree/fore{
 	name = "\improper Deck 2 - Fore Primary Hallway"
@@ -14218,6 +14213,11 @@
 	d1 = 1;
 	d2 = 4;
 	icon_state = "1-4"
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/deckthree/fore{
@@ -15359,11 +15359,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/station/sec_upper)
 "aKb" = (
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
 /obj/machinery/alarm{
 	pixel_y = 22;
 	target_temperature = 273.15
@@ -17051,11 +17046,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/research_starboard)
 "aOq" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/machinery/ai_slipper{
 	icon_state = "motion0"
 	},
@@ -17426,6 +17416,11 @@
 "aPm" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/deckthree/fore{
 	name = "\improper Deck 2 - Fore Primary Hallway"
@@ -18618,11 +18613,6 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
 	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
 /turf/simulated/floor/tiled/white,
 /area/ai)
 "aSB" = (
@@ -18797,17 +18787,6 @@
 	name = "\improper Deck 2 - Central Primary Hallway"
 	})
 "aTc" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "AI Core SMES";
-	charge = 5e+006;
-	input_attempt = 1;
-	input_level = 200000;
-	name = "AI Core SMES";
-	output_level = 200000
-	},
-/obj/structure/cable/green{
-	icon_state = "0-4"
-	},
 /obj/machinery/camera/network/telecom{
 	c_tag = "AITC - AI Core 1"
 	},
@@ -20373,19 +20352,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/ai)
-"aXm" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/white,
-/area/ai)
 "aXn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -20537,17 +20503,6 @@
 /obj/machinery/status_display,
 /turf/simulated/wall/r_wall,
 /area/exploration/gear)
-"aXE" = (
-/obj/machinery/ai_slipper{
-	icon_state = "motion0"
-	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/bluegrid,
-/area/ai)
 "aXF" = (
 /obj/structure/cable{
 	d1 = 2;
@@ -21196,10 +21151,10 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/deckthree/aft)
 "aZD" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/bluegrid,
 /area/ai)
@@ -24541,11 +24496,6 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
 	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
 /turf/simulated/floor/tiled/white,
 /area/ai)
 "kHG" = (
@@ -26758,6 +26708,11 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/deckthree/central{
 	name = "\improper Deck 2 - Central Primary Hallway"
@@ -28375,6 +28330,11 @@
 	d1 = 2;
 	d2 = 8;
 	icon_state = "2-8"
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/deckthree/fore)
@@ -59800,9 +59760,9 @@ aaO
 aFF
 kDP
 aQB
-adV
-adV
-adV
+abm
+abm
+abm
 aed
 abe
 aaO
@@ -60054,7 +60014,7 @@ aaa
 aaa
 aaO
 aaO
-aQB
+alX
 aOq
 abm
 abm
@@ -60312,7 +60272,7 @@ aaa
 aaO
 aih
 aZD
-atS
+abm
 aaO
 abn
 aaO
@@ -60568,7 +60528,7 @@ aaa
 aaa
 aaO
 aTc
-abm
+aZD
 aEJ
 aaO
 aaM
@@ -60587,7 +60547,7 @@ afQ
 aGY
 ahG
 aPm
-aPm
+acF
 aIv
 aKJ
 aKJ
@@ -60601,9 +60561,9 @@ aGy
 ajo
 aGy
 rFg
-acF
-alX
-alX
+aCH
+aVy
+aVy
 aEM
 aVy
 aVy
@@ -60825,8 +60785,8 @@ aaa
 aaa
 aaO
 aKb
-anl
-auo
+aZD
+abm
 aaO
 abn
 aaO
@@ -60911,7 +60871,7 @@ anN
 anN
 aBi
 anN
-anN
+anl
 anN
 anN
 anN
@@ -61083,7 +61043,7 @@ aaU
 aaO
 aaO
 aaq
-aXE
+aOq
 abm
 abm
 ajb
@@ -61339,7 +61299,7 @@ aaU
 acu
 aNd
 aOu
-aXm
+aXl
 aSA
 aGs
 abm
