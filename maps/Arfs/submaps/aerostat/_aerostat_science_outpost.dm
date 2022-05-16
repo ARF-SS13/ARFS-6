@@ -20,11 +20,10 @@
 	skybox_pixel_x = 0
 	skybox_pixel_y = 0
 
-/* // ARFS EDIT: Overrided in arfs_submaps.dm
 /obj/effect/overmap/visitable/sector/virgo2/Initialize()
-	for(var/obj/effect/overmap/visitable/ship/stellar_delight/sd in world)
+	for(var/obj/effect/overmap/visitable/ship/landable/excursion/sd in world)
 		docking_codes = sd.docking_codes
-	. = ..() */
+	. = ..()
 
 // -- Datums -- //
 

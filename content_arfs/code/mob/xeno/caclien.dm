@@ -340,6 +340,7 @@
 	color = "#39373d"
 /obj/effect/alien/weeds/node
 	color = "#39373d"
+	set_color = "#39373d"
 /obj/effect/alien/weeds
 	color = "#39373d"
 

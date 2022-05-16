@@ -88,12 +88,12 @@
 	overmap_event_areas = 75
 
 	lateload_z_levels = list(
-		list("V3b Asteroid Field"),
 		list("Desert Planet - Z1 Beach","Desert Planet - Z2 Cave"),
 		list("Remmi Aerostat - Z1 Aerostat","Remmi Aerostat - Z2 Surface"),
 		list("Debris Field - Z1 Space"),
 		list("Fuel Depot - Z1 Space"),
-		list("Offmap Ship - Talon V2")
+		list("Offmap Ship - Talon V2"),
+		list("Xenomorph Prime - Z1 Surface")
 		)
 
 	lateload_gateway = list(
@@ -107,13 +107,11 @@
 		list("Wild West")
 		)
 
-	lateload_overmap = list(
-		list("Grass Cave")
-		)
+	lateload_overmap = list()
 
 	planet_datums_to_make = list(/datum/planet/biodome,
-								/datum/planet/virgo3b,
-								/datum/planet/virgo4)
+								/datum/planet/virgo4,
+								/datum/planet/xenoprime)
 
 /datum/map/arfs/perform_map_generation()
 	new /datum/random_map/automata/cave_system(null, 1, 1, Z_LEVEL_MINING_ARFS, world.maxx, world.maxy) // Create the mining Z-level.
@@ -126,8 +124,8 @@
 	new /datum/random_map/automata/cave_system(null, 1, 1, Z_LEVEL_MINING_DANGER_ARFS, world.maxx, world.maxy) // Create the mining Z-level.
 	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_MINING_DANGER_ARFS, world.maxx, world.maxy)         // Create the mining ore distribution map.
 
-	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, Z_LEVEL_SPACE_ROCKS, world.maxx, world.maxy) // Create the mining Z-level.
-	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_SPACE_ROCKS, 64, 64)         // Create the mining ore distribution map.
+//	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, Z_LEVEL_SPACE_ROCKS, world.maxx, world.maxy) // Create the mining Z-level.
+//	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_SPACE_ROCKS, 64, 64)         // Create the mining ore distribution map.
 
 
 	return 1

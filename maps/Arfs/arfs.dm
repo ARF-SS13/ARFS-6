@@ -26,7 +26,7 @@
 	#include "residential/residential_arf_mansion.dmm"
 	#include "residential/residential_arf_two.dmm"
 	#include "residential/residential_arf.dmm"
-	#include "residential/residential_station.dmm"	
+	#include "residential/residential_station.dmm"
 
 	#define USING_MAP_DATUM /datum/map/arfs
 
@@ -35,43 +35,3 @@
 	#warn A map has already been included, ignoring arfs
 
 #endif
-
-// ------------------------
-
-// TO DO:
-// Add in mist sprite to icons/effects/effects.dmi.
-// add the lobby screen
-// give jon kiss cause he's lonely :(
-
-// ------------------------
-
-// arfs-1.dmm MISSING:
-// suitvendor
-// clothingvendor
-// hatvendor
-// kinkvendor
-// shoevendor
-// lewd toys it seems.
-
-// ------------------------
-
-// arfs-2.dmm MISSING:
-// nifsofts_arfs_command - fuck nif dont add this or i'll bite you
-// nifsofts_arfs_security - fuck nif dont add this or i'll bite you
-// nifsofts_arfs_security_synth - fuck nif dont add this or i'll bite you
-// hatvendor
-// clothingvendor
-// suitvendor
-// shoevendor
-// kinkvendor
-// lewd toys...smh
-// nifsofts_arfs_mining - fuck nif dont add this or i'll bite you
-// nifsofts_arfs_mining_synth - fuck nif dont add this or i'll bite you
-// nifsofts_arfs_science - fuck nif dont add this or i'll bite you
-// nifsofts_arfs_science_synth - fuck nif dont add this or i'll bite you
-// nifsofts_arfs_medical - fuck nif dont add this or i'll bite you
-// nifsofts_arfs_medical_synth - fuck nif dont add this or i'll bite you
-// nifsofts_arfs_engineer - fuck nif dont add this or i'll bite you.
-// Magical SME unit, cheaters.
-
-// ------------------------

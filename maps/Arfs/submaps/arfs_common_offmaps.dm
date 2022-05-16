@@ -3,7 +3,7 @@
 #include "beach/beach.dmm"
 #include "beach/cave.dmm"
 #include "alienship/alienship.dmm"
-#include "aerostat/aerostat.dmm"
+#include "aerostat/aerostat_science_outpost.dmm"
 #include "aerostat/surface.dmm"
 #include "space/debrisfield.dmm"
 #include "space/fueldepot.dmm"
@@ -61,24 +61,6 @@
 	z = Z_LEVEL_AEROSTAT
 	base_turf = /turf/unsimulated/floor/sky/virgo2_sky
 
-/datum/map_template/common_lateload/away_aerostat_surface
-	name = "Remmi Aerostat - Z2 Surface"
-	desc = "The surface from the Virgo 2 Aerostat."
-	mappath = 'maps/Arfs/submaps/aerostat/surface.dmm'
-	associated_map_datum = /datum/map_z_level/common_lateload/away_aerostat_surface
-
-/datum/map_template/common_lateload/away_aerostat_surface/on_map_loaded(z)
-	. = ..()
-	seed_submaps(list(Z_LEVEL_AEROSTAT_SURFACE), 120, /area/offmap/aerostat/surface/unexplored, /datum/map_template/virgo2)
-	new /datum/random_map/automata/cave_system/no_cracks(null, 3, 3, Z_LEVEL_AEROSTAT_SURFACE, world.maxx - 4, world.maxy - 4)
-	new /datum/random_map/noise/ore/virgo2(null, 1, 1, Z_LEVEL_AEROSTAT_SURFACE, 64, 64)
-
-/datum/map_z_level/common_lateload/away_aerostat_surface
-	name = "Away Mission - Aerostat Surface"
-	z = Z_LEVEL_AEROSTAT_SURFACE
-	base_turf = /turf/simulated/mineral/floor/ignore_mapgen/virgo2
-
-
 #include "space/_debrisfield.dm"
 #include "space/_fueldepot.dm"
 #include "pois_vr/debris_field/_templates.dm"
@@ -107,6 +89,54 @@
 /datum/map_z_level/common_lateload/away_fueldepot
 	name = "Away Mission - Fuel Depot"
 	z = Z_LEVEL_FUELDEPOT
+
+#include "aerostat/_aerostat_science_outpost.dm"
+
+/obj/effect/overmap/visitable/sector/virgo2/Initialize()
+	for(var/obj/effect/overmap/visitable/ship/landable/excursion/sd in world)
+		docking_codes = sd.docking_codes
+	. = ..()
+
+/datum/map_template/common_lateload/away_aerostat
+	name = "Remmi Aerostat - Z1 Aerostat"
+	desc = "The Virgo 2 Aerostat away mission."
+	mappath = 'maps/Arfs/submaps/aerostat/aerostat_science_outpost.dmm'
+	associated_map_datum = /datum/map_z_level/common_lateload/away_aerostat
+/datum/map_template/common_lateload/away_aerostat_surface
+	name = "Remmi Aerostat - Z2 Surface"
+	desc = "The surface from the Virgo 2 Aerostat."
+	mappath = 'maps/Arfs/submaps/aerostat/surface.dmm'
+	associated_map_datum = /datum/map_z_level/common_lateload/away_aerostat_surface
+
+/datum/map_template/common_lateload/away_aerostat_surface/on_map_loaded(z)
+	. = ..()
+	seed_submaps(list(Z_LEVEL_AEROSTAT_SURFACE), 255, /area/offmap/aerostat/surface/unexplored, /datum/map_template/virgo2)
+	new /datum/random_map/automata/cave_system/no_cracks(null, 3, 3, Z_LEVEL_AEROSTAT_SURFACE, world.maxx - 6, world.maxy - 6)
+	new /datum/random_map/noise/ore/virgo2(null, 1, 1, Z_LEVEL_AEROSTAT_SURFACE, world.maxx, world.maxy)
+
+/datum/map_z_level/common_lateload/away_aerostat_surface
+	name = "Away Mission - Aerostat Surface"
+	z = Z_LEVEL_AEROSTAT_SURFACE
+	base_turf = /turf/simulated/mineral/floor/ignore_mapgen/virgo2
+
+#include "xenoprime/_xenoprime.dm"
+#include "xenoprime/pois/xenoprime_submaps.dm"
+/datum/map_template/common_lateload/xenoprime
+	name = "Xenomorph Prime - Z1 Surface"
+	desc = "The away mission with spooky space lizards."
+	mappath = 'maps/Arfs/submaps/xenoprime/xenoprime.dmm'
+	associated_map_datum = /datum/map_z_level/common_lateload/xenoprime
+
+/datum/map_z_level/common_lateload/xenoprime
+	name = "Away Mission - Xenomorph Prime - Z1 Surface"
+	z = Z_LEVEL_XENOPRIME
+	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/xenoprime
+
+/datum/map_template/common_lateload/xenoprime/on_map_loaded(z)
+	. = ..()
+	new /datum/random_map/automata/cave_system/no_cracks(null, 3, 3, z, world.maxx - 8, world.maxy - 8)
+	seed_submaps(list(z), 200, /area/xenoprime/unexplored/outdoors, /datum/map_template/xenoprime/outdoors)
+
 
 //////////////////////////////////////////////////////////////////////////////////////
 // Gateway submaps go here
@@ -225,7 +255,7 @@
 
 
 /////////////////////////////////////////////////////////////////////////////////////
-
+/*
 /datum/map_template/common_lateload/om_adventure
 	name = "OM Adventure Submap"
 	desc = "Please do not use this."
@@ -249,25 +279,12 @@
 	seed_submaps(list(z), 60, /area/om_adventure/grasscave/rocks, /datum/map_template/om_adventure/cave)
 	new /datum/random_map/automata/cave_system/no_cracks(null, 3, 3, z, world.maxx - 4, world.maxy - 4)
 	new /datum/random_map/noise/ore/grasscave(null, 1, 1, z, 64, 64)
+*/
 
-#include "xenoprime/_xenoprime.dm"
-/datum/map_template/common_lateload/xenoprime
-	name = "Xenomorph Prime - Z1 Surface"
-	desc = "The away mission with spooky space lizards."
-	mappath = 'maps/Arfs/submaps/xenoprime/xenoprime.dmm'
-	associated_map_datum = /datum/map_z_level/common_lateload/xenoprime
 
-/datum/map_z_level/common_lateload/xenoprime
-	name = "Away Mission - Xenomorph Prime - Z1 Surface"
-	z = Z_LEVEL_XENOPRIME
-	base_turf = /turf/simulated/floor/outdoors/mud
+/////////////////////////////////////////////////////////////////////////////////////
 
-/datum/map_template/common_lateload/xenoprime/on_map_loaded(z)
-	. = ..()
-	seed_submaps(list(z), 120, /area/tether_away/xenoprime/unexplored, /area/tether_away/xenoprime/unexplored/deep)
-	new /datum/random_map/automata/cave_system/no_cracks(null, 3, 3, z, world.maxx - 4, world.maxy - 4)
 
-//////////////////////////////////////////////////////////////////////////////////////
 // Admin-use z-levels for loading whenever an admin feels like
 #if AWAY_MISSION_TEST
 #include "admin_use_vr/spa.dmm"
