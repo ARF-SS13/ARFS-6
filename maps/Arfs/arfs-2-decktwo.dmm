@@ -140,6 +140,10 @@
 /obj/machinery/power/breakerbox/activated{
 	RCon_tag = "Cargo/Civilian Substation Bypass"
 	},
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/station/cargo)
 "aaK" = (
@@ -2188,9 +2192,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/hop)
-"aiF" = (
-/turf/simulated/wall,
-/area/crew_quarters/heads/hop)
 "aiH" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/weapon/tank/jetpack/oxygen,
@@ -2460,9 +2461,6 @@
 	},
 /turf/simulated/floor/tiled/eris/steel,
 /area/hallway/primary/fore)
-"ajt" = (
-/turf/simulated/wall,
-/area/bridge_hallway)
 "aju" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -2731,9 +2729,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/Dorm_2)
-"akG" = (
-/turf/simulated/wall,
-/area/crew_quarters/captain)
 "akI" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/command{
@@ -2868,9 +2863,11 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/hop)
 "alt" = (
-/obj/machinery/hologram/holopad,
-/turf/simulated/floor/wood,
-/area/crew_quarters/heads/hop)
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/dormitory)
 "alu" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -2888,6 +2885,10 @@
 	RCon_tag = "Command Substation Bypass"
 	},
 /obj/machinery/light,
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/command)
 "alz" = (
@@ -2945,6 +2946,9 @@
 /area/security/evidence_storage)
 "alN" = (
 /obj/structure/stairs/spawner/east,
+/obj/structure/railing{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/fore)
 "alO" = (
@@ -7904,8 +7908,9 @@
 	icon_state = "0-4"
 	},
 /obj/structure/cable/green{
+	d1 = 4;
 	d2 = 8;
-	icon_state = "0-8"
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/command)
@@ -8459,13 +8464,13 @@
 	dir = 8
 	},
 /obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/structure/cable{
 	d1 = 16;
 	d2 = 0;
 	icon_state = "16-0"
-	},
-/obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/station/cargo)
@@ -8661,12 +8666,13 @@
 	name = "Substation - Cargo/Civilian"
 	},
 /obj/structure/cable/green{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/obj/structure/cable/green{
 	d2 = 8;
 	icon_state = "0-8"
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/station/cargo)
@@ -9651,6 +9657,7 @@
 	dir = 4;
 	tag = "icon-intact (EAST)"
 	},
+/obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/fore)
 "aGS" = (
@@ -10733,15 +10740,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark,
 /area/bridge_hallway)
-"aKw" = (
-/obj/effect/floor_decal/corner/grey{
-	dir = 6;
-	icon_state = "corner_oldtile";
-	tag = "icon-corner_oldtile (SOUTHEAST)"
-	},
-/obj/machinery/door/firedoor/border_only,
-/turf/simulated/floor/tiled/dark,
-/area/hallway/primary/central_one)
 "aKx" = (
 /turf/simulated/floor/carpet,
 /area/crew_quarters/longue_area)
@@ -10873,26 +10871,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
-"aKT" = (
-/obj/machinery/door/airlock/maintenance/common,
-/turf/simulated/floor/plating,
-/area/hallway/primary/central_two)
-"aKU" = (
-/obj/structure/stairs/spawner/north,
-/obj/effect/floor_decal/corner/grey{
-	dir = 6;
-	icon_state = "corner_oldtile";
-	tag = "icon-corner_oldtile (SOUTHEAST)"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/hallway/primary/central_one)
-"aKV" = (
-/obj/effect/floor_decal/corner/grey{
-	dir = 9;
-	tag = "icon-corner_white (NORTHWEST)"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/hallway/primary/central_one)
 "aKW" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -11035,6 +11013,7 @@
 /obj/structure/sign/deck/second{
 	pixel_x = 32
 	},
+/obj/structure/stairs/spawner/north,
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/central_one)
 "aLu" = (
@@ -11607,10 +11586,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/central_two)
-"aMA" = (
-/obj/machinery/door/firedoor/border_only,
-/turf/simulated/floor/tiled/dark,
-/area/hallway/primary/central_one)
 "aMB" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -28683,6 +28658,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
+/obj/structure/railing,
 /turf/simulated/floor/plating,
 /area/maintenance/dormitory)
 "byg" = (
@@ -28927,7 +28903,6 @@
 /obj/structure/disposalpipe/down{
 	dir = 1
 	},
-/obj/structure/catwalk,
 /turf/simulated/open,
 /area/maintenance/dormitory)
 "byI" = (
@@ -37742,6 +37717,7 @@
 	dir = 8;
 	light_color = "#edb02d"
 	},
+/obj/structure/stairs/spawner/north,
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/central_one)
 "jFx" = (
@@ -38747,13 +38723,11 @@
 /turf/simulated/wall,
 /area/medical/virology)
 "lnF" = (
-/obj/effect/floor_decal/corner/grey{
-	dir = 9;
-	tag = "icon-corner_white (NORTHWEST)"
-	},
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
 /obj/machinery/door/firedoor/border_only,
-/turf/simulated/floor/tiled/dark,
-/area/hallway/primary/central_one)
+/turf/simulated/floor/plating,
+/area/hallway/primary/fore)
 "loF" = (
 /obj/machinery/atmospherics/pipe/tank/phoron{
 	dir = 8
@@ -45174,14 +45148,6 @@
 /obj/machinery/dna_scannernew,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
-"ugW" = (
-/obj/structure/stairs/spawner/north,
-/obj/effect/floor_decal/corner/grey{
-	dir = 9;
-	tag = "icon-corner_white (NORTHWEST)"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/hallway/primary/central_one)
 "uhW" = (
 /obj/structure/table/reinforced,
 /obj/item/stack/cable_coil{
@@ -46908,13 +46874,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/engineering/engine_eva)
 "wKE" = (
-/obj/effect/floor_decal/corner/grey{
-	dir = 6;
-	icon_state = "corner_oldtile";
-	tag = "icon-corner_oldtile (SOUTHEAST)"
+/obj/structure/railing{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/primary/central_one)
+/area/hallway/primary/fore)
 "wLm" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -77097,7 +77061,7 @@ aaa
 aBi
 amr
 ams
-atG
+wKE
 aBi
 nxV
 alM
@@ -77860,7 +77824,7 @@ aaa
 lIr
 aeO
 asp
-alt
+amb
 avR
 als
 yaI
@@ -79404,9 +79368,9 @@ alq
 alq
 aww
 aiu
-aiF
 alq
-ajt
+alq
+opo
 opo
 opo
 aln
@@ -79717,7 +79681,7 @@ tjV
 aOr
 aOD
 aOD
-aKT
+aOD
 aOD
 aLM
 aMq
@@ -80943,7 +80907,7 @@ aqi
 aWx
 abQ
 abN
-akG
+abN
 abN
 abN
 abN
@@ -81001,10 +80965,10 @@ bCQ
 bIy
 bzk
 bCQ
-ugW
-aKV
+aKy
+aKy
 jFv
-lnF
+aLs
 aMv
 aMX
 buh
@@ -81258,10 +81222,10 @@ bge
 aIM
 anN
 bCQ
+aKy
+aKy
 aJY
 aLs
-aLs
-aMA
 aMr
 aMX
 aQb
@@ -81464,7 +81428,7 @@ aiI
 iKu
 add
 aka
-akG
+abN
 aln
 alX
 amC
@@ -81515,10 +81479,10 @@ bCQ
 bCQ
 bCQ
 bCQ
-aKU
-wKE
+aKy
+aKy
 aLt
-aKw
+aLs
 aMx
 aMX
 aQa
@@ -82492,7 +82456,7 @@ aiL
 wMe
 ajE
 leG
-akG
+abN
 oOt
 amd
 amF
@@ -83521,9 +83485,9 @@ aaa
 aaa
 aaa
 aBi
-amK
+lnF
 aGR
-amK
+lnF
 ani
 ani
 ani
@@ -84087,7 +84051,7 @@ aKb
 aKb
 aMG
 btp
-aAV
+alt
 aAW
 aaa
 aaa
