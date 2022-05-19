@@ -8918,6 +8918,10 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/conveyor{
+	dir = 8;
+	id = "garbage sorting"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/quartermaster/delivery)
 "aEG" = (
@@ -31851,16 +31855,12 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "bRl" = (
-/obj/structure/closet/secure_closet/brig{
-	id = "Cell 2"
-	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled,
-/area/security/security_cell_hallway)
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/corner/blue/border,
+/obj/structure/table/reinforced,
+/obj/random/firstaid,
+/turf/simulated/floor/tiled/dark,
+/area/hallway/primary/fore)
 "bRo" = (
 /obj/structure/morgue,
 /obj/effect/floor_decal/corner/paleblue{
@@ -33635,6 +33635,13 @@
 	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/residential)
+"dST" = (
+/obj/structure/bed/chair/comfy/black,
+/obj/structure/fireaxecabinet{
+	pixel_y = 28
+	},
+/turf/simulated/floor/wood,
+/area/bridge/meeting_room)
 "dTu" = (
 /obj/structure/sign/nosmoking_2,
 /turf/simulated/wall/r_wall,
@@ -34174,6 +34181,16 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/cryo)
+"eMd" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 4
+	},
+/obj/structure/table/reinforced,
+/turf/simulated/floor/tiled/dark,
+/area/bridge_hallway)
 "eOI" = (
 /obj/machinery/floodlight,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -35512,6 +35529,25 @@
 /obj/structure/flora/pottedplant/orientaltree,
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/hop)
+"gIs" = (
+/obj/effect/floor_decal/borderfloor/shifted{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightorange/border/shifted{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightorange{
+	dir = 5
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/machinery/flasher{
+	id = "cell1";
+	pixel_y = 24
+	},
+/turf/simulated/floor/tiled,
+/area/security/security_cell_hallway)
 "gIy" = (
 /obj/machinery/atmospherics/unary/freezer{
 	dir = 4
@@ -37032,25 +37068,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/cryo)
-"iNl" = (
-/obj/effect/floor_decal/borderfloor/shifted{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lightorange/border/shifted{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lightorange{
-	dir = 5
-	},
-/obj/machinery/light/small{
-	dir = 1
-	},
-/obj/machinery/flasher{
-	id = "cell1";
-	pixel_y = 24
-	},
-/turf/simulated/floor/tiled,
-/area/security/security_cell_hallway)
 "iOs" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -37814,6 +37831,17 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/engine_eva)
+"jIT" = (
+/obj/structure/closet/secure_closet/brig{
+	id = "Cell 1"
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
+/area/security/security_cell_hallway)
 "jJa" = (
 /obj/machinery/atmospherics/binary/circulator{
 	anchored = 1;
@@ -45270,13 +45298,6 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/dark,
 /area/engineering)
-"umd" = (
-/obj/effect/floor_decal/borderfloorblack,
-/obj/effect/floor_decal/corner/blue/border,
-/obj/structure/table/reinforced,
-/obj/random/firstaid,
-/turf/simulated/floor/tiled/dark,
-/area/hallway/primary/fore)
 "uoc" = (
 /obj/machinery/light,
 /turf/simulated/floor/tiled/techmaint,
@@ -45665,6 +45686,17 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/engineering)
+"uMq" = (
+/obj/structure/closet/secure_closet/brig{
+	id = "Cell 2"
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
+/area/security/security_cell_hallway)
 "uMC" = (
 /obj/structure/sign/securearea{
 	desc = "A warning sign which reads 'EXTERNAL AIRLOCK'";
@@ -46136,16 +46168,6 @@
 /obj/machinery/atmospherics/pipe/simple/visible/green,
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
-"vxs" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/blue/border{
-	dir = 4
-	},
-/obj/structure/table/reinforced,
-/turf/simulated/floor/tiled/dark,
-/area/bridge_hallway)
 "vxC" = (
 /obj/structure/sign/nosmoking_2{
 	pixel_x = 32
@@ -46208,17 +46230,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
-"vDq" = (
-/obj/structure/closet/secure_closet/brig{
-	id = "Cell 1"
-	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled,
-/area/security/security_cell_hallway)
 "vDr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -46578,13 +46589,6 @@
 /obj/structure/cable/green,
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/chief)
-"whf" = (
-/obj/structure/bed/chair/comfy/black,
-/obj/structure/fireaxecabinet{
-	pixel_y = 28
-	},
-/turf/simulated/floor/wood,
-/area/bridge/meeting_room)
 "whK" = (
 /obj/random/maintenance/engineering,
 /obj/structure/cable{
@@ -78167,7 +78171,7 @@ ajU
 idz
 atG
 alQ
-umd
+bRl
 bSe
 anz
 rKg
@@ -79197,7 +79201,7 @@ agl
 alU
 amw
 bSe
-iNl
+gIs
 aqp
 atf
 aqn
@@ -79456,11 +79460,11 @@ ams
 bSe
 anE
 asy
-vDq
+jIT
 aqn
 apK
 asy
-bRl
+uMq
 aqn
 asa
 asy
@@ -80206,7 +80210,7 @@ tiR
 rBu
 aeD
 aba
-whf
+dST
 abT
 alo
 tQV
@@ -80730,7 +80734,7 @@ bSX
 aIi
 may
 nOR
-vxs
+eMd
 aiY
 aIi
 atp
