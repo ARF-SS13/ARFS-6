@@ -716,7 +716,7 @@
 /obj/machinery/computer/card{
 	density = 0;
 	dir = 8;
-	pixel_x = 13;
+	pixel_x = 22;
 	pixel_y = 11
 	},
 /turf/simulated/floor/wood,
@@ -1201,14 +1201,6 @@
 	},
 /obj/machinery/recharger/wallcharger{
 	pixel_x = 3;
-	pixel_y = -41
-	},
-/obj/machinery/recharger/wallcharger{
-	pixel_x = 3;
-	pixel_y = -33
-	},
-/obj/machinery/recharger/wallcharger{
-	pixel_x = 3;
 	pixel_y = -25
 	},
 /obj/machinery/camera/network/command{
@@ -1481,7 +1473,7 @@
 /obj/machinery/computer/communications{
 	density = 0;
 	dir = 8;
-	pixel_x = 12;
+	pixel_x = 21;
 	pixel_y = 9
 	},
 /turf/simulated/floor/wood,
@@ -2190,6 +2182,10 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 24
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/hop)
 "aiH" = (
@@ -2485,9 +2481,6 @@
 /obj/machinery/light{
 	dir = 8;
 	light_color = "#edb02d"
-	},
-/obj/structure/fireaxecabinet{
-	pixel_x = -30
 	},
 /turf/simulated/floor/wood,
 /area/bridge/meeting_room)
@@ -3220,6 +3213,12 @@
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -25
+	},
+/obj/structure/table/reinforced,
+/obj/machinery/cell_charger,
+/obj/item/weapon/cell/high{
+	charge = 100;
+	maxcharge = 15000
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/fore)
@@ -7100,6 +7099,9 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 10
 	},
+/obj/structure/table/reinforced,
+/obj/machinery/recharger,
+/obj/item/sticky_pad/random,
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/fore)
 "azf" = (
@@ -10328,10 +10330,6 @@
 /area/hallway/primary/central_two)
 "aJb" = (
 /obj/machinery/vending/cart,
-/obj/machinery/alarm{
-	dir = 4;
-	pixel_x = -22
-	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/hop)
 "aJg" = (
@@ -29509,7 +29507,7 @@
 "bAs" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/window/brigdoor/westleft{
-	dir = 2;
+	dir = 1;
 	name = "Warden's Desk"
 	},
 /obj/machinery/door/blast/shutters{
@@ -31853,8 +31851,16 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "bRl" = (
-/turf/simulated/floor/plating,
-/area/space)
+/obj/structure/closet/secure_closet/brig{
+	id = "Cell 2"
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
+/area/security/security_cell_hallway)
 "bRo" = (
 /obj/structure/morgue,
 /obj/effect/floor_decal/corner/paleblue{
@@ -37026,6 +37032,25 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/cryo)
+"iNl" = (
+/obj/effect/floor_decal/borderfloor/shifted{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightorange/border/shifted{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightorange{
+	dir = 5
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/machinery/flasher{
+	id = "cell1";
+	pixel_y = 24
+	},
+/turf/simulated/floor/tiled,
+/area/security/security_cell_hallway)
 "iOs" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -37105,6 +37130,9 @@
 /obj/machinery/camera/network/command{
 	c_tag = "Blueshield Armory"
 	},
+/obj/item/clothing/suit/armor/blueshield,
+/obj/item/clothing/suit/armor/blueshieldcoat,
+/obj/item/clothing/suit/armor/bulletproof,
 /turf/simulated/floor/tiled/dark,
 /area/bridge/blueshield)
 "iYX" = (
@@ -38588,6 +38616,10 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 3;
+	pixel_y = -25
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
 "lgo" = (
@@ -39247,6 +39279,9 @@
 	},
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 4
+	},
+/obj/machinery/lapvend{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge_hallway)
@@ -40598,6 +40633,8 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 4
 	},
+/obj/structure/table/reinforced,
+/obj/machinery/recharger,
 /turf/simulated/floor/tiled/dark,
 /area/bridge_hallway)
 "nPm" = (
@@ -45233,6 +45270,13 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/dark,
 /area/engineering)
+"umd" = (
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/corner/blue/border,
+/obj/structure/table/reinforced,
+/obj/random/firstaid,
+/turf/simulated/floor/tiled/dark,
+/area/hallway/primary/fore)
 "uoc" = (
 /obj/machinery/light,
 /turf/simulated/floor/tiled/techmaint,
@@ -46092,6 +46136,16 @@
 /obj/machinery/atmospherics/pipe/simple/visible/green,
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
+"vxs" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 4
+	},
+/obj/structure/table/reinforced,
+/turf/simulated/floor/tiled/dark,
+/area/bridge_hallway)
 "vxC" = (
 /obj/structure/sign/nosmoking_2{
 	pixel_x = 32
@@ -46154,6 +46208,17 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
+"vDq" = (
+/obj/structure/closet/secure_closet/brig{
+	id = "Cell 1"
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
+/area/security/security_cell_hallway)
 "vDr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -46513,6 +46578,13 @@
 /obj/structure/cable/green,
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/chief)
+"whf" = (
+/obj/structure/bed/chair/comfy/black,
+/obj/structure/fireaxecabinet{
+	pixel_y = 28
+	},
+/turf/simulated/floor/wood,
+/area/bridge/meeting_room)
 "whK" = (
 /obj/random/maintenance/engineering,
 /obj/structure/cable{
@@ -77115,9 +77187,9 @@ hrR
 aDx
 aAO
 auB
-htr
-htr
-htr
+aaa
+aaa
+aaa
 aLG
 aMi
 aMT
@@ -77372,9 +77444,9 @@ abk
 aIF
 aAO
 auB
-bRl
-bRl
-bRl
+aaa
+aaa
+aaa
 aLG
 aMi
 aMU
@@ -77629,9 +77701,9 @@ aAO
 aKj
 aJj
 auB
-bRl
-bRl
-bRl
+aaa
+aaa
+aaa
 aLG
 aMj
 aMV
@@ -77886,9 +77958,9 @@ amp
 aKR
 auB
 auB
-bRl
-bRl
-bRl
+aaa
+aaa
+aaa
 aLG
 aMk
 aMW
@@ -78095,7 +78167,7 @@ ajU
 idz
 atG
 alQ
-ams
+umd
 bSe
 anz
 rKg
@@ -78143,9 +78215,9 @@ bIb
 bjy
 aIG
 aAH
-bRl
-bRl
-bRl
+aaa
+aaa
+aaa
 aHF
 aMl
 aMX
@@ -78400,9 +78472,9 @@ aIa
 aIH
 aJl
 aAH
-bRl
-bRl
-bRl
+aaa
+aaa
+aaa
 aHF
 aMm
 aMX
@@ -78657,9 +78729,9 @@ aIb
 aII
 aaz
 aAH
-bRl
-bRl
-bRl
+aaa
+aaa
+aaa
 aHF
 aMn
 aMX
@@ -78914,9 +78986,9 @@ aIc
 aIJ
 aJm
 aAH
-bRl
-bRl
-bRl
+aaa
+aaa
+aaa
 aHF
 aMo
 aMX
@@ -79125,7 +79197,7 @@ agl
 alU
 amw
 bSe
-arZ
+iNl
 aqp
 atf
 aqn
@@ -79171,9 +79243,9 @@ alW
 aIK
 aId
 aAH
-bRl
-bRl
-bRl
+aaa
+aaa
+aaa
 aHF
 aMp
 aMX
@@ -79384,11 +79456,11 @@ ams
 bSe
 anE
 asy
-aqV
+vDq
 aqn
 apK
 asy
-aqV
+bRl
 aqn
 asa
 asy
@@ -79428,9 +79500,9 @@ aUd
 aIL
 aAH
 aAH
-bRl
-bRl
-bRl
+aaa
+aaa
+aaa
 aHF
 aMp
 aMX
@@ -80134,7 +80206,7 @@ tiR
 rBu
 aeD
 aba
-afw
+whf
 abT
 alo
 tQV
@@ -80658,7 +80730,7 @@ bSX
 aIi
 may
 nOR
-aIi
+vxs
 aiY
 aIi
 atp
