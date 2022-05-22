@@ -34,15 +34,15 @@
 	var/xeno_prefix = null
 	var/is_unique = FALSE //Won't generate a random name for them. Only set to true on specific subtypes.
 	var/tamed_hands = FALSE //Can we pick normal stuff up rather than just facehuggers and other xeno stuff.
-//	var/can_pickup = list(/obj/item)
+	var/can_pickup = list(/obj/item/toy/plushie/face_hugger) //Types of items that we can pickup. Not an exclusive list (will allow subtypes).
 	var/spitting = FALSE
 	var/last_spit = 0
 	var/spit_name
 	var/spit_projectile
 
-//Wild enemy/antag aliens
+//Wild enemy/antag aliens. usually non-playable
 /mob/living/simple_mob/caclien/wild
-	faction = "xenomorph"
+	faction = "xeno"
 	name = "don't spawn me"
 
 /mob/living/simple_mob/caclien/wild/drone
@@ -59,12 +59,15 @@
 	default_species = /datum/xeno_species/sentinel
 	icon_state = "aliensentinel"
 	name = "xenomorph sentinel"
+	projectiletype = /obj/item/projectile/energy/neurotoxin/toxic
+	projectilesound = 'content_arfs/sound/alien/effects/spit1.ogg'
 
+/*
 /mob/living/simple_mob/caclien/wild/runner
 	default_species = /datum/xeno_species/runner
 	icon_state = "alienrunner"
 	name = "xenomorph runner"
-
+*/
 /mob/living/simple_mob/caclien/wild/queen
 	default_species = /datum/xeno_species/queen
 	icon_state = "alienqueen"
@@ -91,24 +94,26 @@
 	default_species = /datum/xeno_species/sentinel
 	icon_state = "aliensentinel"
 	name = "xenomorph sentinel"
-
+/*
 /mob/living/simple_mob/caclien/tamed/runner
 	default_species = /datum/xeno_species/runner
 	icon_state = "alienrunner"
 	name = "xenomorph runner"
-
+*/
 /mob/living/simple_mob/caclien/tamed/queen
 	default_species = /datum/xeno_species/queen
 	icon_state = "alienqueen"
 	name = "xenomorph queen"
 
 /mob/living/simple_mob/caclien/Initialize()
-	. = ..()
-	step_tracker = rand(0,1)
-	breath_tracker = rand(0,4)
 	if(species_datum == null && default_species)
 		species_datum = new default_species(src)
 	var/datum/xeno_species/SD = species_datum
+	if(SD && !is_unique)
+		ai_holder_type = SD.ai_type
+	. = ..()
+	step_tracker = rand(0,1)
+	breath_tracker = rand(0,4)
 	if(SD)
 		UpdateSpeciesIcons() //Set living/dead/resting icons for its species
 		mob_size = SD.size //Set the size var
@@ -122,6 +127,11 @@
 		movement_cooldown = SD.move_delay
 		melee_damage_upper = SD.melee_damage*1.25
 		melee_damage_lower = SD.melee_damage*0.75
+		phoron_stored = SD.phoron_max
+	remove_language("Galactic Common")
+	add_language("Xenomorph")
+	add_language("Hivemind")
+
 
 /mob/living/simple_mob/caclien/update_icon()
 	. = ..()
@@ -374,12 +384,12 @@
 	fullUpdateWeedOverlays()
 
 /obj/effect/alien/weeds/Destroy()
+	playsound(src, pick(X_SOUND_RESINHIT), 50, 1)
 	var/turf/T = get_turf(src)
 	loc = null
 	for (var/obj/effect/alien/weeds/W in range(1,T))
 		W.updateWeedOverlays()
 	linked_node = null
-	playsound(src, pick(X_SOUND_RESINHIT), 50, 1)
 	return ..()
 
 /obj/structure/alien/Destroy()

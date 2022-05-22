@@ -3,11 +3,11 @@
 	desc = "The walls of this tunnel are caked in an organic, resin-like substance. Outside, claw marks can be seen trailing in and out of its entrance."
 	icon = 'content_arfs/icons/mob/mobs/alien.dmi'
 	icon_state = "alien_spawn"
-	spawn_delay = 10 MINUTES
+	spawn_delay = 1 MINUTES
 	range = 10
 	simultaneous_spawns = 1
-	mob_faction = "xenomorph"
-	total_spawns = -1
+	mob_faction = "xeno"
+	total_spawns = 3
 	destructible = 1
 	health = 50
 	anchored = TRUE
@@ -33,3 +33,9 @@
 	spawn_types = list(
 	/mob/living/simple_mob/caclien/wild/queen = 5,
 	)
+/obj/structure/mob_spawner/scanner/caclien/royal/process()
+	if(total_spawns < 1)
+		Destroy()
+		return
+	else
+		..()

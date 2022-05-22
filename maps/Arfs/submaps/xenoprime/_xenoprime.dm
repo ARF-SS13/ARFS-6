@@ -77,10 +77,10 @@
 #define XENOPRIME_ONE_ATMOSPHERE	90 //kPa
 #define XENOPRIME_AVG_TEMP			323.15 //kelvin
 
-#define XENOPRIME_PER_N2		0.70 //percent
-#define XENOPRIME_PER_O2		0.29
+#define XENOPRIME_PER_N2		0.60 //percent
+#define XENOPRIME_PER_O2		0.39
 #define XENOPRIME_PER_N2O		0.00 //Currently no capacity to 'start' a turf with this. See turf.dm
-#define XENOPRIME_PER_CO2		0.1
+#define XENOPRIME_PER_CO2		0.01
 #define XENOPRIME_PER_PHORON	0
 
 //Math only beyond this point
@@ -113,6 +113,9 @@ XENOPRIME_TURF_CREATE(/turf/simulated/floor/tiled/techfloor)
 XENOPRIME_TURF_CREATE(/turf/simulated/floor/outdoors/newdirt_nograss)
 XENOPRIME_TURF_CREATE(/turf/simulated/floor/outdoors/mud)
 XENOPRIME_TURF_CREATE(/turf/simulated/mineral)
+XENOPRIME_TURF_CREATE(/turf/simulated/mineral/floor/ignore_mapgen)
+XENOPRIME_TURF_CREATE(/turf/simulated/mineral/floor/mud)
+XENOPRIME_TURF_CREATE(/turf/simulated/mineral/floor/dirt)
 
 // -- Areas -- //
 

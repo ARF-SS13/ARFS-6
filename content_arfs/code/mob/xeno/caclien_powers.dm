@@ -125,7 +125,10 @@
 	if(iswall(targetLoc))
 		targetLoc = get_turf(src)
 
-	if(targetLoc.contents.Find(/obj/structure/alien) || targetLoc.contents.Find(/obj/structure/bed/nest))
+	for(var/obj/structure/alien/S in targetLoc.contents)
+		to_chat(src, "<span class='warning'>There is already something built there!</span>")
+		return FALSE
+	for(var/obj/structure/bed/nest/N in targetLoc.contents)
 		to_chat(src, "<span class='warning'>There is already something built there!</span>")
 		return FALSE
 

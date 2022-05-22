@@ -108,3 +108,22 @@
 		/obj/item/device/bluespaceradio,
 		/obj/item/device/defib_kit
 		)
+
+
+//Makes occupied mechs count as hostiles
+//Overrides mob_spawner_vr.dm file
+/obj/structure/mob_spawner/scanner/process()
+	if(!can_spawn())
+		return
+	if(world.time > last_spawn + spawn_delay)
+		var/turf/mainloc = get_turf(src)
+		for(var/mob/living/A in range(range,mainloc))
+			if ((A.faction != mob_faction) && (A.move_speed < 12))
+				var/chosen_mob = choose_spawn()
+				if(chosen_mob)
+					do_spawn(chosen_mob)
+		for(var/obj/mecha/M in range(range,mainloc))
+			if(M.occupant)
+				var/chosen_mob = choose_spawn()
+				if(chosen_mob)
+					do_spawn(chosen_mob)

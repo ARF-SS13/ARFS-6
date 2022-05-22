@@ -37,6 +37,7 @@
 	abilities = list(/mob/living/proc/ventcrawl,/mob/living/simple_mob/caclien/proc/Plant,/mob/living/simple_mob/caclien/proc/Resin)
 	evolves_into = list(/datum/xeno_species/queen)
 	phoron_max = 250
+	melee_damage = 15
 
 /datum/xeno_species/hunter
 	sub_name = "hunter"
@@ -45,6 +46,7 @@
 	move_sounds_range = -2
 	move_delay = 1.75
 	growth_max = 0
+	melee_damage = 30
 
 /datum/xeno_species/sentinel
 	sub_name = "sentinel"
@@ -53,6 +55,7 @@
 	growth_max = 0
 	phoron_max = 200
 	ai_type = /datum/ai_holder/simple_mob/ranged/kiting
+	melee_damage = 20
 
 /datum/xeno_species/runner
 	sub_name = "runner"
@@ -63,6 +66,7 @@
 	growth_max = 0
 	phoron_max = 50
 	ai_type = /datum/ai_holder/simple_mob/melee/hit_and_run
+	melee_damage = 20
 
 /datum/xeno_species/queen
 	sub_name = "queen"
@@ -74,6 +78,7 @@
 	move_delay = 3
 	growth_max = 0
 	phoron_max = 500
+	melee_damage = 50
 
 /datum/xeno_species/hugger
 	sub_name = "facehugger"
@@ -83,6 +88,7 @@
 	death_sounds = X_SOUND_DEATH_HUGGER
 	phoron_max = 25
 	move_sounds = X_SOUND_STEP_HUGGER
+	melee_damage = 7
 
 /datum/xeno_species/larva
 	sub_name = "larva"
@@ -91,3 +97,4 @@
 	death_sounds = X_SOUND_DEATH_LARVA
 	phoron_max = 25
 	move_sounds = X_SOUND_SLIDE
+	melee_damage = 10
