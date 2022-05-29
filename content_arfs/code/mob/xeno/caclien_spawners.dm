@@ -33,6 +33,7 @@
 	spawn_types = list(
 	/mob/living/simple_mob/caclien/wild/queen = 5,
 	)
+
 /obj/structure/mob_spawner/scanner/caclien/royal/process()
 	if(total_spawns < 1)
 		Destroy()

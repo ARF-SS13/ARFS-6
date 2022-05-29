@@ -34,7 +34,7 @@
 	var/xeno_prefix = null
 	var/is_unique = FALSE //Won't generate a random name for them. Only set to true on specific subtypes.
 	var/tamed_hands = FALSE //Can we pick normal stuff up rather than just facehuggers and other xeno stuff.
-	var/can_pickup = list(/obj/item/toy/plushie/face_hugger) //Types of items that we can pickup. Not an exclusive list (will allow subtypes).
+	var/can_pickup = list(/obj/item/toy/plushie/face_hugger, /obj/item/weapon/bone, /obj/item/weapon/digestion_remains) //Types of items that we can pick up. Not an exclusive list (will allow subtypes).
 	var/spitting = FALSE
 	var/last_spit = 0
 	var/spit_name
@@ -61,7 +61,7 @@
 	name = "xenomorph sentinel"
 	projectiletype = /obj/item/projectile/energy/neurotoxin/toxic
 	projectilesound = 'content_arfs/sound/alien/effects/spit1.ogg'
-
+	ranged_attack_delay = 10 //Spit windup
 /*
 /mob/living/simple_mob/caclien/wild/runner
 	default_species = /datum/xeno_species/runner
@@ -184,6 +184,21 @@
 				phoron_stored = clamp(phoron_stored+(SD.phoron_regen*phoron_mod),0,SD.phoron_max)
 				if(bodytemperature < maxbodytemp*1.5)//Don't heal if we're burning alive
 					health = clamp(health+(SD.healthRegen*health_mod),-maxHealth, maxHealth)
+	. = ..()
+
+/mob/living/simple_mob/caclien/Stat()
+	..()
+	if(species_datum)
+		var/datum/xeno_species/SD = species_datum
+		stat(null, "Phoron Stored: [phoron_stored]/[SD.phoron_max]")
+
+/mob/living/simple_mob/caclien/death(gibbed)
+	var/dsound = 'sound/voice/hiss6.ogg'
+	if(species_datum)
+		var/datum/xeno_species/SD = species_datum
+		dsound = pick(SD.death_sounds)
+	if(dsound)
+		playsound(src, dsound, 50, 1)
 	. = ..()
 
 /mob/living/simple_mob/caclien/Moved(atom/old_loc, direction, forced = FALSE)
