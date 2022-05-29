@@ -21,8 +21,8 @@
 
 	zlevel_datum_type = /datum/map_z_level/arfs
 
-	lobby_icon = 'content_arfs/icons/misc/arfs_dallus.dmi'
-	lobby_screens = list("arfs_dallus_new_anim")
+	lobby_icon = 'content_arfs/icons/misc/arfs_dallus_new.dmi'
+	lobby_screens = list("arfs_dallus_new")
 
 	station_name  = "ARFS Dallus"
 	station_short = "Dallus"
@@ -36,7 +36,7 @@
 
 	shuttle_docked_message = "The scheduled shuttle to the %dock_name% has docked with the ship at docks one and two. It will depart in approximately %ETD%."
 	shuttle_leaving_dock = "The Crew Transfer Shuttle has left the ship. Estimate %ETA% until the shuttle docks at %dock_name%."
-	shuttle_called_message = "A crew transfer to %Dock_name% has been scheduled. The shuttle has been called. Those leaving should procede to docks one and two in approximately %ETA%"
+	shuttle_called_message = "A crew transfer to %Dock_name% has been scheduled. The shuttle has been called. Those leaving should proceed to docks one and two in approximately %ETA%"
 	shuttle_recall_message = "The scheduled crew transfer has been cancelled."
 	emergency_shuttle_docked_message = "The Emergency Shuttle has docked with the ship at dock one. You have approximately %ETD% to board the Emergency Shuttle."
 	emergency_shuttle_leaving_dock = "The Emergency Shuttle has left the ship. Estimate %ETA% until the shuttle docks at %dock_name%."
