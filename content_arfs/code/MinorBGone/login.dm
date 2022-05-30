@@ -9,8 +9,9 @@
 	var/isVerified = 0  // 0 = banned/new player || 1 = Age verified, not discord linked || 2 = Discord & Age verified
 
 /mob/new_player/new_player_panel_proc()
-	if(my_client.isVerified != 2)
+	if(my_client.isVerified != 2 && config.MinorBGone) // If minorBgone is enabled and they are not verified, do not show the new player panel (the window which shows when players join)
 		return
+
 	..()
 
 /client/proc/MinorBGone()
