@@ -716,7 +716,7 @@
 /obj/machinery/computer/card{
 	density = 0;
 	dir = 8;
-	pixel_x = 13;
+	pixel_x = 22;
 	pixel_y = 11
 	},
 /turf/simulated/floor/wood,
@@ -1201,14 +1201,6 @@
 	},
 /obj/machinery/recharger/wallcharger{
 	pixel_x = 3;
-	pixel_y = -41
-	},
-/obj/machinery/recharger/wallcharger{
-	pixel_x = 3;
-	pixel_y = -33
-	},
-/obj/machinery/recharger/wallcharger{
-	pixel_x = 3;
 	pixel_y = -25
 	},
 /obj/machinery/camera/network/command{
@@ -1481,7 +1473,7 @@
 /obj/machinery/computer/communications{
 	density = 0;
 	dir = 8;
-	pixel_x = 12;
+	pixel_x = 21;
 	pixel_y = 9
 	},
 /turf/simulated/floor/wood,
@@ -2190,6 +2182,10 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 24
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/hop)
 "aiH" = (
@@ -2485,9 +2481,6 @@
 /obj/machinery/light{
 	dir = 8;
 	light_color = "#edb02d"
-	},
-/obj/structure/fireaxecabinet{
-	pixel_x = -30
 	},
 /turf/simulated/floor/wood,
 /area/bridge/meeting_room)
@@ -3220,6 +3213,12 @@
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -25
+	},
+/obj/structure/table/reinforced,
+/obj/machinery/cell_charger,
+/obj/item/weapon/cell/high{
+	charge = 100;
+	maxcharge = 15000
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/fore)
@@ -6840,8 +6839,12 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/warden)
 "axX" = (
-/obj/structure/table/standard,
-/obj/machinery/recharger,
+/obj/effect/floor_decal/corner/brown{
+	dir = 9
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 10
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
 "ayb" = (
@@ -7096,6 +7099,9 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 10
 	},
+/obj/structure/table/reinforced,
+/obj/machinery/recharger,
+/obj/item/sticky_pad/random,
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/fore)
 "azf" = (
@@ -8912,6 +8918,10 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/conveyor{
+	dir = 8;
+	id = "garbage sorting"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/quartermaster/delivery)
 "aEG" = (
@@ -9108,11 +9118,6 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/floor/tiled,
-/area/quartermaster/storage)
-"aFh" = (
-/obj/vehicle/train/trolley,
-/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
 "aFi" = (
@@ -10329,10 +10334,6 @@
 /area/hallway/primary/central_two)
 "aJb" = (
 /obj/machinery/vending/cart,
-/obj/machinery/alarm{
-	dir = 4;
-	pixel_x = -22
-	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/hop)
 "aJg" = (
@@ -11635,6 +11636,10 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
+/obj/structure/sign/deck/second{
+	pixel_x = 2;
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/central_two)
 "aME" = (
@@ -12323,6 +12328,9 @@
 /obj/structure/railing{
 	dir = 4
 	},
+/obj/structure/sign/double/barsign{
+	pixel_y = -34
+	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/central_two)
 "aOr" = (
@@ -12345,11 +12353,8 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/central_two)
 "aOv" = (
-/obj/machinery/door/airlock/multi_tile/metal,
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/sign/deck/second{
-	pixel_x = -32
-	},
+/obj/machinery/door/airlock/multi_tile/glass,
 /turf/simulated/floor/plating,
 /area/hallway/primary/central_two)
 "aOw" = (
@@ -23759,6 +23764,8 @@
 	pixel_x = 5;
 	pixel_y = -32
 	},
+/obj/machinery/recharger,
+/obj/structure/table/standard,
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
 "blz" = (
@@ -29504,7 +29511,7 @@
 "bAs" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/window/brigdoor/westleft{
-	dir = 2;
+	dir = 1;
 	name = "Warden's Desk"
 	},
 /obj/machinery/door/blast/shutters{
@@ -31848,8 +31855,12 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "bRl" = (
-/turf/simulated/floor/plating,
-/area/space)
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/corner/blue/border,
+/obj/structure/table/reinforced,
+/obj/random/firstaid,
+/turf/simulated/floor/tiled/dark,
+/area/hallway/primary/fore)
 "bRo" = (
 /obj/structure/morgue,
 /obj/effect/floor_decal/corner/paleblue{
@@ -33624,6 +33635,13 @@
 	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/residential)
+"dST" = (
+/obj/structure/bed/chair/comfy/black,
+/obj/structure/fireaxecabinet{
+	pixel_y = 28
+	},
+/turf/simulated/floor/wood,
+/area/bridge/meeting_room)
 "dTu" = (
 /obj/structure/sign/nosmoking_2,
 /turf/simulated/wall/r_wall,
@@ -34163,6 +34181,16 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/cryo)
+"eMd" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 4
+	},
+/obj/structure/table/reinforced,
+/turf/simulated/floor/tiled/dark,
+/area/bridge_hallway)
 "eOI" = (
 /obj/machinery/floodlight,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -35501,6 +35529,25 @@
 /obj/structure/flora/pottedplant/orientaltree,
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/hop)
+"gIs" = (
+/obj/effect/floor_decal/borderfloor/shifted{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightorange/border/shifted{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightorange{
+	dir = 5
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/machinery/flasher{
+	id = "cell1";
+	pixel_y = 24
+	},
+/turf/simulated/floor/tiled,
+/area/security/security_cell_hallway)
 "gIy" = (
 /obj/machinery/atmospherics/unary/freezer{
 	dir = 4
@@ -37100,6 +37147,9 @@
 /obj/machinery/camera/network/command{
 	c_tag = "Blueshield Armory"
 	},
+/obj/item/clothing/suit/armor/blueshield,
+/obj/item/clothing/suit/armor/blueshieldcoat,
+/obj/item/clothing/suit/armor/bulletproof,
 /turf/simulated/floor/tiled/dark,
 /area/bridge/blueshield)
 "iYX" = (
@@ -37781,6 +37831,17 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/engine_eva)
+"jIT" = (
+/obj/structure/closet/secure_closet/brig{
+	id = "Cell 1"
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
+/area/security/security_cell_hallway)
 "jJa" = (
 /obj/machinery/atmospherics/binary/circulator{
 	anchored = 1;
@@ -38583,6 +38644,10 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 3;
+	pixel_y = -25
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
 "lgo" = (
@@ -39242,6 +39307,9 @@
 	},
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 4
+	},
+/obj/machinery/lapvend{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge_hallway)
@@ -40593,6 +40661,8 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 4
 	},
+/obj/structure/table/reinforced,
+/obj/machinery/recharger,
 /turf/simulated/floor/tiled/dark,
 /area/bridge_hallway)
 "nPm" = (
@@ -45616,6 +45686,17 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/engineering)
+"uMq" = (
+/obj/structure/closet/secure_closet/brig{
+	id = "Cell 2"
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
+/area/security/security_cell_hallway)
 "uMC" = (
 /obj/structure/sign/securearea{
 	desc = "A warning sign which reads 'EXTERNAL AIRLOCK'";
@@ -46468,10 +46549,10 @@
 /turf/simulated/floor/carpet/oracarpet,
 /area/engineering/break_room)
 "wbL" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 10
+/obj/machinery/light{
+	dir = 1
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor,
 /area/quartermaster/storage)
 "wcP" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -47106,8 +47187,8 @@
 /turf/simulated/floor/tiled/dark,
 /area/engineering)
 "xdq" = (
-/obj/effect/floor_decal/corner/brown{
-	dir = 9
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
@@ -73505,9 +73586,9 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
 aBd
-aaa
-aaa
 aaa
 aaa
 aaa
@@ -74017,13 +74098,13 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
 auB
 aBN
 aCB
 aCZ
 auB
-aaa
-aaa
 aaa
 aaa
 aaa
@@ -74274,13 +74355,13 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
 auB
-aBO
+wbL
 aCC
 aBO
 auB
-aaa
-aaa
 aaa
 aaa
 aaa
@@ -74530,6 +74611,8 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
 auB
 auB
 aBN
@@ -74537,8 +74620,6 @@ aCD
 aBN
 auB
 auB
-aaa
-aaa
 aaa
 aaa
 aaa
@@ -74787,15 +74868,15 @@ aaa
 aaa
 aaa
 aaa
-aAd
+aaa
+auB
+auB
 hJw
 nLm
 lBC
-wbL
 xdq
+axX
 auB
-auB
-aaa
 aaa
 aaa
 aaa
@@ -75045,13 +75126,13 @@ aAd
 aAd
 aAd
 aAd
-aFg
+auB
 aAO
 aGf
 aAO
 aAO
+aAO
 aFY
-auB
 auB
 auB
 aaa
@@ -75302,13 +75383,13 @@ aSZ
 amS
 aDB
 aAd
-aFh
+aFg
 aAO
 aAO
 aAO
 aAO
 aAO
-axX
+aAO
 aeg
 auB
 aaa
@@ -77110,9 +77191,9 @@ hrR
 aDx
 aAO
 auB
-htr
-htr
-htr
+aaa
+aaa
+aaa
 aLG
 aMi
 aMT
@@ -77367,9 +77448,9 @@ abk
 aIF
 aAO
 auB
-bRl
-bRl
-bRl
+aaa
+aaa
+aaa
 aLG
 aMi
 aMU
@@ -77624,9 +77705,9 @@ aAO
 aKj
 aJj
 auB
-bRl
-bRl
-bRl
+aaa
+aaa
+aaa
 aLG
 aMj
 aMV
@@ -77881,9 +77962,9 @@ amp
 aKR
 auB
 auB
-bRl
-bRl
-bRl
+aaa
+aaa
+aaa
 aLG
 aMk
 aMW
@@ -78090,7 +78171,7 @@ ajU
 idz
 atG
 alQ
-ams
+bRl
 bSe
 anz
 rKg
@@ -78138,9 +78219,9 @@ bIb
 bjy
 aIG
 aAH
-bRl
-bRl
-bRl
+aaa
+aaa
+aaa
 aHF
 aMl
 aMX
@@ -78395,9 +78476,9 @@ aIa
 aIH
 aJl
 aAH
-bRl
-bRl
-bRl
+aaa
+aaa
+aaa
 aHF
 aMm
 aMX
@@ -78652,9 +78733,9 @@ aIb
 aII
 aaz
 aAH
-bRl
-bRl
-bRl
+aaa
+aaa
+aaa
 aHF
 aMn
 aMX
@@ -78909,9 +78990,9 @@ aIc
 aIJ
 aJm
 aAH
-bRl
-bRl
-bRl
+aaa
+aaa
+aaa
 aHF
 aMo
 aMX
@@ -79120,7 +79201,7 @@ agl
 alU
 amw
 bSe
-arZ
+gIs
 aqp
 atf
 aqn
@@ -79166,9 +79247,9 @@ alW
 aIK
 aId
 aAH
-bRl
-bRl
-bRl
+aaa
+aaa
+aaa
 aHF
 aMp
 aMX
@@ -79379,11 +79460,11 @@ ams
 bSe
 anE
 asy
-aqV
+jIT
 aqn
 apK
 asy
-aqV
+uMq
 aqn
 asa
 asy
@@ -79423,9 +79504,9 @@ aUd
 aIL
 aAH
 aAH
-bRl
-bRl
-bRl
+aaa
+aaa
+aaa
 aHF
 aMp
 aMX
@@ -80129,7 +80210,7 @@ tiR
 rBu
 aeD
 aba
-afw
+dST
 abT
 alo
 tQV
@@ -80653,7 +80734,7 @@ bSX
 aIi
 may
 nOR
-aIi
+eMd
 aiY
 aIi
 atp
@@ -82001,7 +82082,7 @@ ggY
 aNd
 aQd
 aQC
-aOD
+aHP
 aOr
 wNg
 bdW
