@@ -42,6 +42,11 @@ var/obj/effect/lobby_image = new /obj/effect/lobby_image
 	sight |= SEE_TURFS
 	player_list |= src
 
+	if(!my_client.MinorBGone())	// ARFS ADD: Age Gate! Fuck off minors. No one wants you here.
+		alert(src,"Please continue your verification on discord. You also may have failed to pass the verification process, this could be because you are not 18 years old, or you are not suitable for our server.","Minor-B-Gone") // Not tgui_alert
+		del(my_client)
+		return // ARFS ADD END
+
 	created_for = ckey
 
 	new_player_panel()
