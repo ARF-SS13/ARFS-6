@@ -16,6 +16,7 @@
 
 /client/proc/MinorBGone()
 	if(!config.MinorBGone)
+		isVerified = 2 // add this here to make sure any checks will pass.
 		return 1
 	
 	if(!dbcon.IsConnected()) // Deny entry if there is no database connection.
