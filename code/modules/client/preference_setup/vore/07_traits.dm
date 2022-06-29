@@ -141,6 +141,9 @@
 	var/datum/species/S = character.species
 	var/datum/species/new_S = S.produceCopy(pref.pos_traits + pref.neu_traits + pref.neg_traits, character, pref.custom_base)
 
+	for(var/datum/trait/T in new_S.traits)
+		T.apply_pref(src)
+
 	//Any additional non-trait settings can be applied here
 	new_S.blood_color = pref.blood_color
 
@@ -148,8 +151,6 @@
 		//Statistics for this would be nice
 		var/english_traits = english_list(new_S.traits, and_text = ";", comma_text = ";")
 		log_game("TRAITS [pref.client_ckey]/([character]) with: [english_traits]") //Terrible 'fake' key_name()... but they aren't in the same entity yet
-	else
-
 
 /datum/category_item/player_setup_item/vore/traits/content(var/mob/user)
 	. += "<b>Custom Species Name:</b> "
@@ -219,8 +220,8 @@
 		return TOPIC_NOACTION
 
 	else if(href_list["custom_species"])
-		var/raw_choice = sanitize(input(user, "Input your custom species name:",
-			"Character Preference", pref.custom_species) as null|text, MAX_NAME_LEN)
+		var/raw_choice = sanitize(tgui_input_text(user, "Input your custom species name:",
+			"Character Preference", pref.custom_species, MAX_NAME_LEN), MAX_NAME_LEN)
 		if (CanUseTopic(user))
 			pref.custom_species = raw_choice
 		return TOPIC_REFRESH
@@ -251,6 +252,8 @@
 		var/choice = tgui_alert(usr, "Remove [initial(trait.name)] and regain [initial(trait.cost)] points?","Remove Trait",list("Remove","Cancel"))
 		if(choice == "Remove")
 			pref.pos_traits -= trait
+			var/datum/trait/instance = all_traits[trait]
+			instance.remove_pref(pref)
 		return TOPIC_REFRESH
 
 	else if(href_list["clicked_neu_trait"])
@@ -258,6 +261,8 @@
 		var/choice = tgui_alert(usr, "Remove [initial(trait.name)]?","Remove Trait",list("Remove","Cancel"))
 		if(choice == "Remove")
 			pref.neu_traits -= trait
+			var/datum/trait/instance = all_traits[trait]
+			instance.remove_pref(pref)
 		return TOPIC_REFRESH
 
 	else if(href_list["clicked_neg_trait"])
@@ -265,28 +270,30 @@
 		var/choice = tgui_alert(usr, "Remove [initial(trait.name)] and lose [initial(trait.cost)] points?","Remove Trait",list("Remove","Cancel"))
 		if(choice == "Remove")
 			pref.neg_traits -= trait
+			var/datum/trait/instance = all_traits[trait]
+			instance.remove_pref(pref)
 		return TOPIC_REFRESH
 
 	else if(href_list["custom_say"])
-		var/say_choice = sanitize(input(usr, "This word or phrase will appear instead of 'says': [pref.real_name] says, \"Hi.\"", "Custom Say", pref.custom_say) as null|text, 12)
+		var/say_choice = sanitize(tgui_input_text(usr, "This word or phrase will appear instead of 'says': [pref.real_name] says, \"Hi.\"", "Custom Say", pref.custom_say, 12), 12)
 		if(say_choice)
 			pref.custom_say = say_choice
 		return TOPIC_REFRESH
 
 	else if(href_list["custom_whisper"])
-		var/whisper_choice = sanitize(input(usr, "This word or phrase will appear instead of 'whispers': [pref.real_name] whispers, \"Hi...\"", "Custom Whisper", pref.custom_whisper) as null|text, 12)
+		var/whisper_choice = sanitize(tgui_input_text(usr, "This word or phrase will appear instead of 'whispers': [pref.real_name] whispers, \"Hi...\"", "Custom Whisper", pref.custom_whisper, 12), 12)
 		if(whisper_choice)
 			pref.custom_whisper = whisper_choice
 		return TOPIC_REFRESH
 
 	else if(href_list["custom_ask"])
-		var/ask_choice = sanitize(input(usr, "This word or phrase will appear instead of 'asks': [pref.real_name] asks, \"Hi?\"", "Custom Ask", pref.custom_ask) as null|text, 12)
+		var/ask_choice = sanitize(tgui_input_text(usr, "This word or phrase will appear instead of 'asks': [pref.real_name] asks, \"Hi?\"", "Custom Ask", pref.custom_ask, 12), 12)
 		if(ask_choice)
 			pref.custom_ask = ask_choice
 		return TOPIC_REFRESH
 
 	else if(href_list["custom_exclaim"])
-		var/exclaim_choice = sanitize(input(usr, "This word or phrase will appear instead of 'exclaims', 'shouts' or 'yells': [pref.real_name] exclaims, \"Hi!\"", "Custom Exclaim", pref.custom_exclaim) as null|text, 12)
+		var/exclaim_choice = sanitize(tgui_input_text(usr, "This word or phrase will appear instead of 'exclaims', 'shouts' or 'yells': [pref.real_name] exclaims, \"Hi!\"", "Custom Exclaim", pref.custom_exclaim, 12), 12)
 		if(exclaim_choice)
 			pref.custom_exclaim = exclaim_choice
 		return TOPIC_REFRESH
@@ -417,10 +424,16 @@
 							conflict = instance_test.name
 							break varconflict
 
+					for(var/V in instance.var_changes_pref)
+						if(V in instance_test.var_changes_pref)
+							conflict = instance_test.name
+							break varconflict
+
 			if(conflict)
 				tgui_alert_async(usr, "You cannot take this trait and [conflict] at the same time. Please remove that trait, or pick another trait to add.", "Error")
 				return TOPIC_REFRESH
 
+			instance.apply_pref(pref)
 			mylist += path
 			return TOPIC_REFRESH
 

@@ -10,7 +10,7 @@
 	)
 	var/list/extra_decals
 	var/icon/icon
-	var/base_icon =  'icons/obj/closets/bases/closet.dmi'
+	var/base_icon = 'icons/obj/closets/bases/closet.dmi'
 	var/decal_icon = 'icons/obj/closets/decals/closet.dmi'
 	var/can_lock = FALSE
 
@@ -1444,7 +1444,7 @@
 		"stripes" = COLOR_OFF_WHITE,
 		"glass" = COLOR_WHITE
 	)
-	
+
 /decl/closet_appearance/wall_double/survival
 	color = COLOR_CYAN_BLUE
 	decals = null

@@ -166,3 +166,20 @@
 	desc = "You can breathe under water."
 	cost = 1
 	var_changes = list("water_breather" = 1)
+
+/datum/trait/positive/cocoon_tf
+	name = "Cocoon Spinner"
+	desc = "Allows you to build a cocoon around yourself, using it to transform your body if you desire."
+	cost = 1
+	//custom_only = FALSE
+
+/datum/trait/positive/cocoon_tf/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..(S,H)
+	H.verbs |= /mob/living/carbon/human/proc/enter_cocoon
+
+/datum/trait/positive/linguist
+	name = "Linguist"
+	desc = "Allows you to have more languages."
+	cost = 1
+	var_changes = list("num_alternate_languages" = 6)
+	var_changes_pref = list("extra_languages" = 3)

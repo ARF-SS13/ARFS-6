@@ -4,14 +4,6 @@
 	name = "stack of grass"
 	type_to_spawn = /obj/item/stack/tile/grass
 
-/obj/fiftyspawner/grass/sif
-	name = "stack of sifgrass"
-	type_to_spawn = /obj/item/stack/tile/grass/sif
-
-/obj/fiftyspawner/grass/sif/forest
-	name = "stack of sifgrass"
-	type_to_spawn = /obj/item/stack/tile/grass/sif/forest
-
 /obj/fiftyspawner/wood
 	name = "stack of wood"
 	type_to_spawn = /obj/item/stack/tile/wood
@@ -28,13 +20,21 @@
 	name = "stack of teal carpet"
 	type_to_spawn = /obj/item/stack/tile/carpet/teal
 
-/obj/fiftyspawner/decocarpet
-	name = "stack of deco carpet"
-	type_to_spawn = /obj/item/stack/tile/carpet/deco
+/obj/fiftyspawner/geocarpet
+	name = "stack of geometric carpet"
+	type_to_spawn = /obj/item/stack/tile/carpet/geo
 
 /obj/fiftyspawner/retrocarpet
-	name = "stack of retro carpet"
+	name = "stack of blue retro carpet"
 	type_to_spawn = /obj/item/stack/tile/carpet/retro
+
+/obj/fiftyspawner/retrocarpet_red
+	name = "stack of red retro carpet"
+	type_to_spawn = /obj/item/stack/tile/carpet/retro_red
+
+/obj/fiftyspawner/happycarpet
+	name = "stack of happy carpet"
+	type_to_spawn = /obj/item/stack/tile/carpet/happy
 
 /obj/fiftyspawner/floor
 	name = "stack of floor tiles"

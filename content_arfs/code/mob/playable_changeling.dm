@@ -109,7 +109,7 @@
 	var/datum/changeling/changeling = changeling_power(10,1,0)
 	if(!changeling)	return
 
-	var/new_size = input("Input the desired size", "Set Size", 300) as num
+	var/new_size = tgui_input_number("Input the desired size", "Set Size", 300)
 	if (new_size < 1)
 		to_chat(src,"<span class='notice'>You lack the ability to become this size.</span>")
 		return
@@ -143,7 +143,7 @@
 	for(var/datum/absorbed_dna/DNA in changeling.absorbed_dna)
 		names += "[DNA.name]"
 
-	var/S = input("Select the target DNA: ", "Target DNA", null) as null|anything in names
+	var/S = tgui_input_list(src, "Select the target DNA:", "Target DNA", names)
 	if(!S)	return
 
 	var/datum/absorbed_dna/chosen_dna = changeling.GetDNA(S)
