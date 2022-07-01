@@ -53,6 +53,13 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/civilian/bar)
+"ag" = (
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/machinery/alarm,
+/turf/simulated/floor,
+/area/maintenance/groundbase/substation/aiciv)
 "ah" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -335,6 +342,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/atmos/monitoring)
+"aN" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/machinery/firealarm{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/maintenance/groundbase/substation/aiciv)
 "aO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/purple{
 	dir = 9
@@ -372,6 +391,18 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/or1)
+"aU" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/mob/living/simple_mob/vore/alienanimals/catslug/custom/engislug{
+	ghostjoin = 1
+	},
+/turf/simulated/floor/tiled,
+/area/groundbase/engineering/lobby)
 "aV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/light_switch{
@@ -395,6 +426,18 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/equipment)
+"aY" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/mob/living/simple_mob/vore/alienanimals/catslug/custom/gatslug{
+	ghostjoin = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/groundbase/security/lobby)
 "aZ" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
@@ -885,7 +928,7 @@
 /obj/random/tech_supply,
 /obj/random/tech_supply,
 /obj/random/tech_supply,
-/obj/item/device/paicard,
+/obj/random/paicard,
 /turf/simulated/floor/tiled,
 /area/groundbase/civilian/toolstorage)
 "cs" = (
@@ -2033,6 +2076,8 @@
 /obj/structure/sign/painting/library_secure{
 	pixel_y = -30
 	},
+/obj/item/weapon/reagent_containers/food/drinks/shaker,
+/obj/item/weapon/reagent_containers/glass/rag,
 /turf/simulated/floor/lino,
 /area/groundbase/civilian/cafe)
 "fk" = (
@@ -4302,6 +4347,11 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/equipment)
+"kP" = (
+/obj/structure/table/glass,
+/obj/random/paicard,
+/turf/simulated/floor/tiled/dark,
+/area/groundbase/civilian/bar)
 "kQ" = (
 /obj/machinery/power/apc{
 	dir = 8;
@@ -5546,7 +5596,7 @@
 /area/groundbase/security/lobby)
 "nU" = (
 /obj/structure/table/reinforced,
-/obj/item/device/paicard,
+/obj/random/paicard,
 /obj/machinery/recharger{
 	pixel_y = 5
 	},
@@ -6120,18 +6170,6 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled/white,
 /area/groundbase/civilian/womensrestroom)
-"pp" = (
-/mob/living/simple_mob/vore/alienanimals/catslug/custom/engislug{
-	ghostjoin = 1
-	},
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/groundbase/engineering/lobby)
 "pq" = (
 /obj/structure/cable{
 	icon_state = "2-4"
@@ -6658,8 +6696,8 @@
 /obj/machinery/cell_charger{
 	pixel_y = 7
 	},
-/obj/item/weapon/cell/high,
-/obj/item/weapon/cell/high,
+/obj/item/weapon/cell/super,
+/obj/item/weapon/cell/super,
 /turf/simulated/floor/tiled,
 /area/groundbase/cargo/mining)
 "qG" = (
@@ -7379,7 +7417,7 @@
 /area/groundbase/security/lobby)
 "sq" = (
 /obj/structure/table/woodentable,
-/obj/item/device/paicard,
+/obj/random/paicard,
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
 	},
@@ -7533,12 +7571,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/groundbase/civilian/arrivals)
-"sI" = (
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
-/turf/simulated/floor,
-/area/maintenance/groundbase/substation/aiciv)
 "sJ" = (
 /obj/structure/table/rack,
 /obj/item/device/suit_cooling_unit,
@@ -13713,6 +13745,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
 	},
+/obj/random/paicard,
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/hos)
 "Hw" = (
@@ -14170,6 +14203,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
+/obj/random/paicard,
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/ce)
 "Iy" = (
@@ -16174,6 +16208,8 @@
 	pixel_x = -3;
 	pixel_y = 26
 	},
+/obj/item/weapon/reagent_containers/food/drinks/shaker,
+/obj/item/weapon/reagent_containers/glass/rag,
 /turf/simulated/floor/lino,
 /area/groundbase/civilian/bar)
 "Nh" = (
@@ -17623,15 +17659,6 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled/white,
 /area/groundbase/civilian/womensrestroom)
-"QW" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
-/turf/simulated/floor,
-/area/maintenance/groundbase/substation/aiciv)
 "QX" = (
 /obj/structure/table/woodentable,
 /obj/machinery/atmospherics/unary/vent_pump/on,
@@ -17892,6 +17919,12 @@
 	},
 /turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
 /area/groundbase/level1/centsquare)
+"RB" = (
+/obj/effect/landmark{
+	name = "carpspawn"
+	},
+/turf/simulated/floor/water/deep/virgo3c,
+/area/groundbase/level1/eastspur)
 "RC" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/machinery/light{
@@ -19573,18 +19606,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white,
 /area/groundbase/civilian/womensrestroom)
-"VH" = (
-/mob/living/simple_mob/vore/alienanimals/catslug/custom/gatslug{
-	ghostjoin = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/dark,
-/area/groundbase/security/lobby)
 "VI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -25334,10 +25355,10 @@ WG
 WP
 WP
 Qi
-sI
+ag
 rq
 pq
-QW
+aN
 fk
 GJ
 Fi
@@ -25353,7 +25374,7 @@ ht
 ht
 KR
 GF
-GF
+kP
 oQ
 uF
 pj
@@ -27251,7 +27272,7 @@ wl
 wl
 wl
 tL
-VH
+aY
 Zq
 TC
 ti
@@ -35034,7 +35055,7 @@ MK
 Wl
 fv
 ga
-pp
+aU
 Cq
 Cq
 Cq
@@ -39104,7 +39125,7 @@ df
 uH
 uH
 eW
-eW
+RB
 eW
 uH
 uH
@@ -39657,7 +39678,7 @@ eW
 eW
 eW
 eW
-eW
+RB
 eW
 eW
 eW
@@ -39688,11 +39709,11 @@ eW
 eW
 eW
 eW
+RB
 eW
 eW
 eW
-eW
-eW
+RB
 eW
 eW
 eW
@@ -39959,13 +39980,13 @@ eW
 eW
 eW
 eW
+RB
 eW
 eW
 eW
 eW
 eW
-eW
-eW
+RB
 eW
 eW
 eW
@@ -40236,7 +40257,7 @@ uH
 uH
 uH
 eW
-eW
+RB
 eW
 eW
 eW

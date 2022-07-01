@@ -18,8 +18,6 @@
 	AM.water_act(5)
 	..()
 
-
-
 /turf/simulated/floor/ramptop
 	name = "stairs"
 	icon = 'content_arfs/icons/misc/ramp.dmi'
