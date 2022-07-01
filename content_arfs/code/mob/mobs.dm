@@ -1025,6 +1025,8 @@
 */
 
 /mob/living/simple_mob/vore/wolfgirl/arfs
+	vore_default_mode = DM_HOLD
+	vore_digest_chance = 0
 	var/loopstop = 0 //To prevent circular awoooos.
 
 /mob/living/simple_mob/vore/wolfgirl/arfs/andy

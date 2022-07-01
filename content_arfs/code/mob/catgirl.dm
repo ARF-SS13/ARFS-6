@@ -2,6 +2,10 @@
 	vore_digest_chance = 0
 	vore_bump_chance = 50
 
+/mob/living/simple_mob/vore/catgirl/arfs/Initialize()
+	. = ..()
+	update_icons()
+
 /mob/living/simple_mob/vore/catgirl/arfs/catgirl
 	random_skin = 0
 	icon_living = "catgirl"
