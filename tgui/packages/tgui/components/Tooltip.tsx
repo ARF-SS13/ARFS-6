@@ -1,28 +1,30 @@
-
 import { Placement } from '@popperjs/core';
 import { Component, findDOMfromVNode, InfernoNode } from 'inferno';
-import { Popper } from "./Popper";
+import { Popper } from './Popper';
 
-const DEFAULT_PLACEMENT = "top";
+const DEFAULT_PLACEMENT = 'top';
 
 type TooltipProps = {
   children?: InfernoNode;
-  content: string;
-  position?: Placement,
+  content: InfernoNode;
+  position?: Placement;
 };
 
 type TooltipState = {
   hovered: boolean;
 };
 
-export class Tooltip extends Component<TooltipProps, TooltipState> {
-  constructor() {
-    super();
+const DISABLE_EVENT_LISTENERS = [
+  {
+    name: 'eventListeners',
+    enabled: false,
+  },
+];
 
-    this.state = {
-      hovered: false,
-    };
-  }
+export class Tooltip extends Component<TooltipProps, TooltipState> {
+  state = {
+    hovered: false,
+  };
 
   componentDidMount() {
     // HACK: We don't want to create a wrapper, as it could break the layout
@@ -35,13 +37,17 @@ export class Tooltip extends Component<TooltipProps, TooltipState> {
     // immediately if this internal variable is removed.
     const domNode = findDOMfromVNode(this.$LI, true);
 
-    domNode.addEventListener("mouseenter", () => {
+    if (!domNode) {
+      return;
+    }
+
+    domNode.addEventListener('mouseenter', () => {
       this.setState({
         hovered: true,
       });
     });
 
-    domNode.addEventListener("mouseleave", () => {
+    domNode.addEventListener('mouseleave', () => {
       this.setState({
         hovered: false,
       });
@@ -52,7 +58,8 @@ export class Tooltip extends Component<TooltipProps, TooltipState> {
     return (
       <Popper
         options={{
-          placement: this.props.position || "auto",
+          placement: this.props.position || 'auto',
+          modifiers: DISABLE_EVENT_LISTENERS,
         }}
         popperContent={
           <div
@@ -64,7 +71,8 @@ export class Tooltip extends Component<TooltipProps, TooltipState> {
           </div>
         }
         additionalStyles={{
-          "pointer-events": "none",
+          'pointer-events': 'none',
+          'z-index': 2,
         }}>
         {this.props.children}
       </Popper>

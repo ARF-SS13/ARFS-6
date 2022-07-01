@@ -1,9 +1,3 @@
-/datum/trait/positive/linguist
-	name = "Master Linguist"
-	desc = "You are a master of languages! For whatever reason you might have, you are able to learn many more languages than others."
-	cost = 2
-	var_changes = list("num_alternate_languages" = 12)
-
 /datum/trait/positive/densebones
 	name = "Dense bones"
 	desc = "Your bones (or robotic limbs) are more dense or stronger then what is considered normal. It is much harder to fracture your bones, yet pain from fractures is much more intense."

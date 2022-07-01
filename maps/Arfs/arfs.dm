@@ -27,7 +27,7 @@
 	#include "residential/residential_arf_mansion.dmm"
 	#include "residential/residential_arf_two.dmm"
 	#include "residential/residential_arf.dmm"
-	#include "residential/residential_station.dmm"	
+	#include "residential/residential_station.dmm"
 
 	#define USING_MAP_DATUM /datum/map/arfs
 
