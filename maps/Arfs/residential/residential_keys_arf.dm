@@ -319,8 +319,8 @@
 	path = /obj/item/weapon/card/id/residential/rm10
 	display_name = "RM10, level three keys"
 	description = "residential"
-	ckeywhitelist = list("igni")
-	character_name = list("Sheila Frost", "Jake Frost")
+	ckeywhitelist = list("dahyde2501", "zugor")
+	character_name = list("Scarlett Rose", "Uma", "Myu")
 
 /datum/gear/fluff/res_key_rm11
 	path = /obj/item/weapon/card/id/residential/rm11
