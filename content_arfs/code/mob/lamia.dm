@@ -6,6 +6,7 @@
 /mob/living/simple_mob/vore/lamia/arfs/andy/Initialize()
 	. = ..()
 	resize(2)
+	vore_max_size = 3
 
 // FFTA Bra
 /mob/living/simple_mob/vore/lamia/arfs/bra

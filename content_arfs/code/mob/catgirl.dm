@@ -9,6 +9,7 @@
 /mob/living/simple_mob/vore/catgirl/arfs/andy/Initialize()
 	. = ..()
 	resize(2)
+	vore_max_size = 3
 
 /mob/living/simple_mob/vore/catgirl/arfs/catgirl
 	random_skin = 0

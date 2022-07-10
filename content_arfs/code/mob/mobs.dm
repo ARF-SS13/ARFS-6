@@ -1037,7 +1037,7 @@
 /mob/living/simple_mob/vore/wolfgirl/arfs/andy/Initialize()
     . = ..()
     resize(2)
-
+    vore_max_size = 3
 /mob/living/simple_mob/animal/passive/gaslamp/snow //Frostlamnp
 	name = "Frostlit Lamp"
 	desc = "Some sort of floaty alien with a surprisingly warm glow. This creature is looks like an evolutionary offshute of the Gaslamp family."
