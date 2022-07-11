@@ -1028,6 +1028,7 @@
 	vore_default_mode = DM_HOLD
 	vore_digest_chance = 0
 	var/loopstop = 0 //To prevent circular awoooos.
+	ai_holder_type = /datum/ai_holder/simple_mob/retaliate/cooperative/wolfgirl/arfs
 
 /mob/living/simple_mob/vore/wolfgirl/arfs/andy
 	vore_bump_chance = 50
@@ -1037,6 +1038,10 @@
 /mob/living/simple_mob/vore/wolfgirl/arfs/andy/Initialize()
     . = ..()
     resize(2)
+    vore_max_size = 3
+
+/datum/ai_holder/simple_mob/retaliate/cooperative/wolfgirl/arfs
+	retaliate = 0
 
 /mob/living/simple_mob/animal/passive/gaslamp/snow //Frostlamnp
 	name = "Frostlit Lamp"
@@ -1080,3 +1085,10 @@
 
 /mob/living/simple_mob/vore/woof/cass/arfs
 	vore_absorb_chance = 0
+
+/mob/living/simple_mob/vore/woof/cass/arfs/andy
+	vore_max_size = 3
+
+/mob/living/simple_mob/vore/woof/cass/arfs/andy/Initialize()
+    . = ..()
+    resize(2)
