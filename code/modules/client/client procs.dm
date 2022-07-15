@@ -22,6 +22,9 @@
 		- If so, is there any protection against somebody spam-clicking a link?
 	If you have any  questions about this stuff feel free to ask. ~Carn
 	*/
+
+var/global/client_count = 0         // ARFS EDIT - TGS
+
 /client/Topic(href, href_list, hsrc)
 	if(!usr || usr != mob)	//stops us calling Topic for somebody else's client. Also helps prevent usr=null
 		return
@@ -86,7 +89,7 @@
 					return
 				sane = TRUE
 				break
-		
+
 		if(!sane)
 			to_chat(src, "<span class='warning'>Sorry, that link doesn't appear to be valid. Please try again.</span>")
 			return
@@ -163,6 +166,7 @@
 		del(src)
 		return
 
+	++global.client_count                   // ARFS Edit - TGS
 	chatOutput = new /datum/chatOutput(src) //veechat
 	chatOutput.send_resources()
 	spawn()
@@ -261,6 +265,7 @@
 	GLOB.ahelp_tickets.ClientLogout(src)
 	GLOB.directory -= ckey
 	GLOB.clients -= src
+	--global.client_count                   // ARFS Edit - TGS
 	return ..()
 
 /client/Destroy()

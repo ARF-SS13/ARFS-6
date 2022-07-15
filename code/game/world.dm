@@ -17,8 +17,8 @@
 	if(byond_version < RECOMMENDED_VERSION)
 		to_world_log("Your server's byond version does not meet the recommended requirements for this server. Please update BYOND")
 
-	TgsNew()
-	VgsNew() // VOREStation Edit - VGS
+	TgsNew(new /datum/tgs_event_handler/impl, TGS_SECURITY_TRUSTED)
+	// VgsNew() // VOREStation Edit - VGS // ARFS Edit - Disable VGS
 
 	config.post_load()
 
@@ -81,7 +81,7 @@ var/world_topic_spam_protect_time = world.timeofday
 
 /world/Topic(T, addr, master, key)
 	TGS_TOPIC
-	VGS_TOPIC // VOREStation Edit - VGS
+	// VGS_TOPIC // VOREStation Edit - VGS // ARFS Edit - Disable VGS
 	log_topic("\"[T]\", from:[addr], master:[master], key:[key]")
 
 	if (T == "ping")
@@ -113,7 +113,7 @@ var/world_topic_spam_protect_time = world.timeofday
 		s["players"] = 0
 		s["stationtime"] = stationtime2text()
 		s["roundduration"] = roundduration2text()
-		s["map"] = strip_improper(using_map.full_name) //Done to remove the non-UTF-8 text macros 
+		s["map"] = strip_improper(using_map.full_name) //Done to remove the non-UTF-8 text macros
 
 		if(input["status"] == "2") // Shiny new hip status.
 			var/active = 0
@@ -529,7 +529,7 @@ var/world_topic_spam_protect_time = world.timeofday
 	features += config.abandon_allowed ? "respawn" : "no respawn"
 
 	features += config.persistence_disabled ? "persistence disabled" : "persistence enabled"
-	
+
 	features += config.persistence_ignore_mapload ? "persistence mapload disabled" : "persistence mapload enabled"
 
 	if (config && config.allow_vote_mode)
@@ -663,7 +663,7 @@ var/failed_old_db_connections = 0
 
 	if(dbcon_old?.IsConnected())
 		results += "WARNING: dbcon_old is connected, not touching it, but is this intentional?"
-	
+
 	if(!config.sql_enabled)
 		results += "stopping because config.sql_enabled = false"
 	else
@@ -672,7 +672,7 @@ var/failed_old_db_connections = 0
 			results += "SUCCESS: set up a connection successfully with setup_database_connection()"
 		else
 			results += "FAIL: failed to connect to the database with setup_database_connection()"
-		
+
 	results += "-- DB Reset End --"
 	to_world_log(results.Join("\n"))
 
@@ -681,11 +681,11 @@ var/failed_old_db_connections = 0
 	if(!istype(GLOB.players_by_zlevel, /list))
 		GLOB.players_by_zlevel = new /list(world.maxz, 0)
 		GLOB.living_players_by_zlevel = new /list(world.maxz, 0)
-	
+
 	while(GLOB.players_by_zlevel.len < world.maxz)
 		GLOB.players_by_zlevel.len++
 		GLOB.players_by_zlevel[GLOB.players_by_zlevel.len] = list()
-		
+
 		GLOB.living_players_by_zlevel.len++
 		GLOB.living_players_by_zlevel[GLOB.living_players_by_zlevel.len] = list()
 
@@ -727,10 +727,10 @@ var/global/game_id = null
 	game_id = ""
 
 	var/list/c = list(
-		"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", 
-		"n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", 
-		"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", 
-		"N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", 
+		"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
+		"n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
+		"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
+		"N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",
 		"1", "2", "3", "4", "5", "6", "7", "8", "9", "0"
 		)
 	var/l = c.len
