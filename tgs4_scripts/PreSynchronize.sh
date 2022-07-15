@@ -25,13 +25,13 @@ pip3 install PyYaml beautifulsoup4
 
 cd $1
 
-echo "Running changelog script..."
-python3 tools/ss13_genchangelog.py html/changelogs
+# echo "Running changelog script..."
+# python3 tools/ss13_genchangelog.py html/changelogs
 
-echo "Committing changes..."
-git add html
+# echo "Committing changes..."
+# git add html
 
-#we now don't care about failures
-set +e
-git commit -m "Automatic changelog compile, [ci skip]"
+# #we now don't care about failures
+# set +e
+# git commit -m "Automatic changelog compile, [ci skip]"
 exit 0
