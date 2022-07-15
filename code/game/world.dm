@@ -18,7 +18,7 @@
 		to_world_log("Your server's byond version does not meet the recommended requirements for this server. Please update BYOND")
 
 	TgsNew(new /datum/tgs_event_handler/impl, TGS_SECURITY_TRUSTED)
-	VgsNew() // VOREStation Edit - VGS
+	// VgsNew() // VOREStation Edit - VGS // ARFS Edit - Disable VGS
 
 	config.post_load()
 
@@ -81,7 +81,7 @@ var/world_topic_spam_protect_time = world.timeofday
 
 /world/Topic(T, addr, master, key)
 	TGS_TOPIC
-	VGS_TOPIC // VOREStation Edit - VGS
+	// VGS_TOPIC // VOREStation Edit - VGS // ARFS Edit - Disable VGS
 	log_topic("\"[T]\", from:[addr], master:[master], key:[key]")
 
 	if (T == "ping")
