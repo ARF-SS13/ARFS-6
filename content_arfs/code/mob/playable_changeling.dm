@@ -81,16 +81,16 @@
 		to_chat(src, "<span class='warning'>\The [T] is not compatible with our biology.</span>")
 		return 0
 
-	if(T.species.flags & NO_SCAN)
-		to_chat(src, "<span class='warning'>We do not know how to parse this creature's DNA!</span>")
-		return 0
+	// if(T.species.flags & NO_SCAN)
+	// 	to_chat(src, "<span class='warning'>We do not know how to parse this creature's DNA!</span>")
+	// 	return 0
 
 	if(HUSK in T.mutations)
 		to_chat(src, "<span class='warning'>This creature's DNA is ruined beyond useability!</span>")
 		return 0
 
 	var/datum/absorbed_dna/newDNA = new(T.real_name, T.dna, T.species.name, T.languages, T.identifying_gender, T.flavor_texts, T.modifiers)
-	absorbDNA(newDNA)
+	absorbDNA2(newDNA)
 
 	feedback_add_details("changeling_powers","ED")
 	return 1
@@ -133,6 +133,8 @@
 	set name = "Transform (5)"
 
 	var/datum/changeling/changeling = changeling_power(5,1,0)
+	var/datum/absorbed_dna/chosen_dna
+
 	if(!changeling)	return
 
 	if(!isturf(loc))
@@ -146,7 +148,17 @@
 	var/S = input("Select the target DNA: ", "Target DNA", null) as null|anything in names
 	if(!S)	return
 
-	var/datum/absorbed_dna/chosen_dna = changeling.GetDNA(S)
+	var/list/datum/absorbed_dna/matching_dna = changeling.GetDNAList(S)
+	if (matching_dna.len == 1)
+		chosen_dna = changeling.GetDNA(S)
+	else if (matching_dna.len > 1)
+		var/list/species = list()
+		for(var/datum/absorbed_dna/DNA in matching_dna)
+			species += "[DNA.dna.custom_species]"
+		var/T = input("Select the target DNA: ", "Target DNA", null) as null|anything in species
+		if(!T)	return
+		chosen_dna = changeling.GetDNAAdv(S,T)
+
 	if(!chosen_dna)
 		return
 
@@ -245,16 +257,16 @@
 		to_chat(src, "<span class='warning'>\The [T] is not compatible with our biology.</span>")
 		return 0
 
-	if(T.species.flags & NO_SCAN)
-		to_chat(src, "<span class='warning'>We do not know how to parse this creature's DNA!</span>")
-		return 0
+	// if(T.species.flags & NO_SCAN)
+	// 	to_chat(src, "<span class='warning'>We do not know how to parse this creature's DNA!</span>")
+	// 	return 0
 
 	if(HUSK in T.mutations)
 		to_chat(src, "<span class='warning'>This creature's DNA is ruined beyond useability!</span>")
 		return 0
 
 	var/datum/absorbed_dna/newDNA = new(T.real_name, T.dna, T.species.name, T.languages, T.identifying_gender, T.flavor_texts, T.modifiers)
-	absorbDNA(newDNA)
+	absorbDNA2(newDNA)
 	qdel(new_character)
 
 	src.verbs -= /mob/proc/meta_extract_dna_sting
@@ -337,3 +349,38 @@
 	src.mind.changeling.chem_storage += 30
 	src.mind.changeling.chem_recharge_rate *= 4
 	return 1
+
+/mob/proc/absorbDNA2(var/datum/absorbed_dna/newDNA)
+	var/datum/changeling/changeling = null
+	if(src.mind && src.mind.changeling)
+		changeling = src.mind.changeling
+	if(!changeling)
+		return
+
+	for(var/language in newDNA.languages)
+		changeling.absorbed_languages |= language
+
+	changeling_update_languages(changeling.absorbed_languages)
+
+	if(!changeling.GetDNAAdv(newDNA.name, newDNA.speciesName))
+		changeling.absorbed_dna += newDNA
+	else
+		changeling.DelDNAAdv(newDNA.name, newDNA.speciesName)
+		changeling.absorbed_dna += newDNA
+
+/datum/changeling/proc/GetDNAList(var/dna_owner)
+	var/list/datum/absorbed_dna/matching_dna = list()
+	for(var/datum/absorbed_dna/DNA in absorbed_dna)
+		if(dna_owner == DNA.name)
+			matching_dna += DNA
+	return matching_dna
+
+/datum/changeling/proc/GetDNAAdv(var/dna_owner, var/dna_species)
+	for(var/datum/absorbed_dna/DNA in absorbed_dna)
+		if(dna_owner == DNA.name && dna_species == DNA.dna.custom_species)
+			return DNA
+
+/datum/changeling/proc/DelDNAAdv(var/dna_owner, var/dna_species)
+	for(var/datum/absorbed_dna/DNA in absorbed_dna)
+		if(dna_owner == DNA.name && dna_species == DNA.dna.custom_species)
+			absorbed_dna -= GetDNAAdv(dna_owner, dna_species);
