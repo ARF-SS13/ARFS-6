@@ -362,10 +362,10 @@
 
 	changeling_update_languages(changeling.absorbed_languages)
 
-	if(!changeling.GetDNAAdv(newDNA.name, newDNA.speciesName))
+	if(!changeling.GetDNAAdv(newDNA.name, newDNA.dna.custom_species))
 		changeling.absorbed_dna += newDNA
 	else
-		changeling.DelDNAAdv(newDNA.name, newDNA.speciesName)
+		changeling.DelDNAAdv(newDNA.name, newDNA.dna.custom_species)
 		changeling.absorbed_dna += newDNA
 
 /datum/changeling/proc/GetDNAList(var/dna_owner)
