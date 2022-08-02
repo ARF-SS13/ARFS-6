@@ -1,6 +1,8 @@
 /obj/machinery/transhuman/autoresleever/admin
     name = "Command Automatic Resleever"
     desc = "Uses advanced technology to detect when someone needs to be resleeved, and automatically prints and sleeves them into a new body. It even generates its own biomass! Seems to be intended for command personnel only."
+    respawn = 5 MINUTES
+    vore_respawn = 1 MINUTE
 
 /obj/machinery/transhuman/autoresleever/admin/attack_ghost(mob/observer/dead/user as mob)
     if(!is_admin(user))
