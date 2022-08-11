@@ -46,7 +46,8 @@
 		var/cidquery = ""
 		if(address)
 			failedip = 0
-			ipquery = " OR ip = '[address]' "
+			if (!(address in LOCALHOST_ADDRESSES))
+				ipquery = " OR ip = '[address]' "
 
 		if(computer_id)
 			failedcid = 0
@@ -81,4 +82,3 @@
 			message_admins("[key] has logged in with a blank ip in the ban check.")
 		return ..()	//default pager ban stuff
 #endif
-

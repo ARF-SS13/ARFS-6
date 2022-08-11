@@ -323,9 +323,10 @@ var/global/client_count = 0         // ARFS EDIT - TGS
 	var/DBQuery/query_ip = dbcon.NewQuery("SELECT ckey FROM erro_player WHERE ip = '[address]'")
 	query_ip.Execute()
 	related_accounts_ip = ""
-	while(query_ip.NextRow())
-		related_accounts_ip += "[query_ip.item[1]], "
-		break
+	if (!(address in LOCALHOST_ADDRESSES))
+		while(query_ip.NextRow())
+			related_accounts_ip += "[query_ip.item[1]], "
+			break
 
 	var/DBQuery/query_cid = dbcon.NewQuery("SELECT ckey FROM erro_player WHERE computerid = '[computer_id]'")
 	query_cid.Execute()
