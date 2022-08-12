@@ -36,10 +36,10 @@ var/savefile/Banlist
 				if(matches)
 					matches += "/"
 				matches += "id"
-			if( address == Banlist["ip"] )
-				if(matches)
-					matches += "/"
-				matches += "ip"
+			// if( address == Banlist["ip"] )
+			// 	if(matches)
+			// 		matches += "/"
+			// 	matches += "ip"
 
 			if(matches)
 				if(Banlist["temp"])
@@ -227,4 +227,3 @@ var/savefile/Banlist
 	Banlist.cd = "/base"
 	for (var/A in Banlist.dir)
 		RemoveBan(A)
-

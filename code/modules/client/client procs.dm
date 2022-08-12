@@ -320,13 +320,12 @@ var/global/client_count = 0         // ARFS EDIT - TGS
 		if(query_datediff.Execute() && query_datediff.NextRow())
 			account_age = text2num(query_datediff.item[1])
 
-	var/DBQuery/query_ip = dbcon.NewQuery("SELECT ckey FROM erro_player WHERE ip = '[address]'")
-	query_ip.Execute()
-	related_accounts_ip = ""
-	if (!(address in LOCALHOST_ADDRESSES))
-		while(query_ip.NextRow())
-			related_accounts_ip += "[query_ip.item[1]], "
-			break
+	// var/DBQuery/query_ip = dbcon.NewQuery("SELECT ckey FROM erro_player WHERE ip = '[address]'")
+	// query_ip.Execute()
+	// related_accounts_ip = ""
+	// while(query_ip.NextRow())
+	// 	related_accounts_ip += "[query_ip.item[1]], "
+	// 	break
 
 	var/DBQuery/query_cid = dbcon.NewQuery("SELECT ckey FROM erro_player WHERE computerid = '[computer_id]'")
 	query_cid.Execute()

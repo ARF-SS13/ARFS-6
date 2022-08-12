@@ -6,11 +6,10 @@
 	if(config.log_access)
 		for(var/mob/M in player_list)
 			if(M == src)	continue
-			if(M.key != "Tk420634" || "ThingPony" || "FoxyRose") continue
 			if( M.key && (M.key != key) )
 				var/matches
-				if( (M.lastKnownIP == client.address && !(M.lastKnownIP in LOCALHOST_ADDRESSES)) )
-					matches += "IP ([client.address])"
+				// if( (M.lastKnownIP == client.address) )
+				// 	matches += "IP ([client.address])"
 				if( (client.connection != "web") && (M.computer_id == client.computer_id) )
 					if(matches)	matches += " and "
 					matches += "ID ([client.computer_id])"
