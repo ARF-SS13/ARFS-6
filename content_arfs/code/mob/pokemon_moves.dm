@@ -401,17 +401,19 @@
 		return
 	new_size_mult = clamp(new_size_mult, RESIZE_MINIMUM, RESIZE_MAXIMUM)
 	p_choice = pokemon_choices_list["[p_choice]"]
-	var/mob/living/simple_mob/animal/passive/pokemon/NP = new p_choice()
+	var/mob/living/simple_mob/animal/passive/pokemon/NP = p_choice
 	gender 			= 	new_gender
-	icon 			= 	NP.icon
-	icon_state 		= 	NP.icon_state
-	icon_living		=	NP.icon_living
-	icon_dead		= 	"[NP.icon_state]_d"
-	icon_rest		= 	"[NP.icon_state]_rest"
-	tt_desc			=	NP.tt_desc
-	y_offset_mult	=	NP.y_offset_mult
+	icon 			= 	initial(NP.icon)
+	icon_state 		= 	initial(NP.icon_state)
+	tt_desc			=	initial(NP.tt_desc)
+	if(!tt_desc)
+		tt_desc = capitalize(icon_state)
+	icon_living		=	initial(NP.icon_living)
+	icon_dead		= 	"[icon_state]_d"
+	icon_rest		= 	"[icon_state]_rest"
+	y_offset_mult	=	initial(NP.y_offset_mult)
 	resize(new_size_mult)
-	if(islegendary(NP))
+	if(islegendarypath(NP))
 		pixel_x = -32
 		default_pixel_x = -32
 		old_x = -32
@@ -419,13 +421,13 @@
 		pixel_x = -16
 		default_pixel_x = -16
 		old_x = -16
-	visible_message("<span class='notice'>[src] slowly transforms until they look just like a [NP.name]!</span>")
-	to_chat(src,"<span class='green'><i>You've transformed to look like a [NP.name]! You can set your flavor text by using the Set Flavortext verb to match your new appearance.</i></span>")
-	if(NP.type != src.type)//Did we transform into a non-ditto?
+	var/NPname = initial(NP.name)
+	visible_message("<span class='notice'>[src] slowly transforms until they look just like a [NPname]!</span>")
+	to_chat(src,"<span class='green'><i>You've transformed to look like a [NPname]! You can set your flavor text by using the Set Flavortext verb to match your new appearance.</i></span>")
+	if(p_choice != src.type)//Did we transform into a non-ditto?
 		active_moves |= M_TF //Add the transformed active move
 	else
 		active_moves -= M_TF //Otherwise remove it
-	del(NP)
 	move_cooldown = TRUE
 	spawn(move_cooldown_time*6)//60s
 		move_cooldown = FALSE
