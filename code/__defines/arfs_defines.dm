@@ -2,6 +2,7 @@
 
 #define ispokemon(A)		istype(A, /mob/living/simple_mob/animal/passive/pokemon)
 #define islegendary(A)		istype(A, /mob/living/simple_mob/animal/passive/pokemon/leg)
+#define islegendarypath(P)	ispath(P, /mob/living/simple_mob/animal/passive/pokemon/leg)
 
 #define P_TYPE_FIRE 	"fire"
 #define P_TYPE_WATER 	"water"

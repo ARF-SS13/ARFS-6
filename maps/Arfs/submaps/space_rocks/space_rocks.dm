@@ -2,33 +2,35 @@
 #include "space_rocks_stuff.dm"
 
 /turf/simulated/mineral/vacuum/sdmine/make_ore(var/rare_ore)
+	var/static/list/minerals = list(
+		"marble" = 2,
+		"uranium" = 5,
+		"platinum" = 5,
+		"hematite" = 35,
+		"carbon" = 5,
+		"gold" = 3,
+		"silver" = 3,
+		"phoron" = 25,
+		"lead" = 1)
+	var/static/list/rare_minerals = list(
+		"marble" = 3,
+		"uranium" = 10,
+		"platinum" = 10,
+		"hematite" = 20,
+		"carbon" = 5,
+		"diamond" = 1,
+		"gold" = 8,
+		"silver" = 8,
+		"phoron" = 18,
+		"lead" = 2,
+		"verdantium" = 1)
 	if(mineral)
 		return
 	var/mineral_name
 	if(rare_ore)
-		mineral_name = pickweight(list(
-			"marble" = 3,
-			"uranium" = 10,
-			"platinum" = 10,
-			"hematite" = 20,
-			"carbon" = 5,
-			"diamond" = 1,
-			"gold" = 8,
-			"silver" = 8,
-			"phoron" = 18,
-			"lead" = 2,
-			"verdantium" = 1))
+		mineral_name = pickweight(rare_minerals)
 	else
-		mineral_name = pickweight(list(
-			"marble" = 2,
-			"uranium" = 5,
-			"platinum" = 5,
-			"hematite" = 35,
-			"carbon" = 5,
-			"gold" = 3,
-			"silver" = 3,
-			"phoron" = 25,
-			"lead" = 1))
+		mineral_name = pickweight(minerals)
 
 	if(mineral_name && (mineral_name in GLOB.ore_data))
 		mineral = GLOB.ore_data[mineral_name]

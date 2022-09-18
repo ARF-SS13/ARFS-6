@@ -49,33 +49,35 @@
 	initial_generic_waypoints = list("om-grasscave-center", "om-grasscave-southeast")
 
 /turf/simulated/mineral/omadventure/make_ore(var/rare_ore)
+	var/static/list/minerals = list(
+		"marble" = 3,
+		"uranium" = 10,
+		"platinum" = 10,
+		"hematite" = 20,
+		"carbon" = 30,
+		"diamond" = 20,
+		"gold" = 8,
+		"silver" = 8,
+		"phoron" = 18,
+		"lead" = 5,
+		"verdantium" = 5)
+	var/static/list/rare_minerals = list(
+		"marble" = 2,
+		"uranium" = 5,
+		"platinum" = 5,
+		"hematite" = 35,
+		"carbon" = 30,
+		"gold" = 3,
+		"silver" = 3,
+		"phoron" = 25,
+		"lead" = 1)
 	if(mineral)
 		return
 	var/mineral_name
 	if(rare_ore)
-		mineral_name = pickweight(list(
-			"marble" = 3,
-			"uranium" = 10,
-			"platinum" = 10,
-			"hematite" = 20,
-			"carbon" = 30,
-			"diamond" = 20,
-			"gold" = 8,
-			"silver" = 8,
-			"phoron" = 18,
-			"lead" = 5,
-			"verdantium" = 5))
+		mineral_name = pickweight(rare_minerals)
 	else
-		mineral_name = pickweight(list(
-			"marble" = 2,
-			"uranium" = 5,
-			"platinum" = 5,
-			"hematite" = 35,
-			"carbon" = 30,
-			"gold" = 3,
-			"silver" = 3,
-			"phoron" = 25,
-			"lead" = 1))
+		mineral_name = pickweight(minerals)
 
 	if(mineral_name && (mineral_name in GLOB.ore_data))
 		mineral = GLOB.ore_data[mineral_name]
