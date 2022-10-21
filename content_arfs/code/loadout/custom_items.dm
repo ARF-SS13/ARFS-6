@@ -50,7 +50,7 @@
 //	character_name = null
 
 /datum/gear/fluff/dameon_6
-    path = /obj/item/weapon/gun/energy/sizegun/andy
+    path = /obj/item/weapon/gun/energy/sizegun/admin
     display_name = "Owen Sizegun"
     description = "A modified sizegun for the Owen family. Some of the safeties have been altered."
     ckeywhitelist = list("andyman105", "dameonowen", "dwagin", "thingpony", "foxyrose")

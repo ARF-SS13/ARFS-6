@@ -196,86 +196,86 @@
 // Size Gun
 //
 
-/obj/item/weapon/gun/energy/sizegun/andy
-	name = "modified size gun"
-	desc = "A highly advanced ray gun with a knob on the side to adjust the size you desire. Warning: Do not insert into mouth."
-	icon = 'icons/obj/gun_vr.dmi'
-	icon_state = "sizegun-shrink100" // Someone can probably do better. -Ace
-	item_state = null
-	fire_sound = 'sound/weapons/wave.ogg'
-	charge_cost = 240
-	projectile_type = /obj/item/projectile/beam/sizelaser
-	origin_tech = list(TECH_BLUESPACE = 4)
-	modifystate = "sizegun-shrink"
-	battery_lock = 1
-	size_set_to = 1
-	firemodes = list(
-		list(mode_name		= "select size",
-			projectile_type	= /obj/item/projectile/beam/sizelaser/,
-			modifystate		= "sizegun-grow",
-			fire_sound		= 'sound/weapons/pulse3.ogg'
-		))
+// /obj/item/weapon/gun/energy/sizegun/andy
+// 	name = "modified size gun"
+// 	desc = "A highly advanced ray gun with a knob on the side to adjust the size you desire. Warning: Do not insert into mouth."
+// 	icon = 'icons/obj/gun_vr.dmi'
+// 	icon_state = "sizegun-shrink100" // Someone can probably do better. -Ace
+// 	item_state = null
+// 	fire_sound = 'sound/weapons/wave.ogg'
+// 	charge_cost = 240
+// 	projectile_type = /obj/item/projectile/beam/sizelaser
+// 	origin_tech = list(TECH_BLUESPACE = 4)
+// 	modifystate = "sizegun-shrink"
+// 	battery_lock = 1
+// 	size_set_to = 1
+// 	firemodes = list(
+// 		list(mode_name		= "select size",
+// 			projectile_type	= /obj/item/projectile/beam/sizelaser/,
+// 			modifystate		= "sizegun-grow",
+// 			fire_sound		= 'sound/weapons/pulse3.ogg'
+// 		))
 
-/obj/item/weapon/gun/energy/sizegun/andy/New()
-	..()
+// /obj/item/weapon/gun/energy/sizegun/andy/New()
+// 	..()
 
-/obj/item/weapon/gun/energy/sizegun/andy/attack_self(mob/user)
-	andy_select_size()
+// /obj/item/weapon/gun/energy/sizegun/andy/attack_self(mob/user)
+// 	andy_select_size()
 
-/obj/item/weapon/gun/energy/sizegun/andy/consume_next_projectile()
-	. = ..()
-	var/obj/item/projectile/beam/andysizelaser/G = .
-	if(istype(G))
-		G.set_size = size_set_to
+// /obj/item/weapon/gun/energy/sizegun/andy/consume_next_projectile()
+// 	. = ..()
+// 	var/obj/item/projectile/beam/andysizelaser/G = .
+// 	if(istype(G))
+// 		G.set_size = size_set_to
 
-/obj/item/weapon/gun/energy/sizegun/andy/proc/andy_select_size()
-	set name = "Select Size"
-	set category = "Object"
-	set src in view(1)
+// /obj/item/weapon/gun/energy/sizegun/andy/proc/andy_select_size()
+// 	set name = "Select Size"
+// 	set category = "Object"
+// 	set src in view(1)
 
-	var/size_select = input("Put the desired size", "Set Size", size_set_to * 100) as num
-	if(size_select < 1)
-		to_chat(usr, "<span class='notice'>Invalid size.</span>")
-		return
-	size_set_to = (size_select/100)
-	to_chat(usr, "<span class='notice'>You set the size to [size_select]%</span>")
+// 	var/size_select = input("Put the desired size", "Set Size", size_set_to * 100) as num
+// 	if(size_select < 1)
+// 		to_chat(usr, "<span class='notice'>Invalid size.</span>")
+// 		return
+// 	size_set_to = (size_select/100)
+// 	to_chat(usr, "<span class='notice'>You set the size to [size_select]%</span>")
 
-//
-// Beams for size gun
-//
+// //
+// // Beams for size gun
+// //
 
-/obj/item/projectile/beam/andysizelaser
-	name = "size beam"
-	icon_state = "xray"
-	nodamage = 1
-	damage = 0
-	check_armour = "laser"
-	var/set_size = 1 //Let's default to 100%
+// /obj/item/projectile/beam/andysizelaser
+// 	name = "size beam"
+// 	icon_state = "xray"
+// 	nodamage = 1
+// 	damage = 0
+// 	check_armour = "laser"
+// 	var/set_size = 1 //Let's default to 100%
 
-	muzzle_type = /obj/effect/projectile/muzzle/xray
-	tracer_type = /obj/effect/projectile/tracer/xray
-	impact_type = /obj/effect/projectile/impact/xray
+// 	muzzle_type = /obj/effect/projectile/muzzle/xray
+// 	tracer_type = /obj/effect/projectile/tracer/xray
+// 	impact_type = /obj/effect/projectile/impact/xray
 
-/obj/item/projectile/beam/andysizelaser/on_hit(var/atom/target)
-	var/mob/living/M = target
-	if(istype(M))
-		M.resize(set_size, TRUE, TRUE, FALSE)
-		to_chat(M, "<font color='blue'> The beam fires into your body, changing your size!</font>")
-		M.updateicon()
-		return
-	return 1
+// /obj/item/projectile/beam/andysizelaser/on_hit(var/atom/target)
+// 	var/mob/living/M = target
+// 	if(istype(M))
+// 		M.resize(set_size, TRUE, TRUE, FALSE)
+// 		to_chat(M, "<font color='blue'> The beam fires into your body, changing your size!</font>")
+// 		M.updateicon()
+// 		return
+// 	return 1
 
-/obj/item/projectile/beam/andysizelaser/shrink
-	set_size = 0.5 //50% of current size
+// /obj/item/projectile/beam/andysizelaser/shrink
+// 	set_size = 0.5 //50% of current size
 
-/obj/item/projectile/beam/andysizelaser/grow
-	set_size = 2.0 //200% of current size
+// /obj/item/projectile/beam/andysizelaser/grow
+// 	set_size = 2.0 //200% of current size
 
-/obj/item/projectile/beam/andysizelaser/extremegrow
-	set_size = 3.0 //300% of current size
+// /obj/item/projectile/beam/andysizelaser/extremegrow
+// 	set_size = 3.0 //300% of current size
 
-/obj/item/projectile/beam/andysizelaser/massivegrow
-	set_size = 4.0 //400% of current size
+// /obj/item/projectile/beam/andysizelaser/massivegrow
+// 	set_size = 4.0 //400% of current size
 
 /obj/item/weapon/gun/energy/gun/fluff/dominator/andy
 	name = "The Dominator"
