@@ -59,7 +59,7 @@
 	if(istype(T) && !T.ignore_mapgen)
 		if(!T.ignore_cavegen)
 			if(map[current_cell] == FLOOR_CHAR)
-				T.make_floor()
+				T.make_floor(FALSE)
 			else
 				T.make_wall()
 
