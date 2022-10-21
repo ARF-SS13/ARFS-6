@@ -23,6 +23,8 @@
 	var/digest_brute = 0.5					// Brute damage per tick in digestion mode
 	var/digest_burn = 0.5					// Burn damage per tick in digestion mode
 	var/digest_oxy = 0						// Oxy damage per tick in digestion mode
+	var/digest_tox = 0						// Toxins damage per tick in digestion mode
+	var/digest_clone = 0					// Clone damage per tick in digestion mode
 	var/immutable = FALSE					// Prevents this belly from being deleted
 	var/escapable = FALSE					// Belly can be resisted out of at any time
 	var/escapetime = 20 SECONDS				// Deciseconds, how long to escape this belly
@@ -157,6 +159,10 @@
 	// Lets you do a fullscreen overlay. Set to an icon_state string.
 	var/belly_fullscreen = ""
 	var/disable_hud = FALSE
+	var/colorization_enabled = FALSE
+	var/belly_fullscreen_color = "#823232"
+
+
 
 //For serialization, keep this updated, required for bellies to save correctly.
 /obj/belly/vars_to_save()
@@ -174,6 +180,8 @@
 	"digest_brute",
 	"digest_burn",
 	"digest_oxy",
+	"digest_tox",
+	"digest_clone",
 	"immutable",
 	"can_taste",
 	"escapable",
@@ -215,6 +223,8 @@
 	"wet_loop",
 	"belly_fullscreen",
 	"disable_hud",
+	"belly_fullscreen_color",
+	"colorization_enabled",
 	"egg_type",
 	"save_digest_mode"
 	)
@@ -310,16 +320,52 @@
 		return
 
 	if(belly_fullscreen)
-		var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly)
-		F.icon_state = belly_fullscreen
-		// F.color = belly_fullscreen_color
+		if(colorization_enabled)
+			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly/colorized)
+			F.icon_state = belly_fullscreen
+			F.color = belly_fullscreen_color
+			/* //Allows for 'multilayered' stomachs. Currently not implemented.
+			if(b_multilayered)
+				var/obj/screen/fullscreen/F2 = L.overlay_fullscreen("belly2", /obj/screen/fullscreen/belly)
+			*/
+		else
+			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly)
+			F.icon_state = belly_fullscreen
 	else
 		L.clear_fullscreen("belly")
+		//L.clear_fullscreen("belly2") //Allows for 'multilayered' stomachs. Currently not implemented.
 
 	if(disable_hud)
 		if(L?.hud_used?.hud_shown)
 			to_chat(L, "<span class='notice'>((Your pred has disabled huds in their belly. Turn off vore FX and hit F12 to get it back; or relax, and enjoy the serenity.))</span>")
 			L.toggle_hud_vis(TRUE)
+
+/obj/belly/proc/vore_preview(mob/living/L)
+	if(!istype(L))
+		return
+	if(!L.client)
+		return
+
+	if(belly_fullscreen)
+		if(colorization_enabled)
+			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly/colorized)
+			F.icon_state = belly_fullscreen
+			F.color = belly_fullscreen_color
+			/* //Allows for 'multilayered' stomachs. Currently not implemented.
+			if(b_multilayered)
+				var/obj/screen/fullscreen/F2 = L.overlay_fullscreen("belly2", /obj/screen/fullscreen/belly)
+			*/
+		else
+			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly)
+			F.icon_state = belly_fullscreen
+	else
+		L.clear_fullscreen("belly")
+		//L.clear_fullscreen("belly2") //Allows for 'multilayered' stomachs. Currently not implemented.
+
+/obj/belly/proc/clear_preview(mob/living/L)
+	L.clear_fullscreen("belly")
+
+
 
 // Release all contents of this belly into the owning mob's location.
 // If that location is another mob, contents are transferred into whichever of its bellies the owning mob is in.
@@ -1106,6 +1152,8 @@
 	dupe.digest_brute = digest_brute
 	dupe.digest_burn = digest_burn
 	dupe.digest_oxy = digest_oxy
+	dupe.digest_tox = digest_tox
+	dupe.digest_clone = digest_clone
 	dupe.immutable = immutable
 	dupe.can_taste = can_taste
 	dupe.escapable = escapable
@@ -1130,6 +1178,8 @@
 	dupe.wet_loop = wet_loop
 	dupe.belly_fullscreen = belly_fullscreen
 	dupe.disable_hud = disable_hud
+	dupe.belly_fullscreen_color = belly_fullscreen_color
+	dupe.colorization_enabled = colorization_enabled
 	dupe.egg_type = egg_type
 	dupe.emote_time = emote_time
 	dupe.emote_active = emote_active

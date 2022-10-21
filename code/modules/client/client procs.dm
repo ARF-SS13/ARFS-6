@@ -63,6 +63,14 @@ var/global/client_count = 0         // ARFS EDIT - TGS
 		cmd_admin_pm(C,null)
 		return
 
+	if(href_list["mentorhelp_msg"])
+		var/client/C = locate(href_list["mentorhelp_msg"])
+		if(ismob(C))
+			var/mob/M = C
+			C = M.client
+		cmd_mentor_pm(C, null)
+		return
+
 	if(href_list["irc_msg"])
 		if(!holder && received_irc_pm < world.time - 6000) //Worse they can do is spam IRC for 10 minutes
 			to_chat(usr, "<span class='warning'>You are no longer able to use this, it's been more then 10 minutes since an admin on IRC has responded to you</span>")
@@ -124,6 +132,7 @@ var/global/client_count = 0         // ARFS EDIT - TGS
 
 	switch(href_list["_src_"])
 		if("holder")	hsrc = holder
+		if("mentorholder")	hsrc = (check_rights(R_ADMIN, 0) ? holder : mentorholder)
 		if("usr")		hsrc = mob
 		if("prefs")		return prefs.process_link(usr,href_list)
 		if("vars")		return view_var_Topic(href,href_list,hsrc)
@@ -180,12 +189,17 @@ var/global/client_count = 0         // ARFS EDIT - TGS
 	GLOB.directory[ckey] = src
 
 	GLOB.ahelp_tickets.ClientLogin(src)
+	GLOB.mhelp_tickets.ClientLogin(src)
 
 	//Admin Authorisation
 	holder = admin_datums[ckey]
 	if(holder)
 		GLOB.admins += src
 		holder.owner = src
+
+	mentorholder = mentor_datums[ckey]
+	if (mentorholder)
+		mentorholder.associate(GLOB.directory[ckey])
 
 	//preferences datum - also holds some persistant data for the client (because we may as well keep these datums to a minimum)
 	prefs = preferences_datums[ckey]
@@ -195,6 +209,8 @@ var/global/client_count = 0         // ARFS EDIT - TGS
 	prefs.last_ip = address				//these are gonna be used for banning
 	prefs.last_id = computer_id			//these are gonna be used for banning
 	prefs.client = src // Only relevant if we reloaded it from the global list, otherwise prefs/New sets it
+
+	hook_vr("client_new",list(src)) //VOREStation Code. For now this only loads vore prefs, so better put before mob.Login() call but after normal prefs are loaded.
 
 	. = ..()	//calls mob.Login()
 	prefs.sanitize_preferences()
@@ -240,8 +256,6 @@ var/global/client_count = 0         // ARFS EDIT - TGS
 		if(config.aggressive_changelog)
 			src.changes()
 
-	hook_vr("client_new",list(src)) //VOREStation Code
-
 	if(config.paranoia_logging)
 		var/alert = FALSE //VOREStation Edit start.
 		if(isnum(player_age) && player_age == 0)
@@ -264,7 +278,11 @@ var/global/client_count = 0         // ARFS EDIT - TGS
 	if(holder)
 		holder.owner = null
 		GLOB.admins -= src
+	if (mentorholder)
+		mentorholder.owner = null
+		GLOB.mentors -= src
 	GLOB.ahelp_tickets.ClientLogout(src)
+	GLOB.mhelp_tickets.ClientLogout(src)
 	GLOB.directory -= ckey
 	GLOB.clients -= src
 	--global.client_count                   // ARFS Edit - TGS

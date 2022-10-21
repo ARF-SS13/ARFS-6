@@ -63,6 +63,7 @@
 /turf/simulated/floor,
 /area/stellardelight/deck3/portdock)
 "aj" = (
+/obj/effect/landmark/free_ai_shell,
 /turf/simulated/floor/carpet/turcarpet,
 /area/ai)
 "ak" = (
@@ -122,6 +123,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/holodeck_control)
+"ap" = (
+/obj/machinery/vending/altevian,
+/turf/simulated/floor,
+/area/maintenance/stellardelight/deck3/forestarroomb)
 "at" = (
 /obj/structure/table/darkglass,
 /turf/simulated/floor/tiled/dark,
@@ -1576,6 +1581,9 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+/obj/effect/mouse_hole_spawner{
+	dir = 4
+	},
 /turf/simulated/open,
 /area/crew_quarters/bar)
 "gh" = (
@@ -1704,7 +1712,7 @@
 	pixel_y = 6
 	},
 /obj/item/weapon/stamp/internalaffairs,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/carpet/blue2,
 /area/lawoffice)
 "gG" = (
 /obj/structure/lattice,
@@ -1938,7 +1946,7 @@
 /area/ai_upload)
 "hu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/carpet/blue2,
 /area/lawoffice)
 "hw" = (
 /obj/machinery/telecomms/processor/preset_one,
@@ -2376,15 +2384,12 @@
 /area/stellardelight/deck3/starboarddock)
 "jh" = (
 /obj/structure/closet/secure_closet/hop2,
-/obj/machinery/requests_console{
-	announcementConsole = 1;
-	department = "Bridge";
-	departmentType = 5;
-	name = "Bridge RC";
-	pixel_x = 30
-	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
+	},
+/obj/machinery/alarm/angled{
+	dir = 8;
+	pixel_x = 30
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/heads/hop)
@@ -2433,6 +2438,13 @@
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/crew_quarters/heads/chief)
+"jo" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/mouse_hole_spawner{
+	dir = 8
+	},
+/turf/simulated/floor,
+/area/maintenance/stellardelight/deck3/starboardaft)
 "jp" = (
 /obj/structure/closet,
 /obj/random/contraband,
@@ -2462,10 +2474,14 @@
 /obj/structure/bed/double/padded,
 /obj/item/weapon/bedsheet/hopdouble,
 /obj/structure/curtain/black,
-/obj/machinery/newscaster{
+/obj/effect/landmark/start/hop,
+/obj/machinery/requests_console{
+	announcementConsole = 1;
+	department = "Bridge";
+	departmentType = 5;
+	name = "Bridge RC";
 	pixel_y = 28
 	},
-/obj/effect/landmark/start/hop,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/heads/hop)
 "jE" = (
@@ -4696,7 +4712,7 @@
 /obj/structure/sign/painting/library_secure{
 	pixel_x = -30
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/carpet/blue2,
 /area/lawoffice)
 "rm" = (
 /obj/effect/floor_decal/techfloor{
@@ -4849,6 +4865,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/open,
 /area/stellardelight/deck2/port)
+"rW" = (
+/obj/effect/mouse_hole_spawner{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/maintenance/stellardelight/deck3/portfore)
 "rX" = (
 /obj/machinery/light{
 	dir = 1
@@ -5169,6 +5191,9 @@
 "tc" = (
 /obj/structure/cable/blue{
 	icon_state = "1-4"
+	},
+/obj/effect/mouse_hole_spawner{
+	dir = 8
 	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck3/starboardfore)
@@ -6390,7 +6415,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/start/iaa,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/carpet/blue2,
 /area/lawoffice)
 "xN" = (
 /obj/structure/cable/green{
@@ -6449,7 +6474,7 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/stellardelight/deck3/aft)
 "xY" = (
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/carpet/blue2,
 /area/lawoffice)
 "xZ" = (
 /turf/simulated/floor/wood,
@@ -6834,7 +6859,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/carpet/blue2,
 /area/lawoffice)
 "zp" = (
 /obj/machinery/light/small{
@@ -7045,7 +7070,7 @@
 /obj/machinery/power/apc{
 	pixel_y = -28;
 	req_access = null;
-	req_one_access = list(11, 67)
+	req_one_access = list(11,67)
 	},
 /obj/structure/cable/green,
 /obj/effect/floor_decal/fancy_shuttle{
@@ -7111,7 +7136,7 @@
 /obj/item/device/tape/random,
 /obj/item/weapon/storage/secure/briefcase,
 /obj/structure/closet/walllocker_double/east,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/carpet/blue2,
 /area/lawoffice)
 "Al" = (
 /obj/machinery/power/apc/angled{
@@ -7736,7 +7761,7 @@
 	layer = 3.3;
 	pixel_x = -27
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/carpet/blue2,
 /area/lawoffice)
 "BZ" = (
 /obj/structure/cable/green{
@@ -8005,7 +8030,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
-/obj/machinery/alarm/angled,
+/obj/machinery/newscaster{
+	pixel_y = 28
+	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/hop)
 "CS" = (
@@ -9168,7 +9195,7 @@
 /obj/structure/sign/painting/library_secure{
 	pixel_x = 30
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/carpet/blue2,
 /area/lawoffice)
 "Hw" = (
 /obj/structure/sign/painting/public{
@@ -9990,7 +10017,7 @@
 /obj/machinery/power/apc{
 	pixel_y = -28;
 	req_access = null;
-	req_one_access = list(11, 67)
+	req_one_access = list(11,67)
 	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
@@ -10282,6 +10309,12 @@
 	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck3/starboardfore)
+"Lo" = (
+/obj/effect/mouse_hole_spawner{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/maintenance/stellardelight/deck3/portaft)
 "Lr" = (
 /obj/effect/shuttle_landmark/premade/sd/deck3/starboardairlock,
 /turf/space,
@@ -10291,7 +10324,7 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/carpet/blue2,
 /area/lawoffice)
 "Lw" = (
 /obj/effect/floor_decal/spline/plain,
@@ -10499,7 +10532,7 @@
 /obj/item/device/tape/random,
 /obj/item/weapon/storage/secure/briefcase,
 /obj/structure/closet/walllocker_double/west,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/carpet/blue2,
 /area/lawoffice)
 "Mi" = (
 /obj/effect/floor_decal/corner_techfloor_grid{
@@ -10534,7 +10567,7 @@
 	pixel_y = 6
 	},
 /obj/item/weapon/stamp/internalaffairs,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/carpet/blue2,
 /area/lawoffice)
 "Mo" = (
 /obj/structure/cable{
@@ -11376,6 +11409,9 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
+/obj/effect/mouse_hole_spawner{
+	dir = 8
+	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck3/starboardcent)
 "OI" = (
@@ -12208,6 +12244,9 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+/obj/effect/mouse_hole_spawner{
+	dir = 4
+	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck3/portcent)
 "RN" = (
@@ -12387,7 +12426,7 @@
 	dir = 8;
 	pixel_y = 6
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/carpet/blue2,
 /area/lawoffice)
 "SB" = (
 /obj/machinery/requests_console/preset/ce{
@@ -12413,7 +12452,7 @@
 	layer = 3.3;
 	pixel_x = 27
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/carpet/blue2,
 /area/lawoffice)
 "SF" = (
 /obj/effect/floor_decal/steeldecal/steel_decals5{
@@ -13448,7 +13487,7 @@
 	dir = 4;
 	pixel_y = 6
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/carpet/blue2,
 /area/lawoffice)
 "Wr" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
@@ -13629,7 +13668,7 @@
 	dir = 8
 	},
 /obj/effect/landmark/start/iaa,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/carpet/blue2,
 /area/lawoffice)
 "WX" = (
 /obj/machinery/camera/network/command{
@@ -13676,6 +13715,9 @@
 	icon_state = "1-2"
 	},
 /obj/effect/landmark/vermin,
+/obj/effect/mouse_hole_spawner{
+	dir = 8
+	},
 /turf/simulated/open,
 /area/crew_quarters/bar)
 "Xd" = (
@@ -21611,7 +21653,7 @@ pf
 Ns
 Ns
 Ns
-Ns
+rW
 Ns
 eF
 IP
@@ -21650,7 +21692,7 @@ IN
 xi
 dE
 dE
-dE
+Lo
 dE
 Sw
 dE
@@ -26150,7 +26192,7 @@ tF
 Sb
 Nz
 Jx
-FE
+ap
 sR
 FE
 Ef
@@ -27045,7 +27087,7 @@ if
 if
 Ne
 iS
-iS
+jo
 Kz
 Dk
 qY
