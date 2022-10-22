@@ -18,6 +18,7 @@
 	feeding = client.prefs_vr.feeding
 	can_be_drop_prey = client.prefs_vr.can_be_drop_prey
 	can_be_drop_pred = client.prefs_vr.can_be_drop_pred
+	throw_vore = client.prefs_vr.throw_vore
 	allow_inbelly_spawning = client.prefs_vr.allow_inbelly_spawning
 	allow_spontaneous_tf = client.prefs_vr.allow_spontaneous_tf
 	digest_leave_remains = client.prefs_vr.digest_leave_remains
@@ -25,6 +26,8 @@
 	permit_healbelly = client.prefs_vr.permit_healbelly
 	noisy = client.prefs_vr.noisy
 	selective_preference = client.prefs_vr.selective_preference
+	appendage_color = client.prefs_vr.appendage_color
+	appendage_alt_setting = client.prefs_vr.appendage_alt_setting
 
 	drop_vore = client.prefs_vr.drop_vore
 	stumble_vore = client.prefs_vr.stumble_vore

@@ -128,12 +128,8 @@
 						to_chat(M, "<span class='notice'>[formatted_message]</span>")
 				else
 					if (digest_mode == DM_SELECT)
-						if (M.digestable)
-							EL = emote_lists[DM_DIGEST]
-						else if (M.absorbable)
-							EL = emote_lists[DM_ABSORB]
-						else
-							EL = emote_lists[DM_HOLD]
+						var/datum/digest_mode/selective/DM_S = GLOB.digest_modes[DM_SELECT]
+						EL = emote_lists[DM_S.get_selective_mode(src, M)]
 					else if(digest_mode == DM_DIGEST && !M.digestable)
 						EL = emote_lists[DM_HOLD]					// Use Hold's emote list if we're indigestible
 
@@ -291,6 +287,7 @@
 		GLOB.prey_digested_roundstat++
 
 	var/personal_nutrition_modifier = M.get_digestion_nutrition_modifier()
+	var/pred_digestion_efficiency = owner.get_digestion_efficiency_modifier()
 
 	if((mode_flags & DM_FLAG_LEAVEREMAINS) && M.digest_leave_remains)
 		handle_remains_leaving(M)
@@ -301,7 +298,7 @@
 		var/mob/living/silicon/robot/R = owner
 		R.cell.charge += (nutrition_percent / 100) * compensation * 25 * personal_nutrition_modifier
 	else
-		owner.adjust_nutrition((nutrition_percent / 100) * compensation * 4.5 * personal_nutrition_modifier)
+		owner.adjust_nutrition((nutrition_percent / 100) * compensation * 4.5 * personal_nutrition_modifier * pred_digestion_efficiency)
 
 /obj/belly/proc/steal_nutrition(mob/living/L)
 	if(L.nutrition >= 100)

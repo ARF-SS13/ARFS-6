@@ -25,10 +25,7 @@
 	inherent_verbs = list(
 		/mob/living/carbon/human/proc/reconstitute_form,
 		/mob/living/carbon/human/proc/sonar_ping,
-		/mob/living/carbon/human/proc/tie_hair,
-		/mob/living/proc/flying_toggle,
-		/mob/living/proc/flying_vore_toggle,
-		/mob/living/proc/start_wings_hovering)		//Xenochimera get all the special verbs since they can't select traits.
+		/mob/living/carbon/human/proc/tie_hair)
 
 	virus_immune = 1 // They practically ARE one.
 	min_age = 18
@@ -145,14 +142,14 @@
 		cause = "jittery"
 
 	//check to see if they go feral if they weren't before
-	if(!feral)
+	if(!feral && !isbelly(H.loc))
 		// if stress is below 15, no chance of snapping. Also if they weren't feral before, they won't suddenly become feral unless they get MORE stressed
 		if((currentstress > laststress) && prob(clamp(currentstress-15, 0, 100)) )
 			go_feral(H, currentstress, cause)
 			feral = currentstress //update the local var
 
 		//they didn't go feral, give 'em a chance of hunger messages
-		else if(H.nutrition <= 200 && prob(0.5) && !isbelly(H.loc))
+		else if(H.nutrition <= 200 && prob(0.5))
 			switch(H.nutrition)
 				if(150 to 200)
 					to_chat(H,"<span class='info'>You feel rather hungry. It might be a good idea to find some some food...</span>")
@@ -161,7 +158,8 @@
 					danger = TRUE
 
 	//now the check's done, update their brain so it remembers how stressed they were
-	B.laststress = currentstress
+	if(B && !isbelly(H.loc)) //another sanity check for brain implant shenanigans, also no you don't get to hide in a belly and get your laststress set to a huge amount to skip rolls
+		B.laststress = currentstress
 
 	// Handle being feral
 	if(feral)

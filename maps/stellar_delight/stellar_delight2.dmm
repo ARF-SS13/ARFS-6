@@ -2156,6 +2156,7 @@
 	name = "Bridge Lockdown";
 	pixel_y = 2
 	},
+/obj/effect/floor_decal/milspec/color/blue/corner,
 /turf/simulated/floor/tiled/eris/dark/gray_platform,
 /area/bridge)
 "ex" = (
@@ -4537,6 +4538,7 @@
 /area/stellardelight/deck2/triage)
 "kc" = (
 /obj/machinery/computer/power_monitor,
+/obj/effect/floor_decal/milspec/color/orange/half,
 /turf/simulated/floor/tiled/eris/dark/monofloor,
 /area/bridge)
 "kd" = (
@@ -4884,6 +4886,9 @@
 /obj/machinery/light/floortube{
 	dir = 8;
 	pixel_x = -6
+	},
+/obj/effect/floor_decal/milspec/color/blue/half{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/eris/dark/monofloor,
 /area/bridge)
@@ -5417,6 +5422,12 @@
 	},
 /turf/simulated/floor/tiled/eris/white/bluecorner,
 /area/medical/cmostore)
+"lM" = (
+/obj/effect/floor_decal/milspec/color/blue/half{
+	dir = 4
+	},
+/turf/space,
+/area/space)
 "lN" = (
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
@@ -7899,6 +7910,9 @@
 /area/stellardelight/deck2/central)
 "rl" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/effect/mouse_hole_spawner{
+	dir = 4
+	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck2/starboardfore)
 "rm" = (
@@ -8986,6 +9000,9 @@
 	icon_state = "pipe-c"
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 4
+	},
+/obj/effect/mouse_hole_spawner{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -10580,6 +10597,7 @@
 /obj/structure/panic_button{
 	pixel_y = 32
 	},
+/obj/effect/floor_decal/milspec/color/orange/half,
 /turf/simulated/floor/tiled/eris/dark/monofloor,
 /area/bridge)
 "xC" = (
@@ -12790,6 +12808,7 @@
 /area/crew_quarters/locker)
 "CG" = (
 /obj/machinery/computer/ship/helm,
+/obj/effect/floor_decal/milspec/color/green/half,
 /turf/simulated/floor/tiled/eris/dark/gray_platform,
 /area/bridge)
 "CH" = (
@@ -13017,6 +13036,7 @@
 /obj/machinery/status_display{
 	pixel_y = 32
 	},
+/obj/effect/floor_decal/milspec/color/white/half,
 /turf/simulated/floor/tiled/eris/dark/monofloor,
 /area/bridge)
 "Di" = (
@@ -14101,7 +14121,7 @@
 	input_tag = "cooling_in";
 	name = "Engine Cooling Control";
 	output_tag = "cooling_out";
-	sensors = list("burn_chamber" = "Burn Chamber");
+	sensors = list("burn_chamber"="Burn Chamber");
 	throwpass = 1
 	},
 /turf/simulated/floor,
@@ -14184,6 +14204,18 @@
 /obj/structure/medical_stand,
 /turf/simulated/floor/tiled/eris/white/bluecorner,
 /area/stellardelight/deck2/triage)
+"FI" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/mouse_hole_spawner{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/maintenance/stellardelight/deck2/portaft)
 "FJ" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/green{
@@ -14625,7 +14657,7 @@
 	frequency = 1443;
 	level = 3;
 	name = "Distribution and Waste Monitor";
-	sensors = list("dist_main_meter" = "Surface - Distribution Loop", "scrub_main_meter" = "Surface - Scrubbers Loop", "mair_main_meter" = "Surface - Mixed Air Tank", "dist_aux_meter" = "Station - Distribution Loop", "scrub_aux_meter" = "Station - Scrubbers Loop", "mair_aux_meter" = "Station - Mixed Air Tank", "mair_mining_meter" = "Mining Outpost - Mixed Air Tank")
+	sensors = list("dist_main_meter"="Surface - Distribution Loop","scrub_main_meter"="Surface - Scrubbers Loop","mair_main_meter"="Surface - Mixed Air Tank","dist_aux_meter"="Station - Distribution Loop","scrub_aux_meter"="Station - Scrubbers Loop","mair_aux_meter"="Station - Mixed Air Tank","mair_mining_meter"="Mining Outpost - Mixed Air Tank")
 	},
 /obj/machinery/power/apc/angled{
 	dir = 1
@@ -14879,6 +14911,7 @@
 "Hb" = (
 /obj/item/modular_computer/console/preset/command,
 /obj/machinery/camera/network/command,
+/obj/effect/floor_decal/milspec/color/blue/half,
 /turf/simulated/floor/tiled/eris/dark/gray_platform,
 /area/bridge)
 "Hc" = (
@@ -15723,6 +15756,9 @@
 /obj/machinery/keycard_auth{
 	pixel_y = 2
 	},
+/obj/effect/floor_decal/milspec/color/blue/half{
+	dir = 10
+	},
 /turf/simulated/floor/tiled/eris/dark/gray_platform,
 /area/bridge)
 "IN" = (
@@ -15985,6 +16021,15 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/eris/steel/cargo,
 /area/quartermaster/storage)
+"Jw" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/mouse_hole_spawner{
+	dir = 8
+	},
+/turf/simulated/floor,
+/area/maintenance/stellardelight/deck2/starboardsolars)
 "Jx" = (
 /obj/structure/sign/securearea{
 	desc = "A warning sign which reads 'RADIOACTIVE AREA'";
@@ -16729,6 +16774,9 @@
 /obj/item/modular_computer/console/preset/medical{
 	dir = 4
 	},
+/obj/effect/floor_decal/milspec/color/white/half{
+	dir = 6
+	},
 /turf/simulated/floor/tiled/eris/dark/monofloor,
 /area/bridge)
 "Le" = (
@@ -16888,6 +16936,9 @@
 /area/engineering/engine_eva)
 "Lx" = (
 /obj/structure/flora/pottedplant/orientaltree,
+/obj/effect/floor_decal/milspec/color/orange/corner{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/eris/dark/monofloor,
 /area/bridge)
 "Ly" = (
@@ -17381,6 +17432,9 @@
 /obj/item/device/radio/intercom{
 	dir = 1
 	},
+/obj/effect/floor_decal/milspec/color/blue/corner{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/eris/dark/gray_platform,
 /area/bridge)
 "Mx" = (
@@ -17739,6 +17793,7 @@
 /area/engineering/locker_room)
 "Nn" = (
 /obj/machinery/computer/ship/engines,
+/obj/effect/floor_decal/milspec/color/green/half,
 /turf/simulated/floor/tiled/eris/dark/gray_platform,
 /area/bridge)
 "No" = (
@@ -18386,7 +18441,7 @@
 	name = "box of measuring cups";
 	pixel_x = 2;
 	pixel_y = 3;
-	starts_with = list(/obj/item/weapon/reagent_containers/glass/beaker/measuring_cup = 7)
+	starts_with = list(/obj/item/weapon/reagent_containers/glass/beaker/measuring_cup=7)
 	},
 /turf/simulated/floor/tiled/eris/cafe,
 /area/crew_quarters/kitchen)
@@ -19555,6 +19610,9 @@
 "Rf" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/weapon/book/manual/sd_guide,
+/obj/effect/floor_decal/milspec/color/blue/half{
+	dir = 6
+	},
 /turf/simulated/floor/tiled/eris/dark/gray_platform,
 /area/bridge)
 "Rh" = (
@@ -20662,6 +20720,11 @@
 	},
 /turf/simulated/floor/tiled/eris/dark/orangecorner,
 /area/engineering/engine_eva)
+"TP" = (
+/obj/structure/flora/pottedplant/orientaltree,
+/obj/effect/floor_decal/milspec/color/white/corner,
+/turf/simulated/floor/tiled/eris/dark/monofloor,
+/area/bridge)
 "TQ" = (
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 4
@@ -21439,6 +21502,16 @@
 	},
 /turf/simulated/floor/lino,
 /area/crew_quarters/bar)
+"VD" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/effect/mouse_hole_spawner{
+	dir = 8
+	},
+/turf/simulated/floor,
+/area/maintenance/stellardelight/deck2/portfore)
 "VE" = (
 /obj/structure/cable/blue{
 	icon_state = "4-8"
@@ -21680,6 +21753,7 @@
 /area/engineering/workshop)
 "Wi" = (
 /obj/machinery/computer/crew,
+/obj/effect/floor_decal/milspec/color/white/half,
 /turf/simulated/floor/tiled/eris/dark/monofloor,
 /area/bridge)
 "Wj" = (
@@ -22019,6 +22093,15 @@
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/stellardelight/deck2/fuelstorage)
+"WV" = (
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 8
+	},
+/obj/effect/mouse_hole_spawner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/stellardelight/deck2/port)
 "WW" = (
 /obj/machinery/power/apc/angled{
 	dir = 8
@@ -22292,6 +22375,15 @@
 	},
 /turf/simulated/floor/tiled,
 /area/storage/art)
+"XE" = (
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 4
+	},
+/obj/effect/mouse_hole_spawner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/stellardelight/deck2/starboard)
 "XF" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/storage/firstaid/adv{
@@ -23153,6 +23245,9 @@
 /obj/item/modular_computer/console/preset/engineering{
 	dir = 8
 	},
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 10
+	},
 /turf/simulated/floor/tiled/eris/dark/monofloor,
 /area/bridge)
 "Zy" = (
@@ -23348,6 +23443,7 @@
 /area/engineering/atmos/monitoring)
 "ZU" = (
 /obj/machinery/computer/ship/sensors,
+/obj/effect/floor_decal/milspec/color/green/half,
 /turf/simulated/floor/tiled/eris/dark/gray_platform,
 /area/bridge)
 "ZV" = (
@@ -30418,7 +30514,7 @@ Gv
 Gv
 Gv
 Uv
-Gv
+VD
 yz
 KL
 WP
@@ -30573,7 +30669,7 @@ Yh
 Yh
 Yh
 AP
-Yh
+FI
 Yh
 Yh
 uL
@@ -30865,7 +30961,7 @@ zp
 eL
 fr
 vU
-MD
+WV
 MD
 fR
 IC
@@ -33542,7 +33638,7 @@ yF
 uE
 RT
 jU
-Lx
+TP
 Ld
 Uj
 Zj
@@ -35687,7 +35783,7 @@ aL
 zS
 Wy
 xh
-Mk
+XE
 Mk
 fs
 Tk
@@ -35699,7 +35795,7 @@ LH
 Mk
 pm
 Mk
-Mk
+XE
 lv
 Aj
 LI
@@ -35980,7 +36076,7 @@ Ie
 HS
 am
 Cc
-aM
+Jw
 aM
 FT
 pj
@@ -36521,7 +36617,7 @@ Jh
 Jh
 Jh
 Jh
-Jh
+lM
 Jh
 Jh
 Jh

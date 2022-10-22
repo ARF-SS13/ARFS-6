@@ -3624,6 +3624,9 @@
 	dir = 4
 	},
 /obj/machinery/light,
+/obj/machinery/newscaster/security_unit{
+	pixel_x = -27
+	},
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/hos)
 "ie" = (
@@ -3920,10 +3923,19 @@
 /turf/simulated/floor,
 /area/groundbase/engineering/storage)
 "iN" = (
-/obj/effect/floor_decal/industrial/danger/corner{
-	dir = 4
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	dir = 8;
+	icon_state = "shutter0";
+	id = "engine_public_access";
+	layer = 3.1;
+	name = "Engine Public Access Shutters";
+	opacity = 0
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor,
 /area/groundbase/engineering/engine)
 "iO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -4181,6 +4193,9 @@
 /obj/item/weapon/cell/high{
 	charge = 100;
 	maxcharge = 15000
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/equipment)
@@ -4885,6 +4900,9 @@
 	},
 /obj/item/device/gps/security{
 	pixel_x = -3
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/equipment)
@@ -5614,6 +5632,22 @@
 	},
 /turf/simulated/floor/carpet/oracarpet,
 /area/groundbase/engineering/ce)
+"mp" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/glass{
+	name = "Crew Access"
+	},
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	dir = 8;
+	icon_state = "shutter0";
+	id = "engine_public_access";
+	layer = 3.1;
+	name = "Engine Public Access Shutters";
+	opacity = 0
+	},
+/turf/simulated/floor/bmarble,
+/area/groundbase/engineering/engine)
 "mq" = (
 /obj/machinery/alarm{
 	dir = 8
@@ -5643,6 +5677,19 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/lobby)
+"mu" = (
+/obj/effect/floor_decal/industrial/danger/corner{
+	dir = 4
+	},
+/obj/machinery/button/remote/blast_door{
+	dir = 4;
+	id = "engine_public_access";
+	name = "Public Access Shutters";
+	pixel_x = -25;
+	req_access = list(10)
+	},
+/turf/simulated/floor/tiled,
+/area/groundbase/engineering/engine)
 "mv" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
@@ -5670,6 +5717,15 @@
 /obj/machinery/meter,
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/atmos)
+"mA" = (
+/obj/machinery/vending/altevian,
+/turf/simulated/floor/tiled,
+/area/groundbase/civilian/foodplace)
+"mB" = (
+/obj/machinery/light,
+/obj/effect/landmark/free_ai_shell,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/groundbase/command/ai/upload)
 "mC" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -5808,6 +5864,12 @@
 	outdoors = 0
 	},
 /area/maintenance/groundbase/level1/nwtunnel)
+"mQ" = (
+/obj/effect/mouse_hole_spawner{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/virgo3c,
+/area/groundbase/level1/southeastspur)
 "mR" = (
 /obj/structure/bed/chair/comfy/orange{
 	dir = 4
@@ -5834,6 +5896,15 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/lobby)
+"mU" = (
+/obj/item/weapon/storage/box/nifsofts_mining,
+/obj/structure/table/reinforced,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/item/device/personal_shield_generator/belt/mining/loaded,
+/turf/simulated/floor/tiled,
+/area/groundbase/cargo/mining)
 "mV" = (
 /obj/machinery/vending/loadout/gadget,
 /turf/simulated/floor/tiled,
@@ -5940,6 +6011,18 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/carpet/oracarpet,
 /area/groundbase/engineering/ce)
+"nj" = (
+/obj/structure/table/rack{
+	dir = 8;
+	layer = 2.6
+	},
+/obj/item/weapon/tank/jetpack/carbondioxide,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/item/device/personal_shield_generator/security/loaded,
+/turf/simulated/floor/tiled/dark,
+/area/groundbase/security/equipment)
 "nk" = (
 /obj/effect/step_trigger/teleporter/to_mining{
 	pixel_y = -32
@@ -7393,7 +7476,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/machinery/mining/drill,
+/obj/machinery/mining/drill/loaded,
 /turf/simulated/floor/tiled,
 /area/groundbase/cargo/mining)
 "qV" = (
@@ -9947,6 +10030,9 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
+/obj/machinery/newscaster/security_unit{
+	pixel_y = -28
+	},
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/lobby)
 "xc" = (
@@ -10026,6 +10112,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/groundbase/civilian/foodplace)
+"xk" = (
+/obj/effect/mouse_hole_spawner{
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/grass/virgo3c,
+/area/groundbase/level1/southwestspur)
 "xm" = (
 /obj/effect/floor_decal/industrial/danger,
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
@@ -10262,16 +10354,16 @@
 	},
 /turf/simulated/floor,
 /area/prison/cell_block/gb)
+"xL" = (
+/obj/effect/mouse_hole_spawner{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/virgo3c,
+/area/groundbase/level1/eastspur)
 "xM" = (
 /obj/machinery/firealarm,
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/iaa2)
-"xN" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/obj/machinery/door/firedoor,
-/turf/simulated/floor,
-/area/groundbase/engineering/engine)
 "xO" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -14247,6 +14339,12 @@
 	},
 /turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
 /area/groundbase/level1/westspur)
+"HQ" = (
+/obj/effect/mouse_hole_spawner{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/virgo3c,
+/area/groundbase/level1/centsquare)
 "HR" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -14629,10 +14727,6 @@
 	},
 /turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
 /area/groundbase/level1/centsquare)
-"IL" = (
-/obj/machinery/light,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/groundbase/command/ai/upload)
 "IM" = (
 /obj/structure/sign/painting/public{
 	pixel_y = 30
@@ -15823,14 +15917,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/atmos)
-"LE" = (
-/obj/item/weapon/storage/box/nifsofts_mining,
-/obj/structure/table/reinforced,
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/groundbase/cargo/mining)
 "LG" = (
 /obj/machinery/computer/power_monitor,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -15965,6 +16051,12 @@
 	},
 /turf/simulated/floor,
 /area/groundbase/medical/office)
+"LZ" = (
+/obj/machinery/newscaster/security_unit{
+	pixel_x = -27
+	},
+/turf/simulated/floor/tiled/dark,
+/area/groundbase/security/detective)
 "Ma" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
@@ -16511,6 +16603,12 @@
 	},
 /turf/simulated/wall/r_wall,
 /area/groundbase/engineering/eva)
+"Nn" = (
+/obj/machinery/newscaster/security_unit{
+	pixel_y = -28
+	},
+/turf/simulated/floor/tiled/dark,
+/area/groundbase/security/warden)
 "No" = (
 /obj/machinery/computer/med_data/laptop{
 	dir = 8
@@ -16546,6 +16644,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/atmos)
+"Nu" = (
+/obj/effect/mouse_hole_spawner{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/grass/virgo3c,
+/area/groundbase/level1/westspur)
 "Nv" = (
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
 /area/groundbase/level1/centsquare)
@@ -16693,6 +16797,10 @@
 	},
 /turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
 /area/groundbase/level1/northspur)
+"NM" = (
+/obj/effect/mouse_hole_spawner,
+/turf/simulated/floor/outdoors/grass/virgo3c,
+/area/groundbase/level1/westspur)
 "NN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -16956,6 +17064,12 @@
 /obj/machinery/recharge_station,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/groundbase/command/ai/robot)
+"Ov" = (
+/obj/effect/mouse_hole_spawner{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/grass/virgo3c,
+/area/groundbase/level1/southeastspur)
 "Ow" = (
 /obj/structure/railing/grey{
 	dir = 1
@@ -17716,13 +17830,6 @@
 "QD" = (
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
 /area/groundbase/level1/westspur)
-"QE" = (
-/obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/glass{
-	name = "Crew Access"
-	},
-/turf/simulated/floor/bmarble,
-/area/groundbase/engineering/engine)
 "QF" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 10
@@ -18304,6 +18411,12 @@
 /obj/effect/landmark/vermin,
 /turf/simulated/floor/lino,
 /area/groundbase/civilian/bar)
+"Sb" = (
+/obj/machinery/newscaster/security_unit{
+	pixel_x = 27
+	},
+/turf/simulated/floor/tiled/dark,
+/area/groundbase/security/briefing)
 "Sc" = (
 /obj/machinery/camera/network/command{
 	dir = 4
@@ -18433,6 +18546,9 @@
 /obj/item/device/taperecorder,
 /obj/item/device/retail_scanner/security,
 /obj/item/device/camera,
+/obj/machinery/newscaster/security_unit{
+	pixel_y = -29
+	},
 /turf/simulated/floor/tiled,
 /area/groundbase/security/processing)
 "Ss" = (
@@ -19622,6 +19738,14 @@
 	},
 /turf/simulated/floor/carpet/sblucarpet,
 /area/groundbase/security/hos)
+"Vp" = (
+/obj/effect/mouse_hole_spawner{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c{
+	outdoors = 0
+	},
+/area/maintenance/groundbase/level1/nwtunnel)
 "Vq" = (
 /turf/simulated/floor/outdoors/newdirt/virgo3c,
 /area/groundbase/level1/southwestspur)
@@ -21170,14 +21294,6 @@
 	outdoors = 0
 	},
 /area/maintenance/groundbase/level1/nwtunnel)
-"Zb" = (
-/obj/structure/table/rack{
-	dir = 8;
-	layer = 2.6
-	},
-/obj/item/weapon/tank/jetpack/carbondioxide,
-/turf/simulated/floor/tiled/dark,
-/area/groundbase/security/equipment)
 "Zc" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -24538,7 +24654,7 @@ yJ
 XU
 xA
 rM
-IL
+mB
 XY
 MO
 FF
@@ -24894,7 +25010,7 @@ gQ
 hx
 eF
 UV
-Zb
+nj
 hC
 nA
 CC
@@ -26589,11 +26705,11 @@ cB
 cB
 cB
 cB
-cB
+Nu
 AZ
 cv
 px
-AN
+Sb
 fY
 SR
 AN
@@ -27034,7 +27150,7 @@ Jp
 zg
 mi
 VV
-Pl
+Nn
 qa
 zK
 uc
@@ -28462,7 +28578,7 @@ EZ
 mh
 Iw
 Tf
-vM
+xk
 Wm
 vM
 vM
@@ -28533,7 +28649,7 @@ MO
 MO
 MO
 MO
-FF
+Vp
 FF
 MO
 FF
@@ -29142,7 +29258,7 @@ mk
 cB
 cB
 cB
-cB
+NM
 gv
 Az
 Kh
@@ -29711,7 +29827,7 @@ cB
 cB
 yb
 FD
-Uz
+LZ
 vR
 yL
 tg
@@ -29978,7 +30094,7 @@ Eb
 Eb
 Eb
 Eb
-Eb
+HQ
 Eb
 Eb
 Eb
@@ -33046,7 +33162,7 @@ fo
 Qh
 sQ
 VI
-LE
+mU
 xo
 Ny
 OB
@@ -33514,7 +33630,7 @@ qE
 qE
 qE
 Eb
-Eb
+HQ
 Eb
 Eb
 Eb
@@ -34263,9 +34379,9 @@ aw
 aw
 aw
 aw
-xN
-QE
-xN
+iN
+mp
+iN
 aw
 aw
 Lt
@@ -34408,7 +34524,7 @@ xD
 ME
 ME
 ME
-iN
+mu
 aw
 Lt
 Lt
@@ -35132,7 +35248,7 @@ Uf
 Uf
 Uf
 Uf
-ck
+Ov
 ck
 TW
 ck
@@ -36201,7 +36317,7 @@ Ah
 Ah
 Ah
 MK
-MK
+xL
 sF
 MK
 MK
@@ -36406,7 +36522,7 @@ Lt
 Lt
 Uf
 Uf
-Aq
+mA
 pA
 Aq
 Uf
@@ -36552,7 +36668,7 @@ Uf
 Uf
 Uf
 Uf
-ck
+mQ
 ck
 Ac
 ck
