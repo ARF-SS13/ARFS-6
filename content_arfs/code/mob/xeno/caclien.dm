@@ -25,7 +25,7 @@
 	melee_damage_upper = 25
 	melee_damage_lower = 15
 	sight = SEE_INFRA|SEE_MOBS|SEE_SELF
-	species_language = "Xenomorph"
+	has_langs = list(LANGUAGE_XENO, LANGUAGE_XENOHIVEMIND)
 	var/datum/xeno_species/species_datum = null
 	var/default_species = /datum/xeno_species/drone
 	var/phoron_stored = 0
@@ -113,6 +113,10 @@
 	var/datum/xeno_species/SD = species_datum
 	if(SD && !is_unique)
 		ai_holder_type = SD.ai_type
+	//Handle languages
+	if(tamed_hands)//I can be your angle
+		add_language(LANGUAGE_GALCOM)
+		set_default_language(LANGUAGE_GALCOM)
 	. = ..()
 	step_tracker = rand(0,1)
 	breath_tracker = rand(0,4)
@@ -121,7 +125,7 @@
 		mob_size = SD.size //Set the size var
 		if(!is_unique)
 			if(!xeno_suffix)
-				xeno_suffix = " ([rand(1,2000)])"
+				xeno_suffix = " ([rand(0,999)])"
 			UpdateName()
 			resize(SD.default_size_mult) //Resize them if applicable
 		for(var/A in SD.abilities)
@@ -130,10 +134,7 @@
 		melee_damage_upper = SD.melee_damage*1.25
 		melee_damage_lower = SD.melee_damage*0.75
 		phoron_stored = SD.phoron_max
-	remove_language("Galactic Common")
-	add_language("Xenomorph")
-	add_language("Hivemind")
-
+		voice_sounds_list = SD.talk_sounds
 
 /mob/living/simple_mob/caclien/update_icon()
 	. = ..()
