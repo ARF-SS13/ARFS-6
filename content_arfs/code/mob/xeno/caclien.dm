@@ -25,6 +25,7 @@
 	melee_damage_upper = 25
 	melee_damage_lower = 15
 	sight = SEE_INFRA|SEE_MOBS|SEE_SELF
+	species_language = "Xenomorph"
 	var/datum/xeno_species/species_datum = null
 	var/default_species = /datum/xeno_species/drone
 	var/phoron_stored = 0
@@ -39,6 +40,7 @@
 	var/last_spit = 0
 	var/spit_name
 	var/spit_projectile
+	var/movesound_mult = 0.5 //Multiplies the walking sounds by this much to easily adjust their loudness
 
 //Wild enemy/antag aliens. usually non-playable
 /mob/living/simple_mob/caclien/wild
@@ -218,7 +220,7 @@
 			var/sneakmod = 1
 			if(m_intent == "walk")//Trying to be quiet
 				sneakmod = SD.sneak_effectiveness
-			playsound(src, stepsound, (SD.move_sounds_vol)/(sneakmod), 0, (SD.move_sounds_range)/(sneakmod), 1)
+			playsound(src, stepsound, (SD.move_sounds_vol)/(sneakmod)*movesound_mult, 0, (SD.move_sounds_range)/(sneakmod), 1)
 			step_tracker = 0
 
 //Override to stop attacking while grabbing
