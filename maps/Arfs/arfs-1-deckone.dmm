@@ -522,9 +522,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
 "cI" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
@@ -536,6 +533,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor/plating,
 /area/maintenance/guts/lounge)
 "cJ" = (
@@ -1137,6 +1135,15 @@
 /mob/living/simple_mob/animal/sif/sakimm/racoon,
 /turf/simulated/floor/grass,
 /area/hydroponics/garden)
+"gQ" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/turf/simulated/floor/plating,
+/area/maintenance/guts/lounge)
 "gT" = (
 /obj/structure/bed/chair/sofa/left/black{
 	dir = 1
@@ -3658,6 +3665,12 @@
 /obj/machinery/door/airlock/maintenance/engi{
 	name = "Belly Solar Maintenance"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/guts/lounge)
 "vh" = (
@@ -4457,12 +4470,6 @@
 /turf/simulated/floor/tiled/eris/cafe,
 /area/crew_quarters/kitchen)
 "DX" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 6
-	},
 /obj/structure/cable/green{
 	d1 = 2;
 	d2 = 4;
@@ -4476,6 +4483,29 @@
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/guts/lounge)
+"DZ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 9;
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/guts/lounge)
@@ -4535,6 +4565,11 @@
 "FY" = (
 /obj/machinery/camera/network/engineering{
 	c_tag = "ENG - Belly Solar Maint"
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 25
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/guts/lounge)
@@ -4814,6 +4849,12 @@
 	},
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/hydroponics)
+"KY" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/guts/lounge)
 "La" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -5223,7 +5264,7 @@
 	inputting = 2;
 	name = "Belly Solar Array SMES";
 	input_level = 200000;
-	output_level = 200000
+	output_level = 100000
 	},
 /obj/structure/cable,
 /turf/simulated/floor/plating,
@@ -5421,6 +5462,12 @@
 	d1 = 2;
 	d2 = 4;
 	icon_state = "2-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/guts/lounge)
@@ -5640,6 +5687,9 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/guts/lounge)
 "Zi" = (
@@ -5701,6 +5751,10 @@
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8"
+	},
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 24
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/guts/lounge)
@@ -35889,18 +35943,18 @@ aa
 aa
 aa
 aa
+AF
+aa
+aa
+aa
+aa
+AF
 aa
 aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+AF
 aa
 aa
 aa
@@ -36100,16 +36154,6 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
 AF
 AF
 AF
@@ -36154,13 +36198,23 @@ AF
 AF
 AF
 AF
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+AF
+AF
+AF
+AF
+AF
+AF
+AF
+AF
+AF
+AF
+AF
+AF
+AF
+AF
+AF
+AF
+AF
 jr
 Uv
 Rp
@@ -36357,7 +36411,7 @@ aa
 aa
 aa
 aa
-aa
+AF
 aa
 aa
 aa
@@ -36414,7 +36468,7 @@ aa
 aa
 aa
 aa
-aa
+AF
 aa
 aa
 aa
@@ -36614,7 +36668,7 @@ aa
 aa
 aa
 aa
-aa
+AF
 aa
 aa
 aa
@@ -36871,7 +36925,7 @@ aa
 aa
 aa
 aa
-aa
+AF
 aa
 aa
 aa
@@ -37128,7 +37182,7 @@ aa
 aa
 aa
 aa
-aa
+AF
 aa
 aa
 aa
@@ -37385,7 +37439,7 @@ aa
 aa
 aa
 aa
-aa
+AF
 aa
 aa
 aa
@@ -37642,7 +37696,7 @@ aa
 aa
 aa
 aa
-aa
+AF
 aa
 aa
 aa
@@ -37899,7 +37953,7 @@ aa
 aa
 aa
 aa
-aa
+AF
 aa
 aa
 aa
@@ -38156,7 +38210,7 @@ aa
 aa
 aa
 aa
-aa
+AF
 aa
 aa
 aa
@@ -38413,7 +38467,7 @@ aa
 aa
 aa
 aa
-aa
+AF
 aa
 aa
 aa
@@ -38670,7 +38724,7 @@ aa
 aa
 aa
 aa
-aa
+AF
 aa
 aa
 aa
@@ -40778,8 +40832,8 @@ PA
 iS
 PA
 cv
-cI
-IK
+DZ
+KY
 lB
 PA
 lm
@@ -41034,7 +41088,7 @@ AF
 PA
 PA
 PA
-cv
+gQ
 cI
 PA
 PA
