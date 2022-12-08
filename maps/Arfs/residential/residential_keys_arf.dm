@@ -319,8 +319,8 @@
 	path = /obj/item/weapon/card/id/residential/rm10
 	display_name = "RM10, level three keys"
 	description = "residential"
-	ckeywhitelist = list("igni")
-	character_name = list("Sheila Frost", "Jake Frost")
+	ckeywhitelist = list("dahyde2501", "zugor")
+	character_name = list("Scarlett Rose", "Uma", "Myu")
 
 /datum/gear/fluff/res_key_rm11
 	path = /obj/item/weapon/card/id/residential/rm11
@@ -559,7 +559,7 @@
 	display_name = "Mansion keys"
 	description = "residential"
 	ckeywhitelist = list("andyman105", "dameonowen", "secondattemps", "thingpony", "hagawaga","brimcon", "lukevale", "foxyrose", "dwagin")
-	character_name = list("Dameon Owen", "Amber Owen", "Amber", "Jake Owen", "Lilith Owen", "Iris Miller", "Brian Owen", "Percy Owen", "Ruby Flare", "Zephyr Sharpe", "Peter Sharpe", "Eve", "Ashlyn", "Agalon", "Lana Xavier", "Scryden Sako", "Scarlet Owen", "Luna","Emma Miller", "Aiden Miller")
+	character_name = list("Dameon Owen", "Amber Owen", "Amber", "Jake Owen", "Lilith Owen", "Iris Miller", "Brian Owen", "Percy Owen", "Ruby Flare", "Zephyr Sharpe", "Peter Sharpe", "Eve", "Ashlyn", "Agalon", "Lana Xavier", "Scryden Sako", "Scarlet Owen", "Luna", "Emma Miller", "Aiden Miller", "Elizabeth Owen", "Elizabeth Sako")
 
 //Master Key. Why wasn't this made before? So much easier!
 

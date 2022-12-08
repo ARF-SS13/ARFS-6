@@ -124,3 +124,30 @@ Talon winter coat
 	display_name = "hazard vest, atmospherics"
 	path = /obj/item/clothing/suit/storage/hazardvest/atmos
 	allowed_roles = list("Chief Engineer","Atmospheric Technician", "Engineer")
+
+//Long fur coat
+/datum/gear/suit/russofurcoat
+	display_name = "long fur coat"
+	path = /obj/item/clothing/suit/storage/vest/hoscoat/russofurcoat
+
+//Colorable Hoodie
+
+/datum/gear/suit/hoodie_vr
+	display_name = "hoodie with hood (colorable)"
+	path = /obj/item/clothing/suit/storage/hooded/hoodie
+
+/datum/gear/suit/hoodie_vr/New()
+	var/list/hoodies = list()
+	for(var/hoodie_style in typesof(/obj/item/clothing/suit/storage/hooded/hoodie))
+		var/obj/item/clothing/suit/storage/toggle/hoodie/hoodie = hoodie_style
+		hoodies[initial(hoodie.name)] = hoodie
+	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(hoodies))
+	gear_tweaks += gear_tweak_free_color_choice
+
+/datum/gear/suit/cyberpunk_recolorable
+	display_name = "cyberpunk jacket (recolorable)"
+	path = /obj/item/clothing/suit/cyberpunk/recolorable
+	cost = 2 //It's got armor, yo.
+
+/datum/gear/suit/cyberpunk_recolorable/New()
+	gear_tweaks += gear_tweak_free_color_choice

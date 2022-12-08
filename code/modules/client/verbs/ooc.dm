@@ -12,6 +12,11 @@
 		to_chat(src, "Guests may not use OOC.")
 		return
 
+	if(config.MinorBGone)
+		if(isVerified != 2) // ARFS ADD: Stops unverified players from spamming OOC.
+			to_chat(src, "You must be verified to use OOC.")
+			return // ARFS ADD END
+
 	msg = sanitize(msg)
 	if(!msg)	return
 

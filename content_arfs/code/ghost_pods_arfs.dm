@@ -36,10 +36,8 @@ var/global/list/pokemon_pods = list()//List of pods that ghosts can spawn at
 	if(LAZYLEN(pokemon_choices_list))
 		return FALSE	//The global list is already generated
 	var/pokemon_choices_list_paths = typesof(/mob/living/simple_mob/animal/passive/pokemon) - remove_paths
-	for (var/path in pokemon_choices_list_paths)//add the mobs to a list with their names referencing paths
-		var/mob/living/simple_mob/animal/passive/pokemon/P = new path()
-		pokemon_choices_list["[P.name]"] = P.type
-		del(P)
+	for (var/mob/living/simple_mob/animal/passive/pokemon/path in pokemon_choices_list_paths)//add the mobs to a list with their names referencing paths
+		pokemon_choices_list["[initial(path.name)]"] = path
 
 /obj/structure/ghost_pod/manual/attack_hand(var/mob/user)
 	//Inform curious minds about how to use this.

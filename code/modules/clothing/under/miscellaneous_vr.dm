@@ -76,7 +76,7 @@
 		to_chat(H,"<span class='warning'>You must be WEARING the uniform to change your size.</span>")
 		return
 
-	var/new_size = input(usr, "Put the desired size (25-200%), or (1-600%) in dormitory areas.", "Set Size", 200) as num|null
+	var/new_size = tgui_input_number(usr, "Put the desired size (25-200%), or (1-600%) in dormitory areas.", "Set Size", 200, 600, 1)
 	if(!new_size)
 		return //cancelled
 
@@ -109,7 +109,7 @@
 
 /obj/item/clothing/under/hyperfiber/bluespace/mob_can_unequip(mob/M, slot, disable_warning = 0)
 	. = ..()
-	if(. && ishuman(M) && original_size)
+	if(. && ishuman(M) && original_size && !disable_warning)
 		var/mob/living/carbon/human/H = M
 		H.resize(original_size, ignore_prefs = TRUE)
 		original_size = null
@@ -129,7 +129,7 @@
 
 /obj/item/clothing/gloves/bluespace/mob_can_equip(mob/M, gloves, disable_warning = 0)
 	. = ..()
-	if(. && ishuman(M))
+	if(. && ishuman(M) && !disable_warning)
 		var/mob/living/carbon/human/H = M
 		if(!H.resizable)
 			return
@@ -145,7 +145,7 @@
 
 /obj/item/clothing/gloves/bluespace/mob_can_unequip(mob/M, gloves, disable_warning = 0)
 	. = ..()
-	if(. && ishuman(M) && original_size)
+	if(. && ishuman(M) && original_size && !disable_warning)
 		var/mob/living/carbon/human/H = M
 		if(!H.resizable)
 			return
@@ -377,3 +377,82 @@
 	desc = "A very descript undersuit, intended for wearing under a voidsuit or other EVA equipment. This one is specifically made for NanoTrasen Central Command officers, and comes with a swanky gold trim and other fancy markings."
 	icon_state = "bodysuit_cent"
 	item_state = "bodysuit_cent"
+
+
+//FEMININE JUMPSUITS.
+/obj/item/clothing/under/color/fjumpsuit //They won't see this so we can make it whatever we want.
+	name = "blue feminine jumpsuit"
+	desc = "It's very smart and in a ladies size!"
+	icon = 'icons/inventory/uniform/item.dmi'
+	default_worn_icon = 'icons/inventory/uniform/mob_vr.dmi'
+	icon_state = "blue"	// In hand
+	worn_state = "bluef"	// On mob
+
+/obj/item/clothing/under/color/fjumpsuit/bluef
+	name = "blue feminine jumpsuit"
+	icon_state = "blue"
+	worn_state = "bluef"
+/obj/item/clothing/under/color/fjumpsuit/aquaf
+	name = "aqua feminine jumpsuit"
+	icon_state = "aqua"
+	worn_state = "aquaf"
+/obj/item/clothing/under/color/fjumpsuit/brownf
+	name = "brown feminine jumpsuit"
+	icon_state = "brown"
+	worn_state = "brownf"
+/obj/item/clothing/under/color/fjumpsuit/darkbluef
+	name = "dark blue feminine jumpsuit"
+	icon_state = "darkblue"
+	worn_state = "darkbluef"
+/obj/item/clothing/under/color/fjumpsuit/darkredf
+	name = "dark red feminine jumpsuit"
+	icon_state = "darkred"
+	worn_state = "darkredf"
+/obj/item/clothing/under/color/fjumpsuit/greenf
+	name = "green feminine jumpsuit"
+	icon_state = "green"
+	worn_state = "greenf"
+/obj/item/clothing/under/color/fjumpsuit/lightbluef
+	name = "light blue feminine jumpsuit"
+	icon_state = "lightblue"
+	worn_state = "lightbluef"
+/obj/item/clothing/under/color/fjumpsuit/lightbrownf
+	name = "light brown feminine jumpsuit"
+	icon_state = "lightbrown"
+	worn_state = "lightbrownf"
+/obj/item/clothing/under/color/fjumpsuit/lightgreenf
+	name = "light green feminine jumpsuit"
+	icon_state = "lightgreen"
+	worn_state = "lightgreenf"
+/obj/item/clothing/under/color/fjumpsuit/lightpurplef
+	name = "light purple feminine jumpsuit"
+	icon_state = "lightpurple"
+	worn_state = "lightpurplef"
+/obj/item/clothing/under/color/fjumpsuit/lightredf
+	name = "light red feminine jumpsuit"
+	icon_state = "lightred"
+	worn_state = "lightredf"
+/obj/item/clothing/under/color/fjumpsuit/maroonf
+	name = "maroon feminine jumpsuit"
+	icon_state = "maroon"
+	worn_state = "maroonf"
+/obj/item/clothing/under/color/fjumpsuit/pinkf
+	name = "pink feminine jumpsuit"
+	icon_state = "pink"
+	worn_state = "pinkf"
+/obj/item/clothing/under/color/fjumpsuit/purplef
+	name = "purple feminine jumpsuit"
+	icon_state = "purple"
+	worn_state = "purplef"
+/obj/item/clothing/under/color/fjumpsuit/redf
+	name = "red feminine jumpsuit"
+	icon_state = "red"
+	worn_state = "redf"
+/obj/item/clothing/under/color/fjumpsuit/yellowf
+	name = "yellow feminine jumpsuit"
+	icon_state = "yellow"
+	worn_state = "yellowf"
+/obj/item/clothing/under/color/fjumpsuit/yellowgreenf
+	name = "yellow-green feminine jumpsuit"
+	icon_state = "yellowgreen"
+	worn_state = "yellowgreenf"

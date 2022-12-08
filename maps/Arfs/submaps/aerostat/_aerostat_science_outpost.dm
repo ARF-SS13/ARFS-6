@@ -19,6 +19,7 @@
 	skybox_icon_state = "v2"
 	skybox_pixel_x = 0
 	skybox_pixel_y = 0
+	docking_codes = "AERO"
 
 /obj/effect/overmap/visitable/sector/virgo2/Initialize()
 	for(var/obj/effect/overmap/visitable/ship/landable/excursion/sd in world)
@@ -145,38 +146,41 @@ VIRGO2_TURF_CREATE(/turf/simulated/floor/tiled/techfloor)
 VIRGO2_TURF_CREATE(/turf/simulated/mineral)
 /////Copied from Virgo3b's ore generation, since there was concern about not being able to get the ore they need on V2
 /turf/simulated/mineral/virgo2/make_ore(var/rare_ore)
+	var/static/list/minerals = list(
+		"marble" = 2,
+		"uranium" = 5,
+		"platinum" = 5,
+		"hematite" = 35,
+		"carbon" = 35,
+		"gold" = 3,
+		"silver" = 3,
+		"phoron" = 25,
+		"lead" = 1)
+	var/static/list/rare_minerals = list(
+		"marble" = 3,
+		"uranium" = 10,
+		"platinum" = 10,
+		"hematite" = 20,
+		"carbon" = 20,
+		"diamond" = 1,
+		"gold" = 8,
+		"silver" = 8,
+		"phoron" = 18,
+		"lead" = 2,
+		"verdantium" = 1)
 	if(mineral)
 		return
 	var/mineral_name
 	if(rare_ore)
-		mineral_name = pickweight(list(
-			"marble" = 3,
-			"uranium" = 10,
-			"platinum" = 10,
-			"hematite" = 20,
-			"carbon" = 20,
-			"diamond" = 1,
-			"gold" = 8,
-			"silver" = 8,
-			"phoron" = 18,
-			"lead" = 2,
-			"verdantium" = 1))
+		mineral_name = pickweight(rare_minerals)
 	else
-		mineral_name = pickweight(list(
-			"marble" = 2,
-			"uranium" = 5,
-			"platinum" = 5,
-			"hematite" = 35,
-			"carbon" = 35,
-			"gold" = 3,
-			"silver" = 3,
-			"phoron" = 25,
-			"lead" = 1))
+		mineral_name = pickweight(minerals)
 
 	if(mineral_name && (mineral_name in GLOB.ore_data))
 		mineral = GLOB.ore_data[mineral_name]
 		UpdateMineral()
-	update_icon()
+	else // to avoid a redundant call after UpdateMineral
+		update_icon()
 
 VIRGO2_TURF_CREATE(/turf/simulated/mineral/ignore_mapgen)
 VIRGO2_TURF_CREATE(/turf/simulated/mineral/floor)

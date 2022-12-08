@@ -15001,9 +15001,9 @@
 /obj/machinery/airlock_sensor{
 	dir = 1;
 	frequency = 1380;
-	id_tag = "engi_mine_dock_sens";
 	pixel_y = -25
 	},
+/obj/effect/map_helper/airlock/sensor/chamber_sensor,
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
 "wK" = (
@@ -15096,12 +15096,9 @@
 	frequency = 1380;
 	id_tag = "engi_mine_dock";
 	pixel_y = 25;
-	req_one_access = list(11,24);
-	tag_airpump = "engi_mine_dock_pump";
-	tag_chamber_sensor = "engi_mine_dock_sens";
-	tag_exterior_door = "engi_mine_dock_ext_door";
-	tag_interior_door = "engi_mine_dock_int_door"
+	req_one_access = list(11,24)
 	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
 "wV" = (
@@ -15109,6 +15106,7 @@
 	frequency = 1380;
 	id_tag = "engi_mine_dock_pump"
 	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
 "xk" = (
@@ -15167,14 +15165,13 @@
 /turf/simulated/floor/tiled,
 /area/outpost/mining_main/south_hall)
 "DX" = (
-/obj/machinery/embedded_controller/radio/airlock/docking_port{
+/obj/machinery/airlock_sensor{
 	frequency = 1380;
-	id_tag = "engi_mine_dock";
-	pixel_y = -25;
-	req_one_access = list(11,24)
+	pixel_x = -25
 	},
-/turf/simulated/mineral,
-/area/mine/unexplored)
+/obj/effect/map_helper/airlock/sensor/int_sensor,
+/turf/simulated/floor/plating,
+/area/outpost/mining_main/maintenance)
 "Ef" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -15494,7 +15491,13 @@
 	locked = 1;
 	name = "Engineering Shuttle Dock"
 	},
-/obj/item/tape/engineering,
+/obj/machinery/airlock_sensor{
+	frequency = 1380;
+	pixel_y = 30;
+	pixel_x = -6
+	},
+/obj/effect/map_helper/airlock/door/ext_door,
+/obj/effect/map_helper/airlock/sensor/ext_sensor,
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
 "Tm" = (
@@ -15513,7 +15516,7 @@
 	locked = 1;
 	name = "Engineering Shuttle Dock"
 	},
-/obj/item/tape/engineering,
+/obj/effect/map_helper/airlock/door/int_door,
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
 "Ua" = (
@@ -37788,7 +37791,7 @@ ab
 ab
 ab
 ab
-DX
+ab
 ab
 ab
 ab
@@ -56962,7 +56965,7 @@ un
 un
 un
 qX
-un
+DX
 wO
 mS
 sQ

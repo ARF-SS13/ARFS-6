@@ -8,6 +8,7 @@
 	var/under_state = "rock"
 	edge_blending_priority = -1
 	movement_cost = 4
+	can_be_plated = FALSE
 	outdoors = OUTDOORS_YES
 	flags = TURF_ACID_IMMUNE
 
@@ -126,7 +127,9 @@
 /mob/living/proc/check_submerged()
 	if(buckled)
 		return 0
-	if(hovering)
+	if(hovering || flying)
+		if(flying)
+			adjust_nutrition(-0.5)
 		return 0
 	if(locate(/obj/structure/catwalk) in loc)
 		return 0

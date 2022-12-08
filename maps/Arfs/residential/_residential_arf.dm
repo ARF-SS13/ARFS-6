@@ -413,8 +413,8 @@ var/global/list/latejoin_residential = list()
 	name = "\improper Mansion -  Holodeck"
 	icon_state = "mansion"
 
-/area/residential/mansion_storage
-	name = "\improper Mansion -  Storage"
+/area/residential/mansion_theatre
+	name = "\improper Mansion -  Theatre"
 	icon_state = "mansion"
 
 /area/residential/mansion_office
@@ -427,4 +427,8 @@ var/global/list/latejoin_residential = list()
 
 /area/residential/mansion_gameroom
 	name = "\improper Mansion - Gameroom"
+	icon_state = "mansion"
+
+/area/residential/mansion_hidden
+	name = "\improper Mansion - Hidden Room"
 	icon_state = "mansion"

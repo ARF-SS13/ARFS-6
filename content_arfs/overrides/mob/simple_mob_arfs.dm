@@ -16,3 +16,9 @@
 						used_radios += mob_radio
 	else
 		..()
+
+
+// Fixing the slimes so they aren't so deadly
+/mob/living/simple_mob/slime
+	melee_damage_lower = 5
+	melee_damage_upper = 7

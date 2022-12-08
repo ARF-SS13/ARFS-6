@@ -5,8 +5,10 @@
 var/global/list/hair_accesories_list= list()// Stores /datum/sprite_accessory/hair_accessory indexed by type
 var/global/list/negative_traits = list()	// Negative custom species traits, indexed by path
 var/global/list/neutral_traits = list()		// Neutral custom species traits, indexed by path
-var/global/list/everyone_traits = list()	// Neutral traits available to all species, indexed by path
 var/global/list/positive_traits = list()	// Positive custom species traits, indexed by path
+var/global/list/everyone_traits_positive = list()	// Neutral traits available to all species, indexed by path
+var/global/list/everyone_traits_neutral = list()	// Neutral traits available to all species, indexed by path
+var/global/list/everyone_traits_negative = list()	// Neutral traits available to all species, indexed by path
 var/global/list/traits_costs = list()		// Just path = cost list, saves time in char setup
 var/global/list/all_traits = list()			// All of 'em at once (same instances)
 var/global/list/active_ghost_pods = list()
@@ -41,7 +43,7 @@ var/global/list/item_vore_blacklist = list(
 		/obj/item/weapon/gun,
 		/obj/item/weapon/pinpointer,
 		/obj/item/clothing/shoes/magboots,
-		/obj/item/blueprints,
+		/obj/item/areaeditor/blueprints,
 		/obj/item/clothing/head/helmet/space,
 		/obj/item/weapon/disk/nuclear,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/roiz)
@@ -63,6 +65,7 @@ var/global/list/classic_vore_sounds = list(
 		"Rustle 3 (cloth)"	= 'sound/effects/rustle3.ogg',
 		"Rustle 4 (cloth)"	= 'sound/effects/rustle4.ogg',
 		"Rustle 5 (cloth)"	= 'sound/effects/rustle5.ogg',
+		"Zipper" = 'sound/items/zip.ogg',
 		"None" = null)
 
 var/global/list/classic_release_sounds = list(
@@ -71,6 +74,7 @@ var/global/list/classic_release_sounds = list(
 		"Rustle 3 (cloth)" = 'sound/effects/rustle3.ogg',
 		"Rustle 4 (cloth)" = 'sound/effects/rustle4.ogg',
 		"Rustle 5 (cloth)" = 'sound/effects/rustle5.ogg',
+		"Zipper" = 'sound/items/zip.ogg',
 		"Splatter" = 'sound/effects/splat.ogg',
 		"None" = null
 		)
@@ -93,6 +97,7 @@ var/global/list/fancy_vore_sounds = list(
 		"Rustle 3 (cloth)"	= 'sound/effects/rustle3.ogg',
 		"Rustle 4 (cloth)"	= 'sound/effects/rustle4.ogg',
 		"Rustle 5 (cloth)"	= 'sound/effects/rustle5.ogg',
+		"Zipper" = 'sound/items/zip.ogg',
 		"None" = null
 		)
 
@@ -102,6 +107,7 @@ var/global/list/fancy_release_sounds = list(
 		"Rustle 3 (cloth)" = 'sound/effects/rustle3.ogg',
 		"Rustle 4 (cloth)" = 'sound/effects/rustle4.ogg',
 		"Rustle 5 (cloth)" = 'sound/effects/rustle5.ogg',
+		"Zipper" = 'sound/items/zip.ogg',
 		"Stomach Move" = 'sound/vore/sunesound/pred/stomachmove.ogg',
 		"Pred Escape" = 'sound/vore/sunesound/pred/escape.ogg',
 		"Splatter" = 'sound/effects/splat.ogg',
@@ -230,7 +236,8 @@ var/global/list/edible_trash = list(/obj/item/broken_device,
 				/obj/item/weapon/storage/wallet,
 				/obj/item/weapon/storage/vore_egg,
 				/obj/item/weapon/bikehorn/tinytether,
-				/obj/item/capture_crystal
+				/obj/item/capture_crystal,
+				/obj/item/roulette_ball
 				)
 
 var/global/list/contamination_flavors = list(
@@ -539,12 +546,16 @@ var/global/list/remainless_species = list(SPECIES_PROMETHEAN,
 		switch(category)
 			if(-INFINITY to -0.1)
 				negative_traits[traitpath] = T
+				if(!(T.custom_only))
+					everyone_traits_negative[traitpath] = T
 			if(0)
 				neutral_traits[traitpath] = T
 				if(!(T.custom_only))
-					everyone_traits[traitpath] = T
+					everyone_traits_neutral[traitpath] = T
 			if(0.1 to INFINITY)
 				positive_traits[traitpath] = T
+				if(!(T.custom_only))
+					everyone_traits_positive[traitpath] = T
 
 
 	// Weaver recipe stuff
@@ -815,3 +826,95 @@ var/global/list/xenobio_rainbow_extracts = list(
 										/obj/item/slime_extract/emerald = 3,
 										/obj/item/slime_extract/light_pink = 1,
 										/obj/item/slime_extract/rainbow = 1)
+
+
+// AREA GENERATION AND BLUEPRINT STUFF BELOW HERE
+// typecacheof(list) and list() are two completely separate things, don't break!
+
+// WHATEVER YOU DO, DO NOT LEAVE THE LAST THING IN THE LIST BELOW HAVE A COMMA OR EVERYTHING EVER WILL BREAK
+// ENSURE THE LAST AREA OR TURF LISTED IS SIMPLY "/area/clownhideout" AND NOT "/area/clownhideout," OR YOU WILL IMMEDIATELY DIE
+
+// These lists are, obviously, unfinished.
+
+// ALLOWING BUILDING IN AN AREA:
+// If you want someone to be able to build a new area in a place, add the area to the 'BUILDABLE_AREA_TYPES' and 'blacklisted_areas'
+// BUILDABLE_AREA_TYPES means they can build an area there. The blacklisted_areas means they CAN NOT EXPAND that area. No making space bigger!
+
+// DISALLOW BUILDING/AREA MANIPULATION IN AN AREA (OR A TURF TYPE):
+// Likewise, if you want someone to never ever EVER be able to do anything area generation/expansion related to an area
+// Then add it to SPECIALS and area_or_turf_fail_types
+
+// If you want someone to
+var/global/list/BUILDABLE_AREA_TYPES = list(
+	/area/space,
+	/area/mine,
+//	/area/surface/outside, 	//SC
+//	/area/surface/cave,		//SC
+	/area/tether/surfacebase/outside,
+	/area/groundbase/unexplored/outdoors,
+	/area/maintenance/groundbase/level1,
+	/area/submap/groundbase/wilderness,
+	/area/groundbase/mining,
+	/area/offmap/aerostat/surface,
+	/area/tether_away/beach,
+	/area/tether_away/cave,
+)
+
+var/static/list/blacklisted_areas = typecacheof(list(
+	/area/space,
+	/area/mine,
+//	/area/surface/outside,	//SC
+//	/area/surface/cave,		//SC
+	//TETHER STUFF BELOW THIS
+	/area/tether/surfacebase/outside,
+	//GROUNDBASE STUFF BELOW THIS
+	/area/groundbase/unexplored/outdoors,
+	/area/maintenance/groundbase/level1,
+	/area/submap/groundbase/wilderness,
+	/area/groundbase/mining,
+	/area/offmap/aerostat/surface,
+	/area/tether_away/beach,
+	/area/tether_away/cave
+	))
+
+var/global/list/SPECIALS = list(
+	/turf/space,
+	/area/shuttle,
+	/area/admin,
+	/area/arrival,
+	/area/centcom,
+	/area/asteroid,
+	/area/tdome,
+	/area/syndicate_station,
+	/area/wizard_station,
+	/area/prison,
+	/area/holodeck,
+	/area/turbolift,
+	/area/tether/elevator,
+	/turf/unsimulated/wall/planetary,
+	/area/submap/virgo2,
+	/area/submap/event,
+	/area/submap/casino_event
+	// /area/derelict //commented out, all hail derelict-rebuilders!
+)
+
+var/global/list/area_or_turf_fail_types = typecacheof(list(
+	/turf/space,
+	/area/shuttle,
+	/area/admin,
+	/area/arrival,
+	/area/centcom,
+	/area/asteroid,
+	/area/tdome,
+	/area/syndicate_station,
+	/area/wizard_station,
+	/area/prison,
+	/area/holodeck,
+	/turf/simulated/wall/elevator,
+	/area/turbolift,
+	/area/tether/elevator,
+	/turf/unsimulated/wall/planetary,
+	/area/submap/virgo2,
+	/area/submap/event,
+	/area/submap/casino_event
+	))

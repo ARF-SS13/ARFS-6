@@ -1,3 +1,8 @@
+// var/global/list/custom_special_dock_targets = list(
+// 	"Drake" = "drake_docking",
+// 	"Excursion Shuttle" = "expshuttle"
+// );
+
 //////////////////////////////////////////////////////////////
 // Explore shuttle
 
@@ -6,7 +11,7 @@
 	name = "Excursion Shuttle"
 	warmup_time = 0
 	current_location = "arfs_excursion_hangar"
-	docking_controller_tag = "expshuttle_dock"
+	docking_controller_tag = "expshuttle"
 	shuttle_area = list(/area/shuttle/excursion/cockpit, /area/shuttle/excursion/general, /area/shuttle/excursion/cargo, /area/shuttle/excursion/power, /area/shuttle/excursion/medical)
 	fuel_consumption = 3
 	move_direction = NORTH
@@ -98,17 +103,18 @@
 	known = TRUE
 	shuttle = "Drake"
 
-/obj/effect/shuttle_landmark/arfs/serenity/drake
+/obj/effect/shuttle_landmark/shuttle_initializer/drake
 	name = "Mansion Hanger"
-	landmark_tag = "arfs_mansion_hanger"
-	docking_controller = "mansionshuttle_dock"
 	base_turf = /turf/simulated/floor/reinforced
 	base_area = /area/residential/mansion
+	landmark_tag = "arfs_mansion_hanger"
+	docking_controller = "drake_dock"
+	shuttle_type = /datum/shuttle/autodock/overmap/drake
 
 /datum/shuttle/autodock/overmap/drake
 	name = "Drake"
 	current_location = "arfs_mansion_hanger"
-	docking_controller_tag = "mansionshuttle_dock"
+	docking_controller_tag = "drake_docking"
 	shuttle_area = list(
 		/area/shuttle/drake/cabin,
 		/area/shuttle/drake/engineering,
@@ -124,14 +130,53 @@
 		/area/shuttle/drake/port_hold,
 		/area/shuttle/drake/star_hold
 	)
-	fuel_consumption = 5
+	fuel_consumption = 4
 	flags = SHUTTLE_FLAGS_PROCESS
+	defer_initialisation = TRUE
 
 // The shuttle's 'shuttle' computer
 /obj/machinery/computer/shuttle_control/explore/drake
 	name = "short jump console"
 	shuttle_tag = "Drake"
 	req_one_access = list()
+
+//////////////////////////////////////////////////////////////
+// Dallus
+/obj/effect/overmap/visitable/ship/arfs
+	name = "ARFS Dallus"	// Name of the location on the overmap.
+	desc = "A three-deck research and civilian vessel controlled by the Alliance of Racial Federations."
+
+	scanner_desc = @{"[i]Registration[/i]: ARFS Dallus
+[i]Class[/i]: Research Frigate, Dallus Class
+[i]Transponder[/i]: Transmitting (CIV), ARF IFF
+[b]Notice[/b]: ARF Vessel, authorized personnel only"}
+
+	icon_state = "ship"
+	vessel_mass = 100000
+	burn_delay = 2 SECONDS
+	fore_dir = NORTH	// Which direction the ship/z-level is facing.  It will move dust particles from that direction when moving.
+	base = TRUE		// Honestly unsure what this does but it seems the main sector or "Map" we're at has this so here it stays
+	// The waypoints that are avaliable once you are at this Navpoint
+	initial_generic_waypoints = list(
+		"arfs_excursion_hangar",
+		"arfs_dock_south", 				//Deck 3, Port Arm, South Dock
+		"arfs_dock_north", 				//Deck 3, Port Arm, North Dock
+		"arfs_dock_west",   			//Deck 3, Port Arm, West Dock
+		"arfs_dock_south_starboard", 	//Deck 3, Port Arm, South Dock
+		"arfs_dock_north_starboard",	//Deck 3, Port Arm, North Dock
+		"arfs_space_nw", 				//Deck 3, NW space
+		"arfs_space_ne", 				//Deck 3, NE space
+		"arfs_space_sw", 				//Deck 3, SW space
+		"arfs_space_se"  				//Deck 3, SE space
+		)
+
+	initial_restricted_waypoints = list(
+		"Excursion Shuttle" = list("arfs_excursion_hangar"),
+		)
+
+	known = TRUE;
+	unowned_areas = list(/area/shuttle/excursion)
+	docking_codes = "ARFD"
 
 //////////////////////////////////////////////////////////////
 // Serenity
@@ -154,6 +199,7 @@
 	skybox_pixel_y = 0
 
 	initial_restricted_waypoints = list("Drake" = list("arfs_mansion_hanger"),)
+	docking_codes = "ARFS"
 
 //////////////////////////////////////////////////////////////
 // Escape shuttle
@@ -432,3 +478,47 @@
 	dock_target_station = "specops_centcom_dock"
 	dock_target_offsite = "specops_dock_airlock"
 */
+
+/obj/effect/shuttle_landmark/aerostat
+	base_area = /area/offmap/aerostat;
+	base_turf = /turf/unsimulated/floor/sky/virgo2_sky;
+
+/obj/effect/shuttle_landmark/aerostat/west
+	docking_controller = "aerostat_west_airlock";
+	landmark_tag = "aerostat_west";
+	name = "Virgo 2 Aerostat (W)"
+
+/obj/effect/shuttle_landmark/aerostat/east
+	docking_controller = "aerostat_east_airlock";
+	landmark_tag = "aerostat_east";
+	name = "Virgo 2 Aerostat (E)"
+
+/obj/effect/shuttle_landmark/aerostat/north_arm_north
+	docking_controller = "aerostat_n_n_airlock";
+	landmark_tag = "aerostat_n_n";
+	name = "Virgo 2 Aerostat (North Arm North)"
+
+/obj/effect/shuttle_landmark/aerostat/north_arm_east
+	docking_controller = "aerostat_n_e_airlock";
+	landmark_tag = "aerostat_n_e";
+	name = "Virgo 2 Aerostat (North Arm East)"
+
+/obj/effect/shuttle_landmark/aerostat/north_arm_west
+	docking_controller = "aerostat_n_w_airlock";
+	landmark_tag = "aerostat_n_w";
+	name = "Virgo 2 Aerostat (North Arm West)"
+
+/obj/effect/shuttle_landmark/aerostat/south_arm_east
+	docking_controller = "aerostat_s_e_airlock";
+	landmark_tag = "aerostat_s_e";
+	name = "Virgo 2 Aerostat (South Arm East)"
+
+/obj/effect/shuttle_landmark/aerostat/south_arm_west
+	docking_controller = "aerostat_s_w_airlock";
+	landmark_tag = "aerostat_s_w";
+	name = "Virgo 2 Aerostat (South Arm West)"
+
+/obj/effect/shuttle_landmark/aerostat/south_arm_south
+	docking_controller = "aerostat_s_s_airlock";
+	landmark_tag = "aerostat_s_s";
+	name = "Virgo 2 Aerostat (South Arm South)"

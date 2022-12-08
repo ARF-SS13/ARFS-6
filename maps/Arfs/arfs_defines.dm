@@ -21,8 +21,8 @@
 
 	zlevel_datum_type = /datum/map_z_level/arfs
 
-	lobby_icon = 'content_arfs/icons/misc/arfs_dallus.dmi'
-	lobby_screens = list("arfs_dallus_new_anim")
+	lobby_icon = 'content_arfs/icons/misc/arfs_dallus_new.dmi'
+	lobby_screens = list("arfs_dallus_new")
 
 	station_name  = "ARFS Dallus"
 	station_short = "Dallus"
@@ -36,8 +36,8 @@
 
 	shuttle_docked_message = "The scheduled shuttle to the %dock_name% has docked with the ship at docks one and two. It will depart in approximately %ETD%."
 	shuttle_leaving_dock = "The Crew Transfer Shuttle has left the ship. Estimate %ETA% until the shuttle docks at %dock_name%."
-	shuttle_called_message = "A crew transfer to %Dock_name% has been scheduled. The shuttle has been called. Those leaving should procede to docks one and two in approximately %ETA%"
-	shuttle_recall_message = "The scheduled crew transfer has been cancelled."
+	shuttle_called_message = "A crew transfer to %Dock_name% has been scheduled. The shuttle has been called. Those leaving should proceed to docks one and two in approximately %ETA%"
+	shuttle_recall_message = "The scheduled crew transfer has been canceled."
 	emergency_shuttle_docked_message = "The Emergency Shuttle has docked with the ship at dock one. You have approximately %ETD% to board the Emergency Shuttle."
 	emergency_shuttle_leaving_dock = "The Emergency Shuttle has left the ship. Estimate %ETA% until the shuttle docks at %dock_name%."
 	emergency_shuttle_called_message = "An emergency evacuation shuttle has been called. It will arrive at docks one and two in approximately %ETA%"
@@ -62,7 +62,7 @@
 		NETWORK_INTERROGATION
 	)
 
-	allowed_spawns = list("Arrivals Shuttle","Gateway","Cryogenic Storage","Cyborg Storage","NCS Serenity Residential")
+	allowed_spawns = list("Arrivals Shuttle","Gateway","Cryogenic Storage","Cyborg Storage","NCS Serenity Residential","ITV Talon Cryo")
 	// station_levels = list(
 	// 	Z_LEVEL_ARFS_ONE,
 	// 	Z_LEVEL_ARFS_TWO,
@@ -258,39 +258,3 @@
 		Z_LEVEL_RESIDENTIAL_STATION_ARFS,
 		Z_LEVEL_RESIDENTIAL_MANSION_ARFS
 	)
-
-/obj/effect/overmap/visitable/ship/arfs
-	name = "ARFS Dallus"	// Name of the location on the overmap.
-	desc = "A three-deck research and civilian vessel controlled by the Alliance of Racial Federations."
-
-	scanner_desc = @{"[i]Registration[/i]: ARFS Dallus
-[i]Class[/i]: Research Frigate, Dallus Class
-[i]Transponder[/i]: Transmitting (CIV), ARF IFF
-[b]Notice[/b]: ARF Vessel, authorized personnel only"}
-
-	icon_state = "ship"
-	vessel_mass = 100000
-	burn_delay = 2 SECONDS
-	fore_dir = NORTH	// Which direction the ship/z-level is facing.  It will move dust particles from that direction when moving.
-	base = TRUE		// Honestly unsure what this does but it seems the main sector or "Map" we're at has this so here it stays
-	// The waypoints that are avaliable once you are at this Navpoint
-	initial_generic_waypoints = list(
-		"arfs_excursion_hangar",
-		"arfs_dock_south", 				//Deck 3, Port Arm, South Dock
-		"arfs_dock_north", 				//Deck 3, Port Arm, North Dock
-		"arfs_dock_west",   			//Deck 3, Port Arm, West Dock
-		"arfs_dock_south_starboard", 	//Deck 3, Port Arm, South Dock
-		"arfs_dock_north_starboard",	//Deck 3, Port Arm, North Dock
-		"arfs_space_nw", 				//Deck 3, NW space
-		"arfs_space_ne", 				//Deck 3, NE space
-		"arfs_space_sw", 				//Deck 3, SW space
-		"arfs_space_se"  				//Deck 3, SE space
-		)
-
-	initial_restricted_waypoints = list(
-		"Excursion Shuttle" = list("arfs_excursion_hangar"),
-		)
-
-	known = TRUE;
-	unowned_areas = list(/area/shuttle/excursion)
-

@@ -53,7 +53,7 @@ var/list/mining_overlay_cache = list()
 		"phoron" = /obj/item/weapon/ore/phoron,
 		"osmium" = /obj/item/weapon/ore/osmium,
 		"hydrogen" = /obj/item/weapon/ore/hydrogen,
-		"silicates" = /obj/item/weapon/ore/glass,
+		"sand" = /obj/item/weapon/ore/glass,
 		"carbon" = /obj/item/weapon/ore/coal,
 		"verdantium" = /obj/item/weapon/ore/verdantium,
 		"marble" = /obj/item/weapon/ore/marble,
@@ -149,7 +149,7 @@ var/list/mining_overlay_cache = list()
 /turf/simulated/mineral/floor/ignore_mapgen
 	ignore_mapgen = 1
 
-/turf/simulated/mineral/proc/make_floor()
+/turf/simulated/mineral/proc/make_floor(update_neighbors)
 	if(!density && !opacity)
 		return
 	density = FALSE
@@ -157,7 +157,7 @@ var/list/mining_overlay_cache = list()
 	blocks_air = 0
 	can_build_into_floor = TRUE
 	clear_ore_effects()
-	update_general()
+	update_general(update_neighbors)
 
 /turf/simulated/mineral/proc/make_wall()
 	if(density && opacity)
@@ -168,8 +168,8 @@ var/list/mining_overlay_cache = list()
 	can_build_into_floor = FALSE
 	update_general()
 
-/turf/simulated/mineral/proc/update_general()
-	update_icon(1)
+/turf/simulated/mineral/proc/update_general(update_neighbors = TRUE)
+	update_icon(update_neighbors)
 	recalculate_directional_opacity()
 	if(ticker && ticker.current_state == GAME_STATE_PLAYING)
 		reconsider_lights()
@@ -352,7 +352,7 @@ var/list/mining_overlay_cache = list()
 //Not even going to touch this pile of spaghetti
 /turf/simulated/mineral/attackby(obj/item/weapon/W as obj, mob/user as mob)
 
-	if (!(istype(usr, /mob/living/carbon/human) || ticker) && ticker.mode.name != "monkey")
+	if (!user.IsAdvancedToolUser())
 		to_chat(user, "<span class='warning'>You don't have the dexterity to do this!</span>")
 		return
 
@@ -403,30 +403,14 @@ var/list/mining_overlay_cache = list()
 					F.attackby(W,user)
 					return
 
-		else if(istype(W, /obj/item/stack/rods))
-			var/obj/structure/lattice/L = locate(/obj/structure/lattice, src)
-			if(L)
-				return
-			var/obj/item/stack/rods/R = W
-			if (R.use(1))
-				to_chat(user, "<span class='notice'>Constructing support lattice ...</span>")
-				playsound(src, 'sound/weapons/Genhit.ogg', 50, 1)
-				new /obj/structure/lattice(get_turf(src))
-
 		else if(istype(W, /obj/item/stack/tile/floor))
-			var/obj/structure/lattice/L = locate(/obj/structure/lattice, src)
-			if(L)
-				var/obj/item/stack/tile/floor/S = W
-				if (S.get_amount() < 1)
-					return
-				qdel(L)
-				playsound(src, 'sound/weapons/Genhit.ogg', 50, 1)
-				ChangeTurf(/turf/simulated/floor)
-				S.use(1)
+			var/obj/item/stack/tile/floor/S = W
+			if (S.get_amount() < 1)
 				return
-			else
-				to_chat(user, "<span class='warning'>The plating is going to need some support.</span>")
-				return
+			playsound(src, 'sound/weapons/Genhit.ogg', 50, 1)
+			ChangeTurf(/turf/simulated/floor)
+			S.use(1)
+			return
 
 
 	else
@@ -692,15 +676,17 @@ var/list/mining_overlay_cache = list()
 				new /obj/item/stack/material/uranium(src, rand(5,25))
 
 /turf/simulated/mineral/proc/make_ore(var/rare_ore)
+	var/static/list/minerals = list("marble" = 3,/* "quartz" = 10, "copper" = 20, "tin" = 15, "bauxite" = 15*/, "uranium" = 10, "platinum" = 10, "hematite" = 70, "rutile" = 15, "carbon" = 70, "diamond" = 2, "gold" = 10, "silver" = 10, "phoron" = 20, "lead" = 3,/* "void opal" = 1,*/ "verdantium" = 1/*, "painite" = 1*/)
+	var/static/list/rare_minerals = list("marble" = 5,/* "quartz" = 15, "copper" = 10, "tin" = 5, "bauxite" = 5*/, "uranium" = 15, "platinum" = 20, "hematite" = 15, "rutile" = 20, "carbon" = 15, "diamond" = 3, "gold" = 15, "silver" = 15, "phoron" = 25, "lead" = 5,/* "void opal" = 1,*/ "verdantium" = 2/*, "painite" = 1*/)
 	if(mineral || ignore_mapgen || ignore_oregen) //VOREStation Edit - Makes sense, doesn't it?
 		return
 
 	var/mineral_name
 	if(rare_ore)
-		mineral_name = pickweight(list("marble" = 5,/* "quartz" = 15, "copper" = 10, "tin" = 5, "bauxite" = 5*/, "uranium" = 15, "platinum" = 20, "hematite" = 15, "rutile" = 20, "carbon" = 15, "diamond" = 3, "gold" = 15, "silver" = 15, "phoron" = 25, "lead" = 5,/* "void opal" = 1,*/ "verdantium" = 2/*, "painite" = 1*/))
+		mineral_name = pickweight(rare_minerals)
 
 	else
-		mineral_name = pickweight(list("marble" = 3,/* "quartz" = 10, "copper" = 20, "tin" = 15, "bauxite" = 15*/, "uranium" = 10, "platinum" = 10, "hematite" = 70, "rutile" = 15, "carbon" = 70, "diamond" = 2, "gold" = 10, "silver" = 10, "phoron" = 20, "lead" = 3,/* "void opal" = 1,*/ "verdantium" = 1/*, "painite" = 1*/))
+		mineral_name = pickweight(minerals)
 
 	if(mineral_name && (mineral_name in GLOB.ore_data))
 		mineral = GLOB.ore_data[mineral_name]

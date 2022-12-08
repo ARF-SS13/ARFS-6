@@ -153,6 +153,7 @@
 
 // Jess's Teppi
 /mob/living/simple_mob/vore/alienanimals/teppi/hazel/New()
+	name = "Hazel"
 	inherit_colors = TRUE
 	color = "#fff2d3"
 	marking_color = "#9F7757"
@@ -162,7 +163,9 @@
 	marking_type = "10"
 	allergen_preference = 64
 	allergen_unpreference = 1
+/mob/living/simple_mob/vore/alienanimals/teppi/hazel/Initialize()
 	. = ..()
+	verbs += /mob/living/simple_mob/animal/passive/pokemon/proc/move_telepathy
 
 // BobDos
 /mob/living/simple_mob/vore/alienanimals/teppi/nabbs/New()

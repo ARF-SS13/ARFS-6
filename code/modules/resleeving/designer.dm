@@ -263,7 +263,7 @@
 		if("menu")
 			menu = params["menu"]
 			temp = ""
-		
+
 		if("href_conversion")
 			PrefHrefMiddleware(params, usr)
 
@@ -281,8 +281,8 @@
 
 	mannequin.delete_inventory(TRUE)
 	update_preview_mob(mannequin)
-	COMPILE_OVERLAYS(mannequin)
-	
+	mannequin.ImmediateOverlayUpdate()
+
 	var/mutable_appearance/MA = new(mannequin)
 	south_preview.appearance = MA
 	south_preview.dir = SOUTH
@@ -369,7 +369,7 @@
 		return
 
 	if(params["target_href"] == "size_multiplier")
-		var/new_size = input(user, "Choose your character's size, ranging from 25% to 200%", "Character Preference") as num|null
+		var/new_size = tgui_input_number(user, "Choose your character's size, ranging from 25% to 200%", "Character Preference", null, 200, 25)
 		if(new_size && ISINRANGE(new_size,25,200))
 			active_br.sizemult = (new_size/100)
 			update_preview_icon()
