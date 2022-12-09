@@ -22811,7 +22811,9 @@
 	charge = 3e+006;
 	input_attempt = 1;
 	inputting = 2;
-	name = "Port Solar Array SMES"
+	name = "Port Solar Array SMES";
+	output_level = 100000;
+	input_level = 200000
 	},
 /obj/structure/cable{
 	d2 = 4;
@@ -27197,6 +27199,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/structure/railing,
+/obj/structure/cable/green{
+	d1 = 32;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/dormitory)
 "btq" = (
@@ -27334,7 +27341,9 @@
 	charge = 3e+006;
 	input_attempt = 1;
 	inputting = 2;
-	name = "Starboard Solar Array SMES"
+	name = "Starboard Solar Array SMES";
+	input_level = 200000;
+	output_level = 100000
 	},
 /obj/structure/cable,
 /turf/simulated/floor/plating,
@@ -32714,7 +32723,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/maintenance/research)
 "cvF" = (
 /obj/structure/window/reinforced{
 	dir = 8;
@@ -32776,6 +32785,10 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/engine_gas)
+"cAy" = (
+/obj/structure/sign/directions/ladder_down,
+/turf/simulated/floor/airless,
+/area/space)
 "cAI" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor/tiled/dark,
@@ -32812,6 +32825,13 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/security_cell_hallway)
+"cCk" = (
+/obj/structure/cable/green{
+	d1 = 32;
+	icon_state = "32-1"
+	},
+/turf/simulated/open,
+/area/maintenance/dormitory)
 "cCN" = (
 /obj/structure/bed/chair/comfy/purp{
 	dir = 1;
@@ -36020,9 +36040,6 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
-"htr" = (
-/turf/simulated/wall,
-/area/space)
 "huz" = (
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 8
@@ -37506,6 +37523,13 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/break_room)
+"jtk" = (
+/obj/structure/ladder,
+/obj/effect/floor_decal/industrial/warning/cee{
+	dir = 1
+	},
+/turf/simulated/floor/airless,
+/area/space)
 "jvs" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -41271,7 +41295,7 @@
 	input_tag = "cooling_in";
 	name = "Engine Cooling Control";
 	output_tag = "cooling_out";
-	sensors = list("engine_sensor" = "Engine Core")
+	sensors = list("engine_sensor"="Engine Core")
 	},
 /obj/machinery/light,
 /turf/simulated/floor/tiled/dark,
@@ -44251,7 +44275,7 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/space)
+/area/maintenance/research)
 "sNS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -83826,8 +83850,8 @@ aaa
 amK
 amf
 amK
-aaa
-aaa
+bnS
+aov
 aaa
 aaa
 aaa
@@ -83875,7 +83899,7 @@ bRI
 bRI
 aJZ
 aWs
-aAV
+alt
 aAW
 aOD
 aOD
@@ -84083,8 +84107,8 @@ aaa
 amK
 aCM
 amK
-aaa
-aaa
+cAy
+aov
 aaa
 aaa
 aaa
@@ -84132,7 +84156,7 @@ aKb
 aKb
 aMG
 btp
-alt
+cCk
 aAW
 aaa
 aaa
@@ -84340,8 +84364,8 @@ aaa
 amK
 amg
 amK
-aaa
-aaa
+jtk
+aov
 aaa
 aaa
 aaa
@@ -88046,7 +88070,7 @@ bez
 bsB
 bth
 bez
-htr
+bez
 aov
 aov
 sWm
