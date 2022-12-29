@@ -14,7 +14,7 @@
 	network = "tcommsat"
 	autolinkers = list("hub",
 		"sd_relay", "c_relay", "m_relay", "r_relay",
-		"science", "medical", "supply", "service", "common", "command", "engineering", "security", "explorer", "unused",
+		"science", "medical", "supply", "service", "common", "command", "engineering", "security", "Away Team", "unused",
 		"hb_relay", "receiverA", "broadcasterA"
 	)
 
@@ -30,7 +30,7 @@
 
 /obj/machinery/telecomms/server/presets/service/sd
 	freq_listening = list(SRV_FREQ, EXP_FREQ)
-	autolinkers = list("service", "explorer")
+	autolinkers = list("service", "Away Team")
 
 // Telecommunications Satellite
 /area/sd/surfacebase/tcomms
@@ -82,11 +82,11 @@
 		num2text(EXP_FREQ) = list(access_explorer)
 	)
 
-/obj/item/device/multitool/sd_buffered
+/obj/item/device/multitool/station_buffered
 	name = "pre-linked multitool (sd hub)"
 	desc = "This multitool has already been linked to the SD telecomms hub and can be used to configure one (1) relay."
 
-/obj/item/device/multitool/sd_buffered/Initialize()
+/obj/item/device/multitool/station_buffered/Initialize()
 	. = ..()
 	buffer = locate(/obj/machinery/telecomms/hub/preset/sd)
 

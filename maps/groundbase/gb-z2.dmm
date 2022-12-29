@@ -208,6 +208,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/groundbase/science/robotics)
+"aw" = (
+/obj/machinery/firework_launcher,
+/turf/simulated/floor/tiled,
+/area/groundbase/science/hall)
 "ax" = (
 /obj/structure/closet/secure_closet/personal,
 /obj/item/weapon/towel/random,
@@ -2023,21 +2027,6 @@
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/wood,
 /area/groundbase/dorms/room6)
-"fI" = (
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
-/area/groundbase/level2/nw)
 "fJ" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -3081,6 +3070,11 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
+"iH" = (
+/turf/simulated/floor/virgo3c{
+	edge_blending_priority = -1
+	},
+/area/groundbase/level2/westspur)
 "iI" = (
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
 /area/groundbase/civilian/hydroponics/out)
@@ -3582,11 +3576,6 @@
 /obj/structure/sign/directions/evac{
 	dir = 8;
 	pixel_x = -32
-	},
-/obj/structure/sign/directions/science/exploration{
-	dir = 8;
-	pixel_x = -32;
-	pixel_y = -6
 	},
 /turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
 /area/groundbase/level2/nw)
@@ -4324,10 +4313,6 @@
 "mk" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -8274,9 +8259,6 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
 	},
-/obj/structure/disposalpipe/up{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/zpipe/up/supply{
 	dir = 4
 	},
@@ -10477,11 +10459,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
-/obj/structure/disposalpipe/sortjunction/flipped{
-	dir = 1;
-	name = "Exploration";
-	sortType = "Exploration"
-	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
 /area/groundbase/level2/nw)
 "Eh" = (
@@ -13719,10 +13697,6 @@
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
@@ -16639,11 +16613,6 @@
 	pixel_x = -32;
 	pixel_y = -32
 	},
-/obj/structure/sign/directions/science/exploration{
-	dir = 8;
-	pixel_x = -32;
-	pixel_y = -38
-	},
 /turf/simulated/floor/outdoors/grass/virgo3c,
 /area/groundbase/level2/nw)
 "Vw" = (
@@ -17192,6 +17161,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/groundbase/science/server)
+"Xb" = (
+/obj/machinery/vending/wallmed1/public{
+	dir = 4;
+	pixel_x = -28
+	},
+/turf/simulated/floor/tiled/white,
+/area/groundbase/dorms/bathroom)
 "Xc" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/reagent_containers/spray/cleaner{
@@ -23526,7 +23502,7 @@ aB
 PR
 lw
 Vr
-Vr
+aw
 Bl
 ag
 ag
@@ -23865,7 +23841,7 @@ TD
 Oc
 rP
 bY
-fI
+sN
 bY
 rl
 Rm
@@ -24007,7 +23983,7 @@ IQ
 gR
 rP
 GY
-fI
+sN
 bY
 FF
 iB
@@ -24149,7 +24125,7 @@ rP
 rP
 rP
 bY
-fI
+sN
 bY
 FF
 FF
@@ -24291,7 +24267,7 @@ LT
 bY
 bY
 bY
-fI
+sN
 Vv
 bY
 bY
@@ -24398,7 +24374,7 @@ ON
 fX
 eC
 LN
-kk
+Xb
 BY
 eC
 Mm
@@ -24433,7 +24409,7 @@ pw
 bY
 bY
 pw
-fI
+sN
 pw
 bY
 bY
@@ -26601,7 +26577,7 @@ Yt
 In
 bY
 bY
-eN
+iH
 eN
 eN
 eN
@@ -26884,8 +26860,8 @@ In
 Wl
 Wl
 bY
-eN
-eN
+OI
+OI
 eN
 eN
 eN
@@ -27026,8 +27002,8 @@ bY
 bY
 bY
 bY
-eN
-eN
+OI
+OI
 eN
 eN
 eN
@@ -27166,10 +27142,10 @@ bY
 bY
 bY
 bY
-eN
-eN
-eN
-eN
+OI
+OI
+OI
+OI
 eN
 eN
 eN
