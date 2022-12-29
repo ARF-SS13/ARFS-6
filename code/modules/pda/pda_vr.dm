@@ -3,8 +3,8 @@
 
 /obj/item/device/pda/multicaster/exploration/New()
 	..()
-	owner = "Away Team"
-	name = "Away Team (Relay)"
+	owner = "Exploration Department"
+	name = "Exploration Department (Relay)"
 	cartridges_to_send_to = exploration_cartridges
 
 /obj/item/device/pda/centcom

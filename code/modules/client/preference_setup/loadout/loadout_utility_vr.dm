@@ -35,7 +35,7 @@
 /datum/gear/utility/dufflebag/med
 	display_name = "medical dufflebag"
 	path = /obj/item/weapon/storage/backpack/dufflebag/med
-	allowed_roles = list("Medical Doctor","Chief Medical Officer","Chemist","Paramedic","Geneticist","Psychiatrist")
+	allowed_roles = list("Medical Doctor","Chief Medical Officer","Chemist","Paramedic","Geneticist","Psychiatrist","Field Medic")
 
 /datum/gear/utility/dufflebag/med/emt
 	display_name = "EMT dufflebag"
@@ -57,8 +57,9 @@
 	allowed_roles = list("Research Director","Scientist","Roboticist","Xenobiologist","Xenobotanist")
 
 /datum/gear/utility/dufflebag/explorer
-	display_name = "away team dufflebag"
+	display_name = "explorer dufflebag"
 	path = /obj/item/weapon/storage/backpack/dufflebag/explorer
+	allowed_roles = list("Pathfinder","Explorer")
 
 /datum/gear/utility/dufflebag/talon
 	display_name = "Talon dufflebag"
