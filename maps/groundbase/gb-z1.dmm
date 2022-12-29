@@ -585,6 +585,7 @@
 /obj/structure/closet/toolcloset,
 /obj/item/weapon/pickaxe,
 /obj/item/weapon/chainsaw,
+/obj/item/weapon/shovel,
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/workshop)
 "bx" = (
@@ -1000,6 +1001,9 @@
 	},
 /obj/machinery/light/small{
 	dir = 1
+	},
+/obj/machinery/vending/wallmed1/public{
+	pixel_y = 28
 	},
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/groundbase/civilian/mensrestroom)
@@ -6070,6 +6074,20 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/atmos/monitoring)
+"np" = (
+/obj/machinery/hologram/holopad,
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/structure/flora/tree/pine/xmas/presents,
+/turf/simulated/floor/tiled/dark,
+/area/groundbase/civilian/bar)
 "nq" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -9430,19 +9448,6 @@
 "vE" = (
 /obj/machinery/computer/arcade/orion_trail{
 	dir = 8
-	},
-/turf/simulated/floor/tiled/dark,
-/area/groundbase/civilian/bar)
-"vF" = (
-/obj/machinery/hologram/holopad,
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/civilian/bar)
@@ -19271,6 +19276,10 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/pink/full,
+/obj/machinery/vending/wallmed1/public{
+	pixel_y = -28;
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/groundbase/civilian/womensrestroom)
 "TW" = (
@@ -20683,6 +20692,10 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/vending/wallmed1/public{
+	dir = 4;
+	pixel_x = -28
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/groundbase/civilian/arrivals)
 "Xz" = (
@@ -26526,7 +26539,7 @@ oe
 gF
 FB
 JX
-vF
+np
 Cy
 cN
 Bo

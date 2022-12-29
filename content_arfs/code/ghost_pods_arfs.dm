@@ -1,6 +1,6 @@
 //globals so the lists dont get generated more than once
-var/global/list/pokemon_choices_list = list()//Referenced list for use in input()
-var/global/list/pokemon_pods = list()//List of pods that ghosts can spawn at
+var/global/list/pokemon_choices_list = list() //Referenced list for use in input()
+var/global/list/pokemon_pods = list() //List of pods that ghosts can spawn at
 
 //Pod to spawn in as pokemon or other mobs.
 /obj/structure/ghost_pod/ghost_activated/pokemon
@@ -36,8 +36,10 @@ var/global/list/pokemon_pods = list()//List of pods that ghosts can spawn at
 	if(LAZYLEN(pokemon_choices_list))
 		return FALSE	//The global list is already generated
 	var/pokemon_choices_list_paths = typesof(/mob/living/simple_mob/animal/passive/pokemon) - remove_paths
-	for (var/mob/living/simple_mob/animal/passive/pokemon/path in pokemon_choices_list_paths)//add the mobs to a list with their names referencing paths
-		pokemon_choices_list["[initial(path.name)]"] = path
+	for (var/path in pokemon_choices_list_paths) //add the mobs to a list with their names referencing paths. typecheck not done because it was gathered with typesof.
+		var/mob/living/simple_mob/animal/passive/pokemon/P = new path()
+		pokemon_choices_list["[P.name]"] = P.type
+		del(P)
 
 /obj/structure/ghost_pod/manual/attack_hand(var/mob/user)
 	//Inform curious minds about how to use this.
