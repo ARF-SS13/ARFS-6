@@ -1,4 +1,3 @@
-/*
 /datum/supply_pack/munitions/expeditionguns
 	name = "Frontier phaser (station-locked) crate"
 	contains = list(
@@ -19,7 +18,6 @@
 	containertype = /obj/structure/closet/crate/secure
 	containername = "phaser handbow crate"
 	access = access_security
-*/
 
 /datum/supply_pack/munitions/ofd_charge_emp
 	name = "OFD Charge - EMP"

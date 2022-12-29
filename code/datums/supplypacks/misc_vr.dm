@@ -175,7 +175,7 @@
 	containertype = /obj/structure/closet/crate/secure/gear
 	containername = "exploration radio headsets crate"
 	access = list(
-		access_explorer,
+		access_awayteam,
 		access_eva,
 		access_pilot
 	)
