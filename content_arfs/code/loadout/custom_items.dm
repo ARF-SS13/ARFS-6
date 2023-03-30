@@ -26,14 +26,14 @@
 	display_name = "Dubious Cookie"
 	description = "A very dubious cookie. Do not eat"
 	ckeywhitelist = list("andyman105", "dameonowen", "dwagin", "foxyrose")
-	character_name = list("Amber Owen", "Amber", "Scarlet Owen", "Emma Miller", "Dameon Owen")
+	character_name = list("Amber Owen", "Amber", "Scarlet Owen", "Emma Miller", "Dameon Owen", "Elizabeth Owen", "Elizabeth Sako", "Amber Sako-Sharpe", "Amber Sako", "Scarlet Sako-Sharpe", "Scarlet Sako")
 
 /datum/gear/fluff/dameon_5
 	path = /obj/item/weapon/reagent_containers/food/snacks/variable/cookie/curious
 	display_name = "Curious Cookie"
 	description = "A very curious cookie. Do not eat"
 	ckeywhitelist = list("andyman105", "dameonowen", "dwagin", "foxyrose")
-	character_name = list("Amber Owen", "Amber", "Scarlet Owen", "Emma Miller")
+	character_name = list("Amber Owen", "Amber", "Scarlet Owen", "Emma Miller", "Elizabeth Owen", "Elizabeth Sako", "Amber Sako-Sharpe", "Amber Sako", "Scarlet Sako-Sharpe", "Scarlet Sako")
 
 // /datum/gear/fluff/dameon_3
 //	path = /obj/item/device/communicator/andy
