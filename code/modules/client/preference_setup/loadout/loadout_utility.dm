@@ -30,7 +30,7 @@
 	path = /obj/item/device/camera
 
 /datum/gear/utility/codex
-	display_name = "the traveler's guide to vir"
+	display_name = "the traveler's guide to Virgo-Erigone"
 	path = /obj/item/weapon/book/codex //VOREStation Edit
 	cost = 0
 
@@ -144,6 +144,11 @@
 		"motorized wheelchair" = /obj/item/wheelchair/motor
 	)
 	gear_tweaks += new/datum/gear_tweak/path(wheelchairs)
+
+/datum/gear/utility/lantern
+	display_name = "lantern"
+	path = /obj/item/device/flashlight/lantern
+	cost = 2
 
 /****************
 modular computers
