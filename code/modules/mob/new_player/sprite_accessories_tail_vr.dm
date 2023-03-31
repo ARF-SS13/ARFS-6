@@ -22,6 +22,15 @@
 
 // Everyone tails
 
+/datum/sprite_accessory/tail/alien_slug
+	name = "Alien slug tail"
+	desc = ""
+	icon = 'icons/mob/vore/tails_vr.dmi'
+	icon_state = "alien_slug"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "alien_slug_markings"
+
 /datum/sprite_accessory/tail/invisible
 	name = "hide species-sprite tail"
 	icon = null
@@ -1300,6 +1309,24 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "teshfatfirefly_markings"
+
+/datum/sprite_accessory/tail/synthetic_stilt_legs
+	name = "synthetic stilt-legs, colorable"
+	desc = ""
+	icon_state = "synth_stilts"
+	color_blend_mode = ICON_MULTIPLY
+	do_colouration = 1
+	extra_overlay = "synth_stilts_marking"
+	hide_body_parts = list(BP_L_LEG, BP_L_FOOT, BP_R_LEG, BP_R_FOOT) //Exclude pelvis just in case.
+	clip_mask_icon = 'icons/mob/vore/taurs_vr.dmi'
+	clip_mask_state = "taur_clip_mask_def" //Used to clip off the lower part of suits & uniforms.
+
+/datum/sprite_accessory/tail/blade_like_tail
+	name = "Blade-like Tail"
+	icon = 'icons/mob/vore/tails_vr.dmi'
+	icon_state = "blade-like-tail"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
 
 //LONG TAILS ARE NOT TAUR BUTTS >:O
 /datum/sprite_accessory/tail/longtail
