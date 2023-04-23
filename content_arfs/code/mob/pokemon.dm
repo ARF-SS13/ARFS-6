@@ -501,6 +501,17 @@
 	additional_moves = list(/mob/living/proc/hide)
 	p_traits = list(P_TRAIT_RIDEABLE)
 
+/mob/living/simple_mob/animal/passive/pokemon/flygon
+	name = "flygon"
+	desc = "The flapping of its wings sounds something like singing. Those lured by the sound are enveloped in a sandstorm, becoming Flygon's prey."
+	icon_state = "flygon"
+	icon_living = "flygon"
+	icon_dead = "flygon_d"
+	p_types = list(P_TYPE_GROUND, P_TYPE_DRAGON)
+	additional_moves = list(/mob/living/simple_mob/animal/passive/pokemon/proc/move_fly,
+							/mob/living/simple_mob/animal/passive/pokemon/proc/move_hover)
+	p_traits = list(P_TRAIT_RIDEABLE)
+
 /mob/living/simple_mob/animal/passive/pokemon/furret
 	name = "furret"
 	icon_state = "furret"
@@ -563,6 +574,16 @@
 	icon_dead = "haunter_d"
 	p_types = list(P_TYPE_GHOST, P_TYPE_POISON)
 	additional_moves = list(/mob/living/proc/hide)
+
+/mob/living/simple_mob/animal/passive/pokemon/jirachi
+	name = "jirachi"
+	desc = "Generations have believed that any wish written on a note on its head will come true when it awakens."
+	icon_state = "jirachi"
+	icon_living = "jirachi"
+	icon_dead = "jirachi_d"
+	p_types = list(P_TYPE_STEEL, P_TYPE_PSYCH)
+	additional_moves = list(/mob/living/simple_mob/animal/passive/pokemon/proc/move_fly,
+							/mob/living/simple_mob/animal/passive/pokemon/proc/move_hover)
 
 /mob/living/simple_mob/animal/passive/pokemon/jolteon
 	name = "jolteon"
