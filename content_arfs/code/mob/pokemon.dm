@@ -428,6 +428,12 @@
 	p_traits = list(P_TRAIT_RIDEABLE)
 	mob_size = MOB_LARGE
 
+/mob/living/simple_mob/animal/passive/pokemon/dragonair/shiny
+	name = "shiny dragonair"
+	icon_state = "shinydragonair"
+	icon_living = "shinydragonair"
+	icon_dead = "shinydragonair_d"
+
 /mob/living/simple_mob/animal/passive/pokemon/dragonite
 	name = "dragonite"
 	desc = "It can circle the globe in just 16 hours. It is a kindhearted Pok�mon that leads lost and foundering ships in a storm to the safety of land."
@@ -511,6 +517,7 @@
 	additional_moves = list(/mob/living/simple_mob/animal/passive/pokemon/proc/move_fly,
 							/mob/living/simple_mob/animal/passive/pokemon/proc/move_hover)
 	p_traits = list(P_TRAIT_RIDEABLE)
+	mob_size = MOB_LARGE
 
 /mob/living/simple_mob/animal/passive/pokemon/furret
 	name = "furret"
