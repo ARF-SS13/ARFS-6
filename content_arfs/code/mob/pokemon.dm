@@ -9,7 +9,7 @@
 	icon_dead = "eevee_d"
 	icon_rest = ""
 	desc = "Gotta catch 'em all!"
-	icon = 'content_arfs/icons/mob/mobs/pokemon.dmi'
+	icon = 'content_arfs/icons/mob/pmon/pokemon.dmi'
 	pixel_x = -16
 	default_pixel_x = -16
 	old_x = -16
@@ -46,7 +46,7 @@
 	verbs |= /mob/living/simple_mob/animal/passive/pokemon/proc/move_rest
 	verbs |= /mob/living/proc/set_flavor_text
 	verbs |= /mob/living/proc/set_ooc_notes
-	heal_layer = image("icon" = 'content_arfs/icons/mob/mobs/pokemon_effects.dmi', "icon_state" = "green_sparkles")
+	heal_layer = image("icon" = 'content_arfs/icons/mob/pmon/pokemon_effects.dmi', "icon_state" = "green_sparkles")
 	heal_layer.appearance_flags = RESET_COLOR
 	icon_rest = "[icon_state]_rest"
 	if(!tt_desc)
@@ -293,7 +293,7 @@
 */
 
 /mob/living/simple_mob/animal/passive/pokemon/leg
-	icon = 'content_arfs/icons/mob/mobs/legendary.dmi'
+	icon = 'content_arfs/icons/mob/pmon/legendary.dmi'
 	pixel_x = -32
 	default_pixel_x = -32
 	old_x = -32
@@ -653,7 +653,7 @@
 /mob/living/simple_mob/animal/passive/pokemon/larvitar
 	name = "larvitar"
 	desc = "It is born deep underground. It can't emerge until it has entirely consumed the soil around it."
-	icon = 'content_arfs/icons/mob/mobs/pokemon.dmi'
+	icon = 'content_arfs/icons/mob/pmon/pokemon.dmi'
 	icon_state = "larvitar"
 	icon_living = "larvitar"
 	icon_dead = "larvitar_d"
