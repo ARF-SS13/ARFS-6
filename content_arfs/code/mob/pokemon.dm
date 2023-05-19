@@ -9,7 +9,7 @@
 	icon_dead = "eevee_d"
 	icon_rest = ""
 	desc = "Gotta catch 'em all!"
-	icon = 'content_arfs/icons/mob/mobs/pokemon.dmi'
+	icon = 'content_arfs/icons/mob/pmon/pokemon.dmi'
 	pixel_x = -16
 	default_pixel_x = -16
 	old_x = -16
@@ -46,7 +46,7 @@
 	verbs |= /mob/living/simple_mob/animal/passive/pokemon/proc/move_rest
 	verbs |= /mob/living/proc/set_flavor_text
 	verbs |= /mob/living/proc/set_ooc_notes
-	heal_layer = image("icon" = 'content_arfs/icons/mob/mobs/pokemon_effects.dmi', "icon_state" = "green_sparkles")
+	heal_layer = image("icon" = 'content_arfs/icons/mob/pmon/pokemon_effects.dmi', "icon_state" = "green_sparkles")
 	heal_layer.appearance_flags = RESET_COLOR
 	icon_rest = "[icon_state]_rest"
 	if(!tt_desc)
@@ -293,7 +293,7 @@
 */
 
 /mob/living/simple_mob/animal/passive/pokemon/leg
-	icon = 'content_arfs/icons/mob/mobs/legendary.dmi'
+	icon = 'content_arfs/icons/mob/pmon/legendary.dmi'
 	pixel_x = -32
 	default_pixel_x = -32
 	old_x = -32
@@ -428,6 +428,12 @@
 	p_traits = list(P_TRAIT_RIDEABLE)
 	mob_size = MOB_LARGE
 
+/mob/living/simple_mob/animal/passive/pokemon/dragonair/shiny
+	name = "shiny dragonair"
+	icon_state = "shinydragonair"
+	icon_living = "shinydragonair"
+	icon_dead = "shinydragonair_d"
+
 /mob/living/simple_mob/animal/passive/pokemon/dragonite
 	name = "dragonite"
 	desc = "It can circle the globe in just 16 hours. It is a kindhearted Pok�mon that leads lost and foundering ships in a storm to the safety of land."
@@ -501,6 +507,18 @@
 	additional_moves = list(/mob/living/proc/hide)
 	p_traits = list(P_TRAIT_RIDEABLE)
 
+/mob/living/simple_mob/animal/passive/pokemon/flygon
+	name = "flygon"
+	desc = "The flapping of its wings sounds something like singing. Those lured by the sound are enveloped in a sandstorm, becoming Flygon's prey."
+	icon_state = "flygon"
+	icon_living = "flygon"
+	icon_dead = "flygon_d"
+	p_types = list(P_TYPE_GROUND, P_TYPE_DRAGON)
+	additional_moves = list(/mob/living/simple_mob/animal/passive/pokemon/proc/move_fly,
+							/mob/living/simple_mob/animal/passive/pokemon/proc/move_hover)
+	p_traits = list(P_TRAIT_RIDEABLE)
+	mob_size = MOB_LARGE
+
 /mob/living/simple_mob/animal/passive/pokemon/furret
 	name = "furret"
 	icon_state = "furret"
@@ -564,6 +582,16 @@
 	p_types = list(P_TYPE_GHOST, P_TYPE_POISON)
 	additional_moves = list(/mob/living/proc/hide)
 
+/mob/living/simple_mob/animal/passive/pokemon/jirachi
+	name = "jirachi"
+	desc = "Generations have believed that any wish written on a note on its head will come true when it awakens."
+	icon_state = "jirachi"
+	icon_living = "jirachi"
+	icon_dead = "jirachi_d"
+	p_types = list(P_TYPE_STEEL, P_TYPE_PSYCH)
+	additional_moves = list(/mob/living/simple_mob/animal/passive/pokemon/proc/move_fly,
+							/mob/living/simple_mob/animal/passive/pokemon/proc/move_hover)
+
 /mob/living/simple_mob/animal/passive/pokemon/jolteon
 	name = "jolteon"
 	desc = "Its cells generate weak power that is amplified by its fur's static electricity to drop thunderbolts. The bristling fur is made of electrically charged needles."
@@ -625,7 +653,7 @@
 /mob/living/simple_mob/animal/passive/pokemon/larvitar
 	name = "larvitar"
 	desc = "It is born deep underground. It can't emerge until it has entirely consumed the soil around it."
-	icon = 'content_arfs/icons/mob/mobs/pokemon.dmi'
+	icon = 'content_arfs/icons/mob/pmon/pokemon.dmi'
 	icon_state = "larvitar"
 	icon_living = "larvitar"
 	icon_dead = "larvitar_d"
