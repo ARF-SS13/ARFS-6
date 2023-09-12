@@ -366,41 +366,19 @@
 	ckeywhitelist = list("zugor", "theamazingdaito")
 	character_name = list("Jazmina Wryght", "Jasmine Moon", "Kitsuno Harume")
 
-/obj/item/weapon/card/id/residential/rm42/laria
-	name = "Laria's Key"
-	desc = "A special keycard for residentals RM42 Laria Darlos is written on it."
+/obj/item/weapon/card/id/residential/rm42/kruger
+	name = "Kruger's Key"
+	desc = "A special keycard for residentals RM42 Delta Kruger is written on it. It seems to have bits of pepperoni on it."
 	base_icon = 'icons/obj/card_vr.dmi'
 	icon_state = "itg_purple"
 	access = list(8142)
-	registered_name = "Laria Darlos"
-	age = "35"
-	blood_type = "0-"
-	gender = "plural"
 
-/obj/item/weapon/card/id/residential/rm42/cylus
-	name = "Cylus's Key"
-	desc = "A special keycard for residentals RM42 Cylus Typhon is written on it."
-	registered_name = "Cylus Typhon"
-	age = "32"
-	blood_type = "AB+"
-	access = list(8142)
-	base_icon = 'icons/obj/card_vr.dmi'
-	icon_state = "itg_white"
-	gender = "male"
-
-/datum/gear/fluff/res_key_rm42/laria
-	path = /obj/item/weapon/card/id/residential/rm42/laria
+/datum/gear/fluff/res_key_rm42/kruger
+	path = /obj/item/weapon/card/id/residential/rm42/kruger
 	display_name = "RM42 keycard (Laria Darlos)"
 	description = "A special keycard for residential Room M42"
-	ckeywhitelist = list("laria")
-	character_name = list("Laria Darlos")
-
-/datum/gear/fluff/res_key_rm42/cylus
-	path = /obj/item/weapon/card/id/residential/rm42/cylus
-	display_name = "RM42 keycard (Cylus Typhon)"
-	description = "A special keycard for residential Room M42"
-	ckeywhitelist = list("tinncatt")
-	character_name = list("Cylus Typhon")
+	ckeywhitelist = list("krerkruger")
+	character_name = list("Delta Kruger")
 
 /obj/item/weapon/card/id/residential/mansion
 	name = "Mansion residential key"
@@ -535,7 +513,7 @@
 	display_name = "res level four, room two keys"
 	description = "residential"
 	ckeywhitelist = list("thingpony", "siorkillbow", "cebutris", "dameonowen", "brimcon", "foxyrose", "lukevale", "andyman105", "dwagin")
-	character_name = list("Iris Miller", "Elizabeth Nayala", "Hepsie Mull", "Amber Owen", "Amber", "Scryden Sako", "Emma Miller", "Aiden Miller", "Scarlet Owen", "Luna", "Dameon Owen", "Jake Owen", "Elizabeth Owen", "Elizabeth Sako", "Amber Sako-Sharpe", "Amber Sako", "Scarlet Sako-Sharpe", "Scarlet Sako")
+	character_name = list("Iris Miller", "Elizabeth Nayala", "Hepsie Mull", "Amber Owen", "Amber", "Scryden Sako", "Emma Miller", "Aiden Miller", "Scarlet Owen", "Luna", "Dameon Owen", "Jake Owen")
 
 /datum/gear/fluff/res_key_rb3
 	path = /obj/item/weapon/card/id/residential/rb3
@@ -559,7 +537,7 @@
 	display_name = "Mansion keys"
 	description = "residential"
 	ckeywhitelist = list("andyman105", "dameonowen", "secondattemps", "thingpony", "hagawaga","brimcon", "lukevale", "foxyrose", "dwagin")
-	character_name = list("Dameon Owen", "Amber Owen", "Amber", "Jake Owen", "Lilith Owen", "Iris Miller", "Brian Owen", "Percy Owen", "Ruby Flare", "Zephyr Sharpe", "Peter Sharpe", "Eve", "Ashlyn", "Agalon", "Lana Xavier", "Scryden Sako", "Scarlet Owen", "Luna", "Emma Miller", "Aiden Miller", "Elizabeth Owen", "Elizabeth Sako", "Amber Sako-Sharpe", "Amber Sako", "Scarlet Sako-Sharpe", "Scarlet Sako")
+	character_name = list("Dameon Owen", "Amber Owen", "Amber", "Jake Owen", "Lilith Owen", "Iris Miller", "Brian Owen", "Percy Owen", "Ruby Flare", "Zephyr Sharpe", "Peter Sharpe", "Eve", "Ashlyn", "Agalon", "Lana Xavier", "Scryden Sako", "Scarlet Owen", "Luna","Emma Miller", "Aiden Miller")
 
 //Master Key. Why wasn't this made before? So much easier!
 
