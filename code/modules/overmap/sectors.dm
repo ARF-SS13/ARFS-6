@@ -12,10 +12,15 @@
 	var/known = TRUE
 	/// Name prior to being scanned if !known
 	var/unknown_name = "unknown sector"
-	var/real_name
+	var/real_name // Used for late-load overmap ship distress beacons and scan_data for lateload/vvar'd scannable overmap objects
 	var/real_desc
 	/// Icon_state prior to being scanned if !known
 	var/unknown_state = "field"
+	//Set to null. Exists only for admins/GMs when spawning overmap objects.
+	//We need these as normal functionality relies on initial() which do not work at all with GM shenanigans.
+	var/real_icon //Holds the .dmi file for icon_state to pick from. Leave null if using standard overmap.dmi
+	var/real_icon_state //actual icon name to be used. Find examples inside 'icons/obj/overmap.dmi'
+	var/real_color
 
 	var/list/map_z = list()
 	var/list/extra_z_levels //if you need to manually insist that these z-levels are part of this sector, for things like edge-of-map step trigger transitions rather than multi-z complexes
@@ -84,6 +89,19 @@
 	//at the moment only used for the OM location renamer. Initializing here in case we want shuttles incl as well in future. Also proc definition convenience.
 	visitable_overmap_object_instances |= src
 
+//To be used by GMs and calling through var edits for the overmap object
+//It causes the overmap object to "reinitialize" its real_appearance for known = FALSE objects
+//Includes an argument that allows GMs/Admins to set a previously known sector to unknown. Set to any value except 0/False/Null to activate
+/obj/effect/overmap/visitable/proc/gmtools_update_omobject_vars(var/setToHidden)
+	real_appearance = image(real_icon, src, real_icon_state)
+	real_appearance.override = TRUE
+	if(setToHidden && known) //
+		name = unknown_name
+		icon = 'icons/obj/overmap.dmi'
+		icon_state = unknown_state
+		color = null
+		desc = "Scan this to find out more information."
+		known = FALSE
 
 
 // You generally shouldn't destroy these.
@@ -137,16 +155,12 @@
 /obj/effect/overmap/visitable/get_scan_data()
 	if(!known)
 		known = TRUE
-		if(real_name)
-			name = real_name
-		else
-			name = initial(name)
-		icon_state = initial(icon_state)
-		color = initial(color)
-		if(real_desc)
-			desc = real_desc
-		else
-			desc = initial(desc)
+		name = (real_name ? real_name : initial(name))
+		color = (real_color ? real_color : initial(color))
+		desc = (real_desc ? real_desc : initial(desc))
+		if(real_icon)  //Only true if GMs/Admins want a non-standard icon from outside 'icons/obj/overmap.dmi'
+			icon = real_icon
+		icon_state = (real_icon_state ? real_icon_state : initial(icon_state))
 	return ..()
 
 /obj/effect/overmap/visitable/proc/get_space_zlevels()
@@ -228,7 +242,7 @@
 
 	admin_chat_message(message = "Overmap panic button hit on z[z] ([name]) by '[user?.ckey || "Unknown"]'", color = "#FF2222") //VOREStation Add
 	var/message = "This is an automated distress signal from a MIL-DTL-93352-compliant beacon transmitting on [PUB_FREQ*0.1]kHz. \
-	This beacon was launched from '[initial(name)]'. I can provide this additional information to rescuers: [get_distress_info()]. \
+	This beacon was launched from '[real_name ? real_name : initial(name)]'. I can provide this additional information to rescuers: [get_distress_info()]. \
 	Per the Interplanetary Convention on Space SAR, those receiving this message must attempt rescue, \
 	or relay the message to those who can. This message will repeat one time in 5 minutes. Thank you for your urgent assistance."
 
@@ -242,14 +256,14 @@
 	I.appearance_flags = KEEP_APART|RESET_TRANSFORM|RESET_COLOR
 	add_overlay(I)
 
-	addtimer(CALLBACK(src, .proc/distress_update), 5 MINUTES)
+	addtimer(CALLBACK(src, PROC_REF(distress_update)), 5 MINUTES)
 	return TRUE
 
 /obj/effect/overmap/visitable/proc/get_distress_info()
 	return "\[X:[x], Y:[y]\]"
 
 /obj/effect/overmap/visitable/proc/distress_update()
-	var/message = "This is the final message from the distress beacon launched from '[initial(name)]'. I can provide this additional information to rescuers: [get_distress_info()]. \
+	var/message = "This is the final message from the distress beacon launched from '[real_name ? real_name : initial(name)]'. I can provide this additional information to rescuers: [get_distress_info()]. \
 	Please render assistance under your obligations per the Interplanetary Convention on Space SAR, or relay this message to a party who can. Thank you for your urgent assistance."
 
 	for(var/zlevel in levels_for_distress)

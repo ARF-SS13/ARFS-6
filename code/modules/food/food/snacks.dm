@@ -42,23 +42,45 @@
 	/// Canned food switch to this state when opened, if set
 	var/canned_open_state
 
+	/// For packaged/canned food sounds
+	var/opening_sound = null
+	/// Sound of eating.
+	var/eating_sound = 'sound/items/eatfood.ogg'
+
+	/// Yems.
+	food_can_insert_micro = TRUE
+
 /obj/item/weapon/reagent_containers/food/snacks/Initialize()
 	. = ..()
 	if(nutriment_amt)
-		reagents.add_reagent("nutriment",(nutriment_amt*2),nutriment_desc)		//VOREStation Edit: Undoes global nutrition nerf
+		reagents.add_reagent("nutriment",(nutriment_amt*2),nutriment_desc)
 
 //Placeholder for effect that trigger on eating that aren't tied to reagents.
 /obj/item/weapon/reagent_containers/food/snacks/proc/On_Consume(var/mob/living/M)
 	if(!usr) // what
 		usr = M
+
+	if(food_inserted_micros && food_inserted_micros.len)
+		if(M.can_be_drop_pred && M.food_vore && M.vore_selected)
+			for(var/mob/living/F in food_inserted_micros)
+				if(!F.can_be_drop_prey || !F.food_vore)
+					continue
+
+				var/do_nom = FALSE
+
+				if(!reagents.total_volume)
+					do_nom = TRUE
+				else
+					var/nom_chance = (bitecount/(bitecount + (bitesize / reagents.total_volume) + 1))*100
+					if(prob(nom_chance))
+						do_nom = TRUE
+
+				if(do_nom)
+					F.forceMove(M.vore_selected)
+					food_inserted_micros -= F
+
 	if(!reagents.total_volume)
 		M.visible_message("<span class='notice'>[M] finishes eating \the [src].</span>","<span class='notice'>You finish eating \the [src].</span>")
-		// Embedded-in-food smol vore
-		for(var/obj/item/weapon/holder/holder in src)
-			if(holder.held_mob?.devourable)
-				holder.held_mob.forceMove(M.vore_selected)
-				holder.held_mob = null
-				qdel(holder)
 
 		usr.drop_from_inventory(src) // Drop food from inventory so it doesn't end up staying on the hud after qdel, and so inhands go away
 
@@ -111,7 +133,6 @@
 					return
 
 			user.setClickCooldown(user.get_attack_speed(src)) //puts a limit on how fast people can eat/drink things
-			//VOREStation Edit Begin
 			if (fullness <= 50)
 				to_chat(M, "<span class='danger'>You hungrily chew out a piece of [src] and gobble it!</span>")
 			if (fullness > 50 && fullness <= 150)
@@ -133,7 +154,6 @@
 			if (fullness > 6000) // There has to be a limit eventually.
 				to_chat(M, "<span class='danger'>Your stomach blorts and aches, prompting you to stop. You literally cannot force any more of [src] to go down your throat.</span>")
 				return 0
-			//VOREStation Edit End
 
 		else if(user.a_intent == I_HURT)
 			return ..()
@@ -205,7 +225,7 @@
 			forceMove(belly_target)
 			return 1
 		else if(reagents)								//Handle ingestion of the reagent.
-			playsound(M,'sound/items/eatfood.ogg', rand(10,50), 1)
+			playsound(M, eating_sound, rand(10,50), 1)
 			if(reagents.total_volume)
 				if(reagents.total_volume > bitesize)
 					reagents.trans_to_mob(M, bitesize, CHEM_INGEST)
@@ -220,6 +240,8 @@
 /obj/item/weapon/reagent_containers/food/snacks/examine(mob/user)
 	. = ..()
 	if(Adjacent(user))
+		if(food_inserted_micros && food_inserted_micros.len)
+			. += "<span class='notice'>It has [english_list(food_inserted_micros)] stuck in it.</span>"
 		if(coating)
 			. += "<span class='notice'>It's coated in [coating.name]!</span>"
 		if(bitecount==0)
@@ -242,13 +264,40 @@
 		U.load_food(user, src)
 		return
 
+	if(food_can_insert_micro && istype(W, /obj/item/weapon/holder))
+		if(!(istype(W, /obj/item/weapon/holder/micro) || istype(W, /obj/item/weapon/holder/mouse)))
+			. = ..()
+			return
+
+		if(package || canned)
+			to_chat(user, "<span class='warning'>You cannot stuff anything into \the [src] without opening it first.</span>")
+			return
+
+		var/obj/item/weapon/holder/H = W
+
+		if(!food_inserted_micros)
+			food_inserted_micros = list()
+
+		var/mob/living/M = H.held_mob
+
+		M.forceMove(src)
+		H.held_mob = null
+		user.drop_from_inventory(H)
+		qdel(H)
+
+		food_inserted_micros += M
+
+		to_chat(user, "<span class='warning'>You stuff [M] into \the [src].</span>")
+		to_chat(M, "<span class='warning'>[user] stuffs you into \the [src].</span>")
+		return
+
 	if (is_sliceable())
 		//these are used to allow hiding edge items in food that is not on a table/tray
 		var/can_slice_here = isturf(src.loc) && ((locate(/obj/structure/table) in src.loc) || (locate(/obj/machinery/optable) in src.loc) || (locate(/obj/item/weapon/tray) in src.loc))
 		var/hide_item = !has_edge(W) || !can_slice_here
 
 		if (hide_item)
-			if (W.w_class >= src.w_class || is_robot_module(W))
+			if (W.w_class >= src.w_class || is_robot_module(W) || istype(W, /obj/item/weapon/holder))
 				return
 
 			to_chat(user, "<span class='warning'>You slip \the [W] inside \the [src].</span>")
@@ -273,8 +322,31 @@
 			for(var/i=1 to (slices_num-slices_lost))
 				var/obj/slice = new slice_path (src.loc)
 				reagents.trans_to_obj(slice, reagents_per_slice)
+				if(food_inserted_micros && food_inserted_micros.len && istype(slice, /obj/item/weapon/reagent_containers/food/snacks))
+					var/obj/item/weapon/reagent_containers/food/snacks/S = slice
+					for(var/mob/living/F in food_inserted_micros)
+						F.forceMove(S)
+						if(!S.food_inserted_micros)
+							S.food_inserted_micros = list()
+						S.food_inserted_micros += F
+						food_inserted_micros -= F
+
 			qdel(src)
 			return
+
+/obj/item/weapon/reagent_containers/food/snacks/MouseDrop_T(mob/living/M, mob/user)
+	if(!user.stat && istype(M) && (M == user) && Adjacent(M) && (M.get_effective_size(TRUE) <= 0.50) && food_can_insert_micro)
+		if(!food_inserted_micros)
+			food_inserted_micros = list()
+
+		M.forceMove(src)
+
+		food_inserted_micros += M
+
+		to_chat(user, "<span class='warning'>You climb into \the [src].</span>")
+		return
+
+	return ..()
 
 /obj/item/weapon/reagent_containers/food/snacks/proc/is_sliceable()
 	return (slices_num && slice_path && slices_num > 0)
@@ -283,6 +355,8 @@
 	if(contents)
 		for(var/atom/movable/something in contents)
 			something.dropInto(loc)
+			if(food_inserted_micros && (something in food_inserted_micros))
+				food_inserted_micros -= something
 	. = ..()
 
 	return
@@ -290,7 +364,7 @@
 /obj/item/weapon/reagent_containers/food/snacks/proc/unpackage(mob/user)
 	package = FALSE
 	to_chat(user, "<span class='notice'>You unwrap [src].</span>")
-	playsound(user,'sound/effects/packagedfoodopen.ogg', 15, 1)
+	playsound(user,opening_sound, 15, 1)
 	if(package_trash)
 		var/obj/item/T = new package_trash
 		user.put_in_hands(T)
@@ -302,7 +376,7 @@
 /obj/item/weapon/reagent_containers/food/snacks/proc/uncan(mob/user)
 	canned = FALSE
 	to_chat(user, "<span class='notice'>You unseal \the [src] with a crack of metal.</span>")
-	playsound(loc,'sound/effects/tincanopen.ogg', rand(10,50), 1)
+	playsound(loc,opening_sound, rand(10,50), 1)
 	if(canned_open_state)
 		icon_state = canned_open_state
 
@@ -557,6 +631,7 @@
 /obj/item/weapon/reagent_containers/food/snacks/donut/choc/Initialize()
 	. = ..()
 	reagents.add_reagent("nutriment", 3, nutriment_desc)
+	reagents.add_reagent("chocolate", 5)
 
 /obj/item/weapon/reagent_containers/food/snacks/donut/choc/jelly
 	name = "chocolate frosted jelly donut"
@@ -566,6 +641,7 @@
 	. = ..()
 	reagents.add_reagent("nutriment", 3, nutriment_desc)
 	reagents.add_reagent("berryjuice", 5)
+	reagents.add_reagent("chocolate", 5)
 
 /obj/item/weapon/reagent_containers/food/snacks/donut/blue
 	name = "blue frosted donut"
@@ -650,6 +726,7 @@
 	. = ..()
 	reagents.add_reagent("nutriment", 3, nutriment_desc)
 	reagents.add_reagent("sprinkles", 1)
+	reagents.add_reagent("chocolate", 1)
 
 /obj/item/weapon/reagent_containers/food/snacks/donut/choc_sprinkles/jelly
 	name = "chocolate sprinkles jelly donut"
@@ -660,6 +737,7 @@
 	reagents.add_reagent("nutriment", 3, nutriment_desc)
 	reagents.add_reagent("sprinkles", 1)
 	reagents.add_reagent("berryjuice", 5)
+	reagents.add_reagent("chocolate", 1)
 
 /obj/item/weapon/reagent_containers/food/snacks/donut/meat
 	name = "meat donut"
@@ -910,6 +988,18 @@
 	filling_color = "#2c2cff"
 	color = "#2c2cff"
 
+/obj/item/weapon/reagent_containers/food/snacks/carpmeat/ray
+	desc = "A fillet of space ray meat."
+	toxin_type = "stoxin"
+
+/obj/item/weapon/reagent_containers/food/snacks/carpmeat/gnat
+	desc = "A paltry sample of space-gnat meat. It looks pretty stringy and unpleasant, honestly."
+	toxin_amount = 1
+
+/obj/item/weapon/reagent_containers/food/snacks/carpmeat/shark
+	desc = "A fillet of space shark meat. It looks rather tough and chewy."
+	toxin_amount = 5
+
 /obj/item/weapon/reagent_containers/food/snacks/crab_legs
 	name = "steamed crab legs"
 	desc = "Crab legs steamed and buttered to perfection. One day when the boss gets hungry..."
@@ -1079,7 +1169,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/donkpocket/teriyaki
 	name = "\improper Teriyaki-pocket"
-	desc = "An east-asian take on the classic stationside snack."
+	desc = "An east-Asian take on the classic stationside snack."
 	icon_state = "donkpocketteriyaki"
 	nutriment_amt = 2
 	nutriment_desc = list("meat" = 1, "dough" = 2, "soy sauce" = 2)
@@ -1134,7 +1224,7 @@
 	has_been_heated = 1
 	user.visible_message("<span class='notice'>[user] crushes \the [src] package.</span>", "You crush \the [src] package and feel a comfortable heat build up. Now just to wait for it to be ready.")
 	spawn(200)
-		if(src)
+		if(!QDELETED(src))
 			if(src.loc == user)
 				to_chat(user, "You think \the [src] is ready to eat about now.")
 			heat()
@@ -1777,6 +1867,7 @@
 	H.set_species(monkey_type)
 	H.real_name = H.species.get_random_name()
 	H.name = H.real_name
+	H.low_sorting_priority = TRUE
 	if(ismob(loc))
 		var/mob/M = loc
 		M.unEquip(src)
@@ -2063,7 +2154,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/meatballspagetti
 	name = "Spaghetti & Meatballs"
-	desc = "Now thats a nic'e meatball!"
+	desc = "Now that's a nic'e meatball!"
 	icon_state = "meatballspagetti"
 	trash = /obj/item/trash/plate
 	filling_color = "#DE4545"
@@ -2078,7 +2169,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/spesslaw
 	name = "Spesslaw"
-	desc = "A lawyers favourite"
+	desc = "A lawyer's favourite"
 	icon_state = "spesslaw"
 	filling_color = "#DE4545"
 	center_of_mass = list("x"=16, "y"=10)
@@ -3560,7 +3651,7 @@
 	slice_path = /obj/item/weapon/reagent_containers/food/snacks/slice/meatpizza
 	slices_num = 6
 	center_of_mass = list("x"=16, "y"=11)
-	nutriment_desc = list("pizza crust" = 10, "tomato" = 10, "cheese" = 15)
+	nutriment_desc = list("pizza crust" = 10, "tomato" = 10, "cheese" = 15, "meat" = 10)
 	nutriment_amt = 10
 	bitesize = 2
 
@@ -4759,8 +4850,8 @@
 	var/composition_reagent
 	var/composition_reagent_quantity
 
-/mob/living/simple_mob/adultslime
-	composition_reagent = "slimejelly"
+///mob/living/simple_mob/adultslime	//The literal only thing in the game that uses this is commented out, so I comment out this too
+//	composition_reagent = "slimejelly"
 
 /mob/living/carbon/alien/diona
 	composition_reagent = "nutriment"//Dionae are plants, so eating them doesn't give animal protein
@@ -6120,6 +6211,7 @@
 	filling_color = "#552200"
 	icon = 'icons/obj/food_snacks.dmi'
 	icon_state = "cb01"
+	trash = /obj/item/trash/candy/cb01
 	nutriment_amt = 4
 	nutriment_desc = list("stale chocolate" = 2, "nougat" = 1, "caramel" = 1)
 	w_class = 1
@@ -6136,6 +6228,7 @@
 	filling_color = "#552200"
 	icon = 'icons/obj/food_snacks.dmi'
 	icon_state = "cb02"
+	trash = /obj/item/trash/candy/cb02
 	nutriment_amt = 4
 	nutriment_desc = list("chocolate" = 2, "caramel" = 1, "puffed rice" = 1)
 	w_class = 1
@@ -6152,6 +6245,7 @@
 	filling_color = "#552200"
 	icon = 'icons/obj/food_snacks.dmi'
 	icon_state = "cb03"
+	trash = /obj/item/trash/candy/cb03
 	nutriment_amt = 4
 	nutriment_desc = list("chocolate" = 4)
 	w_class = 1
@@ -6168,6 +6262,7 @@
 	filling_color = "#552200"
 	icon = 'icons/obj/food_snacks.dmi'
 	icon_state = "cb04"
+	trash = /obj/item/trash/candy/cb04
 	nutriment_amt = 4
 	nutriment_desc = list("chocolate" = 2, "salt = 1", "licorice" = 1)
 	w_class = 1
@@ -6184,6 +6279,7 @@
 	filling_color = "#552200"
 	icon = 'icons/obj/food_snacks.dmi'
 	icon_state = "cb05"
+	trash = /obj/item/trash/candy/cb05
 	nutriment_amt = 3
 	nutriment_desc = list("milk chocolate" = 2)
 	w_class = 1
@@ -6200,6 +6296,7 @@
 	filling_color = "#552200"
 	icon = 'icons/obj/food_snacks.dmi'
 	icon_state = "cb06"
+	trash = /obj/item/trash/candy/cb06
 	nutriment_amt = 4
 	nutriment_desc = list("chocolate" = 2, "coffee" = 1, "vanilla wafer" = 1)
 	w_class = 1
@@ -6217,6 +6314,7 @@
 	filling_color = "#552200"
 	icon = 'icons/obj/food_snacks.dmi'
 	icon_state = "cb07"
+	trash = /obj/item/trash/candy/cb07
 	nutriment_amt = 4
 	nutriment_desc = list("chocolate" = 2, "taro" = 2)
 	w_class = 1
@@ -6233,6 +6331,7 @@
 	filling_color = "#552200"
 	icon = 'icons/obj/food_snacks.dmi'
 	icon_state = "cb08"
+	trash = /obj/item/trash/candy/cb08
 	nutriment_amt = 3
 	nutriment_desc = list("chocolate" = 2, "malt puffs" = 1)
 	w_class = 1
@@ -6249,6 +6348,7 @@
 	filling_color = "#552200"
 	icon = 'icons/obj/food_snacks.dmi'
 	icon_state = "cb09"
+	trash = /obj/item/trash/candy/cb09
 	nutriment_amt = 6
 	nutriment_desc = list("peanuts" = 3, "condensed milk" = 1, "cashews" = 2)
 	w_class = 1
@@ -6267,6 +6367,7 @@
 	filling_color = "#552200"
 	icon = 'icons/obj/food_snacks.dmi'
 	icon_state = "cb10"
+	trash = /obj/item/trash/candy/cb10
 	nutriment_amt = 5
 	nutriment_desc = list("chocolate" = 2, "caramel" = 1, "peanuts" = 1, "nougat" = 1)
 	w_class = 1
@@ -6810,6 +6911,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/canned
 	icon = 'icons/obj/food_canned.dmi'
+	opening_sound = 'sound/effects/tincanopen.ogg'
 	canned = TRUE
 
 //////////Just a short line of Canned Consumables, great for treasure in faraway abandoned outposts//////////
@@ -6962,7 +7064,7 @@
 	desc = "A can of grey matter marketed for xenochimeras."
 	description_fluff = "As the cartoon brain with limbs proudly proclaims, \"It's meat. Eat it!\" On the can is printed \"Rich in limbic system\" and \
 	under that in infinitely small letters, \"Warning, product must be eaten within two hours of opening. May contain prion disease. \
-	GrubCo LTD is not liable for any brain damage occuring after consumption of product.\""
+	GrubCo LTD is not liable for any brain damage occurring after consumption of product.\""
 	trash = /obj/item/trash/brainzsnax
 	canned_open_state = "brainzsnax-open"
 	filling_color = "#caa3c9"
@@ -6980,7 +7082,7 @@
 	desc = "A can of grey matter marketed for xenochimeras. This one has added tomato sauce."
 	description_fluff = "As the cartoonish brain with limbs proudly proclaims, \"It's meat. Eat it!\" On the can is printed \"Yummy red stuff!\" and \
 	under that in infinitely small letters, \"Warning, product must be eaten within two hours of opening. May contain prion disease. \
-	GrubCo LTD is not liable for any brain damage occuring after consumption of product.\""
+	GrubCo LTD is not liable for any brain damage occurring after consumption of product.\""
 	trash = /obj/item/trash/brainzsnaxred
 	canned_open_state = "brainzsnaxred-open"
 	filling_color = "#a6898d"
@@ -6992,6 +7094,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/packaged
 	icon = 'icons/obj/food_package.dmi'
+	opening_sound = 'sound/effects/packagedfoodopen.ogg'
 	package = TRUE
 
 //////////////Lunar Cakes - proof of concept//////////////

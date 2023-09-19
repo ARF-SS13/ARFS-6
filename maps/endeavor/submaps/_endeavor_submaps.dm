@@ -286,7 +286,7 @@
 	prob_fall = 50
 	guard = 20
 	mobs_to_pick_from = list(
-		/mob/living/simple_mob/animal/space/jelly = 3,
+		/mob/living/simple_mob/vore/jelly = 3,
 		/mob/living/simple_mob/animal/giant_spider/hunter = 1,
 		/mob/living/simple_mob/animal/giant_spider/phorogenic = 1,
 		/mob/living/simple_mob/animal/giant_spider/lurker = 1,

@@ -70,9 +70,14 @@
 /**
  * Resizes the mob immediately to the desired mod, animating it growing/shrinking.
  * It can be used by anything that calls it.
+ *
+ * Arguments:
+ * * new_size - CHANGE_ME.
+ * * animate - CHANGE_ME. Default: TRUE
+ * * uncapped - CHANGE_ME. Default: FALSE
+ * * ignore_prefs - CHANGE_ME. Default: FALSE
+ * * aura_animation - CHANGE_ME. Default: TRUE
  */
-
-
 /mob/living/proc/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE, var/aura_animation = TRUE)
 	if(!uncapped)
 		new_size = clamp(new_size, RESIZE_MINIMUM, RESIZE_MAXIMUM)
@@ -166,7 +171,7 @@
  * Attempt to scoop up this mob up into H's hands, if the size difference is large enough.
  * @return false if normal code should continue, 1 to prevent normal code.
  */
-/mob/living/proc/attempt_to_scoop(mob/living/M, mob/living/G) //second one is for the Grabber, only exists for animals to self-grab
+/mob/living/proc/attempt_to_scoop(mob/living/M, mob/living/G, ignore_size = FALSE) //second one is for the Grabber, only exists for animals to self-grab
 	if(!(pickup_pref && M.pickup_pref && M.pickup_active))
 		return 0
 	if(!(M.a_intent == I_HELP))
@@ -180,7 +185,7 @@
 		var/mob/living/simple_mob/SA = M
 		if(!SA.has_hands)
 			return 0
-	if(size_diff >= 0.50 || mob_size < MOB_SMALL || size_diff >= get_effective_size())
+	if(size_diff >= 0.50 || mob_size < MOB_SMALL || size_diff >= get_effective_size() || ignore_size)
 		if(buckled)
 			to_chat(usr,"<span class='notice'>You have to unbuckle \the [src] before you pick them up.</span>")
 			return 0

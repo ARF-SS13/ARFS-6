@@ -72,6 +72,7 @@
 	species_language = LANGUAGE_UNATHI
 	health_hud_intensity = 2.5
 	chem_strength_alcohol = 0.75
+	throwforce_absorb_threshold = 10
 
 	min_age = 32
 	max_age = 260
@@ -313,6 +314,7 @@
 	flash_mod = 1.2
 	chemOD_mod = 0.9
 
+	blood_reagents = "copper"
 	bloodloss_rate = 1.5
 
 	ambiguous_genders = TRUE
@@ -403,6 +405,7 @@
 	name_language = LANGUAGE_ZADDAT
 	species_language = LANGUAGE_ZADDAT
 	health_hud_intensity = 2.5
+	throwforce_absorb_threshold = 5
 
 	minimum_breath_pressure = 20 //have fun with underpressures. any higher than this and they'll be even less suitible for life on the station
 
@@ -518,6 +521,7 @@
 	health_hud_intensity = 2.5
 	item_slowdown_mod = 0.1
 	chem_strength_alcohol = 0
+	throwforce_absorb_threshold = 5
 
 	num_alternate_languages = 3
 	name_language = LANGUAGE_ROOTLOCAL

@@ -697,7 +697,8 @@
 	//VOREStation Edit Start - Making it so SSD people have prefs with fallback to original style.
 	if(config.allow_Metadata)
 		if(ooc_notes)
-			to_chat(usr, "<span class='filter_notice'>[src]'s Metainfo:<br>[ooc_notes]</span>")
+			ooc_notes_window(usr)
+//			to_chat(usr, "<span class='filter_notice'>[src]'s Metainfo:<br>[ooc_notes]</span>")
 		else if(client)
 			to_chat(usr, "<span class='filter_notice'>[src]'s Metainfo:<br>[client.prefs.metadata]</span>")
 		else
@@ -1260,7 +1261,7 @@
 
 /datum/component/character_setup/RegisterWithParent()
 	. = ..()
-	RegisterSignal(parent, COMSIG_MOB_CLIENT_LOGIN, .proc/create_mob_button)
+	RegisterSignal(parent, COMSIG_MOB_CLIENT_LOGIN, PROC_REF(create_mob_button))
 	var/mob/owner = parent
 	if(owner.client)
 		create_mob_button(parent)
@@ -1278,7 +1279,7 @@
 	var/datum/hud/HUD = user.hud_used
 	if(!screen_icon)
 		screen_icon = new()
-		RegisterSignal(screen_icon, COMSIG_CLICK, .proc/character_setup_click)
+		RegisterSignal(screen_icon, COMSIG_CLICK, PROC_REF(character_setup_click))
 	if(ispAI(user))
 		screen_icon.icon = 'icons/mob/pai_hud.dmi'
 		screen_icon.screen_loc = ui_acti

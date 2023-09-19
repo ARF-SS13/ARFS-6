@@ -8,15 +8,16 @@
 
 /obj/machinery/door/airlock
 	name = "Airlock"
+	description_info = "If you hold left alt whilst left-clicking on an airlock, you can ring the doorbell to announce your presence to anyone on the other side! Alternately if you are on HARM intent when doing this, you will bang loudly on the door!<br><br>AIs and Cyborgs can also quickly open/close, bolt/unbolt, and electrify/de-electrify doors at a distance by holding left shift, left control, or left alt respectively whilst left-clicking."
 	icon = 'icons/obj/doors/Doorint.dmi'
 	icon_state = "door_closed"
 	power_channel = ENVIRON
 
 	explosion_resistance = 10
-	
+
 	// Doors do their own stuff
 	bullet_vulnerability = 0
-	
+
 	blocks_emissive = EMISSIVE_BLOCK_GENERIC // Not quite as nice as /tg/'s custom masks. We should make those sometime
 
 	var/aiControlDisabled = 0 //If 1, AI control is disabled until the AI hacks back in and disables the lock. If 2, the AI has bypassed the lock. If -1, the control is enabled but the AI had bypassed it earlier, so if it is disabled again the AI would have no trouble getting back in.
@@ -1157,12 +1158,15 @@ About the new airlock wires panel:
 			if (stat & BROKEN)
 				to_chat(usr, "<span class='warning'>The panel is broken and cannot be closed.</span>")
 			else
-				src.p_open = 0
+				src.p_open = FALSE
 				playsound(src, C.usesound, 50, 1)
+				src.update_icon()
+				return
 		else
-			src.p_open = 1
+			src.p_open = TRUE
 			playsound(src, C.usesound, 50, 1)
-		src.update_icon()
+			src.update_icon()
+			return src.attack_hand(user)
 	else if(C.is_wirecutter())
 		return src.attack_hand(user)
 	else if(istype(C, /obj/item/device/multitool))
@@ -1245,7 +1249,7 @@ About the new airlock wires panel:
 	..()
 
 /obj/machinery/door/airlock/set_broken()
-	src.p_open = 1
+	src.p_open = TRUE
 	stat |= BROKEN
 	if (secured_wires)
 		lock()
