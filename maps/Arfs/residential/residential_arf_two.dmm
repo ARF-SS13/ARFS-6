@@ -846,7 +846,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "aQQ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -1016,7 +1016,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/bmarble,
+/obj/effect/floor_decal/corner/orange/diagonal,
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/residential/mroom42)
 "aXu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -1133,11 +1134,13 @@
 /turf/simulated/floor/wood,
 /area/residential/mroom12_longue)
 "bex" = (
-/obj/structure/table/wooden_reinforced,
-/obj/item/modular_computer/laptop/preset/custom_loadout/hybrid,
-/turf/simulated/floor/wood{
-	plane = -44
+/obj/random/trash_pile,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/trash/liquidprotein,
+/obj/item/wheelchair{
+	pixel_x = -11
 	},
+/turf/simulated/floor/carpet/brown,
 /area/residential/mroom42_bed_2)
 "bfF" = (
 /obj/structure/coatrack,
@@ -1582,7 +1585,7 @@
 	pixel_y = -25
 	},
 /obj/machinery/light,
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "bBW" = (
 /obj/structure/table/woodentable,
@@ -2138,7 +2141,6 @@
 	dir = 1;
 	icon_state = "0-2"
 	},
-/obj/structure/fitness/weightlifter,
 /turf/simulated/floor/wood{
 	plane = -44
 	},
@@ -2194,7 +2196,8 @@
 	density = 0;
 	pixel_y = 10
 	},
-/turf/simulated/floor/bmarble,
+/obj/effect/floor_decal/corner/orange/diagonal,
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/residential/mroom42)
 "cpB" = (
 /obj/machinery/light{
@@ -2383,6 +2386,10 @@
 	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/residential/mroom9)
+"cxG" = (
+/obj/item/toy/plushie/therapy/orange,
+/turf/simulated/floor/grass,
+/area/residential/mroom42pet_room)
 "czp" = (
 /obj/structure/dancepole,
 /obj/machinery/floor_light{
@@ -2483,15 +2490,9 @@
 /turf/simulated/floor/grass,
 /area/residential/mroom9)
 "cDu" = (
-/obj/structure/closet/secure_closet/miner{
-	req_access = list(8142)
-	},
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/item/clothing/accessory/storage/bluespace,
-/obj/item/weapon/cell/hyper,
-/obj/item/weapon/storage/backpack/dufflebag/syndie,
 /turf/simulated/floor/wood{
 	plane = -44
 	},
@@ -2522,12 +2523,6 @@
 /turf/simulated/floor/tiled/white,
 /area/residential/mroom11)
 "cGe" = (
-/obj/machinery/door/airlock{
-	id_tag = "rm42_main";
-	name = "RM42";
-	req_access = list(8142)
-	},
-/obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 9
 	},
@@ -3093,7 +3088,8 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
-/turf/simulated/floor/bmarble,
+/obj/effect/floor_decal/corner/orange/diagonal,
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/residential/mroom42)
 "diY" = (
 /obj/structure/bed/chair/bar_stool,
@@ -3216,7 +3212,7 @@
 	layer = 4;
 	pixel_y = 32
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "drc" = (
 /obj/structure/table/bench/padded,
@@ -3435,6 +3431,12 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 6
 	},
+/obj/machinery/door/firedoor/multi_tile{
+	dir = 2
+	},
+/obj/machinery/door/airlock/multi_tile/metal{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/residential/mroom42)
 "dEE" = (
@@ -3530,7 +3532,8 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/turf/simulated/floor/bmarble,
+/obj/effect/floor_decal/corner/orange/diagonal,
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/residential/mroom42)
 "dGG" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -4223,11 +4226,6 @@
 /turf/simulated/floor/tiled/kafel_full/purple,
 /area/residential/lobby)
 "ejV" = (
-/obj/machinery/door/airlock{
-	id_tag = "rm42_main";
-	name = "RM42";
-	req_access = list(8142)
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -4243,9 +4241,15 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 10
+	},
+/obj/machinery/door/firedoor/multi_tile{
+	dir = 2
+	},
+/obj/machinery/door/airlock/multi_tile/metal{
+	dir = 1;
+	name = "Delta's Residence"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/residential/corridors)
@@ -4401,7 +4405,8 @@
 	pixel_x = 6;
 	pixel_y = 6
 	},
-/turf/simulated/floor/bmarble,
+/obj/effect/floor_decal/corner/orange/diagonal,
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/residential/mroom42)
 "eqN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -4617,7 +4622,7 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "eFk" = (
 /obj/structure/disposalpipe/segment{
@@ -4838,11 +4843,13 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/door/airlock/silver,
+/obj/machinery/door/airlock/silver{
+	name = "Spare Bedroom"
+	},
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42_bed_3)
 "eUp" = (
 /obj/structure/closet/secure_closet/freezer/fridge{
@@ -4874,7 +4881,8 @@
 /obj/item/weapon/reagent_containers/food/snacks/meat,
 /obj/item/weapon/reagent_containers/food/snacks/meat,
 /obj/item/weapon/reagent_containers/food/snacks/meat,
-/turf/simulated/floor/bmarble,
+/obj/effect/floor_decal/corner/orange/diagonal,
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/residential/mroom42)
 "eUz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -5401,7 +5409,8 @@
 	name = "\improper Residential - Medium Room 15 bedroom"
 	})
 "ftI" = (
-/turf/simulated/floor/bmarble,
+/obj/effect/floor_decal/corner/orange/diagonal,
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/residential/mroom42)
 "ftR" = (
 /obj/structure/disposalpipe/segment{
@@ -5500,29 +5509,7 @@
 /turf/simulated/floor/wood,
 /area/residential/corridors)
 "fyx" = (
-/obj/item/clothing/under/permit,
-/obj/item/clothing/under/fluff/gnshorts,
-/obj/item/clothing/accessory/storage/black_drop_pouches,
-/obj/item/weapon/sextoy/dildo/analbeads{
-	attack_verb = list("beadwhips","beads","offers a prayer");
-	desc = "A set up pink beads on a small, light pink string. It seems perfect for saving your ass!";
-	force = -1;
-	name = "Prayer Beads"
-	},
-/obj/item/clothing/accessory/badge/solgov/representative{
-	desc = "A leather-backed plastic badge containing various passport and general information, denoting the wearing of being a citizen of the human region of Sol.";
-	name = "Sol Citizenship ID"
-	},
-/obj/item/clothing/shoes/boots/jackboots/toeless,
-/obj/item/clothing/accessory/poncho/roles/cloak/qm,
 /obj/structure/closet/cabinet,
-/obj/item/weapon/sextoy/dildo/canine{
-	color = "#4700ff";
-	desc = "It is purple with a bulbous knot, the squeaker is for comedic effect.";
-	force = -1;
-	hitsound = 'sound/items/drop/plushie.ogg';
-	name = "Cylus' Chewtoy"
-	},
 /turf/simulated/floor/wood{
 	plane = -44
 	},
@@ -5592,7 +5579,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 1
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "fFG" = (
 /obj/structure/disposalpipe/segment{
@@ -5916,6 +5903,9 @@
 	},
 /obj/structure/mopbucket,
 /obj/item/weapon/mop,
+/obj/structure/loot_pile/surface/medicine_cabinet/fresh{
+	pixel_y = 31
+	},
 /turf/simulated/floor/wood{
 	plane = -44
 	},
@@ -6213,9 +6203,14 @@
 /turf/simulated/floor/wood,
 /area/residential/mroom17/living_room)
 "gus" = (
-/turf/simulated/floor/wood{
-	plane = -44
+/obj/structure/bed/double/weaversilk_nest,
+/obj/item/weapon/bedsheet/bluedouble/big{
+	pixel_x = 16;
+	pixel_y = -16
 	},
+/obj/effect/decal/cleanable/dirt,
+/obj/item/trash/spacer_cake_wrap,
+/turf/simulated/floor/carpet/brown,
 /area/residential/mroom42_bed_2)
 "guv" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -6414,35 +6409,15 @@
 	},
 /area/residential/mroom42)
 "gCR" = (
-/obj/item/weapon/storage/box/khcrystal,
-/obj/item/clothing/under/permit,
-/obj/item/clothing/accessory/storage/black_drop_pouches,
-/obj/item/clothing/accessory/storage/bluespace,
-/obj/item/clothing/shoes/boots/workboots,
-/obj/item/clothing/shoes/flipflop{
-	color = "#9966FF"
+/obj/structure/bed/double/weaversilk_nest,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/trash/meatration,
+/obj/machinery/oxygen_pump{
+	pixel_x = 33;
+	desc = "A wall mounted oxygen pump with a retractable mask. Delta uses it as a CPAP for his sleep apnea";
+	name = "CPAP oxygen pump"
 	},
-/obj/item/clothing/shoes/footwraps{
-	color = "#9966FF"
-	},
-/obj/item/clothing/suit/kimono{
-	color = "#8013cf"
-	},
-/obj/item/weapon/storage/fancy/cigarettes/luckystars{
-	description_fluff = "Lucky Stars are some of the most prolific advertisers in the business, with Gilthari Exports plastering the name and slogan on everything from workplace safety videos to racing bikes. 'You are a Lucky Star'."
-	},
-/obj/item/device/binoculars,
-/obj/item/weapon/storage/firstaid/adv,
-/obj/structure/closet/cabinet,
-/obj/item/clothing/glasses/meson/aviator{
-	desc = "Fashion and protection, the frames have been scratched and repainted countless times, the lenses seem rather new despite the worn appearance. Laria Darlos is painted in cursive down the limbs, these glasses are fitted to go on a muzzled creature with broad ears.";
-	name = "Laria's Meson Aviators"
-	},
-/obj/item/clothing/under/cheongsam/darkblue,
-/obj/item/weapon/storage/backpack/dufflebag/syndie,
-/turf/simulated/floor/wood{
-	plane = -44
-	},
+/turf/simulated/floor/carpet/brown,
 /area/residential/mroom42_bed_2)
 "gDr" = (
 /obj/machinery/shower{
@@ -6695,7 +6670,7 @@
 /area/residential/mroom1)
 "gSl" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "gSy" = (
 /obj/effect/floor_decal/grass_edge{
@@ -6784,12 +6759,12 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/door/airlock/silver{
-	desc = "It opens and closes, this one has been repainted.";
-	icon = 'icons/obj/doors/Doorphoron.dmi';
-	name = "Laria's Room"
+/obj/machinery/scale,
+/obj/machinery/door/airlock/sandstone{
+	name = "Delta's Bedroom";
+	desc = "There's a layer of grease smudged around and on the key-card reader"
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42_bed_2)
 "gYp" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
@@ -7126,8 +7101,6 @@
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/residential/mroom13)
 "hqG" = (
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/silver,
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 1
 	},
@@ -7295,7 +7268,7 @@
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "hwO" = (
 /obj/effect/floor_decal/carpet{
@@ -7339,17 +7312,22 @@
 /turf/simulated/floor/wood,
 /area/residential/mroom1)
 "hyH" = (
-/obj/machinery/vending/fitness{
-	contraband = list(/obj/item/weapon/reagent_containers/syringe/steroid=4,/obj/item/weapon/reagent_containers/food/drinks/glass2/fitnessflask/proteanshake=4);
-	density = 0;
-	desc = "For the ever hungry engineer!";
-	description_fluff = "Provided by NanoMed now at home, SweatMAX promises solutions to all of your hunger problems.";
-	pixel_y = 24;
-	prices = list();
-	products = list(/obj/item/weapon/reagent_containers/food/drinks/smallmilk=30,/obj/item/weapon/reagent_containers/food/drinks/smallchocmilk=16,/obj/item/weapon/reagent_containers/food/drinks/glass2/fitnessflask/proteinshake=16,/obj/item/weapon/reagent_containers/food/drinks/glass2/fitnessflask=8,/obj/item/weapon/reagent_containers/food/snacks/candy/proteinbar=32,/obj/item/weapon/reagent_containers/food/snacks/fruitbar=32,/obj/item/weapon/reagent_containers/food/snacks/liquidfood=32,/obj/item/weapon/reagent_containers/pill/diet=8,/obj/item/weapon/towel/random=8,/obj/item/toy/tennis=4);
-	req_log_access = 8142
+/obj/machinery/vending/foodfast{
+	pixel_y = 18;
+	desc = "On it, a note reads 'Delta, Remember, pace yerself for the sake of yer belt'.... however it seems to have been scratched out recently";
+	pixel_x = 7
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/obj/machinery/vending/blue_lotus{
+	density = 0;
+	desc = "Produce for all your cooking needs, now at home!";
+	pixel_y = 18;
+	prices = list();
+	product_slogans = "Lets see what is on the menu!";
+	products = list(/obj/item/weapon/storage/box/produce/chili=15,/obj/item/weapon/storage/box/produce/berries=15,/obj/item/weapon/storage/box/produce/tomato=20,/obj/item/weapon/storage/box/produce/eggplant=15,/obj/item/weapon/storage/box/produce/apple=25,/obj/item/weapon/storage/box/produce/mushrooms=15,/obj/item/weapon/storage/box/produce/plumphelmet=10,/obj/item/weapon/storage/box/produce/grapes=30,/obj/item/weapon/storage/box/produce/lettuce=20,/obj/item/weapon/storage/box/produce/peanut=10,/obj/item/weapon/storage/box/produce/cabbage=10,/obj/item/weapon/storage/box/produce/vanilla=25,/obj/item/weapon/storage/box/produce/banana=15,/obj/item/weapon/storage/box/produce/corn=25,/obj/item/weapon/storage/box/produce/potato=25,/obj/item/weapon/storage/box/produce/onion=25,/obj/item/weapon/storage/box/produce/soybean=15,/obj/item/weapon/storage/box/produce/wheat=15,/obj/item/weapon/storage/box/produce/rice=15,/obj/item/weapon/storage/box/produce/carrot=15,/obj/item/weapon/storage/box/produce/sugarcane=10,/obj/item/weapon/storage/box/produce/watermelon=10,/obj/item/weapon/storage/box/produce/pumpkin=10,/obj/item/weapon/storage/box/produce/lime=15,/obj/item/weapon/storage/box/produce/lemon=15,/obj/item/weapon/storage/box/produce/orange=15,/obj/item/weapon/storage/box/produce/cocoa=10,/obj/item/weapon/storage/box/produce/cherry=15,/obj/item/weapon/storage/box/produce/poppies=10,/obj/item/weapon/storage/box/produce/microm=10,/obj/item/weapon/storage/box/produce/megam=10,/obj/item/weapon/storage/box/produce/meat=25,/obj/item/weapon/storage/box/produce/chicken=25);
+	req_log_access = 8142;
+	pixel_x = -14
+	},
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "hzc" = (
 /turf/simulated/wall,
@@ -7438,7 +7416,7 @@
 /obj/structure/table/wooden_reinforced,
 /obj/item/weapon/storage/pill_bottle/dice_nerd,
 /obj/item/weapon/storage/pill_bottle/dice_nerd,
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "hGd" = (
 /obj/machinery/door/firedoor/glass,
@@ -7623,6 +7601,12 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/residential/mroom13closet)
+"hMP" = (
+/obj/structure/sign/signnew/danger{
+	desc = "Warning: Xeno-Chimerical Tennants! Exercise caution."
+	},
+/turf/simulated/wall,
+/area/residential/corridors)
 "hMY" = (
 /obj/machinery/door/airlock/multi_tile/metal{
 	name = "Bedroom"
@@ -7684,7 +7668,7 @@
 /turf/simulated/floor/carpet/bcarpet,
 /area/residential/mroom9)
 "hRQ" = (
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "hSj" = (
 /obj/structure/table/woodentable,
@@ -7912,7 +7896,7 @@
 	pixel_x = 32;
 	tag = "icon-extinguisher_closed (WEST)"
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "idp" = (
 /obj/structure/flora/pottedplant/flower{
@@ -8057,7 +8041,9 @@
 	pixel_x = -28
 	},
 /obj/structure/cable,
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/wood{
+	plane = -44
+	},
 /area/residential/mroom42_bed_1)
 "iiL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -8137,6 +8123,9 @@
 	},
 /obj/machinery/firealarm{
 	pixel_y = 30
+	},
+/obj/structure/holostool{
+	desc = "In the event buddy HAS to help Delta bathe, this helps Delta not have to stand the entire time."
 	},
 /turf/simulated/floor/tiled/eris/white/gray_perforated,
 /area/residential/mroom42washroom)
@@ -8343,10 +8332,12 @@
 /obj/item/weapon/storage/box/beakers,
 /obj/item/weapon/reagent_containers/chem_disp_cartridge/radium,
 /obj/item/weapon/reagent_containers/chem_disp_cartridge/nutriment,
-/obj/item/stack/material/uranium,
-/obj/item/weapon/storage/box/syringes,
 /obj/item/weapon/reagent_containers/chem_disp_cartridge/ethylredox,
-/turf/simulated/floor/bmarble,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/effect/floor_decal/corner/orange/diagonal,
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/residential/mroom42)
 "iwm" = (
 /obj/structure/curtain/black,
@@ -8410,7 +8401,8 @@
 /obj/machinery/chemical_dispenser/bar_soft/full{
 	pixel_y = 8
 	},
-/turf/simulated/floor/bmarble,
+/obj/effect/floor_decal/corner/orange/diagonal,
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/residential/mroom42)
 "iBi" = (
 /obj/machinery/light_switch{
@@ -8430,7 +8422,7 @@
 /obj/structure/bed/chair/sofa/right/purp{
 	dir = 1
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "iCd" = (
 /turf/simulated/floor/tiled/white,
@@ -8864,7 +8856,8 @@
 	pixel_x = -12
 	},
 /obj/machinery/computer/timeclock/premade/west,
-/turf/simulated/floor/bmarble,
+/obj/effect/floor_decal/corner/orange/diagonal,
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/residential/mroom42)
 "iXA" = (
 /obj/structure/table/marble,
@@ -8879,7 +8872,8 @@
 	pixel_x = -5;
 	pixel_y = 10
 	},
-/turf/simulated/floor/bmarble,
+/obj/effect/floor_decal/corner/orange/diagonal,
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/residential/mroom42)
 "iYa" = (
 /obj/structure/mopbucket,
@@ -9010,7 +9004,8 @@
 	req_access = list();
 	req_log_access = list()
 	},
-/turf/simulated/floor/bmarble,
+/obj/effect/floor_decal/corner/orange/diagonal,
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/residential/mroom42)
 "jgC" = (
 /obj/structure/bed/chair/sofa/black{
@@ -9100,7 +9095,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "jmo" = (
 /obj/machinery/light{
@@ -9404,7 +9399,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "jES" = (
 /obj/structure/closet,
@@ -9610,7 +9605,10 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/obj/structure/bed/double/weaversilk_nest,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/trash/smolburrito,
+/turf/simulated/floor/carpet/brown,
 /area/residential/mroom42_bed_2)
 "jMY" = (
 /obj/structure/table/woodentable,
@@ -9641,7 +9639,7 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "jNI" = (
 /obj/structure/table/woodentable,
@@ -9804,11 +9802,9 @@
 	pixel_x = 32;
 	pixel_y = 60
 	},
-/obj/structure/dogbed{
-	desc = "A soft bed made especially for flaire, this one is fire resistant.";
-	name = "Flaire's bed"
+/turf/simulated/floor/wood{
+	plane = -44
 	},
-/turf/simulated/floor/carpet/blucarpet,
 /area/residential/mroom42_bed_1)
 "jUE" = (
 /obj/effect/floor_decal/spline/fancy/wood,
@@ -9994,16 +9990,11 @@
 	req_access = list(18,8142);
 	req_one_access = list()
 	},
-/obj/item/clothing/under/permit,
-/obj/item/clothing/under/permit,
-/obj/item/clothing/under/permit,
-/obj/item/clothing/under/permit,
-/obj/item/clothing/under/permit,
 /obj/structure/closet/cabinet,
-/obj/item/clothing/shoes/boots/jackboots/toeless/thigh,
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/item/weapon/storage/belt/holding,
 /turf/simulated/floor/wood{
 	plane = -44
 	},
@@ -10159,7 +10150,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/obj/structure/bed/double/weaversilk_nest,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/trash/smolburger,
+/turf/simulated/floor/carpet/brown,
 /area/residential/mroom42_bed_2)
 "klH" = (
 /obj/effect/floor_decal/spline/plain{
@@ -10204,11 +10198,6 @@
 "kms" = (
 /obj/machinery/alarm{
 	pixel_y = 25
-	},
-/obj/structure/bed/chair/bay/chair/padded/red/bignest,
-/mob/living/simple_mob/animal/passive/pokemon/flareon{
-	gender = "female";
-	name = "Flaire"
 	},
 /turf/simulated/floor/grass,
 /area/residential/mroom42pet_room)
@@ -10697,7 +10686,7 @@
 	pixel_y = -32;
 	req_log_access = 8142
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "kNl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -11140,7 +11129,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "ljJ" = (
 /obj/machinery/reagentgrinder,
@@ -11241,7 +11230,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "lnF" = (
 /obj/machinery/atmospherics/portables_connector{
@@ -11372,7 +11361,7 @@
 	id_tag = "Laria Doorbell";
 	pixel_y = -32
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "luk" = (
 /obj/structure/sign/deck/first,
@@ -11417,12 +11406,16 @@
 /area/residential/corridors)
 "lxo" = (
 /obj/machinery/firealarm{
-	pixel_y = 30
+	pixel_y = 25
 	},
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/obj/machinery/recharger/wallcharger{
+	pixel_y = 34;
+	pixel_x = 4
+	},
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "lxz" = (
 /obj/structure/disposalpipe/segment{
@@ -11648,13 +11641,17 @@
 	},
 /area/residential/mroom17/gaming_room)
 "lJy" = (
-/obj/structure/table/wooden_reinforced,
-/obj/machinery/photocopier/faxmachine{
-	department = "Laria's Home Office"
+/obj/random/trash_pile,
+/obj/item/weapon/cane/crutch{
+	desc = "A long stick with a crosspiece at the top, used to help with walking.... Or Waddling, in Delta's case"
 	},
-/turf/simulated/floor/wood{
-	plane = -44
+/obj/item/weapon/cane/crutch{
+	desc = "A long stick with a crosspiece at the top, used to help with walking.... Or Waddling, in Delta's case";
+	pixel_y = -5
 	},
+/obj/effect/decal/cleanable/dirt,
+/obj/item/trash/liquidfood,
+/turf/simulated/floor/carpet/brown,
 /area/residential/mroom42_bed_2)
 "lJF" = (
 /obj/structure/window/basic{
@@ -11764,7 +11761,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 1
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/carpet/brown,
 /area/residential/mroom42_bed_2)
 "lNz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -11857,7 +11855,7 @@
 	pixel_x = -3;
 	pixel_y = 5
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "lPP" = (
 /obj/structure/simple_door/wood,
@@ -12196,7 +12194,7 @@
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "mfc" = (
 /obj/machinery/light{
@@ -12748,7 +12746,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "mEf" = (
 /obj/structure/table/woodentable,
@@ -13730,9 +13728,6 @@
 /turf/space,
 /area/space)
 "nKp" = (
-/obj/machinery/door/airlock/diamond{
-	name = "Cylus' Mancave"
-	},
 /obj/machinery/door/firedoor/glass{
 	req_access = list(18,8142);
 	req_one_access = list()
@@ -13748,6 +13743,9 @@
 	d2 = 2;
 	dir = 4;
 	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/silver{
+	name = "Spare Bedroom"
 	},
 /turf/simulated/floor/wood{
 	plane = -44
@@ -13911,7 +13909,9 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/wood{
+	plane = -44
+	},
 /area/residential/mroom42_bed_1)
 "nTJ" = (
 /obj/structure/table/marble,
@@ -14504,7 +14504,7 @@
 	layer = 3.3;
 	pixel_x = -25
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "oFt" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -14608,10 +14608,10 @@
 	dir = 1;
 	pixel_y = -25
 	},
-/obj/structure/bed/chair/office/dark{
-	dir = 8
-	},
-/turf/simulated/floor/carpet/purcarpet,
+/obj/random/trash_pile,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/iv_drip,
+/turf/simulated/floor/carpet/brown,
 /area/residential/mroom42_bed_2)
 "oIY" = (
 /obj/structure/flora/pottedplant/orientaltree{
@@ -14641,7 +14641,7 @@
 	name = "Window blast door-control";
 	pixel_x = 26
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "oJE" = (
 /obj/structure/table/marble,
@@ -14865,7 +14865,7 @@
 /obj/structure/bed/chair/sofa/purp{
 	dir = 1
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "oWo" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -14993,7 +14993,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk,
-/turf/simulated/floor/bmarble,
+/obj/effect/floor_decal/corner/orange/diagonal,
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/residential/mroom42)
 "pbj" = (
 /obj/machinery/vending/blue_lotus,
@@ -15032,7 +15033,8 @@
 	pixel_x = 3;
 	pixel_y = 96
 	},
-/turf/simulated/floor/bmarble,
+/obj/effect/floor_decal/corner/orange/diagonal,
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/residential/mroom42)
 "pcp" = (
 /obj/effect/floor_decal/spline/plain{
@@ -15157,8 +15159,9 @@
 	dir = 8;
 	pixel_x = 28
 	},
-/obj/item/toy/plushie/marble_fox,
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/wood{
+	plane = -44
+	},
 /area/residential/mroom42_bed_1)
 "plj" = (
 /obj/machinery/light/floortube,
@@ -15263,7 +15266,7 @@
 	dir = 4;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "poX" = (
 /obj/machinery/door/firedoor,
@@ -15599,7 +15602,7 @@
 	dir = 4;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "pId" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -16222,7 +16225,7 @@
 /obj/structure/bed/chair/sofa/purp{
 	dir = 1
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "qmm" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -16508,7 +16511,7 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "qyz" = (
 /obj/machinery/light,
@@ -16573,7 +16576,8 @@
 	density = 0;
 	pixel_y = 7
 	},
-/turf/simulated/floor/bmarble,
+/obj/effect/floor_decal/corner/orange/diagonal,
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/residential/mroom42)
 "qCR" = (
 /obj/structure/bed/chair/sofa/corner/purp{
@@ -16583,7 +16587,7 @@
 	density = 0;
 	pixel_y = 26
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "qCX" = (
 /turf/simulated/wall,
@@ -16679,18 +16683,13 @@
 /area/residential/mroom3)
 "qIr" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/clothing/accessory/solgov/cultex_patch,
-/obj/item/clothing/accessory/solgov/specialty/pilot{
-	pixel_y = -16
-	},
-/obj/item/modular_computer/laptop/preset/custom_loadout/elite,
 /turf/simulated/floor/wood{
 	plane = -44
 	},
 /area/residential/mroom42_bed_1)
 "qIX" = (
 /obj/structure/table/wooden_reinforced,
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "qKg" = (
 /obj/effect/catwalk_plated/white,
@@ -16993,7 +16992,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 1
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "rbv" = (
 /obj/machinery/door/airlock/voidcraft{
@@ -17145,7 +17144,7 @@
 /obj/machinery/alarm{
 	pixel_y = 25
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "rks" = (
 /obj/effect/floor_decal/spline/fancy{
@@ -17208,8 +17207,6 @@
 	dir = 4;
 	icon_state = "1-2"
 	},
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/silver,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -17569,9 +17566,6 @@
 /area/residential/mroom8)
 "rIp" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/weapon/reagent_containers/food/drinks/bluespace_coffee{
-	pixel_y = 4
-	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
@@ -17808,7 +17802,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
-/turf/simulated/floor/bmarble,
+/obj/effect/floor_decal/corner/orange/diagonal,
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/residential/mroom42)
 "rQL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -18092,7 +18087,8 @@
 	pixel_x = -2;
 	pixel_y = 11
 	},
-/turf/simulated/floor/bmarble,
+/obj/effect/floor_decal/corner/orange/diagonal,
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/residential/mroom42)
 "seL" = (
 /turf/simulated/wall,
@@ -18803,8 +18799,8 @@
 	pixel_x = 12;
 	pixel_y = 98
 	},
-/obj/item/modular_computer/tablet/preset/custom_loadout/hybrid,
-/turf/simulated/floor/carpet/purcarpet,
+/obj/item/weapon/toy/snowglobe/snowvillage,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "sWD" = (
 /obj/effect/floor_decal/borderfloorwhite,
@@ -18879,7 +18875,7 @@
 /obj/item/device/radio/intercom{
 	pixel_y = -24
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "sYu" = (
 /obj/machinery/door/window/northright{
@@ -18977,7 +18973,7 @@
 /obj/structure/bed/chair/sofa/corner/purp{
 	dir = 4
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "the" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -19011,7 +19007,8 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
-/turf/simulated/floor/bmarble,
+/obj/effect/floor_decal/corner/orange/diagonal,
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/residential/mroom42)
 "thU" = (
 /obj/structure/table/rack/shelf,
@@ -19048,7 +19045,11 @@
 	name = "light switch ";
 	pixel_y = -26
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/obj/structure/sign/signnew/biohazard{
+	pixel_y = -32;
+	pixel_x = -12
+	},
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "tjh" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -19129,7 +19130,7 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "tlm" = (
 /obj/machinery/light{
@@ -19283,10 +19284,8 @@
 /turf/simulated/floor/wood,
 /area/residential/mroom12_bedroom)
 "tsf" = (
-/obj/structure/bed/chair/bay/chair/padded/red/bignest,
-/mob/living/simple_mob/animal/passive/pokemon/jolteon{
-	gender = "male";
-	name = "Siemen"
+/obj/machinery/vending/foodmeat{
+	desc = "There's a note attached: 'A hungry chimera is a dangerous one, load up a belt of snack before you leave!'"
 	},
 /turf/simulated/floor/grass,
 /area/residential/mroom42pet_room)
@@ -19351,7 +19350,8 @@
 	pixel_x = 3
 	},
 /obj/item/weapon/reagent_containers/glass/rag,
-/turf/simulated/floor/bmarble,
+/obj/effect/floor_decal/corner/orange/diagonal,
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/residential/mroom42)
 "tuO" = (
 /obj/structure/closet/secure_closet/freezer/fridge{
@@ -19420,7 +19420,13 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/blood/splatter{
+	basecolor = "#E8DBB8";
+	name = "sticky smear";
+	desc = "It's thick and gooey, and rich of musk- Oh... Oh is THAT what it is? Ew..."
+	},
+/turf/simulated/floor/carpet/brown,
 /area/residential/mroom42_bed_2)
 "txs" = (
 /obj/item/pizzavoucher,
@@ -19853,6 +19859,7 @@
 	req_one_access = list()
 	},
 /obj/structure/coatrack,
+/obj/item/weapon/melee/umbrella/random,
 /turf/simulated/floor/wood{
 	plane = -44
 	},
@@ -20182,7 +20189,8 @@
 /obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
 	pixel_x = 3
 	},
-/turf/simulated/floor/bmarble,
+/obj/effect/floor_decal/corner/orange/diagonal,
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/residential/mroom42)
 "uke" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -20425,7 +20433,7 @@
 	req_access = list(18,8142);
 	req_one_access = list()
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "uwG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -20535,7 +20543,7 @@
 /obj/structure/bed/chair/sofa/purp{
 	dir = 4
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "uHb" = (
 /obj/structure/sink/kitchen{
@@ -20748,7 +20756,8 @@
 	pixel_x = -8;
 	pixel_y = 5
 	},
-/turf/simulated/floor/bmarble,
+/obj/effect/floor_decal/corner/orange/diagonal,
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/residential/mroom42)
 "uPD" = (
 /obj/machinery/light{
@@ -20896,8 +20905,23 @@
 /obj/machinery/firealarm{
 	pixel_y = 30
 	},
+/obj/item/weapon/bedsheet/rddouble/big{
+	pixel_y = -16;
+	pixel_x = 16;
+	desc = "A surprisingly soft linen bedsheet. This one is kept out for when Buddy makes his nest for the night";
+	name = "big buddy"
+	},
+/obj/random/plushielarge,
 /turf/simulated/floor/grass,
 /area/residential/mroom42pet_room)
+"uWJ" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/weapon/c_tube{
+	desc = "A tube... of cardboard. Its about the only thing Delta is willing to actually bop Buddy with due to being otherwise impossible to hurt him with, though often its more used ON Delta by any visiting guests."
+	},
+/obj/item/weapon/gun/projectile/pistol/toy/n99,
+/turf/simulated/floor/carpet/oracarpet,
+/area/residential/mroom42)
 "uWR" = (
 /obj/structure/filingcabinet/wide{
 	density = 0;
@@ -21029,20 +21053,17 @@
 /turf/simulated/floor/carpet/purcarpet,
 /area/residential/mroom10)
 "vfM" = (
-/obj/machinery/vending/blue_lotus{
-	density = 0;
-	desc = "Produce for all your cooking needs, now at home!";
-	pixel_y = 15;
-	prices = list();
-	product_slogans = "Lets see what is on the menu!";
-	products = list(/obj/item/weapon/storage/box/produce/chili=15,/obj/item/weapon/storage/box/produce/berries=15,/obj/item/weapon/storage/box/produce/tomato=20,/obj/item/weapon/storage/box/produce/eggplant=15,/obj/item/weapon/storage/box/produce/apple=25,/obj/item/weapon/storage/box/produce/mushrooms=15,/obj/item/weapon/storage/box/produce/plumphelmet=10,/obj/item/weapon/storage/box/produce/grapes=30,/obj/item/weapon/storage/box/produce/lettuce=20,/obj/item/weapon/storage/box/produce/peanut=10,/obj/item/weapon/storage/box/produce/cabbage=10,/obj/item/weapon/storage/box/produce/vanilla=25,/obj/item/weapon/storage/box/produce/banana=15,/obj/item/weapon/storage/box/produce/corn=25,/obj/item/weapon/storage/box/produce/potato=25,/obj/item/weapon/storage/box/produce/onion=25,/obj/item/weapon/storage/box/produce/soybean=15,/obj/item/weapon/storage/box/produce/wheat=15,/obj/item/weapon/storage/box/produce/rice=15,/obj/item/weapon/storage/box/produce/carrot=15,/obj/item/weapon/storage/box/produce/sugarcane=10,/obj/item/weapon/storage/box/produce/watermelon=10,/obj/item/weapon/storage/box/produce/pumpkin=10,/obj/item/weapon/storage/box/produce/lime=15,/obj/item/weapon/storage/box/produce/lemon=15,/obj/item/weapon/storage/box/produce/orange=15,/obj/item/weapon/storage/box/produce/cocoa=10,/obj/item/weapon/storage/box/produce/cherry=15,/obj/item/weapon/storage/box/produce/poppies=10,/obj/item/weapon/storage/box/produce/microm=10,/obj/item/weapon/storage/box/produce/megam=10,/obj/item/weapon/storage/box/produce/meat=25,/obj/item/weapon/storage/box/produce/chicken=25);
-	req_log_access = 8142
-	},
 /obj/item/device/radio/intercom{
 	dir = 4;
 	pixel_x = -28
 	},
-/turf/simulated/floor/bmarble,
+/obj/structure/reagent_dispensers/cookingoil{
+	pixel_y = 12;
+	pixel_x = 6;
+	desc = "A fifty-litre tank of commercial-grade corn oil, intended for use in large scale deep fryers. Weither you should be surprised or not, It looks like Delta has tried to drink straight from the tap for a giggle at least once.... Or maybe not, who knows."
+	},
+/obj/effect/floor_decal/corner/orange/diagonal,
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/residential/mroom42)
 "vhf" = (
 /obj/machinery/button/windowtint{
@@ -21149,6 +21170,10 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/residential/mroom13bed)
+"vmk" = (
+/obj/structure/sign/warning/nosmoking_1,
+/turf/simulated/wall,
+/area/residential/mroom42)
 "vnC" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 5
@@ -21336,7 +21361,7 @@
 	req_access = list(18,8142);
 	req_one_access = list()
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "vyd" = (
 /obj/structure/window/titanium{
@@ -21539,7 +21564,7 @@
 	dir = 8;
 	pixel_x = 24
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "vHB" = (
 /obj/effect/floor_decal/spline/plain{
@@ -22817,7 +22842,24 @@
 /turf/simulated/floor/carpet/sblucarpet,
 /area/residential/mroom9)
 "xjD" = (
-/turf/simulated/floor/carpet/purcarpet,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/cabinet{
+	desc = "Old will forever be in fashion... Though the grime throws fashion out the window.";
+	name = "delta's cabinet"
+	},
+/obj/item/weapon/melee/telebaton{
+	desc = "A compact yet rebalanced personal defense weapon. Seems Delta is a bit paranoid still, though its almost humorous trying to imagine him swinging this thing."
+	},
+/obj/item/weapon/scrying{
+	name = "The Scrunched Orb";
+	desc = "A mangled mass of assorted machine parts and other junk, almost... radioactively fused together? It collapsed into this reality with Delta and hell hath no fury if yer caught with it.";
+	w_class = 2
+	},
+/obj/item/clothing/mask/bandana/skull{
+	name = "musky skull bandana";
+	desc = "A fine black bandana with nanotech lining and a skull emblem. Smells incredibly strongly of Buddys."
+	},
+/turf/simulated/floor/carpet/brown,
 /area/residential/mroom42_bed_2)
 "xjG" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -22847,7 +22889,7 @@
 	pixel_x = -6;
 	pixel_y = 26
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "xmp" = (
 /obj/machinery/vending/foodasian{
@@ -23383,8 +23425,6 @@
 	name = "\improper Residential - Medium Room 14 Bedroom"
 	})
 "xKz" = (
-/obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/purpledouble,
 /obj/machinery/light_switch{
 	dir = 8;
 	pixel_x = 24
@@ -23392,13 +23432,14 @@
 /obj/structure/fireaxecabinet{
 	pixel_y = -30
 	},
-/obj/item/weapon/sextoy/dildo/bulletvibe{
-	color = "#701fd0";
-	force = -1;
-	hitsound = 'sound/items/small_motor/motor_idle.ogg'
+/obj/machinery/body_scanconsole{
+	desc = "Used by Delta to keep watch of his own body, for better or worsening health..."
 	},
-/obj/item/toy/plushie/black_fox,
-/turf/simulated/floor/carpet/purcarpet,
+/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/glucose{
+	pixel_y = 13
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/carpet/brown,
 /area/residential/mroom42_bed_2)
 "xKN" = (
 /obj/effect/floor_decal/corner/purple{
@@ -23433,6 +23474,16 @@
 	req_access = list(18,8142);
 	req_one_access = list()
 	},
+/obj/structure/closet/walllocker_double{
+	pixel_y = 41;
+	desc = "A wall mounted storage cabinet. Incase Feral, Break latch"
+	},
+/obj/item/weapon/gun/energy/sickshot{
+	name = "Delta's \'Sickshot\' revolver"
+	},
+/obj/item/weapon/gun/energy/stunrevolver,
+/obj/item/weapon/melee/baton/cattleprod,
+/obj/item/device/assembly/signaler,
 /turf/simulated/floor/wood{
 	plane = -44
 	},
@@ -23470,7 +23521,7 @@
 	icon_state = "pipe-c"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "xMW" = (
 /obj/structure/bed/chair/sofa/left/blue{
@@ -23517,6 +23568,14 @@
 "xNJ" = (
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/residential/mroom7)
+"xNZ" = (
+/obj/structure/sign/signnew/danger{
+	desc = "Warning: Xeno-Chimerical Tennants! Exercise caution.";
+	pixel_y = 32
+	},
+/obj/item/toy/plushie/spider,
+/turf/simulated/floor/grass,
+/area/residential/mroom42pet_room)
 "xOt" = (
 /obj/effect/floor_decal/corner/white{
 	color = "#ADD8E6";
@@ -23528,14 +23587,14 @@
 /turf/simulated/floor/tiled,
 /area/residential/mroom4)
 "xOB" = (
-/obj/structure/dogbed{
-	desc = "A bed made especially for Siemen, the blanket is insulated.";
-	name = "Siemen's bed"
-	},
 /obj/item/device/radio/intercom{
 	pixel_y = -24
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/obj/machinery/bodyscanner{
+	desc = "Used by Delta to keep watch of his own body, for better or worsening health..."
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/carpet/brown,
 /area/residential/mroom42_bed_2)
 "xPh" = (
 /obj/structure/table/bench/wooden,
@@ -23758,7 +23817,8 @@
 	density = 0;
 	pixel_x = 2
 	},
-/turf/simulated/floor/bmarble,
+/obj/effect/floor_decal/corner/orange/diagonal,
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/residential/mroom42)
 "xYJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -23995,7 +24055,7 @@
 	pixel_x = -3;
 	pixel_y = 5
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/carpet/oracarpet,
 /area/residential/mroom42)
 "yjh" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -49213,7 +49273,7 @@ wXg
 hzc
 cGe
 ejV
-wXg
+hMP
 wXg
 wXg
 wXg
@@ -49966,7 +50026,7 @@ seD
 ftI
 aWG
 eqq
-hzc
+vmk
 hqG
 rlL
 tGy
@@ -50478,8 +50538,8 @@ oVk
 sEu
 cmL
 xFE
-wBN
-wBN
+xNZ
+cxG
 wBN
 wBN
 jbg
@@ -52485,7 +52545,7 @@ gAL
 vqp
 dqi
 lPF
-qIX
+uWJ
 oVG
 hRQ
 bBP
