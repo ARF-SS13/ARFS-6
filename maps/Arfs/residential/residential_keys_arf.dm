@@ -513,7 +513,7 @@
 	display_name = "res level four, room two keys"
 	description = "residential"
 	ckeywhitelist = list("thingpony", "siorkillbow", "cebutris", "dameonowen", "brimcon", "foxyrose", "lukevale", "andyman105", "dwagin")
-	character_name = list("Iris Miller", "Elizabeth Nayala", "Hepsie Mull", "Amber Owen", "Amber", "Scryden Sako", "Emma Miller", "Aiden Miller", "Scarlet Owen", "Luna", "Dameon Owen", "Jake Owen")
+	character_name = list("Iris Miller", "Elizabeth Nayala", "Hepsie Mull", "Amber Owen", "Amber", "Scryden Sako", "Emma Miller", "Aiden Miller", "Scarlet Owen", "Luna", "Dameon Owen", "Jake Owen", "Elizabeth Owen", "Elizabeth Sako", "Amber Sako-Sharpe", "Amber Sako", "Scarlet Sako-Sharpe", "Scarlet Sako")
 
 /datum/gear/fluff/res_key_rb3
 	path = /obj/item/weapon/card/id/residential/rb3
@@ -537,7 +537,7 @@
 	display_name = "Mansion keys"
 	description = "residential"
 	ckeywhitelist = list("andyman105", "dameonowen", "secondattemps", "thingpony", "hagawaga","brimcon", "lukevale", "foxyrose", "dwagin")
-	character_name = list("Dameon Owen", "Amber Owen", "Amber", "Jake Owen", "Lilith Owen", "Iris Miller", "Brian Owen", "Percy Owen", "Ruby Flare", "Zephyr Sharpe", "Peter Sharpe", "Eve", "Ashlyn", "Agalon", "Lana Xavier", "Scryden Sako", "Scarlet Owen", "Luna","Emma Miller", "Aiden Miller")
+	character_name = list("Dameon Owen", "Amber Owen", "Amber", "Jake Owen", "Lilith Owen", "Iris Miller", "Brian Owen", "Percy Owen", "Ruby Flare", "Zephyr Sharpe", "Peter Sharpe", "Eve", "Ashlyn", "Agalon", "Lana Xavier", "Scryden Sako", "Scarlet Owen", "Luna","Emma Miller", "Aiden Miller", "Elizabeth Owen", "Elizabeth Sako", "Amber Sako-Sharpe", "Amber Sako", "Scarlet Sako-Sharpe", "Scarlet Sako")
 
 //Master Key. Why wasn't this made before? So much easier!
 
