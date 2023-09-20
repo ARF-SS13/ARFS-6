@@ -584,7 +584,6 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 5
 	},
-/obj/structure/closet/walllocker_double/hydrant/north,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/residential/mroom42)
 "aHM" = (
@@ -601,6 +600,9 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/residential/mroom10)
+"aIq" = (
+/turf/space,
+/area/residential/mroom42)
 "aIG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -1887,6 +1889,11 @@
 	id_tag = "rm7_main";
 	name = "RM7";
 	req_access = list(8107)
+	},
+/obj/machinery/door/airlock{
+	id_tag = "rm9_main";
+	name = "RM9";
+	req_access = list(8109)
 	},
 /turf/simulated/floor/wood,
 /area/residential/mroom7)
@@ -4249,7 +4256,9 @@
 	},
 /obj/machinery/door/airlock/multi_tile/metal{
 	dir = 1;
-	name = "Delta's Residence"
+	name = "Delta's Residence";
+	req_access = list(8142);
+	id_tag = "rm42_main"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/residential/corridors)
@@ -14349,6 +14358,10 @@
 	},
 /turf/simulated/floor/carpet,
 /area/residential/mroom12_bedroom)
+"oug" = (
+/obj/structure/closet/walllocker_double/hydrant/north,
+/turf/simulated/wall,
+/area/residential/mroom42)
 "ova" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/cyan,
 /turf/simulated/floor/plating,
@@ -15295,10 +15308,13 @@
 	})
 "ppq" = (
 /obj/machinery/light_switch{
-	pixel_y = 28
+	pixel_y = 24
 	},
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
+	},
+/obj/structure/closet/walllocker_double/hydrant/north{
+	pixel_y = 39
 	},
 /turf/simulated/floor/wood{
 	plane = -44
@@ -50530,7 +50546,7 @@ xYs
 ftI
 pci
 iwd
-hzc
+oug
 ppq
 uvK
 tGy
@@ -51535,7 +51551,7 @@ gAL
 gAL
 vqp
 jcB
-ftI
+aIq
 ftI
 ftI
 rGF
