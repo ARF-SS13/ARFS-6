@@ -13,7 +13,11 @@
 	var/global/list/wide_chassis = list(
 		"rat",
 		"panther",
-		"teppi"
+		"teppi",
+		"pai-diredog",
+		"pai-horse_lune",
+		"pai-horse_soleil",
+		"pai-pdragon"
 		)
 	var/global/list/flying_chassis = list(
 		"pai-parrot",
@@ -46,7 +50,12 @@
 		"catslug",
 		"car",
 		"typeone",
-		"13"
+		"13",
+		"pai-raptor",
+		"pai-diredog",
+		"pai-horse_lune",
+		"pai-horse_soleil",
+		"pai-pdragon"
 		)
 	//These vars keep track of whether you have the related software, used for easily updating the UI
 	var/soft_ut = FALSE	//universal translator

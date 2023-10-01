@@ -23,8 +23,8 @@ Please do not abuse this ability.
 			continue
 		if(pred.no_vore)						// No vore, no bellies, no inbelly spawning
 			continue
-		if(!(get_z(pred) in using_map.station_levels))	// No explo reinforcements
-			continue
+		// if(!(get_z(pred) in using_map.station_levels))	// No explo reinforcements
+		// 	continue
 		if(ishuman(pred))
 			var/mob/living/carbon/human/H = pred
 			if(!H.allow_inbelly_spawning)
@@ -166,6 +166,12 @@ Please do not abuse this ability.
 			var/datum/language/keylang = GLOB.all_languages[prey.prefs.language_custom_keys[key]]
 			if(keylang)
 				new_character.language_keys[key] = keylang
+	// VOREStation Add: Preferred Language Setting;
+	if(prey.prefs.preferred_language) // Do we have a preferred language?
+		var/datum/language/def_lang = GLOB.all_languages[prey.prefs.preferred_language]
+		if(def_lang)
+			new_character.default_language = def_lang
+	// VOREStation Add End
 
 	new_character.regenerate_icons()
 

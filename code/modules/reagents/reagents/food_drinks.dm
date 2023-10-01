@@ -435,6 +435,7 @@
 	reagent_state = SOLID
 	nutriment_factor = 5
 	color = "#302000"
+	allergen_type = ALLERGEN_CHOCOLATE
 
 /datum/reagent/nutriment/chocolate
 	name = "Chocolate"
@@ -444,6 +445,7 @@
 	color = "#582815"
 	nutriment_factor = 5
 	taste_mult = 1.3
+	allergen_type = ALLERGEN_CHOCOLATE
 
 /datum/reagent/nutriment/instantjuice
 	name = "Juice Powder"
@@ -691,6 +693,7 @@
 	description = "A dry mix for making delicious brownies."
 	reagent_state = SOLID
 	color = "#441a03"
+	allergen_type = ALLERGEN_CHOCOLATE
 
 /datum/reagent/cakebatter
 	name = "Cake Batter"
@@ -1220,6 +1223,7 @@
 
 	glass_name = "chocolate milk"
 	glass_desc = "Deliciously fattening!"
+	allergen_type = ALLERGEN_CHOCOLATE
 
 /datum/reagent/drink/milk/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -1660,6 +1664,7 @@
 	cup_icon_state = "cup_coco"
 	cup_name = "cup of hot chocolate"
 	cup_desc = "Made with love! And cocoa beans."
+	allergen_type = ALLERGEN_CHOCOLATE
 
 /datum/reagent/drink/soda/sodawater
 	name = "Soda Water"
@@ -1834,7 +1839,7 @@
 
 	glass_name = "Chocolate Milkshake"
 	glass_desc = "A refreshing chocolate milkshake, just like mom used to make."
-	allergen_type = ALLERGEN_DAIRY //Made with dairy products
+	allergen_type = ALLERGEN_DAIRY|ALLERGEN_CHOCOLATE //Made with dairy products
 
 /datum/reagent/drink/milkshake/berryshake
 	name = "Berry Milkshake"
@@ -2551,7 +2556,7 @@
 /datum/reagent/ethanol/ale
 	name = "Ale"
 	id = "ale"
-	description = "A dark alchoholic beverage made by malted barley and yeast."
+	description = "A dark alcoholic beverage made by malted barley and yeast."
 	taste_description = "hearty barley ale"
 	color = "#4C3100"
 	strength = 50
@@ -3737,7 +3742,7 @@
 /datum/reagent/ethanol/vodkatonic
 	name = "Vodka and Tonic"
 	id = "vodkatonic"
-	description = "For when a gin and tonic isn't russian enough."
+	description = "For when a gin and tonic isn't Russian enough."
 	taste_description = "tart bitterness"
 	color = "#0064C8" // rgb: 0, 100, 200
 	strength = 15
@@ -4371,7 +4376,7 @@
 /datum/reagent/ethanol/holywine
 	name = "Angel Ichor"
 	id = "holywine"
-	description = "A premium alchoholic beverage made from distilled angel blood."
+	description = "A premium alcoholic beverage made from distilled angel blood."
 	taste_description = "wings in a glass, and a hint of grape"
 	color = "#C4921E"
 	strength = 20
@@ -4517,10 +4522,11 @@
 /datum/reagent/ethanol/deathbell/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
 
-	if(dose * strength >= strength) // Early warning
-		M.make_dizzy(24) // Intentionally higher than normal to compensate for it's previous effects.
-	if(dose * strength >= strength * 2.5) // Slurring takes longer. Again, intentional.
-		M.slurring = max(M.slurring, 30)
+	if(M.species.robo_ethanol_drunk || !(M.isSynthetic()))
+		if(dose * strength >= strength) // Early warning
+			M.make_dizzy(24) // Intentionally higher than normal to compensate for it's previous effects.
+		if(dose * strength >= strength * 2.5) // Slurring takes longer. Again, intentional.
+			M.slurring = max(M.slurring, 30)
 
 /datum/reagent/nutriment/magicdust
 	name = "Magic Dust"
@@ -4531,6 +4537,12 @@
 	reagent_state = LIQUID
 	nutriment_factor = 40 //very filling
 	color = "#d169b2"
+
+/datum/reagent/nutriment/magicdust/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+	..()
+	playsound(M, 'sound/items/hooh.ogg', 50, 1, -1)
+	if(prob(5))
+		to_chat(M, "<span class='warning'>You feel like you've been gnomed...</span>")
 
 /datum/reagent/drink/soda/kompot
 	name = "Kompot"

@@ -6,6 +6,7 @@
 	var/totalPlayers = 0		//Player counts for the Lobby tab
 	var/totalPlayersReady = 0
 	var/show_hidden_jobs = 0	//Show jobs that are set to "Never" in preferences
+	var/has_respawned = FALSE	//Determines if we're using RESPAWN_MESSAGE
 	var/datum/browser/panel
 	universal_speak = 1
 
@@ -616,6 +617,12 @@
 			var/datum/language/keylang = GLOB.all_languages[client.prefs.language_custom_keys[key]]
 			if(keylang)
 				new_character.language_keys[key] = keylang
+	// VOREStation Add: Preferred Language Setting;
+	if(client.prefs.preferred_language) // Do we have a preferred language?
+		var/datum/language/def_lang = GLOB.all_languages[client.prefs.preferred_language]
+		if(def_lang)
+			new_character.default_language = def_lang
+	// VOREStation Add End
 	// And uncomment this, too.
 	//new_character.dna.UpdateSE()
 

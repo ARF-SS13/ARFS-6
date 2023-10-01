@@ -269,26 +269,6 @@ Talon jumpsuit
 		suits[initial(undersuit_type.name)] = undersuit_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(suits))
 
-/datum/gear/uniform/undersuit_haz
-	display_name = "undersuit, hazard (Engineering)"
-	allowed_roles = list("Chief Engineer", "Atmospheric Technician", "Engineer")
-	path = /obj/item/clothing/under/undersuit/hazard
-
-/datum/gear/uniform/undersuit_sec
-	display_name = "undersuit, security (Security)"
-	allowed_roles = list("Head of Security", "Warden", "Detective", "Security Officer")
-	path = /obj/item/clothing/under/undersuit/sec
-
-/datum/gear/uniform/undersuit_hos
-	display_name = "undersuit, security command (HoS)"
-	allowed_roles = list("Head of Security")
-	path = /obj/item/clothing/under/undersuit/sec/hos
-
-/datum/gear/uniform/undersuit_com
-	display_name = "undersuit, command (SM/HoP)"
-	allowed_roles = list("Site Manager", "Head of Personnel")
-	path = /obj/item/clothing/under/undersuit/command
-
 //Altevian Uniforms
 /datum/gear/uniform/altevian
 	description = "An extremely comfortable set of clothing that's made to help people handle their day to day work around the fleets with little to no discomfort."
@@ -314,12 +294,6 @@ Talon jumpsuit
 		var/obj/item/clothing/under/color/fjumpsuit/jumpsuit = jumpsuit_style
 		jumpsuits[initial(jumpsuit.name)] = jumpsuit
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(jumpsuits))
-
-//Modernized Sec Jumpsuit
-/datum/gear/uniform/modernsec
-    display_name = "undersuit, security, modernized (Security)"
-    allowed_roles = list("Head of Security", "Warden", "Detective", "Security Officer")
-    path = /obj/item/clothing/under/rank/security/modern
 
 /datum/gear/uniform/singer_blue
 	display_name = "blue singer dress"
@@ -360,3 +334,38 @@ Talon jumpsuit
 	"jumper dress"=/obj/item/clothing/under/skirt/colorable/jumperdress
 	)
 	gear_tweaks += list(new/datum/gear_tweak/path(skirts), gear_tweak_free_color_choice)
+
+// gwen beedells clown clothes
+
+/datum/gear/uniform/stripeddungarees
+	display_name = "striped dungarees"
+	path = /obj/item/clothing/under/stripeddungarees
+
+// recolorable flame dress
+
+/datum/gear/uniform/cdress_fire
+	display_name = "flame dress, colorable"
+	path = /obj/item/clothing/under/dress/cdress_fire
+
+/datum/gear/uniform/cdress_fire/New()
+	..()
+	gear_tweaks += gear_tweak_free_color_choice
+
+
+// recolorable yellow dress
+/datum/gear/uniform/cbridesmaid
+	display_name = "fancy dress, colorable"
+	path = /obj/item/clothing/under/dress/cbridesmaid
+
+/datum/gear/uniform/cbridesmaid/New()
+	..()
+	gear_tweaks += gear_tweak_free_color_choice
+
+// recolorable orange swoop dress
+/datum/gear/uniform/cswoopdress
+	display_name = "swoop dress, recolorable"
+	path = /obj/item/clothing/under/dress/cswoopdress
+
+/datum/gear/uniform/cswoopdress/New()
+	..()
+	gear_tweaks += gear_tweak_free_color_choice

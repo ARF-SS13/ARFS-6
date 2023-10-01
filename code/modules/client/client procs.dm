@@ -267,7 +267,7 @@ var/global/client_count = 0         // ARFS EDIT - TGS
 		if(alert)
 			for(var/client/X in GLOB.admins)
 				if(X.is_preference_enabled(/datum/client_preference/holder/play_adminhelp_ping))
-					X << 'sound/voice/bcriminal.ogg'
+					X << 'sound/effects/tones/newplayerping.ogg'
 				window_flash(X)
 		//VOREStation Edit end.
 
@@ -453,7 +453,7 @@ var/global/client_count = 0         // ARFS EDIT - TGS
 		src << browse('code/modules/asset_cache/validate_assets.html', "window=asset_cache_browser")
 
 		//Precache the client with all other assets slowly, so as to not block other browse() calls
-		addtimer(CALLBACK(GLOBAL_PROC, /proc/getFilesSlow, src, SSassets.preload, FALSE), 5 SECONDS)
+		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(getFilesSlow), src, SSassets.preload, FALSE), 5 SECONDS)
 
 /mob/proc/MayRespawn()
 	return 0
