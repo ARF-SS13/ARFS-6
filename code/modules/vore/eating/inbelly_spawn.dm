@@ -23,8 +23,8 @@ Please do not abuse this ability.
 			continue
 		if(pred.no_vore)						// No vore, no bellies, no inbelly spawning
 			continue
-		if(!(get_z(pred) in using_map.station_levels))	// No explo reinforcements
-			continue
+		// if(!(get_z(pred) in using_map.station_levels))	// No explo reinforcements
+		// 	continue
 		if(ishuman(pred))
 			var/mob/living/carbon/human/H = pred
 			if(!H.allow_inbelly_spawning)
