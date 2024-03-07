@@ -174,13 +174,7 @@ var/global/client_count = 0         // ARFS EDIT - TGS
 		del(src)
 		return
 
-	// MAYBE REMOVE
 	++global.client_count                   // ARFS Edit - TGS
-	chatOutput = new /datum/chatOutput(src) //veechat
-	chatOutput.send_resources()
-	spawn()
-		chatOutput.start()
-	// END MAYBE REMOVE
 
 	//Only show this if they are put into a new_player mob. Otherwise, "what title screen?"
 	if(isnewplayer(src.mob))
