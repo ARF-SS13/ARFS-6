@@ -54,7 +54,7 @@
 	if(usr != src)
 		return
 	var/new_metadata = strip_html_simple(tgui_input_text(usr, "Enter any information you'd like others to see relating to your LIKED roleplay preferences. This will not be saved permanently unless you click save in the OOC notes panel!", "Game Preference" , html_decode(ooc_notes_likes), multiline = TRUE,  prevent_enter = TRUE))
-	if(new_metadata && CanUseTopic(usr))
+	if(CanUseTopic(usr))
 		ooc_notes_likes = new_metadata
 		client.prefs.metadata_likes = new_metadata
 		to_chat(usr, "<span class='filter_notice'>OOC note likes have been updated. Don't forget to save!</span>")
@@ -66,7 +66,7 @@
 	if(usr != src)
 		return
 	var/new_metadata = strip_html_simple(tgui_input_text(usr, "Enter any information you'd like others to see relating to your DISLIKED roleplay preferences. This will not be saved permanently unless you click save in the OOC notes panel!", "Game Preference" , html_decode(ooc_notes_dislikes), multiline = TRUE,  prevent_enter = TRUE))
-	if(new_metadata && CanUseTopic(usr))
+	if(CanUseTopic(usr))
 		ooc_notes_dislikes = new_metadata
 		client.prefs.metadata_dislikes = new_metadata
 		to_chat(usr, "<span class='filter_notice'>OOC note dislikes have been updated. Don't forget to save!</span>")
@@ -91,7 +91,7 @@
 		msg += "<br><br><b>LIKES</b><br><br>[ooc_notes_likes]"
 	if(ooc_notes_dislikes)
 		msg += "<br><br><b>DISLIKES</b><br><br>[ooc_notes_dislikes]"
-	to_chat(usr, "<span class='filter_notice'>[src]'s Metainfo:<br>[msg]</span>")
+	to_chat(usr, "<span class='chatexport'>[src]'s Metainfo:<br>[msg]</span>")
 
 /mob/living/verb/set_custom_link()
 	set name = "Set Custom Link"
@@ -124,7 +124,7 @@
 		voice_freq = choice
 		return
 	else if(choice == 1)
-		choice = tgui_input_number(src, "Choose your character's voice frequency, ranging from [MIN_VOICE_FREQ] to [MAX_VOICE_FREQ]", "Custom Voice Frequency", null, MAX_VOICE_FREQ, MIN_VOICE_FREQ, round_value = TRUE)
+		choice = tgui_input_number(src, "Choose your character's voice frequency, ranging from [MIN_VOICE_FREQ] to [MAX_VOICE_FREQ]", "Custom Voice Frequency", null, MAX_VOICE_FREQ, MIN_VOICE_FREQ)
 	else if(choice > MAX_VOICE_FREQ)
 		choice = MAX_VOICE_FREQ
 	else if(choice < MIN_VOICE_FREQ)

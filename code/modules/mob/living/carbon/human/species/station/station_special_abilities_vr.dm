@@ -430,7 +430,7 @@
 		to_chat(src, "You cannot bite in your current state.")
 		return
 	if(B.vessel.total_volume <= 0 || B.isSynthetic()) //Do they have any blood in the first place, and are they synthetic?
-		to_chat(src, "<font color='red'>There appears to be no blood in this prey...</font>")
+		to_chat(src, span_red("There appears to be no blood in this prey..."))
 		return
 
 	last_special = world.time + 600
@@ -468,9 +468,9 @@
 
 
 	if(noise)
-		src.visible_message("<font color='red'><b>[src] moves their head next to [B]'s neck, seemingly looking for something!</b></font>")
+		src.visible_message(span_red("<b>[src] moves their head next to [B]'s neck, seemingly looking for something!</b>"))
 	else
-		src.visible_message("<font color='red'><i>[src] moves their head next to [B]'s neck, seemingly looking for something!</i></font>", range = 1)
+		src.visible_message(span_red("<i>[src] moves their head next to [B]'s neck, seemingly looking for something!</i>"), range = 1)
 
 	if(bleed) //Due to possibility of missing/misclick and missing the bleeding cues, we are warning the scene members of BLEEDING being on
 		to_chat(src, SPAN_WARNING("This is going to cause [B] to keep bleeding!"))
@@ -479,9 +479,9 @@
 	if(do_after(src, 300, B)) //Thrirty seconds.
 		if(!Adjacent(B)) return
 		if(noise)
-			src.visible_message("<font color='red'><b>[src] suddenly extends their fangs and plunges them down into [B]'s neck!</b></font>")
+			src.visible_message(span_red("<b>[src] suddenly extends their fangs and plunges them down into [B]'s neck!</b>"))
 		else
-			src.visible_message("<font color='red'><i>[src] suddenly extends their fangs and plunges them down into [B]'s neck!</i></font>", range = 1)
+			src.visible_message(span_red("<i>[src] suddenly extends their fangs and plunges them down into [B]'s neck!</i>"), range = 1)
 		if(bleed)
 			B.apply_damage(10, BRUTE, BP_HEAD, blocked = 0, soaked = 0, sharp = TRUE, edge = FALSE)
 			var/obj/item/organ/external/E = B.get_organ(BP_HEAD)
@@ -1232,9 +1232,9 @@
 			return
 		if(target.buckled) //how are you buckled in the water?!
 			target.buckled.unbuckle_mob()
-		target.visible_message("<span class='warning'>\The [target] suddenly disappears, being dragged into the water!</span>",\
-			"<span class='danger'>You are dragged below the water and feel yourself slipping directly into \the [src]'s [vore_selected]!</span>")
-		to_chat(src, "<span class='notice'>You successfully drag \the [target] into the water, slipping them into your [vore_selected].</span>")
+		target.visible_message("<span class='vwarning'>\The [target] suddenly disappears, being dragged into the water!</span>",\
+			"<span class='vdanger'>You are dragged below the water and feel yourself slipping directly into \the [src]'s [vore_selected]!</span>")
+		to_chat(src, "<span class='vnotice'>You successfully drag \the [target] into the water, slipping them into your [vore_selected].</span>")
 		target.forceMove(src.vore_selected)
 
 /mob/living/carbon/human/proc/toggle_pain_module()
@@ -1308,8 +1308,8 @@
 			to_chat(src, "<span class='warning'>You need to be closer to do that.</span>")
 			return
 
-		visible_message("<span class='notice'>\The [src] attempts to snatch up [target]!</span>", \
-						"<span class='notice'>You attempt to snatch up [target]!</span>" )
+		visible_message("<span class='vnotice'>\The [src] attempts to snatch up [target]!</span>", \
+						"<span class='vnotice'>You attempt to snatch up [target]!</span>" )
 		playsound(src, 'sound/vore/sunesound/pred/schlorp.ogg', 25)
 
 		//Code to shoot the beam here.
@@ -1460,3 +1460,72 @@
 	hitsound = 'sound/vore/sunesound/pred/schlorp.ogg'
 	hitsound_wall = 'sound/vore/sunesound/pred/schlorp.ogg'
 	zaptype = /obj/item/projectile/beam/appendage
+
+/mob/living/proc/target_lunge() //The leaper leap, but usable as an ability
+	set name = "Lunge At Prey"
+	set category = "Abilities"
+	set desc = "Dive atop your prey and gobble them up!"
+
+	var/leap_warmup = 1 SECOND //Easy to modify
+	var/leap_sound = 'sound/weapons/spiderlunge.ogg'
+
+	if(stat || paralysis || weakened || stunned || world.time < last_special) //No tongue flicking while stunned.
+		to_chat(src, "<span class='warning'>You can't do that in your current state.</span>")
+		return
+
+	last_special = world.time + 10 //Anti-spam.
+
+	if (!istype(src, /mob/living))
+		to_chat(src, "<span class='warning'>It doesn't work that way.</span>")
+		return
+
+	else
+		var/list/targets = list() //IF IT IS NOT BROKEN. DO NOT FIX IT.
+
+		for(var/mob/living/L in range(5, src))
+			if(!istype(L, /mob/living)) //Don't eat anything that isn't mob/living. Failsafe.
+				continue
+			if(L == src) //no eating yourself. 1984.
+				continue
+			if(L.devourable && L.throw_vore && (L.can_be_drop_pred || L.can_be_drop_prey))
+				targets += L
+
+		if(!(targets.len))
+			to_chat(src, "<span class='notice'>No eligible targets found.</span>")
+			return
+
+		var/mob/living/target = tgui_input_list(src, "Please select a target.", "Victim", targets)
+
+		if(!target)
+			return
+
+		if(!istype(target, /mob/living)) //Safety.
+			to_chat(src, "<span class='warning'>You need to select a living target!</span>")
+			return
+
+		if (get_dist(src,target) >= 6)
+			to_chat(src, "<span class='warning'>You need to be closer to do that.</span>")
+			return
+
+		visible_message(span("warning","\The [src] rears back, ready to lunge!"))
+		to_chat(target, span("danger","\The [src] focuses on you!"))
+		// Telegraph, since getting stunned suddenly feels bad.
+		do_windup_animation(target, leap_warmup)
+		sleep(leap_warmup) // For the telegraphing.
+
+		if(target.z != z)	//Make sure you haven't disappeared to somewhere we can't go
+			return FALSE
+
+		// Do the actual leap.
+		status_flags |= LEAPING // Lets us pass over everything.
+		visible_message(span("critical","\The [src] leaps at \the [target]!"))
+		throw_at(get_step(target, get_turf(src)), 7, 1, src)
+		playsound(src, leap_sound, 75, 1)
+
+		sleep(5) // For the throw to complete.
+
+		if(status_flags & LEAPING)
+			status_flags &= ~LEAPING // Revert special passage ability.
+
+		if(Adjacent(target))	//We leapt at them but we didn't manage to hit them, let's see if we're next to them
+			target.Weaken(2)	//get knocked down, idiot

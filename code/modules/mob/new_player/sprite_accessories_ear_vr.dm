@@ -164,6 +164,13 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
+/datum/sprite_accessory/ears/dangles_robot
+	name = "synth dangle antennae, colorable"
+	desc = ""
+	icon_state = "dangleantennae_robot"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
 /datum/sprite_accessory/ears/oni_h1
 	name = "oni horns"
 	desc = ""
@@ -455,6 +462,14 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "vulp_jackal-inner"
+
+/datum/sprite_accessory/ears/fox
+	name = "fox ears"
+	desc = ""
+	icon_state = "fox"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "fox-inner"
 
 /datum/sprite_accessory/ears/bunny_floppy
 	name = "floopy bunny ears (colorable)"
@@ -846,7 +861,24 @@
 	name = "Antlers (large)"
 	desc = ""
 	icon = 'icons/mob/vore/ears_32x64.dmi'
-	icon_state = "antlers_large"
+	icon_state = "antlers-large"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/antlers_wide
+	name = "Antlers (wide)"
+	desc = ""
+	icon = 'icons/mob/vore/ears_32x64.dmi'
+	icon_state = "antlers-wide"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/antlers_wide_e
+	name = "Antlers (wide) with ears"
+	desc = ""
+	icon = 'icons/mob/vore/ears_32x64.dmi'
+	icon_state = "antlers-wide"
+	extra_overlay = "deer"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
@@ -1038,5 +1070,13 @@
 	icon = 'icons/mob/vore/ears_vr.dmi'
 	icon_state = "feather_fan_ears"
 	extra_overlay = "feather_fan_ears-outer"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+//Dino frills
+/datum/sprite_accessory/ears/dino_frills
+	name = "triceratops frills"
+	icon_state = "triceratops_frill"
+	extra_overlay = "triceratops_frill_spikes"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY

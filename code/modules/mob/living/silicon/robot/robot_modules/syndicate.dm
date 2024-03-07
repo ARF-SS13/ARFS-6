@@ -36,7 +36,8 @@
 	src.modules += jetpack
 	robot.internals = jetpack
 
-	id = robot.idcard
+	var/obj/id = robot.idcard
+	id.forceMove(src)
 	src.modules += id
 
 /obj/item/weapon/robot_module/robot/syndicate/Destroy()
@@ -47,6 +48,7 @@
 // Gets a big shield and a gun that shoots really fast to scare the opposing force.
 /obj/item/weapon/robot_module/robot/syndicate/protector
 	name = "protector robot module"
+	supported_upgrades = list(/obj/item/borg/upgrade/restricted/bellycapupgrade)
 
 /obj/item/weapon/robot_module/robot/syndicate/protector/create_equipment(var/mob/living/silicon/robot/robot)
 	..()
@@ -82,7 +84,7 @@
 
 	// Hacking other things.
 	src.modules += new /obj/item/weapon/card/robot/syndi(src)
-	src.modules += new /obj/item/weapon/card/emag(src)
+	src.modules += new /obj/item/weapon/card/emag/borg(src)
 
 	// Materials.
 	var/datum/matter_synth/nanite = new /datum/matter_synth/nanite(10000)
@@ -132,10 +134,10 @@
 // Mediborg optimized for on-the-field healing, but can also do surgery if needed.
 /obj/item/weapon/robot_module/robot/syndicate/combat_medic
 	name = "combat medic robot module"
+	supported_upgrades = list(/obj/item/borg/upgrade/restricted/bellycapupgrade)
 
 /obj/item/weapon/robot_module/robot/syndicate/combat_medic/create_equipment(var/mob/living/silicon/robot/robot)
 	..()
-	src.modules += new /obj/item/borg/sight/hud/med(src)
 	src.modules += new /obj/item/device/healthanalyzer/phasic(src)
 	src.modules += new /obj/item/weapon/reagent_containers/borghypo/merc(src)
 
