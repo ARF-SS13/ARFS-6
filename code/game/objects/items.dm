@@ -226,6 +226,7 @@
 
 /obj/item/attack_hand(mob/living/user as mob)
 	if (!user) return
+	..()
 	if(anchored)
 		to_chat(user, span("notice", "\The [src] won't budge, you can't pick it up!"))
 		return
@@ -1017,4 +1018,7 @@ Note: This proc can be overwritten to allow for different types of auto-alignmen
 	return
 
 /obj/item/proc/on_holder_escape(var/obj/item/weapon/holder/H)
+	return
+
+/obj/item/proc/get_welder()
 	return

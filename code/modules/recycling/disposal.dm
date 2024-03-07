@@ -5,9 +5,9 @@
 // Automatically recharges air (unless off), will flush when ready if pre-set
 // Can hold items and human size things, no other draggables
 // Toilets are a type of disposal bin for small objects only and work on magic. By magic, I mean torque rotation
-#define SEND_PRESSURE (700 + ONE_ATMOSPHERE) //kPa - assume the inside of a dispoal pipe is 1 atm, so that needs to be added.
+#define SEND_PRESSURE (0.05 + ONE_ATMOSPHERE) //kPa - assume the inside of a dispoal pipe is 1 atm, so that needs to be added.
 #define PRESSURE_TANK_VOLUME 150	//L
-#define PUMP_MAX_FLOW_RATE 90		//L/s - 4 m/s using a 15 cm by 15 cm inlet
+#define PUMP_MAX_FLOW_RATE 11.25	//L/s - 4 m/s using a 15 cm by 15 cm inlet //NOTE: I reduced the send pressure from 801 to 101.05 which is about 1/8 there was originally, and this was 90 before that. 90/8 is about 11.25, so that's the new value. -Reo
 
 /obj/machinery/disposal
 	name = "disposal unit"
@@ -56,7 +56,7 @@
 
 	src.add_fingerprint(user)
 	if(mode<=0) // It's off
-		if(I.is_screwdriver())
+		if(I.has_tool_quality(TOOL_SCREWDRIVER))
 			if(contents.len > 0)
 				to_chat(user, "Eject the items first!")
 				return
@@ -70,11 +70,11 @@
 				playsound(src, I.usesound, 50, 1)
 				to_chat(user, "You attach the screws around the power connection.")
 				return
-		else if(istype(I, /obj/item/weapon/weldingtool) && mode==-1)
+		else if(I.has_tool_quality(TOOL_WELDER) && mode==-1)
 			if(contents.len > 0)
 				to_chat(user, "Eject the items first!")
 				return
-			var/obj/item/weapon/weldingtool/W = I
+			var/obj/item/weapon/weldingtool/W = I.get_welder()
 			if(W.remove_fuel(0,user))
 				playsound(src, W.usesound, 100, 1)
 				to_chat(user, "You start slicing the floorweld off the disposal unit.")
@@ -100,7 +100,7 @@
 
 	if(istype(I, /obj/item/weapon/storage/bag/trash))
 		var/obj/item/weapon/storage/bag/trash/T = I
-		to_chat(user, "<font color='blue'>You empty the bag.</font>")
+		to_chat(user, span_blue("You empty the bag."))
 		for(var/obj/item/O in T.contents)
 			T.remove_from_storage(O,src)
 		T.update_icon()
@@ -129,7 +129,7 @@
 					GM.client.eye = src
 				GM.forceMove(src)
 				for (var/mob/C in viewers(src))
-					C.show_message("<font color='red'>[GM.name] has been placed in the [src] by [user].</font>", 3)
+					C.show_message(span_red("[GM.name] has been placed in the [src] by [user]."), 3)
 				qdel(G)
 
 				add_attack_logs(user,GM,"Disposals dunked")
@@ -233,7 +233,7 @@
 		return
 
 	if(user && user.loc == src)
-		to_chat(user, "<font color='red'>You cannot reach the controls from inside.</font>")
+		to_chat(user, span_red("You cannot reach the controls from inside."))
 		return
 
 	// Clumsy folks can only flush it.
@@ -980,8 +980,8 @@
 	if(!T.is_plating())
 		return		// prevent interaction with T-scanner revealed pipes
 	src.add_fingerprint(user)
-	if(istype(I, /obj/item/weapon/weldingtool))
-		var/obj/item/weapon/weldingtool/W = I
+	if(I.has_tool_quality(TOOL_WELDER))
+		var/obj/item/weapon/weldingtool/W = I.get_welder()
 
 		if(W.remove_fuel(0,user))
 			playsound(src, W.usesound, 50, 1)
@@ -1272,7 +1272,7 @@
 		if(O.currTag)// Tag set
 			sort_tag = O.currTag
 			playsound(src, 'sound/machines/twobeep.ogg', 100, 1)
-			to_chat(user, "<font color='blue'>Changed tag to '[sort_tag]'.</font>")
+			to_chat(user, span_blue("Changed tag to '[sort_tag]'."))
 			updatename()
 			updatedesc()
 
@@ -1340,7 +1340,7 @@
 		if(O.currTag)// Tag set
 			sortType = O.currTag
 			playsound(src, 'sound/machines/twobeep.ogg', 100, 1)
-			to_chat(user, "<font color='blue'>Changed filter to '[sortType]'.</font>")
+			to_chat(user, span_blue("Changed filter to '[sortType]'."))
 			updatename()
 			updatedesc()
 
@@ -1455,8 +1455,8 @@
 	if(!T.is_plating())
 		return		// prevent interaction with T-scanner revealed pipes
 	src.add_fingerprint(user)
-	if(istype(I, /obj/item/weapon/weldingtool))
-		var/obj/item/weapon/weldingtool/W = I
+	if(I.has_tool_quality(TOOL_WELDER))
+		var/obj/item/weapon/weldingtool/W = I.get_welder()
 
 		if(W.remove_fuel(0,user))
 			playsound(src, W.usesound, 100, 1)
@@ -1576,7 +1576,7 @@
 	if(!I || !user)
 		return
 	src.add_fingerprint(user)
-	if(I.is_screwdriver())
+	if(I.has_tool_quality(TOOL_SCREWDRIVER))
 		if(mode==0)
 			mode=1
 			to_chat(user, "You remove the screws around the power connection.")
@@ -1587,8 +1587,8 @@
 			to_chat(user, "You attach the screws around the power connection.")
 			playsound(src, I.usesound, 50, 1)
 			return
-	else if(istype(I, /obj/item/weapon/weldingtool) && mode==1)
-		var/obj/item/weapon/weldingtool/W = I
+	else if(I.has_tool_quality(TOOL_WELDER) && mode==1)
+		var/obj/item/weapon/weldingtool/W = I.get_welder()
 		if(W.remove_fuel(0,user))
 			playsound(src, W.usesound, 100, 1)
 			to_chat(user, "You start slicing the floorweld off the disposal outlet.")

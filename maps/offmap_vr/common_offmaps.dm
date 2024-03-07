@@ -314,7 +314,28 @@
 /obj/effect/landmark/map_data/train
 	height = 2
 
+/datum/map_template/common_lateload/redgate/fantasy
+	name = "Redgate - Fantasy Town"
+	desc = "A fantasy town full of low tech stuff."
+	mappath = 'maps/redgate/fantasy.dmm'
 
+/datum/map_template/common_lateload/redgate/fantasy_dungeon
+	name = "Redgate - Fantasy Dungeon"
+	desc = "A fantasy dungeon with lots of monsters and loot."
+	mappath = 'maps/redgate/fantasy_dungeon.dmm'
+
+/obj/effect/landmark/map_data/fantasy
+	height = 2
+
+/datum/map_template/common_lateload/redgate/laserdome
+	name = "Redgate - Laserdome"
+	desc = "A large orbital station with recreational facilities, namely a pair of laser tag arenas."
+	mappath = 'maps/redgate/laserdome.dmm'
+
+/datum/map_template/common_lateload/redgate/falls
+	name = "Redgate - Cascading Falls"
+	desc = "A world made up almost entirely of water, sprinkled with obscure marble structures."
+	mappath = 'maps/redgate/falls/falls.dmm'
 
 //////////////////////////////////////////////////////////////////////////////////////
 // Admin-use z-levels for loading whenever an admin feels like
