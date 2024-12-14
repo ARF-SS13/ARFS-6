@@ -109,14 +109,14 @@
 		confirm2 = tgui_alert(usr, "Pressing this buttom will really kill you, no going back", "Are you sure?", list("Yes", "No")) //Swapped answers to protect from accidental double clicks.
 	if (src.health < 0 && stat != DEAD && confirm1 == "Yes" && confirm2 == "Yes") // Checking both confirm1 and confirm2 for good measure. I don't trust TGUI.
 		src.death()
-		to_chat(src, "<font color='blue'>You have given up life and succumbed to death.</font>")
+		to_chat(src, span_blue("You have given up life and succumbed to death."))
 	else
 		if(stat == DEAD)
-			to_chat(src, "<font color='blue'>As much as you'd like, you can't die when already dead</font>")
+			to_chat(src, span_blue("As much as you'd like, you can't die when already dead"))
 		else if(confirm1 == "No" || confirm2 == "No")
-			to_chat(src, "<font color='blue'>You chose to live another day.</font>")
+			to_chat(src, span_blue("You chose to live another day."))
 		else
-			to_chat(src, "<font color='blue'>You are not injured enough to succumb to death!</font>")
+			to_chat(src, span_blue("You are not injured enough to succumb to death!"))
 
 /mob/living/proc/updatehealth()
 	if(status_flags & GODMODE)
@@ -1012,15 +1012,18 @@
 		if(!isnull(M.icon_scale_y_percent))
 			. *= M.icon_scale_y_percent
 
-/mob/living/update_transform()
+/mob/living/update_transform(var/instant = FALSE)
 	// First, get the correct size.
 	var/desired_scale_x = size_multiplier * icon_scale_x //VOREStation edit
 	var/desired_scale_y = size_multiplier * icon_scale_y //VOREStation edit
+	var/cent_offset = center_offset
 
 	// Now for the regular stuff.
+	if(fuzzy || offset_override || dir == EAST || dir == WEST)
+		cent_offset = 0
 	var/matrix/M = matrix()
 	M.Scale(desired_scale_x, desired_scale_y)
-	M.Translate(0, (vis_height/2)*(desired_scale_y-1)) //VOREStation edit
+	M.Translate(cent_offset * desired_scale_x, (vis_height/2)*(desired_scale_y-1))
 	src.transform = M //VOREStation edit
 	handle_status_indicators()
 
@@ -1303,3 +1306,8 @@
 	icon = 'icons/mob/screen/midnight.dmi'
 	icon_state = "character"
 	screen_loc = ui_smallquad
+
+/mob/living/set_dir(var/new_dir)
+	. = ..()
+	if(size_multiplier != 1 || icon_scale_x != 1 && center_offset > 0)
+		update_transform(TRUE)

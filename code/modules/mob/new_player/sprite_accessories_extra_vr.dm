@@ -4,6 +4,8 @@
 /datum/sprite_accessory/marking //Override for base markings
 	color_blend_mode = ICON_ADD
 	species_allowed = list() //This lets all races use
+	var/digitigrade_acceptance = MARKING_NONDIGI_ONLY
+	var/digitigrade_icon = 'icons/mob/human_races/markings_digi.dmi'
 
 /datum/sprite_accessory/marking/vr_vulp_belly
 	name = "belly fur (Vulp)"
@@ -931,6 +933,13 @@
 	color_blend_mode = ICON_MULTIPLY
 	body_parts = list(BP_HEAD)
 
+/datum/sprite_accessory/marking/vr_knees_to_chest
+	name = "knees to chest"
+	icon = 'icons/mob/human_races/markings_vr.dmi'
+	icon_state = "knees_to_chest"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_TORSO,BP_GROIN,BP_L_LEG,BP_R_LEG)
+
 /datum/sprite_accessory/marking/vr_sect_drone
 	name = "Sect Drone Bodytype"
 	icon = 'icons/mob/human_races/markings_vr.dmi'
@@ -1092,3 +1101,185 @@
 	icon_state = "cheeks_nev"
 	color_blend_mode = ICON_MULTIPLY
 	body_parts = list(BP_HEAD)
+
+
+// Dino stuff
+/datum/sprite_accessory/marking/vr_dino_horn
+	name = "dino horn"
+	icon = 'icons/mob/human_races/markings_vr.dmi'
+	icon_state = "dino_horn"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_HEAD)
+
+/datum/sprite_accessory/marking/vr_dino_plates
+	name = "stegosaurus plates"
+	icon = 'icons/mob/human_races/markings_vr.dmi'
+	icon_state = "stegoplates"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_TORSO)
+
+/datum/sprite_accessory/marking/vr_triceratops_beak
+	name = "triceratops beak"
+	icon = 'icons/mob/human_races/markings_vr.dmi'
+	icon_state = "triceratops_beak"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_HEAD)
+
+/datum/sprite_accessory/marking/vr_triceratops_horn
+	name = "triceratops horn"
+	icon = 'icons/mob/human_races/markings_vr.dmi'
+	icon_state = "triceratops_horn"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_HEAD)
+
+/datum/sprite_accessory/marking/vr_backsail
+	name = "backsail"
+	icon = 'icons/mob/human_races/markings_vr.dmi'
+	icon_state = "backsail"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_TORSO)
+
+//Replikant-specific markings
+
+/datum/sprite_accessory/marking/replikant/replika_r_thigh
+	name = "Replikant Stripe - Right Thigh"
+	icon = 'icons/mob/human_races/markings_vr.dmi'
+	icon_state = "replika"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_R_LEG)
+
+/datum/sprite_accessory/marking/replikant/replika_r_knee
+	name = "Replikant Stripe - Right Knee"
+	icon = 'icons/mob/human_races/markings_vr.dmi'
+	icon_state = "replika"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_R_FOOT)
+
+/datum/sprite_accessory/marking/replikant/replika_l_thigh
+	name = "Replikant Stripe - Left Thigh"
+	icon = 'icons/mob/human_races/markings_vr.dmi'
+	icon_state = "replika"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_L_LEG)
+
+/datum/sprite_accessory/marking/replikant/replika_l_knee
+	name = "Replikant Stripe - Left Knee"
+	icon = 'icons/mob/human_races/markings_vr.dmi'
+	icon_state = "replika"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_L_FOOT)
+
+/datum/sprite_accessory/marking/replikant/replika_panels_body
+	name = "Replikant Paneling - SynthFlesh (body)"
+	icon = 'icons/mob/human_races/markings_vr.dmi'
+	icon_state = "replikao"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_TORSO)
+
+/datum/sprite_accessory/marking/replikant/replika_panels_groin
+	name = "Replikant Paneling - SynthFlesh (groin)"
+	icon = 'icons/mob/human_races/markings_vr.dmi'
+	icon_state = "replika"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_GROIN)
+
+//Digitigrade markings
+/datum/sprite_accessory/marking/digi
+	icon = 'icons/mob/human_races/markings_digi.dmi'
+	digitigrade_acceptance = MARKING_DIGITIGRADE_ONLY
+
+/datum/sprite_accessory/marking/digi/fullleft
+	name = "Digitigrade Full Left Leg(Only works with digitigrade legs)"
+	icon_state = "full"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_L_LEG,BP_L_FOOT)
+
+/datum/sprite_accessory/marking/digi/fullright
+	name = "Digitigrade Full Right Leg(Only works with digitigrade legs)"
+	icon_state = "full"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_R_LEG,BP_R_FOOT)
+
+/datum/sprite_accessory/marking/digi/longsockleft
+	name = "Digitigrade Long Socks Left(Only works with digitigrade legs)"
+	icon_state = "longsock"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_L_LEG,BP_L_FOOT)
+
+/datum/sprite_accessory/marking/digi/longsockright
+	name = "Digitigrade Long Socks Right(Only works with digitigrade legs)"
+	icon_state = "longsock"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_R_LEG,BP_R_FOOT)
+
+/datum/sprite_accessory/marking/digi/medsockleft
+	name = "Digitigrade Medium Socks Left(Only works with digitigrade legs)"
+	icon_state = "medsock"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_L_LEG,BP_L_FOOT)
+
+/datum/sprite_accessory/marking/digi/medsockright
+	name = "Digitigrade Medium Socks Right(Only works with digitigrade legs)"
+	icon_state = "medsock"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_R_LEG,BP_R_FOOT)
+
+/datum/sprite_accessory/marking/digi/shortsockleft
+	name = "Digitigrade Short Socks Left(Only works with digitigrade legs)"
+	icon_state = "shortsock"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_L_FOOT)
+
+/datum/sprite_accessory/marking/digi/shortsockright
+	name = "Digitigrade Short Socks Right(Only works with digitigrade legs)"
+	icon_state = "shortsock"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_R_FOOT)
+
+/datum/sprite_accessory/marking/digi/toesleft
+	name = "Digitigrade Toes Left(Only works with digitigrade legs)"
+	icon_state = "toes"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_L_FOOT)
+
+/datum/sprite_accessory/marking/digi/toesright
+	name = "Digitigrade Toes Right(Only works with digitigrade legs)"
+	icon_state = "toes"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_R_FOOT)
+
+/datum/sprite_accessory/marking/digi/stripesleft
+	name = "Digitigrade Stripes Left(Only works with digitigrade legs)"
+	icon_state = "stripes"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_L_LEG,BP_L_FOOT)
+
+/datum/sprite_accessory/marking/digi/stripesright
+	name = "Digitigrade Stripes Right(Only works with digitigrade legs)"
+	icon_state = "stripes"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_R_LEG,BP_R_FOOT)
+
+/datum/sprite_accessory/marking/digi/smallspotsleft
+	name = "Digitigrade Small Spots Left(Only works with digitigrade legs)"
+	icon_state = "smallspots"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_L_LEG,BP_L_FOOT)
+
+/datum/sprite_accessory/marking/digi/smallspotsright
+	name = "Digitigrade Small Spots Right(Only works with digitigrade legs)"
+	icon_state = "smallspots"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_R_LEG,BP_R_FOOT)
+
+/datum/sprite_accessory/marking/digi/bigspotsleft
+	name = "Digitigrade Big Spots Left(Only works with digitigrade legs)"
+	icon_state = "bigspots"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_L_LEG,BP_L_FOOT)
+
+/datum/sprite_accessory/marking/digi/bigspotsright
+	name = "Digitigrade Big Spots Right(Only works with digitigrade legs)"
+	icon_state = "bigspots"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_R_LEG,BP_R_FOOT)

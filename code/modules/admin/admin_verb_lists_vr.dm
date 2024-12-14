@@ -77,6 +77,7 @@ var/list/admin_verbs_admin = list(
 	/client/proc/check_ai_laws,			//shows AI and borg laws,
 	/client/proc/rename_silicon,		//properly renames silicons,
 	/client/proc/manage_silicon_laws,	// Allows viewing and editing silicon laws. ,
+	/client/proc/modify_robot,
 	/client/proc/check_antagonists,
 	/client/proc/admin_memo,			//admin memo system. show/delete/write. +SERVER needed to delete admin memos of others,
 	/client/proc/dsay,					//talk in deadchat using our ckey/fakekey,
@@ -141,6 +142,7 @@ var/list/admin_verbs_sounds = list(
 	/client/proc/play_local_sound,
 	/client/proc/play_sound,
 	/client/proc/play_server_sound,
+	/client/proc/play_web_sound,
 	/client/proc/play_z_sound
 	)
 
@@ -171,7 +173,8 @@ var/list/admin_verbs_fun = list(
 	/client/proc/narrate_mob,	//VOREStation Add
 	/client/proc/narrate_mob_args, //VOREStation Add
 	/client/proc/getPlayerStatus, //VORESTation Add
-	/client/proc/manage_event_triggers
+	/client/proc/manage_event_triggers,
+	/client/proc/fake_pdaconvos
 
 	)
 
@@ -276,7 +279,8 @@ var/list/admin_verbs_debug = list(
 	/datum/admins/proc/change_time,
 	/client/proc/admin_give_modifier,
 	/client/proc/simple_DPS,
-	/datum/admins/proc/view_feedback
+	/datum/admins/proc/view_feedback,
+	/client/proc/stop_sounds
 	)
 
 var/list/admin_verbs_paranoid_debug = list(
@@ -323,6 +327,7 @@ var/list/admin_verbs_hideable = list(
 	/client/proc/play_local_sound,
 	/client/proc/play_sound,
 	/client/proc/play_server_sound,
+	/client/proc/play_web_sound,
 	/client/proc/object_talk,
 	/datum/admins/proc/cmd_admin_dress,
 	/client/proc/cmd_admin_gib_self,
@@ -372,7 +377,8 @@ var/list/admin_verbs_hideable = list(
 	/proc/possess,
 	/proc/release,
 	/datum/admins/proc/set_uplink, //VOREStation Add,
-	/datum/admins/proc/set_tcrystals
+	/datum/admins/proc/set_tcrystals,
+	/client/proc/stop_sounds
 	)
 var/list/admin_verbs_mod = list(
 	/client/proc/cmd_admin_pm_context,	//right-click adminPM interface,
@@ -511,6 +517,7 @@ var/list/admin_verbs_event_manager = list(
 	/client/proc/check_ai_laws,                     //shows AI and borg laws,
 	/client/proc/rename_silicon,            //properly renames silicons,
 	/client/proc/manage_silicon_laws,       // Allows viewing and editing silicon laws. ,
+	/client/proc/modify_robot,
 	/client/proc/check_antagonists,
 	/client/proc/admin_memo,                        //admin memo system. show/delete/write. +SERVER needed to delete admin memos of others,
 	/client/proc/dsay,                                      //talk in deadchat using our ckey/fakekey,
